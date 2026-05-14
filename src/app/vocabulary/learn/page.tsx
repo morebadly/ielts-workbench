@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { WordCard } from "@/components/vocabulary/WordCard";
-import { getWordsByDay, MOCK_BOOK } from "@/data/mockWords";
+import { getWordsByDay, getActiveBook } from "@/data/mockWords";
 import { storage } from "@/lib/storage";
 import { initWordProgress, isDueForReview } from "@/lib/srs";
 import { useDailyTask } from "@/hooks/useDailyTask";
@@ -29,6 +29,10 @@ function VocabularyLearnInner() {
   const mode: Mode = params.get("mode") === "review" ? "review" : "new";
 
   const { user, bump, setUser } = useDailyTask();
+  const activeBook = useMemo(
+    () => getActiveBook(user.activeBookId),
+    [user.activeBookId]
+  );
   const dayWords = useMemo(
     () => getWordsByDay(user.activeBookId, user.currentDay),
     [user.activeBookId, user.currentDay]
@@ -102,7 +106,7 @@ function VocabularyLearnInner() {
     <Container>
       <PageHeader
         title={mode === "review" ? "复习今日单词" : "学习今日新词"}
-        subtitle={`${MOCK_BOOK.name} · Day ${user.currentDay}${current ? ` · ${current.wordList}` : ""}`}
+        subtitle={`${activeBook.name} · Day ${user.currentDay}${current ? ` · ${current.wordList}` : ""}`}
         right={
           <Link href="/vocabulary">
             <Button variant="ghost">返回单词首页</Button>

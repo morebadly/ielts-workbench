@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/Card";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import type { DailyTaskProgress, DailyTaskTargets, UserProgress } from "@/types";
-import { MOCK_BOOK } from "@/data/mockWords";
+import { getActiveBook } from "@/data/mockWords";
 
 function totalDone(p: DailyTaskProgress): number {
   return (
@@ -38,17 +38,18 @@ export function ProgressCards({
 }) {
   const done = totalDone(progress);
   const total = totalTarget(targets);
+  const book = getActiveBook(user.activeBookId);
   return (
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
       <Card>
         <div className="text-sm muted">词汇书进度</div>
         <div className="mt-1 text-lg font-semibold">
-          {MOCK_BOOK.name} · Day {user.currentDay}/{MOCK_BOOK.totalDays}
+          {book.name} · Day {user.currentDay}/{book.totalDays}
         </div>
         <ProgressBar
           className="mt-3"
           value={user.currentDay}
-          max={MOCK_BOOK.totalDays}
+          max={book.totalDays}
         />
       </Card>
 

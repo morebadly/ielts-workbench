@@ -6,17 +6,20 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { storage } from "@/lib/storage";
 import { useDailyTask } from "@/hooks/useDailyTask";
-import { MOCK_BOOK } from "@/data/mockWords";
+import { getActiveBook } from "@/data/mockWords";
+import { BookManager } from "@/components/settings/BookManager";
 import type { DailyTaskTargets } from "@/types";
 
 export default function SettingsPage() {
-  const { user, setUser } = useDailyTask();
+  const { user, setUser, refresh } = useDailyTask();
   const [targets, setTargets] = useState<DailyTaskTargets>(user.preferences.targets);
   const [voice, setVoice] = useState<"uk" | "us">(user.preferences.voice);
   const [day, setDay] = useState<number>(user.currentDay);
   const [exportText, setExportText] = useState("");
   const [importText, setImportText] = useState("");
   const [savedAt, setSavedAt] = useState<number | null>(null);
+
+  const activeBook = getActiveBook(user.activeBookId);
 
   useEffect(() => {
     setTargets(user.preferences.targets);
@@ -27,7 +30,7 @@ export default function SettingsPage() {
   const save = () => {
     setUser({
       ...user,
-      currentDay: Math.min(MOCK_BOOK.totalDays, Math.max(1, day)),
+      currentDay: Math.min(activeBook.totalDays, Math.max(1, day)),
       preferences: { ...user.preferences, voice, targets }
     });
     setSavedAt(Date.now());
@@ -63,12 +66,12 @@ export default function SettingsPage() {
       <PageHeader title="设置" subtitle="词书 / 每日任务量 / 英美音 / 数据导出导入" />
 
       <Card className="mb-4">
-        <h3 className="section-title">词书与进度</h3>
+        <h3 className="section-title">当前进度</h3>
         <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
           <div>
             <div className="text-xs muted">当前词书</div>
             <div className="mt-1 rounded-xl bg-bg-soft/60 px-3 py-2 text-sm">
-              {MOCK_BOOK.name} · 共 {MOCK_BOOK.totalDays} 天
+              {activeBook.name} · 共 {activeBook.totalDays} 天
             </div>
           </div>
           <div>
@@ -76,7 +79,7 @@ export default function SettingsPage() {
             <input
               type="number"
               min={1}
-              max={MOCK_BOOK.totalDays}
+              max={activeBook.totalDays}
               className="input mt-1"
               value={day}
               onChange={(e) => setDay(Number(e.target.value))}
@@ -84,6 +87,10 @@ export default function SettingsPage() {
           </div>
         </div>
       </Card>
+
+      <div className="mb-4">
+        <BookManager user={user} onChange={refresh} />
+      </div>
 
       <Card className="mb-4">
         <h3 className="section-title">每日任务量</h3>

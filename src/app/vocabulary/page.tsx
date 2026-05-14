@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
-import { MOCK_BOOK } from "@/data/mockWords";
+import { getActiveBook } from "@/data/mockWords";
+import { useDailyTask } from "@/hooks/useDailyTask";
 
 const ENTRIES = [
   { href: "/vocabulary/learn", title: "单词卡片学习", desc: "按 Day 顺序学词、复习" },
@@ -10,11 +13,13 @@ const ENTRIES = [
 ];
 
 export default function VocabularyHome() {
+  const { user } = useDailyTask();
+  const book = getActiveBook(user.activeBookId);
   return (
     <Container>
       <PageHeader
         title="单词"
-        subtitle={`当前词书:${MOCK_BOOK.name} · 共 ${MOCK_BOOK.totalDays} 天`}
+        subtitle={`当前词书:${book.name} · 共 ${book.totalDays} 天 · 学到 Day ${user.currentDay}`}
       />
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
         {ENTRIES.map((e) => (

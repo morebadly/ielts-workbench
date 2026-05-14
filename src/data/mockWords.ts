@@ -141,7 +141,57 @@ export const MOCK_WORDS: Word[] = [
 ];
 
 export function getWordsByDay(bookId: string, day: number): Word[] {
+  if (typeof window !== "undefined") {
+    try {
+      const raw = window.localStorage.getItem("ielts-wb:vocab-book-words");
+      if (raw) {
+        const map = JSON.parse(raw) as Record<string, Word[]>;
+        const list = map[bookId];
+        if (list && list.length) {
+          return list
+            .filter((w) => w.bookDay === day)
+            .sort((a, b) => a.order - b.order);
+        }
+      }
+    } catch {
+      /* fall through to MOCK */
+    }
+  }
   return MOCK_WORDS.filter((w) => w.bookId === bookId && w.bookDay === day).sort(
     (a, b) => a.order - b.order
   );
+}
+
+export function getActiveBook(bookId: string): VocabularyBook {
+  if (typeof window !== "undefined") {
+    try {
+      const raw = window.localStorage.getItem("ielts-wb:vocab-books");
+      if (raw) {
+        const list = JSON.parse(raw) as VocabularyBook[];
+        const found = list.find((b) => b.id === bookId);
+        if (found) return found;
+      }
+    } catch {
+      /* fall through */
+    }
+  }
+  return MOCK_BOOK;
+}
+
+export function getAllBooks(): VocabularyBook[] {
+  const list: VocabularyBook[] = [MOCK_BOOK];
+  if (typeof window !== "undefined") {
+    try {
+      const raw = window.localStorage.getItem("ielts-wb:vocab-books");
+      if (raw) {
+        const custom = JSON.parse(raw) as VocabularyBook[];
+        custom.forEach((b) => {
+          if (!list.find((x) => x.id === b.id)) list.push(b);
+        });
+      }
+    } catch {
+      /* ignore */
+    }
+  }
+  return list;
 }

@@ -4,6 +4,8 @@ import type {
   DictationResult,
   ReviewItem,
   UserProgress,
+  VocabularyBook,
+  Word,
   WordProgress,
   WritingPractice
 } from "@/types";
@@ -16,7 +18,9 @@ const KEYS = {
   dictation: PREFIX + "dictation-results",
   writing: PREFIX + "writing-practice",
   review: PREFIX + "review-items",
-  dailyProgress: PREFIX + "daily-progress"
+  dailyProgress: PREFIX + "daily-progress",
+  books: PREFIX + "vocab-books",
+  bookWords: PREFIX + "vocab-book-words"
 } as const;
 
 const DEFAULT_TARGETS: DailyTaskTargets = {
@@ -121,6 +125,31 @@ export const storage = {
     if (idx >= 0) all[idx] = item;
     else all.push(item);
     write(KEYS.review, all);
+  },
+
+  getCustomBooks(): VocabularyBook[] {
+    return read<VocabularyBook[]>(KEYS.books, []);
+  },
+  saveBook(book: VocabularyBook, words: Word[]): void {
+    const books = this.getCustomBooks();
+    const idx = books.findIndex((b) => b.id === book.id);
+    if (idx >= 0) books[idx] = book;
+    else books.push(book);
+    write(KEYS.books, books);
+    const map = read<Record<string, Word[]>>(KEYS.bookWords, {});
+    map[book.id] = words;
+    write(KEYS.bookWords, map);
+  },
+  getBookWords(bookId: string): Word[] {
+    const map = read<Record<string, Word[]>>(KEYS.bookWords, {});
+    return map[bookId] || [];
+  },
+  deleteBook(bookId: string): void {
+    const books = this.getCustomBooks().filter((b) => b.id !== bookId);
+    write(KEYS.books, books);
+    const map = read<Record<string, Word[]>>(KEYS.bookWords, {});
+    delete map[bookId];
+    write(KEYS.bookWords, map);
   },
 
   getDailyProgress(date: string = todayKey()): DailyTaskProgress {
