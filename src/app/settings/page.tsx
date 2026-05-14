@@ -1,0 +1,164 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { Container, PageHeader } from "@/components/layout/Container";
+import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { storage } from "@/lib/storage";
+import { useDailyTask } from "@/hooks/useDailyTask";
+import { MOCK_BOOK } from "@/data/mockWords";
+import type { DailyTaskTargets } from "@/types";
+
+export default function SettingsPage() {
+  const { user, setUser } = useDailyTask();
+  const [targets, setTargets] = useState<DailyTaskTargets>(user.preferences.targets);
+  const [voice, setVoice] = useState<"uk" | "us">(user.preferences.voice);
+  const [day, setDay] = useState<number>(user.currentDay);
+  const [exportText, setExportText] = useState("");
+  const [importText, setImportText] = useState("");
+
+  useEffect(() => {
+    setTargets(user.preferences.targets);
+    setVoice(user.preferences.voice);
+    setDay(user.currentDay);
+  }, [user]);
+
+  const save = () => {
+    setUser({
+      ...user,
+      currentDay: Math.min(MOCK_BOOK.totalDays, Math.max(1, day)),
+      preferences: { ...user.preferences, voice, targets }
+    });
+  };
+
+  const handleExport = () => setExportText(storage.exportAll());
+  const handleImport = () => {
+    if (!importText.trim()) return;
+    try {
+      storage.importAll(importText);
+      window.location.reload();
+    } catch (e) {
+      alert("导入失败:JSON 格式不正确");
+    }
+  };
+  const handleClear = () => {
+    if (!confirm("确认清空全部本地学习数据?这一步不可撤销。")) return;
+    storage.clearAll();
+    window.location.reload();
+  };
+
+  const fields: Array<{ key: keyof DailyTaskTargets; label: string }> = [
+    { key: "newWords", label: "今日新词" },
+    { key: "reviewWords", label: "今日复习词" },
+    { key: "dictation", label: "默写练习" },
+    { key: "vocabularyArticle", label: "词汇文章" },
+    { key: "writingSentences", label: "写作句子" },
+    { key: "listeningSessions", label: "听力精听" }
+  ];
+
+  return (
+    <Container>
+      <PageHeader title="设置" subtitle="词书 / 每日任务量 / 英美音 / 数据导出导入" />
+
+      <Card className="mb-4">
+        <h3 className="section-title">词书与进度</h3>
+        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div>
+            <div className="text-xs muted">当前词书</div>
+            <div className="mt-1 rounded-xl bg-bg-soft/60 px-3 py-2 text-sm">
+              {MOCK_BOOK.name} · 共 {MOCK_BOOK.totalDays} 天
+            </div>
+          </div>
+          <div>
+            <div className="text-xs muted">当前学到 Day</div>
+            <input
+              type="number"
+              min={1}
+              max={MOCK_BOOK.totalDays}
+              className="input mt-1"
+              value={day}
+              onChange={(e) => setDay(Number(e.target.value))}
+            />
+          </div>
+        </div>
+      </Card>
+
+      <Card className="mb-4">
+        <h3 className="section-title">每日任务量</h3>
+        <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {fields.map((f) => (
+            <div key={f.key}>
+              <div className="text-xs muted">{f.label}</div>
+              <input
+                type="number"
+                min={0}
+                className="input mt-1"
+                value={targets[f.key]}
+                onChange={(e) =>
+                  setTargets((t) => ({ ...t, [f.key]: Number(e.target.value) }))
+                }
+              />
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      <Card className="mb-4">
+        <h3 className="section-title">发音偏好</h3>
+        <div className="mt-3 flex gap-2">
+          <Button variant={voice === "uk" ? "primary" : "soft"} onClick={() => setVoice("uk")}>
+            英音
+          </Button>
+          <Button variant={voice === "us" ? "primary" : "soft"} onClick={() => setVoice("us")}>
+            美音
+          </Button>
+        </div>
+        <p className="mt-2 text-xs muted">
+          浏览器自带的 Web Speech API,音色取决于操作系统。后续可接入更高质量的 TTS。
+        </p>
+      </Card>
+
+      <div className="mb-4 flex gap-2">
+        <Button onClick={save}>保存设置</Button>
+      </div>
+
+      <Card className="mb-4">
+        <h3 className="section-title">数据导出 / 导入</h3>
+        <p className="mt-1 text-xs muted">
+          目前数据保存在本地 localStorage。换设备时可导出 JSON,在新设备粘贴导入。
+        </p>
+        <div className="mt-3 flex gap-2">
+          <Button variant="soft" onClick={handleExport}>
+            导出
+          </Button>
+          <Button variant="ghost" onClick={() => setExportText("")}>
+            清空显示
+          </Button>
+        </div>
+        {exportText ? (
+          <textarea className="textarea mt-3 font-mono text-xs" rows={6} readOnly value={exportText} />
+        ) : null}
+        <div className="mt-3">
+          <textarea
+            className="textarea font-mono text-xs"
+            rows={4}
+            placeholder="把另一台设备导出的 JSON 粘贴到这里"
+            value={importText}
+            onChange={(e) => setImportText(e.target.value)}
+          />
+          <Button className="mt-2" variant="soft" onClick={handleImport}>
+            导入并刷新
+          </Button>
+        </div>
+      </Card>
+
+      <Card>
+        <h3 className="section-title text-accent-rose">危险操作</h3>
+        <p className="mt-1 text-xs muted">清空所有本地学习数据。慎用。</p>
+        <Button className="mt-3" variant="ghost" onClick={handleClear}>
+          清空本地数据
+        </Button>
+      </Card>
+    </Container>
+  );
+}

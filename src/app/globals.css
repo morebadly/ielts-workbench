@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background: #faf8f4;
+  color: #2b2a28;
+}
+
+body {
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl bg-bg-card shadow-soft border border-black/5;
+  }
+  .pill {
+    @apply inline-flex items-center gap-1 rounded-full bg-bg-soft px-2.5 py-0.5 text-xs text-ink-soft;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition active:scale-[0.98];
+  }
+  .btn-primary {
+    @apply btn bg-brand-500 text-white hover:bg-brand-600;
+  }
+  .btn-soft {
+    @apply btn bg-bg-soft text-ink hover:bg-brand-100;
+  }
+  .btn-ghost {
+    @apply btn text-ink-soft hover:bg-bg-soft;
+  }
+  .input {
+    @apply w-full rounded-xl border border-black/10 bg-bg-card px-3 py-2 text-ink placeholder:text-ink-muted focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200;
+  }
+  .textarea {
+    @apply input min-h-[10rem] leading-relaxed;
+  }
+  .section-title {
+    @apply text-base font-semibold text-ink;
+  }
+  .muted {
+    @apply text-ink-muted;
+  }
+}
+
+::selection {
+  background: #b8cfbc;
+  color: #2b2a28;
+}
