@@ -3,8 +3,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { Card, CardHeader } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
+import { AISourceBadge } from "@/components/ui/AISourceBadge";
 import { speak } from "@/lib/tts";
 import { gradeFillInSentence, gradeSentence, gradeWord } from "@/lib/grading";
+import { callAI, type AISource, type DictationFeedbackData } from "@/lib/ai/client";
 import type { DictationMode, Word } from "@/types";
 
 interface Props {
@@ -36,12 +38,17 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
     expected: string;
     reason?: string;
   } | null>(null);
+  const [aiFeedback, setAiFeedback] = useState<DictationFeedbackData | null>(null);
+  const [aiSource, setAiSource] = useState<AISource | "loading" | null>(null);
+  const [aiReason, setAiReason] = useState<string | undefined>();
 
   const current = words[idx];
 
   useEffect(() => {
     setInput("");
     setFeedback(null);
+    setAiFeedback(null);
+    setAiSource(null);
     if (mode === "listenWriteWord" && current) {
       speak(current.word, { voice });
     } else if (mode === "listenWriteSentence" && current) {
@@ -123,6 +130,29 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
     onResult(result.correct);
   };
 
+  const handleAIExplain = async () => {
+    if (!feedback || feedback.correct || !current) return;
+    setAiSource("loading");
+    const expected = mode === "listenWriteSentence" ? current.exampleSentence : current.word;
+    const fallback = (): DictationFeedbackData => ({
+      correct: false,
+      diff: feedback.reason || "拼写或顺序与正确答案不一致",
+      memoryTip: "把正确答案抄写两遍再读出声,会记得更牢。"
+    });
+    const r = await callAI(
+      "dictationFeedback",
+      {
+        expected,
+        got: input,
+        kind: mode === "listenWriteSentence" ? "sentence" : "word"
+      },
+      fallback
+    );
+    setAiFeedback(r.data);
+    setAiSource(r.source);
+    setAiReason(r.reason);
+  };
+
   const handleNext = () => {
     if (idx + 1 >= words.length) {
       onFinish?.();
@@ -169,6 +199,20 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
             <div>
               <div>✗ {feedback.reason || "再试一次"}</div>
               <div className="mt-1 muted">正确答案:{feedback.expected}</div>
+              <div className="mt-2 flex items-center gap-2">
+                <Button variant="ghost" onClick={handleAIExplain}>
+                  让 AI 讲讲哪里错了
+                </Button>
+                {aiSource ? <AISourceBadge source={aiSource} reason={aiReason} /> : null}
+              </div>
+              {aiFeedback ? (
+                <div className="mt-2 rounded-lg bg-bg-card p-3 text-ink">
+                  <div className="text-xs muted">差异</div>
+                  <p>{aiFeedback.diff}</p>
+                  <div className="mt-2 text-xs muted">记忆提示</div>
+                  <p>{aiFeedback.memoryTip}</p>
+                </div>
+              ) : null}
             </div>
           )}
         </div>

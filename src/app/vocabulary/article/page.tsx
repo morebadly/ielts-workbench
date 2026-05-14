@@ -1,26 +1,54 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
+import { AISourceBadge } from "@/components/ui/AISourceBadge";
 import { speak } from "@/lib/tts";
 import { getArticleForDay } from "@/data/mockArticles";
-import { MOCK_WORDS } from "@/data/mockWords";
+import { getWordsByDay, MOCK_WORDS } from "@/data/mockWords";
 import { useDailyTask } from "@/hooks/useDailyTask";
 import { gradeSentence } from "@/lib/grading";
+import { callAI, type AISource, type VocabArticleData } from "@/lib/ai/client";
 
 export default function VocabularyArticlePage() {
   const { user, bump } = useDailyTask();
-  const article = useMemo(
+  const baseArticle = useMemo(
     () => getArticleForDay(user.activeBookId, user.currentDay),
     [user.activeBookId, user.currentDay]
   );
 
+  const dayWords = useMemo(
+    () => getWordsByDay(user.activeBookId, user.currentDay),
+    [user.activeBookId, user.currentDay]
+  );
+
+  const [aiArticle, setAiArticle] = useState<VocabArticleData | null>(null);
+  const [aiSource, setAiSource] = useState<AISource | "loading" | null>(null);
+  const [aiReason, setAiReason] = useState<string | undefined>();
+
   const [explainSentence, setExplainSentence] = useState<string | null>(null);
   const [listenInput, setListenInput] = useState("");
   const [listenFeedback, setListenFeedback] = useState<string | null>(null);
+
+  useEffect(() => {
+    setAiArticle(null);
+    setAiSource(null);
+    setExplainSentence(null);
+    setListenInput("");
+    setListenFeedback(null);
+  }, [user.currentDay, user.activeBookId]);
+
+  const article = aiArticle
+    ? {
+        title: aiArticle.title,
+        body: aiArticle.body,
+        highlightWordIds: dayWords.map((w) => w.id),
+        questions: baseArticle?.questions || []
+      }
+    : baseArticle;
 
   if (!article) {
     return (
@@ -47,13 +75,9 @@ export default function VocabularyArticlePage() {
       const stripped = t.toLowerCase();
       if (highlightedSet.has(stripped)) {
         return (
-          <mark
-            key={i}
-            className="rounded bg-brand-100 px-0.5 text-brand-700"
-            style={{ background: "transparent" }}
-          >
-            <span className="rounded bg-brand-100 px-0.5 text-brand-700">{t}</span>
-          </mark>
+          <span key={i} className="rounded bg-brand-100 px-0.5 text-brand-700">
+            {t}
+          </span>
         );
       }
       return <span key={i}>{t}</span>;
@@ -72,9 +96,29 @@ export default function VocabularyArticlePage() {
     const audioQ = article.questions.find((q) => q.type === "listenAndWrite");
     if (!audioQ?.audioText) return;
     const r = gradeSentence(listenInput, audioQ.audioText);
-    setListenFeedback(
-      r.correct ? "✓ 完全正确" : `✗ 参考:${audioQ.audioText}`
+    setListenFeedback(r.correct ? "✓ 完全正确" : `✗ 参考:${audioQ.audioText}`);
+  };
+
+  const regenerate = async () => {
+    setAiSource("loading");
+    const fallback = (): VocabArticleData => ({
+      title: baseArticle?.title || "Today's Reading",
+      topic: "education",
+      body: baseArticle?.body || ""
+    });
+    const r = await callAI(
+      "vocabArticle",
+      {
+        words: dayWords.map((w) => ({
+          word: w.word,
+          chineseMeaning: w.chineseMeaning
+        }))
+      },
+      fallback
     );
+    setAiArticle(r.data);
+    setAiSource(r.source);
+    setAiReason(r.reason);
   };
 
   return (
@@ -83,9 +127,15 @@ export default function VocabularyArticlePage() {
         title="今日词汇文章"
         subtitle={article.title}
         right={
-          <Link href="/vocabulary">
-            <Button variant="ghost">返回</Button>
-          </Link>
+          <div className="flex items-center gap-2">
+            {aiSource ? <AISourceBadge source={aiSource} reason={aiReason} /> : null}
+            <Button variant="soft" onClick={regenerate}>
+              {aiArticle ? "再生成一篇" : "用 AI 生成"}
+            </Button>
+            <Link href="/vocabulary">
+              <Button variant="ghost">返回</Button>
+            </Link>
+          </div>
         }
       />
 
@@ -116,7 +166,7 @@ export default function VocabularyArticlePage() {
             <div className="font-medium">逐句解释占位</div>
             <p className="mt-1">{explainSentence}</p>
             <p className="mt-1 muted">
-              后续接入 AI 后,这里会给出该句的语法、关键搭配和中文翻译。
+              后续可调用 AI Provider 的 sentenceFeedback 给出语法、搭配和翻译。
             </p>
           </div>
         ) : null}

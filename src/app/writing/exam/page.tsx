@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
+import { AISourceBadge } from "@/components/ui/AISourceBadge";
 import {
   countParagraphs,
   countWords,
@@ -15,6 +16,12 @@ import { MOCK_WRITING_PROMPTS } from "@/data/mockWriting";
 import { useCountdown } from "@/hooks/useTimer";
 import type { WritingPractice, WritingTaskType } from "@/types";
 import { storage } from "@/lib/storage";
+import {
+  callAI,
+  type AISource,
+  type WritingTask1Data,
+  type WritingTask2Data
+} from "@/lib/ai/client";
 
 export default function WritingExamPage() {
   const [taskType, setTaskType] = useState<WritingTaskType>("task2");
@@ -175,7 +182,7 @@ export default function WritingExamPage() {
           </div>
 
           {submitted ? (
-            <FeedbackPlaceholder practice={submitted} />
+            <AIFeedbackBlock practice={submitted} promptText={prompt.promptText} />
           ) : null}
         </Card>
       </div>
@@ -206,42 +213,178 @@ function Stat({
   );
 }
 
-function FeedbackPlaceholder({ practice }: { practice: WritingPractice }) {
+function AIFeedbackBlock({
+  practice,
+  promptText
+}: {
+  practice: WritingPractice;
+  promptText: string;
+}) {
   const isTask1 = practice.taskType === "task1";
-  const items = isTask1
-    ? [
-        "是否有 Overview",
-        "是否抓住主要趋势",
-        "数据描述是否准确",
-        "比较句是否自然",
-        "语法和词汇问题",
-        "修改版"
-      ]
-    : [
-        "立场是否清楚",
-        "论证是否充分",
-        "段落逻辑是否顺",
-        "词汇是否重复",
-        "语法错误",
-        "修改版"
-      ];
+  const [source, setSource] = useState<AISource | "loading" | null>(null);
+  const [reason, setReason] = useState<string | undefined>();
+  const [task1, setTask1] = useState<WritingTask1Data | null>(null);
+  const [task2, setTask2] = useState<WritingTask2Data | null>(null);
+
+  useEffect(() => {
+    setSource(null);
+    setTask1(null);
+    setTask2(null);
+  }, [practice.id]);
+
+  const grade = async () => {
+    setSource("loading");
+    if (isTask1) {
+      const fallback = (): WritingTask1Data => ({
+        hasOverview: practice.paragraphCount >= 2,
+        capturesMainTrend: practice.wordCount >= 150,
+        dataAccuracy: 3,
+        comparisonNatural: 3,
+        grammarIssues: [],
+        vocabIssues: [],
+        comments: "Mock 反馈:配置 MINIMAX_API_KEY 后会得到完整的 Task 1 评估。",
+        revisedVersion: practice.content
+      });
+      const r = await callAI(
+        "writingTask1",
+        { promptText, essay: practice.content },
+        fallback
+      );
+      setTask1(r.data);
+      setSource(r.source);
+      setReason(r.reason);
+    } else {
+      const fallback = (): WritingTask2Data => ({
+        positionClear: practice.paragraphCount >= 4,
+        argumentStrength: 3,
+        paragraphLogic: 3,
+        vocabRepetition: 3,
+        grammarIssues: [],
+        vocabIssues: [],
+        comments: "Mock 反馈:配置 MINIMAX_API_KEY 后会得到完整的 Task 2 评估。",
+        revisedVersion: practice.content
+      });
+      const r = await callAI(
+        "writingTask2",
+        { promptText, essay: practice.content },
+        fallback
+      );
+      setTask2(r.data);
+      setSource(r.source);
+      setReason(r.reason);
+    }
+  };
+
   return (
-    <div className="mt-5 rounded-xl border border-dashed border-brand-200 bg-brand-50 p-4">
-      <h4 className="font-semibold text-brand-700">AI 批改占位</h4>
-      <p className="mt-1 text-xs muted">
-        提交已保存。后续接入 AI 后,这里会针对下面这些维度给出反馈:
-      </p>
-      <ul className="mt-2 grid grid-cols-2 gap-1 text-sm text-brand-700">
-        {items.map((it) => (
-          <li key={it} className="rounded-md bg-white/70 px-2 py-1">
-            · {it}
-          </li>
-        ))}
-      </ul>
-      <div className="mt-3 text-xs muted">
+    <div className="mt-5 rounded-xl border border-brand-200 bg-brand-50 p-4">
+      <div className="flex items-center justify-between gap-2">
+        <h4 className="font-semibold text-brand-700">AI 批改</h4>
+        <div className="flex items-center gap-2">
+          {source ? <AISourceBadge source={source} reason={reason} /> : null}
+          <Button variant="soft" onClick={grade}>
+            {source ? "再批一次" : "让 AI 批改"}
+          </Button>
+        </div>
+      </div>
+      <div className="mt-2 text-xs muted">
         本次:{practice.wordCount} 词 · {practice.paragraphCount} 段 · 用时{" "}
         {formatMs(practice.durationMs)}
       </div>
+
+      {isTask1 && task1 ? <Task1View data={task1} /> : null}
+      {!isTask1 && task2 ? <Task2View data={task2} /> : null}
+    </div>
+  );
+}
+
+function Pill({ label, ok }: { label: string; ok: boolean }) {
+  return (
+    <span
+      className={
+        ok
+          ? "pill bg-brand-100 text-brand-700"
+          : "pill bg-accent-rose/10 text-accent-rose"
+      }
+    >
+      {label} {ok ? "✓" : "✗"}
+    </span>
+  );
+}
+
+function Score({ label, value }: { label: string; value: number }) {
+  return (
+    <span className="pill bg-bg-soft">
+      {label} {value}/5
+    </span>
+  );
+}
+
+function Task1View({ data }: { data: WritingTask1Data }) {
+  return (
+    <div className="mt-3 space-y-3 text-sm">
+      <div className="flex flex-wrap gap-1.5">
+        <Pill label="Overview" ok={data.hasOverview} />
+        <Pill label="抓住主要趋势" ok={data.capturesMainTrend} />
+        <Score label="数据准确" value={data.dataAccuracy} />
+        <Score label="比较自然" value={data.comparisonNatural} />
+      </div>
+      <IssuesList title="语法问题" items={data.grammarIssues} />
+      <IssuesList title="词汇问题" items={data.vocabIssues} />
+      <Comments text={data.comments} />
+      <Revised text={data.revisedVersion} />
+    </div>
+  );
+}
+
+function Task2View({ data }: { data: WritingTask2Data }) {
+  return (
+    <div className="mt-3 space-y-3 text-sm">
+      <div className="flex flex-wrap gap-1.5">
+        <Pill label="立场清楚" ok={data.positionClear} />
+        <Score label="论证强度" value={data.argumentStrength} />
+        <Score label="段落逻辑" value={data.paragraphLogic} />
+        <Score label="词汇重复(越高越好)" value={data.vocabRepetition} />
+      </div>
+      <IssuesList title="语法问题" items={data.grammarIssues} />
+      <IssuesList title="词汇问题" items={data.vocabIssues} />
+      <Comments text={data.comments} />
+      <Revised text={data.revisedVersion} />
+    </div>
+  );
+}
+
+function IssuesList({ title, items }: { title: string; items: string[] }) {
+  if (!items.length) return null;
+  return (
+    <div>
+      <div className="text-xs muted">{title}</div>
+      <ul className="mt-1 list-disc pl-5 text-ink-soft">
+        {items.map((g, i) => (
+          <li key={i}>{g}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Comments({ text }: { text: string }) {
+  if (!text) return null;
+  return (
+    <div className="rounded-lg bg-white/70 p-3">
+      <div className="text-xs muted">总评</div>
+      <p className="mt-1">{text}</p>
+    </div>
+  );
+}
+
+function Revised({ text }: { text: string }) {
+  if (!text) return null;
+  return (
+    <div className="rounded-lg bg-white/70 p-3">
+      <div className="text-xs muted">改写版</div>
+      <pre className="mt-1 whitespace-pre-wrap font-serif text-[14px] leading-relaxed">
+        {text}
+      </pre>
     </div>
   );
 }

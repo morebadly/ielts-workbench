@@ -3,8 +3,15 @@
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
+import { AISourceBadge } from "@/components/ui/AISourceBadge";
 import { speak } from "@/lib/tts";
 import { getPronunciationGuide } from "@/lib/pronunciation";
+import {
+  callAI,
+  type AISource,
+  type PronunciationData,
+  type SentenceFeedbackData
+} from "@/lib/ai/client";
 import type { Word, WordProgress } from "@/types";
 import { WORD_STATUS_LABEL } from "@/types";
 import { applyFeedback, type Feedback } from "@/lib/srs";
@@ -19,25 +26,73 @@ interface Props {
 
 export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }: Props) {
   const [showGuide, setShowGuide] = useState(false);
+  const [guideData, setGuideData] = useState<PronunciationData | null>(null);
+  const [guideSource, setGuideSource] = useState<AISource | "loading" | null>(null);
+  const [guideReason, setGuideReason] = useState<string | undefined>();
+
   const [sentence, setSentence] = useState("");
-  const [aiPlaceholder, setAiPlaceholder] = useState<string | null>(null);
+  const [sentenceData, setSentenceData] = useState<SentenceFeedbackData | null>(null);
+  const [sentenceSource, setSentenceSource] = useState<AISource | "loading" | null>(null);
+  const [sentenceReason, setSentenceReason] = useState<string | undefined>();
 
   useEffect(() => {
     setShowGuide(false);
+    setGuideData(null);
+    setGuideSource(null);
     setSentence("");
-    setAiPlaceholder(null);
+    setSentenceData(null);
+    setSentenceSource(null);
   }, [word.id]);
-
-  const guide = getPronunciationGuide(word);
 
   const handleFb = (fb: Feedback) => {
     onFeedback(applyFeedback(progress, fb));
   };
 
-  const handleSentence = () => {
+  const loadGuide = async () => {
+    setShowGuide(true);
+    if (guideData) return;
+    setGuideSource("loading");
+    const fallback = (): PronunciationData => {
+      const g = getPronunciationGuide(word);
+      return {
+        syllables: g.syllables,
+        stressIndex: g.stressIndex,
+        chineseHint: g.chineseHint,
+        commonMistakes: g.commonMistakes
+      };
+    };
+    const r = await callAI(
+      "pronunciation",
+      {
+        word: word.word,
+        phonetic: word.phonetic,
+        exampleSentence: word.exampleSentence
+      },
+      fallback
+    );
+    setGuideData(r.data);
+    setGuideSource(r.source);
+    setGuideReason(r.reason);
+  };
+
+  const handleSentence = async () => {
     if (!sentence.trim()) return;
     onSentenceSubmit?.(sentence.trim());
-    setAiPlaceholder("AI 修改占位:已记录你的造句,后续接入 AI 后会在此显示修改建议。");
+    setSentenceSource("loading");
+    const fallback = (): SentenceFeedbackData => ({
+      grammarIssues: [],
+      moreNatural: sentence.trim(),
+      ieltsUsage: `${word.word} can be naturally used in IELTS writing about ${word.wordList.toLowerCase()}.`,
+      comments: "AI 暂未启用,这是一条 mock 反馈。配置 MINIMAX_API_KEY 后可看到真实点评。"
+    });
+    const r = await callAI(
+      "sentenceFeedback",
+      { word: word.word, userSentence: sentence.trim() },
+      fallback
+    );
+    setSentenceData(r.data);
+    setSentenceSource(r.source);
+    setSentenceReason(r.reason);
   };
 
   return (
@@ -81,9 +136,7 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
 
       <div className="rounded-xl bg-bg-soft/60 p-4">
         <div className="flex items-start justify-between gap-3">
-          <p className="font-serif text-[15px] leading-relaxed">
-            “{word.exampleSentence}”
-          </p>
+          <p className="font-serif text-[15px] leading-relaxed">"{word.exampleSentence}"</p>
           <div className="flex shrink-0 gap-2">
             <Button
               variant="soft"
@@ -105,17 +158,20 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
       </div>
 
       <div>
-        <Button variant="ghost" onClick={() => setShowGuide((v) => !v)}>
-          {showGuide ? "收起怎么读" : "告诉我怎么读"}
-        </Button>
-        {showGuide ? (
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" onClick={showGuide ? () => setShowGuide(false) : loadGuide}>
+            {showGuide ? "收起怎么读" : "告诉我怎么读"}
+          </Button>
+          {guideSource ? <AISourceBadge source={guideSource} reason={guideReason} /> : null}
+        </div>
+        {showGuide && guideData ? (
           <div className="mt-3 rounded-xl border border-black/5 bg-bg-card p-4 text-sm leading-relaxed">
             <div className="flex flex-wrap items-center gap-1">
-              {guide.syllables.map((s, i) => (
+              {guideData.syllables.map((s, i) => (
                 <span
                   key={i}
                   className={
-                    i === guide.stressIndex
+                    i === guideData.stressIndex
                       ? "rounded-md bg-brand-100 px-2 py-1 font-semibold text-brand-700"
                       : "rounded-md bg-bg-soft px-2 py-1 text-ink-soft"
                   }
@@ -125,10 +181,10 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
               ))}
             </div>
             <div className="mt-3 text-ink-soft">
-              <span className="text-ink">中文读法提示:</span> {guide.chineseHint}
+              <span className="text-ink">中文读法提示:</span> {guideData.chineseHint}
             </div>
             <ul className="mt-2 list-disc pl-5 text-ink-soft">
-              {guide.commonMistakes.map((m, i) => (
+              {guideData.commonMistakes.map((m, i) => (
                 <li key={i}>{m}</li>
               ))}
             </ul>
@@ -149,7 +205,12 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
       </div>
 
       <div>
-        <div className="mb-1 text-xs muted">用这个词造一句(雅思相关最佳)</div>
+        <div className="mb-1 flex items-center gap-2 text-xs muted">
+          用这个词造一句(雅思相关最佳)
+          {sentenceSource ? (
+            <AISourceBadge source={sentenceSource} reason={sentenceReason} />
+          ) : null}
+        </div>
         <div className="flex gap-2">
           <input
             className="input"
@@ -161,9 +222,29 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
             提交
           </Button>
         </div>
-        {aiPlaceholder ? (
-          <div className="mt-2 rounded-xl border border-dashed border-brand-200 bg-brand-50 p-3 text-xs text-brand-700">
-            {aiPlaceholder}
+        {sentenceData ? (
+          <div className="mt-2 space-y-2 rounded-xl border border-brand-200 bg-brand-50 p-3 text-sm">
+            {sentenceData.grammarIssues.length ? (
+              <div>
+                <div className="text-xs muted">语法问题</div>
+                <ul className="mt-1 list-disc pl-5 text-ink-soft">
+                  {sentenceData.grammarIssues.map((g, i) => (
+                    <li key={i}>{g}</li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+            <div>
+              <div className="text-xs muted">更自然</div>
+              <p className="font-serif">{sentenceData.moreNatural}</p>
+            </div>
+            <div>
+              <div className="text-xs muted">IELTS 可用表达</div>
+              <p className="font-serif">{sentenceData.ieltsUsage}</p>
+            </div>
+            {sentenceData.comments ? (
+              <div className="text-xs text-brand-700">{sentenceData.comments}</div>
+            ) : null}
           </div>
         ) : null}
       </div>
