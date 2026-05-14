@@ -16,6 +16,7 @@ export default function SettingsPage() {
   const [day, setDay] = useState<number>(user.currentDay);
   const [exportText, setExportText] = useState("");
   const [importText, setImportText] = useState("");
+  const [savedAt, setSavedAt] = useState<number | null>(null);
 
   useEffect(() => {
     setTargets(user.preferences.targets);
@@ -29,6 +30,7 @@ export default function SettingsPage() {
       currentDay: Math.min(MOCK_BOOK.totalDays, Math.max(1, day)),
       preferences: { ...user.preferences, voice, targets }
     });
+    setSavedAt(Date.now());
   };
 
   const handleExport = () => setExportText(storage.exportAll());
@@ -118,8 +120,11 @@ export default function SettingsPage() {
         </p>
       </Card>
 
-      <div className="mb-4 flex gap-2">
+      <div className="mb-4 flex items-center gap-3">
         <Button onClick={save}>保存设置</Button>
+        {savedAt && Date.now() - savedAt < 3000 ? (
+          <span className="text-sm text-brand-700">✓ 已保存,首页和任务卡已同步</span>
+        ) : null}
       </div>
 
       <Card className="mb-4">

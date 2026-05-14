@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { ProgressCards } from "@/components/dashboard/ProgressCards";
 import { TodayTasks } from "@/components/dashboard/TodayTasks";
+import { QuickTargets } from "@/components/dashboard/QuickTargets";
 import { useDailyTask } from "@/hooks/useDailyTask";
 
 export default function HomePage() {
@@ -38,8 +39,9 @@ export default function HomePage() {
       <ProgressCards user={user} progress={progress} targets={targets} />
 
       <div className="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-3">
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 space-y-5">
           <TodayTasks targets={targets} progress={progress} />
+          <QuickTargets user={user} targets={targets} />
         </div>
 
         <Card>

@@ -14,6 +14,14 @@ interface UseDailyTaskState {
   refresh: () => void;
 }
 
+const STORAGE_EVENT = "ielts-wb:storage-updated";
+
+export function notifyStorageUpdated() {
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new Event(STORAGE_EVENT));
+  }
+}
+
 export function useDailyTask(): UseDailyTaskState {
   const [user, setUserState] = useState<UserProgress>(() => storage.getUser());
   const [progress, setProgress] = useState<DailyTaskProgress>(() => storage.getDailyProgress());
@@ -40,14 +48,34 @@ export function useDailyTask(): UseDailyTaskState {
     setProgress(storage.getDailyProgress());
   }, []);
 
+  useEffect(() => {
+    const handler = () => {
+      setUserState(storage.getUser());
+      setProgress(storage.getDailyProgress());
+    };
+    const visHandler = () => {
+      if (document.visibilityState === "visible") handler();
+    };
+    window.addEventListener(STORAGE_EVENT, handler);
+    window.addEventListener("storage", handler);
+    document.addEventListener("visibilitychange", visHandler);
+    return () => {
+      window.removeEventListener(STORAGE_EVENT, handler);
+      window.removeEventListener("storage", handler);
+      document.removeEventListener("visibilitychange", visHandler);
+    };
+  }, []);
+
   const bump = (k: keyof Omit<DailyTaskProgress, "date">, by = 1) => {
     const next = storage.bumpDailyProgress(k, by);
     setProgress(next);
+    notifyStorageUpdated();
   };
 
   const setUser = (u: UserProgress) => {
     storage.setUser(u);
     setUserState(u);
+    notifyStorageUpdated();
   };
 
   const refresh = () => {
