@@ -5,3 +5,9 @@ out
 *.log
 .env*
 !.env.example
+
+# 用户上传的 PDF / 临时文件,绝不上传 GitHub
+uploads/
+tmp/
+*.pdf
+!public/**/*.pdf

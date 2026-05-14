@@ -46,6 +46,19 @@ export interface VocabularyBook {
   description?: string;
 }
 
+export interface ImportedWord {
+  word: string;
+  phonetic?: string;
+  chineseMeaning: string;
+  englishDefinition?: string;
+  exampleSentence?: string;
+  bookTitle: string;
+  bookDay?: string;
+  wordList?: string;
+  pageNumber?: number;
+  order: number;
+}
+
 export type DictationMode =
   | "listenWriteWord"
   | "chineseToEnglish"

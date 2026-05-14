@@ -110,6 +110,42 @@ Return STRICT JSON, all comments in Chinese:
   "comments": "一段总评, 中文, 150 字以内",
   "revisedVersion": "改写后的整篇英文范文, 至少 250 词, 4 段, 段间空一行"
 }
+`.trim(),
+
+  structureWords: (rawText: string, bookTitle: string, hint?: string) => `
+You convert messy text from an IELTS vocabulary book into clean structured word entries.
+
+Book title: ${bookTitle}
+${hint ? `User hint: ${hint}` : ""}
+
+Raw text (may contain OCR noise, page numbers, headers, mixed languages):
+"""
+${rawText.slice(0, 12000)}
+"""
+
+Task: Identify English vocabulary entries with their Chinese meaning, phonetic if shown, and example sentence if shown. Detect any "Day N" / "List N" / unit dividers in the raw text and use them to fill bookDay / wordList. Drop page numbers and irrelevant Chinese paragraphs.
+
+Return STRICT JSON, no markdown:
+{
+  "words": [
+    {
+      "word": "<the English word, lowercase unless proper noun>",
+      "phonetic": "<IPA or empty string>",
+      "chineseMeaning": "<中文释义,可能多个,用; 分隔>",
+      "englishDefinition": "<English definition or empty>",
+      "exampleSentence": "<one English example or empty>",
+      "bookDay": "<e.g. Day 1, or empty>",
+      "wordList": "<e.g. List A, or empty>",
+      "order": <1-based integer in the order found>
+    }
+  ]
+}
+
+Rules:
+- Skip duplicates (same word).
+- Skip non-vocabulary content (preface, instructions, page numbers).
+- If you can't tell phonetic / example, use empty string, do NOT invent.
+- Return at most 200 entries; if more, return the first 200 and stop.
 `.trim()
 };
 
@@ -119,4 +155,5 @@ export type AICapability =
   | "dictationFeedback"
   | "vocabArticle"
   | "writingTask1"
-  | "writingTask2";
+  | "writingTask2"
+  | "structureWords";

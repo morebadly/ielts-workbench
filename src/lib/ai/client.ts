@@ -1,5 +1,3 @@
-import type { AICapability } from "./prompts";
-
 export type AISource = "minimax" | "mock";
 
 export interface AIResult<T> {
@@ -65,11 +63,13 @@ type CapabilityMap = {
   writingTask2: WritingTask2Data;
 };
 
+type ClientCapability = keyof CapabilityMap;
+
 interface CallOpts {
   signal?: AbortSignal;
 }
 
-export async function callAI<K extends AICapability>(
+export async function callAI<K extends ClientCapability>(
   capability: K,
   payload: Record<string, unknown>,
   fallback: () => CapabilityMap[K],
