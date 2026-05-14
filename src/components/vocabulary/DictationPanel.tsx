@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Card, CardHeader } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { AISourceBadge } from "@/components/ui/AISourceBadge";
+import { AIResultNotice } from "@/components/ai/AIResultNotice";
 import { speak } from "@/lib/tts";
 import { gradeFillInSentence, gradeSentence, gradeWord } from "@/lib/grading";
 import { callAI, type AISource, type DictationFeedbackData } from "@/lib/ai/client";
@@ -41,6 +42,7 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
   const [aiFeedback, setAiFeedback] = useState<DictationFeedbackData | null>(null);
   const [aiSource, setAiSource] = useState<AISource | "loading" | null>(null);
   const [aiReason, setAiReason] = useState<string | undefined>();
+  const [aiErrorCode, setAiErrorCode] = useState<string | undefined>();
 
   const current = words[idx];
 
@@ -151,6 +153,7 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
     setAiFeedback(r.data);
     setAiSource(r.source);
     setAiReason(r.reason);
+    setAiErrorCode(r.errorCode);
   };
 
   const handleNext = () => {
@@ -206,11 +209,20 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
                 {aiSource ? <AISourceBadge source={aiSource} reason={aiReason} /> : null}
               </div>
               {aiFeedback ? (
-                <div className="mt-2 rounded-lg bg-bg-card p-3 text-ink">
-                  <div className="text-xs muted">差异</div>
-                  <p>{aiFeedback.diff}</p>
-                  <div className="mt-2 text-xs muted">记忆提示</div>
-                  <p>{aiFeedback.memoryTip}</p>
+                <div className="mt-2 space-y-2">
+                  {aiSource === "mock" ? (
+                    <AIResultNotice
+                      source="mock"
+                      reason={aiReason}
+                      errorCode={aiErrorCode}
+                    />
+                  ) : null}
+                  <div className="rounded-lg bg-bg-card p-3 text-ink">
+                    <div className="text-xs muted">差异</div>
+                    <p>{aiFeedback.diff}</p>
+                    <div className="mt-2 text-xs muted">记忆提示</div>
+                    <p>{aiFeedback.memoryTip}</p>
+                  </div>
                 </div>
               ) : null}
             </div>

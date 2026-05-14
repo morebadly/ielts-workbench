@@ -12,6 +12,7 @@ import { getWordsByDay, MOCK_WORDS } from "@/data/mockWords";
 import { useDailyTask } from "@/hooks/useDailyTask";
 import { gradeSentence } from "@/lib/grading";
 import { callAI, type AISource, type VocabArticleData } from "@/lib/ai/client";
+import { AIResultNotice } from "@/components/ai/AIResultNotice";
 
 export default function VocabularyArticlePage() {
   const { user, bump } = useDailyTask();
@@ -28,6 +29,7 @@ export default function VocabularyArticlePage() {
   const [aiArticle, setAiArticle] = useState<VocabArticleData | null>(null);
   const [aiSource, setAiSource] = useState<AISource | "loading" | null>(null);
   const [aiReason, setAiReason] = useState<string | undefined>();
+  const [aiErrorCode, setAiErrorCode] = useState<string | undefined>();
 
   const [explainSentence, setExplainSentence] = useState<string | null>(null);
   const [listenInput, setListenInput] = useState("");
@@ -119,6 +121,7 @@ export default function VocabularyArticlePage() {
     setAiArticle(r.data);
     setAiSource(r.source);
     setAiReason(r.reason);
+    setAiErrorCode(r.errorCode);
   };
 
   return (
@@ -140,6 +143,13 @@ export default function VocabularyArticlePage() {
       />
 
       <Card padding="lg" className="space-y-3">
+        {aiSource === "mock" && aiArticle ? (
+          <AIResultNotice
+            source="mock"
+            reason={aiReason}
+            errorCode={aiErrorCode}
+          />
+        ) : null}
         <div className="flex flex-wrap gap-2">
           <Button variant="soft" onClick={() => playAll(1)}>
             ▶ 播放全文

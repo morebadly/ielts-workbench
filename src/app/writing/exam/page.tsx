@@ -6,6 +6,7 @@ import { Container, PageHeader } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { AISourceBadge } from "@/components/ui/AISourceBadge";
+import { AIResultNotice } from "@/components/ai/AIResultNotice";
 import {
   countParagraphs,
   countWords,
@@ -223,6 +224,7 @@ function AIFeedbackBlock({
   const isTask1 = practice.taskType === "task1";
   const [source, setSource] = useState<AISource | "loading" | null>(null);
   const [reason, setReason] = useState<string | undefined>();
+  const [errorCode, setErrorCode] = useState<string | undefined>();
   const [task1, setTask1] = useState<WritingTask1Data | null>(null);
   const [task2, setTask2] = useState<WritingTask2Data | null>(null);
 
@@ -253,6 +255,7 @@ function AIFeedbackBlock({
       setTask1(r.data);
       setSource(r.source);
       setReason(r.reason);
+      setErrorCode(r.errorCode);
     } else {
       const fallback = (): WritingTask2Data => ({
         positionClear: practice.paragraphCount >= 4,
@@ -272,6 +275,7 @@ function AIFeedbackBlock({
       setTask2(r.data);
       setSource(r.source);
       setReason(r.reason);
+      setErrorCode(r.errorCode);
     }
   };
 
@@ -290,6 +294,12 @@ function AIFeedbackBlock({
         本次:{practice.wordCount} 词 · {practice.paragraphCount} 段 · 用时{" "}
         {formatMs(practice.durationMs)}
       </div>
+
+      {source === "mock" ? (
+        <div className="mt-3">
+          <AIResultNotice source="mock" reason={reason} errorCode={errorCode} />
+        </div>
+      ) : null}
 
       {isTask1 && task1 ? <Task1View data={task1} /> : null}
       {!isTask1 && task2 ? <Task2View data={task2} /> : null}

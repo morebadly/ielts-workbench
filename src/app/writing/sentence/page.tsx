@@ -6,6 +6,7 @@ import { Container, PageHeader } from "@/components/layout/Container";
 import { Card, CardHeader } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { AISourceBadge } from "@/components/ui/AISourceBadge";
+import { AIResultNotice } from "@/components/ai/AIResultNotice";
 import { MOCK_SENTENCE_DRILLS } from "@/data/mockWriting";
 import { useDailyTask } from "@/hooks/useDailyTask";
 import { callAI, type AISource, type SentenceFeedbackData } from "@/lib/ai/client";
@@ -18,6 +19,7 @@ export default function WritingSentencePage() {
   const [aiData, setAiData] = useState<SentenceFeedbackData | null>(null);
   const [aiSource, setAiSource] = useState<AISource | "loading" | null>(null);
   const [aiReason, setAiReason] = useState<string | undefined>();
+  const [aiErrorCode, setAiErrorCode] = useState<string | undefined>();
 
   const item = MOCK_SENTENCE_DRILLS[idx];
 
@@ -43,6 +45,7 @@ export default function WritingSentencePage() {
     setAiData(r.data);
     setAiSource(r.source);
     setAiReason(r.reason);
+    setAiErrorCode(r.errorCode);
   };
 
   const next = () => {
@@ -102,7 +105,15 @@ export default function WritingSentencePage() {
         ) : null}
 
         {aiData ? (
-          <div className="space-y-2 rounded-xl border border-brand-200 bg-brand-50 p-3 text-sm">
+          <div className="space-y-2">
+            {aiSource === "mock" ? (
+              <AIResultNotice
+                source="mock"
+                reason={aiReason}
+                errorCode={aiErrorCode}
+              />
+            ) : null}
+            <div className="space-y-2 rounded-xl border border-brand-200 bg-brand-50 p-3 text-sm">
             {aiData.grammarIssues.length ? (
               <div>
                 <div className="text-xs muted">语法问题</div>
@@ -124,6 +135,7 @@ export default function WritingSentencePage() {
             {aiData.comments ? (
               <div className="text-xs text-brand-700">{aiData.comments}</div>
             ) : null}
+            </div>
           </div>
         ) : null}
       </Card>

@@ -3,6 +3,7 @@ import "server-only";
 export interface MiniMaxConfig {
   apiKey: string;
   baseUrl: string;
+  chatPath: string;
   textModel: string;
   ttsModel: string;
 }
@@ -17,12 +18,18 @@ export class MiniMaxConfigError extends Error {
 export function getMiniMaxConfig(): MiniMaxConfig | null {
   const apiKey = process.env.MINIMAX_API_KEY?.trim();
   if (!apiKey) return null;
+  const baseUrl = (process.env.MINIMAX_BASE_URL || "https://api.minimax.io/v1").replace(
+    /\/+$/,
+    ""
+  );
+  const chatPath = (process.env.MINIMAX_CHAT_PATH || "/chat/completions").replace(
+    /^\/+/,
+    "/"
+  );
   return {
     apiKey,
-    baseUrl: (process.env.MINIMAX_BASE_URL || "https://api.minimax.io/v1").replace(
-      /\/$/,
-      ""
-    ),
+    baseUrl,
+    chatPath,
     textModel: process.env.MINIMAX_TEXT_MODEL || "MiniMax-M2.7",
     ttsModel: process.env.MINIMAX_TTS_MODEL || "speech-02-hd"
   };
@@ -40,8 +47,12 @@ export interface ChatOptions {
   expectJson?: boolean;
 }
 
-interface ChatResponseShape {
-  choices?: Array<{ message?: { content?: string } }>;
+interface OpenAIChatResp {
+  choices?: Array<{
+    message?: { content?: string | null };
+    finish_reason?: string;
+  }>;
+  error?: { message?: string; type?: string; code?: string };
   base_resp?: { status_code?: number; status_msg?: string };
 }
 
@@ -55,12 +66,12 @@ export async function chatComplete(opts: ChatOptions): Promise<string> {
     );
   }
 
-  const url = `${cfg.baseUrl}/text/chatcompletion_v2`;
+  const url = `${cfg.baseUrl}${cfg.chatPath}`;
   const body: Record<string, unknown> = {
     model: cfg.textModel,
     messages: opts.messages,
     temperature: opts.temperature ?? 0.4,
-    max_tokens: opts.maxTokens ?? 1200
+    max_completion_tokens: opts.maxTokens ?? 1200
   };
   if (opts.expectJson) {
     body.response_format = { type: "json_object" };
@@ -86,17 +97,26 @@ export async function chatComplete(opts: ChatOptions): Promise<string> {
 
   if (!resp.ok) {
     const text = await resp.text().catch(() => "");
-    throw new Error(`MiniMax HTTP ${resp.status}: ${text.slice(0, 300)}`);
+    throw new Error(`MiniMax HTTP ${resp.status}: ${text.slice(0, 500)}`);
   }
 
-  const data = (await resp.json()) as ChatResponseShape;
+  const data = (await resp.json()) as OpenAIChatResp;
+
+  if (data.error?.message) {
+    throw new Error(
+      `MiniMax error ${data.error.code || data.error.type || ""}: ${data.error.message}`.trim()
+    );
+  }
   if (data.base_resp && data.base_resp.status_code && data.base_resp.status_code !== 0) {
     throw new Error(
       `MiniMax error ${data.base_resp.status_code}: ${data.base_resp.status_msg || "unknown"}`
     );
   }
+
   const content = data.choices?.[0]?.message?.content;
-  if (!content) throw new Error("MiniMax 返回内容为空");
+  if (!content || !content.trim()) {
+    throw new Error("MiniMax 返回内容为空");
+  }
   return content;
 }
 
@@ -119,15 +139,21 @@ export async function chatJSON<T>(
     return JSON.parse(cleaned) as T;
   } catch (e) {
     throw new Error(
-      `MiniMax 返回 JSON 解析失败: ${(e as Error).message} | raw: ${raw.slice(0, 200)}`
+      `MiniMax JSON 解析失败: ${(e as Error).message} | raw: ${raw.slice(0, 300)}`
     );
   }
 }
 
-function stripJsonFence(s: string): string {
+export function stripJsonFence(s: string): string {
   const trimmed = s.trim();
-  const fence = trimmed.match(/^```(?:json)?\s*([\s\S]*?)```$/i);
-  if (fence) return fence[1].trim();
+  const fenceJson = trimmed.match(/```json\s*([\s\S]*?)```/i);
+  if (fenceJson) return fenceJson[1].trim();
+  const fenceAny = trimmed.match(/```\s*([\s\S]*?)```/);
+  if (fenceAny) {
+    const inner = fenceAny[1].trim();
+    if (inner.startsWith("{") || inner.startsWith("[")) return inner;
+  }
+  if (trimmed.startsWith("{") || trimmed.startsWith("[")) return trimmed;
   const firstBrace = trimmed.indexOf("{");
   const lastBrace = trimmed.lastIndexOf("}");
   if (firstBrace >= 0 && lastBrace > firstBrace) {
@@ -149,7 +175,7 @@ export async function synthesizeTTS(_opts: TTSOptions): Promise<{
   return {
     available: false,
     reason:
-      "MiniMax TTS 接口已预留, v1.0 仍使用浏览器 Web Speech API. 后续在此函数内调用 /v1/t2a_v2 即可"
+      "MiniMax TTS 接口已预留, 当前仍使用浏览器 Web Speech API. 后续在此函数内调用 t2a 即可"
   };
 }
 

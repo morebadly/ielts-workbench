@@ -4,7 +4,7 @@
 
 ---
 
-## 当前版本: v1.0
+## 当前版本: v1.3.0
 
 **已完成:**
 - 首页 Dashboard:今日 6 项任务 / 词书进度 / 连续天数 / 继续学习
@@ -49,6 +49,7 @@ npm run dev
    ```env
    MINIMAX_API_KEY=你的真实apikey
    MINIMAX_BASE_URL=https://api.minimax.io/v1
+   MINIMAX_CHAT_PATH=/chat/completions
    MINIMAX_TEXT_MODEL=MiniMax-M2.7
    MINIMAX_TTS_MODEL=speech-02-hd
    ```
@@ -121,11 +122,17 @@ src/
 ## 版本历史
 
 - **v0.9** — 雅思学习工作台首版功能完成(无 AI 接入,使用 mock)
-  - 包含原计划 v0.1 → v0.8 的全部模块
-- **v1.0** — 接入 MiniMax Provider
-  - 6 个文本能力可用,无 key 时自动 mock
-  - API Route + Server-only Provider,前端零直连
-  - TTS 接口预留
+- **v1.0** — 接入 MiniMax Provider,6 个文本能力可用,前端零直连
+- **v1.0.1** — 修复每日任务量保存反馈、跨页同步、首页加快捷调节卡片
+- **v1.1** — 自定义词书导入(CSV/JSON)+ 词书管理 UI
+- **v1.2** — 上传 PDF 自动提取单词,AI 结构化预览确认后入库
+- **v1.3.0** — MiniMax 集成与 CI 稳定性补丁
+  - 修复 MiniMax OpenAI-compatible endpoint 配置(`/chat/completions`)
+  - 增加 AI 返回结果 zod 校验(`schemas.ts` + `validateAIResult`)
+  - AI 失败时显示明确的 mock 来源、错误码与原因(`AIResultNotice`)
+  - 修复 localStorage 导入安全:白名单 keys, 返回 imported/skipped
+  - 增加 GitHub Actions CI(lint + build)
+  - 同步 package version 到 1.3.0
 
 ---
 

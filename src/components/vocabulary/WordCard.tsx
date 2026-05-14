@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { AISourceBadge } from "@/components/ui/AISourceBadge";
+import { AIResultNotice } from "@/components/ai/AIResultNotice";
 import { speak } from "@/lib/tts";
 import { getPronunciationGuide } from "@/lib/pronunciation";
 import {
@@ -29,11 +30,13 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
   const [guideData, setGuideData] = useState<PronunciationData | null>(null);
   const [guideSource, setGuideSource] = useState<AISource | "loading" | null>(null);
   const [guideReason, setGuideReason] = useState<string | undefined>();
+  const [guideErrorCode, setGuideErrorCode] = useState<string | undefined>();
 
   const [sentence, setSentence] = useState("");
   const [sentenceData, setSentenceData] = useState<SentenceFeedbackData | null>(null);
   const [sentenceSource, setSentenceSource] = useState<AISource | "loading" | null>(null);
   const [sentenceReason, setSentenceReason] = useState<string | undefined>();
+  const [sentenceErrorCode, setSentenceErrorCode] = useState<string | undefined>();
 
   useEffect(() => {
     setShowGuide(false);
@@ -73,6 +76,7 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
     setGuideData(r.data);
     setGuideSource(r.source);
     setGuideReason(r.reason);
+    setGuideErrorCode(r.errorCode);
   };
 
   const handleSentence = async () => {
@@ -93,6 +97,7 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
     setSentenceData(r.data);
     setSentenceSource(r.source);
     setSentenceReason(r.reason);
+    setSentenceErrorCode(r.errorCode);
   };
 
   return (
@@ -136,7 +141,7 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
 
       <div className="rounded-xl bg-bg-soft/60 p-4">
         <div className="flex items-start justify-between gap-3">
-          <p className="font-serif text-[15px] leading-relaxed">"{word.exampleSentence}"</p>
+          <p className="font-serif text-[15px] leading-relaxed">&ldquo;{word.exampleSentence}&rdquo;</p>
           <div className="flex shrink-0 gap-2">
             <Button
               variant="soft"
@@ -165,29 +170,38 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
           {guideSource ? <AISourceBadge source={guideSource} reason={guideReason} /> : null}
         </div>
         {showGuide && guideData ? (
-          <div className="mt-3 rounded-xl border border-black/5 bg-bg-card p-4 text-sm leading-relaxed">
-            <div className="flex flex-wrap items-center gap-1">
-              {guideData.syllables.map((s, i) => (
-                <span
-                  key={i}
-                  className={
-                    i === guideData.stressIndex
-                      ? "rounded-md bg-brand-100 px-2 py-1 font-semibold text-brand-700"
-                      : "rounded-md bg-bg-soft px-2 py-1 text-ink-soft"
-                  }
-                >
-                  {s}
-                </span>
-              ))}
+          <div className="mt-3 space-y-3">
+            {guideSource === "mock" ? (
+              <AIResultNotice
+                source="mock"
+                reason={guideReason}
+                errorCode={guideErrorCode}
+              />
+            ) : null}
+            <div className="rounded-xl border border-black/5 bg-bg-card p-4 text-sm leading-relaxed">
+              <div className="flex flex-wrap items-center gap-1">
+                {guideData.syllables.map((s, i) => (
+                  <span
+                    key={i}
+                    className={
+                      i === guideData.stressIndex
+                        ? "rounded-md bg-brand-100 px-2 py-1 font-semibold text-brand-700"
+                        : "rounded-md bg-bg-soft px-2 py-1 text-ink-soft"
+                    }
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-3 text-ink-soft">
+                <span className="text-ink">中文读法提示:</span> {guideData.chineseHint}
+              </div>
+              <ul className="mt-2 list-disc pl-5 text-ink-soft">
+                {guideData.commonMistakes.map((m, i) => (
+                  <li key={i}>{m}</li>
+                ))}
+              </ul>
             </div>
-            <div className="mt-3 text-ink-soft">
-              <span className="text-ink">中文读法提示:</span> {guideData.chineseHint}
-            </div>
-            <ul className="mt-2 list-disc pl-5 text-ink-soft">
-              {guideData.commonMistakes.map((m, i) => (
-                <li key={i}>{m}</li>
-              ))}
-            </ul>
           </div>
         ) : null}
       </div>
@@ -223,28 +237,37 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
           </Button>
         </div>
         {sentenceData ? (
-          <div className="mt-2 space-y-2 rounded-xl border border-brand-200 bg-brand-50 p-3 text-sm">
-            {sentenceData.grammarIssues.length ? (
+          <div className="mt-2 space-y-2">
+            {sentenceSource === "mock" ? (
+              <AIResultNotice
+                source="mock"
+                reason={sentenceReason}
+                errorCode={sentenceErrorCode}
+              />
+            ) : null}
+            <div className="space-y-2 rounded-xl border border-brand-200 bg-brand-50 p-3 text-sm">
+              {sentenceData.grammarIssues.length ? (
+                <div>
+                  <div className="text-xs muted">语法问题</div>
+                  <ul className="mt-1 list-disc pl-5 text-ink-soft">
+                    {sentenceData.grammarIssues.map((g, i) => (
+                      <li key={i}>{g}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
               <div>
-                <div className="text-xs muted">语法问题</div>
-                <ul className="mt-1 list-disc pl-5 text-ink-soft">
-                  {sentenceData.grammarIssues.map((g, i) => (
-                    <li key={i}>{g}</li>
-                  ))}
-                </ul>
+                <div className="text-xs muted">更自然</div>
+                <p className="font-serif">{sentenceData.moreNatural}</p>
               </div>
-            ) : null}
-            <div>
-              <div className="text-xs muted">更自然</div>
-              <p className="font-serif">{sentenceData.moreNatural}</p>
+              <div>
+                <div className="text-xs muted">IELTS 可用表达</div>
+                <p className="font-serif">{sentenceData.ieltsUsage}</p>
+              </div>
+              {sentenceData.comments ? (
+                <div className="text-xs text-brand-700">{sentenceData.comments}</div>
+              ) : null}
             </div>
-            <div>
-              <div className="text-xs muted">IELTS 可用表达</div>
-              <p className="font-serif">{sentenceData.ieltsUsage}</p>
-            </div>
-            {sentenceData.comments ? (
-              <div className="text-xs text-brand-700">{sentenceData.comments}</div>
-            ) : null}
           </div>
         ) : null}
       </div>

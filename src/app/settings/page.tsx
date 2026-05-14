@@ -17,6 +17,10 @@ export default function SettingsPage() {
   const [day, setDay] = useState<number>(user.currentDay);
   const [exportText, setExportText] = useState("");
   const [importText, setImportText] = useState("");
+  const [importResult, setImportResult] = useState<
+    { imported: number; skipped: number; skippedKeys: string[] } | null
+  >(null);
+  const [importError, setImportError] = useState<string | null>(null);
   const [savedAt, setSavedAt] = useState<number | null>(null);
 
   const activeBook = getActiveBook(user.activeBookId);
@@ -38,12 +42,20 @@ export default function SettingsPage() {
 
   const handleExport = () => setExportText(storage.exportAll());
   const handleImport = () => {
-    if (!importText.trim()) return;
+    setImportError(null);
+    setImportResult(null);
+    if (!importText.trim()) {
+      setImportError("请粘贴要导入的 JSON");
+      return;
+    }
     try {
-      storage.importAll(importText);
-      window.location.reload();
+      const r = storage.importAll(importText);
+      setImportResult(r);
+      if (r.imported > 0) {
+        setTimeout(() => window.location.reload(), 1500);
+      }
     } catch (e) {
-      alert("导入失败:JSON 格式不正确");
+      setImportError((e as Error).message);
     }
   };
   const handleClear = () => {
@@ -161,6 +173,24 @@ export default function SettingsPage() {
           <Button className="mt-2" variant="soft" onClick={handleImport}>
             导入并刷新
           </Button>
+          {importError ? (
+            <div className="mt-2 rounded-lg bg-accent-rose/10 p-2 text-xs text-accent-rose">
+              ✗ {importError}
+            </div>
+          ) : null}
+          {importResult ? (
+            <div className="mt-2 rounded-lg bg-brand-50 p-2 text-xs text-brand-700">
+              已导入 {importResult.imported} 项,跳过 {importResult.skipped} 项
+              {importResult.skippedKeys.length ? (
+                <div className="mt-1 text-ink-soft">
+                  跳过的非法键:{importResult.skippedKeys.join(", ")}
+                </div>
+              ) : null}
+              {importResult.imported > 0 ? (
+                <div className="mt-1 text-ink-soft">即将刷新页面...</div>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </Card>
 

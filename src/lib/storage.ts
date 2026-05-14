@@ -185,12 +185,31 @@ export const storage = {
     });
     return JSON.stringify(dump, null, 2);
   },
-  importAll(json: string): void {
-    if (!isBrowser()) return;
-    const parsed = JSON.parse(json) as Record<string, unknown>;
-    Object.entries(parsed).forEach(([k, v]) => {
+  importAll(json: string): { imported: number; skipped: number; skippedKeys: string[] } {
+    if (!isBrowser()) return { imported: 0, skipped: 0, skippedKeys: [] };
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(json);
+    } catch (e) {
+      throw new Error(`导入失败: JSON 格式错误 - ${(e as Error).message}`);
+    }
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      throw new Error("导入失败: 顶层应为对象");
+    }
+    const allowed = new Set<string>(Object.values(KEYS));
+    let imported = 0;
+    let skipped = 0;
+    const skippedKeys: string[] = [];
+    for (const [k, v] of Object.entries(parsed as Record<string, unknown>)) {
+      if (!allowed.has(k)) {
+        skipped++;
+        skippedKeys.push(k);
+        continue;
+      }
       window.localStorage.setItem(k, JSON.stringify(v));
-    });
+      imported++;
+    }
+    return { imported, skipped, skippedKeys };
   },
   clearAll(): void {
     if (!isBrowser()) return;

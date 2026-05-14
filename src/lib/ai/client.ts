@@ -4,6 +4,7 @@ export interface AIResult<T> {
   data: T;
   source: AISource;
   reason?: string;
+  errorCode?: string;
 }
 
 export interface PronunciationData {
@@ -69,43 +70,75 @@ interface CallOpts {
   signal?: AbortSignal;
 }
 
+interface ServerOk<T> {
+  ok: true;
+  data: T;
+  source?: AISource;
+}
+interface ServerErr {
+  ok: false;
+  error: string;
+  detail?: string;
+  source?: AISource;
+}
+
 export async function callAI<K extends ClientCapability>(
   capability: K,
   payload: Record<string, unknown>,
   fallback: () => CapabilityMap[K],
   opts: CallOpts = {}
 ): Promise<AIResult<CapabilityMap[K]>> {
+  let resp: Response;
   try {
-    const resp = await fetch("/api/ai/chat", {
+    resp = await fetch("/api/ai/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ capability, payload }),
       signal: opts.signal
     });
-    if (resp.status === 503) {
-      return {
-        data: fallback(),
-        source: "mock",
-        reason: "未配置 MINIMAX_API_KEY,使用本地 mock 结果"
-      };
-    }
-    if (!resp.ok) {
-      const errBody = await resp.json().catch(() => ({}));
-      return {
-        data: fallback(),
-        source: "mock",
-        reason: `AI 调用失败: ${(errBody as { detail?: string }).detail || resp.statusText}`
-      };
-    }
-    const json = (await resp.json()) as { data: CapabilityMap[K] };
-    return { data: json.data, source: "minimax" };
   } catch (e) {
     return {
       data: fallback(),
       source: "mock",
-      reason: `网络错误: ${(e as Error).message}`
+      reason: `网络错误: ${(e as Error).message}`,
+      errorCode: "network_error"
     };
   }
+
+  let json: ServerOk<CapabilityMap[K]> | ServerErr | null = null;
+  try {
+    json = (await resp.json()) as ServerOk<CapabilityMap[K]> | ServerErr;
+  } catch {
+    return {
+      data: fallback(),
+      source: "mock",
+      reason: `服务端返回非 JSON (HTTP ${resp.status})`,
+      errorCode: "bad_response"
+    };
+  }
+
+  if (resp.ok && json && json.ok === true) {
+    return {
+      data: json.data,
+      source: json.source || "minimax"
+    };
+  }
+
+  if (json && json.ok === false) {
+    return {
+      data: fallback(),
+      source: json.source || "mock",
+      reason: json.detail || json.error,
+      errorCode: json.error
+    };
+  }
+
+  return {
+    data: fallback(),
+    source: "mock",
+    reason: `HTTP ${resp.status}`,
+    errorCode: "unknown_error"
+  };
 }
 
 export async function isAIConfigured(): Promise<boolean> {

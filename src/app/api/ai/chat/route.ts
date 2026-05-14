@@ -6,6 +6,11 @@ import {
   SYSTEM_PROMPT
 } from "@/lib/ai/minimax";
 import { PROMPTS, type AICapability } from "@/lib/ai/prompts";
+import {
+  AISchemaError,
+  isAICapability,
+  validateAIResult
+} from "@/lib/ai/schemas";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -62,10 +67,27 @@ export async function POST(req: Request) {
   try {
     body = (await req.json()) as RequestBody;
   } catch {
-    return NextResponse.json({ error: "invalid_json" }, { status: 400 });
+    return NextResponse.json(
+      { ok: false, error: "bad_request", detail: "请求体不是合法 JSON" },
+      { status: 400 }
+    );
   }
   if (!body || !body.capability) {
-    return NextResponse.json({ error: "missing_capability" }, { status: 400 });
+    return NextResponse.json(
+      { ok: false, error: "bad_request", detail: "missing capability" },
+      { status: 400 }
+    );
+  }
+
+  if (!isAICapability(body.capability)) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "bad_request",
+        detail: `unsupported capability: ${body.capability}`
+      },
+      { status: 400 }
+    );
   }
 
   let userPrompt: string;
@@ -73,23 +95,53 @@ export async function POST(req: Request) {
     userPrompt = buildPrompt(body);
   } catch (e) {
     return NextResponse.json(
-      { error: "bad_capability", detail: (e as Error).message },
+      { ok: false, error: "bad_request", detail: (e as Error).message },
       { status: 400 }
     );
   }
 
+  let raw: unknown;
   try {
-    const data = await chatJSON<unknown>(SYSTEM_PROMPT, userPrompt);
-    return NextResponse.json({ ok: true, data });
+    raw = await chatJSON<unknown>(SYSTEM_PROMPT, userPrompt);
   } catch (e) {
     if (e instanceof MiniMaxConfigError) {
       return NextResponse.json(
-        { error: "not_configured", detail: e.message },
+        {
+          ok: false,
+          error: "not_configured",
+          detail: e.message,
+          source: "mock"
+        },
         { status: 503 }
       );
     }
     return NextResponse.json(
-      { error: "ai_failed", detail: (e as Error).message },
+      {
+        ok: false,
+        error: "ai_failed",
+        detail: (e as Error).message,
+        source: "mock"
+      },
+      { status: 502 }
+    );
+  }
+
+  try {
+    const validated = validateAIResult(body.capability, raw);
+    return NextResponse.json({
+      ok: true,
+      data: validated,
+      source: "minimax"
+    });
+  } catch (e) {
+    const msg = e instanceof AISchemaError ? e.message : (e as Error).message;
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "invalid_ai_schema",
+        detail: msg,
+        source: "mock"
+      },
       { status: 502 }
     );
   }
