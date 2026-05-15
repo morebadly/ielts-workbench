@@ -137,6 +137,24 @@ export interface WritingFeedback {
   vocabIssues: string[];
   revisedVersion: string;
   comments: string;
+  /**
+   * v1.8 新增:AI 在原文中标出的具体片段(用于下划线高亮),可选。
+   * 老数据不会有此字段,UI 自动降级为只显示 grammarIssues / vocabIssues 文本列表。
+   */
+  highlights?: WritingHighlight[];
+}
+
+export interface WritingHighlight {
+  /** 原文中要高亮的片段(精确字符串,UI 用 indexOf 定位) */
+  excerpt: string;
+  /** 问题类型 */
+  category: "grammar" | "vocabulary" | "coherence" | "task_response";
+  /** 简短中文/英文说明,15 字内最佳 */
+  comment: string;
+  /** 建议改写 */
+  suggestion?: string;
+  /** 严重度,影响下划线颜色 */
+  severity?: "info" | "warning" | "error";
 }
 
 export interface ListeningItem {

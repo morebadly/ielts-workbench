@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { AISourceBadge } from "@/components/ui/AISourceBadge";
 import { AIResultNotice } from "@/components/ai/AIResultNotice";
+import { HighlightedEssay } from "@/components/writing/HighlightedEssay";
 import {
   countParagraphs,
   countWords,
@@ -335,8 +336,8 @@ function AIFeedbackBlock({
         </div>
       ) : null}
 
-      {isTask1 && task1 ? <Task1View data={task1} /> : null}
-      {!isTask1 && task2 ? <Task2View data={task2} /> : null}
+      {isTask1 && task1 ? <Task1View data={task1} essay={practice.content} /> : null}
+      {!isTask1 && task2 ? <Task2View data={task2} essay={practice.content} /> : null}
     </div>
   );
 }
@@ -363,7 +364,25 @@ function Score({ label, value }: { label: string; value: number }) {
   );
 }
 
-function Task1View({ data }: { data: WritingTask1Data }) {
+function HighlightSection({
+  essay,
+  highlights
+}: {
+  essay: string;
+  highlights: WritingTask1Data["highlights"];
+}) {
+  if (!highlights || highlights.length === 0) return null;
+  return (
+    <div className="rounded-lg bg-white/70 p-3">
+      <div className="text-xs muted">原文逐句反馈</div>
+      <div className="mt-2">
+        <HighlightedEssay essay={essay} highlights={highlights} />
+      </div>
+    </div>
+  );
+}
+
+function Task1View({ data, essay }: { data: WritingTask1Data; essay: string }) {
   return (
     <div className="mt-3 space-y-3 text-sm">
       <div className="flex flex-wrap gap-1.5">
@@ -372,6 +391,7 @@ function Task1View({ data }: { data: WritingTask1Data }) {
         <Score label="数据准确" value={data.dataAccuracy} />
         <Score label="比较自然" value={data.comparisonNatural} />
       </div>
+      <HighlightSection essay={essay} highlights={data.highlights} />
       <IssuesList title="语法问题" items={data.grammarIssues} />
       <IssuesList title="词汇问题" items={data.vocabIssues} />
       <Comments text={data.comments} />
@@ -380,7 +400,7 @@ function Task1View({ data }: { data: WritingTask1Data }) {
   );
 }
 
-function Task2View({ data }: { data: WritingTask2Data }) {
+function Task2View({ data, essay }: { data: WritingTask2Data; essay: string }) {
   return (
     <div className="mt-3 space-y-3 text-sm">
       <div className="flex flex-wrap gap-1.5">
@@ -389,6 +409,7 @@ function Task2View({ data }: { data: WritingTask2Data }) {
         <Score label="段落逻辑" value={data.paragraphLogic} />
         <Score label="词汇重复(越高越好)" value={data.vocabRepetition} />
       </div>
+      <HighlightSection essay={essay} highlights={data.highlights} />
       <IssuesList title="语法问题" items={data.grammarIssues} />
       <IssuesList title="词汇问题" items={data.vocabIssues} />
       <Comments text={data.comments} />

@@ -34,6 +34,14 @@ const vocabArticle = z.object({
   body: z.string()
 }) satisfies z.ZodType<VocabArticleData>;
 
+const writingHighlight = z.object({
+  excerpt: z.string(),
+  category: z.enum(["grammar", "vocabulary", "coherence", "task_response"]),
+  comment: z.string(),
+  suggestion: z.string().optional(),
+  severity: z.enum(["info", "warning", "error"]).optional()
+});
+
 const writingTask1 = z.object({
   hasOverview: z.boolean(),
   capturesMainTrend: z.boolean(),
@@ -42,7 +50,8 @@ const writingTask1 = z.object({
   grammarIssues: z.array(z.string()),
   vocabIssues: z.array(z.string()),
   comments: z.string(),
-  revisedVersion: z.string()
+  revisedVersion: z.string(),
+  highlights: z.array(writingHighlight).optional()
 }) satisfies z.ZodType<WritingTask1Data>;
 
 const writingTask2 = z.object({
@@ -53,7 +62,8 @@ const writingTask2 = z.object({
   grammarIssues: z.array(z.string()),
   vocabIssues: z.array(z.string()),
   comments: z.string(),
-  revisedVersion: z.string()
+  revisedVersion: z.string(),
+  highlights: z.array(writingHighlight).optional()
 }) satisfies z.ZodType<WritingTask2Data>;
 
 const NEWS_TOPICS = [

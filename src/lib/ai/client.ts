@@ -33,6 +33,14 @@ export interface VocabArticleData {
   body: string;
 }
 
+export interface WritingHighlightData {
+  excerpt: string;
+  category: "grammar" | "vocabulary" | "coherence" | "task_response";
+  comment: string;
+  suggestion?: string;
+  severity?: "info" | "warning" | "error";
+}
+
 export interface WritingTask1Data {
   hasOverview: boolean;
   capturesMainTrend: boolean;
@@ -42,6 +50,8 @@ export interface WritingTask1Data {
   vocabIssues: string[];
   comments: string;
   revisedVersion: string;
+  /** v1.8 新增, 老数据/老 mock 可能没有 */
+  highlights?: WritingHighlightData[];
 }
 
 export interface WritingTask2Data {
@@ -53,6 +63,8 @@ export interface WritingTask2Data {
   vocabIssues: string[];
   comments: string;
   revisedVersion: string;
+  /** v1.8 新增, 老数据/老 mock 可能没有 */
+  highlights?: WritingHighlightData[];
 }
 
 type CapabilityMap = {

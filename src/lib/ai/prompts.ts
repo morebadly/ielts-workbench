@@ -85,9 +85,22 @@ Return STRICT JSON, all comments in Chinese:
   "grammarIssues": ["短句, 中文"],
   "vocabIssues": ["短句, 中文"],
   "comments": "一段总评, 中文, 120 字以内",
-  "revisedVersion": "改写后的整篇英文范文, 至少 150 词, 4 段, 段间空一行"
+  "revisedVersion": "改写后的整篇英文范文, 至少 150 词, 4 段, 段间空一行",
+  "highlights": [
+    {
+      "excerpt": "原文中要标出的精确英文片段, 必须能在 essay 里逐字找到",
+      "category": "grammar | vocabulary | coherence | task_response 之一",
+      "comment": "中文, 12 字以内",
+      "suggestion": "建议改写, 英文, 可省",
+      "severity": "info | warning | error"
+    }
+  ]
 }
-`.trim(),
+
+Rules for highlights:
+- 至多返回 8 条;问题严重的优先
+- 每条 excerpt 必须是 essay 的连续子串(逐字, 不要省略号),便于前端 indexOf 定位画下划线
+- 如无明显问题可返回 []`.trim(),
 
   writingTask2: (promptText: string, essay: string) => `
 You are an IELTS Academic Writing examiner grading Task 2.
@@ -108,9 +121,22 @@ Return STRICT JSON, all comments in Chinese:
   "grammarIssues": ["短句, 中文"],
   "vocabIssues": ["短句, 中文"],
   "comments": "一段总评, 中文, 150 字以内",
-  "revisedVersion": "改写后的整篇英文范文, 至少 250 词, 4 段, 段间空一行"
+  "revisedVersion": "改写后的整篇英文范文, 至少 250 词, 4 段, 段间空一行",
+  "highlights": [
+    {
+      "excerpt": "原文中要标出的精确英文片段, 必须能在 essay 里逐字找到",
+      "category": "grammar | vocabulary | coherence | task_response 之一",
+      "comment": "中文, 12 字以内",
+      "suggestion": "建议改写, 英文, 可省",
+      "severity": "info | warning | error"
+    }
+  ]
 }
-`.trim(),
+
+Rules for highlights:
+- 至多返回 8 条;问题严重的优先
+- 每条 excerpt 必须是 essay 的连续子串(逐字, 不要省略号),便于前端 indexOf 定位画下划线
+- 如无明显问题可返回 []`.trim(),
 
   newsLearning: (input: {
     title: string;

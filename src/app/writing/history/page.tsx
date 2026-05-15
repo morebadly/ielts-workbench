@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { storage } from "@/lib/storage";
 import { MOCK_WRITING_PROMPTS } from "@/data/mockWriting";
+import { HighlightedEssay } from "@/components/writing/HighlightedEssay";
 import type { WritingPractice, WritingTaskType } from "@/types";
 
 type Filter = "all" | WritingTaskType;
@@ -245,10 +246,19 @@ export default function WritingHistoryPage() {
                         </div>
                       ) : null}
                       <div className="rounded-lg border border-black/5 p-3">
-                        <div className="mb-1 text-xs muted">我的作文</div>
-                        <p className="whitespace-pre-wrap text-sm leading-relaxed">
-                          {p.content}
-                        </p>
+                        <div className="mb-1 text-xs muted">
+                          我的作文{p.aiFeedback?.highlights?.length ? " · 已带 AI 标注" : ""}
+                        </div>
+                        {p.aiFeedback?.highlights && p.aiFeedback.highlights.length > 0 ? (
+                          <HighlightedEssay
+                            essay={p.content}
+                            highlights={p.aiFeedback.highlights}
+                          />
+                        ) : (
+                          <p className="whitespace-pre-wrap text-sm leading-relaxed">
+                            {p.content}
+                          </p>
+                        )}
                       </div>
                       {p.aiFeedback ? (
                         <details className="rounded-lg border border-black/5 p-3">
