@@ -236,7 +236,7 @@ export async function chatVisionJSON<T>(
         `MiniMax VLM HTTP ${resp.status} (page ${i + 1}/${images.length}): ${text.slice(0, 500)}`
       );
     }
-    const data = (await resp.json()) as VlmResp;
+    const data = (await resp.json()) as VlmResp & Record<string, unknown>;
     if (data.base_resp?.status_code && data.base_resp.status_code !== 0) {
       throw new Error(
         `MiniMax VLM error ${data.base_resp.status_code} (page ${i + 1}/${images.length}): ${data.base_resp.status_msg || ""}`
@@ -247,15 +247,33 @@ export async function chatVisionJSON<T>(
         `MiniMax VLM error (page ${i + 1}/${images.length}): ${data.error.message}`
       );
     }
+    // 自适应取 content。VLM 端点不同版本字段名可能是:
+    //   - output (Coding Plan 旧版)
+    //   - text
+    //   - data.output / data.text
+    //   - choices[0].message.content (新版仿 OpenAI)
+    //   - reply (有些 mock)
+    // 兜不住时把整个 raw 暴露出来给上层调试
+    type WithChoices = {
+      choices?: Array<{ message?: { content?: string }; text?: string }>;
+      reply?: string;
+    };
+    const w = data as VlmResp & WithChoices;
     const content =
-      data.output ||
-      data.text ||
-      data.data?.output ||
-      data.data?.text ||
+      w.output ||
+      w.text ||
+      w.data?.output ||
+      w.data?.text ||
+      w.choices?.[0]?.message?.content ||
+      w.choices?.[0]?.text ||
+      w.reply ||
       "";
     if (!content || !content.trim()) {
-      // 这一页没识别出来, 跳过, 不让整批失败
-      continue;
+      // 没匹配到任何已知字段 -> 把响应 dump 给上层, 让前端能看到真实结构
+      const dumped = JSON.stringify(data).slice(0, 800);
+      throw new Error(
+        `MiniMax VLM 响应未能解析 (page ${i + 1}/${images.length}). 原始: ${dumped}`
+      );
     }
     const cleaned = stripJsonFence(content);
     try {
