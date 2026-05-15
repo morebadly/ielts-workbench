@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -15,7 +16,7 @@ import {
 } from "@/lib/utils";
 import { MOCK_WRITING_PROMPTS } from "@/data/mockWriting";
 import { useCountdown } from "@/hooks/useTimer";
-import type { WritingPractice, WritingTaskType } from "@/types";
+import type { WritingPractice, WritingPrompt, WritingTaskType } from "@/types";
 import { storage } from "@/lib/storage";
 import {
   callAI,
@@ -25,11 +26,43 @@ import {
 } from "@/lib/ai/client";
 
 export default function WritingExamPage() {
-  const [taskType, setTaskType] = useState<WritingTaskType>("task2");
-  const promptList = useMemo(
-    () => MOCK_WRITING_PROMPTS.filter((p) => p.taskType === taskType),
-    [taskType]
+  return (
+    <Suspense fallback={null}>
+      <WritingExamPageInner />
+    </Suspense>
   );
+}
+
+function WritingExamPageInner() {
+  const search = useSearchParams();
+  const customPromptText = search.get("prompt") || "";
+  const customTaskType = search.get("taskType") as WritingTaskType | null;
+  const customSource = search.get("source");
+
+  const customPrompt: WritingPrompt | null = customPromptText
+    ? {
+        id: `external-${customSource || "custom"}`,
+        taskType: customTaskType === "task1" ? "task1" : "task2",
+        title:
+          customSource === "news"
+            ? "今日新闻 · Task 2"
+            : "外部题目",
+        promptText: customPromptText,
+        minWords: customTaskType === "task1" ? 150 : 250,
+        recommendedMinutes: customTaskType === "task1" ? 20 : 40,
+        recommendedParagraphs: customTaskType === "task1" ? 4 : 4
+      }
+    : null;
+
+  const [taskType, setTaskType] = useState<WritingTaskType>(
+    customPrompt?.taskType || "task2"
+  );
+  const promptList = useMemo(() => {
+    const base = MOCK_WRITING_PROMPTS.filter((p) => p.taskType === taskType);
+    return customPrompt && customPrompt.taskType === taskType
+      ? [customPrompt, ...base]
+      : base;
+  }, [taskType, customPrompt]);
   const [promptId, setPromptId] = useState(promptList[0].id);
   const prompt = useMemo(
     () => promptList.find((p) => p.id === promptId) || promptList[0],
@@ -38,6 +71,7 @@ export default function WritingExamPage() {
 
   useEffect(() => {
     setPromptId(promptList[0].id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [taskType]);
 
   const totalMs = prompt.recommendedMinutes * 60 * 1000;

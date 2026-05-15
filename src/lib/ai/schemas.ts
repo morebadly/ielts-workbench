@@ -56,13 +56,49 @@ const writingTask2 = z.object({
   revisedVersion: z.string()
 }) satisfies z.ZodType<WritingTask2Data>;
 
+const NEWS_TOPICS = [
+  "education",
+  "technology",
+  "environment",
+  "society",
+  "health",
+  "work"
+] as const;
+
+const newsLearning = z.object({
+  topic: z.enum(NEWS_TOPICS),
+  learningSummary: z.string().min(50),
+  vocabulary: z
+    .array(
+      z.object({
+        word: z.string().min(1),
+        meaning: z.string().min(1),
+        example: z.string().min(1)
+      })
+    )
+    .min(1),
+  readingQuestions: z
+    .array(
+      z.object({
+        question: z.string().min(1),
+        answer: z.string().min(1)
+      })
+    )
+    .min(1),
+  writingPrompt: z.string().min(10),
+  listeningText: z.string().min(50)
+});
+
+export type NewsLearningPacket = z.infer<typeof newsLearning>;
+
 export const AI_SCHEMAS = {
   pronunciation,
   sentenceFeedback,
   dictationFeedback,
   vocabArticle,
   writingTask1,
-  writingTask2
+  writingTask2,
+  newsLearning
 } as const;
 
 export type AICapabilityKey = keyof typeof AI_SCHEMAS;

@@ -4,6 +4,8 @@ interface SpeakOptions {
   rate?: number;
   voice?: Voice;
   pitch?: number;
+  onEnd?: () => void;
+  onError?: () => void;
 }
 
 const VOICE_LANG: Record<Voice, string> = {
@@ -62,6 +64,8 @@ export async function speak(text: string, opts: SpeakOptions = {}): Promise<void
   utter.lang = VOICE_LANG[voiceKey];
   utter.rate = opts.rate ?? 1;
   utter.pitch = opts.pitch ?? 1;
+  if (opts.onEnd) utter.onend = () => opts.onEnd?.();
+  if (opts.onError) utter.onerror = () => opts.onError?.();
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(utter);
 }
@@ -69,3 +73,5 @@ export async function speak(text: string, opts: SpeakOptions = {}): Promise<void
 export function stopSpeak(): void {
   if (isTTSAvailable()) window.speechSynthesis.cancel();
 }
+
+export const stopSpeaking = stopSpeak;

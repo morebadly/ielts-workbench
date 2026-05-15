@@ -112,6 +112,45 @@ Return STRICT JSON, all comments in Chinese:
 }
 `.trim(),
 
+  newsLearning: (input: {
+    title: string;
+    source: string;
+    publishedAt: string;
+    originalSummary: string;
+    url: string;
+  }) => `
+You are an IELTS reading and writing coach. Build a self-contained learning packet from a news headline + RSS summary, NOT from full article text.
+
+News title: ${input.title}
+Source: ${input.source}
+Published at: ${input.publishedAt}
+Original RSS summary (do NOT copy verbatim):
+"""
+${input.originalSummary}
+"""
+
+Constraints:
+- learningSummary and listeningText must be your own paraphrase, IELTS reading register, NOT a copy of the original article. Stay neutral, factual, no opinion.
+- vocabulary must be exactly 5 items, IELTS Band 6.5+ level. Each word should naturally appear in learningSummary or listeningText.
+- readingQuestions must be exactly 3, mix of detail / inference / vocabulary-in-context. Answers in English, 1-2 sentences each.
+- writingPrompt must look like an IELTS Task 2 essay question (e.g. "To what extent..." / "Discuss both views..." / "Some people think... others think...").
+- Pick the single best topic among: education, technology, environment, society, health, work.
+
+Return STRICT JSON, no markdown, no preamble:
+{
+  "topic": "<one of education|technology|environment|society|health|work>",
+  "learningSummary": "<120-180 English words, your paraphrase, neutral factual tone>",
+  "vocabulary": [
+    { "word": "<English word>", "meaning": "<中文释义>", "example": "<one IELTS-style English sentence using the word>" }
+  ],
+  "readingQuestions": [
+    { "question": "<English question>", "answer": "<English answer>" }
+  ],
+  "writingPrompt": "<an IELTS Task 2 question related to the topic>",
+  "listeningText": "<120-180 English words, smooth for TTS reading, factual paraphrase>"
+}
+`.trim(),
+
   structureWords: (rawText: string, bookTitle: string, hint?: string) => `
 You convert messy text from an IELTS vocabulary book into clean structured word entries.
 
@@ -156,4 +195,5 @@ export type AICapability =
   | "vocabArticle"
   | "writingTask1"
   | "writingTask2"
-  | "structureWords";
+  | "structureWords"
+  | "newsLearning";

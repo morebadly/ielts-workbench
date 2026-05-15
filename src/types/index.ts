@@ -152,12 +152,49 @@ export interface ListeningPractice {
 
 export interface ReviewItem {
   id: string;
-  type: "word" | "sentence" | "listening" | "writingMistake";
+  type: "word" | "sentence" | "listening" | "writingMistake" | "newsVocab";
   refId: string;
   payload?: Record<string, unknown>;
   due: number;
   ease: number;
   interval: number;
+}
+
+export type DailyNewsTopic =
+  | "education"
+  | "technology"
+  | "environment"
+  | "society"
+  | "health"
+  | "work";
+
+export interface DailyNewsVocabItem {
+  word: string;
+  meaning: string;
+  example: string;
+}
+
+export interface DailyNewsReadingQA {
+  question: string;
+  answer: string;
+}
+
+export interface DailyNewsItem {
+  id: string;
+  date: string;
+  title: string;
+  source: string;
+  url: string;
+  publishedAt: string;
+  topic: DailyNewsTopic;
+  originalSummary: string;
+  learningSummary: string;
+  vocabulary: DailyNewsVocabItem[];
+  readingQuestions: DailyNewsReadingQA[];
+  writingPrompt: string;
+  listeningText: string;
+  createdAt: string;
+  aiSource?: "minimax" | "mock";
 }
 
 export interface DailyTaskTargets {

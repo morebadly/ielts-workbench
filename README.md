@@ -4,7 +4,7 @@
 
 ---
 
-## 当前版本: v1.3.0
+## 当前版本: v1.4.0
 
 **已完成:**
 - 首页 Dashboard:今日 6 项任务 / 词书进度 / 连续天数 / 继续学习
@@ -38,6 +38,14 @@ npm run dev
 ```
 
 打开 http://localhost:3000
+
+### 每日新闻
+
+```bash
+npm run update:news
+```
+
+无 `MINIMAX_API_KEY` 时会落到 mock fallback;配了 Key 会用 MiniMax 生成 learning summary。GitHub Actions 每日 23:00 UTC(次日 07:00 北京时间)自动跑并提交。
 
 ---
 
@@ -132,7 +140,14 @@ src/
   - AI 失败时显示明确的 mock 来源、错误码与原因(`AIResultNotice`)
   - 修复 localStorage 导入安全:白名单 keys, 返回 imported/skipped
   - 增加 GitHub Actions CI(lint + build)
-  - 同步 package version 到 1.3.0
+- **v1.4.0** — 每日英文新闻学习模块
+  - 新增 `/news` 列表 + `/news/today` 一站式学习 + `/news/[id]` 单条视图
+  - 每条新闻配 AI 学习摘要、5 个 IELTS 词汇、3 道阅读题、Task 2 写作题、TTS 听力文本
+  - 词汇可一键加入复习箱,写作题可直接跳转 `/writing/exam` 并预填题面
+  - 首页 Dashboard 顶部显示当日新闻入口
+  - 新增 `scripts/update-daily-news.ts`,无 Key 时自动 mock fallback
+  - 新增 GitHub Actions `daily-news.yml`,每日 7:00(北京时间)自动跑脚本并 commit
+  - **版权策略**:不抓取/保存正文,只保存标题、来源、URL、发布时间、原始 RSS 摘要;learning summary 明确标注由 AI 生成
 
 ---
 

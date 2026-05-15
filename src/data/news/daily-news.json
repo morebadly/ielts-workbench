@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-14T00:00:00.000Z",
+  "items": [
+    {
+      "id": "seed-2026-05-14-001",
+      "date": "2026-05-14",
+      "title": "Why universities are rethinking written exams in the age of AI",
+      "source": "Mock IELTS Wire",
+      "url": "https://example.com/news/seed-2026-05-14-001",
+      "publishedAt": "2026-05-14T09:30:00.000Z",
+      "topic": "education",
+      "originalSummary": "As generative AI tools become widespread, several universities are piloting oral defenses, in-class essays and project-based portfolios to verify what students have actually learned.",
+      "learningSummary": "Universities around the world are experimenting with new assessment formats as the use of generative AI tools spreads on campus. Instead of relying solely on take-home essays, some institutions are introducing oral defenses, in-class writing tasks and project-based portfolios that are harder to outsource. Supporters argue these methods give a more reliable picture of a student's real ability, while critics warn that they can be time-consuming and stressful for both students and staff. Educators broadly agree that the goal is not to ban technology but to redesign tasks so that AI becomes a study aid rather than a shortcut.",
+      "vocabulary": [
+        {
+          "word": "assessment",
+          "meaning": "(n.) 评估;评定",
+          "example": "Universities are revising their assessment methods to keep pace with new technology."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包;转交他人完成",
+          "example": "Some students try to outsource their essays to AI tools instead of writing them."
+        },
+        {
+          "word": "reliable",
+          "meaning": "(adj.) 可靠的;可信赖的",
+          "example": "Oral exams provide a more reliable view of a student's actual understanding."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent in-class tasks can feel stressful for students juggling several courses."
+        },
+        {
+          "word": "redesign",
+          "meaning": "(v.) 重新设计",
+          "example": "Teachers are being asked to redesign assignments so that AI cannot replace student thinking."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "Why are some universities changing their exam formats?",
+          "answer": "Because the spread of generative AI tools makes traditional take-home essays harder to verify."
+        },
+        {
+          "question": "What is one drawback of the new assessment methods mentioned?",
+          "answer": "They can be time-consuming and add stress for both students and staff."
+        },
+        {
+          "question": "What does the word 'outsource' suggest about how some students use AI?",
+          "answer": "They hand over the writing work to AI rather than doing it themselves."
+        }
+      ],
+      "writingPrompt": "Some people think universities should redesign assessments because of generative AI, while others believe traditional written exams remain the fairest test. Discuss both views and give your own opinion.",
+      "listeningText": "Universities are quietly rethinking how they assess their students. With generative AI now widely available, take-home essays no longer prove what a student really understands. As a response, several institutions are piloting oral defenses, timed in-class writing and small group projects. Supporters say these formats offer a more reliable view of student learning, especially when combined with regular feedback. Critics, however, point out that they take more time to mark and can feel stressful for those who are not confident speakers. Most educators agree on one thing: the aim is not to fight technology, but to redesign assessments so that AI supports learning instead of replacing it.",
+      "createdAt": "2026-05-14T00:00:00.000Z",
+      "aiSource": "mock"
+    }
+  ]
+}

@@ -7,10 +7,13 @@ import { Card } from "@/components/ui/Card";
 import { ProgressCards } from "@/components/dashboard/ProgressCards";
 import { TodayTasks } from "@/components/dashboard/TodayTasks";
 import { QuickTargets } from "@/components/dashboard/QuickTargets";
+import { TodayNewsCallout } from "@/components/dashboard/TodayNewsCallout";
 import { useDailyTask } from "@/hooks/useDailyTask";
+import { getTodayNews } from "@/data/news/loader";
 
 export default function HomePage() {
   const { user, targets, progress } = useDailyTask();
+  const todayNews = getTodayNews();
 
   const lastHref = user.lastLocation?.href || "/vocabulary/learn";
   const lastLabel = user.lastLocation?.label || "继续学习单词";
@@ -40,6 +43,7 @@ export default function HomePage() {
 
       <div className="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-5">
+          <TodayNewsCallout items={todayNews} />
           <TodayTasks targets={targets} progress={progress} />
           <QuickTargets user={user} targets={targets} />
         </div>
@@ -48,6 +52,7 @@ export default function HomePage() {
           <h3 className="section-title">快捷入口</h3>
           <p className="text-sm muted mt-0.5">不知道学什么时,从这里开始。</p>
           <div className="mt-4 grid grid-cols-2 gap-3">
+            <QuickLink href="/news/today" title="今日新闻" desc="阅读 + 词汇 + 写作" />
             <QuickLink href="/vocabulary" title="单词" desc="按 Day 顺序" />
             <QuickLink href="/writing/guide" title="写作格式指导" desc="范文结构" />
             <QuickLink href="/writing/exam" title="机考模拟" desc="带倒计时" />

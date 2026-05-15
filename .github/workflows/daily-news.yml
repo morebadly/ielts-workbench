@@ -1,0 +1,45 @@
+name: Daily News Update
+
+on:
+  schedule:
+    # 23:00 UTC = 07:00 北京时间(次日)
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Run update script
+        env:
+          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+          MINIMAX_BASE_URL: ${{ secrets.MINIMAX_BASE_URL }}
+          MINIMAX_CHAT_PATH: ${{ secrets.MINIMAX_CHAT_PATH }}
+          MINIMAX_TEXT_MODEL: ${{ secrets.MINIMAX_TEXT_MODEL }}
+        run: npm run update:news
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet src/data/news/daily-news.json; then
+            echo "No changes to commit"
+          else
+            git add src/data/news/daily-news.json
+            git commit -m "chore(news): daily auto-update $(date -u +%Y-%m-%d)"
+            git push
+          fi
