@@ -1,12 +1,23 @@
 import { NextResponse } from "next/server";
 import { extractPdfText } from "@/lib/pdf/extractText";
-import { structureWordsFromText } from "@/lib/ai/structureWords";
+import {
+  structureWordsFromText,
+  structureWordsFromImages
+} from "@/lib/ai/structureWords";
 import { recognizePages } from "@/lib/ocr/recognize";
 import { MiniMaxConfigError } from "@/lib/ai/minimax";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 120;
+
+interface VisionRequestBody {
+  action: "vision";
+  bookTitle?: string;
+  hint?: string;
+  /** data:image/jpeg;base64,... 数组,客户端渲染好的 PDF 页面图 */
+  images?: string[];
+}
 
 export async function POST(req: Request) {
   let ct: string;
@@ -15,6 +26,62 @@ export async function POST(req: Request) {
   } catch {
     return NextResponse.json({ error: "bad_request" }, { status: 400 });
   }
+
+  // ============ vision 分支:application/json,客户端发已渲染好的图 ============
+  if (ct.includes("application/json")) {
+    let body: VisionRequestBody;
+    try {
+      body = (await req.json()) as VisionRequestBody;
+    } catch {
+      return NextResponse.json({ error: "bad_json" }, { status: 400 });
+    }
+    if (body.action !== "vision") {
+      return NextResponse.json(
+        { error: "unsupported_json_action" },
+        { status: 400 }
+      );
+    }
+    const images = Array.isArray(body.images) ? body.images : [];
+    if (!images.length) {
+      return NextResponse.json(
+        { error: "missing_images", detail: "请至少提供一张图片" },
+        { status: 400 }
+      );
+    }
+    if (images.length > 6) {
+      return NextResponse.json(
+        {
+          error: "too_many_images",
+          detail: "单次请求最多 6 张图,请减小批次大小"
+        },
+        { status: 413 }
+      );
+    }
+    try {
+      const result = await structureWordsFromImages(
+        images,
+        (body.bookTitle || "自定义词书").trim(),
+        body.hint
+      );
+      return NextResponse.json({
+        ok: true,
+        action: "vision",
+        words: result.words
+      });
+    } catch (e) {
+      if (e instanceof MiniMaxConfigError) {
+        return NextResponse.json(
+          { error: "minimax_not_configured", detail: e.message },
+          { status: 500 }
+        );
+      }
+      return NextResponse.json(
+        { error: "vision_failed", detail: (e as Error).message },
+        { status: 502 }
+      );
+    }
+  }
+
   if (!ct.includes("multipart/form-data")) {
     return NextResponse.json(
       { error: "expected_multipart" },

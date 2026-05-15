@@ -10,6 +10,10 @@ import type { ImportedWord, VocabularyBook, Word } from "@/types";
 import { storage } from "@/lib/storage";
 import { useDailyTask, notifyStorageUpdated } from "@/hooks/useDailyTask";
 import { extractPdfTextInBrowser } from "@/lib/pdf/extractTextClient";
+import {
+  renderPdfPagesInBrowser,
+  type RenderedPage
+} from "@/lib/pdf/renderPagesClient";
 
 type Stage = "upload" | "extracted" | "structured" | "imported";
 
@@ -44,6 +48,12 @@ export default function VocabularyImportPage() {
 
   const [extracting, setExtracting] = useState(false);
   const [extractProgress, setExtractProgress] = useState<{ cur: number; total: number } | null>(null);
+  const [visionExtracting, setVisionExtracting] = useState(false);
+  const [visionProgress, setVisionProgress] = useState<{
+    phase: "render" | "ai";
+    cur: number;
+    total: number;
+  } | null>(null);
   const [structuring, setStructuring] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -103,6 +113,99 @@ export default function VocabularyImportPage() {
     } finally {
       setExtracting(false);
       setExtractProgress(null);
+    }
+  };
+
+  /**
+   * 扫描版 PDF: 浏览器渲染每页 -> 分批送 MiniMax 视觉模型 -> 直接拿 ImportedWord[]
+   *
+   * 跳过 "提取文字" + "AI 结构化" 两步,直接到 "structured" 阶段。
+   */
+  const handleVisionExtract = async () => {
+    if (!file) return setError("请先选择 PDF 文件");
+    if (!bookTitle.trim() && !file.name) return setError("请填写词书名称");
+    const finalTitle = bookTitle.trim() || file.name.replace(/\.pdf$/i, "");
+
+    const fromN = Math.max(1, Number(fromPage) || 1);
+    const toN = toPage ? Number(toPage) || 0 : 0;
+    setError(null);
+    setVisionExtracting(true);
+    setAiSource("loading");
+    setCorrections([]);
+
+    try {
+      // 1) 浏览器把每页渲染成 JPEG dataUrl
+      setVisionProgress({ phase: "render", cur: 0, total: 1 });
+      const rendered: RenderedPage[] = await renderPdfPagesInBrowser(file, {
+        fromPage: fromN,
+        toPage: toN || undefined,
+        scale: 1.5,
+        quality: 0.7,
+        onProgress: (cur, total) =>
+          setVisionProgress({ phase: "render", cur, total })
+      });
+
+      const valid = rendered.filter((p) => p.dataUrl);
+      if (!valid.length) {
+        throw new Error("PDF 渲染失败,没有可识别的页面");
+      }
+
+      // 2) 分批送给 vision 路由,每批最多 4 张图
+      const BATCH_SIZE = 4;
+      const batches: RenderedPage[][] = [];
+      for (let i = 0; i < valid.length; i += BATCH_SIZE) {
+        batches.push(valid.slice(i, i + BATCH_SIZE));
+      }
+
+      const allWords: ImportedWord[] = [];
+      for (let i = 0; i < batches.length; i++) {
+        setVisionProgress({
+          phase: "ai",
+          cur: i + 1,
+          total: batches.length
+        });
+        const r = await fetch("/api/import/pdf", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "vision",
+            bookTitle: finalTitle,
+            hint,
+            images: batches[i].map((p) => p.dataUrl)
+          })
+        });
+        if (!r.ok) {
+          const j = (await r.json().catch(() => null)) as
+            | { detail?: string; error?: string }
+            | null;
+          throw new Error(
+            `第 ${i + 1}/${batches.length} 批识别失败: ${j?.detail || j?.error || `HTTP ${r.status}`}`
+          );
+        }
+        const j = (await r.json()) as { ok: true; words: ImportedWord[] };
+        allWords.push(...j.words);
+      }
+
+      // 3) 写入 stage,跳过 extracted,直接到 structured 让用户预览/编辑
+      setBookTitle(finalTitle);
+      setWords(allWords);
+      setExtracted({
+        ok: true,
+        totalPages: valid.length,
+        pageRange: { from: fromN, to: fromN + valid.length - 1 },
+        text: "",
+        textPerPage: [],
+        isProbablyScanned: true,
+        charCountAfterTrim: 0
+      });
+      setAiSource("minimax");
+      setStage("structured");
+    } catch (e) {
+      setError((e as Error).message);
+      setAiSource(null);
+    } finally {
+      setVisionExtracting(false);
+      setVisionProgress(null);
     }
   };
 
@@ -243,6 +346,9 @@ export default function VocabularyImportPage() {
           extracting={extracting}
           extractProgress={extractProgress}
           onExtract={handleExtract}
+          visionExtracting={visionExtracting}
+          visionProgress={visionProgress}
+          onVisionExtract={handleVisionExtract}
         />
       ) : null}
 
@@ -311,7 +417,11 @@ function UploadStage(props: {
   extracting: boolean;
   extractProgress: { cur: number; total: number } | null;
   onExtract: () => void;
+  visionExtracting: boolean;
+  visionProgress: { phase: "render" | "ai"; cur: number; total: number } | null;
+  onVisionExtract: () => void;
 }) {
+  const busy = props.extracting || props.visionExtracting;
   return (
     <Card padding="lg" className="space-y-4">
       <CardHeader title="第 1 步:上传 PDF" subtitle="只在你本机处理, 不会上传 GitHub" />
@@ -375,8 +485,22 @@ function UploadStage(props: {
         />
       </div>
 
-      <div className="flex justify-end">
-        <Button onClick={props.onExtract} disabled={!props.file || props.extracting}>
+      <div className="flex flex-wrap items-center justify-end gap-2">
+        <Button
+          variant="ghost"
+          onClick={props.onVisionExtract}
+          disabled={!props.file || busy}
+          title="扫描版 PDF 没有文字层时, 让 AI 直接看图识别"
+        >
+          {props.visionExtracting
+            ? props.visionProgress
+              ? props.visionProgress.phase === "render"
+                ? `渲染图片... ${props.visionProgress.cur}/${props.visionProgress.total}`
+                : `AI 识别中... 第 ${props.visionProgress.cur}/${props.visionProgress.total} 批`
+              : "AI 看图中..."
+            : "AI 看图识别(扫描件)"}
+        </Button>
+        <Button onClick={props.onExtract} disabled={!props.file || busy}>
           {props.extracting
             ? props.extractProgress
               ? `正在提取... ${props.extractProgress.cur}/${props.extractProgress.total} 页`

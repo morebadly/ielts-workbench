@@ -226,6 +226,39 @@ Rules:
 - If you can't tell phonetic / example, use empty string, do NOT invent.
 - corrections 可为空数组; 同一个修正不要重复列。
 - Return at most 200 word entries and at most 50 corrections; if more, stop at the limit.
+`.trim(),
+
+  structureWordsFromImages: (bookTitle: string, hint?: string) => `
+You are looking at scanned pages from an IELTS vocabulary book. Read each page CAREFULLY (include the small phonetic IPA, the Chinese gloss, and any English example sentence).
+
+Book title: ${bookTitle}
+${hint ? `User hint: ${hint}` : ""}
+
+Task: For every English vocabulary entry visible in the images, output one structured object. The same word should appear only once across all pages. Detect any "Day N" / "List N" / unit divider visible on these pages and use it to fill bookDay / wordList for words on those pages.
+
+Return STRICT JSON, no markdown:
+{
+  "words": [
+    {
+      "word": "<the English word, lowercase unless proper noun>",
+      "phonetic": "<IPA inside / / if shown, else empty>",
+      "chineseMeaning": "<中文释义,可能多个,用; 分隔>",
+      "englishDefinition": "<English definition or empty>",
+      "exampleSentence": "<one English example or empty>",
+      "bookDay": "<e.g. Day 1, or empty>",
+      "wordList": "<e.g. List A, or empty>",
+      "order": <1-based integer in the order found>
+    }
+  ]
+}
+
+Rules:
+- Skip page headers, footers, page numbers, copyright pages, prefaces, instructions.
+- Only include true vocabulary entries. If a page is purely decorative (cover, ToC) return empty array for that page worth of content.
+- Phonetic must look like IPA (e.g. /ˈtækl/). If unsure, leave empty rather than invent.
+- Do NOT invent example sentences. If the page doesn't show one, leave empty.
+- 中文释义保留原书简洁风格,例如 "v. 处理; n. 用具" 这种。
+- Return at most 200 entries; if more visible, return the first 200 and stop.
 `.trim()
 };
 

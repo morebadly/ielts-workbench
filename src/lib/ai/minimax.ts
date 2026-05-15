@@ -5,6 +5,7 @@ export interface MiniMaxConfig {
   baseUrl: string;
   chatPath: string;
   textModel: string;
+  visionModel: string;
   ttsModel: string;
 }
 
@@ -31,6 +32,7 @@ export function getMiniMaxConfig(): MiniMaxConfig | null {
     baseUrl,
     chatPath,
     textModel: process.env.MINIMAX_TEXT_MODEL || "MiniMax-M2.7",
+    visionModel: process.env.MINIMAX_VISION_MODEL || "MiniMax-VL-01",
     ttsModel: process.env.MINIMAX_TTS_MODEL || "speech-02-hd"
   };
 }
@@ -38,6 +40,16 @@ export function getMiniMaxConfig(): MiniMaxConfig | null {
 export interface ChatMessage {
   role: "system" | "user" | "assistant";
   content: string;
+}
+
+/** OpenAI 兼容的多模态 message content */
+export type VisionContent =
+  | { type: "text"; text: string }
+  | { type: "image_url"; image_url: { url: string; detail?: "low" | "high" | "auto" } };
+
+export interface VisionMessage {
+  role: "system" | "user" | "assistant";
+  content: string | VisionContent[];
 }
 
 export interface ChatOptions {
@@ -140,6 +152,95 @@ export async function chatJSON<T>(
   } catch (e) {
     throw new Error(
       `MiniMax JSON 解析失败: ${(e as Error).message} | raw: ${raw.slice(0, 300)}`
+    );
+  }
+}
+
+/**
+ * 多模态:发送多张图片 + prompt 给 vision 模型,期望返回 JSON。
+ *
+ * 用于「看图识词」场景:用户的 PDF 是扫描件没有文字层,我们把页面渲染成图片
+ * 让 vision 模型读图直接结构化。
+ *
+ * 与 chatComplete 的区别:走 cfg.visionModel,messages 里 content 是数组(text + image_url)。
+ */
+export async function chatVisionJSON<T>(
+  systemPrompt: string,
+  userText: string,
+  images: Array<{ dataUrl: string; detail?: "low" | "high" | "auto" }>,
+  opts: { temperature?: number; maxTokens?: number } = {}
+): Promise<T> {
+  const cfg = getMiniMaxConfig();
+  if (!cfg) {
+    throw new MiniMaxConfigError(
+      "MINIMAX_API_KEY 未配置, 请在 .env.local 设置后重启 dev server"
+    );
+  }
+  if (!images.length) {
+    throw new Error("chatVisionJSON 需要至少一张图片");
+  }
+
+  const url = `${cfg.baseUrl}${cfg.chatPath}`;
+  const visionContent: VisionContent[] = [
+    { type: "text", text: userText },
+    ...images.map<VisionContent>((img) => ({
+      type: "image_url",
+      image_url: { url: img.dataUrl, detail: img.detail ?? "high" }
+    }))
+  ];
+  const messages: VisionMessage[] = [
+    { role: "system", content: systemPrompt },
+    { role: "user", content: visionContent }
+  ];
+
+  const body: Record<string, unknown> = {
+    model: cfg.visionModel,
+    messages,
+    temperature: opts.temperature ?? 0.2,
+    max_completion_tokens: opts.maxTokens ?? 4000,
+    response_format: { type: "json_object" }
+  };
+
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), DEFAULT_TIMEOUT_MS);
+  let resp: Response;
+  try {
+    resp = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cfg.apiKey}`
+      },
+      body: JSON.stringify(body),
+      signal: ctrl.signal
+    });
+  } finally {
+    clearTimeout(timer);
+  }
+
+  if (!resp.ok) {
+    const text = await resp.text().catch(() => "");
+    throw new Error(`MiniMax Vision HTTP ${resp.status}: ${text.slice(0, 500)}`);
+  }
+  const data = (await resp.json()) as OpenAIChatResp;
+  if (data.error?.message) {
+    throw new Error(`MiniMax Vision error: ${data.error.message}`);
+  }
+  if (data.base_resp?.status_code && data.base_resp.status_code !== 0) {
+    throw new Error(
+      `MiniMax Vision error ${data.base_resp.status_code}: ${data.base_resp.status_msg || ""}`
+    );
+  }
+  const content = data.choices?.[0]?.message?.content;
+  if (!content || !content.trim()) {
+    throw new Error("MiniMax Vision 返回内容为空");
+  }
+  const cleaned = stripJsonFence(content);
+  try {
+    return JSON.parse(cleaned) as T;
+  } catch (e) {
+    throw new Error(
+      `MiniMax Vision JSON 解析失败: ${(e as Error).message} | raw: ${content.slice(0, 300)}`
     );
   }
 }
