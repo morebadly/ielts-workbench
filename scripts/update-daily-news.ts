@@ -1,14 +1,30 @@
 /**
  * scripts/update-daily-news.ts
- * 每日运行: 拉取/选 1-3 条新闻 -> 调 MiniMax 生成 IELTS 学习包 -> 写入 src/data/news/daily-news.json
  *
- * 原则:
- * - 永不抓取/保存正文。仅保存 title / source / url / publishedAt / originalSummary(短引用)
- * - learningSummary 由 AI 生成且明确标注
- * - MINIMAX_API_KEY 不存在或调用失败时, 用 mock seed 写入并清楚标注 aiSource: "mock"
+ * 流程:
+ *   1. 多源 RSS 拉取 (24h 内, 去重)
+ *   2. 调 MiniMax 选 1-3 条 IELTS 友好新闻并打 topic
+ *   3. 对每条调 MiniMax 生成 IELTS 学习包(摘要 / 词汇 / 阅读题 / 写作题 / 听力)
+ *   4. 写入 src/data/news/daily-news.json (保留近 30 天)
+ *
+ * 任意阶段失败均自动 fallback, 标注 aiSource。
+ *
+ * 版权:
+ * - 不抓正文页面, 仅保留 RSS 公开提供的 title / source / url / publishedAt / 简短 RSS 摘要
+ * - learningSummary / listeningText 全部由 AI 改写, 标注 aiSource
  */
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import {
+  DEFAULT_FEEDS,
+  dedupSeeds,
+  fetchAllFeeds,
+  filterRecent,
+  parseFeedsFromEnv,
+  type RawSeed,
+  type RssFeedSource
+} from "./lib/rssFetcher";
+import { selectSeeds, type SelectedSeed, type DailyNewsTopic } from "./lib/selectSeeds";
 
 interface DailyNewsVocabItem {
   word: string;
@@ -26,7 +42,7 @@ interface DailyNewsItem {
   source: string;
   url: string;
   publishedAt: string;
-  topic: string;
+  topic: DailyNewsTopic;
   originalSummary: string;
   learningSummary: string;
   vocabulary: DailyNewsVocabItem[];
@@ -37,16 +53,19 @@ interface DailyNewsItem {
   aiSource?: "minimax" | "mock";
 }
 
-interface RawSeed {
-  title: string;
-  source: string;
-  url: string;
-  publishedAt: string;
-  originalSummary: string;
+interface NewsFile {
+  version: number;
+  updatedAt: string;
+  items: DailyNewsItem[];
 }
 
 const OUT_FILE = path.resolve("src/data/news/daily-news.json");
 const MAX_HISTORY = 30;
+const TARGET_COUNT = 3;
+const RECENT_WINDOW_HOURS = 36;
+
+const NEWS_SYSTEM =
+  "You are a precise IELTS coach assistant. When asked for JSON, you return strict JSON only, no markdown, no commentary.";
 
 function todayKey(): string {
   const d = new Date();
@@ -64,15 +83,13 @@ function slug(s: string): string {
     .slice(0, 60);
 }
 
-const NEWS_SYSTEM =
-  "You are a precise IELTS coach assistant. When asked for JSON, you return strict JSON only, no markdown, no commentary.";
-
-function buildPrompt(seed: RawSeed): string {
+function buildPacketPrompt(seed: SelectedSeed): string {
   return `You are an IELTS reading and writing coach. Build a self-contained learning packet from a news headline + RSS summary, NOT from full article text.
 
 News title: ${seed.title}
 Source: ${seed.source}
 Published at: ${seed.publishedAt}
+Topic hint (from upstream classifier): ${seed.topic}
 Original RSS summary (do NOT copy verbatim):
 """
 ${seed.originalSummary}
@@ -83,7 +100,7 @@ Constraints:
 - vocabulary must be exactly 5 IELTS Band 6.5+ items.
 - readingQuestions must be exactly 3, mix of detail/inference/vocab-in-context. Answers in English.
 - writingPrompt must look like an IELTS Task 2 essay question.
-- topic must be one of: education|technology|environment|society|health|work.
+- topic must be one of: education|technology|environment|society|health|work. Prefer the topic hint unless clearly wrong.
 
 Return STRICT JSON, no markdown:
 {
@@ -107,10 +124,35 @@ function stripJsonFence(s: string): string {
   return t;
 }
 
-async function callMiniMax(seed: RawSeed): Promise<unknown> {
+interface AIPacket {
+  topic: DailyNewsTopic;
+  learningSummary: string;
+  vocabulary: DailyNewsVocabItem[];
+  readingQuestions: DailyNewsReadingQA[];
+  writingPrompt: string;
+  listeningText: string;
+}
+
+function isValidPacket(p: unknown): p is AIPacket {
+  if (!p || typeof p !== "object") return false;
+  const o = p as Record<string, unknown>;
+  return (
+    typeof o.topic === "string" &&
+    typeof o.learningSummary === "string" &&
+    Array.isArray(o.vocabulary) &&
+    Array.isArray(o.readingQuestions) &&
+    typeof o.writingPrompt === "string" &&
+    typeof o.listeningText === "string"
+  );
+}
+
+async function callMiniMax(seed: SelectedSeed): Promise<AIPacket> {
   const apiKey = process.env.MINIMAX_API_KEY?.trim();
   if (!apiKey) throw new Error("no_api_key");
-  const baseUrl = (process.env.MINIMAX_BASE_URL || "https://api.minimax.io/v1").replace(/\/+$/, "");
+  const baseUrl = (process.env.MINIMAX_BASE_URL || "https://api.minimax.io/v1").replace(
+    /\/+$/,
+    ""
+  );
   const chatPath = process.env.MINIMAX_CHAT_PATH || "/chat/completions";
   const model = process.env.MINIMAX_TEXT_MODEL || "MiniMax-M2.7";
 
@@ -124,7 +166,7 @@ async function callMiniMax(seed: RawSeed): Promise<unknown> {
       model,
       messages: [
         { role: "system", content: NEWS_SYSTEM },
-        { role: "user", content: buildPrompt(seed) }
+        { role: "user", content: buildPacketPrompt(seed) }
       ],
       temperature: 0.4,
       max_completion_tokens: 1800,
@@ -140,53 +182,14 @@ async function callMiniMax(seed: RawSeed): Promise<unknown> {
   };
   const content = j.choices?.[0]?.message?.content;
   if (!content) throw new Error("empty content");
-  return JSON.parse(stripJsonFence(content));
+  const parsed = JSON.parse(stripJsonFence(content)) as unknown;
+  if (!isValidPacket(parsed)) throw new Error("invalid AI shape");
+  return parsed;
 }
 
-interface AIPacket {
-  topic: string;
-  learningSummary: string;
-  vocabulary: DailyNewsVocabItem[];
-  readingQuestions: DailyNewsReadingQA[];
-  writingPrompt: string;
-  listeningText: string;
-}
-
-function isValid(p: unknown): p is AIPacket {
-  if (!p || typeof p !== "object") return false;
-  const o = p as Record<string, unknown>;
-  return (
-    typeof o.topic === "string" &&
-    typeof o.learningSummary === "string" &&
-    Array.isArray(o.vocabulary) &&
-    Array.isArray(o.readingQuestions) &&
-    typeof o.writingPrompt === "string" &&
-    typeof o.listeningText === "string"
-  );
-}
-
-const MOCK_SEEDS: RawSeed[] = [
-  {
-    title: "Why universities are rethinking written exams in the age of AI",
-    source: "Mock IELTS Wire",
-    url: "https://example.com/news/ai-and-exams",
-    publishedAt: new Date().toISOString(),
-    originalSummary:
-      "As generative AI tools become widespread, several universities are piloting oral defenses, in-class essays and project-based portfolios to verify what students have actually learned."
-  },
-  {
-    title: "City pilots free public transport on weekends to ease congestion",
-    source: "Mock IELTS Wire",
-    url: "https://example.com/news/free-transport",
-    publishedAt: new Date().toISOString(),
-    originalSummary:
-      "A European city is offering free weekend bus and tram rides for six months to study whether free public transport reduces car traffic and air pollution."
-  }
-];
-
-function buildMockPacket(seed: RawSeed): AIPacket {
+function mockPacket(seed: SelectedSeed): AIPacket {
   return {
-    topic: "society",
+    topic: seed.topic,
     learningSummary: `(Mock learning summary based on the headline.) ${seed.title}. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.`,
     vocabulary: [
       {
@@ -222,7 +225,7 @@ function buildMockPacket(seed: RawSeed): AIPacket {
       },
       {
         question: "Why is this development considered important?",
-        answer: "(Mock) Because it affects how students or citizens learn or behave."
+        answer: "(Mock) Because it affects how people learn or behave."
       },
       {
         question: "What does the writer suggest as the next step?",
@@ -231,14 +234,8 @@ function buildMockPacket(seed: RawSeed): AIPacket {
     ],
     writingPrompt:
       "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-    listeningText: `(Mock listening passage.) ${seed.title}. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary. It is rewritten so that you can practice listening without infringing on the original publisher's content.`
+    listeningText: `(Mock listening passage.) ${seed.title}. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.`
   };
-}
-
-interface NewsFile {
-  version: number;
-  updatedAt: string;
-  items: DailyNewsItem[];
 }
 
 async function loadExisting(): Promise<NewsFile> {
@@ -252,25 +249,69 @@ async function loadExisting(): Promise<NewsFile> {
   return { version: 1, updatedAt: new Date().toISOString(), items: [] };
 }
 
-async function main() {
-  const seeds = MOCK_SEEDS.slice(0, 2);
-  const date = todayKey();
-  const built: DailyNewsItem[] = [];
+function getFeeds(): RssFeedSource[] {
+  const fromEnv = parseFeedsFromEnv(process.env.NEWS_RSS_FEEDS);
+  return fromEnv.length ? fromEnv : DEFAULT_FEEDS;
+}
 
-  for (const [idx, seed] of seeds.entries()) {
+async function main() {
+  const date = todayKey();
+  const feeds = getFeeds();
+  console.log(`[1/4] Fetching ${feeds.length} feeds...`);
+  const { all, errors } = await fetchAllFeeds(feeds);
+  if (errors.length) {
+    for (const err of errors) {
+      console.warn(`  feed failed: ${err.source} -> ${err.error}`);
+    }
+  }
+  console.log(`     got ${all.length} raw items`);
+
+  const recent = filterRecent(all, RECENT_WINDOW_HOURS * 60 * 60 * 1000);
+  const deduped = dedupSeeds(recent);
+  const candidates = deduped.length > 0 ? deduped : dedupSeeds(all);
+  console.log(`     ${candidates.length} candidates after recent+dedup`);
+
+  let selected: SelectedSeed[] = [];
+  if (candidates.length === 0) {
+    console.warn("[2/4] No candidates from RSS, falling back to mock seed.");
+    const fallbackSeed: RawSeed = {
+      title: "Why universities are rethinking written exams in the age of AI",
+      source: "Mock IELTS Wire",
+      sourceFeed: "mock",
+      url: "https://example.com/news/ai-and-exams",
+      publishedAt: new Date().toISOString(),
+      originalSummary:
+        "As generative AI tools become widespread, several universities are piloting oral defenses, in-class essays and project-based portfolios to verify what students have actually learned."
+    };
+    selected = [{ ...fallbackSeed, topic: "education" }];
+  } else {
+    console.log(`[2/4] Asking MiniMax to select ${TARGET_COUNT} items...`);
+    const sel = await selectSeeds(candidates, TARGET_COUNT);
+    if (!sel.aiUsed) {
+      console.warn(`     AI selection skipped/failed: ${sel.reason || "unknown"}, using heuristic`);
+    }
+    selected = sel.selected;
+    console.log(`     picked: ${selected.length} items`);
+  }
+
+  if (!selected.length) {
+    console.error("Nothing to write, exiting without changing daily-news.json");
+    return;
+  }
+
+  console.log(`[3/4] Generating IELTS packets for ${selected.length} items...`);
+  const built: DailyNewsItem[] = [];
+  for (const [idx, seed] of selected.entries()) {
     let packet: AIPacket;
     let aiSource: "minimax" | "mock" = "mock";
     try {
-      const raw = await callMiniMax(seed);
-      if (!isValid(raw)) throw new Error("invalid AI shape");
-      packet = raw;
+      packet = await callMiniMax(seed);
       aiSource = "minimax";
-      console.log(`[${idx + 1}/${seeds.length}] MiniMax OK:`, seed.title);
+      console.log(`  [${idx + 1}/${selected.length}] MiniMax OK: ${seed.title}`);
     } catch (e) {
-      packet = buildMockPacket(seed);
+      packet = mockPacket(seed);
       console.warn(
-        `[${idx + 1}/${seeds.length}] fallback to mock for "${seed.title}":`,
-        (e as Error).message
+        `  [${idx + 1}/${selected.length}] mock fallback for "${seed.title}": ${(e as Error).message}`
       );
     }
 
@@ -293,6 +334,7 @@ async function main() {
     });
   }
 
+  console.log(`[4/4] Writing ${OUT_FILE}...`);
   const existing = await loadExisting();
   const otherDays = existing.items.filter((it) => it.date !== date);
   const merged = [...built, ...otherDays].slice(0, MAX_HISTORY);
@@ -305,7 +347,7 @@ async function main() {
   await fs.mkdir(path.dirname(OUT_FILE), { recursive: true });
   await fs.writeFile(OUT_FILE, JSON.stringify(out, null, 2) + "\n", "utf8");
   console.log(
-    `Wrote ${OUT_FILE}: ${built.length} new for ${date}, ${merged.length} total`
+    `Done. ${built.length} new for ${date}, ${merged.length} total in file.`
   );
 }
 

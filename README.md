@@ -4,7 +4,7 @@
 
 ---
 
-## 当前版本: v1.5.0
+## 当前版本: v1.6.0
 
 **已完成:**
 - 首页 Dashboard:今日 6 项任务 / 词书进度 / 连续天数 / 继续学习
@@ -174,6 +174,14 @@ src/
   - 新增 `useAuth` / `useCloudSync` hooks,`AuthCard` / `SyncCard` UI 组件,接入设置页
   - `storage` 扩 `SyncMeta` + `exportSyncSnapshot` + `applySyncSnapshot`,旧 API 不变
   - 仅使用 anon key,不引入 service role,RLS 限制用户只能读写自己的行
+- **v1.6.0** — 每日新闻接入真实 RSS(BBC + Guardian)
+  - `scripts/update-daily-news.ts` 重写为多源 RSS 流水线
+    - 新增 `scripts/lib/rssFetcher.ts`:并发拉 6 个英文权威源(BBC Education/Tech/Science/Health, Guardian Education/Environment),24 小时窗口去重
+    - 新增 `scripts/lib/selectSeeds.ts`:调 MiniMax 在候选里挑 1-3 条 IELTS 友好新闻并打 `topic` 标签;失败回退关键词启发式
+    - 学习包生成、写文件流程不变,任意阶段失败均 mock fallback
+  - 支持 `RSS_FEEDS` 环境变量自定义源 `Name|url|topic;...`
+  - **版权策略不变**:仍只保存 RSS 公开提供的 `title / source / url / publishedAt / 短摘要`,绝不抓正文
+  - 依赖:新增 `fast-xml-parser`
 - **v1.5.0** — Supabase 多设备同步(可选)
   - 新增 `supabase/schema.sql`(`user_sync_items` 表 + RLS 策略 + auto-touch 触发器)
   - 邮箱密码注册 / 登录(`useAuth`),session 自动持久化

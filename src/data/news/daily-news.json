@@ -1,7 +1,63 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-14T00:00:00.000Z",
+  "updatedAt": "2026-05-15T01:21:41.023Z",
   "items": [
+    {
+      "id": "news-2026-05-15-1-why-universities-are-rethinking-written-exams-in-the-age-of-",
+      "date": "2026-05-15",
+      "title": "Why universities are rethinking written exams in the age of AI",
+      "source": "Mock IELTS Wire",
+      "url": "https://example.com/news/ai-and-exams",
+      "publishedAt": "2026-05-15T01:21:41.021Z",
+      "topic": "education",
+      "originalSummary": "As generative AI tools become widespread, several universities are piloting oral defenses, in-class essays and project-based portfolios to verify what students have actually learned.",
+      "learningSummary": "(Mock learning summary based on the headline.) Why universities are rethinking written exams in the age of AI. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Why universities are rethinking written exams in the age of AI. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-05-15T01:21:41.022Z",
+      "aiSource": "mock"
+    },
     {
       "id": "seed-2026-05-14-001",
       "date": "2026-05-14",
