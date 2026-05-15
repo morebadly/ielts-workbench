@@ -262,6 +262,12 @@ export interface UserProgress {
   streakDays: number;
   lastStudyDate: string | null;
   totalWordsLearned: number;
+  /**
+   * v1.8.1 新增:勾选启用的所有词书 ID。
+   * 影响 review / dictation 等"全集"页面;learn 仍按 activeBookId + currentDay 走 Day。
+   * 缺省时 = [activeBookId],老数据零迁移成本。
+   */
+  enabledBookIds?: string[];
   preferences: {
     voice: "uk" | "us";
     targets: DailyTaskTargets;
