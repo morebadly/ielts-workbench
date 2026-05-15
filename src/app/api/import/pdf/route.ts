@@ -48,11 +48,11 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
-    if (images.length > 6) {
+    if (images.length > 1) {
       return NextResponse.json(
         {
           error: "too_many_images",
-          detail: "单次请求最多 6 张图,请减小批次大小"
+          detail: "Netlify 免费版 Function 26s 上限,每次请求只接受 1 张图,前端请按页拆分"
         },
         { status: 413 }
       );

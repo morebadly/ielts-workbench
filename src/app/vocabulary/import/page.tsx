@@ -223,8 +223,9 @@ export default function VocabularyImportPage() {
         throw new Error("PDF 渲染失败,没有可识别的页面");
       }
 
-      // 2) 分批送给 vision 路由,每批最多 4 张图
-      const BATCH_SIZE = 4;
+      // 2) 一张图发一次请求 (Netlify 免费版 Function 26s 上限, MiniMax VLM 单图 5-10s)
+      // BATCH_SIZE=1 看似慢但避免 502 网关超时, 总耗时基本不变
+      const BATCH_SIZE = 1;
       const batches: RenderedPage[][] = [];
       for (let i = 0; i < valid.length; i += BATCH_SIZE) {
         batches.push(valid.slice(i, i + BATCH_SIZE));
