@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { AISourceBadge } from "@/components/ui/AISourceBadge";
 import { speak } from "@/lib/tts";
 import { getArticleForDay } from "@/data/mockArticles";
-import { getWordsByDay, MOCK_WORDS } from "@/data/mockWords";
+import { getWordsByDay, getEnabledBookIds, getWordsFromBooks } from "@/data/mockWords";
 import { useDailyTask } from "@/hooks/useDailyTask";
 import { gradeSentence } from "@/lib/grading";
 import { callAI, type AISource, type VocabArticleData } from "@/lib/ai/client";
@@ -52,6 +52,11 @@ export default function VocabularyArticlePage() {
       }
     : baseArticle;
 
+  const wordMap = useMemo(() => {
+    const enabled = getEnabledBookIds(user);
+    return new Map(getWordsFromBooks(enabled).map((w) => [w.id, w]));
+  }, [user]);
+
   if (!article) {
     return (
       <Container>
@@ -63,7 +68,6 @@ export default function VocabularyArticlePage() {
     );
   }
 
-  const wordMap = new Map(MOCK_WORDS.map((w) => [w.id, w]));
   const highlightedSet = new Set(
     article.highlightWordIds
       .map((id) => wordMap.get(id)?.word)

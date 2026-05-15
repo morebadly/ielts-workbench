@@ -195,3 +195,69 @@ export function getAllBooks(): VocabularyBook[] {
   }
   return list;
 }
+
+/**
+ * 把指定多本词书的词汇合并成一个去重列表。
+ *
+ * 重复词处理策略:
+ *   - 用 word.toLowerCase() 当 key
+ *   - 第一本里的版本作为主版本(保留它的 id, phonetic, 释义, 例句)
+ *   - 后续重复出现时,在主版本的 wordList 后追加来源标记 "+ <书名>"
+ *   - 这样 progress / dictation / article 不会重复刷同一个词,但用户能看到这个词出现在哪几本里
+ *
+ * @param bookIds 启用的词书 id 列表; 空数组返回 []
+ */
+export function getWordsFromBooks(bookIds: string[]): Word[] {
+  if (!bookIds.length) return [];
+  const allBooks = getAllBooks();
+  const bookNameById = new Map(allBooks.map((b) => [b.id, b.name]));
+
+  // 内置 mock 走自己, 自定义书走 localStorage
+  const collect = (bookId: string): Word[] => {
+    if (bookId === MOCK_BOOK.id) {
+      return MOCK_WORDS.filter((w) => w.bookId === bookId);
+    }
+    if (typeof window === "undefined") return [];
+    try {
+      const raw = window.localStorage.getItem("ielts-wb:vocab-book-words");
+      if (!raw) return [];
+      const map = JSON.parse(raw) as Record<string, Word[]>;
+      return map[bookId] || [];
+    } catch {
+      return [];
+    }
+  };
+
+  const seen = new Map<string, Word>();
+  for (const bookId of bookIds) {
+    const list = collect(bookId);
+    for (const w of list) {
+      const key = w.word.trim().toLowerCase();
+      if (!key) continue;
+      const existing = seen.get(key);
+      if (!existing) {
+        seen.set(key, { ...w });
+        continue;
+      }
+      // 已经存在 -> 在 wordList 末尾追加来源, 不替换主版本
+      const otherBookName = bookNameById.get(w.bookId);
+      if (otherBookName && !existing.wordList.includes(otherBookName)) {
+        existing.wordList = `${existing.wordList} · 同时出现于 ${otherBookName}`;
+      }
+    }
+  }
+  return Array.from(seen.values());
+}
+
+/**
+ * 用户启用了哪些 book。 老数据 enabledBookIds 缺失时, 默认就是 [activeBookId]。
+ */
+export function getEnabledBookIds(user: {
+  activeBookId: string;
+  enabledBookIds?: string[];
+}): string[] {
+  if (user.enabledBookIds && user.enabledBookIds.length) {
+    return user.enabledBookIds;
+  }
+  return [user.activeBookId];
+}

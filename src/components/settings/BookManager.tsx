@@ -98,6 +98,23 @@ export function BookManager({ user, onChange }: Props) {
     refresh();
   };
 
+  /** 当前启用的 book id 列表(老数据缺字段时回退到 [activeBookId]) */
+  const enabledIds =
+    user.enabledBookIds && user.enabledBookIds.length
+      ? user.enabledBookIds
+      : [user.activeBookId];
+
+  const toggleEnabled = (bookId: string, checked: boolean) => {
+    // activeBook 必须保持启用, 不允许取消
+    if (bookId === user.activeBookId && !checked) return;
+    let next = enabledIds.filter((x) => x !== bookId);
+    if (checked) next = [...next, bookId];
+    // 兜底:确保 activeBook 在列表里
+    if (!next.includes(user.activeBookId)) next.push(user.activeBookId);
+    storage.setUser({ ...user, enabledBookIds: next });
+    refresh();
+  };
+
   const removeBook = (bookId: string) => {
     if (bookId === MOCK_BOOK.id) return;
     if (!confirm("确认删除这本词书?该词书的进度数据不会被清除。")) return;
@@ -129,6 +146,7 @@ export function BookManager({ user, onChange }: Props) {
         {books.map((b) => {
           const isActive = b.id === user.activeBookId;
           const isBuiltin = b.id === MOCK_BOOK.id;
+          const isEnabled = enabledIds.includes(b.id);
           return (
             <div
               key={b.id}
@@ -138,19 +156,30 @@ export function BookManager({ user, onChange }: Props) {
                   : "flex items-center justify-between rounded-xl border border-black/5 bg-bg-soft/50 px-3 py-2.5"
               }
             >
-              <div>
-                <div className="text-sm font-medium">
-                  {b.name}
-                  {isActive ? (
-                    <span className="ml-2 pill bg-brand-100 text-brand-700">使用中</span>
-                  ) : null}
-                  {isBuiltin ? (
-                    <span className="ml-2 pill">内置</span>
-                  ) : null}
+              <label className="flex min-w-0 flex-1 cursor-pointer items-start gap-3">
+                <input
+                  type="checkbox"
+                  checked={isEnabled}
+                  disabled={isActive}
+                  onChange={(e) => toggleEnabled(b.id, e.target.checked)}
+                  className="mt-0.5 h-4 w-4 shrink-0"
+                  title={isActive ? "当前正在学的词书必须保持启用" : "勾选后, 这本书的词会进入复习/默写全集"}
+                />
+                <div className="min-w-0 flex-1">
+                  <div className="text-sm font-medium">
+                    {b.name}
+                    {isActive ? (
+                      <span className="ml-2 pill bg-brand-100 text-brand-700">使用中</span>
+                    ) : null}
+                    {isBuiltin ? <span className="ml-2 pill">内置</span> : null}
+                    {isEnabled && !isActive ? (
+                      <span className="ml-2 pill bg-bg-soft">已纳入复习</span>
+                    ) : null}
+                  </div>
+                  <div className="text-xs muted">共 {b.totalDays} 天</div>
                 </div>
-                <div className="text-xs muted">共 {b.totalDays} 天</div>
-              </div>
-              <div className="flex gap-2">
+              </label>
+              <div className="flex shrink-0 gap-2">
                 {!isActive ? (
                   <Button variant="soft" onClick={() => switchBook(b.id)}>
                     切到这本
@@ -165,6 +194,12 @@ export function BookManager({ user, onChange }: Props) {
             </div>
           );
         })}
+        <p className="text-xs muted">
+          ☑ 勾选的词书会一起出现在复习箱、默写、新闻词汇等&ldquo;全集&rdquo;页面;
+          重复的单词按第一次出现版本计算,不会刷两次。
+          <br />
+          学习进度(&ldquo;Day N&rdquo;)只跟着上方&ldquo;使用中&rdquo;的那本走。
+        </p>
       </div>
 
       <div className="mt-5 space-y-3 rounded-xl border border-dashed border-black/10 p-3">

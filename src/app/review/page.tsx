@@ -7,23 +7,35 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { storage } from "@/lib/storage";
 import { isDueForReview } from "@/lib/srs";
-import { MOCK_WORDS } from "@/data/mockWords";
+import { getEnabledBookIds, getWordsFromBooks } from "@/data/mockWords";
 import { speak } from "@/lib/tts";
-import type { ReviewItem, WordProgress } from "@/types";
+import type { ReviewItem, Word, WordProgress } from "@/types";
 import { WORD_STATUS_LABEL } from "@/types";
 
 export default function ReviewPage() {
-  const [dueWords, setDueWords] = useState<Array<{ progress: WordProgress; word: typeof MOCK_WORDS[number] }>>([]);
+  const [dueWords, setDueWords] = useState<
+    Array<{ progress: WordProgress; word: Word }>
+  >([]);
   const [extras, setExtras] = useState<ReviewItem[]>([]);
-  const wordMap = new Map(MOCK_WORDS.map((w) => [w.id, w]));
+  const [bookCount, setBookCount] = useState(0);
 
   useEffect(() => {
+    const user = storage.getUser();
+    const enabledIds = getEnabledBookIds(user);
+    setBookCount(enabledIds.length);
+    const enabledWords = getWordsFromBooks(enabledIds);
+    const wordMap = new Map(enabledWords.map((w) => [w.id, w]));
     const map = storage.getWordProgressMap();
     const list = Object.values(map)
       .filter((p) => isDueForReview(p))
       .map((p) => ({ progress: p, word: wordMap.get(p.wordId) }))
-      .filter((x): x is { progress: WordProgress; word: typeof MOCK_WORDS[number] } => Boolean(x.word))
-      .sort((a, b) => (a.progress.nextReviewAt || 0) - (b.progress.nextReviewAt || 0));
+      .filter(
+        (x): x is { progress: WordProgress; word: Word } => Boolean(x.word)
+      )
+      .sort(
+        (a, b) =>
+          (a.progress.nextReviewAt || 0) - (b.progress.nextReviewAt || 0)
+      );
     setDueWords(list);
     setExtras(
       storage.getReviewItems().filter((r) => r.due <= Date.now())
@@ -34,7 +46,7 @@ export default function ReviewPage() {
     <Container>
       <PageHeader
         title="复习箱"
-        subtitle={`共 ${dueWords.length} 个单词到期复习,${extras.length} 条其他到期项`}
+        subtitle={`共 ${dueWords.length} 个单词到期复习,${extras.length} 条其他到期项${bookCount > 1 ? ` · 来自 ${bookCount} 本词书` : ""}`}
         right={
           <Link href="/vocabulary/learn?mode=review">
             <Button variant="primary">开始复习单词</Button>
