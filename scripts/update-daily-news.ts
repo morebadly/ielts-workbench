@@ -129,6 +129,69 @@ function stripJsonFence(s: string): string {
   return t;
 }
 
+/**
+ * 修复 LLM 输出中常见的 JSON 语法错误:
+ *   1. 字符串字面量里的裸 \n / \r / \t (LLM 经常忘记转义)
+ *   2. 数组/对象末尾多余的逗号 (... ,] 或 ... ,})
+ *   3. 字符串字面量里裸的 " (前面没有 \) -> 不在本版做, 误伤太大
+ */
+function sanitizeJson(input: string): string {
+  let out = "";
+  let inString = false;
+  let escape = false;
+  for (let i = 0; i < input.length; i++) {
+    const c = input[i];
+    if (escape) {
+      out += c;
+      escape = false;
+      continue;
+    }
+    if (c === "\\") {
+      out += c;
+      escape = true;
+      continue;
+    }
+    if (c === '"') {
+      inString = !inString;
+      out += c;
+      continue;
+    }
+    if (inString) {
+      if (c === "\n") {
+        out += "\\n";
+        continue;
+      }
+      if (c === "\r") {
+        out += "\\r";
+        continue;
+      }
+      if (c === "\t") {
+        out += "\\t";
+        continue;
+      }
+    }
+    out += c;
+  }
+  // 去掉尾随逗号 ", ]" 或 ", }"
+  out = out.replace(/,\s*([\]}])/g, "$1");
+  return out;
+}
+
+function parseJsonSafe(raw: string): unknown {
+  const stripped = stripJsonFence(raw);
+  try {
+    return JSON.parse(stripped);
+  } catch (firstErr) {
+    try {
+      const sanitized = sanitizeJson(stripped);
+      return JSON.parse(sanitized);
+    } catch {
+      // 抛出第一次的错误信息, 更接近原始问题
+      throw firstErr;
+    }
+  }
+}
+
 interface AIPacket {
   topic: DailyNewsTopic;
   learningSummary: string;
@@ -151,7 +214,10 @@ function isValidPacket(p: unknown): p is AIPacket {
   );
 }
 
-async function callMiniMax(seed: SelectedSeed): Promise<AIPacket> {
+async function callMiniMaxOnce(
+  seed: SelectedSeed,
+  attempt: number
+): Promise<AIPacket> {
   const apiKey = process.env.MINIMAX_API_KEY?.trim();
   if (!apiKey) throw new Error("no_api_key");
   const baseUrl = (process.env.MINIMAX_BASE_URL || "https://api.minimax.io/v1").replace(
@@ -160,6 +226,9 @@ async function callMiniMax(seed: SelectedSeed): Promise<AIPacket> {
   );
   const chatPath = process.env.MINIMAX_CHAT_PATH || "/chat/completions";
   const model = process.env.MINIMAX_TEXT_MODEL || "MiniMax-M2.7";
+
+  // 第二次重试时降一点 temperature, 收紧到更稳的输出
+  const temperature = attempt === 1 ? 0.4 : 0.2;
 
   const resp = await fetch(`${baseUrl}${chatPath}`, {
     method: "POST",
@@ -173,8 +242,8 @@ async function callMiniMax(seed: SelectedSeed): Promise<AIPacket> {
         { role: "system", content: NEWS_SYSTEM },
         { role: "user", content: buildPacketPrompt(seed) }
       ],
-      temperature: 0.4,
-      max_completion_tokens: 1800,
+      temperature,
+      max_completion_tokens: 2400,
       response_format: { type: "json_object" }
     })
   });
@@ -187,9 +256,21 @@ async function callMiniMax(seed: SelectedSeed): Promise<AIPacket> {
   };
   const content = j.choices?.[0]?.message?.content;
   if (!content) throw new Error("empty content");
-  const parsed = JSON.parse(stripJsonFence(content)) as unknown;
+  const parsed = parseJsonSafe(content) as unknown;
   if (!isValidPacket(parsed)) throw new Error("invalid AI shape");
   return parsed;
+}
+
+async function callMiniMax(seed: SelectedSeed): Promise<AIPacket> {
+  try {
+    return await callMiniMaxOnce(seed, 1);
+  } catch (e1) {
+    const msg = (e1 as Error).message;
+    // HTTP 4xx 立刻放弃, 不重试 (鉴权问题、payload 问题)
+    if (/^HTTP 4\d\d/.test(msg) || msg === "no_api_key") throw e1;
+    console.warn(`    retry once after: ${msg}`);
+    return await callMiniMaxOnce(seed, 2);
+  }
 }
 
 function mockPacket(seed: SelectedSeed): AIPacket {
