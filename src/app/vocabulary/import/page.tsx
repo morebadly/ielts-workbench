@@ -167,28 +167,25 @@ export default function VocabularyImportPage() {
     resumeFromState?: NonNullable<typeof visionResume>
   ) => {
     if (!file) return setError("请先选择 PDF 文件");
-    if (resumeFromState) {
-      // 校验文件名 / 大小一致, 避免续传到错的 PDF
-      if (
-        resumeFromState.fileName !== file.name ||
-        resumeFromState.fileSize !== file.size
-      ) {
-        return setError(
-          "继续识别需要选择和之前完全一样的 PDF。如已重选,请点放弃续传后重新开始。"
-        );
-      }
-    }
+    // 注意: 只在按钮点击时才会传入 resumeFromState; 而 UI 已经用 canResume disable 了
+    // 不一致的"继续识别"按钮, 所以这里不再抛错误 banner, 直接默认从头跑(防御性兜底)。
+    const useResume =
+      resumeFromState &&
+      resumeFromState.fileName === file.name &&
+      resumeFromState.fileSize === file.size
+        ? resumeFromState
+        : null;
 
     const finalTitle =
-      resumeFromState?.bookTitle ||
+      useResume?.bookTitle ||
       bookTitle.trim() ||
       file.name.replace(/\.pdf$/i, "");
 
-    const fromN = resumeFromState
-      ? resumeFromState.fromPage
+    const fromN = useResume
+      ? useResume.fromPage
       : Math.max(1, Number(fromPage) || 1);
-    const toN = resumeFromState
-      ? resumeFromState.toPage
+    const toN = useResume
+      ? useResume.toPage
       : toPage
         ? Number(toPage) || 0
         : 0;
@@ -222,9 +219,9 @@ export default function VocabularyImportPage() {
         batches.push(valid.slice(i, i + BATCH_SIZE));
       }
 
-      const startBatch = resumeFromState?.nextBatchIndex ?? 0;
-      const allWords: ImportedWord[] = resumeFromState
-        ? [...resumeFromState.accumulatedWords]
+      const startBatch = useResume?.nextBatchIndex ?? 0;
+      const allWords: ImportedWord[] = useResume
+        ? [...useResume.accumulatedWords]
         : [];
 
       for (let i = startBatch; i < batches.length; i++) {
