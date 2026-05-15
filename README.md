@@ -187,25 +187,16 @@ src/
   - 新增 `src/app/api/ai/tts/route.ts` + `src/lib/ai/minimax.ts` 的 `synthesizeTTS`,前端 `tts.ts` 优先用 MiniMax 云端 TTS,失败自动回退浏览器 Web Speech,带 24 条音频缓存
   - 新增 `src/app/writing/history/page.tsx`:写作历史列表 + 总分进步曲线 + Task 1/2 切换筛选
   - 新闻脚本加 `sanitizeJson()` + 失败重试一次,`max_completion_tokens` 提到 2400,GitHub Actions 上 mock fallback 比例显著降低
-- **v1.5.0** — Supabase 多设备同步(可选)
-  - 新增 `supabase/schema.sql`(`user_sync_items` 表 + RLS 策略 + auto-touch 触发器)
-  - 邮箱密码注册 / 登录(`useAuth`),session 自动持久化
-  - 同步引擎 `cloudSync.ts`:`pushAll` / `pullAll` / `syncTwoWay` / `clearCloudData`
-  - 设置页加 `AuthCard` + `SyncCard`:上传 / 下载 / 同步 / 上次同步时间徽标
-  - localStorage 全部 8 个 key 走白名单,云端同名 upsert,本地始终保留
-  - 未配置 Supabase 时全站完全本地模式,UI 给出明确提示
-  - **凭据策略**:仅使用 `NEXT_PUBLIC_SUPABASE_URL` 与 `ANON_KEY`,绝不引入 service role,所有数据隔离都靠 RLS
 
 ---
 
 ## 下一步计划
 
-- 接入 MiniMax TTS:替换浏览器 Web Speech,统一英音 / 美音音色
 - 把雅思核心 3000 完整词书塞进 `data/`
 - 真实雅思音频素材替换 `mockListening.ts`
-- 复习箱算法升级(SM-2 / FSRS)
-- 写作历史回看 + 进步曲线
 - 同步策略升级:按 key 的 last-write-wins,目前是简化版双向同步
+- 复习箱算法可选升级 FSRS(SM-2 已就位,基本够用)
+- 写作 AI 评分接入更细的分项打分 + 高亮原文中的语法/词汇问题
 
 ---
 
