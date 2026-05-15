@@ -131,10 +131,13 @@ export default function VocabularyImportPage() {
   const VISION_RESUME_KEY = "ielts-wb:vision-resume";
 
   // 启动时, 如果当前选了同名同大小的文件, 自动加载之前的进度
+  // 优先 sessionStorage(同 tab 续);其次 localStorage(关浏览器后再开也能续)
   useEffect(() => {
     if (typeof window === "undefined") return;
     try {
-      const raw = sessionStorage.getItem(VISION_RESUME_KEY);
+      const raw =
+        sessionStorage.getItem(VISION_RESUME_KEY) ||
+        localStorage.getItem(VISION_RESUME_KEY);
       if (!raw) return;
       const saved = JSON.parse(raw) as NonNullable<typeof visionResume>;
       setVisionResume(saved);
@@ -148,9 +151,17 @@ export default function VocabularyImportPage() {
     setVisionResume(next);
     if (typeof window === "undefined") return;
     if (next) {
-      sessionStorage.setItem(VISION_RESUME_KEY, JSON.stringify(next));
+      const json = JSON.stringify(next);
+      sessionStorage.setItem(VISION_RESUME_KEY, json);
+      // 也写一份到 localStorage,关浏览器后还能续
+      try {
+        localStorage.setItem(VISION_RESUME_KEY, json);
+      } catch {
+        // localStorage 满了就忽略, sessionStorage 优先
+      }
     } else {
       sessionStorage.removeItem(VISION_RESUME_KEY);
+      localStorage.removeItem(VISION_RESUME_KEY);
     }
   };
 
