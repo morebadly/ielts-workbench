@@ -103,10 +103,10 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
 
   return (
     <Card padding="lg" className="space-y-5">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <div className="flex items-end gap-3">
-            <h2 className="text-3xl font-semibold tracking-tight">{word.word}</h2>
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-end gap-3">
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">{word.word}</h2>
             <span className="pb-1 text-sm text-ink-soft">{word.phonetic}</span>
           </div>
           <div className="mt-1 flex flex-wrap items-center gap-2 text-xs muted">
@@ -142,8 +142,8 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
       </div>
 
       <div className="rounded-xl bg-bg-soft/60 p-4">
-        <div className="flex items-start justify-between gap-3">
-          <p className="font-serif text-[15px] leading-relaxed">&ldquo;{word.exampleSentence}&rdquo;</p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <p className="min-w-0 flex-1 font-serif text-[15px] leading-relaxed">&ldquo;{word.exampleSentence}&rdquo;</p>
           <div className="flex shrink-0 gap-2">
             <Button
               variant="soft"

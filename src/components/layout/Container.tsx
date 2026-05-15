@@ -24,12 +24,12 @@ export function PageHeader({
   right?: React.ReactNode;
 }) {
   return (
-    <div className="mb-5 flex items-end justify-between gap-3">
-      <div>
+    <div className="mb-5 flex flex-wrap items-end justify-between gap-x-3 gap-y-2">
+      <div className="min-w-0 flex-1">
         <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
         {subtitle ? <p className="text-sm muted mt-1">{subtitle}</p> : null}
       </div>
-      {right}
+      {right ? <div className="shrink-0">{right}</div> : null}
     </div>
   );
 }
