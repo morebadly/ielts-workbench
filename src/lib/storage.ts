@@ -2,6 +2,7 @@ import type {
   DailyTaskProgress,
   DailyTaskTargets,
   DictationResult,
+  ListeningItem,
   ReviewItem,
   UserProgress,
   VocabularyBook,
@@ -20,7 +21,8 @@ const KEYS = {
   review: PREFIX + "review-items",
   dailyProgress: PREFIX + "daily-progress",
   books: PREFIX + "vocab-books",
-  bookWords: PREFIX + "vocab-book-words"
+  bookWords: PREFIX + "vocab-book-words",
+  customListening: PREFIX + "custom-listening-items"
 } as const;
 
 const SYNC_META_KEY = PREFIX + "sync-meta";
@@ -206,6 +208,22 @@ export const storage = {
     const map = read<Record<string, Word[]>>(KEYS.bookWords, {});
     delete map[bookId];
     write(KEYS.bookWords, map);
+  },
+
+  // ============ v1.8.1: 自定义听力素材 ============
+  getCustomListening(): ListeningItem[] {
+    return read<ListeningItem[]>(KEYS.customListening, []);
+  },
+  saveCustomListening(item: ListeningItem): void {
+    const all = this.getCustomListening();
+    const idx = all.findIndex((x) => x.id === item.id);
+    if (idx >= 0) all[idx] = item;
+    else all.push(item);
+    write(KEYS.customListening, all);
+  },
+  deleteCustomListening(id: string): void {
+    const all = this.getCustomListening().filter((x) => x.id !== id);
+    write(KEYS.customListening, all);
   },
 
   getDailyProgress(date: string = todayKey()): DailyTaskProgress {

@@ -12,7 +12,6 @@ import { storage } from "@/lib/storage";
 import type { ListeningItem, ReviewItem } from "@/types";
 
 type DiffFilter = "all" | "easy" | "medium" | "hard";
-
 const SECTION_LABEL: Record<NonNullable<ListeningItem["section"]>, string> = {
   1: "Section 1 · 社交",
   2: "Section 2 · 公共",
@@ -29,12 +28,24 @@ const DIFF_LABEL: Record<ListeningItem["difficulty"], string> = {
 export default function ListeningPracticePage() {
   const { user, bump, setUser } = useDailyTask();
   const [diff, setDiff] = useState<DiffFilter>("all");
+  const [customItems, setCustomItems] = useState<ListeningItem[]>([]);
+
+  useEffect(() => {
+    setCustomItems(storage.getCustomListening());
+  }, []);
+
+  // 自定义素材排在前面, 用 isCustom 标记给 UI
+  const allItems = useMemo<ListeningItem[]>(
+    () => [...customItems, ...LISTENING_ITEMS],
+    [customItems]
+  );
+
   const filtered = useMemo(
     () =>
       diff === "all"
-        ? LISTENING_ITEMS
-        : LISTENING_ITEMS.filter((l) => l.difficulty === diff),
-    [diff]
+        ? allItems
+        : allItems.filter((l) => l.difficulty === diff),
+    [diff, allItems]
   );
   const [itemId, setItemId] = useState(LISTENING_ITEMS[0].id);
   // 切换难度后, 如果当前选中的素材不在筛选结果里, 自动选第一条
@@ -48,9 +59,11 @@ export default function ListeningPracticePage() {
     }
   }, [diff, filtered, itemId]);
   const item = useMemo(
-    () => LISTENING_ITEMS.find((l) => l.id === itemId) ?? LISTENING_ITEMS[0],
-    [itemId]
+    () =>
+      allItems.find((l) => l.id === itemId) ?? LISTENING_ITEMS[0],
+    [itemId, allItems]
   );
+  const isCustom = item.id.startsWith("ls-custom-");
 
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
   const [transcription, setTranscription] = useState("");
