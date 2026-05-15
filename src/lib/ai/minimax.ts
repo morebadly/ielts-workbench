@@ -32,7 +32,7 @@ export function getMiniMaxConfig(): MiniMaxConfig | null {
     baseUrl,
     chatPath,
     textModel: process.env.MINIMAX_TEXT_MODEL || "MiniMax-M2.7",
-    visionModel: process.env.MINIMAX_VISION_MODEL || "MiniMax-VL-01",
+    visionModel: process.env.MINIMAX_VISION_MODEL || "MiniMax-Vision-01",
     ttsModel: process.env.MINIMAX_TTS_MODEL || "speech-02-hd"
   };
 }
