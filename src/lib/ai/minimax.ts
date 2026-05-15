@@ -197,8 +197,10 @@ export async function chatVisionJSON<T>(
     model: cfg.visionModel,
     messages,
     temperature: opts.temperature ?? 0.2,
-    max_completion_tokens: opts.maxTokens ?? 4000,
-    response_format: { type: "json_object" }
+    max_completion_tokens: opts.maxTokens ?? 4000
+    // 注意:MiniMax 国内站不接受 OpenAI 标准的 response_format: { type: "json_object" },
+    // 会报 'unknown response_format type'。靠 prompt 里的 "Return STRICT JSON" 约束输出 +
+    // stripJsonFence + JSON.parse 兜底解析即可。
   };
 
   const ctrl = new AbortController();
