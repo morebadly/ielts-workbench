@@ -1,62 +1,174 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-15T01:36:21.669Z",
+  "updatedAt": "2026-05-15T02:00:44.191Z",
   "items": [
     {
-      "id": "news-2026-05-15-1-why-universities-are-rethinking-written-exams-in-the-age-of-",
+      "id": "news-2026-05-15-1-ai-could-put-people-off-tech-jobs-and-hurt-the-economy-warns",
       "date": "2026-05-15",
-      "title": "Why universities are rethinking written exams in the age of AI",
-      "source": "Mock IELTS Wire",
-      "url": "https://example.com/news/ai-and-exams",
-      "publishedAt": "2026-05-15T01:35:55.787Z",
-      "topic": "education",
-      "originalSummary": "As generative AI tools become widespread, several universities are piloting oral defenses, in-class essays and project-based portfolios to verify what students have actually learned.",
-      "learningSummary": "Educational institutions worldwide are implementing significant changes to their assessment methods as artificial intelligence becomes increasingly prevalent. Rather than relying solely on traditional written examinations, numerous universities are now experimenting with alternative evaluation approaches. These innovative methods include oral defenses, in-class essay writing under supervised conditions, and project-based portfolios that demonstrate practical competencies. The primary objective of these reforms is to ensure academic integrity and accurately measure students' genuine understanding. Educators recognise that conventional testing formats can no longer reliably distinguish between original student work and AI-generated content. This shift represents a fundamental transformation in how academic institutions validate learning outcomes and maintain rigorous standards in an era of rapidly advancing technology.",
+      "title": "AI could put people off tech jobs and hurt the economy, warns Raspberry Pi boss",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/clypr8p2lewo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-14T23:01:20.000Z",
+      "topic": "technology",
+      "originalSummary": "Eben Upton warns against claims that Artificial Intelligence will destroy vast numbers of computing roles over the coming years.",
+      "learningSummary": "Eben Upton, founder of Raspberry Pi, has issued a cautionary warning regarding the growing belief that Artificial Intelligence will eliminate substantial numbers of computing positions in the coming years. During a recent industry discussion, Upton expressed concern that pervasive pessimistic messaging about AI-driven automation could potentially discourage young people from pursuing careers in technology. He argues that such negative narratives may create unintended consequences for future economic development. While acknowledging that AI will undoubtedly transform certain aspects of the technology sector, Upton maintains that demand for skilled professionals will remain robust and could even expand. He emphasises the importance of presenting balanced perspectives to ensure emerging generations maintain enthusiasm for entering computing fields. His remarks contribute to an ongoing global debate about automation's disruptive potential and its implications for workforce development.",
       "vocabulary": [
         {
-          "word": "assessment",
-          "meaning": "the process of evaluating students' knowledge, skills, or performance through tests, projects, or other methods",
-          "example": "The university is revising its assessment criteria to accommodate new learning modalities."
+          "word": "pessimistic",
+          "meaning": "having a negative or doubtful outlook about outcomes",
+          "example": "Many analysts held pessimistic views about employment prospects in the technology sector."
         },
         {
-          "word": "prevalent",
-          "meaning": "widespread, commonly found, or frequently occurring within a particular context",
-          "example": "Given the prevalent use of digital tools, educational practices must adapt accordingly."
+          "word": "substantial",
+          "meaning": "significant in size, amount, or degree; considerable",
+          "example": "The report documented substantial changes in hiring practices across the industry."
         },
         {
-          "word": "integrity",
-          "meaning": "the quality of being honest and maintaining strong moral principles, especially in academic contexts",
-          "example": "Maintaining academic integrity requires continuous refinement of evaluation methods."
+          "word": "automation",
+          "meaning": "the use of technology to perform tasks with minimal human intervention",
+          "example": "Increased automation has transformed manufacturing processes over the past decade."
         },
         {
-          "word": "competencies",
-          "meaning": "skills, abilities, and knowledge that enable someone to perform a particular task effectively",
-          "example": "Students must demonstrate multiple competencies beyond theoretical understanding."
+          "word": "disruptive",
+          "meaning": "causing fundamental interruption or significant change to existing systems",
+          "example": "The disruptive influence of artificial intelligence is reshaping traditional business models."
         },
         {
-          "word": "rigorous",
-          "meaning": "extremely thorough, precise, and demanding in standards or methods",
-          "example": "The institution maintains rigorous quality assurance across all programmes."
+          "word": "robust",
+          "meaning": "strong, healthy, and able to withstand challenging conditions",
+          "example": "Despite market volatility, the technology sector demonstrated robust growth."
         }
       ],
       "readingQuestions": [
         {
-          "question": "According to the passage, what alternative assessment methods are universities implementing?",
-          "answer": "Universities are implementing oral defenses, in-class essays, and project-based portfolios as alternative assessment methods."
+          "question": "What specific consequence does Upton suggest may result from negative media coverage of AI's impact on employment?",
+          "answer": "Upton suggests that pervasive pessimistic media coverage may discourage young people from pursuing technology careers, which could negatively affect future economic growth."
         },
         {
-          "question": "What can be inferred about the limitations of traditional written examinations in contemporary education?",
-          "answer": "It can be inferred that traditional written examinations are increasingly unreliable for verifying authentic student learning because they cannot effectively distinguish between human-generated and AI-generated responses."
+          "question": "Based on Upton's argument, what inference can be drawn about the relationship between public perception and career choices in the technology sector?",
+          "answer": "One can infer that public perception heavily influences career decisions; if young people receive consistently negative messages about AI and employment, they may avoid technology fields altogether, potentially creating a skills shortage."
         },
         {
-          "question": "In the context of the passage, what does the phrase 'validate learning outcomes' most likely mean?",
-          "answer": "It most likely means confirming that students have genuinely acquired knowledge and skills, rather than simply producing outputs that may have been generated by artificial intelligence tools."
+          "question": "How is the word 'robust' used in context within the learning summary, and what does it convey about the demand for technology professionals?",
+          "answer": "In context, 'robust' describes the demand for skilled technology professionals, conveying that this demand is strong, healthy, and likely to endure despite AI advancements."
         }
       ],
-      "writingPrompt": "Some universities are replacing traditional written examinations with alternative assessment methods such as oral presentations, project work, and portfolios. Do you think this is a positive or negative development for education? Give reasons for your answer and include relevant examples from your knowledge or experience.",
-      "listeningText": "The landscape of higher education is undergoing a significant transformation as institutions grapple with the implications of artificial intelligence on academic assessment. Traditional written examinations, long considered the gold standard for evaluating student performance, now face scrutiny regarding their effectiveness in the digital age. Universities across the globe are responding by introducing diverse assessment strategies that better capture authentic learning. Oral defenses allow examiners to probe students' understanding in real-time, while project-based portfolios showcase practical application of knowledge over extended periods. These approaches not only reduce opportunities for academic dishonesty but also better prepare graduates for professional environments where problem-solving and communication skills are paramount. The transition reflects a broader recognition that assessment methods must evolve alongside technological advancements.",
-      "createdAt": "2026-05-15T01:36:21.668Z",
+      "writingPrompt": "Some individuals argue that artificial intelligence will inevitably replace vast numbers of jobs in the technology sector, while others maintain that such concerns are exaggerated and that new opportunities will emerge to offset any losses. Discuss both perspectives and give your own opinion. You should write at least 250 words.",
+      "listeningText": "Eben Upton, founder of Raspberry Pi, has raised concerns about predictions suggesting artificial intelligence will destroy numerous computing roles. He warns that excessive negative messaging about AI-driven automation could discourage young people from pursuing technology careers. During his address, Upton emphasised that while AI will transform certain industries, demand for skilled professionals will likely remain strong. He argues for balanced reporting to ensure future generations remain interested in computing. His comments contribute to broader discussions about automation and workforce development. The tech entrepreneur advocates for more optimistic yet realistic approaches to technological progress.",
+      "createdAt": "2026-05-15T01:58:56.453Z",
       "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-15-2-king-s-college-london-to-merge-with-cranfield-university",
+      "date": "2026-05-15",
+      "title": "King’s College London to merge with Cranfield University",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/education/2026/may/14/kings-college-london-to-merge-with-cranfield-university",
+      "publishedAt": "2026-05-14T11:18:49.000Z",
+      "topic": "education",
+      "originalSummary": "Merged institution will become second largest mainstream university in UK with about 47,000 students King’s College London has agreed to merge with Cranfield University, creating a new UK “super-university” that would rival many of its international competitors in size and research output. The merger would result in King’s taking on another 5,000 mainly postgraduate students and becoming the second largest mainstream university in the UK, with about 47,000 students, overtaking the University of Manchester and behind only University College London. Continue reading...",
+      "learningSummary": "(Mock learning summary based on the headline.) King’s College London to merge with Cranfield University. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) King’s College London to merge with Cranfield University. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-05-15T01:59:33.800Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-05-15-3-what-sugar-does-to-your-body",
+      "date": "2026-05-15",
+      "title": "What sugar does to your body",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/videos/c242z2920mgo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-14T11:18:13.000Z",
+      "topic": "health",
+      "originalSummary": "Just how bad for you is eating sugar? And why is fruit still a good option - even though it has lots of sugar?",
+      "learningSummary": "(Mock learning summary based on the headline.) What sugar does to your body. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) What sugar does to your body. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-05-15T02:00:44.190Z",
+      "aiSource": "mock"
     },
     {
       "id": "seed-2026-05-14-001",
