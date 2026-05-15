@@ -37,6 +37,12 @@ export interface WordProgress {
   lastReviewedAt: number | null;
   nextReviewAt: number | null;
   ease: number;
+  /** SM-2 当前间隔(单位:天)。老数据可能缺,会在使用时迁移。 */
+  intervalDays?: number;
+  /** SM-2 连续答对计数。每次 forget 重置为 0。 */
+  repetitions?: number;
+  /** 最近一次的 quality (0-5),用于历史曲线。可选。 */
+  lastQuality?: number;
 }
 
 export interface VocabularyBook {

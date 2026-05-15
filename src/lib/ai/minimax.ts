@@ -166,16 +166,132 @@ export interface TTSOptions {
   text: string;
   voice?: "uk" | "us";
   rate?: number;
+  pitch?: number;
 }
 
-export async function synthesizeTTS(_opts: TTSOptions): Promise<{
-  available: false;
-  reason: string;
-}> {
+export interface TTSResult {
+  audioBuffer: ArrayBuffer;
+  mimeType: string;
+  voiceId: string;
+  format: string;
+}
+
+/**
+ * 把语音偏好(uk/us)映射到 MiniMax T2A v2 的 voice_id。
+ *
+ * MiniMax 系统音色名常见的有:
+ *   - "English_TrustworthyMan"    (US, 标准男声)
+ *   - "English_GentleVoice"       (US/female, 温和)
+ *   - "English_ManWithDeepVoice"  (UK, 深沉)
+ *   - "English_UpsetGirl"
+ *
+ * 你可以通过 MINIMAX_TTS_VOICE_UK / MINIMAX_TTS_VOICE_US 环境变量覆盖。
+ */
+function pickVoiceId(voice: "uk" | "us"): string {
+  if (voice === "uk") {
+    return process.env.MINIMAX_TTS_VOICE_UK || "English_ManWithDeepVoice";
+  }
+  return process.env.MINIMAX_TTS_VOICE_US || "English_TrustworthyMan";
+}
+
+const TTS_TIMEOUT_MS = 60_000;
+
+interface MiniMaxT2AResp {
+  data?: {
+    audio?: string; // hex 编码 mp3
+  };
+  base_resp?: { status_code?: number; status_msg?: string };
+}
+
+function hexToBuffer(hex: string): ArrayBuffer {
+  // MiniMax 返回的 hex 字符串里可能没有空格也可能有
+  const clean = hex.replace(/\s+/g, "");
+  if (clean.length % 2 !== 0) {
+    throw new Error("MiniMax TTS 返回的 hex 长度异常");
+  }
+  const buf = new Uint8Array(clean.length / 2);
+  for (let i = 0; i < buf.length; i++) {
+    buf[i] = parseInt(clean.slice(i * 2, i * 2 + 2), 16);
+  }
+  return buf.buffer;
+}
+
+export async function synthesizeTTS(opts: TTSOptions): Promise<TTSResult> {
+  const cfg = getMiniMaxConfig();
+  if (!cfg) {
+    throw new MiniMaxConfigError("MINIMAX_API_KEY 未配置, 无法使用云端 TTS");
+  }
+  const text = opts.text?.trim();
+  if (!text) {
+    throw new Error("TTS 文本为空");
+  }
+
+  const groupId = process.env.MINIMAX_GROUP_ID?.trim();
+  // T2A v2 endpoint: 国内站走 minimaxi.com, 国际站走 minimax.io
+  // path 默认 /t2a_v2, 通过 MINIMAX_TTS_PATH 覆盖
+  const ttsPath = (process.env.MINIMAX_TTS_PATH || "/t2a_v2").replace(/^\/+/, "/");
+  const url = groupId
+    ? `${cfg.baseUrl}${ttsPath}?GroupId=${encodeURIComponent(groupId)}`
+    : `${cfg.baseUrl}${ttsPath}`;
+
+  const voiceId = pickVoiceId(opts.voice ?? "us");
+  const rate = opts.rate ?? 1;
+  const pitch = opts.pitch ?? 0;
+
+  const body = {
+    model: cfg.ttsModel,
+    text,
+    stream: false,
+    voice_setting: {
+      voice_id: voiceId,
+      speed: Math.max(0.5, Math.min(2, rate)),
+      vol: 1,
+      pitch: Math.max(-12, Math.min(12, pitch))
+    },
+    audio_setting: {
+      sample_rate: 32000,
+      bitrate: 128000,
+      format: "mp3",
+      channel: 1
+    }
+  };
+
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), TTS_TIMEOUT_MS);
+  let resp: Response;
+  try {
+    resp = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cfg.apiKey}`
+      },
+      body: JSON.stringify(body),
+      signal: ctrl.signal
+    });
+  } finally {
+    clearTimeout(timer);
+  }
+
+  if (!resp.ok) {
+    const errText = await resp.text().catch(() => "");
+    throw new Error(`MiniMax TTS HTTP ${resp.status}: ${errText.slice(0, 300)}`);
+  }
+  const data = (await resp.json()) as MiniMaxT2AResp;
+  if (data.base_resp?.status_code && data.base_resp.status_code !== 0) {
+    throw new Error(
+      `MiniMax TTS 业务错误 ${data.base_resp.status_code}: ${data.base_resp.status_msg ?? ""}`
+    );
+  }
+  const hex = data.data?.audio;
+  if (!hex) {
+    throw new Error("MiniMax TTS 未返回音频数据");
+  }
   return {
-    available: false,
-    reason:
-      "MiniMax TTS 接口已预留, 当前仍使用浏览器 Web Speech API. 后续在此函数内调用 t2a 即可"
+    audioBuffer: hexToBuffer(hex),
+    mimeType: "audio/mpeg",
+    voiceId,
+    format: "mp3"
   };
 }
 

@@ -1,36 +1,63 @@
 import { NextResponse } from "next/server";
-import { getMiniMaxConfig, synthesizeTTS } from "@/lib/ai/minimax";
+import {
+  getMiniMaxConfig,
+  synthesizeTTS,
+  MiniMaxConfigError
+} from "@/lib/ai/minimax";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export async function GET() {
-  return NextResponse.json({
-    configured: Boolean(getMiniMaxConfig()),
-    note: "POST { text, voice, rate } once MiniMax TTS is wired"
-  });
+const MAX_TEXT = 1500;
+
+interface ReqBody {
+  text?: unknown;
+  voice?: unknown;
+  rate?: unknown;
+  pitch?: unknown;
+}
+
+function bad(status: number, code: string, reason: string) {
+  return NextResponse.json({ ok: false, error: code, reason }, { status });
 }
 
 export async function POST(req: Request) {
-  let body: { text?: string; voice?: "uk" | "us"; rate?: number } = {};
+  if (!getMiniMaxConfig()) {
+    return bad(503, "not_configured", "MINIMAX_API_KEY 未配置, 服务端无法合成语音");
+  }
+
+  let body: ReqBody;
   try {
-    body = await req.json();
+    body = (await req.json()) as ReqBody;
   } catch {
-    return NextResponse.json({ error: "invalid_json" }, { status: 400 });
+    return bad(400, "bad_request", "请求体必须是 JSON");
   }
-  if (!body.text) {
-    return NextResponse.json({ error: "missing_text" }, { status: 400 });
+
+  const text = typeof body.text === "string" ? body.text.trim() : "";
+  if (!text) return bad(400, "bad_request", "text 必填");
+  if (text.length > MAX_TEXT) {
+    return bad(400, "text_too_long", `text 长度不能超过 ${MAX_TEXT}`);
   }
-  const result = await synthesizeTTS({
-    text: body.text,
-    voice: body.voice,
-    rate: body.rate
-  });
-  if (!result.available) {
-    return NextResponse.json(
-      { available: false, reason: result.reason },
-      { status: 501 }
-    );
+  const voice = body.voice === "uk" ? "uk" : "us";
+  const rate = typeof body.rate === "number" ? body.rate : 1;
+  const pitch = typeof body.pitch === "number" ? body.pitch : 0;
+
+  try {
+    const result = await synthesizeTTS({ text, voice, rate, pitch });
+    return new NextResponse(result.audioBuffer, {
+      status: 200,
+      headers: {
+        "Content-Type": result.mimeType,
+        "Cache-Control": "private, max-age=600",
+        "X-TTS-Voice": result.voiceId,
+        "X-TTS-Format": result.format
+      }
+    });
+  } catch (e) {
+    if (e instanceof MiniMaxConfigError) {
+      return bad(503, "not_configured", e.message);
+    }
+    const msg = (e as Error).message;
+    return bad(502, "tts_failed", msg);
   }
-  return NextResponse.json({ available: true });
 }

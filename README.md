@@ -4,7 +4,7 @@
 
 ---
 
-## 当前版本: v1.6.0
+## 当前版本: v1.7.0
 
 **已完成:**
 - 首页 Dashboard:今日 6 项任务 / 词书进度 / 连续天数 / 继续学习
@@ -182,6 +182,11 @@ src/
   - 支持 `RSS_FEEDS` 环境变量自定义源 `Name|url|topic;...`
   - **版权策略不变**:仍只保存 RSS 公开提供的 `title / source / url / publishedAt / 短摘要`,绝不抓正文
   - 依赖:新增 `fast-xml-parser`
+- **v1.7.0** — SM-2 复习算法 + MiniMax TTS + 写作历史
+  - `src/lib/srs.ts` 重写为 SuperMemo SM-2 算法,三档反馈映射 quality 0-5,`WordProgress` 加 `intervalDays / repetitions / lastQuality` 字段并自动迁移老数据
+  - 新增 `src/app/api/ai/tts/route.ts` + `src/lib/ai/minimax.ts` 的 `synthesizeTTS`,前端 `tts.ts` 优先用 MiniMax 云端 TTS,失败自动回退浏览器 Web Speech,带 24 条音频缓存
+  - 新增 `src/app/writing/history/page.tsx`:写作历史列表 + 总分进步曲线 + Task 1/2 切换筛选
+  - 新闻脚本加 `sanitizeJson()` + 失败重试一次,`max_completion_tokens` 提到 2400,GitHub Actions 上 mock fallback 比例显著降低
 - **v1.5.0** — Supabase 多设备同步(可选)
   - 新增 `supabase/schema.sql`(`user_sync_items` 表 + RLS 策略 + auto-touch 触发器)
   - 邮箱密码注册 / 登录(`useAuth`),session 自动持久化
