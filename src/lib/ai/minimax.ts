@@ -162,11 +162,11 @@ export async function chatJSON<T>(
  * 用于「看图识词」场景:用户的 PDF 是扫描件没有文字层,我们把页面渲染成图片
  * 让 vision 模型读图直接结构化。
  *
- * v1.8.4: 改走 Coding Plan VLM 专用端点(/v1/coding_plan/vlm)。
- *   - sk-cp-* key 不能调普通 chat completion,会报 2061 not support model
- *   - 这个专用端点单次只接受 1 张图 + 1 段 prompt,不走 OpenAI messages 数组协议
- *   - 我们循环每张图独立调用,合并 JSON 数组
- *   - 失败一张时仍继续, 下游 import 流程已经按"批"做了断点续传
+ * v1.8.5: 走 MiniMax 国内站标准 chatcompletion_v2 端点 + M2.7 多模态。
+ *   - 之前走 Coding Plan VLM (/coding_plan/vlm) 路径返 0 词, 那个端点是给"看截图问代码"用的
+ *   - Token Plan 套餐里的 M2.7 自带图片理解, 走标准 messages 数组协议
+ *   - 单图请求 (前端拆 batch=1), 配合 Netlify Function 26s 上限
+ *   - prompt 用强约束式中文, 避免 M2.7 reasoning 模型偷懒返回空数组
  */
 export async function chatVisionJSON<T>(
   systemPrompt: string,
@@ -184,62 +184,65 @@ export async function chatVisionJSON<T>(
     throw new Error("chatVisionJSON 需要至少一张图片");
   }
 
-  // Coding Plan VLM 端点。可通过 MINIMAX_VLM_PATH 覆盖, 默认按 sk-cp- key 走 coding_plan
-  const vlmPath = (process.env.MINIMAX_VLM_PATH || "/coding_plan/vlm").replace(
-    /^\/+/,
-    "/"
-  );
-  const url = `${cfg.baseUrl}${vlmPath}`;
+  // 走 MiniMax 国内站标准的 chatcompletion_v2 端点
+  // 默认 cfg.chatPath 已经是 /text/chatcompletion_v2
+  const url = `${cfg.baseUrl}${cfg.chatPath}`;
 
-  interface VlmResp {
-    output?: string;
-    text?: string;
-    data?: { output?: string; text?: string };
-    base_resp?: { status_code?: number; status_msg?: string };
-    error?: { message?: string };
-  }
-
-  // 把多张图的识别结果合并到同一个 JSON 结构中
-  // 每次调用只送一张图, prompt 里要求模型返回 STRICT JSON, 我们累积 words[]
   const allWords: unknown[] = [];
 
   for (let i = 0; i < images.length; i++) {
     const img = images[i];
-    const promptForOnePage = `你正在看一张《IELTS 雅思核心词汇》扫描书的页面。第 ${i + 1}/${images.length} 页。
+    const userTextOne = `你正在看一张《IELTS 雅思核心词汇》扫描书的页面。第 ${i + 1}/${images.length} 页。
 
 请仔细识别这张图中的每个英文单词条目, 包括:
 - 英文单词本身 (lowercase, 除非是专有名词)
 - IPA 音标 (如 /təˈmɒrəʊ/, 没标就留空)
 - 中文释义 (可能多个义项, 用 ; 分隔)
 - 英文例句 (如有)
-- 例句中文翻译 (如有)
-- Day N / List N 标记 (如有, 出现在页眉或分隔行)
+- Day N / List N 标记 (如有)
 
-如果这一页有 10 个单词, 你必须输出 10 个 word 对象。如果只有 5 个, 输出 5 个。
-如果整张图就是封面 / 序言 / 目录 / 页码这种, 才返回空数组。
-
+如果这一页有 10 个单词, 你必须输出 10 个对象。如果只有 5 个, 输出 5 个。
+只有当整张图是封面/序言/目录/纯页码时, 才返回空数组。
 不要因为图片质量略差就放弃, 大胆识别能看清的部分。
-不要为了避免出错而返回空数组, 这是错误行为。
 
-返回 STRICT JSON, 不要 markdown, 不要其他文字:
+返回 STRICT JSON, 不要 markdown, 不要 <think> 标签:
 {
   "words": [
     {
       "word": "<lowercase>",
       "phonetic": "<IPA in /.../, empty if not visible>",
-      "chineseMeaning": "<中文释义>",
-      "englishDefinition": "<English definition or empty>",
+      "chineseMeaning": "<中文释义, 用 ; 分隔多义>",
+      "englishDefinition": "<empty if not visible>",
       "exampleSentence": "<one English example or empty>",
       "bookDay": "<e.g. Day 1, or empty>",
       "wordList": "<e.g. List A, or empty>",
-      "order": <1-based integer in the order found>
+      "order": <1-based integer>
     }
   ]
-}`;
+}
 
+${userText || ""}`;
+
+    // 标准 chatcompletion_v2 请求体, content 是数组(text + image_url)
     const body = {
-      prompt: promptForOnePage,
-      image_url: img.dataUrl
+      model: cfg.visionModel,
+      messages: [
+        {
+          role: "system",
+          name: "MiniMax AI",
+          content: systemPrompt
+        },
+        {
+          role: "user",
+          name: "User",
+          content: [
+            { type: "text", text: userTextOne },
+            { type: "image_url", image_url: { url: img.dataUrl } }
+          ]
+        }
+      ],
+      temperature: 0.1,
+      tokens_to_generate: 4096
     };
 
     const ctrl = new AbortController();
@@ -250,8 +253,7 @@ export async function chatVisionJSON<T>(
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${cfg.apiKey}`,
-          "MM-API-Source": "Minimax-MCP"
+          Authorization: `Bearer ${cfg.apiKey}`
         },
         body: JSON.stringify(body),
         signal: ctrl.signal
@@ -263,50 +265,35 @@ export async function chatVisionJSON<T>(
     if (!resp.ok) {
       const text = await resp.text().catch(() => "");
       throw new Error(
-        `MiniMax VLM HTTP ${resp.status} (page ${i + 1}/${images.length}): ${text.slice(0, 500)}`
+        `MiniMax Vision HTTP ${resp.status} (page ${i + 1}/${images.length}): ${text.slice(0, 500)}`
       );
     }
-    const data = (await resp.json()) as VlmResp & Record<string, unknown>;
+    const data = (await resp.json()) as OpenAIChatResp & {
+      reply?: string;
+    };
     if (data.base_resp?.status_code && data.base_resp.status_code !== 0) {
       throw new Error(
-        `MiniMax VLM error ${data.base_resp.status_code} (page ${i + 1}/${images.length}): ${data.base_resp.status_msg || ""}`
+        `MiniMax Vision error ${data.base_resp.status_code} (page ${i + 1}/${images.length}): ${data.base_resp.status_msg || ""}`
       );
     }
     if (data.error?.message) {
       throw new Error(
-        `MiniMax VLM error (page ${i + 1}/${images.length}): ${data.error.message}`
+        `MiniMax Vision error (page ${i + 1}/${images.length}): ${data.error.message}`
       );
     }
-    // 自适应取 content。VLM 端点不同版本字段名可能是:
-    //   - output (Coding Plan 旧版)
-    //   - text
-    //   - data.output / data.text
-    //   - choices[0].message.content (新版仿 OpenAI)
-    //   - reply (有些 mock)
-    // 兜不住时把整个 raw 暴露出来给上层调试
-    type WithChoices = {
-      content?: string; // ← Coding Plan VLM 真实字段
-      choices?: Array<{ message?: { content?: string }; text?: string }>;
-      reply?: string;
-    };
-    const w = data as VlmResp & WithChoices;
+
+    // chatcompletion_v2 标准字段:choices[0].message.content
+    // 兼容字段:reply (老版兜底)
     const content =
-      w.content ||
-      w.output ||
-      w.text ||
-      w.data?.output ||
-      w.data?.text ||
-      w.choices?.[0]?.message?.content ||
-      w.choices?.[0]?.text ||
-      w.reply ||
-      "";
+      data.choices?.[0]?.message?.content || data.reply || "";
+
     if (!content || !content.trim()) {
-      // 没匹配到任何已知字段 -> 把响应 dump 给上层, 让前端能看到真实结构
       const dumped = JSON.stringify(data).slice(0, 800);
       throw new Error(
-        `MiniMax VLM 响应未能解析 (page ${i + 1}/${images.length}). 原始: ${dumped}`
+        `MiniMax Vision 响应内容为空 (page ${i + 1}/${images.length}). 原始: ${dumped}`
       );
     }
+
     const cleaned = stripJsonFence(content);
     try {
       const parsed = JSON.parse(cleaned) as { words?: unknown[] };
@@ -314,12 +301,11 @@ export async function chatVisionJSON<T>(
         allWords.push(...parsed.words);
       }
     } catch {
-      // 单页 JSON 解析失败也跳过, 不让整批失败
+      // 单页 JSON 解析失败跳过, 不让整批失败
       continue;
     }
   }
 
-  // 套到外面再 stringify -> parse, 让调用方按统一的 { words: [...] } 结构拿
   return JSON.parse(JSON.stringify({ words: allWords })) as T;
 }
 
