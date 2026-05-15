@@ -1,21 +1,54 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Card, CardHeader } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { speak, stopSpeak } from "@/lib/tts";
-import { MOCK_LISTENING } from "@/data/mockListening";
+import { LISTENING_ITEMS } from "@/data/listeningItems";
 import { useDailyTask } from "@/hooks/useDailyTask";
 import { storage } from "@/lib/storage";
-import type { ReviewItem } from "@/types";
+import type { ListeningItem, ReviewItem } from "@/types";
+
+type DiffFilter = "all" | "easy" | "medium" | "hard";
+
+const SECTION_LABEL: Record<NonNullable<ListeningItem["section"]>, string> = {
+  1: "Section 1 · 社交",
+  2: "Section 2 · 公共",
+  3: "Section 3 · 学术讨论",
+  4: "Section 4 · 学术讲座"
+};
+
+const DIFF_LABEL: Record<ListeningItem["difficulty"], string> = {
+  easy: "简单",
+  medium: "中等",
+  hard: "困难"
+};
 
 export default function ListeningPracticePage() {
   const { user, bump, setUser } = useDailyTask();
-  const [itemId, setItemId] = useState(MOCK_LISTENING[0].id);
+  const [diff, setDiff] = useState<DiffFilter>("all");
+  const filtered = useMemo(
+    () =>
+      diff === "all"
+        ? LISTENING_ITEMS
+        : LISTENING_ITEMS.filter((l) => l.difficulty === diff),
+    [diff]
+  );
+  const [itemId, setItemId] = useState(LISTENING_ITEMS[0].id);
+  // 切换难度后, 如果当前选中的素材不在筛选结果里, 自动选第一条
+  useEffect(() => {
+    if (!filtered.some((l) => l.id === itemId)) {
+      stopSpeak();
+      setItemId(filtered[0]?.id ?? LISTENING_ITEMS[0].id);
+      setStep(1);
+      setTranscription("");
+      setNewWords([]);
+    }
+  }, [diff, filtered, itemId]);
   const item = useMemo(
-    () => MOCK_LISTENING.find((l) => l.id === itemId)!,
+    () => LISTENING_ITEMS.find((l) => l.id === itemId) ?? LISTENING_ITEMS[0],
     [itemId]
   );
 
@@ -23,9 +56,28 @@ export default function ListeningPracticePage() {
   const [transcription, setTranscription] = useState("");
   const [newWords, setNewWords] = useState<string[]>([]);
   const [wordInput, setWordInput] = useState("");
+  const [audioFailed, setAudioFailed] = useState(false);
+
+  const playExternalOrTts = () => {
+    setAudioFailed(false);
+    // 外链音频: 用 <audio> 自动播放; 失败回退 TTS
+    if (item.audioUrl) {
+      const a = new Audio(item.audioUrl);
+      a.onerror = () => {
+        setAudioFailed(true);
+        speak(item.transcript, { voice: user.preferences.voice });
+      };
+      a.play().catch(() => {
+        setAudioFailed(true);
+        speak(item.transcript, { voice: user.preferences.voice });
+      });
+      return;
+    }
+    speak(item.transcript, { voice: user.preferences.voice });
+  };
 
   const start = () => {
-    speak(item.transcript, { voice: user.preferences.voice });
+    playExternalOrTts();
     setStep(2);
     setUser({
       ...user,
@@ -33,8 +85,22 @@ export default function ListeningPracticePage() {
     });
   };
 
-  const replay = (rate = 1) =>
+  const replay = (rate = 1) => {
+    if (item.audioUrl && !audioFailed) {
+      const a = new Audio(item.audioUrl);
+      a.playbackRate = rate;
+      a.onerror = () => {
+        setAudioFailed(true);
+        speak(item.transcript, { voice: user.preferences.voice, rate });
+      };
+      a.play().catch(() => {
+        setAudioFailed(true);
+        speak(item.transcript, { voice: user.preferences.voice, rate });
+      });
+      return;
+    }
     speak(item.transcript, { voice: user.preferences.voice, rate });
+  };
 
   const finish = () => {
     bump("listeningSessionsDone");
@@ -67,6 +133,18 @@ export default function ListeningPracticePage() {
 
       <Card className="mb-3">
         <div className="flex flex-wrap items-center gap-2">
+          <span className="text-sm muted">难度</span>
+          {(["all", "easy", "medium", "hard"] as DiffFilter[]).map((d) => (
+            <Button
+              key={d}
+              variant={diff === d ? "primary" : "soft"}
+              onClick={() => setDiff(d)}
+            >
+              {d === "all" ? "全部" : DIFF_LABEL[d]}
+            </Button>
+          ))}
+        </div>
+        <div className="mt-3 flex flex-wrap items-center gap-2">
           <span className="text-sm muted">素材</span>
           <select
             className="input max-w-xs"
@@ -79,20 +157,40 @@ export default function ListeningPracticePage() {
               setNewWords([]);
             }}
           >
-            {MOCK_LISTENING.map((l) => (
+            {filtered.map((l) => (
               <option key={l.id} value={l.id}>
-                {l.title} · {l.difficulty}
+                {l.title} · {DIFF_LABEL[l.difficulty]}
+                {l.section ? ` · S${l.section}` : ""}
               </option>
             ))}
           </select>
+          <span className="ml-auto text-xs muted">
+            {filtered.length} / {LISTENING_ITEMS.length} 条
+          </span>
         </div>
       </Card>
 
       <Card padding="lg" className="space-y-4">
         <CardHeader
           title={item.title}
-          subtitle={`难度 ${item.difficulty} · 第 ${step}/4 步`}
+          subtitle={`${item.section ? `Section ${item.section}` : ""}${item.scenario ? ` · ${item.scenario}` : ""} · ${DIFF_LABEL[item.difficulty]} · 第 ${step}/4 步`}
         />
+        <div className="flex flex-wrap items-center gap-1.5 -mt-2">
+          {item.section ? (
+            <span className="pill bg-brand-100 text-brand-700">
+              {SECTION_LABEL[item.section]}
+            </span>
+          ) : null}
+          {item.scenario ? (
+            <span className="pill bg-bg-soft text-ink-soft">{item.scenario}</span>
+          ) : null}
+          <span className="pill bg-bg-soft text-ink-soft">
+            {DIFF_LABEL[item.difficulty]}
+          </span>
+          <span className="pill bg-bg-soft text-ink-soft">
+            {item.audioUrl && !audioFailed ? "外链音频" : "TTS 朗读"}
+          </span>
+        </div>
 
         {step === 1 ? (
           <div className="space-y-3">

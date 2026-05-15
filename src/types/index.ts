@@ -142,10 +142,26 @@ export interface WritingFeedback {
 export interface ListeningItem {
   id: string;
   title: string;
+  /** 外部音频 URL(BBC/British Council 公开链接);为空则前端用 MiniMax TTS 朗读 transcript */
   audioUrl: string;
   transcript: string;
   keyPhrases: string[];
   difficulty: "easy" | "medium" | "hard";
+  /** 对应 IELTS Listening Section 1-4 的场景类型 */
+  section?: 1 | 2 | 3 | 4;
+  /** 场景标签:用于挑选 */
+  scenario?:
+    | "campus"
+    | "service"
+    | "travel"
+    | "academic"
+    | "lecture"
+    | "monologue"
+    | "discussion";
+  /** 来源标注:self_written | voa | bbc_le | british_council | external */
+  attribution?: "self_written" | "external_link";
+  /** 大致单词数(用来估时长) */
+  wordCount?: number;
 }
 
 export interface ListeningPractice {
