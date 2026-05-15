@@ -130,20 +130,51 @@ export function SyncCard() {
       </div>
 
       {lastResult ? (
-        <div className="mt-3 grid grid-cols-3 gap-2 text-center text-xs">
-          <div className="rounded-lg bg-bg-soft p-2">
-            <div className="muted">推</div>
-            <div className="text-base font-semibold">{lastResult.pushed}</div>
+        <>
+          <div className="mt-3 grid grid-cols-3 gap-2 text-center text-xs">
+            <div className="rounded-lg bg-bg-soft p-2">
+              <div className="muted">推</div>
+              <div className="text-base font-semibold">{lastResult.pushed}</div>
+            </div>
+            <div className="rounded-lg bg-bg-soft p-2">
+              <div className="muted">拉</div>
+              <div className="text-base font-semibold">{lastResult.pulled}</div>
+            </div>
+            <div className="rounded-lg bg-bg-soft p-2">
+              <div className="muted">冲突</div>
+              <div className="text-base font-semibold">{lastResult.conflicts}</div>
+            </div>
           </div>
-          <div className="rounded-lg bg-bg-soft p-2">
-            <div className="muted">拉</div>
-            <div className="text-base font-semibold">{lastResult.pulled}</div>
-          </div>
-          <div className="rounded-lg bg-bg-soft p-2">
-            <div className="muted">冲突</div>
-            <div className="text-base font-semibold">{lastResult.conflicts}</div>
-          </div>
-        </div>
+          {lastResult.details && lastResult.details.length > 0 ? (
+            <details className="mt-2 rounded-lg border border-black/5 p-2 text-xs">
+              <summary className="cursor-pointer muted">
+                查看每个 key 的处理结果 ({lastResult.details.length})
+              </summary>
+              <ul className="mt-2 space-y-1">
+                {lastResult.details.map((d) => (
+                  <li
+                    key={d.key}
+                    className="flex items-baseline justify-between gap-2"
+                  >
+                    <code className="truncate text-ink-soft">{d.key}</code>
+                    <span
+                      className={
+                        d.action === "pushed"
+                          ? "pill bg-brand-50 text-brand-700"
+                          : d.action === "pulled"
+                            ? "pill bg-amber-100 text-amber-700"
+                            : "pill bg-bg-soft text-ink-soft"
+                      }
+                    >
+                      {d.action}
+                      {d.reason ? ` · ${d.reason}` : ""}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ) : null}
+        </>
       ) : null}
 
       {message ? (

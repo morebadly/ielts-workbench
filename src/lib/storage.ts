@@ -24,6 +24,7 @@ const KEYS = {
 } as const;
 
 const SYNC_META_KEY = PREFIX + "sync-meta";
+const KEY_TS_KEY = PREFIX + "key-timestamps";
 
 export const STORAGE_KEYS = KEYS;
 
@@ -31,6 +32,9 @@ export interface SyncMeta {
   lastSyncedAt: number | null;
   lastSyncedUserId: string | null;
 }
+
+/** 每个被同步的 key 上次本地修改的时间戳。用于 last-write-wins per key 决策。 */
+export type KeyTimestamps = Partial<Record<keyof typeof KEYS, number>>;
 
 const DEFAULT_SYNC_META: SyncMeta = {
   lastSyncedAt: null,
@@ -59,6 +63,42 @@ function isBrowser(): boolean {
   return typeof window !== "undefined";
 }
 
+/** localStorage key -> KEYS 字段名(如 "ielts-wb:word-progress" -> "wordProgress") */
+const KEY_REVERSE: Record<string, keyof typeof KEYS> = Object.fromEntries(
+  (Object.entries(KEYS) as Array<[keyof typeof KEYS, string]>).map(
+    ([name, raw]) => [raw, name]
+  )
+) as Record<string, keyof typeof KEYS>;
+
+function getKeyTimestamps(): KeyTimestamps {
+  if (!isBrowser()) return {};
+  try {
+    const raw = window.localStorage.getItem(KEY_TS_KEY);
+    if (!raw) return {};
+    return JSON.parse(raw) as KeyTimestamps;
+  } catch {
+    return {};
+  }
+}
+
+function setKeyTimestamps(ts: KeyTimestamps): void {
+  if (!isBrowser()) return;
+  try {
+    window.localStorage.setItem(KEY_TS_KEY, JSON.stringify(ts));
+  } catch {
+    /* ignore */
+  }
+}
+
+/** 标记某个 storage key 在本地刚被修改 */
+function touchKey(key: string, at = Date.now()): void {
+  const name = KEY_REVERSE[key];
+  if (!name) return;
+  const ts = getKeyTimestamps();
+  ts[name] = at;
+  setKeyTimestamps(ts);
+}
+
 function read<T>(key: string, fallback: T): T {
   if (!isBrowser()) return fallback;
   try {
@@ -74,6 +114,8 @@ function write<T>(key: string, value: T): void {
   if (!isBrowser()) return;
   try {
     window.localStorage.setItem(key, JSON.stringify(value));
+    // 自动 touch 时间戳, 给 last-write-wins 同步用
+    touchKey(key);
   } catch {
     /* quota exceeded - ignore for v1 */
   }
@@ -256,6 +298,45 @@ export const storage = {
       }
     });
     return dump;
+  },
+
+  /** 读单个 key 的本地修改时间戳, 没有就返回 0 */
+  getKeyModifiedAt(key: string): number {
+    const name = KEY_REVERSE[key];
+    if (!name) return 0;
+    return getKeyTimestamps()[name] ?? 0;
+  },
+
+  /** 读全部 key 的本地修改时间戳 (raw localStorage key -> ms) */
+  getAllKeyModifiedAt(): Record<string, number> {
+    const ts = getKeyTimestamps();
+    const out: Record<string, number> = {};
+    (Object.entries(KEYS) as Array<[keyof typeof KEYS, string]>).forEach(
+      ([name, raw]) => {
+        out[raw] = ts[name] ?? 0;
+      }
+    );
+    return out;
+  },
+
+  /** 拉取后, 把云端的修改时间戳记到本地, 避免重复推送 */
+  setKeyModifiedAt(key: string, at: number): void {
+    const name = KEY_REVERSE[key];
+    if (!name) return;
+    const ts = getKeyTimestamps();
+    ts[name] = at;
+    setKeyTimestamps(ts);
+  },
+
+  /** 直接写入单个 key (不走 touch, 因为这是从云端 pull 下来的) */
+  writeRawKey(key: string, value: unknown): void {
+    if (!isBrowser()) return;
+    if (!KEY_REVERSE[key]) return;
+    try {
+      window.localStorage.setItem(key, JSON.stringify(value));
+    } catch {
+      /* ignore */
+    }
   },
 
   applySyncSnapshot(snapshot: Record<string, unknown>): {
