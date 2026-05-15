@@ -23,6 +23,20 @@ const KEYS = {
   bookWords: PREFIX + "vocab-book-words"
 } as const;
 
+const SYNC_META_KEY = PREFIX + "sync-meta";
+
+export const STORAGE_KEYS = KEYS;
+
+export interface SyncMeta {
+  lastSyncedAt: number | null;
+  lastSyncedUserId: string | null;
+}
+
+const DEFAULT_SYNC_META: SyncMeta = {
+  lastSyncedAt: null,
+  lastSyncedUserId: null
+};
+
 const DEFAULT_TARGETS: DailyTaskTargets = {
   newWords: 10,
   reviewWords: 10,
@@ -214,6 +228,60 @@ export const storage = {
   clearAll(): void {
     if (!isBrowser()) return;
     Object.values(KEYS).forEach((k) => window.localStorage.removeItem(k));
+  },
+
+  getSyncMeta(): SyncMeta {
+    return read<SyncMeta>(SYNC_META_KEY, DEFAULT_SYNC_META);
+  },
+  setSyncMeta(m: SyncMeta): void {
+    write(SYNC_META_KEY, m);
+  },
+  patchSyncMeta(patch: Partial<SyncMeta>): SyncMeta {
+    const next = { ...this.getSyncMeta(), ...patch };
+    this.setSyncMeta(next);
+    return next;
+  },
+
+  exportSyncSnapshot(): Record<string, unknown> {
+    if (!isBrowser()) return {};
+    const dump: Record<string, unknown> = {};
+    Object.values(KEYS).forEach((k) => {
+      const raw = window.localStorage.getItem(k);
+      if (raw) {
+        try {
+          dump[k] = JSON.parse(raw);
+        } catch {
+          /* skip corrupt */
+        }
+      }
+    });
+    return dump;
+  },
+
+  applySyncSnapshot(snapshot: Record<string, unknown>): {
+    applied: number;
+    skipped: number;
+  } {
+    if (!isBrowser()) return { applied: 0, skipped: 0 };
+    const allowed = new Set<string>(Object.values(KEYS));
+    let applied = 0;
+    let skipped = 0;
+    for (const [k, v] of Object.entries(snapshot)) {
+      if (!allowed.has(k)) {
+        skipped++;
+        continue;
+      }
+      try {
+        window.localStorage.setItem(k, JSON.stringify(v));
+        applied++;
+      } catch {
+        skipped++;
+      }
+    }
+    if (applied > 0 && typeof window !== "undefined") {
+      window.dispatchEvent(new Event("ielts-wb:sync-applied"));
+    }
+    return { applied, skipped };
   }
 };
 

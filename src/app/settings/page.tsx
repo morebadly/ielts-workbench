@@ -8,6 +8,8 @@ import { storage } from "@/lib/storage";
 import { useDailyTask } from "@/hooks/useDailyTask";
 import { getActiveBook } from "@/data/mockWords";
 import { BookManager } from "@/components/settings/BookManager";
+import { AuthCard } from "@/components/sync/AuthCard";
+import { SyncCard } from "@/components/sync/SyncCard";
 import type { DailyTaskTargets } from "@/types";
 
 export default function SettingsPage() {
@@ -76,6 +78,11 @@ export default function SettingsPage() {
   return (
     <Container>
       <PageHeader title="设置" subtitle="词书 / 每日任务量 / 英美音 / 数据导出导入" />
+
+      <div className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <AuthCard />
+        <SyncCard />
+      </div>
 
       <Card className="mb-4">
         <h3 className="section-title">当前进度</h3>

@@ -4,7 +4,7 @@
 
 ---
 
-## 当前版本: v1.4.0
+## 当前版本: v1.5.0
 
 **已完成:**
 - 首页 Dashboard:今日 6 项任务 / 词书进度 / 连续天数 / 继续学习
@@ -46,6 +46,25 @@ npm run update:news
 ```
 
 无 `MINIMAX_API_KEY` 时会落到 mock fallback;配了 Key 会用 MiniMax 生成 learning summary。GitHub Actions 每日 23:00 UTC(次日 07:00 北京时间)自动跑并提交。
+
+### 多设备同步(可选)
+
+如果只在一台设备用,直接跳过这一节,数据全部存在 `localStorage`。
+
+要在电脑和手机之间同步学习进度:
+
+1. 去 https://supabase.com 建一个免费项目
+2. 打开 SQL Editor,把 `supabase/schema.sql` 整段贴进去执行
+3. 复制项目的 **URL** 和 **anon public key**(`Settings -> API`),粘到 `.env.local`:
+
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOi...
+   ```
+
+4. 重启 dev 后,打开「设置」页,会出现「云同步账号」和「云同步」两张卡。注册一个邮箱(开发期可以在 Supabase Dashboard `Authentication -> Providers` 里临时关掉邮箱验证),登录,点「同步」即可。
+
+> 注意:**绝不要把 service role key 写进任何前端环境变量**,RLS 已经限制每个用户只能读写自己的行。
 
 ---
 
@@ -148,6 +167,21 @@ src/
   - 新增 `scripts/update-daily-news.ts`,无 Key 时自动 mock fallback
   - 新增 GitHub Actions `daily-news.yml`,每日 7:00(北京时间)自动跑脚本并 commit
   - **版权策略**:不抓取/保存正文,只保存标题、来源、URL、发布时间、原始 RSS 摘要;learning summary 明确标注由 AI 生成
+- **v1.5.0** — Supabase 多设备同步(可选)
+  - 新增 `supabase/schema.sql`(`user_sync_items` JSONB 表 + RLS + auto `updated_at` 触发器)
+  - 新增 `src/lib/supabase/client.ts` 单例(未配置时返回 null,纯本地模式仍可用)
+  - 新增 `src/lib/sync/cloudSync.ts`:`pushAll` / `pullAll` / `syncTwoWay` / `clearCloudData`,只同步白名单 keys
+  - 新增 `useAuth` / `useCloudSync` hooks,`AuthCard` / `SyncCard` UI 组件,接入设置页
+  - `storage` 扩 `SyncMeta` + `exportSyncSnapshot` + `applySyncSnapshot`,旧 API 不变
+  - 仅使用 anon key,不引入 service role,RLS 限制用户只能读写自己的行
+- **v1.5.0** — Supabase 多设备同步(可选)
+  - 新增 `supabase/schema.sql`(`user_sync_items` 表 + RLS 策略 + auto-touch 触发器)
+  - 邮箱密码注册 / 登录(`useAuth`),session 自动持久化
+  - 同步引擎 `cloudSync.ts`:`pushAll` / `pullAll` / `syncTwoWay` / `clearCloudData`
+  - 设置页加 `AuthCard` + `SyncCard`:上传 / 下载 / 同步 / 上次同步时间徽标
+  - localStorage 全部 8 个 key 走白名单,云端同名 upsert,本地始终保留
+  - 未配置 Supabase 时全站完全本地模式,UI 给出明确提示
+  - **凭据策略**:仅使用 `NEXT_PUBLIC_SUPABASE_URL` 与 `ANON_KEY`,绝不引入 service role,所有数据隔离都靠 RLS
 
 ---
 
@@ -156,9 +190,9 @@ src/
 - 接入 MiniMax TTS:替换浏览器 Web Speech,统一英音 / 美音音色
 - 把雅思核心 3000 完整词书塞进 `data/`
 - 真实雅思音频素材替换 `mockListening.ts`
-- Supabase 接入 + 多设备同步
 - 复习箱算法升级(SM-2 / FSRS)
 - 写作历史回看 + 进步曲线
+- 同步策略升级:按 key 的 last-write-wins,目前是简化版双向同步
 
 ---
 

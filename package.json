@@ -1,6 +1,6 @@
 {
   "name": "ielts-workbench",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,6 +10,7 @@
     "update:news": "tsx scripts/update-daily-news.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.105.4",
     "next": "14.2.5",
     "pdf-parse": "^1.1.1",
     "react": "18.3.1",
