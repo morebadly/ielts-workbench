@@ -205,7 +205,37 @@ export async function chatVisionJSON<T>(
 
   for (let i = 0; i < images.length; i++) {
     const img = images[i];
-    const promptForOnePage = `${systemPrompt}\n\n${userText}\n\n这是第 ${i + 1}/${images.length} 张扫描页,请直接返回 STRICT JSON,格式: {"words":[...]}; 没识别到任何词条就返回 {"words":[]}.`;
+    const promptForOnePage = `你正在看一张《IELTS 雅思核心词汇》扫描书的页面。第 ${i + 1}/${images.length} 页。
+
+请仔细识别这张图中的每个英文单词条目, 包括:
+- 英文单词本身 (lowercase, 除非是专有名词)
+- IPA 音标 (如 /təˈmɒrəʊ/, 没标就留空)
+- 中文释义 (可能多个义项, 用 ; 分隔)
+- 英文例句 (如有)
+- 例句中文翻译 (如有)
+- Day N / List N 标记 (如有, 出现在页眉或分隔行)
+
+如果这一页有 10 个单词, 你必须输出 10 个 word 对象。如果只有 5 个, 输出 5 个。
+如果整张图就是封面 / 序言 / 目录 / 页码这种, 才返回空数组。
+
+不要因为图片质量略差就放弃, 大胆识别能看清的部分。
+不要为了避免出错而返回空数组, 这是错误行为。
+
+返回 STRICT JSON, 不要 markdown, 不要其他文字:
+{
+  "words": [
+    {
+      "word": "<lowercase>",
+      "phonetic": "<IPA in /.../, empty if not visible>",
+      "chineseMeaning": "<中文释义>",
+      "englishDefinition": "<English definition or empty>",
+      "exampleSentence": "<one English example or empty>",
+      "bookDay": "<e.g. Day 1, or empty>",
+      "wordList": "<e.g. List A, or empty>",
+      "order": <1-based integer in the order found>
+    }
+  ]
+}`;
 
     const body = {
       prompt: promptForOnePage,
@@ -255,11 +285,13 @@ export async function chatVisionJSON<T>(
     //   - reply (有些 mock)
     // 兜不住时把整个 raw 暴露出来给上层调试
     type WithChoices = {
+      content?: string; // ← Coding Plan VLM 真实字段
       choices?: Array<{ message?: { content?: string }; text?: string }>;
       reply?: string;
     };
     const w = data as VlmResp & WithChoices;
     const content =
+      w.content ||
       w.output ||
       w.text ||
       w.data?.output ||
