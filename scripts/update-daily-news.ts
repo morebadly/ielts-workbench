@@ -15,6 +15,11 @@
  */
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { loadLocalEnv } from "./lib/loadEnv";
+
+// 在导入其他依赖之前加载 .env.local / .env (tsx 默认不自动加载)
+loadLocalEnv();
+
 import {
   DEFAULT_FEEDS,
   dedupSeeds,

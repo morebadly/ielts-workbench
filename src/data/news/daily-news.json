@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-15T01:21:41.023Z",
+  "updatedAt": "2026-05-15T01:36:21.669Z",
   "items": [
     {
       "id": "news-2026-05-15-1-why-universities-are-rethinking-written-exams-in-the-age-of-",
@@ -8,55 +8,55 @@
       "title": "Why universities are rethinking written exams in the age of AI",
       "source": "Mock IELTS Wire",
       "url": "https://example.com/news/ai-and-exams",
-      "publishedAt": "2026-05-15T01:21:41.021Z",
+      "publishedAt": "2026-05-15T01:35:55.787Z",
       "topic": "education",
       "originalSummary": "As generative AI tools become widespread, several universities are piloting oral defenses, in-class essays and project-based portfolios to verify what students have actually learned.",
-      "learningSummary": "(Mock learning summary based on the headline.) Why universities are rethinking written exams in the age of AI. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "learningSummary": "Educational institutions worldwide are implementing significant changes to their assessment methods as artificial intelligence becomes increasingly prevalent. Rather than relying solely on traditional written examinations, numerous universities are now experimenting with alternative evaluation approaches. These innovative methods include oral defenses, in-class essay writing under supervised conditions, and project-based portfolios that demonstrate practical competencies. The primary objective of these reforms is to ensure academic integrity and accurately measure students' genuine understanding. Educators recognise that conventional testing formats can no longer reliably distinguish between original student work and AI-generated content. This shift represents a fundamental transformation in how academic institutions validate learning outcomes and maintain rigorous standards in an era of rapidly advancing technology.",
       "vocabulary": [
         {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
+          "word": "assessment",
+          "meaning": "the process of evaluating students' knowledge, skills, or performance through tests, projects, or other methods",
+          "example": "The university is revising its assessment criteria to accommodate new learning modalities."
         },
         {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
+          "word": "prevalent",
+          "meaning": "widespread, commonly found, or frequently occurring within a particular context",
+          "example": "Given the prevalent use of digital tools, educational practices must adapt accordingly."
         },
         {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
+          "word": "integrity",
+          "meaning": "the quality of being honest and maintaining strong moral principles, especially in academic contexts",
+          "example": "Maintaining academic integrity requires continuous refinement of evaluation methods."
         },
         {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
+          "word": "competencies",
+          "meaning": "skills, abilities, and knowledge that enable someone to perform a particular task effectively",
+          "example": "Students must demonstrate multiple competencies beyond theoretical understanding."
         },
         {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
+          "word": "rigorous",
+          "meaning": "extremely thorough, precise, and demanding in standards or methods",
+          "example": "The institution maintains rigorous quality assurance across all programmes."
         }
       ],
       "readingQuestions": [
         {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
+          "question": "According to the passage, what alternative assessment methods are universities implementing?",
+          "answer": "Universities are implementing oral defenses, in-class essays, and project-based portfolios as alternative assessment methods."
         },
         {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
+          "question": "What can be inferred about the limitations of traditional written examinations in contemporary education?",
+          "answer": "It can be inferred that traditional written examinations are increasingly unreliable for verifying authentic student learning because they cannot effectively distinguish between human-generated and AI-generated responses."
         },
         {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
+          "question": "In the context of the passage, what does the phrase 'validate learning outcomes' most likely mean?",
+          "answer": "It most likely means confirming that students have genuinely acquired knowledge and skills, rather than simply producing outputs that may have been generated by artificial intelligence tools."
         }
       ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Why universities are rethinking written exams in the age of AI. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-05-15T01:21:41.022Z",
-      "aiSource": "mock"
+      "writingPrompt": "Some universities are replacing traditional written examinations with alternative assessment methods such as oral presentations, project work, and portfolios. Do you think this is a positive or negative development for education? Give reasons for your answer and include relevant examples from your knowledge or experience.",
+      "listeningText": "The landscape of higher education is undergoing a significant transformation as institutions grapple with the implications of artificial intelligence on academic assessment. Traditional written examinations, long considered the gold standard for evaluating student performance, now face scrutiny regarding their effectiveness in the digital age. Universities across the globe are responding by introducing diverse assessment strategies that better capture authentic learning. Oral defenses allow examiners to probe students' understanding in real-time, while project-based portfolios showcase practical application of knowledge over extended periods. These approaches not only reduce opportunities for academic dishonesty but also better prepare graduates for professional environments where problem-solving and communication skills are paramount. The transition reflects a broader recognition that assessment methods must evolve alongside technological advancements.",
+      "createdAt": "2026-05-15T01:36:21.668Z",
+      "aiSource": "minimax"
     },
     {
       "id": "seed-2026-05-14-001",

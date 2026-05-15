@@ -8,6 +8,33 @@
  */
 import { XMLParser } from "fast-xml-parser";
 
+// 国内访问 BBC/Guardian 通常需要代理。用 HTTPS_PROXY / HTTP_PROXY 环境变量
+// 控制。undici 是 Node 内置 fetch 的底层, 用它的 ProxyAgent 即可。
+let proxyDispatcher: unknown = null;
+let proxyTried = false;
+async function getProxyDispatcher(): Promise<unknown> {
+  if (proxyTried) return proxyDispatcher;
+  proxyTried = true;
+  const proxyUrl =
+    process.env.HTTPS_PROXY ||
+    process.env.https_proxy ||
+    process.env.HTTP_PROXY ||
+    process.env.http_proxy;
+  if (!proxyUrl) return null;
+  try {
+    // 用变量绕过 TS 的静态模块解析。undici 是 Node 18+ 内置, 类型不在 @types/node 里。
+    const moduleName = "undici";
+    const undici = (await import(moduleName)) as {
+      ProxyAgent: new (uri: string) => unknown;
+    };
+    proxyDispatcher = new undici.ProxyAgent(proxyUrl);
+    console.log(`[rss] using proxy: ${proxyUrl.replace(/\/\/[^@]+@/, "//***@")}`);
+  } catch (e) {
+    console.warn(`[rss] failed to init proxy: ${(e as Error).message}`);
+  }
+  return proxyDispatcher;
+}
+
 export interface RssFeedSource {
   name: string;
   url: string;
@@ -111,13 +138,17 @@ async function fetchWithTimeout(url: string): Promise<string> {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), REQUEST_TIMEOUT_MS);
   try {
-    const resp = await fetch(url, {
+    const dispatcher = await getProxyDispatcher();
+    const init: RequestInit & { dispatcher?: unknown } = {
       headers: {
         "User-Agent": USER_AGENT,
-        Accept: "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8"
+        Accept:
+          "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8"
       },
       signal: ctrl.signal
-    });
+    };
+    if (dispatcher) init.dispatcher = dispatcher;
+    const resp = await fetch(url, init);
     if (!resp.ok) {
       throw new Error(`HTTP ${resp.status}`);
     }
