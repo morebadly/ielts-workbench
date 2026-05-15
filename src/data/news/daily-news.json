@@ -1,61 +1,173 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-15T02:08:43.972Z",
+  "updatedAt": "2026-05-15T23:51:42.534Z",
   "items": [
     {
-      "id": "news-2026-05-15-1-why-universities-are-rethinking-written-exams-in-the-age-of-",
+      "id": "news-2026-05-15-1-ai-could-put-people-off-tech-jobs-and-hurt-the-economy-warns",
       "date": "2026-05-15",
-      "title": "Why universities are rethinking written exams in the age of AI",
-      "source": "Mock IELTS Wire",
-      "url": "https://example.com/news/ai-and-exams",
-      "publishedAt": "2026-05-15T02:07:21.051Z",
-      "topic": "education",
-      "originalSummary": "As generative AI tools become widespread, several universities are piloting oral defenses, in-class essays and project-based portfolios to verify what students have actually learned.",
-      "learningSummary": "As generative AI becomes increasingly prevalent, universities around the world are re-evaluating conventional assessment practices. Traditional written examinations are being scrutinised for their ability to accurately reflect genuine student understanding. In response, several higher education institutions have begun implementing a variety of alternative evaluation methods. These include oral defenses, in-class essays conducted under controlled conditions, and project-based portfolios that showcase sustained academic work over time. Educational leaders maintain that these approaches provide more reliable evidence of what students have genuinely learned and are capable of applying. The shift represents a broader acknowledgement that conventional testing formats may no longer be sufficient to distinguish authentic knowledge from AI-generated responses. This movement is still in its pilot phase at many institutions, though early results suggest heightened student engagement and improved learning outcomes.",
+      "title": "AI could put people off tech jobs and hurt the economy, warns Raspberry Pi boss",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/clypr8p2lewo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-14T23:01:20.000Z",
+      "topic": "work",
+      "originalSummary": "Eben Upton warns against claims that Artificial Intelligence will destroy vast numbers of computing roles over the coming years.",
+      "learningSummary": "The Chief Executive of Raspberry Pi, Eben Upton, has cautioned against excessive pessimism regarding Artificial Intelligence's impact on technology employment. During recent industry discussions, Upton expressed concern that alarmist predictions about widespread job losses in computing sectors may be unfounded. While acknowledging that certain entry-level programming positions could face automation pressures, he emphasized that the technology sector historically adapts to significant shifts. Upton warned that propagating fear about career prospects could discourage young people from pursuing computing education, ultimately constraining economic growth. His comments emerged amid broader debates about workforce transformation, with various industry leaders holding divergent views on AI's dual capacity for job creation and displacement. The technology executive advocated for balanced perspectives that recognize both challenges and opportunities within evolving labour markets.",
       "vocabulary": [
         {
-          "word": "prevalent",
-          "meaning": "widespread; commonly found or occurring",
-          "example": "The use of generative AI tools is becoming increasingly prevalent across academic disciplines."
+          "word": "displacement",
+          "meaning": "the action of displacing someone or something, or the condition of being displaced from a usual place or position",
+          "example": "Workers face displacement when automation renders their skills obsolete in the labour market."
         },
         {
-          "word": "scrutinise",
-          "meaning": "to examine or inspect closely and thoroughly",
-          "example": "Universities are scrutinising their assessment practices to ensure they remain fair and reliable."
+          "word": "workforce",
+          "meaning": "the total number of people employed in a particular organization, area, or industry",
+          "example": "The technology workforce must adapt to rapidly changing skill requirements driven by AI."
         },
         {
-          "word": "portfolio",
-          "meaning": "a curated collection of work demonstrating skills and achievements over time",
-          "example": "Students submitted project-based portfolios to demonstrate their practical understanding of the subject."
+          "word": "sector",
+          "meaning": "a distinct part or branch of a nation's economy or area of activity",
+          "example": "The technology sector continues to attract substantial investment despite economic uncertainties."
         },
         {
-          "word": "authentic",
-          "meaning": "genuine; real and true, not artificial or copied",
-          "example": "Educators are seeking ways to verify authentic student knowledge rather than AI-assisted responses."
+          "word": "automation",
+          "meaning": "the use of largely automatic equipment in a system of manufacturing or other production process",
+          "example": "While automation streamlines certain operations, it simultaneously creates demand for new roles."
         },
         {
-          "word": "sustained",
-          "meaning": "continuing over an extended period of time",
-          "example": "Sustained academic effort throughout a course is better reflected in portfolios than in a single exam."
+          "word": "propagation",
+          "meaning": "the action of spreading or disseminating something more widely",
+          "example": "The propagation of exaggerated claims about job losses may deter students from tech careers."
         }
       ],
       "readingQuestions": [
         {
-          "question": "According to the passage, what specific alternative assessment methods are universities currently piloting?",
-          "answer": "Universities are piloting oral defenses, in-class essays, and project-based portfolios as alternative assessment methods."
+          "question": "What position did Eben Upton take regarding claims that Artificial Intelligence would eliminate large numbers of computing positions?",
+          "answer": "Upton cautioned against alarmist predictions, arguing that claims about AI destroying vast numbers of computing roles over the coming years were overly pessimistic and potentially misleading."
         },
         {
-          "question": "What can be inferred about the future of traditional written examinations from the passage?",
-          "answer": "It can be inferred that traditional written examinations may gradually diminish in importance as institutions seek more reliable methods to confirm genuine student learning, especially given the rise of AI tools."
+          "question": "What secondary consequence might arise from spreading fear about AI's impact on tech employment, according to the executive's warnings?",
+          "answer": "Young people could become discouraged from pursuing computing education, which would ultimately constrain economic growth and potentially create the very workforce shortages that pessimistic predictions warn against."
         },
         {
-          "question": "What does the word 'verify' most closely mean in the context of the passage?",
-          "answer": "In this context, 'verify' means to confirm or establish the truth or accuracy of what students have genuinely learned."
+          "question": "In the context of the passage, what does the phrase 'alarmist predictions' suggest about the author's view of claims regarding AI job displacement?",
+          "answer": "The phrase suggests that such claims exaggerate the severity of the situation and may provoke unnecessary anxiety, implying the author views these warnings as lacking sufficient balance or empirical foundation."
         }
       ],
-      "writingPrompt": "In recent years, artificial intelligence has become accessible to students at an unprecedented scale. As a result, some universities are replacing traditional written examinations with oral defenses, essays written in class, and project portfolios. Do you think this shift in assessment methods is a positive development for education? Give reasons for your answer and include relevant examples from your knowledge or experience.",
-      "listeningText": "The widespread availability of generative artificial intelligence is prompting a fundamental rethink of how universities assess student performance. For decades, written examinations served as the primary method for evaluating academic achievement. However, educators now face the challenge of distinguishing between work produced by students themselves and content generated by AI tools. In response, numerous institutions have begun experimenting with alternative assessment formats. Oral defenses allow examiners to question students directly, making it far more difficult to present someone else's work as one's own. In-class essays, completed under supervision, offer a middle ground between flexibility and integrity. Meanwhile, project portfolios enable students to demonstrate learning over an extended period. While these approaches are still being refined, many academics believe they more accurately reflect genuine understanding and critical thinking skills.",
-      "createdAt": "2026-05-15T02:08:43.969Z",
+      "writingPrompt": "Some experts suggest that Artificial Intelligence will inevitably replace numerous human jobs across multiple industries, while others argue that technology historically creates more employment opportunities than it eliminates. Discuss both perspectives and give your own opinion on whether governments should regulate AI development to protect workers or allow market forces to determine its impact on employment.",
+      "listeningText": "Eben Upton, founder of Raspberry Pi, has voiced strong objections to what he describes as exaggerated forecasts concerning Artificial Intelligence's effect on technology employment. In his address to industry professionals, Upton stressed that alarming rhetoric surrounding massive job losses in computing lacks sufficient evidence. Although he conceded that routine coding tasks might indeed face automation, the executive maintained that the broader technology sector possesses remarkable adaptability. Upton specifically warned that discouraging young professionals from entering computing fields based on fear would damage economic development. His remarks contribute to ongoing debates about workforce evolution, where some leaders emphasize AI's destructive potential while others highlight its transformative benefits for creating novel career pathways.",
+      "createdAt": "2026-05-15T23:51:25.881Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-15-2-after-viral-graduation-walk-paraplegic-student-calls-for-gre",
+      "date": "2026-05-15",
+      "title": "After viral graduation walk, paraplegic student calls for greater accessibility: ‘It doesn’t have to be so hard’",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/education/2026/may/15/jaiden-picot-graduation-video-quadriplegic-accessibility",
+      "publishedAt": "2026-05-15T09:30:36.000Z",
+      "topic": "education",
+      "originalSummary": "After a truck accident left him paralyzed, Jaiden Picot crossed his graduation stage in a robotic exoskeleton Jaiden Picot, who was paralyzed in 2024 after a truck hit him, never imagined that video of him recently walking across Virginia Union University (VUU)‘s graduation stage in a futuristic robotic suit would go viral. But since it did, he says he wants the world to know that he intends to spend his professional career trying to help make the place more accessible to people who – like him – use a wheelchair to get around. Continue reading...",
+      "learningSummary": "A university graduate who became paralyzed after a road traffic collision has captured international attention by walking across his graduation stage in an advanced robotic exoskeleton. Jaiden Picot sustained severe spinal injuries in 2024 when a truck struck him, leaving him unable to walk independently. Following extensive rehabilitation, he completed his studies at Virginia Union University and appeared at the ceremony wearing this futuristic mechanical suit, an achievement that generated considerable media coverage. The viral response to his appearance prompted Picot to articulate his vision for systematic change, arguing that individuals requiring wheelchairs frequently confront preventable barriers. He has announced his intention to dedicate his professional career to enhancing accessibility within educational institutions and broader society, maintaining that such accommodations should not demand extraordinary effort to secure. His advocacy seeks to transform personal challenge into collective progress regarding disability inclusion.",
+      "vocabulary": [
+        {
+          "word": "paralyzed",
+          "meaning": "affected by paralysis; unable to move or feel part of the body",
+          "example": "The accident left him partially paralyzed from the waist down, requiring permanent use of a wheelchair."
+        },
+        {
+          "word": "accessibility",
+          "meaning": "the quality of being easily reached, entered, or used by people, especially those with disabilities",
+          "example": "Universities must prioritize accessibility to ensure students with mobility impairments can participate fully in campus life."
+        },
+        {
+          "word": "exoskeleton",
+          "meaning": "an external mechanical framework worn on the body to provide support and enable movement",
+          "example": "Medical researchers are developing lighter exoskeletons that could help patients with spinal injuries regain independent walking ability."
+        },
+        {
+          "word": "advocacy",
+          "meaning": "public support for or recommendation of a particular cause or policy",
+          "example": "Student advocacy groups play a crucial role in promoting disability rights and demanding institutional accommodations."
+        },
+        {
+          "word": "inclusion",
+          "meaning": "the practice of ensuring all individuals can participate fully in society regardless of their circumstances",
+          "example": "True educational inclusion requires not only physical access but also adapted teaching methodologies and supportive learning environments."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What was the specific cause of Jaiden Picot's paralysis, and when did this incident occur?",
+          "answer": "Jaiden Picot became paralyzed after being hit by a truck in 2024."
+        },
+        {
+          "question": "Based on the passage, what can be inferred about Picot's motivation for pursuing accessibility advocacy as a career?",
+          "answer": "Picot appears motivated by personal experience of encountering barriers as a wheelchair user and believes he can leverage his professional career to reduce such obstacles for others, suggesting he wants to transform his challenge into meaningful systemic change."
+        },
+        {
+          "question": "In the context of the passage, what does the phrase 'It doesn't have to be so hard' most likely communicate about Picot's perspective?",
+          "answer": "The phrase indicates that Picot believes acquiring necessary accommodations or accessibility features should not require extraordinary effort, patience, or struggle from individuals with disabilities."
+        }
+      ],
+      "writingPrompt": "Some universities have taken steps to accommodate students with physical disabilities by providing accessible facilities and specialized equipment. However, many institutions still lack adequate support systems. Discuss the extent to which educational institutions should be responsible for ensuring accessibility, and suggest what measures can be implemented to achieve this goal effectively.",
+      "listeningText": "A university graduate who became paralyzed following a road traffic accident has attracted global attention after walking across his graduation stage in a robotic exoskeleton. Jaiden Picot sustained his injury when a truck struck him in 2024, resulting in spinal damage that confined him to a wheelchair. Despite this life-changing event, he completed his degree at Virginia Union University and decided to walk across the stage wearing this advanced technological device. The video of his achievement quickly spread across social media, generating millions of views and widespread media coverage. Picot has since committed to using his platform to push for greater accessibility in educational settings and public spaces. His message emphasizes that individuals who rely on wheelchairs should not face unnecessary obstacles when navigating their environments. He argues that achieving meaningful accessibility requires dedicated effort from institutions and policymakers alike.",
+      "createdAt": "2026-05-15T23:51:36.592Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-15-3-river-thames-in-london-gets-first-official-bathing-spot-on-f",
+      "date": "2026-05-15",
+      "title": "River Thames in London gets first official bathing spot on Friday",
+      "source": "The Guardian - Environment",
+      "url": "https://www.theguardian.com/environment/2026/may/14/river-thames-london-first-designated-bathing-water-area-",
+      "publishedAt": "2026-05-14T21:30:18.000Z",
+      "topic": "environment",
+      "originalSummary": "Thames at Ham designated as one of 13 new swimming areas across England to be monitored for water quality The first designated bathing water area on the River Thames in London will welcome swimmers for the official start of the bathing season on Friday as one of 13 new monitored swimming areas across England. The Thames at Ham, in south-west London, has been designated as a new river bathing water area after campaigners gathered evidence to show thousands of people use the river for swimming throughout the year. Canvey Island foreshore, Essex East Beach at West Bay, Bridport, Dorset Falcon...",
+      "learningSummary": "The River Thames in London has finally received its first official bathing designation at Ham, located in south-west London. This marks a significant milestone as swimmers will be able to use the area from the official start of the bathing season on Friday. The site is one of thirteen newly monitored swimming areas introduced across England this year. Campaigners played a crucial role in securing this designation by gathering substantial evidence demonstrating that thousands of individuals regularly swim in the Thames throughout the year. The addition of Thames at Ham to the list of official bathing water areas reflects growing recognition of public demand for cleaner river access. This development aligns with broader environmental efforts to improve water quality standards and provide safe recreational opportunities for communities. Other locations included in the new swimming areas are Canvey Island foreshore and East Beach at West Bay in Dorset, signalling a national push to expand supervised bathing sites across English waterways.",
+      "vocabulary": [
+        {
+          "word": "designated",
+          "meaning": "officially assigned a particular status or function",
+          "example": "The river section has been designated as a safe bathing zone by environmental authorities."
+        },
+        {
+          "word": "monitored",
+          "meaning": "systematically observed and checked over time",
+          "example": "Water quality at the Thames site will be monitored regularly during the bathing season."
+        },
+        {
+          "word": "campaigners",
+          "meaning": "people who actively work toward a specific social or environmental cause",
+          "example": "Local campaigners gathered evidence to prove the river was widely used for swimming."
+        },
+        {
+          "word": "recreational",
+          "meaning": "relating to activities done for enjoyment and leisure",
+          "example": "The new bathing areas will provide valuable recreational opportunities for local residents."
+        },
+        {
+          "word": "substantial",
+          "meaning": "of considerable importance, amount, or size",
+          "example": "Campaigners collected substantial data showing thousands swim in the river annually."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What role did local campaigners play in securing the bathing designation for Thames at Ham?",
+          "answer": "Campaigners gathered evidence demonstrating that thousands of people use the river for swimming throughout the year, which was instrumental in obtaining the official bathing water area status."
+        },
+        {
+          "question": "How many new monitored swimming areas are being introduced across England as part of this initiative?",
+          "answer": "Thirteen new monitored swimming areas are being introduced across England, with Thames at Ham being one of them and the first on the River Thames in London."
+        },
+        {
+          "question": "What does the word 'designated' mean in the context of this passage?",
+          "answer": "In this context, 'designated' means officially assigned a specific status or function, referring to the Thames at Ham being officially assigned as a bathing water area."
+        }
+      ],
+      "writingPrompt": "Some people believe that designating official bathing spots in natural bodies of water, such as rivers, is a positive environmental development. Others argue that this encourages more pollution and strain on natural ecosystems. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
+      "listeningText": "Good news for London swimmers as the River Thames receives its very first official bathing spot. Starting this Friday, swimmers will be welcomed at Thames at Ham in south-west London, marking the beginning of the bathing season for this newly designated area. This follows a successful campaign by local activists who collected evidence that thousands of people swim in the Thames throughout the year. The site is one of thirteen new river bathing water areas introduced across England, all of which will be monitored regularly for water quality. Environmental officials say this development reflects growing public demand for cleaner access to natural waterways. The initiative also aims to raise standards for water quality monitoring in rivers across the country. Other new bathing sites include locations on Canvey Island and various coastal areas in Dorset and Essex.",
+      "createdAt": "2026-05-15T23:51:42.533Z",
       "aiSource": "minimax"
     },
     {
