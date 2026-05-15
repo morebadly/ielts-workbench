@@ -16,6 +16,7 @@ import {
 import type { Word, WordProgress } from "@/types";
 import { WORD_STATUS_LABEL } from "@/types";
 import { applyFeedback, type Feedback } from "@/lib/srs";
+import { SrsStatusBadge } from "@/components/vocabulary/SrsStatusBadge";
 
 interface Props {
   word: Word;
@@ -108,10 +109,11 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
             <h2 className="text-3xl font-semibold tracking-tight">{word.word}</h2>
             <span className="pb-1 text-sm text-ink-soft">{word.phonetic}</span>
           </div>
-          <div className="mt-1 flex items-center gap-2 text-xs muted">
+          <div className="mt-1 flex flex-wrap items-center gap-2 text-xs muted">
             <span className="pill">{word.wordList}</span>
             <span className="pill">{WORD_STATUS_LABEL[progress.status]}</span>
             <span className="pill">复习 {progress.reviewCount} 次</span>
+            <SrsStatusBadge progress={progress} variant="compact" />
           </div>
         </div>
         <div className="flex shrink-0 gap-2">
@@ -206,16 +208,19 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
         ) : null}
       </div>
 
-      <div className="grid grid-cols-3 gap-2">
-        <Button variant="soft" onClick={() => handleFb("forget")}>
-          不会
-        </Button>
-        <Button variant="soft" onClick={() => handleFb("fuzzy")}>
-          模糊
-        </Button>
-        <Button variant="primary" onClick={() => handleFb("remember")}>
-          我会了
-        </Button>
+      <div className="space-y-2">
+        <SrsStatusBadge progress={progress} variant="detailed" />
+        <div className="grid grid-cols-3 gap-2">
+          <Button variant="soft" onClick={() => handleFb("forget")}>
+            不会
+          </Button>
+          <Button variant="soft" onClick={() => handleFb("fuzzy")}>
+            模糊
+          </Button>
+          <Button variant="primary" onClick={() => handleFb("remember")}>
+            我会了
+          </Button>
+        </div>
       </div>
 
       <div>

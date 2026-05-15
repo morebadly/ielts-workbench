@@ -4,7 +4,7 @@
 
 ---
 
-## 当前版本: v1.7.0
+## 当前版本: v1.8.0
 
 **已完成:**
 - 首页 Dashboard:今日 6 项任务 / 词书进度 / 连续天数 / 继续学习
@@ -187,16 +187,23 @@ src/
   - 新增 `src/app/api/ai/tts/route.ts` + `src/lib/ai/minimax.ts` 的 `synthesizeTTS`,前端 `tts.ts` 优先用 MiniMax 云端 TTS,失败自动回退浏览器 Web Speech,带 24 条音频缓存
   - 新增 `src/app/writing/history/page.tsx`:写作历史列表 + 总分进步曲线 + Task 1/2 切换筛选
   - 新闻脚本加 `sanitizeJson()` + 失败重试一次,`max_completion_tokens` 提到 2400,GitHub Actions 上 mock fallback 比例显著降低
+- **v1.8.0** — Launch-ready polish
+  - 听力素材库:8 条本人原创 IELTS-style transcripts,覆盖 Section 1-4 全部场景,`audioUrl` 留空时走 v1.7 MiniMax TTS,可填外部 mp3 链接(BBC 6 Minute 等公开音频)
+    - `ListeningItem` 加 `section / scenario / wordCount / attribution` 字段,旧 `MOCK_LISTENING` 兼容 re-export 到新数据
+    - 听力练习页加难度筛选 + 场景标签 + 音频源指示
+  - 写作 AI 反馈高亮原文:`WritingFeedback` / `WritingTask1Data` / `WritingTask2Data` 加可选 `highlights[]`,prompt 让 AI 返「excerpt + category + comment + suggestion」,`HighlightedEssay` 组件画下划线 + 联动卡片,`/writing/exam` + `/writing/history` 都接入
+  - Supabase 同步升级为 per-key last-write-wins:`storage` 加 `keyTimestamps`(任何 write 都自动 touch),`cloudSync.syncTwoWay` 拉云端 + 本地按 key 比时间戳决定推/拉/skip,`SyncResult.details` 给出每个 key 的处理结果,`SyncCard` 可折叠展开
+    - `supabase/schema.sql` 加 `client_modified_at` 列,`alter table ... add column if not exists` 兼容老数据
+  - SRS 可视化:新增 `src/lib/srsDisplay.ts` 派生 due 状态/间隔/ease/repetitions/上次质量,`SrsStatusBadge`(compact + detailed)接入 `WordCard`
 
 ---
 
 ## 下一步计划
 
 - 把雅思核心 3000 完整词书塞进 `data/`
-- 真实雅思音频素材替换 `mockListening.ts`
-- 同步策略升级:按 key 的 last-write-wins,目前是简化版双向同步
+- 接入 BBC 6 Minute / British Council 公开音频(填入 `audioUrl` 字段,零版权风险)
 - 复习箱算法可选升级 FSRS(SM-2 已就位,基本够用)
-- 写作 AI 评分接入更细的分项打分 + 高亮原文中的语法/词汇问题
+- PDF 导入词书的进一步打磨(扫描件警告、批量去重、预览筛选)
 
 ---
 
