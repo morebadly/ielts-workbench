@@ -81,14 +81,17 @@ export async function POST(req: Request) {
           { status: 400 }
         );
       }
-      const { words, chunks } = await structureWordsFromText(text, bookTitle, {
-        hint
-      });
+      const { words, chunks, corrections } = await structureWordsFromText(
+        text,
+        bookTitle,
+        { hint }
+      );
       return NextResponse.json({
         ok: true,
         action: "structure",
         chunks,
-        words
+        words,
+        corrections
       });
     }
 

@@ -27,6 +27,7 @@ interface StructureResp {
   ok: true;
   chunks: number;
   words: ImportedWord[];
+  corrections?: Array<{ from: string; to: string; reason: string }>;
 }
 
 const SCANNED_HINT =
@@ -49,6 +50,7 @@ export default function VocabularyImportPage() {
   const [extracted, setExtracted] = useState<ExtractResp | null>(null);
   const [pasteText, setPasteText] = useState("");
   const [words, setWords] = useState<ImportedWord[]>([]);
+  const [corrections, setCorrections] = useState<Array<{ from: string; to: string; reason: string }>>([]);
   const [aiSource, setAiSource] = useState<"minimax" | "mock" | "loading" | null>(null);
   const [aiReason, setAiReason] = useState<string | undefined>();
   const [importedSummary, setImportedSummary] = useState<string | null>(null);
@@ -63,6 +65,7 @@ export default function VocabularyImportPage() {
     setExtracted(null);
     setPasteText("");
     setWords([]);
+    setCorrections([]);
     setAiSource(null);
     setError(null);
     setImportedSummary(null);
@@ -137,6 +140,7 @@ export default function VocabularyImportPage() {
       }
       const j = (await r.json()) as StructureResp;
       setWords(j.words);
+      setCorrections(j.corrections ?? []);
       setAiSource("minimax");
       setStage("structured");
     } catch (e) {

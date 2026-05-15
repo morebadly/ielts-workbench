@@ -190,27 +190,42 @@ ${rawText.slice(0, 12000)}
 
 Task: Identify English vocabulary entries with their Chinese meaning, phonetic if shown, and example sentence if shown. Detect any "Day N" / "List N" / unit dividers in the raw text and use them to fill bookDay / wordList. Drop page numbers and irrelevant Chinese paragraphs.
 
+You MUST also actively correct OCR / scanning errors:
+- 英文单词:把明显错位的字母(如 'rn' 错为 'm', 'cl' 错为 'd', 数字 1/0 错为字母 l/o, 多/少字母)还原为标准拼写,例如 "def1nitlon" -> "definition", "accomodate" -> "accommodate", "enviroment" -> "environment"
+- 中文释义:把扫描造成的形近字/简繁错位修正,例如 "严盧" -> "严重", "発展" -> "发展"
+- 例句:同样修正显而易见的拼写/字符错误
+- 如果一个候选词根本不是真实英文单词(查无此词),就跳过,不要硬塞
+- 自信度低时(无法判断对错)就保留原样
+
 Return STRICT JSON, no markdown:
 {
   "words": [
     {
-      "word": "<the English word, lowercase unless proper noun>",
+      "word": "<the English word, lowercase unless proper noun, already corrected>",
       "phonetic": "<IPA or empty string>",
-      "chineseMeaning": "<中文释义,可能多个,用; 分隔>",
+      "chineseMeaning": "<中文释义,可能多个,用; 分隔, 已修正>",
       "englishDefinition": "<English definition or empty>",
-      "exampleSentence": "<one English example or empty>",
+      "exampleSentence": "<one English example or empty, 已修正>",
       "bookDay": "<e.g. Day 1, or empty>",
       "wordList": "<e.g. List A, or empty>",
       "order": <1-based integer in the order found>
+    }
+  ],
+  "corrections": [
+    {
+      "from": "<原文中的乱码或错拼>",
+      "to": "<你修正后的版本>",
+      "reason": "<简短中文, 8 字内, 例如 OCR 错字 / 拼写错 / 形近字>"
     }
   ]
 }
 
 Rules:
-- Skip duplicates (same word).
-- Skip non-vocabulary content (preface, instructions, page numbers).
+- Skip duplicates (same word, lowercased).
+- Skip non-vocabulary content (preface, instructions, page numbers, copyright pages).
 - If you can't tell phonetic / example, use empty string, do NOT invent.
-- Return at most 200 entries; if more, return the first 200 and stop.
+- corrections 可为空数组; 同一个修正不要重复列。
+- Return at most 200 word entries and at most 50 corrections; if more, stop at the limit.
 `.trim()
 };
 

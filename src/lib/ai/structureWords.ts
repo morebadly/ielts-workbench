@@ -14,8 +14,21 @@ interface AIWordItem {
   order?: number;
 }
 
+interface AICorrection {
+  from?: string;
+  to?: string;
+  reason?: string;
+}
+
 interface StructureResp {
   words?: AIWordItem[];
+  corrections?: AICorrection[];
+}
+
+export interface WordCorrection {
+  from: string;
+  to: string;
+  reason: string;
 }
 
 const MAX_CHARS_PER_CHUNK = 9000;
@@ -52,9 +65,14 @@ export async function structureWordsFromText(
   rawText: string,
   bookTitle: string,
   opts: { hint?: string; pageOffset?: number } = {}
-): Promise<{ words: ImportedWord[]; chunks: number }> {
+): Promise<{
+  words: ImportedWord[];
+  chunks: number;
+  corrections: WordCorrection[];
+}> {
   const chunks = chunk(rawText);
   const all: ImportedWord[] = [];
+  const corrections: WordCorrection[] = [];
   let order = 1;
 
   for (const piece of chunks) {
@@ -80,7 +98,21 @@ export async function structureWordsFromText(
         order: order++
       });
     }
+    // 收集 AI 报告的 OCR / 拼写更正
+    const cs = Array.isArray(data.corrections) ? data.corrections : [];
+    for (const c of cs) {
+      const from = (c.from || "").trim();
+      const to = (c.to || "").trim();
+      if (!from || !to || from === to) continue;
+      // 去重: from 已经记录过就跳过
+      if (corrections.some((x) => x.from === from)) continue;
+      corrections.push({ from, to, reason: (c.reason || "").trim() || "AI 修正" });
+    }
   }
 
-  return { words: dedupe(all), chunks: chunks.length };
+  return {
+    words: dedupe(all),
+    chunks: chunks.length,
+    corrections: corrections.slice(0, 50)
+  };
 }
