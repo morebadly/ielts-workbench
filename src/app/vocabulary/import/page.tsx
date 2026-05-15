@@ -266,6 +266,91 @@ export default function VocabularyImportPage() {
     const cleaned = words.filter((w) => w.word.trim() && w.chineseMeaning.trim());
     if (!cleaned.length) return setError("所有词条都缺少 word 或中文释义");
 
+    const finalTitle = bookTitle.trim() || "未命名词书";
+
+    // v1.8.3: 优先追加到同名已有词书,而不是每次都新建
+    // 这样分批用 vision 跑同一本扫描书时,可以一次次追加,不会出现 N 本同名词
+    const existing = storage.getCustomBooks().find((b) => b.name === finalTitle);
+
+    if (existing) {
+      const existingWords = storage.getBookWords(existing.id);
+      const existingByWord = new Map(
+        existingWords.map((w) => [w.word.trim().toLowerCase(), w])
+      );
+
+      // 找出还没有的新词;同 word 跳过(去重)
+      const newOnly = cleaned.filter(
+        (w) => !existingByWord.has(w.word.trim().toLowerCase())
+      );
+
+      if (!newOnly.length) {
+        setImportedSummary(
+          `所有词条已经在「${existing.name}」中,跳过 ${cleaned.length} 个重复词。`
+        );
+        setStage("imported");
+        return;
+      }
+
+      // 已存在的 day 编号继续往后走
+      const usedDayKeys = new Map<string, number>();
+      existingWords.forEach((w) => {
+        const key = (w.wordList || `Day ${w.bookDay}`).trim();
+        if (!usedDayKeys.has(key)) usedDayKeys.set(key, w.bookDay);
+      });
+
+      let nextDay = existing.totalDays + 1;
+      const dayCounters = new Map<number, number>();
+      existingWords.forEach((w) => {
+        dayCounters.set(w.bookDay, Math.max(dayCounters.get(w.bookDay) || 0, w.order));
+      });
+
+      const appended: Word[] = newOnly.map((w, idx) => {
+        const dayKey = (w.bookDay || `Day ${nextDay}`).trim();
+        let dayNum = usedDayKeys.get(dayKey);
+        if (dayNum === undefined) {
+          dayNum = nextDay++;
+          usedDayKeys.set(dayKey, dayNum);
+        }
+        const order = (dayCounters.get(dayNum) || 0) + 1;
+        dayCounters.set(dayNum, order);
+        return {
+          id: `${existing.id}-d${dayNum}-add-${Date.now().toString(36)}-${idx}`,
+          word: w.word.trim(),
+          phonetic: w.phonetic || "",
+          chineseMeaning: w.chineseMeaning.trim(),
+          englishDefinition: w.englishDefinition || "",
+          exampleSentence: w.exampleSentence || "",
+          bookId: existing.id,
+          bookDay: dayNum,
+          wordList: w.wordList || dayKey,
+          order
+        };
+      });
+
+      const newTotalDays = Math.max(
+        existing.totalDays,
+        ...appended.map((w) => w.bookDay)
+      );
+      const updatedBook: VocabularyBook = {
+        ...existing,
+        totalDays: newTotalDays,
+        description: `从 PDF 导入,共 ${existingWords.length + appended.length} 词`
+      };
+
+      storage.saveBook(updatedBook, [...existingWords, ...appended]);
+      storage.setUser({ ...user, activeBookId: existing.id });
+      notifyStorageUpdated();
+      refresh();
+
+      const skipped = cleaned.length - appended.length;
+      setImportedSummary(
+        `已追加到「${existing.name}」: 新增 ${appended.length} 个词${skipped > 0 ? `, 跳过重复 ${skipped} 个` : ""}, 当前共 ${existingWords.length + appended.length} 词。`
+      );
+      setStage("imported");
+      return;
+    }
+
+    // ============ 没有同名,新建一本(原行为) ============
     const dayMap = new Map<string, number>();
     let nextDay = 1;
     const dayCounters = new Map<number, number>();
@@ -297,7 +382,7 @@ export default function VocabularyImportPage() {
     const totalDays = Math.max(...finalWords.map((w) => w.bookDay), 1);
     const book: VocabularyBook = {
       id,
-      name: bookTitle.trim(),
+      name: finalTitle,
       totalDays,
       description: `从 PDF 导入,共 ${finalWords.length} 词`
     };

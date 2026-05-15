@@ -228,6 +228,49 @@ Rules:
 - Return at most 200 word entries and at most 50 corrections; if more, stop at the limit.
 `.trim(),
 
+  askWord: (token: string) => `
+Look up the English word or short phrase: "${token}"
+
+Return STRICT JSON, no markdown, no extra text:
+{
+  "word": "<lowercase normalized form>",
+  "phonetic": "<IPA in slashes, e.g. /təˈmɒrəʊ/, prefer British; empty if uncertain>",
+  "phoneticUS": "<American IPA if notably different, else empty>",
+  "partOfSpeech": "<n. / v. / adj. / adv. / phrase / etc.>",
+  "chineseMeaning": "<中文释义,可有多个义项,用; 分隔>",
+  "englishDefinition": "<concise English definition, one sentence>",
+  "exampleSentence": "<one natural English example sentence in IELTS style>",
+  "exampleTranslation": "<例句的中文翻译>",
+  "synonyms": ["<近义词1>", "<近义词2>"],
+  "antonyms": ["<反义词1>"],
+  "isIeltsCommon": <true | false>,
+  "ieltsBand": "<估计的雅思考频:5-6 / 6-7 / 7+ / unclear>",
+  "collocations": ["<常见搭配, 例如 'tackle a problem'>"]
+}
+
+Rules:
+- 如果输入根本不是英文单词或短语(纯中文/乱码/无意义),返回 {"error":"not_a_word"}。
+- synonyms / antonyms / collocations 各最多 3 条,没有就返回空数组。
+- isIeltsCommon=true 表示这是雅思考试的高频词或必备词。
+- 不要编造你不确定的内容(例如不确定的 phonetic 就返回空字符串)。
+`.trim(),
+
+  askChat: (history: Array<{ role: "user" | "assistant"; content: string }>) => `
+You are an IELTS English tutor for a Chinese learner. Give short, clear, supportive replies.
+
+Conversation so far:
+${history
+    .map((m) => `${m.role === "user" ? "User" : "Tutor"}: ${m.content}`)
+    .join("\n")}
+
+Answer the latest user message. Rules:
+- 默认中文回答(因为用户母语是中文),专有名词、英文例句、术语保留英文。
+- 如果用户问翻译、语法、写作改写,先给答案再给一句简短解释。
+- 引用例句时用英文,并附中文翻译。
+- 不要超过 250 字。
+- 如果用户问"这个单词什么意思",说明请用单独按钮查询 (这条只在你认为是简单查词时温和提一句)。
+`.trim(),
+
   structureWordsFromImages: (bookTitle: string, hint?: string) => `
 You are looking at scanned pages from an IELTS vocabulary book. Read each page CAREFULLY (include the small phonetic IPA, the Chinese gloss, and any English example sentence).
 
