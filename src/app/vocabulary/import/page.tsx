@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Card, CardHeader } from "@/components/ui/Card";
@@ -53,6 +53,18 @@ export default function VocabularyImportPage() {
     phase: "render" | "ai";
     cur: number;
     total: number;
+  } | null>(null);
+  /** vision 识别支持断点续传:每跑完一批写入 sessionStorage,出错可暂停,稍后接着跑 */
+  const [visionResume, setVisionResume] = useState<{
+    fileName: string;
+    fileSize: number;
+    bookTitle: string;
+    fromPage: number;
+    toPage: number;
+    nextBatchIndex: number;
+    totalBatches: number;
+    accumulatedWords: ImportedWord[];
+    lastError?: string;
   } | null>(null);
   const [structuring, setStructuring] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -116,18 +128,71 @@ export default function VocabularyImportPage() {
     }
   };
 
+  const VISION_RESUME_KEY = "ielts-wb:vision-resume";
+
+  // 启动时, 如果当前选了同名同大小的文件, 自动加载之前的进度
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const raw = sessionStorage.getItem(VISION_RESUME_KEY);
+      if (!raw) return;
+      const saved = JSON.parse(raw) as NonNullable<typeof visionResume>;
+      setVisionResume(saved);
+    } catch {
+      /* ignore */
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const saveVisionResume = (next: NonNullable<typeof visionResume> | null) => {
+    setVisionResume(next);
+    if (typeof window === "undefined") return;
+    if (next) {
+      sessionStorage.setItem(VISION_RESUME_KEY, JSON.stringify(next));
+    } else {
+      sessionStorage.removeItem(VISION_RESUME_KEY);
+    }
+  };
+
   /**
    * 扫描版 PDF: 浏览器渲染每页 -> 分批送 MiniMax 视觉模型 -> 直接拿 ImportedWord[]
    *
-   * 跳过 "提取文字" + "AI 结构化" 两步,直接到 "structured" 阶段。
+   * 支持断点续传:
+   *   - resumeFromState 为 null 时,从头开始(跑前清空缓存)
+   *   - resumeFromState 不为 null 时,跳过 nextBatchIndex 之前的批次,沿用 accumulatedWords
+   *   - 任何一批失败,把当前进度写回 sessionStorage 并抛出可恢复的错误,UI 显示"继续识别"按钮
+   *   - 全部成功后清空缓存,跳到 structured 阶段
    */
-  const handleVisionExtract = async () => {
+  const handleVisionExtract = async (
+    resumeFromState?: NonNullable<typeof visionResume>
+  ) => {
     if (!file) return setError("请先选择 PDF 文件");
-    if (!bookTitle.trim() && !file.name) return setError("请填写词书名称");
-    const finalTitle = bookTitle.trim() || file.name.replace(/\.pdf$/i, "");
+    if (resumeFromState) {
+      // 校验文件名 / 大小一致, 避免续传到错的 PDF
+      if (
+        resumeFromState.fileName !== file.name ||
+        resumeFromState.fileSize !== file.size
+      ) {
+        return setError(
+          "继续识别需要选择和之前完全一样的 PDF。如已重选,请点放弃续传后重新开始。"
+        );
+      }
+    }
 
-    const fromN = Math.max(1, Number(fromPage) || 1);
-    const toN = toPage ? Number(toPage) || 0 : 0;
+    const finalTitle =
+      resumeFromState?.bookTitle ||
+      bookTitle.trim() ||
+      file.name.replace(/\.pdf$/i, "");
+
+    const fromN = resumeFromState
+      ? resumeFromState.fromPage
+      : Math.max(1, Number(fromPage) || 1);
+    const toN = resumeFromState
+      ? resumeFromState.toPage
+      : toPage
+        ? Number(toPage) || 0
+        : 0;
+
     setError(null);
     setVisionExtracting(true);
     setAiSource("loading");
@@ -157,36 +222,70 @@ export default function VocabularyImportPage() {
         batches.push(valid.slice(i, i + BATCH_SIZE));
       }
 
-      const allWords: ImportedWord[] = [];
-      for (let i = 0; i < batches.length; i++) {
+      const startBatch = resumeFromState?.nextBatchIndex ?? 0;
+      const allWords: ImportedWord[] = resumeFromState
+        ? [...resumeFromState.accumulatedWords]
+        : [];
+
+      for (let i = startBatch; i < batches.length; i++) {
         setVisionProgress({
           phase: "ai",
           cur: i + 1,
           total: batches.length
         });
-        const r = await fetch("/api/import/pdf", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            action: "vision",
+        try {
+          const r = await fetch("/api/import/pdf", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              action: "vision",
+              bookTitle: finalTitle,
+              hint,
+              images: batches[i].map((p) => p.dataUrl)
+            })
+          });
+          if (!r.ok) {
+            const j = (await r.json().catch(() => null)) as
+              | { detail?: string; error?: string }
+              | null;
+            throw new Error(j?.detail || j?.error || `HTTP ${r.status}`);
+          }
+          const j = (await r.json()) as { ok: true; words: ImportedWord[] };
+          allWords.push(...j.words);
+
+          // 单批成功 -> 立即把累积的进度写到 sessionStorage,即使下一批 / 网络断了也不丢
+          saveVisionResume({
+            fileName: file.name,
+            fileSize: file.size,
             bookTitle: finalTitle,
-            hint,
-            images: batches[i].map((p) => p.dataUrl)
-          })
-        });
-        if (!r.ok) {
-          const j = (await r.json().catch(() => null)) as
-            | { detail?: string; error?: string }
-            | null;
+            fromPage: fromN,
+            toPage: toN,
+            nextBatchIndex: i + 1,
+            totalBatches: batches.length,
+            accumulatedWords: allWords,
+            lastError: undefined
+          });
+        } catch (batchErr) {
+          // 当前批失败 -> 保留 nextBatchIndex 在 i (下次从这一批重试)
+          saveVisionResume({
+            fileName: file.name,
+            fileSize: file.size,
+            bookTitle: finalTitle,
+            fromPage: fromN,
+            toPage: toN,
+            nextBatchIndex: i,
+            totalBatches: batches.length,
+            accumulatedWords: allWords,
+            lastError: (batchErr as Error).message
+          });
           throw new Error(
-            `第 ${i + 1}/${batches.length} 批识别失败: ${j?.detail || j?.error || `HTTP ${r.status}`}`
+            `第 ${i + 1}/${batches.length} 批识别失败: ${(batchErr as Error).message}\n已识别 ${allWords.length} 个词,可点"继续识别"接着跑(配额刷新后再试)`
           );
         }
-        const j = (await r.json()) as { ok: true; words: ImportedWord[] };
-        allWords.push(...j.words);
       }
 
-      // 3) 写入 stage,跳过 extracted,直接到 structured 让用户预览/编辑
+      // 3) 全部成功 -> 清缓存, 写 stage
+      saveVisionResume(null);
       setBookTitle(finalTitle);
       setWords(allWords);
       setExtracted({
@@ -207,6 +306,17 @@ export default function VocabularyImportPage() {
       setVisionExtracting(false);
       setVisionProgress(null);
     }
+  };
+
+  /** 用户点 "继续识别" 时调用 */
+  const handleResumeVision = () => {
+    if (visionResume) handleVisionExtract(visionResume);
+  };
+
+  /** 用户点 "放弃续传" 时调用 */
+  const handleDiscardResume = () => {
+    if (!confirm("放弃续传将丢失已识别的词条,确定继续?")) return;
+    saveVisionResume(null);
   };
 
   const runStructure = async (rawText: string) => {
@@ -434,6 +544,8 @@ export default function VocabularyImportPage() {
           visionExtracting={visionExtracting}
           visionProgress={visionProgress}
           onVisionExtract={handleVisionExtract}
+          visionResume={visionResume}
+          clearVisionResume={() => saveVisionResume(null)}
         />
       ) : null}
 
@@ -505,8 +617,24 @@ function UploadStage(props: {
   visionExtracting: boolean;
   visionProgress: { phase: "render" | "ai"; cur: number; total: number } | null;
   onVisionExtract: () => void;
+  visionResume: {
+    fileName: string;
+    fileSize: number;
+    bookTitle: string;
+    nextBatchIndex: number;
+    totalBatches: number;
+    accumulatedWords: ImportedWord[];
+    lastError?: string;
+  } | null;
+  clearVisionResume: () => void;
 }) {
   const busy = props.extracting || props.visionExtracting;
+  const resume = props.visionResume;
+  // 当前选中的文件是不是就是上次中断的那一个
+  const canResume =
+    resume && props.file
+      ? resume.fileName === props.file.name && resume.fileSize === props.file.size
+      : false;
   return (
     <Card padding="lg" className="space-y-4">
       <CardHeader title="第 1 步:上传 PDF" subtitle="只在你本机处理, 不会上传 GitHub" />
@@ -569,6 +697,48 @@ function UploadStage(props: {
           placeholder="例如: 这本书每天 80 词, 分成 List A / B / C"
         />
       </div>
+
+      {resume ? (
+        <div
+          className={
+            canResume
+              ? "rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm"
+              : "rounded-lg border border-black/10 bg-bg-soft p-3 text-sm"
+          }
+        >
+          <div className="font-medium">
+            上次识别到第 {resume.nextBatchIndex}/{resume.totalBatches} 批
+            {resume.accumulatedWords.length > 0
+              ? ` · 已暂存 ${resume.accumulatedWords.length} 个词`
+              : ""}
+          </div>
+          <div className="mt-1 text-xs muted">
+            词书: {resume.bookTitle} · 文件: {resume.fileName}
+          </div>
+          {resume.lastError ? (
+            <div className="mt-1 text-xs text-accent-rose">
+              中断原因: {resume.lastError}
+            </div>
+          ) : null}
+          {!canResume ? (
+            <div className="mt-1 text-xs text-amber-700">
+              ⚠ 当前选的文件和上次不一样,无法续传。请重选同一 PDF 或点放弃续传。
+            </div>
+          ) : null}
+          <div className="mt-2 flex gap-2">
+            <Button
+              variant="primary"
+              onClick={props.onVisionExtract}
+              disabled={!canResume || busy}
+            >
+              {busy ? "识别中..." : "继续识别"}
+            </Button>
+            <Button variant="ghost" onClick={props.clearVisionResume} disabled={busy}>
+              放弃续传
+            </Button>
+          </div>
+        </div>
+      ) : null}
 
       <div className="flex flex-wrap items-center justify-end gap-2">
         <Button
