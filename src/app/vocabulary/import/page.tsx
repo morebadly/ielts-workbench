@@ -9,6 +9,7 @@ import { AISourceBadge } from "@/components/ui/AISourceBadge";
 import type { ImportedWord, VocabularyBook, Word } from "@/types";
 import { storage } from "@/lib/storage";
 import { useDailyTask, notifyStorageUpdated } from "@/hooks/useDailyTask";
+import { extractPdfTextInBrowser } from "@/lib/pdf/extractTextClient";
 
 type Stage = "upload" | "extracted" | "structured" | "imported";
 
@@ -19,7 +20,7 @@ interface ExtractResp {
   text: string;
   textPerPage: string[];
   isProbablyScanned: boolean;
-  charCount: number;
+  charCountAfterTrim: number;
 }
 
 interface StructureResp {
@@ -41,6 +42,7 @@ export default function VocabularyImportPage() {
   const [toPage, setToPage] = useState("");
 
   const [extracting, setExtracting] = useState(false);
+  const [extractProgress, setExtractProgress] = useState<{ cur: number; total: number } | null>(null);
   const [structuring, setStructuring] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -70,25 +72,34 @@ export default function VocabularyImportPage() {
     setError(null);
     if (!file) return setError("请先选择 PDF 文件");
     setExtracting(true);
+    setExtractProgress(null);
     try {
-      const fd = new FormData();
-      fd.append("file", file);
-      fd.append("action", "extract");
-      fd.append("fromPage", fromPage || "1");
-      if (toPage) fd.append("toPage", toPage);
-      const r = await fetch("/api/import/pdf", { method: "POST", body: fd });
-      if (!r.ok) {
-        const j = await r.json().catch(() => ({}));
-        throw new Error(j.detail || j.error || `HTTP ${r.status}`);
-      }
-      const j = (await r.json()) as ExtractResp;
-      setExtracted(j);
+      // v1.8.2: 客户端用 pdfjs-dist 提取文字, 不再上传 PDF 到 Function
+      // 绕开 Netlify 6MB 请求体限制, 同时保护用户隐私(PDF 不离开浏览器)
+      const fromN = Number(fromPage || "1") || 1;
+      const toN = toPage ? Number(toPage) : undefined;
+      const result = await extractPdfTextInBrowser(file, {
+        fromPage: fromN,
+        toPage: toN,
+        onProgress: (cur, total) => setExtractProgress({ cur, total })
+      });
+      const resp: ExtractResp = {
+        ok: true,
+        totalPages: result.totalPages,
+        pageRange: result.pageRange,
+        text: result.text,
+        textPerPage: result.textPerPage,
+        isProbablyScanned: result.isProbablyScanned,
+        charCountAfterTrim: result.charCountAfterTrim
+      };
+      setExtracted(resp);
       if (!bookTitle) setBookTitle(file.name.replace(/\.pdf$/i, ""));
       setStage("extracted");
     } catch (e) {
       setError((e as Error).message);
     } finally {
       setExtracting(false);
+      setExtractProgress(null);
     }
   };
 
@@ -226,6 +237,7 @@ export default function VocabularyImportPage() {
           toPage={toPage}
           setToPage={setToPage}
           extracting={extracting}
+          extractProgress={extractProgress}
           onExtract={handleExtract}
         />
       ) : null}
@@ -293,6 +305,7 @@ function UploadStage(props: {
   toPage: string;
   setToPage: (s: string) => void;
   extracting: boolean;
+  extractProgress: { cur: number; total: number } | null;
   onExtract: () => void;
 }) {
   return (
@@ -360,7 +373,11 @@ function UploadStage(props: {
 
       <div className="flex justify-end">
         <Button onClick={props.onExtract} disabled={!props.file || props.extracting}>
-          {props.extracting ? "正在提取..." : "提取文字"}
+          {props.extracting
+            ? props.extractProgress
+              ? `正在提取... ${props.extractProgress.cur}/${props.extractProgress.total} 页`
+              : "正在提取..."
+            : "提取文字"}
         </Button>
       </div>
     </Card>
@@ -388,7 +405,7 @@ function ExtractedStage(props: {
       <Card>
         <CardHeader
           title="第 2 步:文字提取结果"
-          subtitle={`总页数 ${e.totalPages}, 已读取第 ${e.pageRange.from}-${e.pageRange.to} 页, 共 ${e.charCount} 字`}
+          subtitle={`总页数 ${e.totalPages}, 已读取第 ${e.pageRange.from}-${e.pageRange.to} 页, 共 ${e.charCountAfterTrim} 字`}
         />
         {e.isProbablyScanned ? (
           <div className="mt-3 rounded-xl bg-accent-warm/10 p-3 text-sm">
