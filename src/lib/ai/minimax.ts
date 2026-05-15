@@ -162,13 +162,17 @@ export async function chatJSON<T>(
  * 用于「看图识词」场景:用户的 PDF 是扫描件没有文字层,我们把页面渲染成图片
  * 让 vision 模型读图直接结构化。
  *
- * 与 chatComplete 的区别:走 cfg.visionModel,messages 里 content 是数组(text + image_url)。
+ * v1.8.4: 改走 Coding Plan VLM 专用端点(/v1/coding_plan/vlm)。
+ *   - sk-cp-* key 不能调普通 chat completion,会报 2061 not support model
+ *   - 这个专用端点单次只接受 1 张图 + 1 段 prompt,不走 OpenAI messages 数组协议
+ *   - 我们循环每张图独立调用,合并 JSON 数组
+ *   - 失败一张时仍继续, 下游 import 流程已经按"批"做了断点续传
  */
 export async function chatVisionJSON<T>(
   systemPrompt: string,
   userText: string,
   images: Array<{ dataUrl: string; detail?: "low" | "high" | "auto" }>,
-  opts: { temperature?: number; maxTokens?: number } = {}
+  _opts: { temperature?: number; maxTokens?: number } = {}
 ): Promise<T> {
   const cfg = getMiniMaxConfig();
   if (!cfg) {
@@ -180,71 +184,93 @@ export async function chatVisionJSON<T>(
     throw new Error("chatVisionJSON 需要至少一张图片");
   }
 
-  const url = `${cfg.baseUrl}${cfg.chatPath}`;
-  const visionContent: VisionContent[] = [
-    { type: "text", text: userText },
-    ...images.map<VisionContent>((img) => ({
-      type: "image_url",
-      image_url: { url: img.dataUrl, detail: img.detail ?? "high" }
-    }))
-  ];
-  const messages: VisionMessage[] = [
-    { role: "system", content: systemPrompt },
-    { role: "user", content: visionContent }
-  ];
+  // Coding Plan VLM 端点。可通过 MINIMAX_VLM_PATH 覆盖, 默认按 sk-cp- key 走 coding_plan
+  const vlmPath = (process.env.MINIMAX_VLM_PATH || "/coding_plan/vlm").replace(
+    /^\/+/,
+    "/"
+  );
+  const url = `${cfg.baseUrl}${vlmPath}`;
 
-  const body: Record<string, unknown> = {
-    model: cfg.visionModel,
-    messages,
-    temperature: opts.temperature ?? 0.2,
-    max_completion_tokens: opts.maxTokens ?? 4000
-    // 注意:MiniMax 国内站不接受 OpenAI 标准的 response_format: { type: "json_object" },
-    // 会报 'unknown response_format type'。靠 prompt 里的 "Return STRICT JSON" 约束输出 +
-    // stripJsonFence + JSON.parse 兜底解析即可。
-  };
-
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), DEFAULT_TIMEOUT_MS);
-  let resp: Response;
-  try {
-    resp = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${cfg.apiKey}`
-      },
-      body: JSON.stringify(body),
-      signal: ctrl.signal
-    });
-  } finally {
-    clearTimeout(timer);
+  interface VlmResp {
+    output?: string;
+    text?: string;
+    data?: { output?: string; text?: string };
+    base_resp?: { status_code?: number; status_msg?: string };
+    error?: { message?: string };
   }
 
-  if (!resp.ok) {
-    const text = await resp.text().catch(() => "");
-    throw new Error(`MiniMax Vision HTTP ${resp.status}: ${text.slice(0, 500)}`);
+  // 把多张图的识别结果合并到同一个 JSON 结构中
+  // 每次调用只送一张图, prompt 里要求模型返回 STRICT JSON, 我们累积 words[]
+  const allWords: unknown[] = [];
+
+  for (let i = 0; i < images.length; i++) {
+    const img = images[i];
+    const promptForOnePage = `${systemPrompt}\n\n${userText}\n\n这是第 ${i + 1}/${images.length} 张扫描页,请直接返回 STRICT JSON,格式: {"words":[...]}; 没识别到任何词条就返回 {"words":[]}.`;
+
+    const body = {
+      prompt: promptForOnePage,
+      image_url: img.dataUrl
+    };
+
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), DEFAULT_TIMEOUT_MS);
+    let resp: Response;
+    try {
+      resp = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cfg.apiKey}`,
+          "MM-API-Source": "Minimax-MCP"
+        },
+        body: JSON.stringify(body),
+        signal: ctrl.signal
+      });
+    } finally {
+      clearTimeout(timer);
+    }
+
+    if (!resp.ok) {
+      const text = await resp.text().catch(() => "");
+      throw new Error(
+        `MiniMax VLM HTTP ${resp.status} (page ${i + 1}/${images.length}): ${text.slice(0, 500)}`
+      );
+    }
+    const data = (await resp.json()) as VlmResp;
+    if (data.base_resp?.status_code && data.base_resp.status_code !== 0) {
+      throw new Error(
+        `MiniMax VLM error ${data.base_resp.status_code} (page ${i + 1}/${images.length}): ${data.base_resp.status_msg || ""}`
+      );
+    }
+    if (data.error?.message) {
+      throw new Error(
+        `MiniMax VLM error (page ${i + 1}/${images.length}): ${data.error.message}`
+      );
+    }
+    const content =
+      data.output ||
+      data.text ||
+      data.data?.output ||
+      data.data?.text ||
+      "";
+    if (!content || !content.trim()) {
+      // 这一页没识别出来, 跳过, 不让整批失败
+      continue;
+    }
+    const cleaned = stripJsonFence(content);
+    try {
+      const parsed = JSON.parse(cleaned) as { words?: unknown[] };
+      if (Array.isArray(parsed.words)) {
+        allWords.push(...parsed.words);
+      }
+    } catch {
+      // 单页 JSON 解析失败也跳过, 不让整批失败
+      continue;
+    }
   }
-  const data = (await resp.json()) as OpenAIChatResp;
-  if (data.error?.message) {
-    throw new Error(`MiniMax Vision error: ${data.error.message}`);
-  }
-  if (data.base_resp?.status_code && data.base_resp.status_code !== 0) {
-    throw new Error(
-      `MiniMax Vision error ${data.base_resp.status_code}: ${data.base_resp.status_msg || ""}`
-    );
-  }
-  const content = data.choices?.[0]?.message?.content;
-  if (!content || !content.trim()) {
-    throw new Error("MiniMax Vision 返回内容为空");
-  }
-  const cleaned = stripJsonFence(content);
-  try {
-    return JSON.parse(cleaned) as T;
-  } catch (e) {
-    throw new Error(
-      `MiniMax Vision JSON 解析失败: ${(e as Error).message} | raw: ${content.slice(0, 300)}`
-    );
-  }
+
+  // 套到外面再 stringify -> parse, 让调用方按统一的 { words: [...] } 结构拿
+  return JSON.parse(JSON.stringify({ words: allWords })) as T;
 }
 
 export function stripJsonFence(s: string): string {
