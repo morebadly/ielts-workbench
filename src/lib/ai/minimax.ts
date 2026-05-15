@@ -32,7 +32,7 @@ export function getMiniMaxConfig(): MiniMaxConfig | null {
     baseUrl,
     chatPath,
     textModel: process.env.MINIMAX_TEXT_MODEL || "MiniMax-M2.7",
-    visionModel: process.env.MINIMAX_VISION_MODEL || "MiniMax-Vision-01",
+    visionModel: process.env.MINIMAX_VISION_MODEL || "MiniMax-Text-01",
     ttsModel: process.env.MINIMAX_TTS_MODEL || "speech-02-hd"
   };
 }
@@ -246,7 +246,9 @@ export async function chatVisionJSON<T>(
 }
 
 export function stripJsonFence(s: string): string {
-  const trimmed = s.trim();
+  // 先剥离 reasoning model 漏出来的 <think>...</think> 块,避免污染 JSON 解析
+  const noThink = s.replace(/<think>[\s\S]*?<\/think>/gi, "").trim();
+  const trimmed = noThink;
   const fenceJson = trimmed.match(/```json\s*([\s\S]*?)```/i);
   if (fenceJson) return fenceJson[1].trim();
   const fenceAny = trimmed.match(/```\s*([\s\S]*?)```/);
