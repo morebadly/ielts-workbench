@@ -184,9 +184,10 @@ export async function chatVisionJSON<T>(
     throw new Error("chatVisionJSON 需要至少一张图片");
   }
 
-  // 走 MiniMax 国内站标准的 chatcompletion_v2 端点
-  // 默认 cfg.chatPath 已经是 /text/chatcompletion_v2
-  const url = `${cfg.baseUrl}${cfg.chatPath}`;
+  // Token Plan 套餐里 chatcompletion_v2 不处理 image_url(M2.7 是纯文本 reasoning 模型)
+  // 必须走专用 vlm 端点; 官方 FAQ: "each API-vlm request deducts 3 M2.7 requests"
+  // 端点接受 { prompt, image_url } 简单格式, 不是 OpenAI messages 数组
+  const url = `${cfg.baseUrl}/coding_plan/vlm`;
 
   const allWords: unknown[] = [];
 
@@ -223,32 +224,19 @@ export async function chatVisionJSON<T>(
 
 ${userText || ""}`;
 
-    // 标准 chatcompletion_v2 请求体, content 是数组(text + image_url)
+    // vlm 端点的请求体格式: 扁平的 prompt + image_url, 不是 OpenAI messages 数组
+    // image_url 接受 data:image/jpeg;base64,... 或 https URL
+    // systemPrompt 拼到 prompt 头部, 因为 vlm 没有独立 system 字段
+    const fullPrompt = `${systemPrompt}\n\n${userTextOne}`;
     const body = {
-      model: cfg.visionModel,
-      messages: [
-        {
-          role: "system",
-          name: "MiniMax AI",
-          content: systemPrompt
-        },
-        {
-          role: "user",
-          name: "User",
-          content: [
-            { type: "text", text: userTextOne },
-            { type: "image_url", image_url: { url: img.dataUrl } }
-          ]
-        }
-      ],
-      temperature: 0.1,
-      tokens_to_generate: 4096
+      prompt: fullPrompt,
+      image_url: img.dataUrl
     };
 
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), DEFAULT_TIMEOUT_MS);
     console.log(
-      `[vision] POST ${url} model=${cfg.visionModel} page=${i + 1}/${images.length} imgBytes=${img.dataUrl.length}`
+      `[vision] POST ${url} model=vlm page=${i + 1}/${images.length} imgBytes=${img.dataUrl.length}`
     );
     let resp: Response;
     try {
@@ -256,7 +244,8 @@ ${userText || ""}`;
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${cfg.apiKey}`
+          Authorization: `Bearer ${cfg.apiKey}`,
+          "MM-API-Source": "Minimax-MCP"
         },
         body: JSON.stringify(body),
         signal: ctrl.signal
@@ -278,9 +267,15 @@ ${userText || ""}`;
     console.log(
       `[vision] HTTP ${resp.status} bodyLen=${rawText.length} bodyHead=${rawText.slice(0, 600)}`
     );
-    let data: OpenAIChatResp & { reply?: string };
+    let data: {
+      content?: string;
+      reply?: string;
+      choices?: Array<{ message?: { content?: string | null } }>;
+      base_resp?: { status_code?: number; status_msg?: string };
+      error?: { message?: string };
+    };
     try {
-      data = JSON.parse(rawText) as OpenAIChatResp & { reply?: string };
+      data = JSON.parse(rawText);
     } catch (e) {
       throw new Error(
         `MiniMax Vision 响应非 JSON (page ${i + 1}/${images.length}): ${(e as Error).message} | head=${rawText.slice(0, 300)}`
@@ -297,10 +292,12 @@ ${userText || ""}`;
       );
     }
 
-    // chatcompletion_v2 标准字段:choices[0].message.content
-    // 兼容字段:reply (老版兜底)
+    // vlm 端点返回 { content, base_resp }; 兜底 reply / choices 字段以防版本差异
     const content =
-      data.choices?.[0]?.message?.content || data.reply || "";
+      data.content ||
+      data.reply ||
+      data.choices?.[0]?.message?.content ||
+      "";
 
     if (!content || !content.trim()) {
       const dumped = JSON.stringify(data).slice(0, 800);
