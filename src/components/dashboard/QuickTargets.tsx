@@ -12,7 +12,6 @@ interface Props {
 }
 
 const ROWS: Array<{ key: keyof DailyTaskTargets; label: string; step: number }> = [
-  { key: "newWords", label: "今日新词", step: 5 },
   { key: "reviewWords", label: "今日复习词", step: 5 },
   { key: "dictation", label: "默写练习", step: 5 },
   { key: "vocabularyArticle", label: "词汇文章", step: 1 },

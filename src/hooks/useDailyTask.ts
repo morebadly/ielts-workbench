@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { storage } from "@/lib/storage";
 import type { DailyTaskProgress, DailyTaskTargets, UserProgress } from "@/types";
 import { todayKey, daysBetween } from "@/lib/utils";
+import { getActiveBook } from "@/data/mockWords";
 
 interface UseDailyTaskState {
   user: UserProgress;
@@ -83,9 +84,16 @@ export function useDailyTask(): UseDailyTaskState {
     setProgress(storage.getDailyProgress());
   };
 
+  // 「今日新词」目标永远 = 当前词书的 wordsPerDay (单一真相来源, 避免与学习页 1/30 错位)
+  const effectiveTargets = useMemo<DailyTaskTargets>(() => {
+    const book = getActiveBook(user.activeBookId);
+    const perDay = book.wordsPerDay || 30;
+    return { ...user.preferences.targets, newWords: perDay };
+  }, [user.activeBookId, user.preferences.targets]);
+
   return {
     user,
-    targets: user.preferences.targets,
+    targets: effectiveTargets,
     progress,
     bump,
     setUser,

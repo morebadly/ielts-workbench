@@ -81,7 +81,6 @@ export default function SettingsPage() {
   };
 
   const fields: Array<{ key: keyof DailyTaskTargets; label: string }> = [
-    { key: "newWords", label: "今日新词" },
     { key: "reviewWords", label: "今日复习词" },
     { key: "dictation", label: "默写练习" },
     { key: "vocabularyArticle", label: "词汇文章" },
@@ -163,6 +162,9 @@ export default function SettingsPage() {
 
       <Card className="mb-4">
         <h3 className="section-title">每日任务量</h3>
+        <p className="mt-1 text-xs muted">
+          「今日新词」目标 = 上方「每天学多少词」, 改那一项就行,这里不重复设置。
+        </p>
         <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
           {fields.map((f) => (
             <div key={f.key}>
