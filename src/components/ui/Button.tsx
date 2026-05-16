@@ -19,10 +19,12 @@ export function Button({
   full,
   className,
   children,
+  type,
   ...rest
 }: PropsWithChildren<Props>) {
   return (
     <button
+      type={type ?? "button"}
       className={cn(MAP[variant], full && "w-full", className)}
       {...rest}
     >

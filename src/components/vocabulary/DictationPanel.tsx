@@ -7,7 +7,13 @@ import { AISourceBadge } from "@/components/ui/AISourceBadge";
 import { AIResultNotice } from "@/components/ai/AIResultNotice";
 import { speak } from "@/lib/tts";
 import { gradeFillInSentence, gradeSentence, gradeWord } from "@/lib/grading";
-import { callAI, type AISource, type DictationFeedbackData } from "@/lib/ai/client";
+import {
+  callAI,
+  type AISource,
+  type DictationFeedbackData,
+  type GenerateExampleData
+} from "@/lib/ai/client";
+import { storage } from "@/lib/storage";
 import type { DictationMode, Word } from "@/types";
 
 interface Props {
@@ -46,6 +52,55 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
 
   const current = words[idx];
 
+  // v1.10: 扫描书没有原始例句, 默写"句子挖空"和"听句子默写"模式必须有例句,
+  // 这里按需走 generateExample (AI) + storage 缓存, 跟 WordCard 用同一份缓存。
+  const [genSentence, setGenSentence] = useState<string>("");
+  const [genLoading, setGenLoading] = useState(false);
+
+  useEffect(() => {
+    if (!current) return;
+    setGenSentence("");
+    if (current.exampleSentence) return;
+    // 先查缓存
+    const cached = storage.getWordExamples()[current.id];
+    if (cached) {
+      setGenSentence(cached.exampleSentence);
+      return;
+    }
+    // 不在挖空 / 听句模式不预生成, 节省 token
+    if (mode !== "fillInSentence" && mode !== "listenWriteSentence") return;
+    let cancelled = false;
+    (async () => {
+      setGenLoading(true);
+      const fallback = (): GenerateExampleData => ({
+        exampleSentence: `${current.word} is commonly used in academic English.`,
+        exampleTranslation: `${current.chineseMeaning.split(/[;,。;,]/)[0] || current.word} 在学术英语中很常用。`,
+        memoryTip: ""
+      });
+      const r = await callAI(
+        "generateExample",
+        {
+          word: current.word,
+          chineseMeaning: current.chineseMeaning,
+          phonetic: current.phonetic
+        },
+        fallback
+      );
+      if (cancelled) return;
+      setGenSentence(r.data.exampleSentence);
+      setGenLoading(false);
+      if (r.source === "minimax") {
+        storage.setWordExample(current.id, r.data);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [current?.id, mode]);
+
+  // 最终用于展示/朗读/挖空的句子: 优先原始, 其次 AI 生成
+  const effectiveSentence = current?.exampleSentence || genSentence || "";
+
   useEffect(() => {
     setInput("");
     setFeedback(null);
@@ -53,10 +108,10 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
     setAiSource(null);
     if (mode === "listenWriteWord" && current) {
       speak(current.word, { voice });
-    } else if (mode === "listenWriteSentence" && current) {
-      speak(current.exampleSentence, { voice });
+    } else if (mode === "listenWriteSentence" && current && effectiveSentence) {
+      speak(effectiveSentence, { voice });
     }
-  }, [idx, mode, current?.id]);
+  }, [idx, mode, current?.id, effectiveSentence]);
 
   const display = useMemo(() => {
     if (!current) return null;
@@ -88,29 +143,48 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
         return (
           <div>
             <p className="muted text-sm">补全空缺的单词。</p>
-            <p className="mt-2 font-serif text-[15px] leading-relaxed">
-              {makeBlank(current.exampleSentence, current.word)}
-            </p>
+            {effectiveSentence ? (
+              <p className="mt-2 font-serif text-[15px] leading-relaxed">
+                {makeBlank(effectiveSentence, current.word)}
+              </p>
+            ) : (
+              <p className="mt-2 text-sm muted">
+                {genLoading
+                  ? "正在为这个词生成例句..."
+                  : "这本书的词没有原始例句, 准备调用 AI 生成中..."}
+              </p>
+            )}
           </div>
         );
       case "listenWriteSentence":
         return (
           <div className="space-y-2">
-            <p className="muted text-sm">听整句,完整地默写下来。</p>
-            <Button variant="soft" onClick={() => speak(current.exampleSentence, { voice })}>
+            <p className="muted text-sm">
+              {effectiveSentence
+                ? "听整句,完整地默写下来。"
+                : genLoading
+                ? "正在为这个词生成例句..."
+                : "这本书的词没有原始例句, 准备调用 AI 生成中..."}
+            </p>
+            <Button
+              variant="soft"
+              disabled={!effectiveSentence}
+              onClick={() => speak(effectiveSentence, { voice })}
+            >
               ▶ 再听一次
             </Button>
             <Button
               variant="ghost"
               className="ml-2"
-              onClick={() => speak(current.exampleSentence, { voice, rate: 0.7 })}
+              disabled={!effectiveSentence}
+              onClick={() => speak(effectiveSentence, { voice, rate: 0.7 })}
             >
               慢速
             </Button>
           </div>
         );
     }
-  }, [mode, current, voice]);
+  }, [mode, current, voice, effectiveSentence, genLoading]);
 
   if (!current) return null;
 
@@ -121,12 +195,12 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
     } else if (mode === "fillInSentence") {
       result = gradeFillInSentence(input, current.word);
     } else {
-      result = gradeSentence(input, current.exampleSentence);
+      result = gradeSentence(input, effectiveSentence);
     }
     setFeedback({
       correct: result.correct,
       expected:
-        mode === "listenWriteSentence" ? current.exampleSentence : current.word,
+        mode === "listenWriteSentence" ? effectiveSentence : current.word,
       reason: result.reason
     });
     onResult(result.correct);
@@ -135,7 +209,7 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
   const handleAIExplain = async () => {
     if (!feedback || feedback.correct || !current) return;
     setAiSource("loading");
-    const expected = mode === "listenWriteSentence" ? current.exampleSentence : current.word;
+    const expected = mode === "listenWriteSentence" ? effectiveSentence : current.word;
     const fallback = (): DictationFeedbackData => ({
       correct: false,
       diff: feedback.reason || "拼写或顺序与正确答案不一致",

@@ -379,40 +379,43 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
           }}
         />
       </div>
-      {slice.length ? (
-        <div className="overflow-auto">
-          <table className="w-full text-xs">
-            <thead className="bg-bg-soft text-ink-soft">
-              <tr>
-                <th className="px-2 py-1.5 text-left">#</th>
-                <th className="px-2 py-1.5 text-left">word</th>
-                <th className="px-2 py-1.5 text-left">phonetic</th>
-                <th className="px-2 py-1.5 text-left">中文</th>
-                <th className="px-2 py-1.5 text-left">Day</th>
-              </tr>
-            </thead>
-            <tbody>
-              {slice.map((w, i) => (
-                <tr key={w.id} className="border-t border-black/5">
-                  <td className="px-2 py-1 text-ink-soft tabular-nums">
-                    {safePage * PAGE_SIZE + i + 1}
-                  </td>
-                  <td className="px-2 py-1 font-medium">{w.word}</td>
-                  <td className="px-2 py-1 font-mono text-ink-soft">
-                    {w.phonetic}
-                  </td>
-                  <td className="px-2 py-1">{w.chineseMeaning}</td>
-                  <td className="px-2 py-1 tabular-nums text-ink-soft">
-                    {w.bookDay}
-                  </td>
+      {/* 固定 min-height 防止翻页时高度跳变, 浏览器 scroll restoration 把视口拉走 */}
+      <div className="min-h-[600px]">
+        {slice.length ? (
+          <div className="overflow-auto">
+            <table className="w-full text-xs">
+              <thead className="bg-bg-soft text-ink-soft">
+                <tr>
+                  <th className="px-2 py-1.5 text-left">#</th>
+                  <th className="px-2 py-1.5 text-left">word</th>
+                  <th className="px-2 py-1.5 text-left">phonetic</th>
+                  <th className="px-2 py-1.5 text-left">中文</th>
+                  <th className="px-2 py-1.5 text-left">Day</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      ) : (
-        <div className="py-4 text-center text-xs muted">没有匹配的词</div>
-      )}
+              </thead>
+              <tbody>
+                {slice.map((w, i) => (
+                  <tr key={w.id} className="border-t border-black/5">
+                    <td className="px-2 py-1 text-ink-soft tabular-nums">
+                      {safePage * PAGE_SIZE + i + 1}
+                    </td>
+                    <td className="px-2 py-1 font-medium">{w.word}</td>
+                    <td className="px-2 py-1 font-mono text-ink-soft">
+                      {w.phonetic}
+                    </td>
+                    <td className="px-2 py-1">{w.chineseMeaning}</td>
+                    <td className="px-2 py-1 tabular-nums text-ink-soft">
+                      {w.bookDay}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <div className="py-4 text-center text-xs muted">没有匹配的词</div>
+        )}
+      </div>
       {totalPages > 1 ? (
         <div className="mt-2 flex items-center justify-center gap-2 text-xs">
           <Button
