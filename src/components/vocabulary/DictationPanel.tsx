@@ -96,6 +96,8 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
     return () => {
       cancelled = true;
     };
+    // 例句生成只跟当前词的 id 和模式相关, current 整体引用变化无需重跑
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current?.id, mode]);
 
   // 最终用于展示/朗读/挖空的句子: 优先原始, 其次 AI 生成
@@ -111,6 +113,8 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
     } else if (mode === "listenWriteSentence" && current && effectiveSentence) {
       speak(effectiveSentence, { voice });
     }
+    // 切词/切模式时重置输入并自动朗读, voice 是用户偏好不需要触发自动朗读
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, mode, current?.id, effectiveSentence]);
 
   const display = useMemo(() => {

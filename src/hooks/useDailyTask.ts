@@ -47,6 +47,8 @@ export function useDailyTask(): UseDailyTaskState {
       setUserState(next);
     }
     setProgress(storage.getDailyProgress());
+    // 仅挂载时初始化连续学习计数和今日进度, user 后续变化由其他 effect 处理
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

@@ -339,6 +339,8 @@ function loadBookWords(book: VocabularyBook): Word[] {
 }
 
 function BookWordsPreview({ book }: { book: VocabularyBook }) {
+  // book.id 唯一标识一本书, 同 id 的 book 对象内容必相同, 不需要 book 整体作依赖
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const allWords = useMemo(() => loadBookWords(book), [book.id]);
   const [page, setPage] = useState(0);
   const [filter, setFilter] = useState("");
