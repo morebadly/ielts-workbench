@@ -197,6 +197,19 @@ export default function VocabularyImportPage() {
         ? effectiveResume
         : null;
 
+    console.log("[vision-extract] start", {
+      hasArg: !!resumeFromState,
+      hasState: !!visionResume,
+      stateMatch:
+        visionResume &&
+        visionResume.fileName === file.name &&
+        visionResume.fileSize === file.size,
+      useResume: !!useResume,
+      startBatch: useResume?.nextBatchIndex ?? 0,
+      stateNextBatchIndex: visionResume?.nextBatchIndex,
+      stateAccumulated: visionResume?.accumulatedWords?.length
+    });
+
     const finalTitle =
       useResume?.bookTitle ||
       bookTitle.trim() ||
@@ -549,7 +562,12 @@ export default function VocabularyImportPage() {
           onExtract={handleExtract}
           visionExtracting={visionExtracting}
           visionProgress={visionProgress}
-          onVisionExtract={handleVisionExtract}
+          onVisionExtract={() => handleVisionExtract()}
+          onVisionResume={() => {
+            // 显式把当前 visionResume 传过去, 防 fallback 因 state 时序问题失效
+            if (visionResume) handleVisionExtract(visionResume);
+            else handleVisionExtract();
+          }}
           visionResume={visionResume}
           clearVisionResume={() => saveVisionResume(null)}
         />
@@ -623,6 +641,7 @@ function UploadStage(props: {
   visionExtracting: boolean;
   visionProgress: { phase: "render" | "ai"; cur: number; total: number } | null;
   onVisionExtract: () => void;
+  onVisionResume: () => void;
   visionResume: {
     fileName: string;
     fileSize: number;
@@ -734,7 +753,7 @@ function UploadStage(props: {
           <div className="mt-2 flex gap-2">
             <Button
               variant="primary"
-              onClick={props.onVisionExtract}
+              onClick={props.onVisionResume}
               disabled={!canResume || busy}
             >
               {busy ? "识别中..." : "继续识别"}
