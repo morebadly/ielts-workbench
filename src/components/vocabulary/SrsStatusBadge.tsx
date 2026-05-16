@@ -1,6 +1,7 @@
 "use client";
 
 import type { WordProgress } from "@/types";
+import { WORD_STATUS_LABEL } from "@/types";
 import { computeSrsDisplay, getSrsBadgeColor } from "@/lib/srsDisplay";
 
 interface Props {
@@ -18,6 +19,8 @@ const QUALITY_LABEL: Record<number, string> = {
   4: "想起来",
   5: "轻松"
 };
+
+const STATUS_TEXT = WORD_STATUS_LABEL;
 
 export function SrsStatusBadge({ progress, variant = "compact", className }: Props) {
   const d = computeSrsDisplay(progress);
@@ -38,6 +41,8 @@ export function SrsStatusBadge({ progress, variant = "compact", className }: Pro
   const difficultyLabel =
     easeNum >= 2.5 ? "简单" : easeNum >= 2.0 ? "普通" : "难";
   const tooltipParts = [
+    `状态: ${STATUS_TEXT[progress.status] ?? progress.status}`,
+    `累计复习 ${progress.reviewCount} 次`,
     d.intervalDays > 0 ? `间隔 ${d.intervalDays} 天` : "首次学习",
     `ease ${d.ease}(${difficultyLabel})`,
     d.repetitions > 0 ? `连对 ${d.repetitions} 次` : null,
@@ -51,15 +56,12 @@ export function SrsStatusBadge({ progress, variant = "compact", className }: Pro
 
   return (
     <div
-      className={`flex flex-wrap items-center gap-1.5 text-xs ${className ?? ""}`}
+      className={`flex flex-nowrap items-center gap-1.5 overflow-hidden text-xs ${className ?? ""}`}
       title={tooltip}
     >
-      <span className={`pill ${c.bg} ${c.text}`}>{d.dueLabel}</span>
-      <span className="pill bg-bg-soft text-ink-soft">难度{difficultyLabel}</span>
-      {d.lastReviewedHuman ? (
-        <span className="muted">{d.lastReviewedHuman}复习</span>
-      ) : null}
-      <span className="muted text-[10px]">(悬停看详情)</span>
+      <span className={`pill shrink-0 ${c.bg} ${c.text}`}>{d.dueLabel}</span>
+      <span className="pill shrink-0 bg-bg-soft text-ink-soft">难度{difficultyLabel}</span>
+      <span className="muted truncate text-[11px]">悬停看详情</span>
     </div>
   );
 }

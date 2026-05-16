@@ -99,7 +99,25 @@ export default function SettingsPage() {
       </div>
 
       <Card className="mb-4">
-        <h3 className="section-title">当前进度</h3>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h3 className="section-title">当前进度</h3>
+          <Button
+            variant="soft"
+            onClick={() => {
+              if (
+                window.confirm(
+                  "确定清空今日完成进度吗?\n(只清空今日的完成数字,不影响词条本身的学习记录和 SRS 间隔)"
+                )
+              ) {
+                storage.resetTodayProgress();
+                refresh();
+                setSavedAt(Date.now());
+              }
+            }}
+          >
+            清空今日完成数
+          </Button>
+        </div>
         <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
           <div>
             <div className="text-xs muted">当前词书</div>
@@ -134,28 +152,9 @@ export default function SettingsPage() {
             </div>
           </div>
         </div>
-        <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-black/5 pt-3">
-          <span className="text-xs muted">今日完成进度</span>
-          <Button
-            variant="ghost"
-            onClick={() => {
-              if (
-                window.confirm(
-                  "确定清空今日完成进度吗?\n(只清空今日的完成数字,不影响词条本身的学习记录和 SRS 间隔)"
-                )
-              ) {
-                storage.resetTodayProgress();
-                refresh();
-                setSavedAt(Date.now());
-              }
-            }}
-          >
-            清空今日完成数
-          </Button>
-          <span className="text-[11px] muted">
-            适合反复测试时归零;不影响 SRS 复习节奏
-          </span>
-        </div>
+        <p className="mt-3 text-[11px] muted">
+          清空今日完成数:适合反复测试时归零,只清今天的完成进度,不影响 SRS 复习节奏。
+        </p>
       </Card>
 
       <div className="mb-4">

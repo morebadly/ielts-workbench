@@ -15,7 +15,6 @@ import {
   type GenerateExampleData
 } from "@/lib/ai/client";
 import type { Word, WordProgress } from "@/types";
-import { WORD_STATUS_LABEL } from "@/types";
 import { applyFeedback, type Feedback } from "@/lib/srs";
 import { SrsStatusBadge } from "@/components/vocabulary/SrsStatusBadge";
 import { storage } from "@/lib/storage";
@@ -153,8 +152,6 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
           </div>
           <div className="mt-1 flex flex-wrap items-center gap-2 text-xs muted">
             <span className="pill">{word.wordList}</span>
-            <span className="pill">{WORD_STATUS_LABEL[progress.status]}</span>
-            <span className="pill">复习 {progress.reviewCount} 次</span>
             <SrsStatusBadge progress={progress} variant="compact" />
           </div>
         </div>

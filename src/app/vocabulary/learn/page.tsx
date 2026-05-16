@@ -57,9 +57,11 @@ function VocabularyLearnInner() {
     });
     setProgressMap(map);
 
+    // new 模式: 始终走完整今日 30 个词, 已会的可点"我会了"秒过, 进度条更直观 (1/30 → 30/30)
+    // review 模式: 只挑到期复习的, 进度条按到期数算
     const list =
       mode === "new"
-        ? dayWords.filter((w) => map[w.id].status === "new" || map[w.id].status === "seen")
+        ? dayWords
         : dayWords.filter((w) => isDueForReview(map[w.id]));
     setQueue(list.length ? list : dayWords);
     setIdx(0);
@@ -102,6 +104,10 @@ function VocabularyLearnInner() {
     ? progressMap[current.id] || initWordProgress(current.id)
     : null;
 
+  // 进度条永远显示 当前位置 / queue.length, new 模式 queue 就是今日 30 个, 自然得到 1/30
+  const totalForBar = queue.length;
+  const valueForBar = Math.min(idx + (finished ? 0 : 1), totalForBar);
+
   const handleFeedback = (next: WordProgress) => {
     if (!current) return;
     storage.setWordProgress(next);
@@ -136,9 +142,9 @@ function VocabularyLearnInner() {
       <ProgressBar
         className="mb-4"
         showLabel
-        label="本组进度"
-        value={Math.min(idx + (finished ? 0 : 1), queue.length)}
-        max={queue.length}
+        label={mode === "review" ? "本组复习进度" : "今日新词进度"}
+        value={valueForBar}
+        max={totalForBar}
       />
 
       {current && currentProgress ? (
