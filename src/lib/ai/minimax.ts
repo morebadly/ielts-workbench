@@ -247,6 +247,9 @@ ${userText || ""}`;
 
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), DEFAULT_TIMEOUT_MS);
+    console.log(
+      `[vision] POST ${url} model=${cfg.visionModel} page=${i + 1}/${images.length} imgBytes=${img.dataUrl.length}`
+    );
     let resp: Response;
     try {
       resp = await fetch(url, {
@@ -264,13 +267,25 @@ ${userText || ""}`;
 
     if (!resp.ok) {
       const text = await resp.text().catch(() => "");
+      console.error(
+        `[vision] HTTP ${resp.status} body=${text.slice(0, 800)}`
+      );
       throw new Error(
         `MiniMax Vision HTTP ${resp.status} (page ${i + 1}/${images.length}): ${text.slice(0, 500)}`
       );
     }
-    const data = (await resp.json()) as OpenAIChatResp & {
-      reply?: string;
-    };
+    const rawText = await resp.text();
+    console.log(
+      `[vision] HTTP ${resp.status} bodyLen=${rawText.length} bodyHead=${rawText.slice(0, 600)}`
+    );
+    let data: OpenAIChatResp & { reply?: string };
+    try {
+      data = JSON.parse(rawText) as OpenAIChatResp & { reply?: string };
+    } catch (e) {
+      throw new Error(
+        `MiniMax Vision 响应非 JSON (page ${i + 1}/${images.length}): ${(e as Error).message} | head=${rawText.slice(0, 300)}`
+      );
+    }
     if (data.base_resp?.status_code && data.base_resp.status_code !== 0) {
       throw new Error(
         `MiniMax Vision error ${data.base_resp.status_code} (page ${i + 1}/${images.length}): ${data.base_resp.status_msg || ""}`
@@ -298,10 +313,19 @@ ${userText || ""}`;
     try {
       const parsed = JSON.parse(cleaned) as { words?: unknown[] };
       if (Array.isArray(parsed.words)) {
+        console.log(
+          `[vision] page ${i + 1} parsed words=${parsed.words.length}`
+        );
         allWords.push(...parsed.words);
+      } else {
+        console.warn(
+          `[vision] page ${i + 1} parsed but no .words array, keys=${Object.keys(parsed).join(",")}`
+        );
       }
-    } catch {
-      // 单页 JSON 解析失败跳过, 不让整批失败
+    } catch (e) {
+      console.warn(
+        `[vision] page ${i + 1} JSON parse failed: ${(e as Error).message} | content head=${content.slice(0, 300)}`
+      );
       continue;
     }
   }
