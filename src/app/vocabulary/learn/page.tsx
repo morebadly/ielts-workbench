@@ -126,7 +126,7 @@ function VocabularyLearnInner() {
     <Container>
       <PageHeader
         title={mode === "review" ? "复习今日单词" : "学习今日新词"}
-        subtitle={`${activeBook.name} · Day ${user.currentDay}${current ? ` · ${current.wordList}` : ""}`}
+        subtitle={`${activeBook.name} · Day ${user.currentDay}${current ? ` · ${current.wordList}` : ""} · [debug: dayWords=${dayWords.length} queue=${queue.length} mode=${mode}]`}
         right={
           <Link href="/vocabulary">
             <Button variant="ghost">返回单词首页</Button>
