@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-15T23:51:42.534Z",
+  "updatedAt": "2026-05-16T23:47:23.339Z",
   "items": [
+    {
+      "id": "news-2026-05-16-1-tech-now",
+      "date": "2026-05-16",
+      "title": "Tech Now",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.co.uk/iplayer/episode/m002wp83?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-16T01:00:00.000Z",
+      "topic": "technology",
+      "originalSummary": "Adrienne Murray explores how new 3D imaging is supporting heart procedures.",
+      "learningSummary": "Recent advances in three‑dimensional imaging are reshaping the way clinicians approach cardiac interventions. By generating precise volumetric models of the heart from multimodal scans, surgeons can visualise complex anatomical structures before making any incisions. This capability enables more accurate pre‑operative planning, reduces the margin for error during procedures, and can shorten operation times. In addition, real‑time 3D navigation allows for minimally invasive techniques, which typically result in less postoperative pain and faster recovery for patients. The integration of these imaging modalities also facilitates better training for junior doctors, as they can interact with realistic digital replicas of hearts during simulated rehearsals. Overall, the adoption of 3D cardiac imaging represents a significant technological leap that enhances diagnostic certainty, operative safety, and patient outcomes.",
+      "vocabulary": [
+        {
+          "word": "volumetric",
+          "meaning": "relating to the measurement of volume or three‑dimensional space",
+          "example": "The volumetric data from the CT scan provided a detailed view of the cardiac chambers."
+        },
+        {
+          "word": "modality",
+          "meaning": "a particular method or mode of imaging or treatment",
+          "example": "MRI is one imaging modality that can be combined with ultrasound for comprehensive analysis."
+        },
+        {
+          "word": "intraoperative",
+          "meaning": "occurring or performed during the course of a surgical operation",
+          "example": "The intraoperative 3D guidance system helped the surgeon navigate around delicate tissues."
+        },
+        {
+          "word": "reconstruct",
+          "meaning": "to rebuild or recreate a structure or image in a detailed and accurate form",
+          "example": "Software can reconstruct a patient‑specific heart model from multiple scan slices."
+        },
+        {
+          "word": "minimally invasive",
+          "meaning": "describing surgical techniques that require only small incisions or no incisions at all",
+          "example": "Minimally invasive procedures often lead to quicker healing and fewer complications."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what primary advantage does 3D imaging provide before a cardiac operation?",
+          "answer": "It allows clinicians to generate precise volumetric models of the heart, enabling accurate pre‑operative planning and reducing the margin for error."
+        },
+        {
+          "question": "What can be inferred about the impact of real‑time 3D navigation on the duration of heart procedures?",
+          "answer": "Real‑time 3D navigation is likely to shorten operation times because surgeons can locate anatomical landmarks quickly and avoid unnecessary dissection."
+        },
+        {
+          "question": "In the sentence 'The integration of these imaging modalities also facilitates better training for junior doctors,' what does the phrase 'facilitates' mean in context?",
+          "answer": "It means 'makes easier' or 'enables' the process of training junior doctors."
+        }
+      ],
+      "writingPrompt": "In recent years, sophisticated three‑dimensional imaging technologies have been increasingly incorporated into medical practice, especially in cardiac care. Discuss the advantages and disadvantages of this trend and present your own viewpoint. Give reasons for your answer and include relevant examples from your knowledge or experience.",
+      "listeningText": "Today we examine how cutting‑edge three‑dimensional imaging is transforming heart surgery. By converting standard scans into detailed volumetric representations, medical teams can study the precise shape of a patient's heart before they even enter the operating theatre. This pre‑operative visualization enables surgeons to plan the safest approach, anticipate potential complications, and decide whether a minimally invasive route is suitable. During the operation, real‑time 3D guidance helps navigate complex structures, reducing the need for large incisions. As a result, patients often experience less pain, lower infection risk, and a faster return to daily activities. Moreover, the digital heart models serve as invaluable teaching tools, allowing trainee surgeons to rehearse procedures on realistic simulations. In summary, 3D imaging is proving to be a pivotal innovation that enhances precision, safety, and education in cardiac medicine.",
+      "createdAt": "2026-05-16T23:46:43.455Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-16-2-rare-plant-makes-comeback-from-brink-of-extinction",
+      "date": "2026-05-16",
+      "title": "Rare plant makes comeback from brink of extinction",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/c4g0w899j5yo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-16T06:18:48.000Z",
+      "topic": "environment",
+      "originalSummary": "The Kentish milkwort has seen a seven-fold increase since conservation efforts in 2013.",
+      "learningSummary": "The Kentish milkwort, a once-endangered wildflower native to southeastern England, has experienced a remarkable resurgence over the past decade. Conservation initiatives launched in 2013 have contributed to a sevenfold increase in the plant's population, marking a significant victory for environmental preservation efforts. The flower, historically found in chalk grassland habitats, had faced severe decline due to agricultural intensification and habitat fragmentation. Experts attribute this success to targeted habitat management programs and collaborative efforts between conservation groups and local landowners. The revival demonstrates how strategic intervention can reverse the fortunes of species on the verge of extinction. However, botanists caution that continued monitoring and protection remain essential to ensure the long-term survival of this botanical success story, as populations remain vulnerable to environmental changes.",
+      "vocabulary": [
+        {
+          "word": "resurgence",
+          "meaning": "a renewed or growing occurrence after a period of little activity",
+          "example": "The resurgence of the species demonstrates the effectiveness of recent conservation measures."
+        },
+        {
+          "word": "habitat fragmentation",
+          "meaning": "the process by which large continuous habitats are divided into smaller, isolated patches",
+          "example": "Habitat fragmentation has severely impacted many native plant species across Europe."
+        },
+        {
+          "word": "botanical",
+          "meaning": "relating to the scientific study of plants and their characteristics",
+          "example": "The botanical survey revealed several previously unknown species in the region."
+        },
+        {
+          "word": "conservation",
+          "meaning": "the practice of protecting natural environments and wildlife from harm",
+          "example": "Conservation efforts have helped reverse the decline of numerous endangered species."
+        },
+        {
+          "word": "endangered",
+          "meaning": "at risk of permanent extinction due to severely declining population numbers",
+          "example": "The endangered status of the flower prompted urgent protective measures."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what was the primary cause of the Kentish milkwort's initial decline?",
+          "answer": "The plant faced severe decline primarily due to agricultural intensification and habitat fragmentation."
+        },
+        {
+          "question": "What can reasonably be inferred about the effectiveness of conservation efforts based on the passage?",
+          "answer": "It can be inferred that the collaborative conservation strategies implemented since 2013 have proven highly effective in reversing the plant's decline."
+        },
+        {
+          "question": "What does the phrase \"botanical success story\" in the final sentence suggest about the Kentish milkwort's current status?",
+          "answer": "It suggests that while the plant has made significant recovery, it still requires ongoing protection rather than being completely safe from extinction."
+        }
+      ],
+      "writingPrompt": "In recent years, conservation programmes have successfully revived several endangered species. However, some people argue that resources would be better spent addressing human needs rather than protecting wildlife. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
+      "listeningText": "Good morning. Today I'd like to discuss the remarkable recovery of the Kentish milkwort, a wildflower that was once on the brink of extinction. In 2013, conservationists launched a major initiative to protect this plant, which had suffered severely from habitat loss. The programme involved careful management of chalk grassland areas and partnerships with local landowners. The results have been extraordinary. We've witnessed a sevenfold increase in the milkwort's population, representing one of the most successful botanical recoveries in recent British history. This case demonstrates how targeted conservation efforts can effectively restore species that seemed destined for extinction. However, scientists warn that we cannot become complacent. While this success is encouraging, the plant remains dependent on continued habitat protection and careful monitoring. The Kentish milkwort's story offers valuable lessons about the importance of preserving biodiversity for future generations.",
+      "createdAt": "2026-05-16T23:47:13.418Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-16-3-i-tried-the-uk-s-saltiest-sandwich-here-s-what-i-learned",
+      "date": "2026-05-16",
+      "title": "I tried the UK's 'saltiest' sandwich - here's what I learned",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/cd9pylq25y9o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-15T23:56:15.000Z",
+      "topic": "health",
+      "originalSummary": "Health correspondent James Gallagher absorbs more than the recommended daily limit in just one meal to find out how salt affects our bodies.",
+      "learningSummary": "A BBC health correspondent recently conducted a personal experiment to investigate the physiological effects of excessive salt consumption. James Gallagher consumed a sandwich marketed as the UK's saltiest meal, deliberately exceeding the recommended daily sodium intake in a single serving. His investigation aimed to demonstrate how dietary salt impacts human health, particularly its relationship to blood pressure regulation and cardiovascular wellbeing. Medical guidelines typically advise adults to limit sodium intake to approximately two grams daily, yet many processed foods contain substantially higher concentrations. The correspondent monitored his body's immediate responses, documenting how excess salt affects fluid balance and blood pressure levels. This practical demonstration illustrates broader public health concerns regarding hidden sodium in everyday meals. Healthcare professionals repeatedly warn that prolonged overconsumption of sodium significantly increases the risk of developing hypertension, a condition that strains the heart and circulatory system. Such journalistic experiments help publicise often-overlooked nutritional information.",
+      "vocabulary": [
+        {
+          "word": "sodium",
+          "meaning": "the chemical element found in salt that is essential but harmful in excess",
+          "example": "Health authorities recommend limiting sodium intake to reduce cardiovascular risk."
+        },
+        {
+          "word": "cardiovascular",
+          "meaning": "relating to the heart and blood vessels",
+          "example": "Excessive salt consumption can lead to serious cardiovascular complications."
+        },
+        {
+          "word": "hypertension",
+          "meaning": "abnormally high blood pressure, a common health condition",
+          "example": "Doctors frequently advise reducing salt to manage hypertension."
+        },
+        {
+          "word": "dietary",
+          "meaning": "related to the food and drink consumed by a person",
+          "example": "Dietary habits play a crucial role in determining long-term health outcomes."
+        },
+        {
+          "word": "recommended intake",
+          "meaning": "the suggested amount considered safe or beneficial for consumption",
+          "example": "The recommended daily intake of sodium is approximately two grams for adults."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What was the main purpose of Gallagher's experiment with the saltiest sandwich?",
+          "answer": "To discover how excessive salt consumption affects the human body by exceeding the recommended daily limit in one meal."
+        },
+        {
+          "question": "What health condition is most directly associated with prolonged overconsumption of sodium, according to medical professionals?",
+          "answer": "Hypertension, which causes strain on the heart and circulatory system."
+        },
+        {
+          "question": "In the context of the passage, what does 'hidden sodium' in paragraph three refer to?",
+          "answer": "Salt content that consumers are unaware of because it is present in processed and everyday foods without obvious indication."
+        }
+      ],
+      "writingPrompt": "In many countries, excessive salt consumption has become a significant public health concern. Some people argue that governments should implement stricter regulations on salt content in processed foods, while others believe individuals should be responsible for making their own dietary choices. Discuss both views and give your own opinion.",
+      "listeningText": "Good evening, I'm James Gallagher, and tonight I want to share an eye-opening experiment I conducted with my health. I tried the so-called saltiest sandwich in the United Kingdom. You might wonder why anyone would voluntarily exceed the recommended daily sodium limit. The answer is simple: I wanted to understand exactly what happens inside our bodies when we consume too much salt. Medical guidelines suggest adults should not exceed two grams of sodium daily. However, this single sandwich contained nearly three times that amount. Within hours of eating, I noticed my body responding in various ways. My blood pressure readings became noticeably elevated. Healthcare professionals have long warned that such spikes, when occurring regularly, can lead to serious cardiovascular problems. This experiment demonstrates why public health campaigns increasingly focus on raising awareness about hidden salt in our daily diets.",
+      "createdAt": "2026-05-16T23:47:23.338Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-05-15-1-ai-could-put-people-off-tech-jobs-and-hurt-the-economy-warns",
       "date": "2026-05-15",
