@@ -47,7 +47,11 @@ export function VersionCheck() {
           "检测到新版本,刷新页面以使用最新功能?\n(取消则本次会话内不再提示)"
         );
         if (accept) {
-          window.location.reload();
+          // 用 query string cache-buster 跳转, 强制绕开任何中间缓存层
+          // (浏览器 / nginx proxy_cache / CDN), 比 location.reload() 更可靠
+          const url = new URL(window.location.href);
+          url.searchParams.set("_v", remoteVersion);
+          window.location.href = url.toString();
         } else {
           dismissedRef.current = remoteVersion;
           try {
