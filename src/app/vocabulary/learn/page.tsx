@@ -50,6 +50,7 @@ function VocabularyLearnInner() {
   const [idx, setIdx] = useState(0);
 
   useEffect(() => {
+    if (!mounted) return;
     const map = storage.getWordProgressMap();
     dayWords.forEach((w) => {
       if (!map[w.id]) map[w.id] = initWordProgress(w.id);
@@ -70,7 +71,8 @@ function VocabularyLearnInner() {
         href: `/vocabulary/learn?mode=${mode}`
       }
     });
-  }, [mode, user.activeBookId, user.currentDay]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mounted, mode, user.activeBookId, user.currentDay, dayWords.length]);
 
   if (!mounted) {
     return (
