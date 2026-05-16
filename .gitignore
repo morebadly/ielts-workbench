@@ -11,3 +11,6 @@ uploads/
 tmp/
 *.pdf
 !public/**/*.pdf
+
+# 构建产物
+public/version.txt
