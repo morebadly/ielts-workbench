@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
@@ -22,10 +22,16 @@ const MODES: DictationMode[] = [
 ];
 
 export default function DictationPage() {
+  // hydration 安全: 同 learn 页, mounted gate 防 #425
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const { user, bump, setUser } = useDailyTask();
   const dayWords = useMemo(
-    () => getWordsByDay(user.activeBookId, user.currentDay),
-    [user.activeBookId, user.currentDay]
+    () => (mounted ? getWordsByDay(user.activeBookId, user.currentDay) : []),
+    [mounted, user.activeBookId, user.currentDay]
   );
   const [mode, setMode] = useState<DictationMode | null>(null);
   const [stats, setStats] = useState({ correct: 0, wrong: 0 });

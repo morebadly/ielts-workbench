@@ -28,14 +28,21 @@ function VocabularyLearnInner() {
   const params = useSearchParams();
   const mode: Mode = params.get("mode") === "review" ? "review" : "new";
 
+  // hydration 安全: SSR 没法读 localStorage,会和客户端首次渲染不一致 → React 报 #425 直接拒绝挂载。
+  // 用 mounted gate 保证 SSR 和客户端首屏完全一致(都渲染 loading), 挂载后再读 storage。
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const { user, bump, setUser } = useDailyTask();
   const activeBook = useMemo(
     () => getActiveBook(user.activeBookId),
     [user.activeBookId]
   );
   const dayWords = useMemo(
-    () => getWordsByDay(user.activeBookId, user.currentDay),
-    [user.activeBookId, user.currentDay]
+    () => (mounted ? getWordsByDay(user.activeBookId, user.currentDay) : []),
+    [mounted, user.activeBookId, user.currentDay]
   );
 
   const [progressMap, setProgressMap] = useState<Record<string, WordProgress>>({});
@@ -64,6 +71,17 @@ function VocabularyLearnInner() {
       }
     });
   }, [mode, user.activeBookId, user.currentDay]);
+
+  if (!mounted) {
+    return (
+      <Container>
+        <PageHeader title="单词学习" />
+        <Card>
+          <p>加载中...</p>
+        </Card>
+      </Container>
+    );
+  }
 
   if (queue.length === 0) {
     return (
