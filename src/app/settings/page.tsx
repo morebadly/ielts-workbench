@@ -134,6 +134,28 @@ export default function SettingsPage() {
             </div>
           </div>
         </div>
+        <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-black/5 pt-3">
+          <span className="text-xs muted">今日完成进度</span>
+          <Button
+            variant="ghost"
+            onClick={() => {
+              if (
+                window.confirm(
+                  "确定清空今日完成进度吗?\n(只清空今日的完成数字,不影响词条本身的学习记录和 SRS 间隔)"
+                )
+              ) {
+                storage.resetTodayProgress();
+                refresh();
+                setSavedAt(Date.now());
+              }
+            }}
+          >
+            清空今日完成数
+          </Button>
+          <span className="text-[11px] muted">
+            适合反复测试时归零;不影响 SRS 复习节奏
+          </span>
+        </div>
       </Card>
 
       <div className="mb-4">

@@ -274,6 +274,23 @@ export const storage = {
     write(KEYS.dailyProgress, all);
     return next;
   },
+  /** v1.9: 把今天的完成度全部清零 (不影响历史记录, 不影响 word-progress) */
+  resetTodayProgress(): DailyTaskProgress {
+    const date = todayKey();
+    const all = read<Record<string, DailyTaskProgress>>(KEYS.dailyProgress, {});
+    const empty: DailyTaskProgress = {
+      date,
+      newWordsDone: 0,
+      reviewWordsDone: 0,
+      dictationDone: 0,
+      vocabularyArticleDone: 0,
+      writingSentencesDone: 0,
+      listeningSessionsDone: 0
+    };
+    all[date] = empty;
+    write(KEYS.dailyProgress, all);
+    return empty;
+  },
 
   exportAll(): string {
     if (!isBrowser()) return "{}";

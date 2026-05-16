@@ -142,12 +142,24 @@ function VocabularyLearnInner() {
       />
 
       {current && currentProgress ? (
-        <WordCard
-          word={current}
-          progress={currentProgress}
-          voice={user.preferences.voice}
-          onFeedback={handleFeedback}
-        />
+        <>
+          <WordCard
+            word={current}
+            progress={currentProgress}
+            voice={user.preferences.voice}
+            onFeedback={handleFeedback}
+          />
+          {idx > 0 ? (
+            <div className="mt-3 flex justify-center">
+              <Button
+                variant="ghost"
+                onClick={() => setIdx(Math.max(0, idx - 1))}
+              >
+                ← 上一题
+              </Button>
+            </div>
+          ) : null}
+        </>
       ) : (
         <Card>
           <h3 className="section-title">这一组完成。</h3>
