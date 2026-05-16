@@ -5,25 +5,31 @@ import { ProgressBar } from "@/components/ui/ProgressBar";
 import type { DailyTaskProgress, DailyTaskTargets, UserProgress } from "@/types";
 import { getActiveBook } from "@/data/mockWords";
 
-function totalDone(p: DailyTaskProgress): number {
-  return (
-    p.newWordsDone +
-    p.reviewWordsDone +
-    p.dictationDone +
-    p.vocabularyArticleDone +
-    p.writingSentencesDone +
-    p.listeningSessionsDone
-  );
+const TASK_PAIRS: Array<{
+  doneKey: keyof Omit<DailyTaskProgress, "date">;
+  targetKey: keyof DailyTaskTargets;
+}> = [
+  { doneKey: "newWordsDone", targetKey: "newWords" },
+  { doneKey: "reviewWordsDone", targetKey: "reviewWords" },
+  { doneKey: "dictationDone", targetKey: "dictation" },
+  { doneKey: "vocabularyArticleDone", targetKey: "vocabularyArticle" },
+  { doneKey: "writingSentencesDone", targetKey: "writingSentences" },
+  { doneKey: "listeningSessionsDone", targetKey: "listeningSessions" }
+];
+
+/** 已完成的任务项数 (单位: 项, 不是词) — 任意一项 done >= target 视为完成 */
+function countDoneTasks(p: DailyTaskProgress, t: DailyTaskTargets): number {
+  return TASK_PAIRS.reduce((acc, { doneKey, targetKey }) => {
+    const target = t[targetKey];
+    if (target <= 0) return acc; // 目标 0 的任务直接当作不计入
+    return acc + (p[doneKey] >= target ? 1 : 0);
+  }, 0);
 }
 
-function totalTarget(t: DailyTaskTargets): number {
-  return (
-    t.newWords +
-    t.reviewWords +
-    t.dictation +
-    t.vocabularyArticle +
-    t.writingSentences +
-    t.listeningSessions
+function countActiveTasks(t: DailyTaskTargets): number {
+  return TASK_PAIRS.reduce(
+    (acc, { targetKey }) => acc + (t[targetKey] > 0 ? 1 : 0),
+    0
   );
 }
 
@@ -36,8 +42,8 @@ export function ProgressCards({
   progress: DailyTaskProgress;
   targets: DailyTaskTargets;
 }) {
-  const done = totalDone(progress);
-  const total = totalTarget(targets);
+  const done = countDoneTasks(progress, targets);
+  const total = countActiveTasks(targets);
   const book = getActiveBook(user.activeBookId);
   return (
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -62,9 +68,9 @@ export function ProgressCards({
       </Card>
 
       <Card>
-        <div className="text-sm muted">今日完成进度</div>
+        <div className="text-sm muted">今日完成项</div>
         <div className="mt-1 text-lg font-semibold tabular-nums">
-          {done}/{total}
+          {done}/{total} 项
         </div>
         <ProgressBar className="mt-3" value={done} max={total} />
       </Card>

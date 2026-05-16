@@ -5,7 +5,7 @@ import { Container, PageHeader } from "@/components/layout/Container";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { storage } from "@/lib/storage";
-import { useDailyTask } from "@/hooks/useDailyTask";
+import { useDailyTask, notifyStorageUpdated } from "@/hooks/useDailyTask";
 import { getActiveBook } from "@/data/mockWords";
 import { BookManager } from "@/components/settings/BookManager";
 import { AuthCard } from "@/components/sync/AuthCard";
@@ -25,6 +25,7 @@ export default function SettingsPage() {
   >(null);
   const [importError, setImportError] = useState<string | null>(null);
   const [savedAt, setSavedAt] = useState<number | null>(null);
+  const [resetAt, setResetAt] = useState<number | null>(null);
 
   const activeBook = getActiveBook(user.activeBookId);
 
@@ -100,22 +101,28 @@ export default function SettingsPage() {
       <Card className="mb-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h3 className="section-title">当前进度</h3>
-          <Button
-            variant="soft"
-            onClick={() => {
-              if (
-                window.confirm(
-                  "确定清空今日完成进度吗?\n(只清空今日的完成数字,不影响词条本身的学习记录和 SRS 间隔)"
-                )
-              ) {
-                storage.resetTodayProgress();
-                refresh();
-                setSavedAt(Date.now());
-              }
-            }}
-          >
-            清空今日完成数
-          </Button>
+          <div className="flex items-center gap-2">
+            {resetAt && Date.now() - resetAt < 3000 ? (
+              <span className="text-sm text-brand-700">✓ 今日完成数已清空</span>
+            ) : null}
+            <Button
+              variant="soft"
+              onClick={() => {
+                if (
+                  window.confirm(
+                    "确定清空今日完成进度吗?\n(只清空今日的完成数字,不影响词条本身的学习记录和 SRS 间隔)"
+                  )
+                ) {
+                  storage.resetTodayProgress();
+                  refresh();
+                  notifyStorageUpdated();
+                  setResetAt(Date.now());
+                }
+              }}
+            >
+              清空今日完成数
+            </Button>
+          </div>
         </div>
         <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
           <div>
