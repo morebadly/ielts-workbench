@@ -178,13 +178,23 @@ export default function VocabularyImportPage() {
     resumeFromState?: NonNullable<typeof visionResume>
   ) => {
     if (!file) return setError("请先选择 PDF 文件");
-    // 注意: 只在按钮点击时才会传入 resumeFromState; 而 UI 已经用 canResume disable 了
-    // 不一致的"继续识别"按钮, 所以这里不再抛错误 banner, 直接默认从头跑(防御性兜底)。
+    // bug fix: 如果调用方没显式传 resume,但 state 里有可用的且文件匹配,自动接续
+    // 这样 UploadStage 黄框「继续识别」按钮和底部「AI 看图识别」路径都能正确续传
+    // 否则会走到 useResume=null 分支,从第 1 批重新打,浪费 vlm 配额还把进度覆盖回去
+    const fallbackResume =
+      !resumeFromState &&
+      visionResume &&
+      visionResume.fileName === file.name &&
+      visionResume.fileSize === file.size
+        ? visionResume
+        : undefined;
+    const effectiveResume = resumeFromState ?? fallbackResume;
+
     const useResume =
-      resumeFromState &&
-      resumeFromState.fileName === file.name &&
-      resumeFromState.fileSize === file.size
-        ? resumeFromState
+      effectiveResume &&
+      effectiveResume.fileName === file.name &&
+      effectiveResume.fileSize === file.size
+        ? effectiveResume
         : null;
 
     const finalTitle =
