@@ -126,6 +126,24 @@ export function BookManager({ user, onChange }: Props) {
     refresh();
   };
 
+  const renameBook = (book: VocabularyBook) => {
+    if (book.id === MOCK_BOOK.id) return;
+    const next = window.prompt("新词书名称:", book.name);
+    if (next === null) return;
+    const trimmed = next.trim();
+    if (!trimmed) {
+      alert("名称不能为空");
+      return;
+    }
+    if (trimmed === book.name) return;
+    if (books.some((b) => b.id !== book.id && b.name === trimmed)) {
+      alert("已经有同名词书,换一个名字");
+      return;
+    }
+    storage.updateBookMeta(book.id, { name: trimmed });
+    refresh();
+  };
+
   const downloadTemplate = () => {
     const blob = new Blob([CSV_TEMPLATE], { type: "text/csv;charset=utf-8" });
     const url = URL.createObjectURL(blob);
@@ -193,6 +211,11 @@ export function BookManager({ user, onChange }: Props) {
                 {!isActive ? (
                   <Button variant="soft" onClick={() => switchBook(b.id)}>
                     切到这本
+                  </Button>
+                ) : null}
+                {!isBuiltin ? (
+                  <Button variant="ghost" onClick={() => renameBook(b)}>
+                    重命名
                   </Button>
                 ) : null}
                 {!isBuiltin ? (
