@@ -34,6 +34,14 @@ const vocabArticle = z.object({
   body: z.string()
 }) satisfies z.ZodType<VocabArticleData>;
 
+const generateExample = z.object({
+  exampleSentence: z.string().min(5),
+  exampleTranslation: z.string().min(2),
+  memoryTip: z.string().min(2)
+});
+
+export type GenerateExampleData = z.infer<typeof generateExample>;
+
 const writingHighlight = z.object({
   excerpt: z.string(),
   category: z.enum(["grammar", "vocabulary", "coherence", "task_response"]),
@@ -106,6 +114,7 @@ export const AI_SCHEMAS = {
   sentenceFeedback,
   dictationFeedback,
   vocabArticle,
+  generateExample,
   writingTask1,
   writingTask2,
   newsLearning

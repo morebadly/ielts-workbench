@@ -11,12 +11,14 @@ import {
   callAI,
   type AISource,
   type PronunciationData,
-  type SentenceFeedbackData
+  type SentenceFeedbackData,
+  type GenerateExampleData
 } from "@/lib/ai/client";
 import type { Word, WordProgress } from "@/types";
 import { WORD_STATUS_LABEL } from "@/types";
 import { applyFeedback, type Feedback } from "@/lib/srs";
 import { SrsStatusBadge } from "@/components/vocabulary/SrsStatusBadge";
+import { storage } from "@/lib/storage";
 
 interface Props {
   word: Word;
@@ -39,6 +41,11 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
   const [sentenceReason, setSentenceReason] = useState<string | undefined>();
   const [sentenceErrorCode, setSentenceErrorCode] = useState<string | undefined>();
 
+  // v1.9: AI 按需生成的例句 (扫描书没有例句时使用)
+  const [genExample, setGenExample] = useState<GenerateExampleData | null>(null);
+  const [genSource, setGenSource] = useState<AISource | "loading" | null>(null);
+  const [genReason, setGenReason] = useState<string | undefined>();
+
   useEffect(() => {
     setShowGuide(false);
     setGuideData(null);
@@ -46,7 +53,42 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
     setSentence("");
     setSentenceData(null);
     setSentenceSource(null);
+    // 切词时优先从缓存读已生成的例句
+    const cached = storage.getWordExamples()[word.id];
+    if (cached) {
+      setGenExample(cached);
+      setGenSource("minimax");
+    } else {
+      setGenExample(null);
+      setGenSource(null);
+    }
+    setGenReason(undefined);
   }, [word.id]);
+
+  const handleGenerateExample = async () => {
+    if (genSource === "loading") return;
+    setGenSource("loading");
+    const fallback = (): GenerateExampleData => ({
+      exampleSentence: `${word.word} is commonly used in academic English.`,
+      exampleTranslation: `${word.chineseMeaning.split(/[;,。;,]/)[0] || word.word} 在学术英语中很常用。`,
+      memoryTip: `${word.word}: 记住核心释义"${word.chineseMeaning.split(/[;,。;,]/)[0] || ""}"。`
+    });
+    const r = await callAI(
+      "generateExample",
+      {
+        word: word.word,
+        chineseMeaning: word.chineseMeaning,
+        phonetic: word.phonetic
+      },
+      fallback
+    );
+    setGenExample(r.data);
+    setGenSource(r.source);
+    setGenReason(r.reason);
+    if (r.source === "minimax") {
+      storage.setWordExample(word.id, r.data);
+    }
+  };
 
   const handleFb = (fb: Feedback) => {
     onFeedback(applyFeedback(progress, fb));
@@ -142,26 +184,76 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
       </div>
 
       <div className="rounded-xl bg-bg-soft/60 p-4">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <p className="min-w-0 flex-1 font-serif text-[15px] leading-relaxed">&ldquo;{word.exampleSentence}&rdquo;</p>
-          <div className="flex shrink-0 gap-2">
+        {word.exampleSentence ? (
+          <>
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <p className="min-w-0 flex-1 font-serif text-[15px] leading-relaxed">&ldquo;{word.exampleSentence}&rdquo;</p>
+              <div className="flex shrink-0 gap-2">
+                <Button
+                  variant="soft"
+                  onClick={() => speak(word.exampleSentence, { voice })}
+                >
+                  ▶ 例句
+                </Button>
+                <Button
+                  variant="ghost"
+                  onClick={() => speak(word.exampleSentence, { voice, rate: 0.7 })}
+                >
+                  慢速
+                </Button>
+              </div>
+            </div>
+            {word.exampleTranslation ? (
+              <p className="mt-2 text-sm muted">{word.exampleTranslation}</p>
+            ) : null}
+          </>
+        ) : genExample ? (
+          <>
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <p className="min-w-0 flex-1 font-serif text-[15px] leading-relaxed">
+                &ldquo;{genExample.exampleSentence}&rdquo;
+              </p>
+              <div className="flex shrink-0 gap-2">
+                <Button
+                  variant="soft"
+                  onClick={() => speak(genExample.exampleSentence, { voice })}
+                >
+                  ▶ 例句
+                </Button>
+                <Button
+                  variant="ghost"
+                  onClick={() => speak(genExample.exampleSentence, { voice, rate: 0.7 })}
+                >
+                  慢速
+                </Button>
+              </div>
+            </div>
+            <p className="mt-2 text-sm muted">{genExample.exampleTranslation}</p>
+            <div className="mt-2 flex items-center gap-2 text-xs">
+              <span className="text-brand-700">💡 {genExample.memoryTip}</span>
+              {genSource ? <AISourceBadge source={genSource === "loading" ? "minimax" : genSource} reason={genReason} /> : null}
+              <button
+                type="button"
+                className="ml-auto text-xs muted hover:text-brand-700"
+                onClick={handleGenerateExample}
+                disabled={genSource === "loading"}
+              >
+                {genSource === "loading" ? "生成中..." : "重新生成"}
+              </button>
+            </div>
+          </>
+        ) : (
+          <div className="flex flex-wrap items-center justify-between gap-3 py-2">
+            <span className="text-sm muted">扫描书没有提供例句</span>
             <Button
               variant="soft"
-              onClick={() => speak(word.exampleSentence, { voice })}
+              onClick={handleGenerateExample}
+              disabled={genSource === "loading"}
             >
-              ▶ 例句
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => speak(word.exampleSentence, { voice, rate: 0.7 })}
-            >
-              慢速
+              {genSource === "loading" ? "生成中..." : "让 AI 写一句例句"}
             </Button>
           </div>
-        </div>
-        {word.exampleTranslation ? (
-          <p className="mt-2 text-sm muted">{word.exampleTranslation}</p>
-        ) : null}
+        )}
       </div>
 
       <div>

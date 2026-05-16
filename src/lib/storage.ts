@@ -16,6 +16,7 @@ const PREFIX = "ielts-wb:";
 const KEYS = {
   user: PREFIX + "user-progress",
   wordProgress: PREFIX + "word-progress",
+  wordExamples: PREFIX + "word-examples",
   dictation: PREFIX + "dictation-results",
   writing: PREFIX + "writing-practice",
   review: PREFIX + "review-items",
@@ -143,6 +144,22 @@ export const storage = {
     const map = this.getWordProgressMap();
     map[p.wordId] = p;
     write(KEYS.wordProgress, map);
+  },
+
+  /** v1.9: AI 按需生成的例句 (wordId → {sentence, translation, memoryTip}) */
+  getWordExamples(): Record<
+    string,
+    { exampleSentence: string; exampleTranslation: string; memoryTip: string }
+  > {
+    return read(KEYS.wordExamples, {});
+  },
+  setWordExample(
+    wordId: string,
+    data: { exampleSentence: string; exampleTranslation: string; memoryTip: string }
+  ): void {
+    const map = this.getWordExamples();
+    map[wordId] = data;
+    write(KEYS.wordExamples, map);
   },
 
   getDictationResults(): DictationResult[] {

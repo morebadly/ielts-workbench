@@ -33,6 +33,12 @@ export interface VocabArticleData {
   body: string;
 }
 
+export interface GenerateExampleData {
+  exampleSentence: string;
+  exampleTranslation: string;
+  memoryTip: string;
+}
+
 export interface WritingHighlightData {
   excerpt: string;
   category: "grammar" | "vocabulary" | "coherence" | "task_response";
@@ -72,6 +78,7 @@ type CapabilityMap = {
   sentenceFeedback: SentenceFeedbackData;
   dictationFeedback: DictationFeedbackData;
   vocabArticle: VocabArticleData;
+  generateExample: GenerateExampleData;
   writingTask1: WritingTask1Data;
   writingTask2: WritingTask2Data;
 };

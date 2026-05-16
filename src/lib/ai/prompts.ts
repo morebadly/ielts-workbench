@@ -66,6 +66,31 @@ Return STRICT JSON:
 }
 `.trim(),
 
+  generateExample: (
+    word: string,
+    chineseMeaning: string,
+    phonetic: string
+  ) => `
+You are an IELTS vocabulary tutor writing example sentences for a Chinese learner.
+
+Target word: "${word}"
+Phonetic: ${phonetic || "(unknown)"}
+Chinese meaning: ${chineseMeaning}
+
+Return STRICT JSON, no markdown, no preface:
+{
+  "exampleSentence": "one natural English sentence at IELTS level (band 6.5-7.5), 12-22 words, MUST contain the target word in its base sense",
+  "exampleTranslation": "对应的中文翻译, 简洁地道",
+  "memoryTip": "一句中文助记/词根/搭配提示, 30 字以内"
+}
+
+Rules:
+- The sentence should sound like academic / formal English suitable for IELTS Writing or Speaking, not childish.
+- Do NOT use rare or obscure collocations; pick the most common natural usage.
+- If the target word is a verb, conjugate naturally (past/present/etc.)
+- Do not wrap in any code fence.
+`.trim(),
+
   writingTask1: (promptText: string, essay: string) => `
 You are an IELTS Academic Writing examiner grading Task 1.
 
@@ -310,6 +335,7 @@ export type AICapability =
   | "sentenceFeedback"
   | "dictationFeedback"
   | "vocabArticle"
+  | "generateExample"
   | "writingTask1"
   | "writingTask2"
   | "structureWords"

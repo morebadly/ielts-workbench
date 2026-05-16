@@ -46,6 +46,12 @@ function buildPrompt(body: RequestBody): string {
           ? (p.words as Array<{ word: string; chineseMeaning: string }>)
           : []
       );
+    case "generateExample":
+      return PROMPTS.generateExample(
+        String(p.word ?? ""),
+        String(p.chineseMeaning ?? ""),
+        String(p.phonetic ?? "")
+      );
     case "writingTask1":
       return PROMPTS.writingTask1(String(p.promptText ?? ""), String(p.essay ?? ""));
     case "writingTask2":
