@@ -1,17 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { storage } from "@/lib/storage";
-import { getAllBooks, MOCK_BOOK } from "@/data/mockWords";
+import { getAllBooks, MOCK_BOOK, MOCK_WORDS } from "@/data/mockWords";
 import {
   BookParseError,
   CSV_TEMPLATE,
   parseAuto,
   type ParsedBook
 } from "@/lib/bookImport";
-import type { VocabularyBook, UserProgress } from "@/types";
+import type { VocabularyBook, UserProgress, Word } from "@/types";
 import { notifyStorageUpdated } from "@/hooks/useDailyTask";
 
 interface Props {
@@ -26,6 +26,7 @@ export function BookManager({ user, onChange }: Props) {
   const [preview, setPreview] = useState<ParsedBook | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [warnings, setWarnings] = useState<string[]>([]);
+  const [viewBookId, setViewBookId] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -148,14 +149,14 @@ export function BookManager({ user, onChange }: Props) {
           const isBuiltin = b.id === MOCK_BOOK.id;
           const isEnabled = enabledIds.includes(b.id);
           return (
-            <div
-              key={b.id}
-              className={
-                isActive
-                  ? "flex items-center justify-between rounded-xl border border-brand-300 bg-brand-50 px-3 py-2.5"
-                  : "flex items-center justify-between rounded-xl border border-black/5 bg-bg-soft/50 px-3 py-2.5"
-              }
-            >
+            <div key={b.id} className="space-y-2">
+              <div
+                className={
+                  isActive
+                    ? "flex items-center justify-between rounded-xl border border-brand-300 bg-brand-50 px-3 py-2.5"
+                    : "flex items-center justify-between rounded-xl border border-black/5 bg-bg-soft/50 px-3 py-2.5"
+                }
+              >
               <label className="flex min-w-0 flex-1 cursor-pointer items-start gap-3">
                 <input
                   type="checkbox"
@@ -180,6 +181,15 @@ export function BookManager({ user, onChange }: Props) {
                 </div>
               </label>
               <div className="flex shrink-0 gap-2">
+                <Button
+                  variant="ghost"
+                  onClick={() =>
+                    setViewBookId(viewBookId === b.id ? null : b.id)
+                  }
+                  title="查看这本书里的所有词"
+                >
+                  {viewBookId === b.id ? "收起" : "查看词汇"}
+                </Button>
                 {!isActive ? (
                   <Button variant="soft" onClick={() => switchBook(b.id)}>
                     切到这本
@@ -191,6 +201,10 @@ export function BookManager({ user, onChange }: Props) {
                   </Button>
                 ) : null}
               </div>
+            </div>
+            {viewBookId === b.id ? (
+              <BookWordsPreview book={b} />
+            ) : null}
             </div>
           );
         })}
@@ -283,5 +297,120 @@ export function BookManager({ user, onChange }: Props) {
         ) : null}
       </div>
     </Card>
+  );
+}
+
+const PAGE_SIZE = 30;
+
+function loadBookWords(book: VocabularyBook): Word[] {
+  if (book.id === MOCK_BOOK.id) {
+    return MOCK_WORDS.filter((w) => w.bookId === book.id).slice().sort((a, b) => {
+      if (a.bookDay !== b.bookDay) return a.bookDay - b.bookDay;
+      return a.order - b.order;
+    });
+  }
+  return storage.getBookWords(book.id).slice().sort((a, b) => {
+    if (a.bookDay !== b.bookDay) return a.bookDay - b.bookDay;
+    return a.order - b.order;
+  });
+}
+
+function BookWordsPreview({ book }: { book: VocabularyBook }) {
+  const allWords = useMemo(() => loadBookWords(book), [book.id]);
+  const [page, setPage] = useState(0);
+  const [filter, setFilter] = useState("");
+  useEffect(() => {
+    setPage(0);
+    setFilter("");
+  }, [book.id]);
+
+  const filtered = useMemo(() => {
+    const q = filter.trim().toLowerCase();
+    if (!q) return allWords;
+    return allWords.filter(
+      (w) =>
+        w.word.toLowerCase().includes(q) ||
+        w.chineseMeaning.toLowerCase().includes(q)
+    );
+  }, [allWords, filter]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const safePage = Math.min(page, totalPages - 1);
+  const slice = filtered.slice(safePage * PAGE_SIZE, (safePage + 1) * PAGE_SIZE);
+
+  return (
+    <div className="rounded-xl border border-black/5 bg-bg-card p-3">
+      <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+        <div className="text-xs muted">
+          共 {allWords.length} 词
+          {filter ? ` · 筛选后 ${filtered.length} 词` : ""} · 第 {safePage + 1}/
+          {totalPages} 页
+        </div>
+        <input
+          className="input h-8 w-48 text-xs"
+          placeholder="搜词或中文..."
+          value={filter}
+          onChange={(e) => {
+            setFilter(e.target.value);
+            setPage(0);
+          }}
+        />
+      </div>
+      {slice.length ? (
+        <div className="overflow-auto">
+          <table className="w-full text-xs">
+            <thead className="bg-bg-soft text-ink-soft">
+              <tr>
+                <th className="px-2 py-1.5 text-left">#</th>
+                <th className="px-2 py-1.5 text-left">word</th>
+                <th className="px-2 py-1.5 text-left">phonetic</th>
+                <th className="px-2 py-1.5 text-left">中文</th>
+                <th className="px-2 py-1.5 text-left">Day</th>
+              </tr>
+            </thead>
+            <tbody>
+              {slice.map((w, i) => (
+                <tr key={w.id} className="border-t border-black/5">
+                  <td className="px-2 py-1 text-ink-soft tabular-nums">
+                    {safePage * PAGE_SIZE + i + 1}
+                  </td>
+                  <td className="px-2 py-1 font-medium">{w.word}</td>
+                  <td className="px-2 py-1 font-mono text-ink-soft">
+                    {w.phonetic}
+                  </td>
+                  <td className="px-2 py-1">{w.chineseMeaning}</td>
+                  <td className="px-2 py-1 tabular-nums text-ink-soft">
+                    {w.bookDay}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <div className="py-4 text-center text-xs muted">没有匹配的词</div>
+      )}
+      {totalPages > 1 ? (
+        <div className="mt-2 flex items-center justify-center gap-2 text-xs">
+          <Button
+            variant="ghost"
+            onClick={() => setPage(Math.max(0, safePage - 1))}
+            disabled={safePage === 0}
+          >
+            ← 上一页
+          </Button>
+          <span className="muted tabular-nums">
+            {safePage + 1} / {totalPages}
+          </span>
+          <Button
+            variant="ghost"
+            onClick={() => setPage(Math.min(totalPages - 1, safePage + 1))}
+            disabled={safePage >= totalPages - 1}
+          >
+            下一页 →
+          </Button>
+        </div>
+      ) : null}
+    </div>
   );
 }
