@@ -17,6 +17,7 @@ export default function SettingsPage() {
   const [targets, setTargets] = useState<DailyTaskTargets>(user.preferences.targets);
   const [voice, setVoice] = useState<"uk" | "us">(user.preferences.voice);
   const [day, setDay] = useState<number>(user.currentDay);
+  const [wordsPerDay, setWordsPerDay] = useState<number>(30);
   const [exportText, setExportText] = useState("");
   const [importText, setImportText] = useState("");
   const [importResult, setImportResult] = useState<
@@ -31,12 +32,25 @@ export default function SettingsPage() {
     setTargets(user.preferences.targets);
     setVoice(user.preferences.voice);
     setDay(user.currentDay);
-  }, [user]);
+    setWordsPerDay(activeBook.wordsPerDay || 30);
+  }, [user, activeBook.wordsPerDay]);
 
   const save = () => {
+    // B 方案: 改了 wordsPerDay 时,按"已学词数"反算 currentDay
+    // 已学词数 = (旧 currentDay - 1) * 旧 wordsPerDay (近似:还没学到当天 = day-1)
+    const oldPerDay = activeBook.wordsPerDay || 30;
+    const newPerDay = Math.max(1, wordsPerDay);
+    let newDay = Math.max(1, day);
+    if (newPerDay !== oldPerDay) {
+      const learnedCount = (Math.max(1, user.currentDay) - 1) * oldPerDay;
+      newDay = Math.max(1, Math.ceil((learnedCount + 1) / newPerDay));
+      // 把新词数写到词书 + 触发 books 列表刷新
+      storage.updateBookMeta(user.activeBookId, { wordsPerDay: newPerDay });
+    }
+    const fresh = getActiveBook(user.activeBookId);
     setUser({
       ...user,
-      currentDay: Math.min(activeBook.totalDays, Math.max(1, day)),
+      currentDay: Math.min(fresh.totalDays, newDay),
       preferences: { ...user.preferences, voice, targets }
     });
     setSavedAt(Date.now());
@@ -86,7 +100,7 @@ export default function SettingsPage() {
 
       <Card className="mb-4">
         <h3 className="section-title">当前进度</h3>
-        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
           <div>
             <div className="text-xs muted">当前词书</div>
             <div className="mt-1 rounded-xl bg-bg-soft/60 px-3 py-2 text-sm">
@@ -103,6 +117,21 @@ export default function SettingsPage() {
               value={day}
               onChange={(e) => setDay(Number(e.target.value))}
             />
+          </div>
+          <div>
+            <div className="text-xs muted">每天学多少词</div>
+            <input
+              type="number"
+              min={5}
+              max={500}
+              step={5}
+              className="input mt-1"
+              value={wordsPerDay}
+              onChange={(e) => setWordsPerDay(Number(e.target.value))}
+            />
+            <div className="mt-1 text-[11px] muted">
+              改后按已学进度自动反算 Day,不会丢学过的词
+            </div>
           </div>
         </div>
       </Card>

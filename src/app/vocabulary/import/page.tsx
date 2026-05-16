@@ -420,30 +420,18 @@ export default function VocabularyImportPage() {
         return;
       }
 
-      // 已存在的 day 编号继续往后走
-      const usedDayKeys = new Map<string, number>();
-      existingWords.forEach((w) => {
-        const key = (w.wordList || `Day ${w.bookDay}`).trim();
-        if (!usedDayKeys.has(key)) usedDayKeys.set(key, w.bookDay);
-      });
-
-      let nextDay = existing.totalDays + 1;
-      const dayCounters = new Map<number, number>();
-      existingWords.forEach((w) => {
-        dayCounters.set(w.bookDay, Math.max(dayCounters.get(w.bookDay) || 0, w.order));
-      });
-
+      // v1.9: 追加也用全局 order, 不再做"找新 dayKey"的猜测逻辑
+      // 已有词的最大 order 为基准, 接着往后排; Day 由 wordsPerDay 实时切片
+      const existingPerDay = existing.wordsPerDay || 30;
+      const maxOrder = existingWords.reduce(
+        (m, w) => Math.max(m, w.order || 0),
+        0
+      );
       const appended: Word[] = newOnly.map((w, idx) => {
-        const dayKey = (w.bookDay || `Day ${nextDay}`).trim();
-        let dayNum = usedDayKeys.get(dayKey);
-        if (dayNum === undefined) {
-          dayNum = nextDay++;
-          usedDayKeys.set(dayKey, dayNum);
-        }
-        const order = (dayCounters.get(dayNum) || 0) + 1;
-        dayCounters.set(dayNum, order);
+        const globalOrder = maxOrder + idx + 1;
+        const dayNum = Math.floor((globalOrder - 1) / existingPerDay) + 1;
         return {
-          id: `${existing.id}-d${dayNum}-add-${Date.now().toString(36)}-${idx}`,
+          id: `${existing.id}-w${globalOrder}`,
           word: w.word.trim(),
           phonetic: w.phonetic || "",
           chineseMeaning: w.chineseMeaning.trim(),
@@ -451,17 +439,18 @@ export default function VocabularyImportPage() {
           exampleSentence: w.exampleSentence || "",
           bookId: existing.id,
           bookDay: dayNum,
-          wordList: w.wordList || dayKey,
-          order
+          wordList: w.wordList || `Day ${dayNum}`,
+          order: globalOrder
         };
       });
 
       const newTotalDays = Math.max(
-        existing.totalDays,
-        ...appended.map((w) => w.bookDay)
+        1,
+        Math.ceil((existingWords.length + appended.length) / existingPerDay)
       );
       const updatedBook: VocabularyBook = {
         ...existing,
+        wordsPerDay: existingPerDay,
         totalDays: newTotalDays,
         description: `从 PDF 导入,共 ${existingWords.length + appended.length} 词`
       };
@@ -479,23 +468,17 @@ export default function VocabularyImportPage() {
       return;
     }
 
-    // ============ 没有同名,新建一本(原行为) ============
-    const dayMap = new Map<string, number>();
-    let nextDay = 1;
-    const dayCounters = new Map<number, number>();
-
+    // ============ 没有同名,新建一本 ============
+    // v1.9: 不再按 bookDay 字段做"分 Day"逻辑(vlm 识别极不准, 会把 935 词切成 39 天每天 1 词)
+    // 改为: 按全局 order 顺序入库, Day 由 wordsPerDay (默认 30) 实时切片决定。
+    // 用户可以在设置页改 wordsPerDay, 立刻重切, 不需要重新导入。
     const id = `book-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+    const DEFAULT_WORDS_PER_DAY = 30;
     const finalWords: Word[] = cleaned.map((w, idx) => {
-      const dayKey = (w.bookDay || `Day ${nextDay}`).trim();
-      let dayNum = dayMap.get(dayKey);
-      if (dayNum === undefined) {
-        dayNum = nextDay++;
-        dayMap.set(dayKey, dayNum);
-      }
-      const order = (dayCounters.get(dayNum) || 0) + 1;
-      dayCounters.set(dayNum, order);
+      const globalOrder = idx + 1;
+      const dayNum = Math.floor(idx / DEFAULT_WORDS_PER_DAY) + 1;
       return {
-        id: `${id}-d${dayNum}-${idx + 1}`,
+        id: `${id}-w${globalOrder}`,
         word: w.word.trim(),
         phonetic: w.phonetic || "",
         chineseMeaning: w.chineseMeaning.trim(),
@@ -503,17 +486,21 @@ export default function VocabularyImportPage() {
         exampleSentence: w.exampleSentence || "",
         bookId: id,
         bookDay: dayNum,
-        wordList: w.wordList || dayKey,
-        order
+        wordList: w.wordList || `Day ${dayNum}`,
+        order: globalOrder
       };
     });
 
-    const totalDays = Math.max(...finalWords.map((w) => w.bookDay), 1);
+    const totalDays = Math.max(
+      1,
+      Math.ceil(finalWords.length / DEFAULT_WORDS_PER_DAY)
+    );
     const book: VocabularyBook = {
       id,
       name: finalTitle,
       totalDays,
-      description: `从 PDF 导入,共 ${finalWords.length} 词`
+      description: `从 PDF 导入,共 ${finalWords.length} 词`,
+      wordsPerDay: DEFAULT_WORDS_PER_DAY
     };
 
     storage.saveBook(book, finalWords);
@@ -522,7 +509,7 @@ export default function VocabularyImportPage() {
     refresh();
 
     setImportedSummary(
-      `已导入「${book.name}」: ${finalWords.length} 个词,${totalDays} 天,已设为当前词书。`
+      `已导入「${book.name}」: ${finalWords.length} 个词,默认 ${DEFAULT_WORDS_PER_DAY} 词/天 = ${totalDays} 天,已设为当前词书。可去「设置」改每日词数。`
     );
     setStage("imported");
   };

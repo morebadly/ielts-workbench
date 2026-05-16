@@ -209,6 +209,14 @@ export const storage = {
     delete map[bookId];
     write(KEYS.bookWords, map);
   },
+  /** v1.9: 改 wordsPerDay 等元信息, 不动单词数据 */
+  updateBookMeta(bookId: string, patch: Partial<VocabularyBook>): void {
+    const books = this.getCustomBooks();
+    const idx = books.findIndex((b) => b.id === bookId);
+    if (idx < 0) return;
+    books[idx] = { ...books[idx], ...patch, id: bookId };
+    write(KEYS.books, books);
+  },
 
   // ============ v1.8.1: 自定义听力素材 ============
   getCustomListening(): ListeningItem[] {

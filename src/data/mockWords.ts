@@ -140,26 +140,60 @@ export const MOCK_WORDS: Word[] = [
   }
 ];
 
-export function getWordsByDay(bookId: string, day: number): Word[] {
-  if (typeof window !== "undefined") {
-    try {
-      const raw = window.localStorage.getItem("ielts-wb:vocab-book-words");
-      if (raw) {
-        const map = JSON.parse(raw) as Record<string, Word[]>;
-        const list = map[bookId];
-        if (list && list.length) {
-          return list
-            .filter((w) => w.bookDay === day)
-            .sort((a, b) => a.order - b.order);
-        }
-      }
-    } catch {
-      /* fall through to MOCK */
-    }
+/**
+ * v1.9: bookDay 不再是入库时打死的字段, 而是按 wordsPerDay 实时切片。
+ *   day=1 -> words[0..N-1]
+ *   day=2 -> words[N..2N-1]
+ *   ...
+ * 老数据(MOCK_WORDS 或没 wordsPerDay 的自定义书)会 fallback 到 bookDay 字段, 保持兼容。
+ */
+const DEFAULT_WORDS_PER_DAY = 30;
+
+function getBookWordsAll(bookId: string): Word[] {
+  if (bookId === MOCK_BOOK.id) {
+    return MOCK_WORDS.filter((w) => w.bookId === bookId).sort(
+      (a, b) => a.order - b.order
+    );
   }
-  return MOCK_WORDS.filter((w) => w.bookId === bookId && w.bookDay === day).sort(
-    (a, b) => a.order - b.order
-  );
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = window.localStorage.getItem("ielts-wb:vocab-book-words");
+    if (!raw) return [];
+    const map = JSON.parse(raw) as Record<string, Word[]>;
+    // v1.9 兼容:老数据 order 是 per-Day 的(每个 Day 内从 1 开始), 不是全局序号。
+    // 用 (bookDay, order) 复合排序自动适配新老数据 —— 新数据 bookDay 单调,
+    // 老数据 bookDay 也单调上升, 两种都能得到原始扫描书的顺序。
+    return (map[bookId] || []).slice().sort((a, b) => {
+      if (a.bookDay !== b.bookDay) return a.bookDay - b.bookDay;
+      return a.order - b.order;
+    });
+  } catch {
+    return [];
+  }
+}
+
+export function getWordsByDay(bookId: string, day: number): Word[] {
+  const book = getActiveBook(bookId);
+  const all = getBookWordsAll(bookId);
+  if (!all.length) {
+    // 内置 mock fallback (兼容老逻辑, MOCK_WORDS 自带 bookDay)
+    return MOCK_WORDS.filter((w) => w.bookId === bookId && w.bookDay === day).sort(
+      (a, b) => a.order - b.order
+    );
+  }
+  const perDay = book.wordsPerDay || DEFAULT_WORDS_PER_DAY;
+  const start = (day - 1) * perDay;
+  return all.slice(start, start + perDay);
+}
+
+/**
+ * 实时计算 totalDays = ceil(总词数 / wordsPerDay)
+ * 这样改 wordsPerDay 立刻生效, 不需要重新入库
+ */
+function computeTotalDays(book: VocabularyBook, wordCount: number): number {
+  const perDay = book.wordsPerDay || DEFAULT_WORDS_PER_DAY;
+  if (wordCount <= 0) return book.totalDays || 1;
+  return Math.max(1, Math.ceil(wordCount / perDay));
 }
 
 export function getActiveBook(bookId: string): VocabularyBook {
@@ -169,7 +203,14 @@ export function getActiveBook(bookId: string): VocabularyBook {
       if (raw) {
         const list = JSON.parse(raw) as VocabularyBook[];
         const found = list.find((b) => b.id === bookId);
-        if (found) return found;
+        if (found) {
+          const all = getBookWordsAll(bookId);
+          return {
+            ...found,
+            wordsPerDay: found.wordsPerDay || DEFAULT_WORDS_PER_DAY,
+            totalDays: computeTotalDays(found, all.length)
+          };
+        }
       }
     } catch {
       /* fall through */

@@ -50,6 +50,13 @@ export interface VocabularyBook {
   name: string;
   totalDays: number;
   description?: string;
+  /**
+   * v1.9 新增:每天学多少词。
+   * Day 不再用入库时打死的 bookDay,而是 words.slice((day-1)*N, day*N) 实时切。
+   * 用户在设置里可改,改值时按 B 反算 currentDay 保证已学进度不丢。
+   * 缺省 30(老数据零迁移)。
+   */
+  wordsPerDay?: number;
 }
 
 export interface ImportedWord {
