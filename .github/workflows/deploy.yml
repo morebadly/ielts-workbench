@@ -1,0 +1,35 @@
+name: Deploy to Tencent Cloud
+
+# 仅在 main 分支 push 时触发(避免 PR 误触发)
+# CI workflow (ci.yml) 已经在 push/PR 时跑 build, 这里只负责真实部署
+on:
+  push:
+    branches: [main]
+
+# 同一时刻只允许一个 deploy 在跑, 避免并发冲突
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Trigger remote deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          # 调用服务器上已有的 deploy.sh
+          # 把日志输出到 /tmp/ielts-deploy.log,与之前 webhook 方案兼容
+          # 关键:set -e 确保任何步骤失败都让 action 标红
+          script: |
+            set -e
+            echo "[gh-actions] $(date) — start"
+            bash /www/wwwroot/ielts/deploy.sh 2>&1 | tee /tmp/ielts-deploy.log
+            echo "[gh-actions] $(date) — done"
+          script_stop: true
