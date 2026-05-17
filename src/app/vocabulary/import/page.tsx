@@ -65,6 +65,8 @@ export default function VocabularyImportPage() {
     totalBatches: number;
     accumulatedWords: ImportedWord[];
     lastError?: string;
+    /** 被 MiniMax 安全审核拒绝、自动跳过的批次号 (1-indexed) */
+    skippedBatches?: number[];
   } | null>(null);
   const [structuring, setStructuring] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -258,6 +260,9 @@ export default function VocabularyImportPage() {
       const allWords: ImportedWord[] = useResume
         ? [...useResume.accumulatedWords]
         : [];
+      const skippedBatches: number[] = useResume?.skippedBatches
+        ? [...useResume.skippedBatches]
+        : [];
 
       for (let i = startBatch; i < batches.length; i++) {
         setVisionProgress({
@@ -295,10 +300,33 @@ export default function VocabularyImportPage() {
             nextBatchIndex: i + 1,
             totalBatches: batches.length,
             accumulatedWords: allWords,
-            lastError: undefined
+            lastError: undefined,
+            skippedBatches: [...skippedBatches]
           });
         } catch (batchErr) {
-          // 当前批失败 -> 保留 nextBatchIndex 在 i (下次从这一批重试)
+          const errMsg = (batchErr as Error).message;
+          // MiniMax 安全审核拒绝单张图 (error 1026 / new_sensitive / image sensitive)
+          // 重试不会通过 -> 自动跳过这一批, 标记到 skippedBatches 让用户知道
+          // 其他错误 (网络、超时、配额) 才中断让用户点"继续"
+          const isSensitive =
+            /1026|new_sensitive|sensitive|image sensitive/i.test(errMsg);
+          if (isSensitive) {
+            skippedBatches.push(i + 1);
+            saveVisionResume({
+              fileName: file.name,
+              fileSize: file.size,
+              bookTitle: finalTitle,
+              fromPage: fromN,
+              toPage: toN,
+              nextBatchIndex: i + 1,
+              totalBatches: batches.length,
+              accumulatedWords: allWords,
+              lastError: undefined,
+              skippedBatches: [...skippedBatches]
+            });
+            continue; // 跳过这批, 继续下一批
+          }
+          // 真正中断 -> 保留 nextBatchIndex 在 i (下次从这一批重试)
           saveVisionResume({
             fileName: file.name,
             fileSize: file.size,
@@ -308,16 +336,23 @@ export default function VocabularyImportPage() {
             nextBatchIndex: i,
             totalBatches: batches.length,
             accumulatedWords: allWords,
-            lastError: (batchErr as Error).message
+            lastError: errMsg,
+            skippedBatches: [...skippedBatches]
           });
           throw new Error(
-            `第 ${i + 1}/${batches.length} 批识别失败: ${(batchErr as Error).message}\n已识别 ${allWords.length} 个词,可点"继续识别"接着跑(配额刷新后再试)`
+            `第 ${i + 1}/${batches.length} 批识别失败: ${errMsg}\n已识别 ${allWords.length} 个词,可点"继续识别"接着跑(配额刷新后再试)`
           );
         }
       }
 
       // 3) 全部成功 -> 清缓存, 写 stage
       saveVisionResume(null);
+      if (skippedBatches.length > 0) {
+        // 提示用户哪些批次因为 MiniMax 安全审核被跳过, 但不阻塞流程
+        setError(
+          `已识别 ${allWords.length} 个词。${skippedBatches.length} 批被 MiniMax 内容审核拒绝,自动跳过(批次: ${skippedBatches.join(", ")})。如果你需要这部分,可以单独把这几页转 PDF 重传。`
+        );
+      }
       setBookTitle(finalTitle);
       setWords(allWords);
       setExtracted({
