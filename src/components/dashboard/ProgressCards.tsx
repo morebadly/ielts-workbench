@@ -1,9 +1,11 @@
 "use client";
 
+import { useMemo } from "react";
 import { Card } from "@/components/ui/Card";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import type { DailyTaskProgress, DailyTaskTargets, UserProgress } from "@/types";
 import { getActiveBook } from "@/data/mockWords";
+import { storage } from "@/lib/storage";
 
 const TASK_PAIRS: Array<{
   doneKey: keyof Omit<DailyTaskProgress, "date">;
@@ -45,8 +47,22 @@ export function ProgressCards({
   const done = countDoneTasks(progress, targets);
   const total = countActiveTasks(targets);
   const book = getActiveBook(user.activeBookId);
+
+  // 累计已学 = wordProgress 里 status !== "new" 的词数, 实时算
+  // 重新依赖 progress.date 是为了让"清空今日"等操作之后能触发刷新 (storage-updated 事件)
+  const learnedTotal = useMemo(() => {
+    if (typeof window === "undefined") return 0;
+    const map = storage.getWordProgressMap();
+    let n = 0;
+    for (const id in map) {
+      if (map[id].status !== "new") n++;
+    }
+    return n;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [progress.date, progress.newWordsDone, progress.reviewWordsDone, user.activeBookId]);
+
   return (
-    <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
       <Card>
         <div className="text-sm muted">词汇书进度</div>
         <div className="mt-1 text-lg font-semibold">
@@ -57,6 +73,16 @@ export function ProgressCards({
           value={user.currentDay}
           max={book.totalDays}
         />
+      </Card>
+
+      <Card>
+        <div className="text-sm muted">累计已学</div>
+        <div className="mt-1 text-lg font-semibold tabular-nums">
+          {learnedTotal} 词
+        </div>
+        <div className="mt-3 text-xs muted">
+          含全部词书 · status ≠ 未学
+        </div>
       </Card>
 
       <Card>
