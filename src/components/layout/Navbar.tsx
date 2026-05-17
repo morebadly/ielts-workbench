@@ -9,6 +9,7 @@ const NAV = [
   { href: "/vocabulary", label: "单词" },
   { href: "/writing", label: "写作" },
   { href: "/listening", label: "听力" },
+  { href: "/test-bank", label: "真题" },
   { href: "/review", label: "复习" },
   { href: "/settings", label: "设置" }
 ];

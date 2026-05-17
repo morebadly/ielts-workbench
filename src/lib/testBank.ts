@@ -8,13 +8,11 @@ import type {
 } from "@/types";
 
 /**
- * admin 私密区路径前缀。
+ * 真题题库公开路径。
  *
- * `_kyq6j` 是随机短字符串前缀, 不暴露在导航里, 只你知道。
- * 公开访问者从导航栏 / 站内链接 / sitemap 都摸不到这个路径。
+ * v1: 原计划放 admin 私密区, 后改成普通公开路由, 与单词/写作/听力同级。
  */
-export const ADMIN_PREFIX = "/admin/_kyq6j";
-export const TEST_BANK_BASE = `${ADMIN_PREFIX}/test-bank`;
+export const TEST_BANK_BASE = "/test-bank";
 
 /** 雅思阅读 / 听力 40 题对照 band score (近似, 按官方常用映射) */
 export function correctCountToBand(correct: number): number {

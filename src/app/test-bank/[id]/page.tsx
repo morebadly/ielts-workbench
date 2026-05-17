@@ -6,8 +6,7 @@ import { getTestById } from "@/data/testBank";
 import { TEST_BANK_BASE } from "@/lib/testBank";
 
 export const metadata = {
-  title: "Test · IELTS",
-  robots: { index: false, follow: false }
+  title: "Test · IELTS"
 };
 
 interface Props {

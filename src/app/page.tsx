@@ -57,6 +57,7 @@ export default function HomePage() {
             <QuickLink href="/writing/guide" title="写作格式指导" desc="范文结构" />
             <QuickLink href="/writing/exam" title="机考模拟" desc="带倒计时" />
             <QuickLink href="/listening/practice" title="听力精听" desc="听写 + 原文" />
+            <QuickLink href="/test-bank" title="真题精练" desc="剑桥 + 海外" />
             <QuickLink href="/review" title="复习箱" desc="到期复习" />
             <QuickLink href="/settings" title="设置" desc="词书 / 任务量" />
           </div>

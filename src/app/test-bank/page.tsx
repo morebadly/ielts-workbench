@@ -5,25 +5,19 @@ import { TEST_BANK } from "@/data/testBank";
 import { TEST_BANK_BASE } from "@/lib/testBank";
 
 export const metadata = {
-  title: "Test Bank · IELTS",
-  robots: { index: false, follow: false }
+  title: "真题 · IELTS Workbench"
 };
 
 export default function TestBankIndexPage() {
   return (
     <Container>
       <PageHeader
-        title="真题题库"
-        subtitle="私密区, 不在导航栏出现, 仅地址栏直达。剑20 + 海外真题, 仿真考试界面。"
+        title="真题"
+        subtitle="剑桥真题 + 海外考场还原, 仿真考试界面, 错题进复习箱"
       />
 
       <div className="mb-5 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">
-        <p className="font-medium">私密区使用说明</p>
-        <ul className="mt-1 list-disc pl-5 text-amber-800">
-          <li>本路径下内容仅供站长本人复习用, 不在任何导航中暴露</li>
-          <li>当前 1 套 DEMO 占位中, 文章和题目为自写, 不含官方原文</li>
-          <li>等 LLM 额度恢复后批量替换为剑20 + 海外真题真数据</li>
-        </ul>
+        <p>当前 1 套 DEMO 占位中, 文章和题目为自写, 不含官方原文。等数据导入后会替换为剑20 + 25 海外真题。</p>
       </div>
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">

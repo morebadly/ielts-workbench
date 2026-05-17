@@ -9,6 +9,7 @@ const TABS = [
   { href: "/vocabulary", label: "单词", icon: "✎" },
   { href: "/writing", label: "写作", icon: "✏" },
   { href: "/listening", label: "听力", icon: "♪" },
+  { href: "/test-bank", label: "真题", icon: "▤" },
   { href: "/settings", label: "我的", icon: "☰" }
 ];
 
@@ -16,7 +17,7 @@ export function BottomTab() {
   const pathname = usePathname();
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-30 border-t border-black/5 bg-bg-card/95 backdrop-blur md:hidden">
-      <ul className="mx-auto grid max-w-md grid-cols-5">
+      <ul className="mx-auto grid max-w-md grid-cols-6">
         {TABS.map((t) => {
           const active = t.href === "/" ? pathname === "/" : pathname.startsWith(t.href);
           return (
