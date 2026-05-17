@@ -53,6 +53,12 @@ export default function VocabularyImportPage() {
     phase: "render" | "ai";
     cur: number;
     total: number;
+    skipped?: number;
+  } | null>(null);
+  /** 这次 vision 跑完后展示给用户的"跳过批次"提示, 跟 error 解耦 */
+  const [skipNotice, setSkipNotice] = useState<{
+    skippedBatches: number[];
+    fromPage: number;
   } | null>(null);
   /** vision 识别支持断点续传:每跑完一批写入 sessionStorage,出错可暂停,稍后接着跑 */
   const [visionResume, setVisionResume] = useState<{
@@ -312,6 +318,17 @@ export default function VocabularyImportPage() {
             /1026|new_sensitive|sensitive|image sensitive/i.test(errMsg);
           if (isSensitive) {
             skippedBatches.push(i + 1);
+            // 实时反馈: 进度条文字加上"已跳过 N 批", 用户能立刻看到
+            setVisionProgress({
+              phase: "ai",
+              cur: i + 1,
+              total: batches.length,
+              skipped: skippedBatches.length
+            });
+            // 顶部加一条非阻塞提示, 这本书第几页对应原 PDF 的哪一页
+            console.warn(
+              `[vision] 第 ${i + 1} 批 (PDF 第 ${fromN + i} 页) 被 MiniMax 安全审核拒绝, 自动跳过。`
+            );
             saveVisionResume({
               fileName: file.name,
               fileSize: file.size,
@@ -324,7 +341,7 @@ export default function VocabularyImportPage() {
               lastError: undefined,
               skippedBatches: [...skippedBatches]
             });
-            continue; // 跳过这批, 继续下一批
+            continue;
           }
           // 真正中断 -> 保留 nextBatchIndex 在 i (下次从这一批重试)
           saveVisionResume({
@@ -348,10 +365,13 @@ export default function VocabularyImportPage() {
       // 3) 全部成功 -> 清缓存, 写 stage
       saveVisionResume(null);
       if (skippedBatches.length > 0) {
-        // 提示用户哪些批次因为 MiniMax 安全审核被跳过, 但不阻塞流程
-        setError(
-          `已识别 ${allWords.length} 个词。${skippedBatches.length} 批被 MiniMax 内容审核拒绝,自动跳过(批次: ${skippedBatches.join(", ")})。如果你需要这部分,可以单独把这几页转 PDF 重传。`
-        );
+        // 用专门的 skipNotice 而不是 error, 不会被错误样式覆盖, 也不影响进入 structured 阶段
+        setSkipNotice({
+          skippedBatches,
+          fromPage: fromN
+        });
+      } else {
+        setSkipNotice(null);
       }
       setBookTitle(finalTitle);
       setWords(allWords);
@@ -580,6 +600,28 @@ export default function VocabularyImportPage() {
         </div>
       ) : null}
 
+      {skipNotice ? (
+        <div className="mb-3 rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm">
+          <div className="font-medium text-amber-900">
+            ⚠ {skipNotice.skippedBatches.length} 批被 MiniMax 内容审核拒绝, 已自动跳过
+          </div>
+          <div className="mt-1 text-xs text-amber-800">
+            原 PDF 第{" "}
+            {skipNotice.skippedBatches
+              .map((b) => skipNotice.fromPage + b - 1)
+              .join(", ")}{" "}
+            页 (本次第 {skipNotice.skippedBatches.join(", ")} 批)。如果你需要这部分内容,可以单独把这几页另存为新 PDF 重传。
+          </div>
+          <button
+            type="button"
+            className="mt-2 text-xs text-amber-700 underline"
+            onClick={() => setSkipNotice(null)}
+          >
+            知道了,关闭
+          </button>
+        </div>
+      ) : null}
+
       {stage === "upload" ? (
         <UploadStage
           file={file}
@@ -674,7 +716,12 @@ function UploadStage(props: {
   extractProgress: { cur: number; total: number } | null;
   onExtract: () => void;
   visionExtracting: boolean;
-  visionProgress: { phase: "render" | "ai"; cur: number; total: number } | null;
+  visionProgress: {
+    phase: "render" | "ai";
+    cur: number;
+    total: number;
+    skipped?: number;
+  } | null;
   onVisionExtract: () => void;
   onVisionResume: () => void;
   visionResume: {
@@ -811,7 +858,11 @@ function UploadStage(props: {
             ? props.visionProgress
               ? props.visionProgress.phase === "render"
                 ? `渲染图片... ${props.visionProgress.cur}/${props.visionProgress.total}`
-                : `AI 识别中... 第 ${props.visionProgress.cur}/${props.visionProgress.total} 批`
+                : `AI 识别中... ${props.visionProgress.cur}/${props.visionProgress.total} 批${
+                    props.visionProgress.skipped
+                      ? ` · 已跳过 ${props.visionProgress.skipped}`
+                      : ""
+                  }`
               : "AI 看图中..."
             : "AI 看图识别(扫描件)"}
         </Button>
