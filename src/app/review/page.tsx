@@ -93,12 +93,46 @@ export default function ReviewPage() {
             {extras.map((it) => (
               <li key={it.id} className="py-2.5 text-sm">
                 <span className="pill mr-2">{it.type}</span>
-                <span>{JSON.stringify(it.payload)}</span>
+                {it.type === "examQuestion" ? (
+                  <ExamQuestionExtraRow item={it} />
+                ) : (
+                  <span>{JSON.stringify(it.payload)}</span>
+                )}
               </li>
             ))}
           </ul>
         )}
       </Card>
     </Container>
+  );
+}
+
+function ExamQuestionExtraRow({ item }: { item: ReviewItem }) {
+  const p = (item.payload || {}) as {
+    testName?: string;
+    module?: string;
+    questionNumber?: number;
+    prompt?: string;
+    userAnswer?: string;
+    correctAnswer?: string;
+  };
+  return (
+    <span className="muted">
+      <strong className="text-ink">{p.testName}</strong>
+      {p.module ? ` · ${p.module === "reading" ? "阅读" : "听力"}` : ""}
+      {p.questionNumber ? ` Q${p.questionNumber}` : ""}
+      {p.correctAnswer ? (
+        <>
+          {" · 正确答案: "}
+          <span className="text-emerald-700">{p.correctAnswer}</span>
+        </>
+      ) : null}
+      {p.userAnswer !== undefined && p.userAnswer !== "" ? (
+        <>
+          {" / 你的答案: "}
+          <span className="text-rose-700">{p.userAnswer}</span>
+        </>
+      ) : null}
+    </span>
   );
 }

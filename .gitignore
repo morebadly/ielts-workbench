@@ -16,3 +16,6 @@ tmp/
 # 构建产物
 public/version.txt
 *.tsbuildinfo
+
+# 真题题库 mp3 (admin 私密区, 部署时单独 scp 到服务器)
+public/audio/

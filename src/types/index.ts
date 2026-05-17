@@ -199,7 +199,7 @@ export interface ListeningPractice {
 
 export interface ReviewItem {
   id: string;
-  type: "word" | "sentence" | "listening" | "writingMistake" | "newsVocab";
+  type: "word" | "sentence" | "listening" | "writingMistake" | "newsVocab" | "examQuestion";
   refId: string;
   payload?: Record<string, unknown>;
   due: number;
@@ -283,4 +283,118 @@ export interface UserProgress {
     label: string;
     href: string;
   };
+}
+
+// =============================================================================
+// 真题题库 (admin 私密区, /admin/_kyq6j/test-bank)
+// 设计仅服务 1 个站长, 不做权限隔离, 不存云端, 全 localStorage
+// =============================================================================
+
+/** 雅思阅读题型 */
+export type IeltsReadingQType =
+  | "tfng"           // True / False / Not Given
+  | "ynng"           // Yes / No / Not Given
+  | "multipleChoice" // 单选 ABCD
+  | "matchHeadings"  // 段落标题匹配
+  | "matchInfo"      // 信息匹配 (该信息出现在哪一段)
+  | "matchFeatures"  // 人名/年份等特征匹配
+  | "shortAnswer"    // Short Answer (NO MORE THAN ... WORDS)
+  | "summaryComplete" // 摘要填空
+  | "sentenceComplete"; // 句子填空
+
+/** 雅思听力题型 (与阅读高度重叠, 但有部分不同) */
+export type IeltsListeningQType =
+  | "formComplete"   // 表单填空 (Section 1 高频)
+  | "noteComplete"   // 笔记填空
+  | "tableComplete"  // 表格填空
+  | "multipleChoice"
+  | "matchInfo"
+  | "mapLabel"       // 地图标注 (Section 2 高频)
+  | "summaryComplete"
+  | "sentenceComplete";
+
+/** 单道题 (阅读+听力共用一个 schema, 简化生命周期) */
+export interface ExamQuestion {
+  id: string;             // q1, q2, ...
+  number: number;         // 全卷第几题 (1-40 听力 / 1-40 阅读)
+  type: IeltsReadingQType | IeltsListeningQType;
+  /** 题干 (matchHeadings 等同一组共享题干, 这种就放在 group 里) */
+  prompt: string;
+  /** 选项 (multipleChoice / matchHeadings 等需要) */
+  options?: string[];
+  /** 标准答案 (单空就 string, 多空可写 "tomatoes" 这种, 多选可 ["A", "C"]) */
+  answer: string | string[];
+  /** 字数限制提示 (如 "NO MORE THAN TWO WORDS"), 仅用于显示 */
+  wordLimit?: string;
+}
+
+/** 一组题, 共享题型说明 / 标题池 (matchHeadings 用) */
+export interface ExamQuestionGroup {
+  id: string;
+  /** 比如 "Questions 1-5" */
+  range: string;
+  /** 比如 "Do the following statements agree with the information given in Reading Passage 1?" */
+  instruction: string;
+  type: IeltsReadingQType | IeltsListeningQType;
+  /** matchHeadings 共享的标题列表 (i, ii, iii...) 或 matchFeatures 共享的人名等 */
+  sharedOptions?: string[];
+  questions: ExamQuestion[];
+}
+
+/** 一篇阅读文章 (Passage 1/2/3) */
+export interface ReadingPassage {
+  id: string;
+  /** 1 / 2 / 3 */
+  order: 1 | 2 | 3;
+  title: string;
+  /** 原文, 段落用 \n\n 分隔; 段首加 "A. ", "B. " 等会被 UI 自动渲染段落标号 */
+  body: string;
+  /** 可选副标题/导言 */
+  subtitle?: string;
+  groups: ExamQuestionGroup[];
+}
+
+/** 一段听力 (Section 1-4) */
+export interface ListeningSection {
+  id: string;
+  order: 1 | 2 | 3 | 4;
+  title: string;
+  /** 音频路径, 相对 /audio/ 目录; 如 "cb20-9f3a/T1-P1.mp3" */
+  audioPath: string;
+  /** 朗读全文 (考完可看) */
+  transcript: string;
+  groups: ExamQuestionGroup[];
+}
+
+/** 一套真题 (含阅读 3 篇 + 听力 4 段) */
+export interface TestBankItem {
+  id: string;
+  /** 显示名: "剑20 Test 1" */
+  name: string;
+  /** 来源: "cambridge" | "overseas-2025" 等 */
+  source: string;
+  /** 短副标题, 如 "2024 年最新", "海外 2025-04" */
+  subtitle?: string;
+  /** DEMO 占位, 等真数据填进来后改成 false */
+  isMock?: boolean;
+  reading: ReadingPassage[];
+  listening: ListeningSection[];
+}
+
+/** 一次完整考试结果 (按 module 分别保存, 也可只考阅读 / 只考听力) */
+export interface ExamAttempt {
+  id: string;
+  testId: string;
+  module: "reading" | "listening";
+  /** 用户每题答案 questionId -> 用户作答 */
+  answers: Record<string, string>;
+  /** 总题数 */
+  total: number;
+  /** 答对数 */
+  correct: number;
+  /** 雅思 band 估算 */
+  bandScore: number;
+  durationMs: number;
+  startedAt: number;
+  submittedAt: number;
 }
