@@ -7,17 +7,22 @@ alwaysApply: true
 
 每轮改完代码后, 默认按这个顺序执行, 不需要再问用户:
 
-1. `npx tsc --noEmit -p tsconfig.json` 跑通类型检查 (lint 报错也得修)
-2. `git add` 本轮真正改动的文件 (不要 `git add .` —— 避开 `tsconfig.tsbuildinfo` 等增量缓存)
-3. `git commit -m "<type>(<scope>): <概述>"` + 详细 -m, 中文写
+1. **`npx tsc --noEmit -p tsconfig.json`** — 类型检查
+2. **`npx next lint`** — Next 的 ESLint 规则比 tsc 严, build 时会用同一套, 必须本地先过。
+   - 只允许通过 Warning, 不允许任何 Error。Error 会 fail `next build` → BUILD_ID 不生成 → next start 起不来 → 502。
+   - 项目本身有 4 条历史 Warning (writing/exam, BookManager, HighlightedEssay), 别管, 不要顺手"清理"它们。
+   - 高频踩坑: `react/no-unescaped-entities` —— JSX 文本里的 `"` `'` 必须转义成 `&ldquo;&rdquo;` `&apos;` 之类。
+3. `git add` 本轮真正改动的文件 (不要 `git add .` —— 避开 `tsconfig.tsbuildinfo` 等增量缓存)
+4. `git commit -m "<type>(<scope>): <概述>"` + 详细 -m, 中文写
    - 多个独立改动用分块, 每块标号说清"改什么/为什么"
-4. `git push origin main` (国内推送用 origin 直推, 镜像 ghfast 不支持 push)
-5. 在最终回复里给出:
+5. `git push origin main` (国内推送用 origin 直推, 镜像 ghfast 不支持 push)
+6. 在最终回复里给出:
    - 新 commit hash (短哈希)
    - 部署一条命令 (服务器拉取用 ghfast 镜像绕国内 GitHub 卡):
      ```bash
-     cd /www/wwwroot/ielts && git fetch --depth=1 https://ghfast.top/https://github.com/morebadly/ielts-workbench.git main && git reset --hard FETCH_HEAD && rm -rf .next && npm run build && pm2 restart ielts --update-env
+     cd /www/wwwroot/ielts && git fetch --depth=1 https://ghfast.top/https://github.com/morebadly/ielts-workbench.git main && git reset --hard FETCH_HEAD && rm -rf .next && npm run build && pm2 delete ielts 2>/dev/null; pm2 start npm --name ielts --cwd /www/wwwroot/ielts -- start && pm2 save
      ```
+     注: 用 `pm2 delete + start` 而非 `pm2 restart`, 因为 npm 包装层下 restart 不能 100% 杀掉旧 next 子进程, 会出现"磁盘是新 build / 进程跑老 manifest"的混乱状态 → chunk hash 不匹配 → 白屏。
 
 # 必须先问用户的风险动作 (不要默认 push)
 
