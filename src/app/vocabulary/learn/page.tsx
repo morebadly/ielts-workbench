@@ -108,6 +108,22 @@ function VocabularyLearnInner() {
   const totalForBar = queue.length;
   const valueForBar = Math.min(idx + (finished ? 0 : 1), totalForBar);
 
+  const handleAdvanceDay = () => {
+    const nextDay = user.currentDay + 1;
+    if (nextDay > activeBook.totalDays) {
+      alert("已经是这本词书的最后一天了, 没有下一天可以学了。");
+      return;
+    }
+    if (
+      !confirm(
+        `提前学下一组(Day ${nextDay})? 今日新词进度会继续累加。\n建议:刚学完一组, 可以先去默写/造句巩固, 大脑需要 cooldown。`
+      )
+    )
+      return;
+    setUser({ ...user, currentDay: nextDay });
+    // setUser 会触发 dayWords useMemo 重算 -> 上面那个 setQueue useEffect 会跑 -> idx 自动归 0
+  };
+
   const handleFeedback = (next: WordProgress) => {
     if (!current) return;
     storage.setWordProgress(next);
@@ -170,14 +186,26 @@ function VocabularyLearnInner() {
         <Card>
           <h3 className="section-title">这一组完成。</h3>
           <p className="mt-1 text-sm muted">
-            刚刚学了 {queue.length} 个词。可以去默写一组检验,或回首页看下一项任务。
+            刚刚学了 {queue.length} 个词。
+            {mode === "new"
+              ? `建议先去默写一组检验,巩固后再继续。${
+                  user.currentDay < activeBook.totalDays
+                    ? "状态特别好的话, 也可以提前学下一组。"
+                    : "这是这本书的最后一组,完整学完啦 🎉"
+                }`
+              : "回首页看下一项任务。"}
           </p>
-          <div className="mt-4 flex gap-2">
+          <div className="mt-4 flex flex-wrap gap-2">
             <Link href="/vocabulary/dictation">
               <Button variant="primary">去默写</Button>
             </Link>
+            {mode === "new" && user.currentDay < activeBook.totalDays ? (
+              <Button variant="soft" onClick={handleAdvanceDay}>
+                继续学下一组 (Day {user.currentDay + 1})
+              </Button>
+            ) : null}
             <Link href="/">
-              <Button variant="soft">返回首页</Button>
+              <Button variant="ghost">返回首页</Button>
             </Link>
           </div>
         </Card>
