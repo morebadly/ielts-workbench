@@ -42,6 +42,17 @@ const generateExample = z.object({
 
 export type GenerateExampleData = z.infer<typeof generateExample>;
 
+/**
+ * v1.10.3: AI 词性补全 — 给单个英文词推断词性 (n. / v. / adj. / adv. / phr. 等)
+ * 用于扫描书 vlm 漏写词性时的批量补刀
+ */
+const posLookup = z.object({
+  partOfSpeech: z.string().min(1).max(60),
+  chineseMeaning: z.string().min(1)
+});
+
+export type PosLookupData = z.infer<typeof posLookup>;
+
 const writingHighlight = z.object({
   excerpt: z.string(),
   category: z.enum(["grammar", "vocabulary", "coherence", "task_response"]),
@@ -115,6 +126,7 @@ export const AI_SCHEMAS = {
   dictationFeedback,
   vocabArticle,
   generateExample,
+  posLookup,
   writingTask1,
   writingTask2,
   newsLearning

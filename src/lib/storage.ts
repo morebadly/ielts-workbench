@@ -219,6 +219,12 @@ export const storage = {
     const map = read<Record<string, Word[]>>(KEYS.bookWords, {});
     return map[bookId] || [];
   },
+  /** v1.10.3: 整本书的词列表全量替换, 用于批量 AI 修正(补词性等) */
+  setBookWords(bookId: string, words: Word[]): void {
+    const map = read<Record<string, Word[]>>(KEYS.bookWords, {});
+    map[bookId] = words;
+    write(KEYS.bookWords, map);
+  },
   deleteBook(bookId: string): void {
     const books = this.getCustomBooks().filter((b) => b.id !== bookId);
     write(KEYS.books, books);

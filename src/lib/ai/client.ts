@@ -39,6 +39,11 @@ export interface GenerateExampleData {
   memoryTip: string;
 }
 
+export interface PosLookupData {
+  partOfSpeech: string;
+  chineseMeaning: string;
+}
+
 export interface WritingHighlightData {
   excerpt: string;
   category: "grammar" | "vocabulary" | "coherence" | "task_response";
@@ -79,6 +84,7 @@ type CapabilityMap = {
   dictationFeedback: DictationFeedbackData;
   vocabArticle: VocabArticleData;
   generateExample: GenerateExampleData;
+  posLookup: PosLookupData;
   writingTask1: WritingTask1Data;
   writingTask2: WritingTask2Data;
 };

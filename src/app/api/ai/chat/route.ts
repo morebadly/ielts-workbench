@@ -52,6 +52,11 @@ function buildPrompt(body: RequestBody): string {
         String(p.chineseMeaning ?? ""),
         String(p.phonetic ?? "")
       );
+    case "posLookup":
+      return PROMPTS.posLookup(
+        String(p.word ?? ""),
+        String(p.chineseMeaning ?? "")
+      );
     case "writingTask1":
       return PROMPTS.writingTask1(String(p.promptText ?? ""), String(p.essay ?? ""));
     case "writingTask2":

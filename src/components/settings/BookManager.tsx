@@ -13,7 +13,7 @@ import {
 } from "@/lib/bookImport";
 import type { VocabularyBook, UserProgress, Word } from "@/types";
 import { notifyStorageUpdated } from "@/hooks/useDailyTask";
-import { callAI, type GenerateExampleData } from "@/lib/ai/client";
+import { callAI, type GenerateExampleData, type PosLookupData } from "@/lib/ai/client";
 
 interface Props {
   user: UserProgress;
@@ -378,6 +378,20 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
     } else {
       setGenState(null);
     }
+    // 同步: 词性批量任务也可能有暂停标记
+    if (typeof window !== "undefined" && localStorage.getItem(POS_PAUSE_KEY)) {
+      setPosState({
+        running: false,
+        cur: 0,
+        total: 0,
+        skipped: 0,
+        failed: 0,
+        paused: true,
+        cancelMode: "none"
+      });
+    } else {
+      setPosState(null);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [book.id]);
 
@@ -514,6 +528,175 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
     setGenState((s) => (s ? { ...s, cancelMode: "stop" } : s));
   };
 
+  // ----- v1.10.3: 批量 AI 补词性 -----
+  // 跟批量生成例句独立: 直接修改 word.chineseMeaning 写回 bookWords (内置书不可写)
+  const POS_PAUSE_KEY = `ielts-wb:pos-batch-paused:${book.id}`;
+  const [posState, setPosState] = useState<{
+    running: boolean;
+    cur: number;
+    total: number;
+    skipped: number;
+    failed: number;
+    paused: boolean;
+    cancelMode: "none" | "pause" | "stop";
+  } | null>(null);
+  const posCancelRef = useRef<string>("none");
+
+  // 这本书里"看起来没词性"的词数 —— 启发式: 中文不以词性前缀开头就算缺
+  const POS_PREFIX = /^(n\.|v\.|vt\.|vi\.|adj\.|adv\.|prep\.|conj\.|pron\.|art\.|num\.|phr\.|phrase|abbr\.)/i;
+  const posMissing = useMemo(() => {
+    return allWords.filter((w) => !POS_PREFIX.test(w.chineseMeaning.trim())).length;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allWords, posState?.cur, posState?.paused]);
+
+  const isBuiltinBook = book.id === MOCK_BOOK.id;
+
+  const runBatchPos = async () => {
+    if (posState?.running || genState?.running) {
+      alert("有其他批量任务进行中, 请先暂停或等待完成");
+      return;
+    }
+    if (isBuiltinBook) {
+      alert("内置词书不可修改, 词性已经是完整的");
+      return;
+    }
+    posCancelRef.current = "none";
+    // 重新读最新词列表 (避免旧 allWords 闭包)
+    const freshWords = storage.getBookWords(book.id);
+    if (!freshWords.length) {
+      alert("这本书没有词");
+      return;
+    }
+    const targets = freshWords
+      .map((w, idx) => ({ w, idx }))
+      .filter(({ w }) => !POS_PREFIX.test(w.chineseMeaning.trim()));
+    if (!targets.length) {
+      alert("所有词都已经有词性, 无需再跑");
+      try {
+        localStorage.removeItem(POS_PAUSE_KEY);
+      } catch {
+        // ignore
+      }
+      setPosState(null);
+      return;
+    }
+    const isResume = !!localStorage.getItem(POS_PAUSE_KEY);
+    if (
+      !isResume &&
+      !confirm(
+        `准备给 ${targets.length} 个缺词性的词调 AI 补词性 (写回原书的 chineseMeaning)。预计 ${Math.ceil(
+          targets.length * 1.5 / 60
+        )} 分钟。可以"暂停"保存进度后下次接着跑。\n\n继续?`
+      )
+    )
+      return;
+    try {
+      localStorage.setItem(POS_PAUSE_KEY, "1");
+    } catch {
+      // ignore
+    }
+    setPosState({
+      running: true,
+      cur: 0,
+      total: targets.length,
+      skipped: 0,
+      failed: 0,
+      paused: false,
+      cancelMode: "none"
+    });
+
+    let skipped = 0;
+    let failed = 0;
+    // 操作的对象: 完整 freshWords 数组的一份拷贝, 边跑边改边存
+    const working = freshWords.slice();
+    for (let i = 0; i < targets.length; i++) {
+      if (posCancelRef.current !== "none") break;
+      const { w, idx } = targets[i];
+      // 双重检查: 这个词是否在另一处已经被改过
+      if (POS_PREFIX.test(working[idx].chineseMeaning.trim())) {
+        skipped++;
+        setPosState((s) =>
+          s ? { ...s, cur: i + 1, skipped: s.skipped + 1 } : s
+        );
+        continue;
+      }
+      const fallback = (): PosLookupData => ({
+        partOfSpeech: "",
+        chineseMeaning: w.chineseMeaning
+      });
+      try {
+        const r = await callAI(
+          "posLookup",
+          { word: w.word, currentMeaning: w.chineseMeaning },
+          fallback
+        );
+        if (
+          r.source === "minimax" &&
+          r.data.chineseMeaning &&
+          POS_PREFIX.test(r.data.chineseMeaning.trim())
+        ) {
+          working[idx] = { ...working[idx], chineseMeaning: r.data.chineseMeaning };
+          // 每 20 个写一次 storage, 减少 IO + 避免中断丢失太多
+          if ((i + 1) % 20 === 0) {
+            storage.setBookWords(book.id, working);
+          }
+        } else {
+          failed++;
+        }
+      } catch {
+        failed++;
+      }
+      setPosState((s) =>
+        s ? { ...s, cur: i + 1, skipped, failed } : s
+      );
+    }
+    // 跑完/中断都先把当前进度落盘
+    storage.setBookWords(book.id, working);
+
+    const reason = posCancelRef.current;
+    posCancelRef.current = "none";
+    notifyStorageUpdated();
+
+    if (reason === "pause") {
+      setPosState({
+        running: false,
+        cur: 0,
+        total: 0,
+        skipped: 0,
+        failed: 0,
+        paused: true,
+        cancelMode: "none"
+      });
+    } else {
+      try {
+        localStorage.removeItem(POS_PAUSE_KEY);
+      } catch {
+        // ignore
+      }
+      setPosState({
+        running: false,
+        cur: targets.length,
+        total: targets.length,
+        skipped,
+        failed,
+        paused: false,
+        cancelMode: "none"
+      });
+      setTimeout(() => setPosState(null), 6000);
+    }
+  };
+
+  const pausePos = () => {
+    posCancelRef.current = "pause";
+    setPosState((s) => (s ? { ...s, paused: true, cancelMode: "pause" } : s));
+  };
+  const stopPos = () => {
+    if (!confirm("取消会清除续传进度, 下次重新开始(已修正的词性会保留)。\n\n确认取消?"))
+      return;
+    posCancelRef.current = "stop";
+    setPosState((s) => (s ? { ...s, cancelMode: "stop" } : s));
+  };
+
   const filtered = useMemo(() => {
     const q = filter.trim().toLowerCase();
     if (!q) return allWords;
@@ -535,6 +718,7 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
           共 {allWords.length} 词
           {filter ? ` · 筛选后 ${filtered.length} 词` : ""} · 第 {safePage + 1}/
           {totalPages} 页 · 已生成例句 {examplesCached}
+          {!isBuiltinBook && posMissing > 0 ? ` · 缺词性 ${posMissing}` : ""}
         </div>
         <div className="flex items-center gap-2">
           {genState?.running ? (
@@ -555,10 +739,28 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
               </Button>
             </>
           ) : null}
+          {posState?.running ? (
+            <>
+              <Button
+                variant="ghost"
+                onClick={pausePos}
+                disabled={posState.cancelMode !== "none"}
+              >
+                {posState.cancelMode === "pause" ? "暂停中..." : "暂停"}
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={stopPos}
+                disabled={posState.cancelMode !== "none"}
+              >
+                {posState.cancelMode === "stop" ? "停止中..." : "取消"}
+              </Button>
+            </>
+          ) : null}
           <Button
             variant="soft"
             onClick={runBatchExamples}
-            disabled={!!genState?.running}
+            disabled={!!genState?.running || !!posState?.running}
           >
             {genState?.running
               ? `生成中 ${genState.cur}/${genState.total}`
@@ -566,6 +768,19 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
                 ? "继续生成例句"
                 : "AI 批量生成例句"}
           </Button>
+          {!isBuiltinBook ? (
+            <Button
+              variant="soft"
+              onClick={runBatchPos}
+              disabled={!!posState?.running || !!genState?.running}
+            >
+              {posState?.running
+                ? `补词性中 ${posState.cur}/${posState.total}`
+                : posState?.paused
+                  ? "继续补词性"
+                  : "AI 批量补词性"}
+            </Button>
+          ) : null}
           <input
             className="input h-8 w-48 text-xs"
             placeholder="搜词或中文..."
@@ -581,6 +796,18 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
         <div className="mb-2 rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-xs text-amber-900">
           ⏸ 上次批量生成被暂停,已生成 {examplesCached}/{allWords.length} 个例句。
           点上方「继续生成例句」从未生成的词接着跑,关浏览器/重启电脑都不会丢。
+        </div>
+      ) : null}
+      {posState && !posState.running && posState.paused ? (
+        <div className="mb-2 rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-xs text-amber-900">
+          ⏸ 上次批量补词性被暂停,目前还有 {posMissing}/{allWords.length} 个词缺词性。
+          点上方「继续补词性」从剩余的词接着跑。
+        </div>
+      ) : null}
+      {posState && !posState.running && !posState.paused && posState.total > 0 ? (
+        <div className="mb-2 rounded-lg border border-brand-200 bg-brand-50/60 px-3 py-2 text-xs">
+          ✓ 词性修正结束: 处理 {posState.total} 个,跳过 {posState.skipped},失败{" "}
+          {posState.failed}
         </div>
       ) : null}
       {genState && !genState.running && !genState.paused && genState.total > 0 ? (

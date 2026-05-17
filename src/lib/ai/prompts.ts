@@ -325,8 +325,32 @@ Rules:
 - Only include true vocabulary entries. If a page is purely decorative (cover, ToC) return empty array for that page worth of content.
 - Phonetic must look like IPA (e.g. /ˈtækl/). If unsure, leave empty rather than invent.
 - Do NOT invent example sentences. If the page doesn't show one, leave empty.
-- 中文释义保留原书简洁风格,例如 "v. 处理; n. 用具" 这种。
+- 中文释义保留原书简洁风格,例如 "v. 处理; n. 用具" 这种。**词性必须保留**, 例如 "波动" 必须写成 "v. 波动" 而不是裸 "波动"。
 - Return at most 200 entries; if more visible, return the first 200 and stop.
+`.trim(),
+
+  /**
+   * v1.10.3: 给一个英文词补"词性 + 中文释义",用于已存量词条缺词性的批量修复
+   * 输入只需要 word + 当前的 chineseMeaning, 输出带词性前缀的标准格式
+   */
+  posLookup: (word: string, currentMeaning: string) => `
+You are an IELTS bilingual lexicographer. Given an English word and its current Chinese meaning (which may be missing its part-of-speech prefix), return the standard form.
+
+Word: "${word}"
+Current Chinese meaning: "${currentMeaning}"
+
+Return STRICT JSON, no markdown:
+{
+  "partOfSpeech": "<one or more of n. | v. | adj. | adv. | prep. | conj. | phrase, comma-separated if multiple, e.g. 'v., n.'>",
+  "refinedMeaning": "<把词性放在前面,中文释义跟在后面;多个词性时按 'v. xxx; n. yyy' 风格分号分隔。已修正错别字, 简洁地道, 保持原义不扩展>"
+}
+
+Rules:
+- 如果 currentMeaning 已经包含正确词性(例如以 "v. " / "n. " / "adj. " 开头),保留原词性不变, 只清理空格 / 标点
+- 如果完全缺词性, 根据 word 在该 meaning 下最常见的词性自动补
+- 如果一个词在 IELTS 里同时是动词和名词且 currentMeaning 含两层意思, 用 "v. xxx; n. yyy" 形式
+- 中文释义保持原书风格, 不展开, 不替换为别的同义释义。如果原 meaning 完全错或乱码, 才纠正
+- 不要返回任何额外文本, 不要 markdown
 `.trim()
 };
 
@@ -336,6 +360,7 @@ export type AICapability =
   | "dictationFeedback"
   | "vocabArticle"
   | "generateExample"
+  | "posLookup"
   | "writingTask1"
   | "writingTask2"
   | "structureWords"
