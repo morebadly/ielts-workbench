@@ -13,6 +13,7 @@ import {
 } from "@/lib/bookImport";
 import type { VocabularyBook, UserProgress, Word } from "@/types";
 import { notifyStorageUpdated } from "@/hooks/useDailyTask";
+import { callAI, type GenerateExampleData } from "@/lib/ai/client";
 
 interface Props {
   user: UserProgress;
@@ -344,10 +345,119 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
   const allWords = useMemo(() => loadBookWords(book), [book.id]);
   const [page, setPage] = useState(0);
   const [filter, setFilter] = useState("");
+  // v1.10.2: 批量 AI 生成例句
+  const [genState, setGenState] = useState<{
+    running: boolean;
+    cur: number;
+    total: number;
+    skipped: number;
+    failed: number;
+    cancel: boolean;
+  } | null>(null);
+  const cancelRef = useRef(false);
+
   useEffect(() => {
     setPage(0);
     setFilter("");
   }, [book.id]);
+
+  // 已经有缓存例句的词数, 用来给批量按钮显示进度提示
+  const examplesCached = useMemo(() => {
+    const map = storage.getWordExamples();
+    return allWords.filter((w) => !!map[w.id]).length;
+  }, [allWords, genState?.cur]);
+
+  const runBatchExamples = async () => {
+    if (genState?.running) return;
+    cancelRef.current = false;
+    const map = storage.getWordExamples();
+    const targets = allWords.filter(
+      (w) => !w.exampleSentence && !map[w.id]
+    );
+    if (!targets.length) {
+      alert("所有词都已有例句(原始或 AI 生成),无需再跑");
+      return;
+    }
+    if (
+      !confirm(
+        `准备给 ${targets.length} 个还没例句的词调 AI 生成例句, 大约耗时 ${Math.ceil(targets.length * 1.5 / 60)} 分钟。期间可以点"取消"中止。\n\n继续?`
+      )
+    )
+      return;
+    setGenState({
+      running: true,
+      cur: 0,
+      total: targets.length,
+      skipped: 0,
+      failed: 0,
+      cancel: false
+    });
+    let skipped = 0;
+    let failed = 0;
+    for (let i = 0; i < targets.length; i++) {
+      if (cancelRef.current) break;
+      const w = targets[i];
+      // 双重检查: 这一秒可能其他 tab 已经写过缓存
+      const latest = storage.getWordExamples();
+      if (latest[w.id]) {
+        skipped++;
+        setGenState((s) =>
+          s ? { ...s, cur: i + 1, skipped: s.skipped + 1 } : s
+        );
+        continue;
+      }
+      const fallback = (): GenerateExampleData => ({
+        exampleSentence: `${w.word} is commonly used in academic English.`,
+        exampleTranslation: `${w.chineseMeaning.split(/[;,。;,]/)[0] || w.word} 在学术英语中很常用。`,
+        memoryTip: ""
+      });
+      try {
+        const r = await callAI(
+          "generateExample",
+          {
+            word: w.word,
+            chineseMeaning: w.chineseMeaning,
+            phonetic: w.phonetic
+          },
+          fallback
+        );
+        if (r.source === "minimax") {
+          storage.setWordExample(w.id, r.data);
+        } else {
+          // mock fallback 不缓存, 否则下次永远不再尝试 AI
+          failed++;
+        }
+      } catch {
+        failed++;
+      }
+      setGenState((s) =>
+        s
+          ? {
+              ...s,
+              cur: i + 1,
+              skipped,
+              failed
+            }
+          : s
+      );
+    }
+    const finalState = {
+      running: false,
+      cur: targets.length,
+      total: targets.length,
+      skipped,
+      failed,
+      cancel: cancelRef.current
+    };
+    setGenState(finalState);
+    notifyStorageUpdated();
+    setTimeout(() => setGenState(null), 6000);
+  };
+
+  const cancelBatch = () => {
+    cancelRef.current = true;
+    setGenState((s) => (s ? { ...s, cancel: true } : s));
+  };
 
   const filtered = useMemo(() => {
     const q = filter.trim().toLowerCase();
@@ -369,18 +479,41 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
         <div className="text-xs muted">
           共 {allWords.length} 词
           {filter ? ` · 筛选后 ${filtered.length} 词` : ""} · 第 {safePage + 1}/
-          {totalPages} 页
+          {totalPages} 页 · 已生成例句 {examplesCached}
         </div>
-        <input
-          className="input h-8 w-48 text-xs"
-          placeholder="搜词或中文..."
-          value={filter}
-          onChange={(e) => {
-            setFilter(e.target.value);
-            setPage(0);
-          }}
-        />
+        <div className="flex items-center gap-2">
+          {genState?.running ? (
+            <Button variant="ghost" onClick={cancelBatch} disabled={genState.cancel}>
+              {genState.cancel ? "停止中..." : "取消"}
+            </Button>
+          ) : null}
+          <Button
+            variant="soft"
+            onClick={runBatchExamples}
+            disabled={!!genState?.running}
+          >
+            {genState?.running
+              ? `生成中 ${genState.cur}/${genState.total}`
+              : "AI 批量生成例句"}
+          </Button>
+          <input
+            className="input h-8 w-48 text-xs"
+            placeholder="搜词或中文..."
+            value={filter}
+            onChange={(e) => {
+              setFilter(e.target.value);
+              setPage(0);
+            }}
+          />
+        </div>
       </div>
+      {genState && !genState.running ? (
+        <div className="mb-2 rounded-lg border border-brand-200 bg-brand-50/60 px-3 py-2 text-xs">
+          ✓ 批量生成结束: 处理 {genState.total} 个,跳过 {genState.skipped},失败{" "}
+          {genState.failed}
+          {genState.cancel ? " (用户取消)" : ""}
+        </div>
+      ) : null}
       {/* 固定 min-height 防止翻页时高度跳变, 浏览器 scroll restoration 把视口拉走 */}
       <div className="min-h-[600px]">
         {slice.length ? (

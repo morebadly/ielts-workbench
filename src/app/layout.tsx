@@ -4,12 +4,11 @@ import { Navbar } from "@/components/layout/Navbar";
 import { BottomTab } from "@/components/layout/BottomTab";
 import { VersionCheck } from "@/components/layout/VersionCheck";
 
-// 关掉 Next.js 全站预渲染 + 1 年 s-maxage 默认头。
-// 应用绝大多数数据 (单词进度 / 词书 / 设置) 都在 localStorage, SSG 拿不到没意义,
-// 反而会被中间层 (nginx / Edge) 当 "1 年内有效" 缓存住, 部署新版死活不刷新。
-// 改 force-dynamic 后, 每次请求 Next 都会用 "no-store" 头返回新 HTML。
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// 注: 不再用 export const dynamic = "force-dynamic"
+// 之前是为了禁掉 Next SSG 默认打的 s-maxage=31536000 头, 但代价是每次路由切换都要 SSR,
+// 用户切「单词」「写作」等页时肉眼可见地卡。
+// 现在反代缓存(nginx proxy_cache)在站点 conf 已关闭, middleware 又强制覆盖 Cache-Control 为 no-store,
+// 所以 Next 内部那个 s-maxage 头实际上对任何缓存层都不生效, 可以放心走 SSG 享受秒切。
 
 export const metadata: Metadata = {
   title: "IELTS Workbench",
