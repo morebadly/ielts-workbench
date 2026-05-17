@@ -345,59 +345,93 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
   const allWords = useMemo(() => loadBookWords(book), [book.id]);
   const [page, setPage] = useState(0);
   const [filter, setFilter] = useState("");
-  // v1.10.2: 批量 AI 生成例句
+  // v1.10.2: 批量 AI 生成例句 —— 支持暂停/继续, 跨刷新仍能从上次位置接着跑
+  // 已生成的词在 wordExamples 缓存里, 这里只额外记录"是否处于暂停状态"用于 UI
+  const PAUSE_KEY = `ielts-wb:example-batch-paused:${book.id}`;
   const [genState, setGenState] = useState<{
     running: boolean;
     cur: number;
     total: number;
     skipped: number;
     failed: number;
-    cancel: boolean;
+    paused: boolean;
+    /** 当前取消请求模式, 反应到 UI 让用户看到 "暂停中..." */
+    cancelMode: "none" | "pause" | "stop";
   } | null>(null);
-  const cancelRef = useRef(false);
+  // 用 string 而非字面量联合, 避免 TS 控制流分析在赋值后窄化掉, 造成假阳性 "类型不重叠" 报错
+  const cancelRef = useRef<string>("none");
 
   useEffect(() => {
     setPage(0);
     setFilter("");
+    // 切换书时, 检查这本书是否上次有暂停 -> 显示"继续生成"提示
+    if (typeof window !== "undefined" && localStorage.getItem(PAUSE_KEY)) {
+      setGenState({
+        running: false,
+        cur: 0,
+        total: 0,
+        skipped: 0,
+        failed: 0,
+        paused: true,
+        cancelMode: "none"
+      });
+    } else {
+      setGenState(null);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [book.id]);
 
-  // 已经有缓存例句的词数, 用来给批量按钮显示进度提示
+  // 已经有缓存例句的词数
   const examplesCached = useMemo(() => {
     const map = storage.getWordExamples();
     return allWords.filter((w) => !!map[w.id]).length;
-  }, [allWords, genState?.cur]);
+  }, [allWords, genState?.cur, genState?.paused]);
 
   const runBatchExamples = async () => {
     if (genState?.running) return;
-    cancelRef.current = false;
+    cancelRef.current = "none";
     const map = storage.getWordExamples();
     const targets = allWords.filter(
       (w) => !w.exampleSentence && !map[w.id]
     );
     if (!targets.length) {
       alert("所有词都已有例句(原始或 AI 生成),无需再跑");
+      try {
+        localStorage.removeItem(PAUSE_KEY);
+      } catch {
+        // 忽略
+      }
+      setGenState(null);
       return;
     }
+    const isResume = !!localStorage.getItem(PAUSE_KEY);
     if (
+      !isResume &&
       !confirm(
-        `准备给 ${targets.length} 个还没例句的词调 AI 生成例句, 大约耗时 ${Math.ceil(targets.length * 1.5 / 60)} 分钟。期间可以点"取消"中止。\n\n继续?`
+        `准备给 ${targets.length} 个还没例句的词调 AI 生成例句, 大约耗时 ${Math.ceil(targets.length * 1.5 / 60)} 分钟。期间可以"暂停"保存进度后下次接着跑, 或"取消"完全停止。\n\n继续?`
       )
     )
       return;
+    // 标记本书有进行中的批量任务
+    try {
+      localStorage.setItem(PAUSE_KEY, "1");
+    } catch {
+      // 忽略
+    }
     setGenState({
       running: true,
       cur: 0,
       total: targets.length,
       skipped: 0,
       failed: 0,
-      cancel: false
+      paused: false,
+      cancelMode: "none"
     });
     let skipped = 0;
     let failed = 0;
     for (let i = 0; i < targets.length; i++) {
-      if (cancelRef.current) break;
+      if (cancelRef.current !== "none") break;
       const w = targets[i];
-      // 双重检查: 这一秒可能其他 tab 已经写过缓存
       const latest = storage.getWordExamples();
       if (latest[w.id]) {
         skipped++;
@@ -431,32 +465,53 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
         failed++;
       }
       setGenState((s) =>
-        s
-          ? {
-              ...s,
-              cur: i + 1,
-              skipped,
-              failed
-            }
-          : s
+        s ? { ...s, cur: i + 1, skipped, failed } : s
       );
     }
-    const finalState = {
-      running: false,
-      cur: targets.length,
-      total: targets.length,
-      skipped,
-      failed,
-      cancel: cancelRef.current
-    };
-    setGenState(finalState);
+
+    const reason = cancelRef.current;
+    cancelRef.current = "none";
     notifyStorageUpdated();
-    setTimeout(() => setGenState(null), 6000);
+    if (reason === "pause") {
+      // 暂停: 保留 PAUSE_KEY, UI 显示"继续生成"
+      setGenState({
+        running: false,
+        cur: 0,
+        total: 0,
+        skipped: 0,
+        failed: 0,
+        paused: true,
+        cancelMode: "none"
+      });
+    } else {
+      // 全部跑完 / 用户取消 -> 清掉暂停标记
+      try {
+        localStorage.removeItem(PAUSE_KEY);
+      } catch {
+        // 忽略
+      }
+      setGenState({
+        running: false,
+        cur: targets.length,
+        total: targets.length,
+        skipped,
+        failed,
+        paused: false,
+        cancelMode: "none"
+      });
+      setTimeout(() => setGenState(null), 6000);
+    }
   };
 
-  const cancelBatch = () => {
-    cancelRef.current = true;
-    setGenState((s) => (s ? { ...s, cancel: true } : s));
+  const pauseBatch = () => {
+    cancelRef.current = "pause";
+    setGenState((s) => (s ? { ...s, paused: true, cancelMode: "pause" } : s));
+  };
+  const stopBatch = () => {
+    if (!confirm("取消会清除续传进度, 下次重新开始(已生成的例句仍保留)。\n\n确认取消?"))
+      return;
+    cancelRef.current = "stop";
+    setGenState((s) => (s ? { ...s, cancelMode: "stop" } : s));
   };
 
   const filtered = useMemo(() => {
@@ -483,9 +538,22 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
         </div>
         <div className="flex items-center gap-2">
           {genState?.running ? (
-            <Button variant="ghost" onClick={cancelBatch} disabled={genState.cancel}>
-              {genState.cancel ? "停止中..." : "取消"}
-            </Button>
+            <>
+              <Button
+                variant="ghost"
+                onClick={pauseBatch}
+                disabled={genState.cancelMode !== "none"}
+              >
+                {genState.cancelMode === "pause" ? "暂停中..." : "暂停"}
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={stopBatch}
+                disabled={genState.cancelMode !== "none"}
+              >
+                {genState.cancelMode === "stop" ? "停止中..." : "取消"}
+              </Button>
+            </>
           ) : null}
           <Button
             variant="soft"
@@ -494,7 +562,9 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
           >
             {genState?.running
               ? `生成中 ${genState.cur}/${genState.total}`
-              : "AI 批量生成例句"}
+              : genState?.paused
+                ? "继续生成例句"
+                : "AI 批量生成例句"}
           </Button>
           <input
             className="input h-8 w-48 text-xs"
@@ -507,11 +577,16 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
           />
         </div>
       </div>
-      {genState && !genState.running ? (
+      {genState && !genState.running && genState.paused ? (
+        <div className="mb-2 rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-xs text-amber-900">
+          ⏸ 上次批量生成被暂停,已生成 {examplesCached}/{allWords.length} 个例句。
+          点上方「继续生成例句」从未生成的词接着跑,关浏览器/重启电脑都不会丢。
+        </div>
+      ) : null}
+      {genState && !genState.running && !genState.paused && genState.total > 0 ? (
         <div className="mb-2 rounded-lg border border-brand-200 bg-brand-50/60 px-3 py-2 text-xs">
           ✓ 批量生成结束: 处理 {genState.total} 个,跳过 {genState.skipped},失败{" "}
           {genState.failed}
-          {genState.cancel ? " (用户取消)" : ""}
         </div>
       ) : null}
       {/* 固定 min-height 防止翻页时高度跳变, 浏览器 scroll restoration 把视口拉走 */}
