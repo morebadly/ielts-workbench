@@ -15,7 +15,7 @@ import {
   formatMs,
   hasBlankLineBetweenParagraphs
 } from "@/lib/utils";
-import { MOCK_WRITING_PROMPTS } from "@/data/mockWriting";
+import { getPromptsByTask } from "@/data/writingPrompts";
 import { useCountdown } from "@/hooks/useTimer";
 import type { WritingPractice, WritingPrompt, WritingTaskType } from "@/types";
 import { storage } from "@/lib/storage";
@@ -25,8 +25,7 @@ import {
   type WritingTask1Data,
   type WritingTask2Data
 } from "@/lib/ai/client";
-
-export default function WritingExamPage() {
+import { PromptLibraryDialog } from "@/components/writing/PromptLibraryDialog";export default function WritingExamPage() {
   return (
     <Suspense fallback={null}>
       <WritingExamPageInner />
@@ -58,8 +57,11 @@ function WritingExamPageInner() {
   const [taskType, setTaskType] = useState<WritingTaskType>(
     customPrompt?.taskType || "task2"
   );
+  // v1.10.6: 题库浏览器开关
+  const [showLibrary, setShowLibrary] = useState(false);
   const promptList = useMemo(() => {
-    const base = MOCK_WRITING_PROMPTS.filter((p) => p.taskType === taskType);
+    // 旧 mock 题先放, 真题库现在已经包含在 getPromptsByTask 里了
+    const base = getPromptsByTask(taskType);
     return customPrompt && customPrompt.taskType === taskType
       ? [customPrompt, ...base]
       : base;
@@ -140,7 +142,16 @@ function WritingExamPageInner() {
             </Button>
           </div>
 
-          <div className="mt-4 text-xs muted">题目</div>
+          <div className="mt-4 flex items-center justify-between">
+            <div className="text-xs muted">题目 ({promptList.length} 道可选)</div>
+            <button
+              type="button"
+              className="text-xs text-brand-700 hover:underline"
+              onClick={() => setShowLibrary(true)}
+            >
+              📚 翻真题库
+            </button>
+          </div>
           <select
             className="input mt-1"
             value={promptId}
@@ -222,6 +233,18 @@ function WritingExamPageInner() {
           ) : null}
         </Card>
       </div>
+
+      {showLibrary ? (
+        <PromptLibraryDialog
+          taskType={taskType}
+          open={showLibrary}
+          onPick={(p) => {
+            setPromptId(p.id);
+            setShowLibrary(false);
+          }}
+          onClose={() => setShowLibrary(false)}
+        />
+      ) : null}
     </Container>
   );
 }
