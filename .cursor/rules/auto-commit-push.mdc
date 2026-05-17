@@ -1,0 +1,39 @@
+---
+description: ielts-workbench 项目的 commit / push 默认流程, 每轮改完自动推到 origin/main, 风险动作除外
+alwaysApply: true
+---
+
+# 自动 commit + push 流程
+
+每轮改完代码后, 默认按这个顺序执行, 不需要再问用户:
+
+1. `npx tsc --noEmit -p tsconfig.json` 跑通类型检查 (lint 报错也得修)
+2. `git add` 本轮真正改动的文件 (不要 `git add .` —— 避开 `tsconfig.tsbuildinfo` 等增量缓存)
+3. `git commit -m "<type>(<scope>): <概述>"` + 详细 -m, 中文写
+   - 多个独立改动用分块, 每块标号说清"改什么/为什么"
+4. `git push origin main` (国内推送用 origin 直推, 镜像 ghfast 不支持 push)
+5. 在最终回复里给出:
+   - 新 commit hash (短哈希)
+   - 部署一条命令 (服务器拉取用 ghfast 镜像绕国内 GitHub 卡):
+     ```bash
+     cd /www/wwwroot/ielts && git fetch --depth=1 https://ghfast.top/https://github.com/morebadly/ielts-workbench.git main && git reset --hard FETCH_HEAD && rm -rf .next && npm run build && pm2 restart ielts --update-env
+     ```
+
+# 必须先问用户的风险动作 (不要默认 push)
+
+- 改 `package.json` 大版本依赖、装新依赖
+- 删数据 / 改 localStorage schema 不向后兼容 / 改 Supabase 表结构
+- 改 `.env*`、密钥、`middleware.ts` 安全相关代码
+- 改 nginx / pm2 / 部署脚本 / Dockerfile / CI 配置
+- 改 git 配置 / 要 `git push --force` / `git reset --hard` 远端
+- 改 `next.config.*` 影响渲染策略的字段 (尤其是 `dynamic` / cache / output)
+
+碰到这类先在回复里讲清风险, 等用户回 "继续 / 推" 再操作.
+
+# 不要做的事
+
+- 不要 `git add .` —— 容易把构建产物带进去
+- 不要 amend 已 push 的 commit
+- 不要碰 main 之外的远端分支, 除非用户明确指示
+- 不要改 git config (user.email / user.name 等)
+- commit 历史里不要出现密钥 / .env 内容, 看到就停下来报警
