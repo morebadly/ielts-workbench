@@ -341,8 +341,11 @@ function loadBookWords(book: VocabularyBook): Word[] {
 
 function BookWordsPreview({ book }: { book: VocabularyBook }) {
   // book.id 唯一标识一本书, 同 id 的 book 对象内容必相同, 不需要 book 整体作依赖
+  // v1.10.4: 改成 state, 跑批量补词性 / 例句时能从 storage 重新加载实时显示
+  const [allWords, setAllWords] = useState<Word[]>(() => loadBookWords(book));
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const allWords = useMemo(() => loadBookWords(book), [book.id]);
+  useEffect(() => setAllWords(loadBookWords(book)), [book.id]);
+  const reloadWords = () => setAllWords(loadBookWords(book));
   const [page, setPage] = useState(0);
   const [filter, setFilter] = useState("");
   // v1.10.2: 批量 AI 生成例句 —— 支持暂停/继续, 跨刷新仍能从上次位置接着跑
@@ -639,6 +642,7 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
           // 每 20 个写一次 storage, 减少 IO + 避免中断丢失太多
           if ((i + 1) % 20 === 0) {
             storage.setBookWords(book.id, working);
+            reloadWords(); // v1.10.4: 实时刷新预览表格, 让用户看到中文列已经更新
           }
         } else {
           failed++;
@@ -652,6 +656,7 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
     }
     // 跑完/中断都先把当前进度落盘
     storage.setBookWords(book.id, working);
+    reloadWords();
 
     const reason = posCancelRef.current;
     posCancelRef.current = "none";
