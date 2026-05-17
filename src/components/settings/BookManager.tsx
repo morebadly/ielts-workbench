@@ -667,53 +667,57 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
     let done = 0;
     // 操作的对象: 完整 freshWords 数组的一份拷贝, 边跑边改边存
     const working = freshWords.slice();
-    // v1.10.4: 5 路并发池, MiniMax 限速大约 5-10 QPS, 5 路安全且把时间砍 5 倍
     const CONCURRENCY = 5;
     let cursor = 0;
+
+    /**
+     * v1.10.5: 单个词跑 + 一次重试。AI 偶发返回不规范或限速失败时, sleep 后再试一次,
+     * 显著降低用户视角下的"failed"数 (大量失败其实是临时性问题)
+     */
+    async function tryOnce(word: string, currentMeaning: string) {
+      const fallback = (): PosLookupData => ({
+        partOfSpeech: "",
+        chineseMeaning: currentMeaning
+      });
+      const r = await callAI(
+        "posLookup",
+        { word, chineseMeaning: currentMeaning },
+        fallback
+      );
+      if (r.source !== "minimax") return { ok: false as const, reason: r.reason, errorCode: r.errorCode };
+      const combined = buildCombinedMeaning(r.data.partOfSpeech, r.data.chineseMeaning);
+      if (combined && POS_PREFIX.test(combined)) {
+        return { ok: true as const, combined };
+      }
+      return {
+        ok: false as const,
+        reason: `bad_format pos=${JSON.stringify(r.data.partOfSpeech)} cn=${JSON.stringify(r.data.chineseMeaning)}`
+      };
+    }
+
     const runOne = async () => {
       while (cursor < targets.length && posCancelRef.current === "none") {
         const i = cursor++;
         const { w, idx } = targets[i];
-        // 双重检查: 这个词是否在另一处已经被改过
         if (POS_PREFIX.test(working[idx].chineseMeaning.trim())) {
           skipped++;
           done++;
-          setPosState((s) =>
-            s ? { ...s, cur: done, skipped, failed } : s
-          );
+          setPosState((s) => (s ? { ...s, cur: done, skipped, failed } : s));
           continue;
         }
-        const fallback = (): PosLookupData => ({
-          partOfSpeech: "",
-          chineseMeaning: w.chineseMeaning
-        });
         try {
-          const r = await callAI(
-            "posLookup",
-            { word: w.word, chineseMeaning: w.chineseMeaning },
-            fallback
-          );
-          if (r.source === "minimax") {
-            const combined = buildCombinedMeaning(
-              r.data.partOfSpeech,
-              r.data.chineseMeaning
-            );
-            if (combined && POS_PREFIX.test(combined)) {
-              working[idx] = { ...working[idx], chineseMeaning: combined };
-            } else {
-              failed++;
-              if (failed <= 5) {
-                console.warn(
-                  `[posLookup] 拼接失败 word=${w.word} pos=${JSON.stringify(r.data.partOfSpeech)} cn=${JSON.stringify(r.data.chineseMeaning)}`
-                );
-              }
-            }
+          let res = await tryOnce(w.word, w.chineseMeaning);
+          if (!res.ok) {
+            // 二次重试: 等 800ms 让限速窗口过去, 再试
+            await new Promise((r) => setTimeout(r, 800));
+            res = await tryOnce(w.word, w.chineseMeaning);
+          }
+          if (res.ok) {
+            working[idx] = { ...working[idx], chineseMeaning: res.combined };
           } else {
             failed++;
             if (failed <= 5) {
-              console.warn(
-                `[posLookup] AI 调用失败 word=${w.word} reason=${r.reason} code=${r.errorCode}`
-              );
+              console.warn(`[posLookup] 重试后仍失败 word=${w.word} reason=${res.reason}`);
             }
           }
         } catch (e) {
@@ -723,15 +727,11 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
           }
         }
         done++;
-        // v1.10.5: 写盘 + 刷表频率从 20 提到 5 (= CONCURRENCY 一轮),
-        // 视觉上接近"补一个显示一个", 同时避免每次都序列化整个词表 (3000+ 词约 200KB)
         if (done % 5 === 0) {
           storage.setBookWords(book.id, working);
           reloadWords();
         }
-        setPosState((s) =>
-          s ? { ...s, cur: done, skipped, failed } : s
-        );
+        setPosState((s) => (s ? { ...s, cur: done, skipped, failed } : s));
       }
     };
     await Promise.all(
