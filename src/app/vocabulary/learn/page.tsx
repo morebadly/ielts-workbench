@@ -188,7 +188,7 @@ function VocabularyLearnInner() {
       />
       {isOffDay ? (
         <div className="mb-3 rounded-xl border border-amber-300 bg-amber-50 px-3 py-2 text-xs text-amber-900">
-          ⏪ 当前在回顾 / 预习 <b>Day {effectiveDay}</b>。学习进度不会计入今天的"新词完成"。
+          ⏪ 当前在回顾 / 预习 <b>Day {effectiveDay}</b>。学习进度不会计入今天的&ldquo;新词完成&rdquo;。
           <Link href={`/vocabulary/learn?mode=${mode}`} className="ml-2 underline">
             回到 Day {user.currentDay}
           </Link>
