@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Card, CardHeader } from "@/components/ui/Card";
@@ -400,6 +400,93 @@ export default function VocabularyImportPage() {
     if (visionResume) handleVisionExtract(visionResume);
   };
 
+  /**
+   * v1.10.1: 直接传图片识别 (1~N 张), 绕开 PDF 渲染流程
+   * 适用场景:
+   *   - 补刀某本扫描书里被 MiniMax 内容审核拒绝的某几页 (重新截图/手机拍)
+   *   - 用户手上没有 PDF, 只有照片/截图
+   * 同样走 /api/import/pdf?action=vision, 跟 PDF vision 共用 API
+   */
+  const handleImageVisionExtract = async (imageFiles: File[]) => {
+    if (!imageFiles.length) return setError("请先选择至少一张图片");
+    const finalTitle =
+      bookTitle.trim() ||
+      imageFiles[0].name.replace(/\.(jpe?g|png|webp|gif)$/i, "");
+
+    setError(null);
+    setSkipNotice(null);
+    setVisionExtracting(true);
+    setAiSource("loading");
+    setCorrections([]);
+
+    try {
+      // 1) File -> dataUrl
+      setVisionProgress({ phase: "render", cur: 0, total: imageFiles.length });
+      const dataUrls: string[] = [];
+      for (let i = 0; i < imageFiles.length; i++) {
+        const f = imageFiles[i];
+        const dataUrl = await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result as string);
+          reader.onerror = reject;
+          reader.readAsDataURL(f);
+        });
+        dataUrls.push(dataUrl);
+        setVisionProgress({
+          phase: "render",
+          cur: i + 1,
+          total: imageFiles.length
+        });
+      }
+
+      // 2) 一次发给 vision (跟 PDF 一批一样, 但图片场景一般 1-3 张, 不分批)
+      setVisionProgress({ phase: "ai", cur: 1, total: 1 });
+      const r = await fetch("/api/import/pdf", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "vision",
+          bookTitle: finalTitle,
+          hint,
+          images: dataUrls
+        })
+      });
+      if (!r.ok) {
+        const j = (await r.json().catch(() => null)) as
+          | { detail?: string; error?: string }
+          | null;
+        const msg = j?.detail || j?.error || `HTTP ${r.status}`;
+        throw new Error(msg);
+      }
+      const json = (await r.json()) as { data?: { words: ImportedWord[] } };
+      const words = json.data?.words || [];
+      if (!words.length) {
+        throw new Error("AI 没识别出任何词条, 换张更清晰的图片再试");
+      }
+
+      // 3) 直接进 structured 阶段, 共用现有的预览/确认入库流程
+      setBookTitle(finalTitle);
+      setWords(words);
+      setExtracted({
+        ok: true,
+        totalPages: imageFiles.length,
+        pageRange: { from: 1, to: imageFiles.length },
+        text: "",
+        textPerPage: [],
+        isProbablyScanned: true,
+        charCountAfterTrim: 0
+      });
+      setAiSource("minimax");
+      setStage("structured");
+    } catch (e) {
+      setError((e as Error).message);
+      setAiSource(null);
+    } finally {
+      setVisionExtracting(false);
+      setVisionProgress(null);
+    }
+  };
+
   /** 用户点 "放弃续传" 时调用 */
   const handleDiscardResume = () => {
     if (!confirm("放弃续传将丢失已识别的词条,确定继续?")) return;
@@ -647,6 +734,7 @@ export default function VocabularyImportPage() {
           }}
           visionResume={visionResume}
           clearVisionResume={() => saveVisionResume(null)}
+          onImageVisionExtract={handleImageVisionExtract}
         />
       ) : null}
 
@@ -724,6 +812,7 @@ function UploadStage(props: {
   } | null;
   onVisionExtract: () => void;
   onVisionResume: () => void;
+  onImageVisionExtract: (files: File[]) => void;
   visionResume: {
     fileName: string;
     fileSize: number;
@@ -743,6 +832,7 @@ function UploadStage(props: {
       ? resume.fileName === props.file.name && resume.fileSize === props.file.size
       : false;
   return (
+    <>
     <Card padding="lg" className="space-y-4">
       <CardHeader title="第 1 步:上传 PDF" subtitle="只在你本机处理, 不会上传 GitHub" />
 
@@ -872,6 +962,84 @@ function UploadStage(props: {
               ? `正在提取... ${props.extractProgress.cur}/${props.extractProgress.total} 页`
               : "正在提取..."
             : "提取文字"}
+        </Button>
+      </div>
+    </Card>
+
+    <ImageVisionCard
+      busy={busy}
+      visionExtracting={props.visionExtracting}
+      visionProgress={props.visionProgress}
+      onImageVisionExtract={props.onImageVisionExtract}
+    />
+    </>
+  );
+}
+
+/**
+ * 直接传图片(jpg/png 截图、拍照页),走 vision 识别。
+ * 适合补刀某几页 PDF 渲染失败 / MiniMax 图片审核误拒的场景。
+ */
+function ImageVisionCard(props: {
+  busy: boolean;
+  visionExtracting: boolean;
+  visionProgress: {
+    phase: "render" | "ai";
+    cur: number;
+    total: number;
+    skipped?: number;
+  } | null;
+  onImageVisionExtract: (files: File[]) => void;
+}) {
+  const [imageFiles, setImageFiles] = useState<File[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const isBusy = props.busy || props.visionExtracting;
+
+  return (
+    <Card padding="lg" className="space-y-3">
+      <CardHeader
+        title="或者: 直接传图片识别"
+        subtitle="jpg / png / webp,可一次选多张(微信截图、相机拍照都行)。也走 AI 看图,绕开 PDF 渲染流程。"
+      />
+      <div>
+        <input
+          ref={inputRef}
+          type="file"
+          accept="image/png,image/jpeg,image/webp"
+          multiple
+          className="block text-sm"
+          onChange={(e) => {
+            const list = Array.from(e.target.files || []);
+            setImageFiles(list);
+          }}
+        />
+        {imageFiles.length > 0 ? (
+          <div className="mt-2 text-xs muted">
+            已选 {imageFiles.length} 张图 ·{" "}
+            {(
+              imageFiles.reduce((s, f) => s + f.size, 0) / 1024 / 1024
+            ).toFixed(1)}{" "}
+            MB
+          </div>
+        ) : (
+          <div className="mt-2 text-xs muted">
+            提示: 词书名称在上方填,识别后会自动追加到同名词书(去重)。
+          </div>
+        )}
+      </div>
+      <div className="flex justify-end">
+        <Button
+          variant="primary"
+          onClick={() => {
+            props.onImageVisionExtract(imageFiles);
+          }}
+          disabled={!imageFiles.length || isBusy}
+        >
+          {props.visionExtracting
+            ? props.visionProgress?.phase === "render"
+              ? `读取图片... ${props.visionProgress.cur}/${props.visionProgress.total}`
+              : "AI 识别中..."
+            : "用 AI 识别这些图"}
         </Button>
       </div>
     </Card>
