@@ -342,7 +342,7 @@ Current Chinese meaning: "${currentMeaning}"
 Return STRICT JSON, no markdown:
 {
   "partOfSpeech": "<one or more of n. | v. | adj. | adv. | prep. | conj. | phrase, comma-separated if multiple, e.g. 'v., n.'>",
-  "refinedMeaning": "<把词性放在前面,中文释义跟在后面;多个词性时按 'v. xxx; n. yyy' 风格分号分隔。已修正错别字, 简洁地道, 保持原义不扩展>"
+  "chineseMeaning": "<把词性放在前面,中文释义跟在后面;多个词性时按 'v. xxx; n. yyy' 风格分号分隔。已修正错别字, 简洁地道, 保持原义不扩展>"
 }
 
 Rules:
