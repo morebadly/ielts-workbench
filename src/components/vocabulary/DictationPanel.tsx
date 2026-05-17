@@ -15,6 +15,7 @@ import {
 } from "@/lib/ai/client";
 import { storage } from "@/lib/storage";
 import type { DictationMode, Word } from "@/types";
+import { ChineseMeaningParts } from "@/components/vocabulary/ChineseMeaningParts";
 
 interface Props {
   words: Word[];
@@ -140,7 +141,9 @@ export function DictationPanel({ words, mode, voice, onResult, onFinish }: Props
         return (
           <div>
             <p className="muted text-sm">看中文,写英文单词。</p>
-            <p className="mt-2 text-lg font-medium">{current.chineseMeaning}</p>
+            <p className="mt-2 text-lg font-medium">
+              <ChineseMeaningParts text={current.chineseMeaning} />
+            </p>
           </div>
         );
       case "fillInSentence":

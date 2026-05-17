@@ -341,14 +341,15 @@ Current Chinese meaning: "${currentMeaning}"
 
 Return STRICT JSON, no markdown:
 {
-  "partOfSpeech": "<one or more of n. | v. | adj. | adv. | prep. | conj. | phrase, comma-separated if multiple, e.g. 'v., n.'>",
-  "chineseMeaning": "<把词性放在前面,中文释义跟在后面;多个词性时按 'v. xxx; n. yyy' 风格分号分隔。已修正错别字, 简洁地道, 保持原义不扩展>"
+  "partOfSpeech": "<one or more of n. | v. | adj. | adv. | prep. | conj. | phr., comma-separated if multiple, e.g. 'v., n.'. 必须用缩写带点, 不要写 verb/noun/adjective 全称>",
+  "chineseMeaning": "<把词性放在前面,中文释义跟在后面;多个词性时按 'v. xxx; n. yyy' 风格分号分隔。这个字段必须自带词性前缀, 不要只放释义>"
 }
 
 Rules:
+- partOfSpeech 必须是缩写形式 + 点号: "v." "n." "adj." "adv." "prep." "conj." "phr.";多词性用逗号分隔, 例如 "v., n."。绝对不要写 "verb" "noun" 这种英文全称。
+- chineseMeaning 必须以同样的词性缩写开头, 例如 "v. 离弃; 放弃" 或 "v. 处理; n. 用具"。即便 partOfSpeech 字段已经填了, chineseMeaning 也要再带一遍前缀, 这是冗余但必需的。
 - 如果 currentMeaning 已经包含正确词性(例如以 "v. " / "n. " / "adj. " 开头),保留原词性不变, 只清理空格 / 标点
 - 如果完全缺词性, 根据 word 在该 meaning 下最常见的词性自动补
-- 如果一个词在 IELTS 里同时是动词和名词且 currentMeaning 含两层意思, 用 "v. xxx; n. yyy" 形式
 - 中文释义保持原书风格, 不展开, 不替换为别的同义释义。如果原 meaning 完全错或乱码, 才纠正
 - 不要返回任何额外文本, 不要 markdown
 `.trim()

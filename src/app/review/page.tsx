@@ -11,6 +11,7 @@ import { getEnabledBookIds, getWordsFromBooks } from "@/data/mockWords";
 import { speak } from "@/lib/tts";
 import type { ReviewItem, Word, WordProgress } from "@/types";
 import { WORD_STATUS_LABEL } from "@/types";
+import { ChineseMeaningParts } from "@/components/vocabulary/ChineseMeaningParts";
 
 export default function ReviewPage() {
   const [dueWords, setDueWords] = useState<
@@ -70,7 +71,8 @@ export default function ReviewPage() {
                     <span className="ml-1 text-xs text-ink-muted">{word.phonetic}</span>
                   </div>
                   <div className="text-xs muted">
-                    {word.chineseMeaning} · {WORD_STATUS_LABEL[progress.status]} · 错 {progress.wrongCount} 次
+                    <ChineseMeaningParts text={word.chineseMeaning} compact /> ·{" "}
+                    {WORD_STATUS_LABEL[progress.status]} · 错 {progress.wrongCount} 次
                   </div>
                 </div>
                 <Button variant="soft" onClick={() => speak(word.word)}>

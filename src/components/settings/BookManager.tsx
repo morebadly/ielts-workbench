@@ -14,6 +14,7 @@ import {
 import type { VocabularyBook, UserProgress, Word } from "@/types";
 import { notifyStorageUpdated } from "@/hooks/useDailyTask";
 import { callAI, type GenerateExampleData, type PosLookupData } from "@/lib/ai/client";
+import { ChineseMeaningParts } from "@/components/vocabulary/ChineseMeaningParts";
 
 interface Props {
   user: UserProgress;
@@ -553,6 +554,53 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
 
   // 这本书里"看起来没词性"的词数 —— 启发式: 中文不以词性前缀开头就算缺
   const POS_PREFIX = /^(n\.|v\.|vt\.|vi\.|adj\.|adv\.|prep\.|conj\.|pron\.|art\.|num\.|phr\.|phrase|abbr\.)/i;
+
+  /**
+   * v1.10.5: 把 AI 返回的两个字段合并成"v. 释义"格式。
+   *
+   * 之前的判定只接受 chineseMeaning 自带前缀的情况, 但 MiniMax-M2.7 是 reasoning
+   * 模型, 同一份 prompt 经常出现:
+   *   1) {partOfSpeech:"v.", chineseMeaning:"离弃; 放弃"}    — 字段拆开了, 没合并
+   *   2) {partOfSpeech:"verb", chineseMeaning:"离弃..."}    — 写英文全称
+   *   3) {partOfSpeech:"v., n.", chineseMeaning:"v. 处理; n. 用具"} — 已经合并好
+   * 三种我们都视为成功, 客户端按需拼接。
+   */
+  function buildCombinedMeaning(
+    pos: string,
+    meaning: string
+  ): string | null {
+    const m = (meaning || "").trim();
+    if (!m) return null;
+    // 情况 3: meaning 自带前缀 → 直接用
+    if (POS_PREFIX.test(m)) return m;
+    // 情况 1/2: pos 单独存在, 客户端拼
+    const p = (pos || "").trim();
+    if (!p) return null;
+    // 把 verb / noun 等英文全称归一化到 v. / n.
+    const normalized = p
+      .replace(/\bverb\b/gi, "v.")
+      .replace(/\bnoun\b/gi, "n.")
+      .replace(/\badjective\b/gi, "adj.")
+      .replace(/\badverb\b/gi, "adv.")
+      .replace(/\bpreposition\b/gi, "prep.")
+      .replace(/\bconjunction\b/gi, "conj.")
+      .replace(/\bpronoun\b/gi, "pron.")
+      .replace(/\barticle\b/gi, "art.")
+      .replace(/\bphrase\b/gi, "phr.")
+      .replace(/\s+/g, " ")
+      .trim();
+    // 缩写后面没点的也补上, 例如 "v" → "v."
+    const fixed = normalized.replace(
+      /\b(n|v|vt|vi|adj|adv|prep|conj|pron|art|num|aux|phr)(?!\.)\b/gi,
+      "$1."
+    );
+    if (!POS_PREFIX.test(fixed) && !/^[a-z]{1,5}\.\s*(,\s*[a-z]{1,5}\.\s*)*$/i.test(fixed)) {
+      // 既不是单个 v./n. 也不是 "v., n." 形式, 大概率是垃圾, 放弃
+      return null;
+    }
+    return `${fixed} ${m}`.replace(/\s+/g, " ").trim();
+  }
+
   const posMissing = useMemo(() => {
     return allWords.filter((w) => !POS_PREFIX.test(w.chineseMeaning.trim())).length;
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -642,20 +690,37 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
         try {
           const r = await callAI(
             "posLookup",
-            { word: w.word, currentMeaning: w.chineseMeaning },
+            { word: w.word, chineseMeaning: w.chineseMeaning },
             fallback
           );
-          if (
-            r.source === "minimax" &&
-            r.data.chineseMeaning &&
-            POS_PREFIX.test(r.data.chineseMeaning.trim())
-          ) {
-            working[idx] = { ...working[idx], chineseMeaning: r.data.chineseMeaning };
+          if (r.source === "minimax") {
+            const combined = buildCombinedMeaning(
+              r.data.partOfSpeech,
+              r.data.chineseMeaning
+            );
+            if (combined && POS_PREFIX.test(combined)) {
+              working[idx] = { ...working[idx], chineseMeaning: combined };
+            } else {
+              failed++;
+              if (failed <= 5) {
+                console.warn(
+                  `[posLookup] 拼接失败 word=${w.word} pos=${JSON.stringify(r.data.partOfSpeech)} cn=${JSON.stringify(r.data.chineseMeaning)}`
+                );
+              }
+            }
           } else {
             failed++;
+            if (failed <= 5) {
+              console.warn(
+                `[posLookup] AI 调用失败 word=${w.word} reason=${r.reason} code=${r.errorCode}`
+              );
+            }
           }
-        } catch {
+        } catch (e) {
           failed++;
+          if (failed <= 5) {
+            console.warn(`[posLookup] 异常 word=${w.word}`, e);
+          }
         }
         done++;
         // 每 20 个完成写一次 storage + 刷新表格
@@ -862,7 +927,9 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
                     <td className="px-2 py-1 font-mono text-ink-soft">
                       {w.phonetic}
                     </td>
-                    <td className="px-2 py-1">{w.chineseMeaning}</td>
+                    <td className="px-2 py-1">
+                      <ChineseMeaningParts text={w.chineseMeaning} compact />
+                    </td>
                     <td className="px-2 py-1 tabular-nums text-ink-soft">
                       {w.bookDay}
                     </td>

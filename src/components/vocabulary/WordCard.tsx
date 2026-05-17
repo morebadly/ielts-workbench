@@ -17,6 +17,7 @@ import {
 import type { Word, WordProgress } from "@/types";
 import { applyFeedback, type Feedback } from "@/lib/srs";
 import { SrsStatusBadge } from "@/components/vocabulary/SrsStatusBadge";
+import { ChineseMeaningParts } from "@/components/vocabulary/ChineseMeaningParts";
 import { storage } from "@/lib/storage";
 
 interface Props {
@@ -33,6 +34,9 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
   const [guideSource, setGuideSource] = useState<AISource | "loading" | null>(null);
   const [guideReason, setGuideReason] = useState<string | undefined>();
   const [guideErrorCode, setGuideErrorCode] = useState<string | undefined>();
+
+  // v1.10.5: 移动端默认折叠造句区, 减少滚动距离, 让"我会了"不用滑半屏才点到
+  const [showSentenceBox, setShowSentenceBox] = useState(false);
 
   const [sentence, setSentence] = useState("");
   const [sentenceData, setSentenceData] = useState<SentenceFeedbackData | null>(null);
@@ -52,6 +56,7 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
     setSentence("");
     setSentenceData(null);
     setSentenceSource(null);
+    setShowSentenceBox(false);
     // 切词时优先从缓存读已生成的例句
     const cached = storage.getWordExamples()[word.id];
     if (cached) {
@@ -143,7 +148,7 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
   };
 
   return (
-    <Card padding="lg" className="space-y-5">
+    <Card padding="none" className="space-y-3 p-4 sm:space-y-5 sm:p-8">
       <div className="space-y-3 sm:flex sm:flex-wrap sm:items-start sm:justify-between sm:gap-3 sm:space-y-0">
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-end gap-3">
@@ -169,36 +174,46 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3">
         <div>
           <div className="text-xs muted">中文意思</div>
-          <div className="mt-1 text-base">
+          <div className="mt-0.5 text-base sm:mt-1">
             <ChineseMeaningParts text={word.chineseMeaning} />
           </div>
         </div>
-        <div>
-          <div className="text-xs muted">English Definition</div>
-          <div className="mt-1 text-base">{word.englishDefinition}</div>
-        </div>
+        {word.englishDefinition ? (
+          <div>
+            <div className="text-xs muted">English Definition</div>
+            <div className="mt-0.5 text-sm sm:mt-1 sm:text-base">{word.englishDefinition}</div>
+          </div>
+        ) : null}
       </div>
 
-      <div className="rounded-xl bg-bg-soft/60 p-4">
+      <div className="rounded-xl bg-bg-soft/60 p-3 sm:p-4">
         {word.exampleSentence ? (
           <>
-            <p className="font-serif text-[15px] leading-relaxed">&ldquo;{word.exampleSentence}&rdquo;</p>
-            <div className="mt-2 flex flex-wrap gap-2">
-              <Button
-                variant="soft"
-                onClick={() => speak(word.exampleSentence, { voice })}
-              >
-                ▶ 例句
-              </Button>
-              <Button
-                variant="ghost"
-                onClick={() => speak(word.exampleSentence, { voice, rate: 0.7 })}
-              >
-                慢速
-              </Button>
+            <div className="flex items-start gap-2 sm:gap-3">
+              <p className="min-w-0 flex-1 font-serif text-[15px] leading-relaxed">
+                &ldquo;{word.exampleSentence}&rdquo;
+              </p>
+              <div className="flex shrink-0 flex-col gap-1 sm:flex-row sm:gap-2">
+                <Button
+                  variant="soft"
+                  className="px-2 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-sm"
+                  onClick={() => speak(word.exampleSentence, { voice })}
+                  aria-label="播放例句"
+                >
+                  ▶
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="px-2 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-sm"
+                  onClick={() => speak(word.exampleSentence, { voice, rate: 0.7 })}
+                  aria-label="慢速播放例句"
+                >
+                  慢
+                </Button>
+              </div>
             </div>
             {word.exampleTranslation ? (
               <p className="mt-2 text-sm muted">{word.exampleTranslation}</p>
@@ -206,25 +221,31 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
           </>
         ) : genExample ? (
           <>
-            <p className="font-serif text-[15px] leading-relaxed">
-              &ldquo;{genExample.exampleSentence}&rdquo;
-            </p>
-            <div className="mt-2 flex flex-wrap gap-2">
-              <Button
-                variant="soft"
-                onClick={() => speak(genExample.exampleSentence, { voice })}
-              >
-                ▶ 例句
-              </Button>
-              <Button
-                variant="ghost"
-                onClick={() => speak(genExample.exampleSentence, { voice, rate: 0.7 })}
-              >
-                慢速
-              </Button>
+            <div className="flex items-start gap-2 sm:gap-3">
+              <p className="min-w-0 flex-1 font-serif text-[15px] leading-relaxed">
+                &ldquo;{genExample.exampleSentence}&rdquo;
+              </p>
+              <div className="flex shrink-0 flex-col gap-1 sm:flex-row sm:gap-2">
+                <Button
+                  variant="soft"
+                  className="px-2 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-sm"
+                  onClick={() => speak(genExample.exampleSentence, { voice })}
+                  aria-label="播放例句"
+                >
+                  ▶
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="px-2 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-sm"
+                  onClick={() => speak(genExample.exampleSentence, { voice, rate: 0.7 })}
+                  aria-label="慢速播放例句"
+                >
+                  慢
+                </Button>
+              </div>
             </div>
             <p className="mt-2 text-sm muted">{genExample.exampleTranslation}</p>
-            <div className="mt-2 flex items-center gap-2 text-xs">
+            <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
               <span className="text-brand-700">💡 {genExample.memoryTip}</span>
               {genSource ? <AISourceBadge source={genSource === "loading" ? "minimax" : genSource} reason={genReason} /> : null}
               <button
@@ -253,9 +274,13 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
 
       <div>
         <div className="flex items-center gap-2">
-          <Button variant="ghost" onClick={showGuide ? () => setShowGuide(false) : loadGuide}>
-            {showGuide ? "收起怎么读" : "告诉我怎么读"}
-          </Button>
+          <button
+            type="button"
+            className="text-xs text-brand-700 hover:underline"
+            onClick={showGuide ? () => setShowGuide(false) : loadGuide}
+          >
+            {showGuide ? "收起怎么读" : "🔊 告诉我怎么读"}
+          </button>
           {guideSource ? <AISourceBadge source={guideSource} reason={guideReason} /> : null}
         </div>
         {showGuide && guideData ? (
@@ -296,26 +321,30 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
       </div>
 
       <div className="space-y-2">
-        <SrsStatusBadge progress={progress} variant="detailed" />
-        {/* 移动端: 3 个反馈按钮纵向铺满, 每个最小高度 48px (iOS 推荐拇指点击区), 字号也大 */}
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
+        {/* 移动端 SRS 详细徽章太占行, 紧凑变体已在头部出现, 这里详细版只在 sm+ 显示 */}
+        <div className="hidden sm:block">
+          <SrsStatusBadge progress={progress} variant="detailed" />
+        </div>
+        {/* 反馈三按钮: 所有屏幕都横向 3 列, 每个 min-h-12 拇指点击友好。
+            手机原本 grid-cols-1 会一列三行, 多吃两屏高, 是用户滑不到"我会了"的主因 */}
+        <div className="grid grid-cols-3 gap-2">
           <Button
             variant="soft"
-            className="min-h-12 text-base"
+            className="min-h-12 text-sm sm:text-base"
             onClick={() => handleFb("forget")}
           >
             不会
           </Button>
           <Button
             variant="soft"
-            className="min-h-12 text-base"
+            className="min-h-12 text-sm sm:text-base"
             onClick={() => handleFb("fuzzy")}
           >
             模糊
           </Button>
           <Button
             variant="primary"
-            className="min-h-12 text-base"
+            className="min-h-12 text-sm sm:text-base"
             onClick={() => handleFb("remember")}
           >
             我会了
@@ -324,55 +353,66 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
       </div>
 
       <div>
-        <div className="mb-1 flex items-center gap-2 text-xs muted">
-          用这个词造一句(雅思相关最佳)
-          {sentenceSource ? (
-            <AISourceBadge source={sentenceSource} reason={sentenceReason} />
-          ) : null}
-        </div>
-        <div className="flex gap-2">
-          <input
-            className="input"
-            placeholder={`例如:Online learning has facilitated...`}
-            value={sentence}
-            onChange={(e) => setSentence(e.target.value)}
-          />
-          <Button variant="soft" onClick={handleSentence}>
-            提交
-          </Button>
-        </div>
-        {sentenceData ? (
-          <div className="mt-2 space-y-2">
-            {sentenceSource === "mock" ? (
-              <AIResultNotice
-                source="mock"
-                reason={sentenceReason}
-                errorCode={sentenceErrorCode}
-              />
-            ) : null}
-            <div className="space-y-2 rounded-xl border border-brand-200 bg-brand-50 p-3 text-sm">
-              {sentenceData.grammarIssues.length ? (
-                <div>
-                  <div className="text-xs muted">语法问题</div>
-                  <ul className="mt-1 list-disc pl-5 text-ink-soft">
-                    {sentenceData.grammarIssues.map((g, i) => (
-                      <li key={i}>{g}</li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-              <div>
-                <div className="text-xs muted">更自然</div>
-                <p className="font-serif">{sentenceData.moreNatural}</p>
-              </div>
-              <div>
-                <div className="text-xs muted">IELTS 可用表达</div>
-                <p className="font-serif">{sentenceData.ieltsUsage}</p>
-              </div>
-              {sentenceData.comments ? (
-                <div className="text-xs text-brand-700">{sentenceData.comments}</div>
+        <button
+          type="button"
+          className="text-xs muted hover:text-brand-700"
+          onClick={() => setShowSentenceBox((v) => !v)}
+        >
+          {showSentenceBox ? "收起造句" : "+ 用这个词造一句(雅思相关最佳)"}
+        </button>
+        {showSentenceBox ? (
+          <div className="mt-2">
+            <div className="mb-1 flex items-center gap-2 text-xs muted">
+              提交后 AI 会给点评
+              {sentenceSource ? (
+                <AISourceBadge source={sentenceSource} reason={sentenceReason} />
               ) : null}
             </div>
+            <div className="flex gap-2">
+              <input
+                className="input"
+                placeholder={`例如:Online learning has facilitated...`}
+                value={sentence}
+                onChange={(e) => setSentence(e.target.value)}
+              />
+              <Button variant="soft" onClick={handleSentence}>
+                提交
+              </Button>
+            </div>
+            {sentenceData ? (
+              <div className="mt-2 space-y-2">
+                {sentenceSource === "mock" ? (
+                  <AIResultNotice
+                    source="mock"
+                    reason={sentenceReason}
+                    errorCode={sentenceErrorCode}
+                  />
+                ) : null}
+                <div className="space-y-2 rounded-xl border border-brand-200 bg-brand-50 p-3 text-sm">
+                  {sentenceData.grammarIssues.length ? (
+                    <div>
+                      <div className="text-xs muted">语法问题</div>
+                      <ul className="mt-1 list-disc pl-5 text-ink-soft">
+                        {sentenceData.grammarIssues.map((g, i) => (
+                          <li key={i}>{g}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                  <div>
+                    <div className="text-xs muted">更自然</div>
+                    <p className="font-serif">{sentenceData.moreNatural}</p>
+                  </div>
+                  <div>
+                    <div className="text-xs muted">IELTS 可用表达</div>
+                    <p className="font-serif">{sentenceData.ieltsUsage}</p>
+                  </div>
+                  {sentenceData.comments ? (
+                    <div className="text-xs text-brand-700">{sentenceData.comments}</div>
+                  ) : null}
+                </div>
+              </div>
+            ) : null}
           </div>
         ) : null}
       </div>
@@ -380,61 +420,3 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
   );
 }
 
-/**
- * v1.10.3: 把 "v. 波动;起伏" / "n. xxx; v. yyy" 这类带词性前缀的中文释义,
- * 拆成 [词性 pill] + [中文意思] 两部分显示。
- * 解析规则:
- *   - 识别开头的 "v. " / "n. " / "adj. " / "adv. " / "prep. " / "conj. " / "phr. " / "phrase " (大小写不敏感, 中英标点都接受)
- *   - 多词性多义项 (例如 "v. 处理; n. 用具") 会拆成多个块
- *   - 检测不到词性 -> 整段当裸释义显示, 跟原来一致
- */
-function ChineseMeaningParts({ text }: { text: string }) {
-  const segments = parsePosSegments(text);
-  if (segments.length === 0) {
-    return <span>{text}</span>;
-  }
-  return (
-    <span className="inline-flex flex-wrap items-baseline gap-x-2 gap-y-1">
-      {segments.map((seg, i) => (
-        <span key={i} className="inline-flex items-baseline gap-1">
-          {seg.pos ? (
-            <span className="rounded-md bg-brand-100 px-1.5 py-0.5 font-mono text-[11px] font-medium text-brand-700">
-              {seg.pos}
-            </span>
-          ) : null}
-          <span>{seg.meaning}</span>
-        </span>
-      ))}
-    </span>
-  );
-}
-
-const POS_PATTERN =
-  /\b(n|v|vt|vi|adj|adv|prep|conj|pron|art|num|aux|phr|phrase)\.?\s*/i;
-
-function parsePosSegments(text: string): Array<{ pos: string | null; meaning: string }> {
-  if (!text) return [];
-  // 先用分号 / 中文分号切成多个 part
-  const parts = text
-    .split(/[;;]+/)
-    .map((s) => s.trim())
-    .filter(Boolean);
-  if (!parts.length) return [];
-  const result: Array<{ pos: string | null; meaning: string }> = [];
-  for (const part of parts) {
-    const m = part.match(new RegExp("^" + POS_PATTERN.source));
-    if (m) {
-      const posRaw = m[1].toLowerCase();
-      const pos = posRaw.endsWith(".") ? posRaw : posRaw + ".";
-      const meaning = part.slice(m[0].length).trim();
-      if (meaning) {
-        result.push({ pos, meaning });
-        continue;
-      }
-    }
-    result.push({ pos: null, meaning: part });
-  }
-  // 如果一个 pos 都没解析到, 当作整体没词性 -> 返回空数组让上层走 fallback
-  if (result.every((r) => r.pos === null)) return [];
-  return result;
-}
