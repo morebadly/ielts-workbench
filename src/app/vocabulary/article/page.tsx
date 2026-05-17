@@ -57,12 +57,53 @@ export default function VocabularyArticlePage() {
     return new Map(getWordsFromBooks(enabled).map((w) => [w.id, w]));
   }, [user]);
 
+  const regenerate = async () => {
+    setAiSource("loading");
+    const fallback = (): VocabArticleData => ({
+      title: baseArticle?.title || "Today's Reading",
+      topic: "education",
+      body: baseArticle?.body || ""
+    });
+    const r = await callAI(
+      "vocabArticle",
+      {
+        words: dayWords.map((w) => ({
+          word: w.word,
+          chineseMeaning: w.chineseMeaning
+        }))
+      },
+      fallback
+    );
+    setAiArticle(r.data);
+    setAiSource(r.source);
+    setAiReason(r.reason);
+    setAiErrorCode(r.errorCode);
+  };
+
   if (!article) {
     return (
       <Container>
-        <PageHeader title="今日词汇文章" />
-        <Card>
-          <p>这一天的文章还没生成。</p>
+        <PageHeader title="今日词汇文章" subtitle={`Day ${user.currentDay} · ${dayWords.length} 个词`} />
+        <Card padding="lg" className="space-y-3 text-center">
+          <p className="muted">
+            这一天还没生成文章。点下面让 AI 用今日 {dayWords.length} 个新词写一篇短文,在语境里自然复现。
+          </p>
+          <div className="flex justify-center">
+            <Button
+              variant="primary"
+              onClick={regenerate}
+              disabled={!dayWords.length || aiSource === "loading"}
+            >
+              {aiSource === "loading" ? "正在生成..." : "用 AI 生成今日文章"}
+            </Button>
+          </div>
+          {aiSource === "mock" ? (
+            <AIResultNotice
+              source="mock"
+              reason={aiReason}
+              errorCode={aiErrorCode}
+            />
+          ) : null}
         </Card>
       </Container>
     );
@@ -103,29 +144,6 @@ export default function VocabularyArticlePage() {
     if (!audioQ?.audioText) return;
     const r = gradeSentence(listenInput, audioQ.audioText);
     setListenFeedback(r.correct ? "✓ 完全正确" : `✗ 参考:${audioQ.audioText}`);
-  };
-
-  const regenerate = async () => {
-    setAiSource("loading");
-    const fallback = (): VocabArticleData => ({
-      title: baseArticle?.title || "Today's Reading",
-      topic: "education",
-      body: baseArticle?.body || ""
-    });
-    const r = await callAI(
-      "vocabArticle",
-      {
-        words: dayWords.map((w) => ({
-          word: w.word,
-          chineseMeaning: w.chineseMeaning
-        }))
-      },
-      fallback
-    );
-    setAiArticle(r.data);
-    setAiSource(r.source);
-    setAiReason(r.reason);
-    setAiErrorCode(r.errorCode);
   };
 
   return (
