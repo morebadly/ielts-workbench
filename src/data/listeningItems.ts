@@ -1,17 +1,14 @@
 import type { ListeningItem } from "@/types";
+import { BBC_LISTENING_ITEMS } from "./listeningBBC";
 
 /**
- * 自写 IELTS-style 听力素材库
+ * 自写 IELTS-style 听力素材库 + BBC 6 Minute English 公开节目
  *
  * 设计原则:
- * - 覆盖 Listening Section 1-4 四种场景(社交服务对话 / 公共场合介绍 / 学术讨论 / 学术讲座)
- * - 难度梯度: easy 4 条, medium 3 条, hard 1 条
- * - 每条 80-180 词, 朗读 30-90 秒
- * - keyPhrases 是听力题常考的「数字 / 专有名词 / 词组」
- * - audioUrl 留空, 由前端 MiniMax TTS 朗读
- * - 全部为本人原创, 不抄录任何真题
- *
- * 后续可加: BBC 6 Minute English / British Council Learn English 等公开链接 (audioUrl 字段)
+ * - 自写部分覆盖 Listening Section 1-4 四种场景 (8 条, easy 4 / medium 3 / hard 1)
+ * - BBC 部分挂在 listeningBBC.ts, 直链 BBC CDN, 不占本站带宽
+ * - 自写无 audioUrl, 由前端 MiniMax TTS 朗读; BBC 必有 audioUrl
+ * - 全部为本人原创或公开节目, 不抄录任何 IELTS 真题
  */
 export const LISTENING_ITEMS: ListeningItem[] = [
   // ==================== Section 1: 社交场景对话 ====================
@@ -191,7 +188,9 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       "long-distance high-voltage cables",
       "twenty-thirty-five"
     ]
-  }
+  },
+  // BBC 6 Minute English 公开节目, audioUrl 直链 BBC CDN
+  ...BBC_LISTENING_ITEMS
 ];
 
 export function getListeningById(id: string): ListeningItem | undefined {

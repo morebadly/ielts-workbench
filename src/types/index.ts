@@ -183,8 +183,8 @@ export interface ListeningItem {
     | "lecture"
     | "monologue"
     | "discussion";
-  /** 来源标注:self_written | voa | bbc_le | british_council | external */
-  attribution?: "self_written" | "external_link";
+  /** 来源标注:self_written | external_link | bbc_le (BBC Learning English 6 Minute) */
+  attribution?: "self_written" | "external_link" | "bbc_le";
   /** 大致单词数(用来估时长) */
   wordCount?: number;
 }
