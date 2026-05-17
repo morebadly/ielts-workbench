@@ -126,9 +126,13 @@ function VocabularyLearnInner() {
 
   const handleFeedback = (next: WordProgress) => {
     if (!current) return;
+    const prev = progressMap[current.id];
     storage.setWordProgress(next);
     setProgressMap((m) => ({ ...m, [current.id]: next }));
-    if (mode === "new" && next.status !== "new") {
+    // 只在 "首次从未学过 -> 已学过" 这一刻计数, 避免重复学同一个词被反复 +1
+    const wasNew = !prev || prev.status === "new";
+    const isLearned = next.status !== "new";
+    if (mode === "new" && wasNew && isLearned) {
       bump("newWordsDone");
     } else if (mode === "review") {
       bump("reviewWordsDone");
