@@ -172,7 +172,9 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
         <div>
           <div className="text-xs muted">中文意思</div>
-          <div className="mt-1 text-base">{word.chineseMeaning}</div>
+          <div className="mt-1 text-base">
+            <ChineseMeaningParts text={word.chineseMeaning} />
+          </div>
         </div>
         <div>
           <div className="text-xs muted">English Definition</div>
@@ -367,4 +369,63 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
       </div>
     </Card>
   );
+}
+
+/**
+ * v1.10.3: 把 "v. 波动;起伏" / "n. xxx; v. yyy" 这类带词性前缀的中文释义,
+ * 拆成 [词性 pill] + [中文意思] 两部分显示。
+ * 解析规则:
+ *   - 识别开头的 "v. " / "n. " / "adj. " / "adv. " / "prep. " / "conj. " / "phr. " / "phrase " (大小写不敏感, 中英标点都接受)
+ *   - 多词性多义项 (例如 "v. 处理; n. 用具") 会拆成多个块
+ *   - 检测不到词性 -> 整段当裸释义显示, 跟原来一致
+ */
+function ChineseMeaningParts({ text }: { text: string }) {
+  const segments = parsePosSegments(text);
+  if (segments.length === 0) {
+    return <span>{text}</span>;
+  }
+  return (
+    <span className="inline-flex flex-wrap items-baseline gap-x-2 gap-y-1">
+      {segments.map((seg, i) => (
+        <span key={i} className="inline-flex items-baseline gap-1">
+          {seg.pos ? (
+            <span className="rounded-md bg-brand-100 px-1.5 py-0.5 font-mono text-[11px] font-medium text-brand-700">
+              {seg.pos}
+            </span>
+          ) : null}
+          <span>{seg.meaning}</span>
+        </span>
+      ))}
+    </span>
+  );
+}
+
+const POS_PATTERN =
+  /\b(n|v|vt|vi|adj|adv|prep|conj|pron|art|num|aux|phr|phrase)\.?\s*/i;
+
+function parsePosSegments(text: string): Array<{ pos: string | null; meaning: string }> {
+  if (!text) return [];
+  // 先用分号 / 中文分号切成多个 part
+  const parts = text
+    .split(/[;;]+/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (!parts.length) return [];
+  const result: Array<{ pos: string | null; meaning: string }> = [];
+  for (const part of parts) {
+    const m = part.match(new RegExp("^" + POS_PATTERN.source));
+    if (m) {
+      const posRaw = m[1].toLowerCase();
+      const pos = posRaw.endsWith(".") ? posRaw : posRaw + ".";
+      const meaning = part.slice(m[0].length).trim();
+      if (meaning) {
+        result.push({ pos, meaning });
+        continue;
+      }
+    }
+    result.push({ pos: null, meaning: part });
+  }
+  // 如果一个 pos 都没解析到, 当作整体没词性 -> 返回空数组让上层走 fallback
+  if (result.every((r) => r.pos === null)) return [];
+  return result;
 }
