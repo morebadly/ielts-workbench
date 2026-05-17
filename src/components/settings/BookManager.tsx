@@ -446,45 +446,51 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
     });
     let skipped = 0;
     let failed = 0;
-    for (let i = 0; i < targets.length; i++) {
-      if (cancelRef.current !== "none") break;
-      const w = targets[i];
-      const latest = storage.getWordExamples();
-      if (latest[w.id]) {
-        skipped++;
-        setGenState((s) =>
-          s ? { ...s, cur: i + 1, skipped: s.skipped + 1 } : s
-        );
-        continue;
-      }
-      const fallback = (): GenerateExampleData => ({
-        exampleSentence: `${w.word} is commonly used in academic English.`,
-        exampleTranslation: `${w.chineseMeaning.split(/[;,。;,]/)[0] || w.word} 在学术英语中很常用。`,
-        memoryTip: ""
-      });
-      try {
-        const r = await callAI(
-          "generateExample",
-          {
-            word: w.word,
-            chineseMeaning: w.chineseMeaning,
-            phonetic: w.phonetic
-          },
-          fallback
-        );
-        if (r.source === "minimax") {
-          storage.setWordExample(w.id, r.data);
-        } else {
-          // mock fallback 不缓存, 否则下次永远不再尝试 AI
+    let done = 0;
+    // v1.10.4: 5 路并发池
+    const CONCURRENCY = 5;
+    let cursor = 0;
+    const runOne = async () => {
+      while (cursor < targets.length && cancelRef.current === "none") {
+        const i = cursor++;
+        const w = targets[i];
+        const latest = storage.getWordExamples();
+        if (latest[w.id]) {
+          skipped++;
+          done++;
+          setGenState((s) => (s ? { ...s, cur: done, skipped, failed } : s));
+          continue;
+        }
+        const fallback = (): GenerateExampleData => ({
+          exampleSentence: `${w.word} is commonly used in academic English.`,
+          exampleTranslation: `${w.chineseMeaning.split(/[;,。;,]/)[0] || w.word} 在学术英语中很常用。`,
+          memoryTip: ""
+        });
+        try {
+          const r = await callAI(
+            "generateExample",
+            {
+              word: w.word,
+              chineseMeaning: w.chineseMeaning,
+              phonetic: w.phonetic
+            },
+            fallback
+          );
+          if (r.source === "minimax") {
+            storage.setWordExample(w.id, r.data);
+          } else {
+            failed++;
+          }
+        } catch {
           failed++;
         }
-      } catch {
-        failed++;
+        done++;
+        setGenState((s) => (s ? { ...s, cur: done, skipped, failed } : s));
       }
-      setGenState((s) =>
-        s ? { ...s, cur: i + 1, skipped, failed } : s
-      );
-    }
+    };
+    await Promise.all(
+      Array.from({ length: Math.min(CONCURRENCY, targets.length) }, () => runOne())
+    );
 
     const reason = cancelRef.current;
     cancelRef.current = "none";
@@ -610,50 +616,61 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
 
     let skipped = 0;
     let failed = 0;
+    let done = 0;
     // 操作的对象: 完整 freshWords 数组的一份拷贝, 边跑边改边存
     const working = freshWords.slice();
-    for (let i = 0; i < targets.length; i++) {
-      if (posCancelRef.current !== "none") break;
-      const { w, idx } = targets[i];
-      // 双重检查: 这个词是否在另一处已经被改过
-      if (POS_PREFIX.test(working[idx].chineseMeaning.trim())) {
-        skipped++;
-        setPosState((s) =>
-          s ? { ...s, cur: i + 1, skipped: s.skipped + 1 } : s
-        );
-        continue;
-      }
-      const fallback = (): PosLookupData => ({
-        partOfSpeech: "",
-        chineseMeaning: w.chineseMeaning
-      });
-      try {
-        const r = await callAI(
-          "posLookup",
-          { word: w.word, currentMeaning: w.chineseMeaning },
-          fallback
-        );
-        if (
-          r.source === "minimax" &&
-          r.data.chineseMeaning &&
-          POS_PREFIX.test(r.data.chineseMeaning.trim())
-        ) {
-          working[idx] = { ...working[idx], chineseMeaning: r.data.chineseMeaning };
-          // 每 20 个写一次 storage, 减少 IO + 避免中断丢失太多
-          if ((i + 1) % 20 === 0) {
-            storage.setBookWords(book.id, working);
-            reloadWords(); // v1.10.4: 实时刷新预览表格, 让用户看到中文列已经更新
+    // v1.10.4: 5 路并发池, MiniMax 限速大约 5-10 QPS, 5 路安全且把时间砍 5 倍
+    const CONCURRENCY = 5;
+    let cursor = 0;
+    const runOne = async () => {
+      while (cursor < targets.length && posCancelRef.current === "none") {
+        const i = cursor++;
+        const { w, idx } = targets[i];
+        // 双重检查: 这个词是否在另一处已经被改过
+        if (POS_PREFIX.test(working[idx].chineseMeaning.trim())) {
+          skipped++;
+          done++;
+          setPosState((s) =>
+            s ? { ...s, cur: done, skipped, failed } : s
+          );
+          continue;
+        }
+        const fallback = (): PosLookupData => ({
+          partOfSpeech: "",
+          chineseMeaning: w.chineseMeaning
+        });
+        try {
+          const r = await callAI(
+            "posLookup",
+            { word: w.word, currentMeaning: w.chineseMeaning },
+            fallback
+          );
+          if (
+            r.source === "minimax" &&
+            r.data.chineseMeaning &&
+            POS_PREFIX.test(r.data.chineseMeaning.trim())
+          ) {
+            working[idx] = { ...working[idx], chineseMeaning: r.data.chineseMeaning };
+          } else {
+            failed++;
           }
-        } else {
+        } catch {
           failed++;
         }
-      } catch {
-        failed++;
+        done++;
+        // 每 20 个完成写一次 storage + 刷新表格
+        if (done % 20 === 0) {
+          storage.setBookWords(book.id, working);
+          reloadWords();
+        }
+        setPosState((s) =>
+          s ? { ...s, cur: done, skipped, failed } : s
+        );
       }
-      setPosState((s) =>
-        s ? { ...s, cur: i + 1, skipped, failed } : s
-      );
-    }
+    };
+    await Promise.all(
+      Array.from({ length: Math.min(CONCURRENCY, targets.length) }, () => runOne())
+    );
     // 跑完/中断都先把当前进度落盘
     storage.setBookWords(book.id, working);
     reloadWords();

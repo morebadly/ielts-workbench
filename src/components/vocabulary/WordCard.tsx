@@ -144,7 +144,7 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
 
   return (
     <Card padding="lg" className="space-y-5">
-      <div className="flex flex-wrap items-start justify-between gap-3">
+      <div className="space-y-3 sm:flex sm:flex-wrap sm:items-start sm:justify-between sm:gap-3 sm:space-y-0">
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-end gap-3">
             <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">{word.word}</h2>
@@ -155,7 +155,7 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
             <SrsStatusBadge progress={progress} variant="compact" />
           </div>
         </div>
-        <div className="flex shrink-0 gap-2">
+        <div className="flex flex-wrap gap-2 sm:shrink-0">
           <Button variant="soft" onClick={() => speak(word.word, { voice })} aria-label="播放单词">
             ▶ 单词
           </Button>
@@ -185,22 +185,20 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
       <div className="rounded-xl bg-bg-soft/60 p-4">
         {word.exampleSentence ? (
           <>
-            <div className="flex flex-wrap items-start justify-between gap-3">
-              <p className="min-w-0 flex-1 font-serif text-[15px] leading-relaxed">&ldquo;{word.exampleSentence}&rdquo;</p>
-              <div className="flex shrink-0 gap-2">
-                <Button
-                  variant="soft"
-                  onClick={() => speak(word.exampleSentence, { voice })}
-                >
-                  ▶ 例句
-                </Button>
-                <Button
-                  variant="ghost"
-                  onClick={() => speak(word.exampleSentence, { voice, rate: 0.7 })}
-                >
-                  慢速
-                </Button>
-              </div>
+            <p className="font-serif text-[15px] leading-relaxed">&ldquo;{word.exampleSentence}&rdquo;</p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Button
+                variant="soft"
+                onClick={() => speak(word.exampleSentence, { voice })}
+              >
+                ▶ 例句
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={() => speak(word.exampleSentence, { voice, rate: 0.7 })}
+              >
+                慢速
+              </Button>
             </div>
             {word.exampleTranslation ? (
               <p className="mt-2 text-sm muted">{word.exampleTranslation}</p>
@@ -208,24 +206,22 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
           </>
         ) : genExample ? (
           <>
-            <div className="flex flex-wrap items-start justify-between gap-3">
-              <p className="min-w-0 flex-1 font-serif text-[15px] leading-relaxed">
-                &ldquo;{genExample.exampleSentence}&rdquo;
-              </p>
-              <div className="flex shrink-0 gap-2">
-                <Button
-                  variant="soft"
-                  onClick={() => speak(genExample.exampleSentence, { voice })}
-                >
-                  ▶ 例句
-                </Button>
-                <Button
-                  variant="ghost"
-                  onClick={() => speak(genExample.exampleSentence, { voice, rate: 0.7 })}
-                >
-                  慢速
-                </Button>
-              </div>
+            <p className="font-serif text-[15px] leading-relaxed">
+              &ldquo;{genExample.exampleSentence}&rdquo;
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Button
+                variant="soft"
+                onClick={() => speak(genExample.exampleSentence, { voice })}
+              >
+                ▶ 例句
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={() => speak(genExample.exampleSentence, { voice, rate: 0.7 })}
+              >
+                慢速
+              </Button>
             </div>
             <p className="mt-2 text-sm muted">{genExample.exampleTranslation}</p>
             <div className="mt-2 flex items-center gap-2 text-xs">
