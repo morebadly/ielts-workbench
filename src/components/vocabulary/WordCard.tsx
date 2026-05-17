@@ -301,14 +301,27 @@ export function WordCard({ word, progress, voice, onFeedback, onSentenceSubmit }
 
       <div className="space-y-2">
         <SrsStatusBadge progress={progress} variant="detailed" />
-        <div className="grid grid-cols-3 gap-2">
-          <Button variant="soft" onClick={() => handleFb("forget")}>
+        {/* 移动端: 3 个反馈按钮纵向铺满, 每个最小高度 48px (iOS 推荐拇指点击区), 字号也大 */}
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
+          <Button
+            variant="soft"
+            className="min-h-12 text-base"
+            onClick={() => handleFb("forget")}
+          >
             不会
           </Button>
-          <Button variant="soft" onClick={() => handleFb("fuzzy")}>
+          <Button
+            variant="soft"
+            className="min-h-12 text-base"
+            onClick={() => handleFb("fuzzy")}
+          >
             模糊
           </Button>
-          <Button variant="primary" onClick={() => handleFb("remember")}>
+          <Button
+            variant="primary"
+            className="min-h-12 text-base"
+            onClick={() => handleFb("remember")}
+          >
             我会了
           </Button>
         </div>
