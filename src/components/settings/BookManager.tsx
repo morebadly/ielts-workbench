@@ -770,7 +770,10 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
         paused: false,
         cancelMode: "none"
       });
-      setTimeout(() => setPosState(null), 6000);
+      // 全部成功才自动消失, 有失败要让用户看到 / 自己关
+      if (failed === 0) {
+        setTimeout(() => setPosState(null), 6000);
+      }
     }
   };
 
@@ -857,17 +860,24 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
                 : "AI 批量生成例句"}
           </Button>
           {!isBuiltinBook ? (
-            <Button
-              variant="soft"
-              onClick={runBatchPos}
-              disabled={!!posState?.running || !!genState?.running}
-            >
-              {posState?.running
-                ? `补词性中 ${posState.cur}/${posState.total}`
-                : posState?.paused
-                  ? "继续补词性"
-                  : "AI 批量补词性"}
-            </Button>
+            <div className="flex flex-col gap-0.5">
+              <Button
+                variant="soft"
+                onClick={runBatchPos}
+                disabled={!!posState?.running || !!genState?.running}
+              >
+                {posState?.running
+                  ? `补词性中 ${posState.cur}/${posState.total}`
+                  : posState?.paused
+                    ? "继续补词性"
+                    : "AI 批量补词性"}
+              </Button>
+              {posState?.running && (posState.failed > 0 || posState.skipped > 0) ? (
+                <div className="text-[10px] muted">
+                  失败 {posState.failed} · 跳过 {posState.skipped}
+                </div>
+              ) : null}
+            </div>
           ) : null}
           <input
             className="input h-8 w-48 text-xs"
@@ -893,10 +903,29 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
         </div>
       ) : null}
       {posState && !posState.running && !posState.paused && posState.total > 0 ? (
-        <div className="mb-2 rounded-lg border border-brand-200 bg-brand-50/60 px-3 py-2 text-xs">
-          ✓ 词性修正结束: 处理 {posState.total} 个,跳过 {posState.skipped},失败{" "}
-          {posState.failed}
-        </div>
+        posState.failed > 0 ? (
+          // 有失败 -> 琥珀横幅, 不自动消失, 显式关闭按钮 + F12 提示
+          <div className="mb-2 flex items-start gap-2 rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-xs text-amber-900">
+            <div className="flex-1">
+              ⚠ 词性补全完成, 但有 <b>{posState.failed}</b> 个词没补上 (跳过 {posState.skipped}, 总 {posState.total})。
+              <br />
+              通常是 AI 偶发返回格式不规范, 再点一次「AI 批量补词性」就会只对剩下的词重跑。
+              想看具体哪些词失败 → 按 F12 → Console, 找 <code className="rounded bg-amber-200/50 px-1">[posLookup]</code> 开头的日志(只打前 5 条)。
+            </div>
+            <button
+              type="button"
+              className="shrink-0 rounded px-2 py-0.5 text-xs hover:bg-amber-200/60"
+              onClick={() => setPosState(null)}
+              aria-label="关闭"
+            >
+              ✕
+            </button>
+          </div>
+        ) : (
+          <div className="mb-2 rounded-lg border border-brand-200 bg-brand-50/60 px-3 py-2 text-xs">
+            ✓ 词性修正结束: 处理 {posState.total} 个, 跳过 {posState.skipped}, 全部补全成功。
+          </div>
+        )
       ) : null}
       {genState && !genState.running && !genState.paused && genState.total > 0 ? (
         <div className="mb-2 rounded-lg border border-brand-200 bg-brand-50/60 px-3 py-2 text-xs">
