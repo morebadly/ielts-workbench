@@ -25,7 +25,8 @@ import {
   type WritingTask1Data,
   type WritingTask2Data
 } from "@/lib/ai/client";
-import { PromptLibraryDialog } from "@/components/writing/PromptLibraryDialog";export default function WritingExamPage() {
+import { PromptLibraryDialog } from "@/components/writing/PromptLibraryDialog";
+import { SimonEssayDialog } from "@/components/writing/SimonEssayDialog";export default function WritingExamPage() {
   return (
     <Suspense fallback={null}>
       <WritingExamPageInner />
@@ -59,6 +60,8 @@ function WritingExamPageInner() {
   );
   // v1.10.6: 题库浏览器开关
   const [showLibrary, setShowLibrary] = useState(false);
+  // v1.10.6 任务B: Simon 范文弹窗开关
+  const [showSimon, setShowSimon] = useState(false);
   const promptList = useMemo(() => {
     // 旧 mock 题先放, 真题库现在已经包含在 getPromptsByTask 里了
     const base = getPromptsByTask(taskType);
@@ -144,13 +147,22 @@ function WritingExamPageInner() {
 
           <div className="mt-4 flex items-center justify-between">
             <div className="text-xs muted">题目 ({promptList.length} 道可选)</div>
-            <button
-              type="button"
-              className="text-xs text-brand-700 hover:underline"
-              onClick={() => setShowLibrary(true)}
-            >
-              📚 翻真题库
-            </button>
+            <div className="flex items-center gap-3">
+              <button
+                type="button"
+                className="text-xs text-brand-700 hover:underline"
+                onClick={() => setShowSimon(true)}
+              >
+                ✍️ 看 Simon 范文
+              </button>
+              <button
+                type="button"
+                className="text-xs text-brand-700 hover:underline"
+                onClick={() => setShowLibrary(true)}
+              >
+                📚 翻真题库
+              </button>
+            </div>
           </div>
           <select
             className="input mt-1"
@@ -243,6 +255,12 @@ function WritingExamPageInner() {
             setShowLibrary(false);
           }}
           onClose={() => setShowLibrary(false)}
+        />
+      ) : null}
+      {showSimon ? (
+        <SimonEssayDialog
+          promptText={prompt.promptText}
+          onClose={() => setShowSimon(false)}
         />
       ) : null}
     </Container>

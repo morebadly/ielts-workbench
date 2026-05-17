@@ -7,6 +7,7 @@ const ENTRIES = [
   { href: "/writing/sentence", title: "句子训练", desc: "中译英 / 关键句模仿" },
   { href: "/writing/paragraph", title: "段落训练", desc: "围绕一个主题写一段" },
   { href: "/writing/exam", title: "机考模拟", desc: "倒计时 + 字数 + 段落检测" },
+  { href: "/writing/models", title: "Simon 9 分范文", desc: "考官 Simon 真题范文合集 (28 篇 Task 2)" },
   { href: "/writing/history", title: "历史与进步曲线", desc: "回看历次作文 + AI 评分趋势" }
 ];
 
