@@ -723,8 +723,9 @@ function BookWordsPreview({ book }: { book: VocabularyBook }) {
           }
         }
         done++;
-        // 每 20 个完成写一次 storage + 刷新表格
-        if (done % 20 === 0) {
+        // v1.10.5: 写盘 + 刷表频率从 20 提到 5 (= CONCURRENCY 一轮),
+        // 视觉上接近"补一个显示一个", 同时避免每次都序列化整个词表 (3000+ 词约 200KB)
+        if (done % 5 === 0) {
           storage.setBookWords(book.id, working);
           reloadWords();
         }
