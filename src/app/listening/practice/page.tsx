@@ -30,7 +30,7 @@ const DIFF_LABEL: Record<ListeningItem["difficulty"], string> = {
  * - bbc_le: BBC 真实公开节目 (含 mp3 直链, 仅近 30 天集次)
  * - bbc_le_transcript: BBC 原文文本素材 (mp3 已下架, AI 朗读)
  * - external_link: 用户自填外链 (custom 素材)
- * - self_written / undefined: 站内自写, 用 MiniMax TTS 朗读, 内容为 AI 朗读 + 人写文字
+ * - self_written / undefined: 站内自编, 用 MiniMax TTS 朗读, 内容为站长手写 + AI 朗读
  */
 const ATTRIBUTION_BADGE: Record<
   NonNullable<ListeningItem["attribution"]>,
@@ -39,7 +39,7 @@ const ATTRIBUTION_BADGE: Record<
   bbc_le: { label: "BBC 真实音频", tone: "real" },
   bbc_le_transcript: { label: "BBC 原文 · AI 朗读", tone: "mixed" },
   external_link: { label: "外链 (你自填)", tone: "user" },
-  self_written: { label: "原创 + AI 朗读", tone: "ai" }
+  self_written: { label: "站内自编 · AI 朗读", tone: "ai" }
 };
 
 const TONE_CLASS: Record<"real" | "ai" | "user" | "mixed", string> = {
