@@ -183,8 +183,13 @@ export interface ListeningItem {
     | "lecture"
     | "monologue"
     | "discussion";
-  /** 来源标注:self_written | external_link | bbc_le (BBC Learning English 6 Minute) */
-  attribution?: "self_written" | "external_link" | "bbc_le";
+  /** 来源标注:
+   *  - self_written: 站内自写
+   *  - external_link: 用户自填外链
+   *  - bbc_le: BBC Learning English 公开节目, 含 mp3 直链 (近 30 天集次)
+   *  - bbc_le_transcript: BBC Learning English 文本素材, mp3 已下架, 走 TTS 朗读
+   */
+  attribution?: "self_written" | "external_link" | "bbc_le" | "bbc_le_transcript";
   /** 大致单词数(用来估时长) */
   wordCount?: number;
 }

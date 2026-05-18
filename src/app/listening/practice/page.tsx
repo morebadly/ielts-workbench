@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Container, PageHeader } from "@/components/layout/Container";
 import { Card, CardHeader } from "@/components/ui/Card";
@@ -23,6 +23,30 @@ const DIFF_LABEL: Record<ListeningItem["difficulty"], string> = {
   easy: "简单",
   medium: "中等",
   hard: "困难"
+};
+
+/**
+ * 来源标签:
+ * - bbc_le: BBC 真实公开节目 (含 mp3 直链, 仅近 30 天集次)
+ * - bbc_le_transcript: BBC 原文文本素材 (mp3 已下架, AI 朗读)
+ * - external_link: 用户自填外链 (custom 素材)
+ * - self_written / undefined: 站内自写, 用 MiniMax TTS 朗读, 内容为 AI 朗读 + 人写文字
+ */
+const ATTRIBUTION_BADGE: Record<
+  NonNullable<ListeningItem["attribution"]>,
+  { label: string; tone: "real" | "ai" | "user" | "mixed" }
+> = {
+  bbc_le: { label: "BBC 真实音频", tone: "real" },
+  bbc_le_transcript: { label: "BBC 原文 · AI 朗读", tone: "mixed" },
+  external_link: { label: "外链 (你自填)", tone: "user" },
+  self_written: { label: "原创 + AI 朗读", tone: "ai" }
+};
+
+const TONE_CLASS: Record<"real" | "ai" | "user" | "mixed", string> = {
+  real: "bg-emerald-100 text-emerald-800",
+  ai: "bg-amber-100 text-amber-800",
+  user: "bg-sky-100 text-sky-800",
+  mixed: "bg-indigo-100 text-indigo-800"
 };
 
 export default function ListeningPracticePage() {
@@ -71,26 +95,61 @@ export default function ListeningPracticePage() {
   const [wordInput, setWordInput] = useState("");
   const [audioFailed, setAudioFailed] = useState(false);
 
-  const playExternalOrTts = () => {
+  /**
+   * 单 audio 实例 ref。
+   *
+   * v1 的旧实现每次点 "再听" / "慢速" 都 new Audio(...), 老实例没停, 多个音轨同时响,
+   * "停止" 又只能停 TTS 不能停外链, 三个按钮互掐。
+   *
+   * v2 改成: 页面上一个 <audio controls ref>, 三个按钮全部操作 ref, 浏览器原生
+   * 进度条 + 总时长免费拿到。
+   */
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // 切素材时, 重置进度并暂停, 不重叠
+  useEffect(() => {
     setAudioFailed(false);
-    // 外链音频: 用 <audio> 自动播放; 失败回退 TTS
-    if (item.audioUrl) {
-      const a = new Audio(item.audioUrl);
-      a.onerror = () => {
-        setAudioFailed(true);
-        speak(item.transcript, { voice: user.preferences.voice });
-      };
-      a.play().catch(() => {
-        setAudioFailed(true);
-        speak(item.transcript, { voice: user.preferences.voice });
-      });
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    stopSpeak();
+  }, [item.id]);
+
+  // 卸载时, 兜底清干净
+  useEffect(() => {
+    return () => {
+      audioRef.current?.pause();
+      stopSpeak();
+    };
+  }, []);
+
+  /** 用外链音频 (优先), 失败回退 TTS */
+  const useTts = !item.audioUrl || audioFailed;
+
+  const playFromStart = (rate = 1) => {
+    if (useTts) {
+      stopSpeak();
+      speak(item.transcript, { voice: user.preferences.voice, rate });
       return;
     }
-    speak(item.transcript, { voice: user.preferences.voice });
+    const a = audioRef.current;
+    if (!a) return;
+    a.playbackRate = rate;
+    a.currentTime = 0;
+    a.play().catch(() => {
+      setAudioFailed(true);
+      speak(item.transcript, { voice: user.preferences.voice, rate });
+    });
+  };
+
+  const stopAll = () => {
+    audioRef.current?.pause();
+    stopSpeak();
   };
 
   const start = () => {
-    playExternalOrTts();
+    playFromStart(1);
     setStep(2);
     setUser({
       ...user,
@@ -99,20 +158,8 @@ export default function ListeningPracticePage() {
   };
 
   const replay = (rate = 1) => {
-    if (item.audioUrl && !audioFailed) {
-      const a = new Audio(item.audioUrl);
-      a.playbackRate = rate;
-      a.onerror = () => {
-        setAudioFailed(true);
-        speak(item.transcript, { voice: user.preferences.voice, rate });
-      };
-      a.play().catch(() => {
-        setAudioFailed(true);
-        speak(item.transcript, { voice: user.preferences.voice, rate });
-      });
-      return;
-    }
-    speak(item.transcript, { voice: user.preferences.voice, rate });
+    stopAll();
+    playFromStart(rate);
   };
 
   const finish = () => {
@@ -163,7 +210,7 @@ export default function ListeningPracticePage() {
             className="input max-w-xs"
             value={itemId}
             onChange={(e) => {
-              stopSpeak();
+              stopAll();
               setItemId(e.target.value);
               setStep(1);
               setTranscription("");
@@ -200,14 +247,45 @@ export default function ListeningPracticePage() {
           <span className="pill bg-bg-soft text-ink-soft">
             {DIFF_LABEL[item.difficulty]}
           </span>
+          {(() => {
+            const attr = item.attribution ?? "self_written";
+            const badge = ATTRIBUTION_BADGE[attr];
+            if (!badge) return null;
+            return (
+              <span className={`pill ${TONE_CLASS[badge.tone]}`}>
+                {badge.label}
+              </span>
+            );
+          })()}
           <span className="pill bg-bg-soft text-ink-soft">
-            {item.audioUrl && !audioFailed ? "外链音频" : "TTS 朗读"}
+            {useTts ? "TTS 朗读" : "BBC 音频"}
           </span>
         </div>
 
+        {!useTts ? (
+          <audio
+            ref={audioRef}
+            controls
+            preload="metadata"
+            src={item.audioUrl}
+            className="w-full"
+            onError={() => setAudioFailed(true)}
+          />
+        ) : null}
+
+        {audioFailed ? (
+          <p className="text-xs text-amber-700">
+            外链音频加载失败, 已回退到 TTS 朗读
+          </p>
+        ) : null}
+
         {step === 1 ? (
           <div className="space-y-3">
-            <p className="muted text-sm">点开始,听一遍整段。</p>
+            <p className="muted text-sm">
+              {useTts
+                ? "点开始, AI 朗读整段。"
+                : "用上面的播放器播放, 或点开始用默认速度播放。"}
+            </p>
             <Button onClick={start}>▶ 开始播放</Button>
           </div>
         ) : null}
@@ -220,7 +298,7 @@ export default function ListeningPracticePage() {
             <Button variant="ghost" onClick={() => replay(0.7)}>
               慢速
             </Button>
-            <Button variant="ghost" onClick={stopSpeak}>
+            <Button variant="ghost" onClick={stopAll}>
               停止
             </Button>
           </div>

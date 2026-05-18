@@ -20,7 +20,7 @@ export default function ListeningHome() {
     <Container>
       <PageHeader
         title="听力"
-        subtitle="自写 8 条 IELTS-style 素材覆盖 Section 1-4,可外接 BBC/British Council 公开音频。"
+        subtitle="自写 8 条 IELTS-style + BBC 6 Minute English 10 集 transcript, 全部 AI 朗读, Section 1-4 全覆盖。"
       />
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {ENTRIES.map((e) => (

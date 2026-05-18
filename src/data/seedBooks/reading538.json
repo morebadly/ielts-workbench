@@ -1,0 +1,3833 @@
+{
+  "bookId": "seed-reading-538",
+  "bookName": "雅思阅读考点词 538",
+  "bookSubtitle": "刘洪波《剑桥雅思阅读考点词真经》, 按重要性分 3 类",
+  "source": "阅读考点词真经 538.pdf",
+  "words": [
+    {
+      "word": "resemble",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 像，与...相似",
+      "synonyms": [
+        "like",
+        "look like",
+        "be similar to"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "recognize",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 认出，识别；承认",
+      "synonyms": [
+        "perceive",
+        "acknowledge",
+        "realize",
+        "appreciate",
+        "admit",
+        "identify",
+        "comprehend",
+        "understand",
+        "know"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "adjust",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 调整，使适合",
+      "synonyms": [
+        "change",
+        "modify",
+        "shift",
+        "alter"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "approach",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 方法",
+      "synonyms": [
+        "method",
+        "way"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "fundamental",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 基本的，基础的",
+      "synonyms": [
+        "rudimentary",
+        "preliminary",
+        "basic"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "rely on",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 依靠，依赖",
+      "synonyms": [
+        "depend on"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "domestic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 家庭的；国内的",
+      "synonyms": [
+        "home",
+        "local",
+        "national"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "measure",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 测量",
+      "synonyms": [
+        "calculate",
+        "assess",
+        "evaluate"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "trait",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 特性，特征",
+      "synonyms": [
+        "characteristic",
+        "feature",
+        "property"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "coin",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 创造",
+      "synonyms": [
+        "first used",
+        "invent"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "artificial",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 人造的，仿造的",
+      "synonyms": [
+        "synthetic",
+        "man-made"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "prompt",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 促进，激起",
+      "synonyms": [
+        "initiate",
+        "immediately"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "exchange",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 交换",
+      "synonyms": [
+        "share",
+        "apply A to B"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "underlie",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 成为...基础",
+      "synonyms": [
+        "based on",
+        "ground",
+        "root"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "ignore",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 忽视，不顾",
+      "synonyms": [
+        "neglect",
+        "overlook",
+        "underestimate"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "fertiliser",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 化肥，肥料",
+      "synonyms": [
+        "chemical",
+        "toxic",
+        "unnatural"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "that",
+      "phonetic": null,
+      "partOfSpeech": "pron.",
+      "chineseMeaning": "pron. 那；那个",
+      "synonyms": [
+        "this",
+        "it",
+        "they",
+        "those",
+        "these",
+        "such"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "and",
+      "phonetic": null,
+      "partOfSpeech": "conj.",
+      "chineseMeaning": "conj. 和，而且",
+      "synonyms": [
+        "or",
+        "as well as",
+        "both...and",
+        "not only...but also",
+        "other than",
+        "in addition",
+        "besides",
+        "on the one hand...on the other hand",
+        "neither...nor"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "rather than",
+      "phonetic": null,
+      "partOfSpeech": "conj.",
+      "chineseMeaning": "conj. 而非，不是",
+      "synonyms": [
+        "but",
+        "yet",
+        "however",
+        "whereas",
+        "nonetheless",
+        "nevertheless",
+        "although",
+        "notwithstanding",
+        "though",
+        "instead"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "thanks to",
+      "phonetic": null,
+      "partOfSpeech": "prep.",
+      "chineseMeaning": "prep. 由于，幸亏",
+      "synonyms": [
+        "stem from",
+        "derive",
+        "owing to",
+        "due to",
+        "according to",
+        "because of",
+        "on account of",
+        "as a result of",
+        "leading to",
+        "because",
+        "since",
+        "for",
+        "in that",
+        "as",
+        "therefore",
+        "hence"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "diversity",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 多样性，差异",
+      "synonyms": [
+        "variety",
+        "difference"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "detect",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 查明，发现",
+      "synonyms": [
+        "find",
+        "look for",
+        "seek",
+        "search"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "isolate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 使隔离，使孤立",
+      "synonyms": [
+        "inaccessible"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "avoid",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 避免",
+      "synonyms": [
+        "escape",
+        "evitable"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "budget",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 预算",
+      "synonyms": [
+        "fund",
+        "financial"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "adapt to",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 使适应",
+      "synonyms": [
+        "fit",
+        "suit"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "alternative",
+      "phonetic": null,
+      "partOfSpeech": "adj., n.",
+      "chineseMeaning": "adj. 供替代的，供选择的；n. 替代品",
+      "synonyms": [
+        "substitute"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "compensate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 补偿，赔偿",
+      "synonyms": [
+        "make up",
+        "offset"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "component",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 成分，要素",
+      "synonyms": [
+        "proportion"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "military",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 军事的",
+      "synonyms": [
+        "weapon",
+        "army"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "criteria",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 标准",
+      "synonyms": [
+        "standard"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "curriculum",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 课程",
+      "synonyms": [
+        "syllabus",
+        "course of study"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "feasible",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 可行的",
+      "synonyms": [
+        "realistic",
+        "viable"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "constrain",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 束缚，限制",
+      "synonyms": [
+        "stop",
+        "control"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "deficiency",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 缺陷，缺点",
+      "synonyms": [
+        "shortage",
+        "defect",
+        "weakness"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "supplement",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 补充",
+      "synonyms": [
+        "provision"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "distinguish",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 区别，辨别",
+      "synonyms": [
+        "separate",
+        "differentiate"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "analyze",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 分析，解释",
+      "synonyms": [
+        "examine",
+        "diagnose"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "emphasize",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 强调，着重",
+      "synonyms": [
+        "focus on",
+        "stress"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "enormous",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 庞大的，巨大的",
+      "synonyms": [
+        "massive",
+        "large"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "imitate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 模仿",
+      "synonyms": [
+        "mimic",
+        "copy"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "impair",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 削弱，减少",
+      "synonyms": [
+        "damage",
+        "diminish",
+        "decrease"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "hinder",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 阻碍",
+      "synonyms": [
+        "impede",
+        "prevent",
+        "deter",
+        "obstacle"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "legitimate",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 合法的",
+      "synonyms": [
+        "legal"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "limitation",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 限制",
+      "synonyms": [
+        "restriction"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "convention",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 手法；习俗",
+      "synonyms": [
+        "method",
+        "tradition"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "demanding",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 苛求的",
+      "synonyms": [
+        "troublesome"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "determine",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 决定",
+      "synonyms": [
+        "decide"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "accelerate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 加速，促进；强调",
+      "synonyms": [
+        "speed up"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "ancient",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 古代的;古老的",
+      "synonyms": [
+        "aged",
+        "old"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "beneficial",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 有益的",
+      "synonyms": [
+        "helpful",
+        "advantageous",
+        "wholesome"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "chronic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 慢性的，长期性的",
+      "synonyms": [
+        "lasting"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "conscious",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 有意识的，神志清醒的",
+      "synonyms": [
+        "aware",
+        "knowing"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "minimize",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 最小化，使......减少到最少",
+      "synonyms": [
+        "reduce",
+        "lessen"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "immunity",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 免疫力",
+      "synonyms": [
+        "resistance"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "imperative",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 必要的，紧急的",
+      "synonyms": [
+        "compelling",
+        "necessary",
+        "urgent"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "secrete",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 分泌",
+      "synonyms": [
+        "discharge",
+        "exude"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "exaggerate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 夸大，夸张",
+      "synonyms": [
+        "overstate"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "transmit",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 传达，传输",
+      "synonyms": [
+        "pass",
+        "send",
+        "transfer"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "extinct",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 灭绝",
+      "synonyms": [
+        "die out",
+        "lost"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "exclusive",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 独有的；排外的；专一的",
+      "synonyms": [
+        "only"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "guarantee",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 保证，担保",
+      "synonyms": [
+        "assure"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "inherit",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 继承",
+      "synonyms": [
+        "receive"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "witness",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 见证，证据；目击者",
+      "synonyms": [
+        "view",
+        "see"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "magnetic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 有磁性的",
+      "synonyms": [
+        "attractive"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "loss",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 减少；亏损；失败；遗失的",
+      "synonyms": [
+        "waste",
+        "gone"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "option",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 选择",
+      "synonyms": [
+        "choice"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "prefer to",
+      "phonetic": null,
+      "partOfSpeech": "phr.",
+      "chineseMeaning": "phr. 更喜欢",
+      "synonyms": [
+        "rather"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "priority",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 优先权",
+      "synonyms": [
+        "preference",
+        "preferential"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "primary",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 主要的",
+      "synonyms": [
+        "principle",
+        "main"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "principle",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 原理",
+      "synonyms": [
+        "rule"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "potential",
+      "phonetic": null,
+      "partOfSpeech": "n., adj.",
+      "chineseMeaning": "n. 潜能; adj. 潜在的",
+      "synonyms": [
+        "possibility"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "quantity",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 量，数量",
+      "synonyms": [
+        "number"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "settle",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 解决；定居，稳定",
+      "synonyms": [
+        "fix",
+        "figure out"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "sophisticate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 使复杂",
+      "synonyms": [
+        "complicate"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "specific",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 明确的；特殊的",
+      "synonyms": [
+        "detailed",
+        "particular"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "survive",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 存活，幸存",
+      "synonyms": [
+        "remain"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "swift",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 迅速的，敏捷的，立刻的",
+      "synonyms": [
+        "quick",
+        "rapid"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "unexpectedly",
+      "phonetic": null,
+      "partOfSpeech": "adv.",
+      "chineseMeaning": "adv. 出乎意料的",
+      "synonyms": [
+        "surprising"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "surrounding",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 环境",
+      "synonyms": [
+        "setting",
+        "environment"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "attempt",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 试图，尝试",
+      "synonyms": [
+        "try",
+        "test"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "expertise",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 专门技术",
+      "synonyms": [
+        "knowledge",
+        "skill"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "faculty",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 能力，才能；全体教员",
+      "synonyms": [
+        "ability"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "donate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 捐赠",
+      "synonyms": [
+        "contribute"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "dynamics",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 动力学",
+      "synonyms": [
+        "energy",
+        "force",
+        "move"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "incentive",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 刺激，鼓励；动机",
+      "synonyms": [
+        "motive",
+        "stimulus"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "mortality",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 死亡率",
+      "synonyms": [
+        "death"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "peripheral",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 外围的，次要的",
+      "synonyms": [
+        "unimportant",
+        "minor"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "vicinity",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 邻近，附近",
+      "synonyms": [
+        "neighbourhood",
+        "nearby"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "threaten",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 威胁，危及",
+      "synonyms": [
+        "endanger",
+        "jeopardize",
+        "risk",
+        "hazard"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "practice",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 实行；练习",
+      "synonyms": [
+        "method",
+        "exercise"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "bacteria",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 细菌",
+      "synonyms": [
+        "virus",
+        "germ",
+        "microbe"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "be subject to",
+      "phonetic": null,
+      "partOfSpeech": "phr.",
+      "chineseMeaning": "phr. 受......支配",
+      "synonyms": [
+        "face"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "be liable to",
+      "phonetic": null,
+      "partOfSpeech": "phr.",
+      "chineseMeaning": "phr. 易于......",
+      "synonyms": [
+        "potential"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "innate",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 天生的；内在的，直觉的",
+      "synonyms": [
+        "built-in",
+        "inborn"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "pattern",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 模式",
+      "synonyms": [
+        "formation"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "therapy",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 治疗，理疗",
+      "synonyms": [
+        "treatment"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "original",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 原始的，最初的",
+      "synonyms": [
+        "initial",
+        "first"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "confidential",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 机密的，秘密的",
+      "synonyms": [
+        "undisclosed",
+        "secret",
+        "hidden"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "cognitive",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 认知的",
+      "synonyms": [
+        "mental"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "comply with",
+      "phonetic": null,
+      "partOfSpeech": "phr.",
+      "chineseMeaning": "phr. 照做，遵守",
+      "synonyms": [
+        "obey"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "consult",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 查阅，商量，请教，咨询",
+      "synonyms": [
+        "ask for advice"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "superior",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 上级的；优秀的",
+      "synonyms": [
+        "higher",
+        "upper"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "co-operation",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 合作，协作",
+      "synonyms": [
+        "support",
+        "work together"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "co-ordinate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 使......协调",
+      "synonyms": [
+        "organize",
+        "harmonize"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "differ",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 使......相异；使......不同",
+      "synonyms": [
+        "vary"
+      ],
+      "dayHint": 2
+    },
+    {
+      "word": "cue",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 线索",
+      "synonyms": [],
+      "dayHint": 2
+    },
+    {
+      "word": "hint, clue",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 暗示，线索",
+      "synonyms": [],
+      "dayHint": 1
+    },
+    {
+      "word": "signal",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 信号",
+      "synonyms": [
+        "symbol",
+        "mark",
+        "sign"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "abandon",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 放弃，遗弃",
+      "synonyms": [
+        "quit",
+        "give up",
+        "forsake",
+        "derelict"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "halt",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 停止",
+      "synonyms": [
+        "stop",
+        "quit"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "fragile",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 脆弱的",
+      "synonyms": [
+        "vulnerable"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "retain",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 记住",
+      "synonyms": [
+        "maintain"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "vanish",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 消失，绝迹",
+      "synonyms": [
+        "disappear"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "delivery",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 递送",
+      "synonyms": [
+        "send"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "erode",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 侵蚀",
+      "synonyms": [
+        "rust",
+        "damage"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "induce",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 引起，引诱",
+      "synonyms": [
+        "cause",
+        "lead to"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "stable",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 稳定的",
+      "synonyms": [
+        "constant",
+        "unchanged"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "integrate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 使......成整体",
+      "synonyms": [
+        "combine",
+        "whole"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "equal",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 平等的; 相等的; 胜任的",
+      "synonyms": [
+        "fair",
+        "even"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "grant",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 拨款; 授予",
+      "synonyms": [
+        "offer"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "accumulate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 积累，积聚",
+      "synonyms": [
+        "gather"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "addictive",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 上瘾的",
+      "synonyms": [
+        "habit"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "adversity",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 逆境，不幸",
+      "synonyms": [
+        "trouble"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "aggression",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 侵犯，侵害",
+      "synonyms": [
+        "attack"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "agreeable",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 令人愉快的; 合适的; 和蔼可亲的",
+      "synonyms": [
+        "pleasant"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "aid",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 援助，帮助",
+      "synonyms": [
+        "help"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "allergic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 过敏的; 对......极讨厌的",
+      "synonyms": [
+        "irritate"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "altitude",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 高度，海拔",
+      "synonyms": [
+        "height"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "application",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 应用",
+      "synonyms": [
+        "utilization"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "approve",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 批准",
+      "synonyms": [
+        "agree"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "array",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 排列，大批",
+      "synonyms": [
+        "order"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "assign",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 分配，指派",
+      "synonyms": [
+        "allocate"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "association",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 协会，联盟; 联系",
+      "synonyms": [
+        "union"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "attitude",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 看法，态度",
+      "synonyms": [
+        "opinion"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "authority",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 当局，权威",
+      "synonyms": [
+        "government"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "be consistent with",
+      "phonetic": null,
+      "partOfSpeech": "phr.",
+      "chineseMeaning": "phr. 与......一致",
+      "synonyms": [
+        "compatible"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "bear",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 承担; 忍受",
+      "synonyms": [
+        "tolerate"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "blight",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 损害; 枯萎",
+      "synonyms": [
+        "destroy"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "boundary",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 边界; 底线",
+      "synonyms": [
+        "barrier"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "bungle",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 搞糟，拙劣地工作",
+      "synonyms": [
+        "mishandle"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "burden",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 负担",
+      "synonyms": [
+        "load"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "calamity",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 灾难",
+      "synonyms": [
+        "disaster"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "capacity",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 容量",
+      "synonyms": [
+        "volume"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "catastrophic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 灾难的",
+      "synonyms": [
+        "disastrous"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "cater",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 迎合; 满足需求",
+      "synonyms": [
+        "serve"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "certify",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 证明，保证",
+      "synonyms": [
+        "verify"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "civic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 公民的",
+      "synonyms": [
+        "municipal"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "comment",
+      "phonetic": null,
+      "partOfSpeech": "n., v.",
+      "chineseMeaning": "n. 评论; 意见; v. 评论",
+      "synonyms": [
+        "remark"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "commitment",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 承诺，许诺，义务; 致力",
+      "synonyms": [
+        "engagement"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "communal",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 公共的，公社的",
+      "synonyms": [
+        "public"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "commute",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 通勤; 用......交换",
+      "synonyms": [
+        "travel"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "compare",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 与......相比较",
+      "synonyms": [
+        "contrast"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "conceal",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 隐藏; 隐瞒",
+      "synonyms": [
+        "hide"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "concentrate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 专心于; 集中",
+      "synonyms": [
+        "focus"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "concur",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 同意",
+      "synonyms": [
+        "agree"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "confer",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 授予，给予",
+      "synonyms": [
+        "grant"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "conflict",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 冲突，矛盾",
+      "synonyms": [
+        "unharmonious"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "confuse",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 使混乱，使迷惑",
+      "synonyms": [
+        "puzzle"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "conservative",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 保守的",
+      "synonyms": [
+        "traditional"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "considerable",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 相当大的，重要的",
+      "synonyms": [
+        "significant"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "contingent",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 因情况而异的",
+      "synonyms": [
+        "uncertain"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "controversial",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 有争论的",
+      "synonyms": [
+        "disputable"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "correlation",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 相关，关联",
+      "synonyms": [
+        "link"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "courtship",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 求爱（时期）",
+      "synonyms": [
+        "mate"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "crash",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 碰撞",
+      "synonyms": [
+        "collapse"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "credibility",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 可信性",
+      "synonyms": [
+        "reliance"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "criminal",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 罪犯，犯人",
+      "synonyms": [
+        "conviction"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "crisis",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 危机",
+      "synonyms": [
+        "risk"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "criticism",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 评论",
+      "synonyms": [
+        "condemn"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "curb",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 限制，抑制",
+      "synonyms": [
+        "restrict"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "damp",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 潮湿的",
+      "synonyms": [
+        "wet"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "dazzle",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 使目眩; 使......眼花",
+      "synonyms": [
+        "flash"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "deadline",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 最后期限",
+      "synonyms": [
+        "limit"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "delay",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 延期，耽搁",
+      "synonyms": [
+        "postpone"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "democratic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 民主的",
+      "synonyms": [
+        "republic"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "demographic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 人口统计学的; 人口学",
+      "synonyms": [
+        "population statistic"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "dental",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 牙科的，牙齿的",
+      "synonyms": [
+        "teeth"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "depression",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 抑郁，沮丧",
+      "synonyms": [
+        "frustration"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "designate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 指定; 指派，标出",
+      "synonyms": [
+        "appoint"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "detain",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 留住",
+      "synonyms": [
+        "hold"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "devastate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 毁坏，毁灭",
+      "synonyms": [
+        "wreck"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "disclose",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 公开; 揭露",
+      "synonyms": [
+        "expose"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "disparate",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 不同的",
+      "synonyms": [
+        "different"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "display",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 显示",
+      "synonyms": [
+        "show"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "disrupt",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 破坏",
+      "synonyms": [
+        "destroy"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "distract",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 转移，分心",
+      "synonyms": [
+        "divert"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "distribute",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 分配，分发",
+      "synonyms": [
+        "spread"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "documentation",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 文件; 文献",
+      "synonyms": [
+        "record"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "domain",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 领域",
+      "synonyms": [
+        "field"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "dominant",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 占优势的，占支配地位的",
+      "synonyms": [
+        "overbearing"
+      ],
+      "dayHint": 3
+    },
+    {
+      "word": "dramatic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 戏剧化的; 激动人心的，引人注意的",
+      "synonyms": [],
+      "dayHint": 3
+    },
+    {
+      "word": "striking",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 显著的；引人注目的",
+      "synonyms": [
+        "remarkable",
+        "notable"
+      ]
+    },
+    {
+      "word": "drought",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 干旱",
+      "synonyms": [
+        "dry"
+      ]
+    },
+    {
+      "word": "durable",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 持久的，耐久性的",
+      "synonyms": [
+        "lasting"
+      ]
+    },
+    {
+      "word": "eco-friendly",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 生态友好的，环保的",
+      "synonyms": [
+        "environmentally-friendly"
+      ]
+    },
+    {
+      "word": "elaborate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 详细阐述，详细叙述",
+      "synonyms": [
+        "illustrate"
+      ]
+    },
+    {
+      "word": "elderly",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 高龄的，年老的",
+      "synonyms": [
+        "aged"
+      ]
+    },
+    {
+      "word": "eliminate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 消除，排除",
+      "synonyms": [
+        "dispose"
+      ]
+    },
+    {
+      "word": "elusive",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 难懂的，难捉摸的；行踪隐秘的",
+      "synonyms": [
+        "hard"
+      ]
+    },
+    {
+      "word": "encyclopaedia",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 百科全书",
+      "synonyms": [
+        "entire range of knowledge"
+      ]
+    },
+    {
+      "word": "entrepreneur",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 企业家",
+      "synonyms": [
+        "boss"
+      ]
+    },
+    {
+      "word": "equator",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 赤道",
+      "synonyms": [
+        "geography"
+      ]
+    },
+    {
+      "word": "erratically",
+      "phonetic": null,
+      "partOfSpeech": "adv.",
+      "chineseMeaning": "adv. 不定的，无规律地",
+      "synonyms": [
+        "unpredictably"
+      ]
+    },
+    {
+      "word": "established",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 确定的；已制定的，已建立的",
+      "synonyms": [
+        "built"
+      ]
+    },
+    {
+      "word": "estate",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 房地产",
+      "synonyms": [
+        "property"
+      ]
+    },
+    {
+      "word": "ethical",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 道德的",
+      "synonyms": [
+        "moral"
+      ]
+    },
+    {
+      "word": "eventually",
+      "phonetic": null,
+      "partOfSpeech": "adv.",
+      "chineseMeaning": "adv. 最后，终于",
+      "synonyms": [
+        "finally"
+      ]
+    },
+    {
+      "word": "evidence",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 迹象；证据",
+      "synonyms": [
+        "proof"
+      ]
+    },
+    {
+      "word": "evolve",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 进化，发展；逐渐形成",
+      "synonyms": [
+        "develop"
+      ]
+    },
+    {
+      "word": "exhausted",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 疲惫的，耗尽的",
+      "synonyms": [
+        "fatigue"
+      ]
+    },
+    {
+      "word": "experiment",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 试验",
+      "synonyms": [
+        "test"
+      ]
+    },
+    {
+      "word": "exceptional",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 异常的，特别出色的",
+      "synonyms": [
+        "extreme",
+        "utmost"
+      ]
+    },
+    {
+      "word": "explicit",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 明确的",
+      "synonyms": [
+        "clear"
+      ]
+    },
+    {
+      "word": "exploit",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 开发，利用",
+      "synonyms": [
+        "use"
+      ]
+    },
+    {
+      "word": "extend",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 扩展，延伸，推广",
+      "synonyms": [
+        "expand"
+      ]
+    },
+    {
+      "word": "extract",
+      "phonetic": null,
+      "partOfSpeech": "n., v.",
+      "chineseMeaning": "n. 摘录; v. 提取",
+      "synonyms": [
+        "quotation"
+      ]
+    },
+    {
+      "word": "famine",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 饥荒",
+      "synonyms": [
+        "hunger"
+      ]
+    },
+    {
+      "word": "finite",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 有限的",
+      "synonyms": [
+        "limited"
+      ]
+    },
+    {
+      "word": "fitness",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 健康的",
+      "synonyms": [
+        "health"
+      ]
+    },
+    {
+      "word": "foe",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 敌人，危害物",
+      "synonyms": [
+        "enemy"
+      ]
+    },
+    {
+      "word": "format",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 格式",
+      "synonyms": [
+        "structure"
+      ]
+    },
+    {
+      "word": "fragment",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 碎片",
+      "synonyms": [
+        "piece"
+      ]
+    },
+    {
+      "word": "freeze",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 冰冻，冻结",
+      "synonyms": [
+        "chill"
+      ]
+    },
+    {
+      "word": "fulfill",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 满足，实现",
+      "synonyms": [
+        "execute"
+      ]
+    },
+    {
+      "word": "gene",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 基因",
+      "synonyms": [
+        "factor"
+      ]
+    },
+    {
+      "word": "gifted",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 有天赋的，有才华的",
+      "synonyms": [
+        "talented"
+      ]
+    },
+    {
+      "word": "graphic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 形象的；图解的",
+      "synonyms": [
+        "picture"
+      ]
+    },
+    {
+      "word": "habitat",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 栖息地，住所",
+      "synonyms": [
+        "residence"
+      ]
+    },
+    {
+      "word": "harbor",
+      "phonetic": null,
+      "partOfSpeech": "v., n.",
+      "chineseMeaning": "v. 怀有; n. 海港",
+      "synonyms": [
+        "hold"
+      ]
+    },
+    {
+      "word": "hardship",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 困苦；苦难",
+      "synonyms": [
+        "difficult"
+      ]
+    },
+    {
+      "word": "harsh",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 艰难的；严酷的",
+      "synonyms": [
+        "rough"
+      ]
+    },
+    {
+      "word": "hypothesis",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 假设",
+      "synonyms": [
+        "assumption"
+      ]
+    },
+    {
+      "word": "impact",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 影响",
+      "synonyms": [
+        "influence"
+      ]
+    },
+    {
+      "word": "impressive",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 感人的；给人深刻印象的",
+      "synonyms": [
+        "touching"
+      ]
+    },
+    {
+      "word": "in accordance with",
+      "phonetic": null,
+      "partOfSpeech": "phr.",
+      "chineseMeaning": "依照；与...一致",
+      "synonyms": [
+        "conform"
+      ]
+    },
+    {
+      "word": "inaccurate",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 错误的",
+      "synonyms": [
+        "incorrect"
+      ]
+    },
+    {
+      "word": "inactive",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 不活跃的，不活动的",
+      "synonyms": [
+        "passive"
+      ]
+    },
+    {
+      "word": "inappropriate",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 不适当的",
+      "synonyms": [
+        "hard"
+      ]
+    },
+    {
+      "word": "indulge",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 沉溺（于）",
+      "synonyms": [
+        "spoil"
+      ]
+    },
+    {
+      "word": "infest",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 侵害；寄生于",
+      "synonyms": [
+        "plague"
+      ]
+    },
+    {
+      "word": "installment",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 安装；分期付款",
+      "synonyms": [
+        "payment on its completion"
+      ]
+    },
+    {
+      "word": "intelligence",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 智力",
+      "synonyms": [
+        "mind"
+      ]
+    },
+    {
+      "word": "intense",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 强烈的；紧张的；热情的",
+      "synonyms": [
+        "strong"
+      ]
+    },
+    {
+      "word": "interaction",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 相互作用，交流互动",
+      "synonyms": [
+        "social activities"
+      ]
+    },
+    {
+      "word": "interference",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 干涉",
+      "synonyms": [
+        "interdependence"
+      ]
+    },
+    {
+      "word": "interior",
+      "phonetic": null,
+      "partOfSpeech": "n., adj.",
+      "chineseMeaning": "n. 内部; adj. 内部的",
+      "synonyms": [
+        "inner"
+      ]
+    },
+    {
+      "word": "interrupt",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 中断",
+      "synonyms": [
+        "stop"
+      ]
+    },
+    {
+      "word": "introverted",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 内向的，含蓄的",
+      "synonyms": [
+        "shyness"
+      ]
+    },
+    {
+      "word": "involve",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 包含，牵涉",
+      "synonyms": [
+        "associate"
+      ]
+    },
+    {
+      "word": "keen",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 热切的；强烈的",
+      "synonyms": [
+        "strong"
+      ]
+    },
+    {
+      "word": "label",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 打上标签",
+      "synonyms": [
+        "display"
+      ]
+    },
+    {
+      "word": "lack",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 缺乏；不足",
+      "synonyms": [
+        "shortage"
+      ]
+    },
+    {
+      "word": "landscape",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 风景",
+      "synonyms": [
+        "scene"
+      ]
+    },
+    {
+      "word": "likelihood",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 可能性",
+      "synonyms": [
+        "chance"
+      ]
+    },
+    {
+      "word": "limb",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 四肢",
+      "synonyms": [
+        "arm or leg"
+      ]
+    },
+    {
+      "word": "linguistic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 语言(学)的",
+      "synonyms": [
+        "language"
+      ]
+    },
+    {
+      "word": "log",
+      "phonetic": null,
+      "partOfSpeech": "v., n.",
+      "chineseMeaning": "v. 记录; n. 原木",
+      "synonyms": [
+        "record"
+      ]
+    },
+    {
+      "word": "look-in",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 成功的机会",
+      "synonyms": [
+        "opportunity",
+        "chance"
+      ]
+    },
+    {
+      "word": "lopsided",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 不平衡的",
+      "synonyms": [
+        "uneven"
+      ]
+    },
+    {
+      "word": "mainly",
+      "phonetic": null,
+      "partOfSpeech": "adv.",
+      "chineseMeaning": "adv. 主要的，大体的",
+      "synonyms": [
+        "primarily"
+      ]
+    },
+    {
+      "word": "malfunction",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 发生故障；不起作用",
+      "synonyms": [
+        "breakdown"
+      ]
+    },
+    {
+      "word": "mammal",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 哺乳动物",
+      "synonyms": [
+        "creature"
+      ]
+    },
+    {
+      "word": "manage to do",
+      "phonetic": null,
+      "partOfSpeech": "phr.",
+      "chineseMeaning": "设法完成某事",
+      "synonyms": [
+        "success"
+      ]
+    },
+    {
+      "word": "manifest",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 出现，表现",
+      "synonyms": [
+        "obvious"
+      ]
+    },
+    {
+      "word": "manufacture",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 生产",
+      "synonyms": [
+        "produce"
+      ]
+    },
+    {
+      "word": "marine",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 海产的；航海的；海运的",
+      "synonyms": [
+        "sea"
+      ]
+    },
+    {
+      "word": "mate",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 配偶",
+      "synonyms": [
+        "spouse"
+      ]
+    },
+    {
+      "word": "mechanism",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 机制，原理",
+      "synonyms": [
+        "method"
+      ]
+    },
+    {
+      "word": "mental",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 精神的，心理的",
+      "synonyms": [
+        "intelligent"
+      ]
+    },
+    {
+      "word": "mercury",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 汞，水银",
+      "synonyms": [
+        "liquid metal"
+      ]
+    },
+    {
+      "word": "meteorological",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 气象学的",
+      "synonyms": [
+        "weather"
+      ]
+    },
+    {
+      "word": "migrate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 转移，迁移",
+      "synonyms": [
+        "move"
+      ]
+    },
+    {
+      "word": "moisture",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 水分，湿度",
+      "synonyms": [
+        "humidity"
+      ]
+    },
+    {
+      "word": "monitor",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 监控",
+      "synonyms": [
+        "surveillance"
+      ]
+    },
+    {
+      "word": "motif",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 主题；图形",
+      "synonyms": [
+        "theme"
+      ]
+    },
+    {
+      "word": "mould",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 模压，塑造；塑造成",
+      "synonyms": [
+        "form"
+      ]
+    },
+    {
+      "word": "native",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 本国的，土著的；天然的；天赋的",
+      "synonyms": [
+        "original"
+      ]
+    },
+    {
+      "word": "nocturnal",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 夜间的，夜间发生的",
+      "synonyms": [
+        "night"
+      ]
+    },
+    {
+      "word": "norm",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 规范",
+      "synonyms": [
+        "regulation"
+      ]
+    },
+    {
+      "word": "notoriety",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 名声",
+      "synonyms": [
+        "famous"
+      ]
+    },
+    {
+      "word": "objective",
+      "phonetic": null,
+      "partOfSpeech": "n., adj.",
+      "chineseMeaning": "n. 目标，目的; adj. 客观的",
+      "synonyms": [
+        "goal"
+      ]
+    },
+    {
+      "word": "obligation",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 义务",
+      "synonyms": []
+    },
+    {
+      "word": "obscure",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 掩盖，使模糊不清",
+      "synonyms": [
+        "hide"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "obtain",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 获得",
+      "synonyms": [
+        "get"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "odd",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 古怪的",
+      "synonyms": [
+        "strange"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "odour",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 气味",
+      "synonyms": [
+        "smell"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "offensive",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 冒犯的，无礼的",
+      "synonyms": [
+        "hostile"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "official",
+      "phonetic": null,
+      "partOfSpeech": "n., adj.",
+      "chineseMeaning": "n. 官员; adj. 官方的",
+      "synonyms": [
+        "authority"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "optimum",
+      "phonetic": null,
+      "partOfSpeech": "n., adj.",
+      "chineseMeaning": "n. 最佳效果; adj. 最适宜的",
+      "synonyms": [
+        "best"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "ordinary",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 普通的，平凡的，平常的",
+      "synonyms": [
+        "common"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "organ",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 器官，机构",
+      "synonyms": [
+        "a part of a body"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "out of the question",
+      "phonetic": null,
+      "partOfSpeech": "phr.",
+      "chineseMeaning": "phr. 不可能",
+      "synonyms": [
+        "impossible"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "overcome",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 克服",
+      "synonyms": [
+        "defeat"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "overtake",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 赶上",
+      "synonyms": [
+        "surpass"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "paralyse",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 使......麻痹，使......瘫痪",
+      "synonyms": [
+        "cannot move"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "paramount",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 最重要的，主要的",
+      "synonyms": [
+        "principal"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "participate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 参加",
+      "synonyms": [
+        "join"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "patient",
+      "phonetic": null,
+      "partOfSpeech": "adj., n.",
+      "chineseMeaning": "adj. 有耐性的，能容忍的; n. 病人，患者",
+      "synonyms": [],
+      "dayHint": 1
+    },
+    {
+      "word": "peak",
+      "phonetic": null,
+      "partOfSpeech": "n., v.",
+      "chineseMeaning": "n. 最高峰，顶点; v. 使......达到顶峰",
+      "synonyms": [
+        "top"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "permit",
+      "phonetic": null,
+      "partOfSpeech": "n., v.",
+      "chineseMeaning": "n. 许可证，执照; v. 许可",
+      "synonyms": [
+        "allow"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "persuade",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 说服，劝说",
+      "synonyms": [
+        "influence"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "pessimistic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 悲观的",
+      "synonyms": [
+        "negative"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "phase",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 阶段",
+      "synonyms": [
+        "process"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "physical",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 身体上的，物质的",
+      "synonyms": [
+        "body"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "plagiarise",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 抄袭",
+      "synonyms": [
+        "copy"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "plenty of",
+      "phonetic": null,
+      "partOfSpeech": "phr.",
+      "chineseMeaning": "phr. 大量的",
+      "synonyms": [
+        "many"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "plot",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 密谋",
+      "synonyms": [
+        "plan"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "pose",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 提出，造成，形成",
+      "synonyms": [
+        "cause"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "portable",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 可携带的",
+      "synonyms": [
+        "conveyable"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "poverty",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 贫穷",
+      "synonyms": [
+        "poor"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "praise",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 赞扬",
+      "synonyms": [
+        "commend"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "predict",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 预测，预知",
+      "synonyms": [
+        "expect"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "pressing",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 迫切的",
+      "synonyms": [
+        "urgent"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "private",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 私人的，私有的，私下的",
+      "synonyms": [
+        "personal"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "prohibit",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 禁止",
+      "synonyms": [
+        "not allowed"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "prolong",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 拉长，延长",
+      "synonyms": [
+        "extend"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "promote",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 促进，推销",
+      "synonyms": [
+        "improve"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "prosper",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 使成功，使繁荣",
+      "synonyms": [
+        "success"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "purify",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 净化",
+      "synonyms": [
+        "clean"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "qualify",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 取得资格",
+      "synonyms": [
+        "fulfill"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "radical",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 彻底的，根本的",
+      "synonyms": [
+        "utmost"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "range",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 范围，幅度",
+      "synonyms": [
+        "scope"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "rare",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 稀有的",
+      "synonyms": [
+        "unusual"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "rate",
+      "phonetic": null,
+      "partOfSpeech": "n., v.",
+      "chineseMeaning": "n. 等级; v. 评估",
+      "synonyms": [
+        "rank",
+        "measure"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "react",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 反应",
+      "synonyms": [
+        "respond"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "recreation",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 娱乐，消遣",
+      "synonyms": [
+        "entertainment"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "reduction",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 下降，减少",
+      "synonyms": [
+        "decrease"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "refer to",
+      "phonetic": null,
+      "partOfSpeech": "phr.",
+      "chineseMeaning": "phr. 指(的是)，涉及，提及",
+      "synonyms": [
+        "talk about"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "rehearsal",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 排演，预演，练习",
+      "synonyms": [
+        "preparation"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "reject",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 拒绝，排斥，丢弃",
+      "synonyms": [
+        "exclude"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "relevant",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 相关的",
+      "synonyms": [
+        "relative"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "religious",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 宗教的，虔诚的",
+      "synonyms": [
+        "sacred"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "reluctant",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 不情愿的",
+      "synonyms": [
+        "unwilling"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "reproduce",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 繁殖",
+      "synonyms": [
+        "breed"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "responsible",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 负责的，可靠的，有责任的",
+      "synonyms": [
+        "liable"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "revision",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 修正",
+      "synonyms": [
+        "editing"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "revive",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 使复苏，恢复",
+      "synonyms": [
+        "renaissance"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "ruin",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 毁灭",
+      "synonyms": [
+        "destroy"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "scenic",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 风景优美的",
+      "synonyms": [
+        "beautiful"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "shade",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 遮阳，阴影",
+      "synonyms": [
+        "shelter"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "skepticism",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 怀疑",
+      "synonyms": [
+        "doubt"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "soar",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 激增",
+      "synonyms": [
+        "increase"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "solely",
+      "phonetic": null,
+      "partOfSpeech": "adv.",
+      "chineseMeaning": "adv. 唯一地",
+      "synonyms": [
+        "alone"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "solicitor",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 律师",
+      "synonyms": [
+        "lawyer"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "steer",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 控制，引导",
+      "synonyms": [
+        "manage"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "stimulate",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 刺激，激励",
+      "synonyms": [
+        "motivate"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "stride",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 进展",
+      "synonyms": [
+        "progress"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "succumb",
+      "phonetic": null,
+      "partOfSpeech": "vi.",
+      "chineseMeaning": "vi. 屈服",
+      "synonyms": [
+        "yield"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "subdivide",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 把......细分",
+      "synonyms": [
+        "break down"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "subtle",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 微妙的",
+      "synonyms": [
+        "delicate"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "substance",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 物质，实质",
+      "synonyms": [
+        "matter"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "sufficiency",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 足量，充足",
+      "synonyms": [
+        "enough"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "supersede",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 取代，代替",
+      "synonyms": [
+        "replace"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "suppress",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 抑制，隐瞒",
+      "synonyms": [
+        "hold"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "supremacy",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 至高无上，很高的地位",
+      "synonyms": [
+        "priority"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "suspicious",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 可疑的",
+      "synonyms": [
+        "odd"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "sustainable",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 可持续的",
+      "synonyms": [
+        "long-term"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "symptom",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 症状，征兆",
+      "synonyms": [
+        "sign"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "tension",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 紧张，不安",
+      "synonyms": [
+        "upset"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "term",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 术语",
+      "synonyms": [
+        "word"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "throughout",
+      "phonetic": null,
+      "partOfSpeech": "adv.",
+      "chineseMeaning": "adv. 自始至终，到处，全部",
+      "synonyms": [
+        "anywhere"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "toll",
+      "phonetic": null,
+      "partOfSpeech": "n., v.",
+      "chineseMeaning": "n. 通行费; v. 征收",
+      "synonyms": [
+        "charge"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "trace",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 追溯，痕迹",
+      "synonyms": [
+        "track"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "transcend",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 胜过，超越",
+      "synonyms": [
+        "excel"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "transit",
+      "phonetic": null,
+      "partOfSpeech": "n., v.",
+      "chineseMeaning": "n. 运输，经过; v. 运送",
+      "synonyms": [
+        "send"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "tremendous",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 巨大的，惊人的",
+      "synonyms": [
+        "vast"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "trigger",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 触发，引发，引起",
+      "synonyms": [
+        "begin"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "tropical",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 热带的",
+      "synonyms": [
+        "hot"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "unbiased",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 公正的，无偏见的",
+      "synonyms": [
+        "fair"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "uniform",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 始终如一的",
+      "synonyms": [
+        "consistent"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "valuable",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 宝贵的，有价值的",
+      "synonyms": [
+        "benefit"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "versatile",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 多功能的",
+      "synonyms": [
+        "all-around"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "view",
+      "phonetic": null,
+      "partOfSpeech": "v.",
+      "chineseMeaning": "v. 看",
+      "synonyms": [
+        "overlook"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "violent",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 暴力的，猛烈的",
+      "synonyms": [
+        "fierce"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "visible",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 明显的，看得见的",
+      "synonyms": [
+        "see"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "visual",
+      "phonetic": null,
+      "partOfSpeech": "adj.",
+      "chineseMeaning": "adj. 视觉的",
+      "synonyms": [
+        "image"
+      ],
+      "dayHint": 1
+    },
+    {
+      "word": "well-being",
+      "phonetic": null,
+      "partOfSpeech": "n.",
+      "chineseMeaning": "n. 健康，康乐",
+      "synonyms": [],
+      "dayHint": 1
+    }
+  ]
+}
