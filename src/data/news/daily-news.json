@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-17T23:54:57.685Z",
+  "updatedAt": "2026-05-19T00:03:55.119Z",
   "items": [
+    {
+      "id": "news-2026-05-19-1-robo-top-the-machines-that-could-make-your-next-t-shirt",
+      "date": "2026-05-19",
+      "title": "Robo-top: The machines that could make your next t-shirt",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/c0q2gkj97eko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-18T23:04:14.000Z",
+      "topic": "technology",
+      "originalSummary": "Most clothes are made in Asia, but new machines could bring some of that work back to the West.",
+      "learningSummary": "The textile manufacturing sector is undergoing significant transformation due to advances in automated machinery. For many years, garment production has been concentrated in Asian countries where labour costs remain relatively inexpensive compared to Western nations. However, sophisticated robotic systems are now capable of performing intricate sewing operations that were traditionally considered too complex for machines. These developments are prompting some companies to reconsider domestic production, potentially revitalising manufacturing capabilities in Europe and North America. Industry observers suggest this technological shift could substantially alter established supply chain dynamics, reducing dependence on distant suppliers and enabling faster response to changing fashion demands. The trend raises important socioeconomic questions, particularly regarding employment prospects in developing economies that have built substantial industrial capacity around textile manufacturing. While proponents emphasise efficiency gains and reduced environmental impact from shorter transportation routes, concerns persist about the potential displacement of millions of workers who depend on factory employment.",
+      "vocabulary": [
+        {
+          "word": "automation",
+          "meaning": "the use of technology to perform tasks that previously required human effort",
+          "example": "The automation of textile production has raised concerns about workforce displacement in developing nations."
+        },
+        {
+          "word": "localisation",
+          "meaning": "the process of moving production closer to the target market",
+          "example": "Localisation strategies allow manufacturers to reduce shipping times and respond more quickly to consumer preferences."
+        },
+        {
+          "word": "resurgence",
+          "meaning": "the return or revival of something after a period of decline",
+          "example": "The resurgence of domestic manufacturing represents a significant shift in global trade patterns."
+        },
+        {
+          "word": "labour-intensive",
+          "meaning": "requiring large amounts of human physical effort or workers",
+          "example": "Garment production has traditionally been considered labour-intensive work."
+        },
+        {
+          "word": "supply chain",
+          "meaning": "the network of processes involved in producing and distributing goods",
+          "example": "Companies are restructuring their supply chains to incorporate more automated production facilities."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what characteristic of garment production had previously prevented Western companies from competing in domestic manufacturing?",
+          "answer": "The high labour costs in Western nations made production expensive, as garment manufacturing had traditionally been considered labour-intensive work that was more cost-effective in Asian countries with cheaper labour."
+        },
+        {
+          "question": "What can be inferred about the potential environmental impact of robotic textile manufacturing in Western countries?",
+          "answer": "It can be inferred that localised automated production may have positive environmental implications, as shorter transportation distances between manufacturing facilities and consumer markets would reduce carbon emissions associated with shipping garments across long distances."
+        },
+        {
+          "question": "In the context of the passage, what does the word 'revitalising' in the final sentence most nearly mean?",
+          "answer": "In this context, 'revitalising' means restoring or bringing new energy and activity to something. It suggests that automation could give a fresh boost or renewed vitality to manufacturing industries in Western countries."
+        }
+      ],
+      "writingPrompt": "In recent years, technological advances have enabled the automation of industries that were previously dependent on human labour, including textile manufacturing. Some argue that this development will benefit Western economies through job creation and reduced dependence on foreign suppliers, while others express concern about workers in developing nations who may lose their employment opportunities. Discuss both views and give your own opinion. Include relevant examples and ensure your response is at least 250 words.",
+      "listeningText": "The textile industry is experiencing a profound transformation as sophisticated robotic systems increasingly perform tasks that were once exclusively handled by human workers. For decades, clothing production remained concentrated in Asian nations where manufacturing costs stayed relatively low due to affordable labour. Now, cutting-edge automated machinery can execute complex sewing operations with impressive accuracy, making it economically sustainable to establish production facilities closer to consumers in Western markets. Business analysts observe that this technological evolution may fundamentally reshape international trade relationships, potentially minimising dependence on distant suppliers while enabling manufacturers to adapt swiftly to emerging fashion trends. The transition simultaneously presents challenges and opportunities for workers worldwide. While advanced economies might benefit from renewed industrial activity and enhanced productivity, developing regions face the prospect of significant workforce disruption. Economists emphasise the importance of implementing supportive policies to help affected communities navigate this period of technological change.",
+      "createdAt": "2026-05-19T00:02:44.382Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-19-2-waste-carrier-licences-to-be-tightened-as-part-of-illegal-du",
+      "date": "2026-05-19",
+      "title": "Waste carrier licences to be tightened as part of illegal dumping crackdown",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/c707jlxwx38o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-18T01:11:02.000Z",
+      "topic": "environment",
+      "originalSummary": "The proposed changes come after a cow named Beau Vine got approved for a waste removal licence.",
+      "learningSummary": "The UK government has announced plans to tighten regulations on waste carrier licensing as part of a broader initiative to combat illegal dumping. Under the proposed changes, individuals and businesses wishing to transport commercial waste will face more stringent eligibility requirements and enhanced background checks. The measures aim to prevent fly-tipping and ensure that only responsible operators participate in the waste management sector. Environment officials emphasise that improved oversight will protect communities from the environmental and financial costs associated with improper waste disposal. The initiative follows concerns raised by local authorities regarding the increasing prevalence of illegal waste operations. Industry representatives have expressed cautious support for the reforms while calling for adequate transitional periods to allow affected businesses to adjust to new compliance standards.",
+      "vocabulary": [
+        {
+          "word": "scrutiny",
+          "meaning": "careful examination or inspection; critical observation",
+          "example": "The new waste carrier proposals will be subject to parliamentary scrutiny before implementation."
+        },
+        {
+          "word": "compliance",
+          "meaning": "the act of obeying rules or regulations; conformity",
+          "example": "Businesses must demonstrate full compliance with environmental standards to obtain licences."
+        },
+        {
+          "word": "enforcement",
+          "meaning": "the act of ensuring laws and regulations are obeyed",
+          "example": "Effective enforcement of waste regulations is essential for tackling illegal dumping."
+        },
+        {
+          "word": "deterrent",
+          "meaning": "something that discourages or prevents wrongdoing",
+          "example": "Stricter penalties serve as a deterrent to those considering illegal waste disposal."
+        },
+        {
+          "word": "stringent",
+          "meaning": "strict, precise, and exacting",
+          "example": "The government will introduce stringent requirements for waste carrier licensing."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the proposed changes, what must individuals do before they can legally transport commercial waste?",
+          "answer": "They must meet more stringent eligibility requirements and pass enhanced background checks."
+        },
+        {
+          "question": "What can be inferred about the effectiveness of current waste carrier regulations from this announcement?",
+          "answer": "The current regulations appear insufficient, as illegal dumping continues to be a significant problem requiring stricter controls."
+        },
+        {
+          "question": "In the context of this passage, what does 'cautious support' suggest about industry representatives' attitude toward the reforms?",
+          "answer": "It suggests they generally agree with the need for regulation but have reservations about certain aspects, particularly regarding the transition period."
+        }
+      ],
+      "writingPrompt": "Some people believe that stricter government regulations are the most effective way to tackle environmental problems such as illegal dumping. Others argue that public education and community initiatives are more important. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+      "listeningText": "The British government is implementing stricter controls on waste transportation businesses following a rise in illegal dumping incidents. These new regulations will require anyone handling commercial waste to obtain proper licensing and demonstrate their competence in waste management procedures. The Environment Agency will oversee the enforcement of these rules and can revoke licences from operators who fail to meet required standards. Local councils have welcomed the initiative, noting that illegal waste disposal costs taxpayers millions of pounds annually in cleanup operations. However, some industry groups argue that smaller operators may struggle with compliance costs and have requested a phased approach to implementation.",
+      "createdAt": "2026-05-19T00:03:14.116Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-19-3-canadian-from-hantavirus-hit-cruise-ship-tests-positive",
+      "date": "2026-05-19",
+      "title": "Canadian from hantavirus-hit cruise ship tests positive",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/c2k2p057ezno?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-17T12:07:54.000Z",
+      "topic": "health",
+      "originalSummary": "The individual is one of four former passengers on the MV Hondius isolating on Vancouver Island, British Columbia.",
+      "learningSummary": "A Canadian national who was previously a passenger on a cruise vessel that experienced a hantavirus outbreak has tested positive for the virus. The individual is among four former passengers currently in isolation on Vancouver Island, British Columbia. Health authorities have confirmed the diagnosis while emphasizing that the overall situation remains under control and the risk to the general public is minimal. The cruise ship, identified as the MV Hondius, had been linked to several cases of the respiratory illness, which is typically transmitted through contact with infected rodents or their droppings. Public health officials are monitoring the affected individuals closely and implementing necessary protocols to prevent further transmission within the community. The Canadian patient is receiving appropriate medical care while maintaining isolation to minimize exposure to others. Authorities have assured residents that standard preventive measures are sufficient and there is no cause for widespread concern at this time.",
+      "vocabulary": [
+        {
+          "word": "outbreak",
+          "meaning": "a sudden increase in cases of a disease in a particular area",
+          "example": "The outbreak of hantavirus on the cruise ship prompted immediate health interventions."
+        },
+        {
+          "word": "transmission",
+          "meaning": "the process by which a disease spreads from one person or animal to another",
+          "example": "Understanding how hantavirus spreads is crucial for preventing transmission."
+        },
+        {
+          "word": "protocol",
+          "meaning": "official rules or guidelines for dealing with a particular situation",
+          "example": "Health officials follow strict protocols when managing infectious disease cases."
+        },
+        {
+          "word": "isolate",
+          "meaning": "to keep someone who is infected away from others to prevent spread",
+          "example": "The passengers were instructed to isolate themselves while monitoring for symptoms."
+        },
+        {
+          "word": "respiratory",
+          "meaning": "relating to breathing or the lungs",
+          "example": "Hantavirus primarily affects the respiratory system of infected individuals."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the current medical status of the Canadian who tested positive for hantavirus?",
+          "answer": "The Canadian is in isolation on Vancouver Island, British Columbia, receiving appropriate medical care while health authorities monitor the situation."
+        },
+        {
+          "question": "Why might health authorities claim the public risk is minimal despite the confirmed case?",
+          "answer": "Because the affected individual is already isolated, and the virus is not easily transmitted between humans in most cases, requiring specific contact with infected rodents or their excrement."
+        },
+        {
+          "question": "What does the word 'protocol' suggest about the authorities' response to the outbreak?",
+          "answer": "It indicates that health officials are following established, systematic procedures rather than improvising, suggesting a prepared and controlled response to the situation."
+        }
+      ],
+      "writingPrompt": "In recent years, the spread of infectious diseases has become a major global health concern. Some people believe that governments should prioritize funding for disease prevention over treating existing conditions. To what extent do you agree or disagree? Give reasons for your answer and include relevant examples from your knowledge or experience.",
+      "listeningText": "Health officials in British Columbia have confirmed a case of hantavirus involving a Canadian who was previously a passenger on an affected cruise ship. The individual is one of four former passengers now self-isolating on Vancouver Island. The cruise vessel, named MV Hondius, sparked health concerns after multiple cases of the respiratory illness emerged during its voyage. Medical authorities confirmed the diagnosis and stated that preventive measures are firmly in place. Health professionals are carefully monitoring the patient's condition while ensuring isolation protocols are strictly followed. Officials have assured the public that the risk of community transmission remains low, as the infection appears contained among the ship's former passengers.",
+      "createdAt": "2026-05-19T00:03:55.118Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-05-17-1-new-cancer-test-makes-me-feel-women-s-health-matters",
       "date": "2026-05-17",
