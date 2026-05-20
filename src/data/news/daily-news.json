@@ -1,173 +1,173 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-19T00:03:55.119Z",
+  "updatedAt": "2026-05-20T00:00:04.175Z",
   "items": [
     {
-      "id": "news-2026-05-19-1-robo-top-the-machines-that-could-make-your-next-t-shirt",
+      "id": "news-2026-05-19-1-satellites-and-ai-used-to-track-uk-hedgehogs-in-bid-to-slow-",
       "date": "2026-05-19",
-      "title": "Robo-top: The machines that could make your next t-shirt",
+      "title": "Satellites and AI used to track UK hedgehogs in bid to slow decline",
       "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/c0q2gkj97eko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-18T23:04:14.000Z",
-      "topic": "technology",
-      "originalSummary": "Most clothes are made in Asia, but new machines could bring some of that work back to the West.",
-      "learningSummary": "The textile manufacturing sector is undergoing significant transformation due to advances in automated machinery. For many years, garment production has been concentrated in Asian countries where labour costs remain relatively inexpensive compared to Western nations. However, sophisticated robotic systems are now capable of performing intricate sewing operations that were traditionally considered too complex for machines. These developments are prompting some companies to reconsider domestic production, potentially revitalising manufacturing capabilities in Europe and North America. Industry observers suggest this technological shift could substantially alter established supply chain dynamics, reducing dependence on distant suppliers and enabling faster response to changing fashion demands. The trend raises important socioeconomic questions, particularly regarding employment prospects in developing economies that have built substantial industrial capacity around textile manufacturing. While proponents emphasise efficiency gains and reduced environmental impact from shorter transportation routes, concerns persist about the potential displacement of millions of workers who depend on factory employment.",
-      "vocabulary": [
-        {
-          "word": "automation",
-          "meaning": "the use of technology to perform tasks that previously required human effort",
-          "example": "The automation of textile production has raised concerns about workforce displacement in developing nations."
-        },
-        {
-          "word": "localisation",
-          "meaning": "the process of moving production closer to the target market",
-          "example": "Localisation strategies allow manufacturers to reduce shipping times and respond more quickly to consumer preferences."
-        },
-        {
-          "word": "resurgence",
-          "meaning": "the return or revival of something after a period of decline",
-          "example": "The resurgence of domestic manufacturing represents a significant shift in global trade patterns."
-        },
-        {
-          "word": "labour-intensive",
-          "meaning": "requiring large amounts of human physical effort or workers",
-          "example": "Garment production has traditionally been considered labour-intensive work."
-        },
-        {
-          "word": "supply chain",
-          "meaning": "the network of processes involved in producing and distributing goods",
-          "example": "Companies are restructuring their supply chains to incorporate more automated production facilities."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what characteristic of garment production had previously prevented Western companies from competing in domestic manufacturing?",
-          "answer": "The high labour costs in Western nations made production expensive, as garment manufacturing had traditionally been considered labour-intensive work that was more cost-effective in Asian countries with cheaper labour."
-        },
-        {
-          "question": "What can be inferred about the potential environmental impact of robotic textile manufacturing in Western countries?",
-          "answer": "It can be inferred that localised automated production may have positive environmental implications, as shorter transportation distances between manufacturing facilities and consumer markets would reduce carbon emissions associated with shipping garments across long distances."
-        },
-        {
-          "question": "In the context of the passage, what does the word 'revitalising' in the final sentence most nearly mean?",
-          "answer": "In this context, 'revitalising' means restoring or bringing new energy and activity to something. It suggests that automation could give a fresh boost or renewed vitality to manufacturing industries in Western countries."
-        }
-      ],
-      "writingPrompt": "In recent years, technological advances have enabled the automation of industries that were previously dependent on human labour, including textile manufacturing. Some argue that this development will benefit Western economies through job creation and reduced dependence on foreign suppliers, while others express concern about workers in developing nations who may lose their employment opportunities. Discuss both views and give your own opinion. Include relevant examples and ensure your response is at least 250 words.",
-      "listeningText": "The textile industry is experiencing a profound transformation as sophisticated robotic systems increasingly perform tasks that were once exclusively handled by human workers. For decades, clothing production remained concentrated in Asian nations where manufacturing costs stayed relatively low due to affordable labour. Now, cutting-edge automated machinery can execute complex sewing operations with impressive accuracy, making it economically sustainable to establish production facilities closer to consumers in Western markets. Business analysts observe that this technological evolution may fundamentally reshape international trade relationships, potentially minimising dependence on distant suppliers while enabling manufacturers to adapt swiftly to emerging fashion trends. The transition simultaneously presents challenges and opportunities for workers worldwide. While advanced economies might benefit from renewed industrial activity and enhanced productivity, developing regions face the prospect of significant workforce disruption. Economists emphasise the importance of implementing supportive policies to help affected communities navigate this period of technological change.",
-      "createdAt": "2026-05-19T00:02:44.382Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-19-2-waste-carrier-licences-to-be-tightened-as-part-of-illegal-du",
-      "date": "2026-05-19",
-      "title": "Waste carrier licences to be tightened as part of illegal dumping crackdown",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/c707jlxwx38o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-18T01:11:02.000Z",
+      "url": "https://www.bbc.com/news/articles/c202g60qrlpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-18T23:04:03.000Z",
       "topic": "environment",
-      "originalSummary": "The proposed changes come after a cow named Beau Vine got approved for a waste removal licence.",
-      "learningSummary": "The UK government has announced plans to tighten regulations on waste carrier licensing as part of a broader initiative to combat illegal dumping. Under the proposed changes, individuals and businesses wishing to transport commercial waste will face more stringent eligibility requirements and enhanced background checks. The measures aim to prevent fly-tipping and ensure that only responsible operators participate in the waste management sector. Environment officials emphasise that improved oversight will protect communities from the environmental and financial costs associated with improper waste disposal. The initiative follows concerns raised by local authorities regarding the increasing prevalence of illegal waste operations. Industry representatives have expressed cautious support for the reforms while calling for adequate transitional periods to allow affected businesses to adjust to new compliance standards.",
+      "originalSummary": "Researchers hope the project will also help to identify barriers preventing hedgehogs from finding food and mates in the wild.",
+      "learningSummary": "Scientists in the United Kingdom have launched an innovative initiative to monitor hedgehog populations across the country using advanced satellite technology and artificial intelligence systems. The project aims to gather comprehensive data on hedgehog movements and behaviour patterns in both rural and urban environments. Conservation experts believe this technological approach will provide unprecedented insights into the obstacles hedgehogs encounter when seeking food sources and breeding opportunities. By analysing the collected information, researchers expect to develop more effective strategies for protecting these declining mammals. The initiative represents a significant advancement in wildlife conservation methodology, combining modern technology with traditional ecological research. Experts involved in the project emphasise that understanding barrier locations could help authorities design better-connected habitats for hedgehog populations.",
       "vocabulary": [
         {
-          "word": "scrutiny",
-          "meaning": "careful examination or inspection; critical observation",
-          "example": "The new waste carrier proposals will be subject to parliamentary scrutiny before implementation."
+          "word": "population decline",
+          "meaning": "a reduction in the number of individuals of a particular species in a given area over time",
+          "example": "The population decline of hedgehogs has raised concerns among wildlife conservationists across Europe."
         },
         {
-          "word": "compliance",
-          "meaning": "the act of obeying rules or regulations; conformity",
-          "example": "Businesses must demonstrate full compliance with environmental standards to obtain licences."
+          "word": "conservation efforts",
+          "meaning": "organised activities undertaken to protect natural environments and prevent species extinction",
+          "example": "Local conservation efforts have successfully increased hedgehog awareness in rural communities."
         },
         {
-          "word": "enforcement",
-          "meaning": "the act of ensuring laws and regulations are obeyed",
-          "example": "Effective enforcement of waste regulations is essential for tackling illegal dumping."
+          "word": "habitat fragmentation",
+          "meaning": "the process by which large areas of habitat are divided into smaller, isolated patches",
+          "example": "Habitat fragmentation caused by road construction has severely impacted hedgehog movement patterns."
         },
         {
-          "word": "deterrent",
-          "meaning": "something that discourages or prevents wrongdoing",
-          "example": "Stricter penalties serve as a deterrent to those considering illegal waste disposal."
+          "word": "monitoring",
+          "meaning": "systematic observation and recording of changes in wildlife populations or environments",
+          "example": "Continuous monitoring of hedgehog activity provides valuable data for conservation strategies."
         },
         {
-          "word": "stringent",
-          "meaning": "strict, precise, and exacting",
-          "example": "The government will introduce stringent requirements for waste carrier licensing."
+          "word": "unprecedented",
+          "meaning": "something that has never happened or been done before, novel or unique in nature",
+          "example": "The use of AI for tracking hedgehogs represents an unprecedented approach to wildlife research."
         }
       ],
       "readingQuestions": [
         {
-          "question": "According to the proposed changes, what must individuals do before they can legally transport commercial waste?",
-          "answer": "They must meet more stringent eligibility requirements and pass enhanced background checks."
+          "question": "According to the passage, what specific types of technology are being employed in the hedgehog tracking initiative?",
+          "answer": "Satellite technology and artificial intelligence systems are being used to monitor hedgehog populations across the United Kingdom."
         },
         {
-          "question": "What can be inferred about the effectiveness of current waste carrier regulations from this announcement?",
-          "answer": "The current regulations appear insufficient, as illegal dumping continues to be a significant problem requiring stricter controls."
+          "question": "It can be inferred from the passage that hedgehog population decline may be linked to which of the following factors?",
+          "answer": "The passage suggests that hedgehogs face obstacles when seeking food and mates, which implies that environmental barriers and habitat issues are contributing factors to their decline."
         },
         {
-          "question": "In the context of this passage, what does 'cautious support' suggest about industry representatives' attitude toward the reforms?",
-          "answer": "It suggests they generally agree with the need for regulation but have reservations about certain aspects, particularly regarding the transition period."
+          "question": "In the context of the passage, what does the word 'unprecedented' most nearly mean?",
+          "answer": "C - Something that has never happened before, indicating that the AI and satellite approach represents a novel methodology in wildlife conservation."
         }
       ],
-      "writingPrompt": "Some people believe that stricter government regulations are the most effective way to tackle environmental problems such as illegal dumping. Others argue that public education and community initiatives are more important. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
-      "listeningText": "The British government is implementing stricter controls on waste transportation businesses following a rise in illegal dumping incidents. These new regulations will require anyone handling commercial waste to obtain proper licensing and demonstrate their competence in waste management procedures. The Environment Agency will oversee the enforcement of these rules and can revoke licences from operators who fail to meet required standards. Local councils have welcomed the initiative, noting that illegal waste disposal costs taxpayers millions of pounds annually in cleanup operations. However, some industry groups argue that smaller operators may struggle with compliance costs and have requested a phased approach to implementation.",
-      "createdAt": "2026-05-19T00:03:14.116Z",
+      "writingPrompt": "Some experts believe that using advanced technology, such as artificial intelligence and satellite monitoring, is the most effective way to protect endangered wildlife species. Others argue that traditional conservation methods, like creating protected areas and community education programmes, remain more reliable. Discuss both views and give your own opinion. Give reasons for your answer and include relevant examples from your own knowledge or experience. Write at least 250 words.",
+      "listeningText": "British researchers have begun using satellites and artificial intelligence to study hedgehog populations throughout the United Kingdom. This groundbreaking project seeks to understand why hedgehog numbers have decreased significantly over recent decades. The technology allows scientists to track individual hedgehogs and observe their daily movements across different terrains. By collecting this information, conservationists hope to identify physical barriers that prevent hedgehogs from accessing food and finding mates. The data gathered will inform future conservation strategies, potentially including the creation of wildlife corridors that connect fragmented habitats. Scientists involved in the project say the technology offers precision previously impossible with traditional observation methods alone.",
+      "createdAt": "2026-05-19T23:59:16.578Z",
       "aiSource": "minimax"
     },
     {
-      "id": "news-2026-05-19-3-canadian-from-hantavirus-hit-cruise-ship-tests-positive",
+      "id": "news-2026-05-19-2-uk-should-set-maximum-working-temperature-rules-advisers-say",
       "date": "2026-05-19",
-      "title": "Canadian from hantavirus-hit cruise ship tests positive",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/c2k2p057ezno?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-17T12:07:54.000Z",
-      "topic": "health",
-      "originalSummary": "The individual is one of four former passengers on the MV Hondius isolating on Vancouver Island, British Columbia.",
-      "learningSummary": "A Canadian national who was previously a passenger on a cruise vessel that experienced a hantavirus outbreak has tested positive for the virus. The individual is among four former passengers currently in isolation on Vancouver Island, British Columbia. Health authorities have confirmed the diagnosis while emphasizing that the overall situation remains under control and the risk to the general public is minimal. The cruise ship, identified as the MV Hondius, had been linked to several cases of the respiratory illness, which is typically transmitted through contact with infected rodents or their droppings. Public health officials are monitoring the affected individuals closely and implementing necessary protocols to prevent further transmission within the community. The Canadian patient is receiving appropriate medical care while maintaining isolation to minimize exposure to others. Authorities have assured residents that standard preventive measures are sufficient and there is no cause for widespread concern at this time.",
+      "title": "UK should set maximum working temperature rules, advisers say",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cm2p1j4y0kro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-19T23:40:12.000Z",
+      "topic": "work",
+      "originalSummary": "Successive governments have failed to prepare the UK for extreme heat, the climate watchdog says.",
+      "learningSummary": "The UK Climate Change Committee, the government's official environmental advisory body, has urged legislators to introduce legally binding maximum temperature limits for indoor workplaces. Their report highlights that successive administrations have neglected to implement adequate protections for employees as summer heatwaves become increasingly severe and frequent due to climate change. The committee emphasises that current workplace safety guidance lacks enforceability and is insufficient to safeguard workers from heat-related health risks such as exhaustion, fainting, and reduced cognitive performance. Experts contend that without mandatory thresholds, millions of employees remain exposed to dangerous conditions, particularly those in professions involving physical labour or inadequate ventilation. The advisory group further warns that without prompt legislative action, both public health and economic productivity will suffer compounding consequences as temperatures continue to rise across the nation.",
       "vocabulary": [
         {
-          "word": "outbreak",
-          "meaning": "a sudden increase in cases of a disease in a particular area",
-          "example": "The outbreak of hantavirus on the cruise ship prompted immediate health interventions."
+          "word": "mandatory",
+          "meaning": "required by law or rules; obligatory",
+          "example": "The introduction of mandatory rest breaks could significantly reduce heat-related illnesses among outdoor workers."
         },
         {
-          "word": "transmission",
-          "meaning": "the process by which a disease spreads from one person or animal to another",
-          "example": "Understanding how hantavirus spreads is crucial for preventing transmission."
+          "word": "vulnerable",
+          "meaning": "open to harm or damage; susceptible",
+          "example": "Employees working in factories without air conditioning are particularly vulnerable to heat stress during summer months."
         },
         {
-          "word": "protocol",
-          "meaning": "official rules or guidelines for dealing with a particular situation",
-          "example": "Health officials follow strict protocols when managing infectious disease cases."
+          "word": "mitigation",
+          "meaning": "the action of reducing the severity, seriousness, or impact of something",
+          "example": "Effective mitigation strategies include providing shaded breaks, hydration stations, and flexible working hours during extreme heat."
         },
         {
-          "word": "isolate",
-          "meaning": "to keep someone who is infected away from others to prevent spread",
-          "example": "The passengers were instructed to isolate themselves while monitoring for symptoms."
+          "word": "legislation",
+          "meaning": "laws enacted by a governing body",
+          "example": "New legislation setting a maximum indoor temperature threshold would give health and safety inspectors clear standards to enforce."
         },
         {
-          "word": "respiratory",
-          "meaning": "relating to breathing or the lungs",
-          "example": "Hantavirus primarily affects the respiratory system of infected individuals."
+          "word": "precedent",
+          "meaning": "an earlier event or action that serves as a guide or example for future cases",
+          "example": "Several European countries have already established legal heat limits, providing a useful precedent for UK policymakers."
         }
       ],
       "readingQuestions": [
         {
-          "question": "What is the current medical status of the Canadian who tested positive for hantavirus?",
-          "answer": "The Canadian is in isolation on Vancouver Island, British Columbia, receiving appropriate medical care while health authorities monitor the situation."
+          "question": "According to the Climate Change Committee, what weakness exists in the UK's current approach to protecting workers from extreme heat?",
+          "answer": "The committee states that successive governments have failed to prepare the UK for extreme heat and that existing workplace safety guidance is not legally enforceable."
         },
         {
-          "question": "Why might health authorities claim the public risk is minimal despite the confirmed case?",
-          "answer": "Because the affected individual is already isolated, and the virus is not easily transmitted between humans in most cases, requiring specific contact with infected rodents or their excrement."
+          "question": "What inference can reasonably be drawn about the likely consequences if the recommended legislation is not introduced?",
+          "answer": "If mandatory maximum temperature limits are not introduced, workers will remain inadequately protected, leading to increased heat-related health problems and reduced productivity as heatwaves become more frequent."
         },
         {
-          "question": "What does the word 'protocol' suggest about the authorities' response to the outbreak?",
-          "answer": "It indicates that health officials are following established, systematic procedures rather than improvising, suggesting a prepared and controlled response to the situation."
+          "question": "What does the word 'mandatory' mean as used in the context of the climate committee's recommendations?",
+          "answer": "It means legally required or obligatory — the committee is calling for enforceable legal rules rather than voluntary workplace guidelines."
         }
       ],
-      "writingPrompt": "In recent years, the spread of infectious diseases has become a major global health concern. Some people believe that governments should prioritize funding for disease prevention over treating existing conditions. To what extent do you agree or disagree? Give reasons for your answer and include relevant examples from your knowledge or experience.",
-      "listeningText": "Health officials in British Columbia have confirmed a case of hantavirus involving a Canadian who was previously a passenger on an affected cruise ship. The individual is one of four former passengers now self-isolating on Vancouver Island. The cruise vessel, named MV Hondius, sparked health concerns after multiple cases of the respiratory illness emerged during its voyage. Medical authorities confirmed the diagnosis and stated that preventive measures are firmly in place. Health professionals are carefully monitoring the patient's condition while ensuring isolation protocols are strictly followed. Officials have assured the public that the risk of community transmission remains low, as the infection appears contained among the ship's former passengers.",
-      "createdAt": "2026-05-19T00:03:55.118Z",
+      "writingPrompt": "Some experts believe that the UK government should introduce legally enforceable maximum temperature limits for indoor workplaces, while others argue that individual employers should be left to manage heat-related risks independently. Discuss both views and give your own opinion.",
+      "listeningText": "The UK Climate Change Committee has called on the government to establish legally enforceable maximum temperature thresholds for indoor working environments. In a formal statement, the advisory body noted that consecutive governments have not taken sufficient action to protect workers as climate-driven heatwaves grow more intense and prolonged. The committee's report argues that voluntary guidance alone is inadequate for safeguarding public health and productivity. It recommends introducing legislation similar to existing minimum temperature standards, thereby providing inspectors with clear, enforceable benchmarks. The advisory group stressed that failure to act promptly would expose millions of workers, particularly those in manual or poorly ventilated roles, to escalating health risks. The report has prompted calls from trade unions for urgent parliamentary debate.",
+      "createdAt": "2026-05-19T23:59:31.867Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-19-3-third-of-university-students-in-great-britain-think-ai-job-l",
+      "date": "2026-05-19",
+      "title": "Third of university students in Great Britain think AI job losses will cause social unrest, poll finds",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/technology/2026/may/19/third-university-students-think-ai-job-losses-cause-social-unrest-poll",
+      "publishedAt": "2026-05-18T23:01:00.000Z",
+      "topic": "education",
+      "originalSummary": "Tracker of attitudes towards artificial intelligence also finds almost half of the public would prefer to avoid it One in three university students think AI will wipe out jobs so rapidly it will trigger civil unrest, according to a survey by King’s College London (KCL). Students are among the heaviest users of AI, the poll found, with 77% using it at least a few times a month – compared with 46% of workers – and 27% using it daily or almost daily. Continue reading...",
+      "learningSummary": "A comprehensive survey conducted by King's College London has revealed significant concerns among British university students regarding artificial intelligence's impact on employment. The research indicates that approximately one-third of higher education students believe AI will eliminate jobs at such an alarming rate that it could precipitate civil unrest within society. This anxiety persists despite the fact that students represent some of the most active users of AI tools in Britain. The poll demonstrates that 77% of university students utilise AI platforms at least several times monthly, substantially higher than the 46% of general workers who report similar usage patterns. Furthermore, more than a quarter of students engage with AI daily or near-daily. The study also highlighted that nearly half of the British public would prefer to minimise their interaction with artificial intelligence technologies, suggesting widespread ambivalence about technological integration across different demographic groups.",
+      "vocabulary": [
+        {
+          "word": "precipitate",
+          "meaning": "to cause something to happen suddenly or immediately",
+          "example": "The rapid advancement of automation could precipitate widespread job losses across multiple sectors."
+        },
+        {
+          "word": "unprecedented",
+          "meaning": "never having been done, seen, or known before",
+          "example": "The pace of technological change is unprecedented in human history, leaving policymakers struggling to keep pace."
+        },
+        {
+          "word": "demographic",
+          "meaning": "a particular sector of a population defined by characteristics such as age or income",
+          "example": "Different demographics exhibit varying attitudes towards the adoption of emerging technologies."
+        },
+        {
+          "word": "ambivalence",
+          "meaning": "mixed or contradictory feelings about something",
+          "example": "There is considerable ambivalence among the public regarding the long-term benefits and risks of artificial intelligence."
+        },
+        {
+          "word": "incorporation",
+          "meaning": "the action of including or integrating something as part of a whole",
+          "example": "The incorporation of AI tools into academic work has raised questions about intellectual honesty and learning outcomes."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the survey, what proportion of university students believe AI could result in civil unrest, and how does this compare with general worker usage rates?",
+          "answer": "One in three university students, or approximately one-third, believe AI will cause civil unrest. In contrast, while 77% of university students use AI at least several times monthly, only 46% of general workers report comparable usage patterns."
+        },
+        {
+          "question": "What can be inferred about university students' relationship with AI based on the survey findings?",
+          "answer": "University students appear to maintain a paradoxical relationship with AI: despite expressing significant anxiety about job displacement and social upheaval, they remain among the heaviest users of AI technologies, suggesting familiarity with these tools does not necessarily reduce concerns about their societal impact."
+        },
+        {
+          "question": "In the context of the passage, what does the phrase 'precipitate civil unrest' most nearly mean?",
+          "answer": "The phrase means to trigger or spark social disorder and public disturbance, suggesting that AI-driven job losses could cause widespread social instability."
+        }
+      ],
+      "writingPrompt": "Modern university students frequently express concerns about artificial intelligence and its potential to disrupt employment markets. Some argue that educational institutions bear primary responsibility for preparing young people to navigate technological changes, while others believe this duty lies with governmental bodies. Discuss both views and give your own opinion.",
+      "listeningText": "A recent investigation by King's College London has uncovered troubling projections among Britain's university student population. Researchers discovered that around thirty-three percent of higher education students anticipate artificial intelligence will generate employment losses so severe that they could destabilise communities through widespread social conflict. The findings appear paradoxical since students constitute the most intensive consumers of AI services in the country. Data shows that nearly four out of five university students interact with AI platforms monthly, a figure dramatically exceeding the rate among employed adults, where fewer than half report equivalent usage. A substantial minority of students, exceeding one quarter, engage with AI on a daily basis. Perhaps most strikingly, the broader British population demonstrates considerable hesitation, with approximately half indicating preference for limiting their engagement with artificial intelligence technologies altogether.",
+      "createdAt": "2026-05-20T00:00:04.174Z",
       "aiSource": "minimax"
     },
     {
