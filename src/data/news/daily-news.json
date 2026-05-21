@@ -1,173 +1,173 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-21T00:05:55.608Z",
+  "updatedAt": "2026-05-21T23:59:31.795Z",
   "items": [
     {
-      "id": "news-2026-05-21-1-backlash-over-department-for-education-videos-with-gemma-col",
+      "id": "news-2026-05-21-1-how-do-hurricanes-and-typhoons-form-and-is-climate-change-ma",
       "date": "2026-05-21",
-      "title": "Backlash over Department for Education videos with Gemma Collins",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/cd6pw448nqdo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-20T18:42:37.000Z",
-      "topic": "education",
-      "originalSummary": "The education secretary defends videos starring The Only Way Is Essex star promoting post-16 education.",
-      "learningSummary": "The education secretary has encountered substantial criticism following the release of promotional videos featuring a reality television personality from an Essex-based programme. The decision to engage a celebrity widely recognized for entertainment appearances to promote post-16 educational pathways has generated widespread debate regarding the suitability of such an approach. Detractors maintain that involving entertainment figures may trivialise serious academic and vocational alternatives available to young people. Conversely, proponents argue that celebrity association could effectively capture the attention of students who might otherwise remain indifferent to conventional educational guidance. The controversy has prompted broader questions about marketing strategies employed within government educational initiatives and their potential influence on public perceptions of educational policy. This incident exemplifies ongoing tensions between traditional educational communication methods and contemporary promotional techniques.",
-      "vocabulary": [
-        {
-          "word": "backlash",
-          "meaning": "a strong and adverse reaction from the public or a specific group",
-          "example": "The government faced significant backlash over its controversial policy decision."
-        },
-        {
-          "word": "controversy",
-          "meaning": "public debate or disagreement caused by differing views on a particular issue",
-          "example": "The controversy surrounding the celebrity endorsement sparked intense media coverage."
-        },
-        {
-          "word": "disengage",
-          "meaning": "to lose connection with or interest in something",
-          "example": "Many students who disengage from traditional learning may benefit from innovative approaches."
-        },
-        {
-          "word": "endorsement",
-          "meaning": "public approval or support given by a notable person",
-          "example": "Celebrity endorsement can significantly boost the visibility of educational campaigns."
-        },
-        {
-          "word": "trivialise",
-          "meaning": "to cause something serious or important to appear insignificant",
-          "example": "Critics argue that celebrity involvement may trivialise the importance of academic qualifications."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What criticism has the education secretary faced regarding the promotional videos?",
-          "answer": "The education secretary has faced substantial criticism for featuring a reality television personality in government educational videos, with detractors arguing that the approach may undermine the seriousness of post-16 educational options."
-        },
-        {
-          "question": "What inference can be drawn about the intended audience of these promotional videos?",
-          "answer": "The use of a popular reality star suggests that the campaign aimed to reach young people who might be more responsive to celebrity-based messaging rather than traditional educational communication."
-        },
-        {
-          "question": "In the context of this article, what does the phrase 'sparked widespread debate' suggest about public reaction?",
-          "answer": "It indicates that the decision provoked strong and divided opinions among various groups, including educators, parents, and media commentators, regarding the appropriateness of celebrity involvement in educational promotion."
-        }
-      ],
-      "writingPrompt": "In some countries, celebrities are increasingly used to promote educational programmes to young people. While celebrity endorsement may attract attention, others argue this approach is inappropriate for serious educational matters. Discuss both views and give your own opinion.",
-      "listeningText": "The education secretary has encountered significant criticism following the release of promotional videos featuring a reality television star. The decision to involve a celebrity known for entertainment appearances has sparked widespread debate about the appropriateness of using such figures to promote educational pathways. Critics argue that the approach may undermine the seriousness of academic and vocational options available to young people after the age of sixteen. Supporters suggest that celebrity association could effectively engage students who might otherwise disengage from traditional educational information. The controversy has raised questions about marketing strategies within government initiatives and their potential impact on how the public perceives educational policy decisions.",
-      "createdAt": "2026-05-21T00:04:52.566Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-21-2-spacex-files-for-ipo-that-could-make-elon-musk-a-trillionair",
-      "date": "2026-05-21",
-      "title": "SpaceX files for IPO that could make Elon Musk a trillionaire",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/cg4pe2953q1o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-20T23:11:58.000Z",
-      "topic": "technology",
-      "originalSummary": "Musk's rocket-maker and satellite internet provider will trade under the ticker SPCX",
-      "learningSummary": "SpaceX, the aerospace company founded by Elon Musk, has officially submitted paperwork for an initial public offering. The company, which manufactures rockets and operates the Starlink satellite internet division, will list on the stock exchange using the ticker symbol SPCX. This filing represents a significant milestone for the privately held enterprise, which has historically relied on private funding and government contracts to finance its operations. Industry analysts suggest that a successful public listing could potentially elevate Musk's personal fortune to unprecedented levels, potentially exceeding one trillion dollars in total valuation. The announcement has generated considerable interest among investors and space industry observers, who view this development as a test of market appetite for commercial space ventures. The IPO is anticipated to occur within the coming months, though specific details regarding share pricing and allocation remain confidential pending regulatory approval.",
-      "vocabulary": [
-        {
-          "word": "initial public offering",
-          "meaning": "the first time a company offers shares to the public for purchase on a stock exchange",
-          "example": "The technology company's initial public offering attracted record-breaking investor interest."
-        },
-        {
-          "word": "ticker symbol",
-          "meaning": "a unique abbreviation used to identify a publicly traded company's stock on an exchange",
-          "example": "Apple's ticker symbol AAPL is recognised worldwide by investors."
-        },
-        {
-          "word": "unprecedented",
-          "meaning": "something that has never been done, known, or experienced before",
-          "example": "The company's growth rate reached unprecedented levels following the product launch."
-        },
-        {
-          "word": "regulatory approval",
-          "meaning": "official permission granted by government or governing bodies after reviewing compliance with laws",
-          "example": "The pharmaceutical product cannot be sold until it receives regulatory approval."
-        },
-        {
-          "word": "market appetite",
-          "meaning": "the degree of demand or enthusiasm from investors and consumers for a particular product or investment",
-          "example": "Despite economic uncertainty, there remains a strong market appetite for renewable energy stocks."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "Under what specific ticker symbol will SpaceX trade following its initial public offering?",
-          "answer": "SpaceX will trade under the ticker symbol SPCX."
-        },
-        {
-          "question": "Based on the passage, what has traditionally sustained SpaceX financially rather than public investment?",
-          "answer": "SpaceX has historically relied on private funding and government contracts rather than public investment to finance its operations."
-        },
-        {
-          "question": "In the context of the passage, what does the phrase 'generated considerable interest' suggest about the SpaceX IPO announcement?",
-          "answer": "It suggests that the announcement attracted significant attention and enthusiasm from investors and industry observers who are eager to learn more about the offering."
-        }
-      ],
-      "writingPrompt": "In recent years, major technology companies have increasingly sought to list on public stock exchanges through initial public offerings. Some people argue that this trend benefits economic growth and innovation, while others believe it prioritises short-term profits over long-term research and development. Discuss both views and give your own opinion.",
-      "listeningText": "SpaceX has filed documents to become a publicly traded company, marking a major milestone for the rocket manufacturer and satellite internet provider. The company will list its shares under the ticker symbol SPCX. This represents a significant transition for the enterprise, which has traditionally operated as a private entity funded through private investors and contracts with space agencies. Financial experts predict that a successful public offering could potentially increase Elon Musk's wealth to extraordinary levels. The decision to go public has sparked widespread discussion among investors and those watching the commercial space industry. Market observers are curious whether investors will show strong enthusiasm for companies operating in the space sector. Specific information about pricing and how shares will be distributed has not yet been disclosed as the company awaits clearance from financial regulators. The public listing is anticipated to take place in the near future.",
-      "createdAt": "2026-05-21T00:05:24.583Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-21-3-six-ways-to-keep-your-home-and-yourself-cool-in-hot-weather",
-      "date": "2026-05-21",
-      "title": "Six ways to keep your home and yourself cool in hot weather",
+      "title": "How do hurricanes and typhoons form and is climate change making them stronger?",
       "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/cz6gxe61p70o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-20T09:23:43.000Z",
+      "url": "https://www.bbc.com/news/articles/cz913gxlw3jo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-21T15:28:27.000Z",
       "topic": "environment",
-      "originalSummary": "Six simple things you can do to help keep your house cool when temperatures rise.",
-      "learningSummary": "As global temperatures continue rising, households face increasing challenges maintaining comfortable indoor environments during extreme heat events. Effective cooling strategies extend beyond simply running air conditioning units, which often prove energy-intensive and environmentally costly. Practical approaches include strategic window management, where residents open ventilation points during cooler morning and evening hours while blocking direct sunlight during peak afternoon temperatures.窗帘和百叶窗能够有效反射太阳辐射进入室内。研究表明，住宅的朝向和隔热材料质量显著影响内部温度调节能力。Additionally, hydration plays a crucial role in personal thermoregulation, with medical professionals recommending increased fluid intake during heatwaves. Outdoor timing also matters significantly; scheduling activities during early morning or late evening hours when ambient temperatures decrease reduces heat-related health risks. These adaptive measures demonstrate how communities can mitigate heat stress without relying solely on mechanical cooling systems, thereby reducing energy consumption and environmental impact.",
+      "originalSummary": "These powerful tropical storms are generally becoming more intense as the world warms.",
+      "learningSummary": "(Mock learning summary based on the headline.) How do hurricanes and typhoons form and is climate change making them stronger?. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
       "vocabulary": [
         {
-          "word": "ventilation",
-          "meaning": "the movement of air through a space to control temperature and improve air quality",
-          "example": "Proper ventilation in older buildings can significantly reduce indoor temperatures during summer months."
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
         },
         {
-          "word": "thermal insulation",
-          "meaning": "materials used to reduce heat transfer between inside and outside spaces",
-          "example": "Upgrading thermal insulation in attics is one of the most effective ways to maintain stable indoor temperatures."
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
         },
         {
-          "word": "acclimatisation",
-          "meaning": "the process of adjusting physically to new temperature or environmental conditions",
-          "example": "Gradual acclimatisation to hot weather helps the body regulate temperature more efficiently."
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
         },
         {
-          "word": "thermoregulation",
-          "meaning": "the ability of an organism to maintain internal temperature despite external conditions",
-          "example": "Human thermoregulation mechanisms become strained during prolonged heatwaves."
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
         },
         {
-          "word": "mitigate",
-          "meaning": "to make less severe, serious, or damaging",
-          "example": "Urban planning strategies can mitigate the urban heat island effect in densely populated areas."
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
         }
       ],
       "readingQuestions": [
         {
-          "question": "According to the article, when are the most effective times to open windows for cooling purposes?",
-          "answer": "Morning and evening hours when temperatures are lower."
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
         },
         {
-          "question": "What can be inferred about the environmental impact of relying heavily on air conditioning systems?",
-          "answer": "Heavy reliance on mechanical cooling increases energy consumption, which contributes to greater environmental damage and potentially worsens the heat problem long-term."
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
         },
         {
-          "question": "In the context of the passage, what does 'thermal insulation' primarily help households achieve?",
-          "answer": "It helps reduce heat transfer between indoor and outdoor environments, keeping homes cooler during hot weather and reducing the need for mechanical cooling."
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
         }
       ],
-      "writingPrompt": "Some experts argue that individuals must adapt their lifestyles to cope with increasingly extreme weather conditions, while others believe governments should implement infrastructure changes to protect communities. Discuss both views and give your own opinion.",
-      "listeningText": "During summer months, many households struggle to maintain comfortable temperatures indoors when external conditions become extreme. Several practical strategies can help residents manage heat effectively without relying solely on energy-intensive cooling systems. Opening windows during cooler morning and evening periods allows fresh air circulation throughout living spaces. Using reflective curtains or blinds prevents solar radiation from entering and heating interior rooms. Experts recommend that people increase their water consumption during hot weather to support their body's natural cooling mechanisms. Additionally, scheduling outdoor activities during early morning or late afternoon hours when temperatures are more moderate significantly reduces heat exposure and related health risks. Buildings with good thermal insulation maintain stable temperatures more easily than those with poor insulation, demonstrating how structural improvements can help communities adapt to changing climate conditions.",
-      "createdAt": "2026-05-21T00:05:55.607Z",
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) How do hurricanes and typhoons form and is climate change making them stronger?. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-05-21T23:58:12.100Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-05-21-2-it-s-put-the-joy-levels-up-the-flood-prone-london-school-wit",
+      "date": "2026-05-21",
+      "title": "‘It’s put the joy levels up’: the flood-prone London school with a climate-adapted playground",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/environment/2026/may/21/flood-prone-london-school-climate-adapted-playground",
+      "publishedAt": "2026-05-21T14:00:31.000Z",
+      "topic": "education",
+      "originalSummary": "When pupils could no longer play outside, St John’s school in Barnet decided to act, enlisting Trees for Cities to help rethink its outside space The play area at St John’s Church of England primary in Barnet, north London, used to flood so severely it was often unusable. “It would get so bad that the children couldn’t be dismissed from the playground,” says Macci Dobie, the school’s headteacher. “We had to dismiss them from different parts of the school or, literally, parents were stepping into puddles to lift their children out of the classroom.” Because the school sits in a basin with clay...",
+      "learningSummary": "A primary school in north London has transformed its flood-prone playground into a climate-adapted outdoor space, significantly improving the experience of its students. St John’s Church of England Primary in Barnet previously faced such severe flooding that pupils could not safely use the play area. On rainy days, children were dismissed from alternative exits, and parents had to wade through standing water to collect their offspring. The school partnered with the charitable organisation Trees for Cities to redesign the site with sustainable drainage systems, native planting, and permeable surfaces capable of managing excess rainfall. The headteacher noted that the new design has substantially raised pupils' enjoyment and wellbeing. The initiative illustrates how educational institutions can respond practically to environmental challenges while simultaneously creating healthier, more engaging learning environments for children. Similar urban schools facing climate-related disruptions may find this approach a viable model for future development.",
+      "vocabulary": [
+        {
+          "word": "permeable",
+          "meaning": "allowing liquid to pass through; porous",
+          "example": "The permeable surfacing installed in the playground enables rainwater to drain naturally into the ground."
+        },
+        {
+          "word": "sustainable",
+          "meaning": "able to be maintained at a steady level without depleting resources",
+          "example": "Sustainable drainage solutions are increasingly adopted in schools to combat recurring flood problems."
+        },
+        {
+          "word": "basin",
+          "meaning": "a natural depression or area where water collects",
+          "example": "The school is situated in a basin with heavy clay soil, which prevents water from soaking away quickly."
+        },
+        {
+          "word": "initiative",
+          "meaning": "a new plan or strategy designed to address a problem",
+          "example": "The Trees for Cities partnership represents a proactive initiative to adapt the school grounds to climate change."
+        },
+        {
+          "word": "viability",
+          "meaning": "the degree to which something is practicable or feasible",
+          "example": "The project demonstrates the viability of low-cost, nature-based solutions for urban flood management."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "Why was the playground at St John’s Primary originally difficult to use during wet weather?",
+          "answer": "The playground frequently flooded so severely that children could not be dismissed from it safely, forcing the school to use alternative exits and requiring parents to walk through puddles to collect their children."
+        },
+        {
+          "question": "What inference can be drawn about the long-term educational benefits of the redesigned playground?",
+          "answer": "The inference is that the improved outdoor environment is likely to enhance pupils' physical wellbeing, mental engagement, and overall learning capacity, as the headteacher observed that the changes have significantly raised enjoyment levels among students."
+        },
+        {
+          "question": "What does the phrase 'climate-adapted playground' suggest about the purpose of the redesign in the context of the sentence it appears in?",
+          "answer": "The phrase indicates that the playground was specifically engineered to withstand and manage the effects of changing weather patterns, particularly increased rainfall, making the space functional and safe for children despite environmental pressures."
+        }
+      ],
+      "writingPrompt": "In some countries, schools are increasingly investing in infrastructure to address climate-related challenges such as flooding and heat. Some people believe that this financial investment is justified because it directly benefits students, while others argue that the money would be better spent on academic resources. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+      "listeningText": "A London primary school has taken decisive action to combat recurrent flooding of its playground by collaborating with the environmental charity Trees for Cities. Previously, the outdoor area at St John’s Church of England Primary in Barnet became waterlogged so frequently that school routines were disrupted. On numerous occasions, children could not be released through the usual exit, and parents arriving at the school gate encountered deep puddles surrounding the building. The redesign incorporates sustainable drainage features and planting schemes that naturally absorb rainfall. Staff at the school report a remarkable improvement in pupils' happiness and physical activity levels since the work was completed. This case highlights how educational settings can successfully adapt to environmental pressures while simultaneously providing children with safer and more stimulating spaces for play and learning.",
+      "createdAt": "2026-05-21T23:59:04.352Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-21-3-schools-are-pipeline-to-joblessness-for-many-people-says-ex-",
+      "date": "2026-05-21",
+      "title": "Schools are ‘pipeline’ to joblessness for many people, says ex-Labour adviser",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/business/2026/may/21/schools-unemployment-young-people-neets-peter-hyman",
+      "publishedAt": "2026-05-21T06:00:04.000Z",
+      "topic": "work",
+      "originalSummary": "Ban social media and reform education to tackle scandal of young people not in work or study, says Peter Hyman Schools have become a “pipeline” to worklessness for a large cohort of young people in the UK, according to an influential former Labour adviser who has called for urgent action to help a “lost generation”. Peter Hyman, a former adviser to Tony Blair and Keir Starmer, told the Guardian the government should ban social media and enact radical education reform to tackle the “national scandal” of young people who are not in education, employment or training (Neet). Continue reading...",
+      "learningSummary": "A prominent political strategist has warned that Britain's educational institutions are failing to prepare young people for the workforce, effectively creating a pathway to unemployment for thousands. Peter Hyman, who has advised multiple Labour leaders, described the situation as a national crisis requiring immediate intervention. His proposed solutions include restricting access to social media platforms among young people and implementing comprehensive reforms to vocational and academic education systems. The expert emphasised that a significant portion of today's youth will become part of a lost generation unless decisive action is taken to address the growing number of individuals not engaged in education, employment, or training. Industry leaders have echoed these concerns, arguing that current educational frameworks do not adequately equip students with practical skills demanded by the modern labour market. The government faces increasing pressure to develop strategies that bridge the gap between academic achievement and career readiness.",
+      "vocabulary": [
+        {
+          "word": "pipeline",
+          "meaning": "a system or channel through which something is transmitted, often with negative connotations suggesting a factory-like processing of individuals",
+          "example": "Critics argue the education system functions merely as a pipeline to unemployment rather than a foundation for successful careers."
+        },
+        {
+          "word": "scandal",
+          "meaning": "an action or situation that arouses public outrage or indignation due to its perceived wrongdoing or negligence",
+          "example": "Experts have labeled the rise in youth unemployment a scandal that demands urgent governmental response."
+        },
+        {
+          "word": "radical",
+          "meaning": "involving fundamental and sweeping changes to existing systems or structures",
+          "example": "The adviser called for radical restructuring of educational curricula to address workforce preparation gaps."
+        },
+        {
+          "word": "cohort",
+          "meaning": "a group of individuals sharing a common characteristic, typically age or experience, within a larger population",
+          "example": "A substantial cohort of young people currently finds itself excluded from both education and employment opportunities."
+        },
+        {
+          "word": "tackle",
+          "meaning": "to make determined efforts to deal with or overcome a problem or challenge",
+          "example": "Policymakers must tackle the issue of youth unemployment through comprehensive legislative and educational reforms."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What specific measures did the former political adviser recommend to address youth unemployment?",
+          "answer": "The adviser proposed two main measures: implementing a ban on social media use and undertaking radical reform of the education system to address the crisis of young people not in education, employment, or training."
+        },
+        {
+          "question": "It can be inferred from the passage that the speaker believes current educational provisions are: (a) too demanding, (b) insufficiently practical, or (c) overly political?",
+          "answer": "Insufficiently practical. The adviser's emphasis on education reform and concerns about workforce preparation suggest that the current system fails to provide students with relevant, applicable skills needed for employment."
+        },
+        {
+          "question": "In the context of the passage, what does 'pipeline' most nearly mean?",
+          "answer": "A system that processes individuals in a mechanical, predetermined way towards a particular outcome. The term is used critically to suggest schools automatically channel students toward unemployment rather than actively preparing them for meaningful employment."
+        }
+      ],
+      "writingPrompt": "Some experts argue that schools should bear responsibility for the growing unemployment among young people, while others believe that societal factors beyond educational institutions are the primary causes. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
+      "listeningText": "Education specialists are raising alarms about the disconnect between school programmes and employment outcomes in the United Kingdom. A former government advisor has claimed that schools are essentially preparing students for joblessness rather than career success. This commentator, who has served in advisory roles for senior politicians, has urged authorities to take strong action against what he calls a national disgrace affecting young people. His recommendations include preventing teenagers from using popular online platforms and completely overhauling how schools prepare students for working life. The advisor highlighted that thousands of young people are currently classified as neither in education nor employment, representing a significant waste of human potential. Industry observers suggest that the gap between classroom learning and workplace expectations continues to widen, leaving many graduates unprepared for professional environments. Educational institutions must reconsider their curricula to ensure students develop practical competencies alongside academic qualifications.",
+      "createdAt": "2026-05-21T23:59:31.794Z",
       "aiSource": "minimax"
     },
     {
