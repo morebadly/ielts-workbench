@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-20T00:00:04.175Z",
+  "updatedAt": "2026-05-21T00:05:55.608Z",
   "items": [
+    {
+      "id": "news-2026-05-21-1-backlash-over-department-for-education-videos-with-gemma-col",
+      "date": "2026-05-21",
+      "title": "Backlash over Department for Education videos with Gemma Collins",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/cd6pw448nqdo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-20T18:42:37.000Z",
+      "topic": "education",
+      "originalSummary": "The education secretary defends videos starring The Only Way Is Essex star promoting post-16 education.",
+      "learningSummary": "The education secretary has encountered substantial criticism following the release of promotional videos featuring a reality television personality from an Essex-based programme. The decision to engage a celebrity widely recognized for entertainment appearances to promote post-16 educational pathways has generated widespread debate regarding the suitability of such an approach. Detractors maintain that involving entertainment figures may trivialise serious academic and vocational alternatives available to young people. Conversely, proponents argue that celebrity association could effectively capture the attention of students who might otherwise remain indifferent to conventional educational guidance. The controversy has prompted broader questions about marketing strategies employed within government educational initiatives and their potential influence on public perceptions of educational policy. This incident exemplifies ongoing tensions between traditional educational communication methods and contemporary promotional techniques.",
+      "vocabulary": [
+        {
+          "word": "backlash",
+          "meaning": "a strong and adverse reaction from the public or a specific group",
+          "example": "The government faced significant backlash over its controversial policy decision."
+        },
+        {
+          "word": "controversy",
+          "meaning": "public debate or disagreement caused by differing views on a particular issue",
+          "example": "The controversy surrounding the celebrity endorsement sparked intense media coverage."
+        },
+        {
+          "word": "disengage",
+          "meaning": "to lose connection with or interest in something",
+          "example": "Many students who disengage from traditional learning may benefit from innovative approaches."
+        },
+        {
+          "word": "endorsement",
+          "meaning": "public approval or support given by a notable person",
+          "example": "Celebrity endorsement can significantly boost the visibility of educational campaigns."
+        },
+        {
+          "word": "trivialise",
+          "meaning": "to cause something serious or important to appear insignificant",
+          "example": "Critics argue that celebrity involvement may trivialise the importance of academic qualifications."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What criticism has the education secretary faced regarding the promotional videos?",
+          "answer": "The education secretary has faced substantial criticism for featuring a reality television personality in government educational videos, with detractors arguing that the approach may undermine the seriousness of post-16 educational options."
+        },
+        {
+          "question": "What inference can be drawn about the intended audience of these promotional videos?",
+          "answer": "The use of a popular reality star suggests that the campaign aimed to reach young people who might be more responsive to celebrity-based messaging rather than traditional educational communication."
+        },
+        {
+          "question": "In the context of this article, what does the phrase 'sparked widespread debate' suggest about public reaction?",
+          "answer": "It indicates that the decision provoked strong and divided opinions among various groups, including educators, parents, and media commentators, regarding the appropriateness of celebrity involvement in educational promotion."
+        }
+      ],
+      "writingPrompt": "In some countries, celebrities are increasingly used to promote educational programmes to young people. While celebrity endorsement may attract attention, others argue this approach is inappropriate for serious educational matters. Discuss both views and give your own opinion.",
+      "listeningText": "The education secretary has encountered significant criticism following the release of promotional videos featuring a reality television star. The decision to involve a celebrity known for entertainment appearances has sparked widespread debate about the appropriateness of using such figures to promote educational pathways. Critics argue that the approach may undermine the seriousness of academic and vocational options available to young people after the age of sixteen. Supporters suggest that celebrity association could effectively engage students who might otherwise disengage from traditional educational information. The controversy has raised questions about marketing strategies within government initiatives and their potential impact on how the public perceives educational policy decisions.",
+      "createdAt": "2026-05-21T00:04:52.566Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-21-2-spacex-files-for-ipo-that-could-make-elon-musk-a-trillionair",
+      "date": "2026-05-21",
+      "title": "SpaceX files for IPO that could make Elon Musk a trillionaire",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/cg4pe2953q1o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-20T23:11:58.000Z",
+      "topic": "technology",
+      "originalSummary": "Musk's rocket-maker and satellite internet provider will trade under the ticker SPCX",
+      "learningSummary": "SpaceX, the aerospace company founded by Elon Musk, has officially submitted paperwork for an initial public offering. The company, which manufactures rockets and operates the Starlink satellite internet division, will list on the stock exchange using the ticker symbol SPCX. This filing represents a significant milestone for the privately held enterprise, which has historically relied on private funding and government contracts to finance its operations. Industry analysts suggest that a successful public listing could potentially elevate Musk's personal fortune to unprecedented levels, potentially exceeding one trillion dollars in total valuation. The announcement has generated considerable interest among investors and space industry observers, who view this development as a test of market appetite for commercial space ventures. The IPO is anticipated to occur within the coming months, though specific details regarding share pricing and allocation remain confidential pending regulatory approval.",
+      "vocabulary": [
+        {
+          "word": "initial public offering",
+          "meaning": "the first time a company offers shares to the public for purchase on a stock exchange",
+          "example": "The technology company's initial public offering attracted record-breaking investor interest."
+        },
+        {
+          "word": "ticker symbol",
+          "meaning": "a unique abbreviation used to identify a publicly traded company's stock on an exchange",
+          "example": "Apple's ticker symbol AAPL is recognised worldwide by investors."
+        },
+        {
+          "word": "unprecedented",
+          "meaning": "something that has never been done, known, or experienced before",
+          "example": "The company's growth rate reached unprecedented levels following the product launch."
+        },
+        {
+          "word": "regulatory approval",
+          "meaning": "official permission granted by government or governing bodies after reviewing compliance with laws",
+          "example": "The pharmaceutical product cannot be sold until it receives regulatory approval."
+        },
+        {
+          "word": "market appetite",
+          "meaning": "the degree of demand or enthusiasm from investors and consumers for a particular product or investment",
+          "example": "Despite economic uncertainty, there remains a strong market appetite for renewable energy stocks."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "Under what specific ticker symbol will SpaceX trade following its initial public offering?",
+          "answer": "SpaceX will trade under the ticker symbol SPCX."
+        },
+        {
+          "question": "Based on the passage, what has traditionally sustained SpaceX financially rather than public investment?",
+          "answer": "SpaceX has historically relied on private funding and government contracts rather than public investment to finance its operations."
+        },
+        {
+          "question": "In the context of the passage, what does the phrase 'generated considerable interest' suggest about the SpaceX IPO announcement?",
+          "answer": "It suggests that the announcement attracted significant attention and enthusiasm from investors and industry observers who are eager to learn more about the offering."
+        }
+      ],
+      "writingPrompt": "In recent years, major technology companies have increasingly sought to list on public stock exchanges through initial public offerings. Some people argue that this trend benefits economic growth and innovation, while others believe it prioritises short-term profits over long-term research and development. Discuss both views and give your own opinion.",
+      "listeningText": "SpaceX has filed documents to become a publicly traded company, marking a major milestone for the rocket manufacturer and satellite internet provider. The company will list its shares under the ticker symbol SPCX. This represents a significant transition for the enterprise, which has traditionally operated as a private entity funded through private investors and contracts with space agencies. Financial experts predict that a successful public offering could potentially increase Elon Musk's wealth to extraordinary levels. The decision to go public has sparked widespread discussion among investors and those watching the commercial space industry. Market observers are curious whether investors will show strong enthusiasm for companies operating in the space sector. Specific information about pricing and how shares will be distributed has not yet been disclosed as the company awaits clearance from financial regulators. The public listing is anticipated to take place in the near future.",
+      "createdAt": "2026-05-21T00:05:24.583Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-21-3-six-ways-to-keep-your-home-and-yourself-cool-in-hot-weather",
+      "date": "2026-05-21",
+      "title": "Six ways to keep your home and yourself cool in hot weather",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cz6gxe61p70o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-20T09:23:43.000Z",
+      "topic": "environment",
+      "originalSummary": "Six simple things you can do to help keep your house cool when temperatures rise.",
+      "learningSummary": "As global temperatures continue rising, households face increasing challenges maintaining comfortable indoor environments during extreme heat events. Effective cooling strategies extend beyond simply running air conditioning units, which often prove energy-intensive and environmentally costly. Practical approaches include strategic window management, where residents open ventilation points during cooler morning and evening hours while blocking direct sunlight during peak afternoon temperatures.窗帘和百叶窗能够有效反射太阳辐射进入室内。研究表明，住宅的朝向和隔热材料质量显著影响内部温度调节能力。Additionally, hydration plays a crucial role in personal thermoregulation, with medical professionals recommending increased fluid intake during heatwaves. Outdoor timing also matters significantly; scheduling activities during early morning or late evening hours when ambient temperatures decrease reduces heat-related health risks. These adaptive measures demonstrate how communities can mitigate heat stress without relying solely on mechanical cooling systems, thereby reducing energy consumption and environmental impact.",
+      "vocabulary": [
+        {
+          "word": "ventilation",
+          "meaning": "the movement of air through a space to control temperature and improve air quality",
+          "example": "Proper ventilation in older buildings can significantly reduce indoor temperatures during summer months."
+        },
+        {
+          "word": "thermal insulation",
+          "meaning": "materials used to reduce heat transfer between inside and outside spaces",
+          "example": "Upgrading thermal insulation in attics is one of the most effective ways to maintain stable indoor temperatures."
+        },
+        {
+          "word": "acclimatisation",
+          "meaning": "the process of adjusting physically to new temperature or environmental conditions",
+          "example": "Gradual acclimatisation to hot weather helps the body regulate temperature more efficiently."
+        },
+        {
+          "word": "thermoregulation",
+          "meaning": "the ability of an organism to maintain internal temperature despite external conditions",
+          "example": "Human thermoregulation mechanisms become strained during prolonged heatwaves."
+        },
+        {
+          "word": "mitigate",
+          "meaning": "to make less severe, serious, or damaging",
+          "example": "Urban planning strategies can mitigate the urban heat island effect in densely populated areas."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the article, when are the most effective times to open windows for cooling purposes?",
+          "answer": "Morning and evening hours when temperatures are lower."
+        },
+        {
+          "question": "What can be inferred about the environmental impact of relying heavily on air conditioning systems?",
+          "answer": "Heavy reliance on mechanical cooling increases energy consumption, which contributes to greater environmental damage and potentially worsens the heat problem long-term."
+        },
+        {
+          "question": "In the context of the passage, what does 'thermal insulation' primarily help households achieve?",
+          "answer": "It helps reduce heat transfer between indoor and outdoor environments, keeping homes cooler during hot weather and reducing the need for mechanical cooling."
+        }
+      ],
+      "writingPrompt": "Some experts argue that individuals must adapt their lifestyles to cope with increasingly extreme weather conditions, while others believe governments should implement infrastructure changes to protect communities. Discuss both views and give your own opinion.",
+      "listeningText": "During summer months, many households struggle to maintain comfortable temperatures indoors when external conditions become extreme. Several practical strategies can help residents manage heat effectively without relying solely on energy-intensive cooling systems. Opening windows during cooler morning and evening periods allows fresh air circulation throughout living spaces. Using reflective curtains or blinds prevents solar radiation from entering and heating interior rooms. Experts recommend that people increase their water consumption during hot weather to support their body's natural cooling mechanisms. Additionally, scheduling outdoor activities during early morning or late afternoon hours when temperatures are more moderate significantly reduces heat exposure and related health risks. Buildings with good thermal insulation maintain stable temperatures more easily than those with poor insulation, demonstrating how structural improvements can help communities adapt to changing climate conditions.",
+      "createdAt": "2026-05-21T00:05:55.607Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-05-19-1-satellites-and-ai-used-to-track-uk-hedgehogs-in-bid-to-slow-",
       "date": "2026-05-19",
