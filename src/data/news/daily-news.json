@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-21T23:59:31.795Z",
+  "updatedAt": "2026-05-23T00:02:28.207Z",
   "items": [
+    {
+      "id": "news-2026-05-23-1-from-decades-to-years-ai-could-speed-search-for-brain-drugs-",
+      "date": "2026-05-23",
+      "title": "From decades to years - AI could speed search for brain drugs hiding in plain sight",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/cdrp3zzzp71o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-22T21:30:06.000Z",
+      "topic": "health",
+      "originalSummary": "Researchers hope the work will help identify affordable, effective drugs to treat conditions like MND.",
+      "learningSummary": "Artificial intelligence is revolutionising the pharmaceutical industry by dramatically reducing the time required to discover new medications for neurological disorders. Scientists have developed machine learning algorithms capable of analysing vast chemical databases to identify promising drug candidates that would otherwise remain undetected for decades. This technological breakthrough holds significant implications for patients suffering from degenerative conditions such as motor neurone disease, for which effective treatments have historically proved elusive. Researchers suggest this approach could accelerate the development of affordable therapies, potentially making life-changing medications accessible to a broader population. The integration of computational power with traditional drug discovery methods represents a paradigm shift in medical research, offering hope to millions worldwide who await therapeutic breakthroughs for currently incurable illnesses.",
+      "vocabulary": [
+        {
+          "word": "paradigm shift",
+          "meaning": "a fundamental change in approach or thinking",
+          "example": "The discovery marked a paradigm shift in how researchers approach neurological disorders."
+        },
+        {
+          "word": "computational",
+          "meaning": "relating to the use of computers and mathematical modelling",
+          "example": "Computational methods have accelerated the identification of promising drug compounds."
+        },
+        {
+          "word": "therapeutic",
+          "meaning": "relating to treatment designed to heal or relieve symptoms",
+          "example": "The therapeutic potential of these compounds requires further clinical investigation."
+        },
+        {
+          "word": "degenerate",
+          "meaning": "characterised by gradual deterioration of function",
+          "example": "Degenerative diseases often affect the nervous system in progressive ways."
+        },
+        {
+          "word": "elusive",
+          "meaning": "difficult to find, define, or achieve",
+          "example": "Scientists have long found effective treatments for this condition elusive."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, how might artificial intelligence transform drug discovery for neurological conditions?",
+          "answer": "AI could reduce the time required to identify promising drug compounds from decades to years by using machine learning algorithms to rapidly analyse vast chemical databases for undetected candidates."
+        },
+        {
+          "question": "What can be inferred about the traditional methods of pharmaceutical research?",
+          "answer": "Traditional drug discovery methods appear to be slow and inefficient, as the passage suggests they have taken decades to identify compounds that AI tools could find much more quickly."
+        },
+        {
+          "question": "The word 'elusive' in paragraph two is closest in meaning to:",
+          "answer": "difficult to achieve or obtain"
+        }
+      ],
+      "writingPrompt": "In recent years, artificial intelligence has begun playing an increasingly important role in medical research. Some people argue that AI will transform healthcare by accelerating drug development and improving patient outcomes, while others believe that human researchers should remain central to medical advancement. Discuss both views and give your own opinion.",
+      "listeningText": "Scientists are using artificial intelligence to dramatically speed up the process of finding new medicines for brain diseases. Machine learning programmes can now scan through enormous collections of chemical compounds, identifying those with therapeutic potential much faster than traditional laboratory methods. This represents a significant departure from conventional approaches, which typically require many years of trial and error. The technology is particularly valuable for conditions like motor neurone disease, where researchers have struggled to develop effective treatments. Experts believe this new approach could make essential medicines more affordable and accessible, helping patients who currently have limited treatment options. The combination of computer science and medical research is creating exciting possibilities for the future of healthcare.",
+      "createdAt": "2026-05-23T00:01:51.870Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-23-2-the-space-race-to-create-gym-equipment-for-future-astronauts",
+      "date": "2026-05-23",
+      "title": "The space race to create gym equipment for future astronauts",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cg4pe6dl03ro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-22T23:42:07.000Z",
+      "topic": "technology",
+      "originalSummary": "Scientists are attempting to build exercise equipment to be used on future space flights.",
+      "learningSummary": "Scientists are currently developing advanced exercise equipment designed specifically for long-duration space missions. This research addresses the significant challenges that arise from microgravity environments, where traditional workout methods prove ineffective. The human body undergoes substantial physiological changes during extended periods in space, particularly affecting the cardiovascular and musculoskeletal systems. Engineers must account for the unique conditions of zero gravity, ensuring that exercise equipment can maintain astronaut health without risking damage to spacecraft components. Such innovations represent a critical component of preparations for interplanetary travel, where astronauts may spend months or even years away from Earth. The equipment must be compact, durable, and capable of providing sufficient resistance to prevent muscle atrophy and bone density loss. These technological developments not only benefit space exploration but also contribute to improved understanding of human physiology in extreme conditions.",
+      "vocabulary": [
+        {
+          "word": "microgravity",
+          "meaning": "a condition of very low gravity, as in space, where objects appear to be weightless",
+          "example": "Astronauts must adapt their exercise routines to account for the effects of microgravity on their bodies."
+        },
+        {
+          "word": "cardiovascular",
+          "meaning": "relating to the heart and blood vessels; pertaining to the circulatory system",
+          "example": "Regular cardiovascular exercise helps astronauts maintain healthy heart function during space missions."
+        },
+        {
+          "word": "physiological",
+          "meaning": "relating to the normal functions and processes of a living organism",
+          "example": "Prolonged space travel causes significant physiological changes in the human body."
+        },
+        {
+          "word": "musculoskeletal",
+          "meaning": "relating to the muscles and skeleton of the body",
+          "example": "The musculoskeletal system requires regular stimulation to prevent deterioration in zero gravity."
+        },
+        {
+          "word": "atrophy",
+          "meaning": "the gradual loss of muscle tissue or function due to disuse or disease",
+          "example": "Without adequate exercise, astronauts risk muscle atrophy during extended missions."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What specific challenge does microgravity present for traditional exercise equipment in space?",
+          "answer": "Microgravity renders traditional exercise equipment ineffective because workout methods that rely on gravity-based resistance cannot function properly without gravitational pull to provide resistance or stability."
+        },
+        {
+          "question": "Based on the passage, what can be inferred about future interplanetary missions?",
+          "answer": "Future interplanetary missions will require astronauts to spend extended periods in space, making advanced exercise equipment essential to prevent health deterioration from prolonged weightlessness."
+        },
+        {
+          "question": "What does the phrase 'muscle atrophy' in the passage suggest about the consequences of inactivity?",
+          "answer": "The term 'atrophy' indicates a progressive wasting away or loss of muscle tissue, suggesting that without regular exercise, astronauts' muscles will deteriorate significantly during space missions."
+        }
+      ],
+      "writingPrompt": "In an era of advancing space exploration, scientists are developing specialised exercise equipment for astronauts on long-duration missions. Discuss the advantages and disadvantages of prioritising technological innovation for space travel over investments in solving problems on Earth. Give reasons for your answer and include relevant examples from your knowledge and experience.",
+      "listeningText": "Researchers are working to solve a critical challenge in space exploration: keeping astronauts healthy during extended missions beyond Earth's atmosphere. The human body faces significant difficulties when exposed to microgravity for prolonged periods. Traditional exercise equipment simply does not function properly in conditions where gravity is absent. New designs must account for the unique physics of zero gravity while providing sufficient resistance to maintain muscle strength and cardiovascular health. These innovations are essential for future missions to Mars and beyond, where crews may spend years away from Earth. The technology being developed addresses both the physical and psychological wellbeing of astronauts, recognising that human health remains the greatest constraint on deep space exploration.",
+      "createdAt": "2026-05-23T00:02:17.740Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-23-3-ebola-risk-raised-to-very-high-in-dr-congo",
+      "date": "2026-05-23",
+      "title": "Ebola risk raised to 'very high' in DR Congo",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/cr7p30m1dn1o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-22T16:23:08.000Z",
+      "topic": "health",
+      "originalSummary": "The head of the UN health agency says the risk in the wider region is \"high\", but it remains \"low\" at the global level.",
+      "learningSummary": "The World Health Organization has escalated its assessment of the Ebola situation in the Democratic Republic of Congo, elevating the regional threat level to very high. According to statements from the UN health agency's leadership, the risk of further transmission within the broader Central African region remains considerable. However, officials maintain that the global threat remains relatively contained. Medical teams are working alongside national authorities to deploy containment strategies, which include comprehensive vaccination drives and rigorous contact tracing protocols. Experts contend that the outbreak presents ongoing challenges in areas where healthcare delivery systems are severely limited and security concerns complicate intervention efforts. International health bodies continue to advise heightened vigilance while reassuring the public that coordinated efforts are underway to prevent escalation beyond current affected zones.",
+      "vocabulary": [
+        {
+          "word": "escalate",
+          "meaning": "to increase in intensity, seriousness, or extent",
+          "example": "The organization was compelled to escalate its response as cases multiplied rapidly."
+        },
+        {
+          "word": "containment",
+          "meaning": "measures taken to prevent the spread of something harmful",
+          "example": "Effective containment relies on rapid identification and isolation of infected individuals."
+        },
+        {
+          "word": "epidemic",
+          "meaning": "a widespread occurrence of an infectious disease affecting many people simultaneously",
+          "example": "Health officials fear the epidemic may spread to neighbouring provinces within weeks."
+        },
+        {
+          "word": "infrastructure",
+          "meaning": "the fundamental physical systems and facilities required for operation",
+          "example": "The fragile health infrastructure hindered the distribution of medical supplies."
+        },
+        {
+          "word": "vigilance",
+          "meaning": "constant careful attention to a situation to detect or respond to changes",
+          "example": "The public has been urged to maintain vigilance and report any suspicious symptoms."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what risk level has the World Health Organization assigned to the Ebola situation in the Democratic Republic of Congo?",
+          "answer": "The WHO has elevated the risk level to 'very high' for the Ebola situation in the Democratic Republic of Congo."
+        },
+        {
+          "question": "What can be inferred about the challenges faced by health workers in this region based on the passage?",
+          "answer": "It can be inferred that health workers face significant obstacles due to limited healthcare systems and security issues that complicate their ability to implement effective intervention measures."
+        },
+        {
+          "question": "In the passage, what does the word 'escalated' most closely mean in the context of the WHO's response?",
+          "answer": "In this context, 'escalated' means the WHO has raised or increased the level of concern and response to the Ebola situation, indicating a more serious approach to managing the outbreak."
+        }
+      ],
+      "writingPrompt": "In many countries, infectious disease outbreaks such as Ebola present significant challenges to public health systems. Some people argue that governments should prioritize immediate emergency response measures, while others believe that long-term investment in healthcare infrastructure is more important. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
+      "listeningText": "The recent Ebola outbreak in the Democratic Republic of Congo has prompted the World Health Organization to upgrade its risk classification. While regional authorities face substantial challenges, officials emphasize that international spread remains unlikely. Medical professionals are implementing vaccination programs and tracking potential contacts to prevent further transmission. The situation highlights how disease control becomes particularly difficult when basic healthcare facilities are inadequate and security conditions are unstable. Health experts recommend that communities follow official guidance and avoid unnecessary exposure to affected areas while response operations continue.",
+      "createdAt": "2026-05-23T00:02:28.206Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-05-21-1-how-do-hurricanes-and-typhoons-form-and-is-climate-change-ma",
       "date": "2026-05-21",
