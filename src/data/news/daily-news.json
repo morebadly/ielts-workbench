@@ -1,173 +1,173 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-23T00:02:28.207Z",
+  "updatedAt": "2026-05-23T23:54:37.746Z",
   "items": [
     {
-      "id": "news-2026-05-23-1-from-decades-to-years-ai-could-speed-search-for-brain-drugs-",
+      "id": "news-2026-05-23-1-ai-may-speed-up-search-for-drugs-to-treat-brain-conditions",
       "date": "2026-05-23",
-      "title": "From decades to years - AI could speed search for brain drugs hiding in plain sight",
+      "title": "AI may speed up search for drugs to treat brain conditions",
       "source": "BBC News - Technology",
       "url": "https://www.bbc.com/news/articles/cdrp3zzzp71o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-05-22T21:30:06.000Z",
-      "topic": "health",
+      "topic": "technology",
       "originalSummary": "Researchers hope the work will help identify affordable, effective drugs to treat conditions like MND.",
-      "learningSummary": "Artificial intelligence is revolutionising the pharmaceutical industry by dramatically reducing the time required to discover new medications for neurological disorders. Scientists have developed machine learning algorithms capable of analysing vast chemical databases to identify promising drug candidates that would otherwise remain undetected for decades. This technological breakthrough holds significant implications for patients suffering from degenerative conditions such as motor neurone disease, for which effective treatments have historically proved elusive. Researchers suggest this approach could accelerate the development of affordable therapies, potentially making life-changing medications accessible to a broader population. The integration of computational power with traditional drug discovery methods represents a paradigm shift in medical research, offering hope to millions worldwide who await therapeutic breakthroughs for currently incurable illnesses.",
+      "learningSummary": "Artificial intelligence is increasingly being applied to the lengthy and expensive process of developing new medications for neurological disorders. Scientists are optimistic that machine learning algorithms can significantly accelerate the identification of promising drug compounds for conditions such as motor neurone disease. The traditional pharmaceutical development pipeline typically requires over a decade and billions of pounds to bring a single treatment to market. Researchers believe AI-driven analysis of biological data could reduce both timelines and costs substantially. This technological approach may enable the discovery of affordable therapies for patients suffering from debilitating brain conditions that currently have limited treatment options. The medical community anticipates that computational methods will complement traditional laboratory research, potentially revolutionising how novel therapeutics are discovered and developed for complex neurological diseases affecting millions worldwide.",
       "vocabulary": [
         {
-          "word": "paradigm shift",
-          "meaning": "a fundamental change in approach or thinking",
-          "example": "The discovery marked a paradigm shift in how researchers approach neurological disorders."
-        },
-        {
-          "word": "computational",
-          "meaning": "relating to the use of computers and mathematical modelling",
-          "example": "Computational methods have accelerated the identification of promising drug compounds."
+          "word": "neurological",
+          "meaning": "relating to the structure and function of the nervous system, including the brain",
+          "example": "The patient exhibited several neurological symptoms that required specialist investigation."
         },
         {
           "word": "therapeutic",
-          "meaning": "relating to treatment designed to heal or relieve symptoms",
-          "example": "The therapeutic potential of these compounds requires further clinical investigation."
+          "meaning": "intended to heal, relieve, or restore health; relating to treatment",
+          "example": "The therapeutic benefits of the new compound are currently being evaluated in clinical trials."
         },
         {
-          "word": "degenerate",
-          "meaning": "characterised by gradual deterioration of function",
-          "example": "Degenerative diseases often affect the nervous system in progressive ways."
+          "word": "pharmaceutical",
+          "meaning": "relating to the development and production of medicinal drugs",
+          "example": "The pharmaceutical industry is investing heavily in artificial intelligence research."
         },
         {
-          "word": "elusive",
-          "meaning": "difficult to find, define, or achieve",
-          "example": "Scientists have long found effective treatments for this condition elusive."
+          "word": "accelerate",
+          "meaning": "to increase the speed of something; to happen or develop more quickly",
+          "example": "Technology may accelerate the drug discovery process significantly."
+        },
+        {
+          "word": "compound",
+          "meaning": "a substance formed by chemically combining two or more elements",
+          "example": "Scientists identified a promising compound that could target diseased cells."
         }
       ],
       "readingQuestions": [
         {
-          "question": "According to the passage, how might artificial intelligence transform drug discovery for neurological conditions?",
-          "answer": "AI could reduce the time required to identify promising drug compounds from decades to years by using machine learning algorithms to rapidly analyse vast chemical databases for undetected candidates."
+          "question": "According to the report, what specific type of conditions are researchers hoping to treat using AI technology?",
+          "answer": "Researchers are hoping to treat neurological conditions, specifically mentioning motor neurone disease (MND) as an example."
         },
         {
-          "question": "What can be inferred about the traditional methods of pharmaceutical research?",
-          "answer": "Traditional drug discovery methods appear to be slow and inefficient, as the passage suggests they have taken decades to identify compounds that AI tools could find much more quickly."
+          "question": "What can be inferred about the current state of drug development for brain conditions based on the passage?",
+          "answer": "It can be inferred that current methods are slow, expensive, and may not be producing affordable treatments quickly enough, which is why AI assistance is being sought to address these limitations."
         },
         {
-          "question": "The word 'elusive' in paragraph two is closest in meaning to:",
-          "answer": "difficult to achieve or obtain"
+          "question": "In the context of the passage, what does the word 'pipeline' most likely mean?",
+          "answer": "A series of stages through which a drug passes from initial research to final approval and market availability."
         }
       ],
-      "writingPrompt": "In recent years, artificial intelligence has begun playing an increasingly important role in medical research. Some people argue that AI will transform healthcare by accelerating drug development and improving patient outcomes, while others believe that human researchers should remain central to medical advancement. Discuss both views and give your own opinion.",
-      "listeningText": "Scientists are using artificial intelligence to dramatically speed up the process of finding new medicines for brain diseases. Machine learning programmes can now scan through enormous collections of chemical compounds, identifying those with therapeutic potential much faster than traditional laboratory methods. This represents a significant departure from conventional approaches, which typically require many years of trial and error. The technology is particularly valuable for conditions like motor neurone disease, where researchers have struggled to develop effective treatments. Experts believe this new approach could make essential medicines more affordable and accessible, helping patients who currently have limited treatment options. The combination of computer science and medical research is creating exciting possibilities for the future of healthcare.",
-      "createdAt": "2026-05-23T00:01:51.870Z",
+      "writingPrompt": "Some people believe that artificial intelligence will transform healthcare and enable faster development of treatments for serious diseases. Others argue that reliance on technology in medicine poses significant risks. Discuss both views and give your own opinion.",
+      "listeningText": "Scientists are using artificial intelligence to speed up the lengthy process of discovering new medicines for brain diseases. This development could help patients suffering from conditions like motor neurone disease, which currently has limited treatment options. The traditional method of creating new drugs typically takes many years and requires enormous financial investment. AI systems can analyze vast amounts of biological information much faster than human researchers alone. This technology offers hope for producing affordable medications more quickly. Medical professionals are increasingly optimistic about combining computer analysis with traditional laboratory work. The integration of artificial intelligence into pharmaceutical research may fundamentally change how we approach the development of treatments for complex neurological disorders that affect millions of people around the world.",
+      "createdAt": "2026-05-23T23:53:49.325Z",
       "aiSource": "minimax"
     },
     {
-      "id": "news-2026-05-23-2-the-space-race-to-create-gym-equipment-for-future-astronauts",
+      "id": "news-2026-05-23-2-excessive-social-media-negatively-impacts-wellbeing",
       "date": "2026-05-23",
-      "title": "The space race to create gym equipment for future astronauts",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/cg4pe6dl03ro?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-22T23:42:07.000Z",
-      "topic": "technology",
-      "originalSummary": "Scientists are attempting to build exercise equipment to be used on future space flights.",
-      "learningSummary": "Scientists are currently developing advanced exercise equipment designed specifically for long-duration space missions. This research addresses the significant challenges that arise from microgravity environments, where traditional workout methods prove ineffective. The human body undergoes substantial physiological changes during extended periods in space, particularly affecting the cardiovascular and musculoskeletal systems. Engineers must account for the unique conditions of zero gravity, ensuring that exercise equipment can maintain astronaut health without risking damage to spacecraft components. Such innovations represent a critical component of preparations for interplanetary travel, where astronauts may spend months or even years away from Earth. The equipment must be compact, durable, and capable of providing sufficient resistance to prevent muscle atrophy and bone density loss. These technological developments not only benefit space exploration but also contribute to improved understanding of human physiology in extreme conditions.",
-      "vocabulary": [
-        {
-          "word": "microgravity",
-          "meaning": "a condition of very low gravity, as in space, where objects appear to be weightless",
-          "example": "Astronauts must adapt their exercise routines to account for the effects of microgravity on their bodies."
-        },
-        {
-          "word": "cardiovascular",
-          "meaning": "relating to the heart and blood vessels; pertaining to the circulatory system",
-          "example": "Regular cardiovascular exercise helps astronauts maintain healthy heart function during space missions."
-        },
-        {
-          "word": "physiological",
-          "meaning": "relating to the normal functions and processes of a living organism",
-          "example": "Prolonged space travel causes significant physiological changes in the human body."
-        },
-        {
-          "word": "musculoskeletal",
-          "meaning": "relating to the muscles and skeleton of the body",
-          "example": "The musculoskeletal system requires regular stimulation to prevent deterioration in zero gravity."
-        },
-        {
-          "word": "atrophy",
-          "meaning": "the gradual loss of muscle tissue or function due to disuse or disease",
-          "example": "Without adequate exercise, astronauts risk muscle atrophy during extended missions."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What specific challenge does microgravity present for traditional exercise equipment in space?",
-          "answer": "Microgravity renders traditional exercise equipment ineffective because workout methods that rely on gravity-based resistance cannot function properly without gravitational pull to provide resistance or stability."
-        },
-        {
-          "question": "Based on the passage, what can be inferred about future interplanetary missions?",
-          "answer": "Future interplanetary missions will require astronauts to spend extended periods in space, making advanced exercise equipment essential to prevent health deterioration from prolonged weightlessness."
-        },
-        {
-          "question": "What does the phrase 'muscle atrophy' in the passage suggest about the consequences of inactivity?",
-          "answer": "The term 'atrophy' indicates a progressive wasting away or loss of muscle tissue, suggesting that without regular exercise, astronauts' muscles will deteriorate significantly during space missions."
-        }
-      ],
-      "writingPrompt": "In an era of advancing space exploration, scientists are developing specialised exercise equipment for astronauts on long-duration missions. Discuss the advantages and disadvantages of prioritising technological innovation for space travel over investments in solving problems on Earth. Give reasons for your answer and include relevant examples from your knowledge and experience.",
-      "listeningText": "Researchers are working to solve a critical challenge in space exploration: keeping astronauts healthy during extended missions beyond Earth's atmosphere. The human body faces significant difficulties when exposed to microgravity for prolonged periods. Traditional exercise equipment simply does not function properly in conditions where gravity is absent. New designs must account for the unique physics of zero gravity while providing sufficient resistance to maintain muscle strength and cardiovascular health. These innovations are essential for future missions to Mars and beyond, where crews may spend years away from Earth. The technology being developed addresses both the physical and psychological wellbeing of astronauts, recognising that human health remains the greatest constraint on deep space exploration.",
-      "createdAt": "2026-05-23T00:02:17.740Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-23-3-ebola-risk-raised-to-very-high-in-dr-congo",
-      "date": "2026-05-23",
-      "title": "Ebola risk raised to 'very high' in DR Congo",
+      "title": "Excessive social media 'negatively impacts wellbeing'",
       "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/cr7p30m1dn1o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-22T16:23:08.000Z",
+      "url": "https://www.bbc.com/news/articles/cgmp493wpj0o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-23T06:27:17.000Z",
       "topic": "health",
-      "originalSummary": "The head of the UN health agency says the risk in the wider region is \"high\", but it remains \"low\" at the global level.",
-      "learningSummary": "The World Health Organization has escalated its assessment of the Ebola situation in the Democratic Republic of Congo, elevating the regional threat level to very high. According to statements from the UN health agency's leadership, the risk of further transmission within the broader Central African region remains considerable. However, officials maintain that the global threat remains relatively contained. Medical teams are working alongside national authorities to deploy containment strategies, which include comprehensive vaccination drives and rigorous contact tracing protocols. Experts contend that the outbreak presents ongoing challenges in areas where healthcare delivery systems are severely limited and security concerns complicate intervention efforts. International health bodies continue to advise heightened vigilance while reassuring the public that coordinated efforts are underway to prevent escalation beyond current affected zones.",
+      "originalSummary": "The World Happiness Reports finds the more time spent on social media the greater loss of wellbeing.",
+      "learningSummary": "Recent research from the World Happiness Reports indicates a significant correlation between excessive social media usage and diminished psychological wellbeing. The study reveals that individuals who dedicate more hours to platforms such as Facebook, Instagram, and Twitter experience greater declines in overall life satisfaction compared to those who engage in more limited online interactions. Researchers suggest that while social media offers valuable connectivity benefits, the detrimental effects become more pronounced with extended screen time. The report recommends implementing stricter guidelines for platform design and encourages users to adopt more mindful consumption habits. Experts emphasize that maintaining a balanced approach to digital engagement is essential for preserving mental health in an increasingly connected society.",
       "vocabulary": [
         {
-          "word": "escalate",
-          "meaning": "to increase in intensity, seriousness, or extent",
-          "example": "The organization was compelled to escalate its response as cases multiplied rapidly."
+          "word": "wellbeing",
+          "meaning": "a state of being healthy, comfortable, and happy; overall quality of life",
+          "example": "Regular exercise and adequate sleep contribute significantly to one's mental wellbeing."
         },
         {
-          "word": "containment",
-          "meaning": "measures taken to prevent the spread of something harmful",
-          "example": "Effective containment relies on rapid identification and isolation of infected individuals."
+          "word": "correlation",
+          "meaning": "a mutual relationship or connection between two or more factors",
+          "example": "The study found a strong correlation between sleep deprivation and decreased productivity."
         },
         {
-          "word": "epidemic",
-          "meaning": "a widespread occurrence of an infectious disease affecting many people simultaneously",
-          "example": "Health officials fear the epidemic may spread to neighbouring provinces within weeks."
+          "word": "detrimental",
+          "meaning": "causing harm, damage, or negative effects",
+          "example": "Prolonged exposure to stress can have detrimental consequences for cardiovascular health."
         },
         {
-          "word": "infrastructure",
-          "meaning": "the fundamental physical systems and facilities required for operation",
-          "example": "The fragile health infrastructure hindered the distribution of medical supplies."
+          "word": "pervasive",
+          "meaning": "spread widely throughout an area or group; present at every level",
+          "example": "The pervasive influence of smartphones has transformed modern communication patterns."
         },
         {
-          "word": "vigilance",
-          "meaning": "constant careful attention to a situation to detect or respond to changes",
-          "example": "The public has been urged to maintain vigilance and report any suspicious symptoms."
+          "word": "moderation",
+          "meaning": "the practice of avoiding excessive or extreme amounts; balance",
+          "example": "Health professionals advocate for moderation in all aspects of dietary consumption."
         }
       ],
       "readingQuestions": [
         {
-          "question": "According to the passage, what risk level has the World Health Organization assigned to the Ebola situation in the Democratic Republic of Congo?",
-          "answer": "The WHO has elevated the risk level to 'very high' for the Ebola situation in the Democratic Republic of Congo."
+          "question": "According to the World Happiness Reports, what relationship exists between social media usage time and wellbeing?",
+          "answer": "The reports find that the more time spent on social media, the greater the loss of wellbeing experienced by users."
         },
         {
-          "question": "What can be inferred about the challenges faced by health workers in this region based on the passage?",
-          "answer": "It can be inferred that health workers face significant obstacles due to limited healthcare systems and security issues that complicate their ability to implement effective intervention measures."
+          "question": "What can be reasonably inferred about the researchers' recommendations regarding digital platform usage?",
+          "answer": "It can be inferred that researchers advocate for a more balanced approach to social media engagement, suggesting that users should be more mindful of the time they spend online to protect their psychological health."
         },
         {
-          "question": "In the passage, what does the word 'escalated' most closely mean in the context of the WHO's response?",
-          "answer": "In this context, 'escalated' means the WHO has raised or increased the level of concern and response to the Ebola situation, indicating a more serious approach to managing the outbreak."
+          "question": "In the context of this passage, what does the word 'detrimental' most closely mean?",
+          "answer": "In this passage, 'detrimental' means causing harm or damage, specifically referring to the negative effects that prolonged social media use can have on an individual's overall wellbeing."
         }
       ],
-      "writingPrompt": "In many countries, infectious disease outbreaks such as Ebola present significant challenges to public health systems. Some people argue that governments should prioritize immediate emergency response measures, while others believe that long-term investment in healthcare infrastructure is more important. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
-      "listeningText": "The recent Ebola outbreak in the Democratic Republic of Congo has prompted the World Health Organization to upgrade its risk classification. While regional authorities face substantial challenges, officials emphasize that international spread remains unlikely. Medical professionals are implementing vaccination programs and tracking potential contacts to prevent further transmission. The situation highlights how disease control becomes particularly difficult when basic healthcare facilities are inadequate and security conditions are unstable. Health experts recommend that communities follow official guidance and avoid unnecessary exposure to affected areas while response operations continue.",
-      "createdAt": "2026-05-23T00:02:28.206Z",
+      "writingPrompt": "In many countries, young people spend considerable amounts of time using social media platforms. Some people argue that this negatively impacts their wellbeing and mental health. Others believe that social media provides valuable opportunities for connection and self-expression. Discuss both views and give your own opinion.",
+      "listeningText": "The World Happiness Reports have published significant findings regarding social media and psychological wellbeing. The research demonstrates that individuals who allocate extensive periods to online platforms experience measurable declines in overall life satisfaction. While social media undoubtedly facilitates unprecedented global connectivity, the negative ramifications become increasingly evident as usage time escalates. The study recommends that governments and educational institutions implement comprehensive digital literacy programmes to help young people develop healthier online habits. Furthermore, the researchers call upon technology companies to redesign their platforms with user wellbeing as a primary consideration. These findings highlight the importance of maintaining a balanced relationship with digital technology in contemporary society.",
+      "createdAt": "2026-05-23T23:54:08.296Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-23-3-nearly-30-illegal-waste-super-sites-revealed-in-new-governme",
+      "date": "2026-05-23",
+      "title": "Nearly 30 illegal waste 'super sites' revealed in new government watchlist",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/c9v30r0944go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-22T14:28:43.000Z",
+      "topic": "environment",
+      "originalSummary": "The list, published by the Environment Agency on Friday, includes 28 so-called \"super sites\" that contain more than 20,000 tonnes of waste.",
+      "learningSummary": "The Environment Agency has released an official register identifying 28 large-scale illegal waste disposal operations, each containing over 20,000 tonnes of refuse. These facilities have been classified as \"super sites\" and are now subject to enhanced governmental scrutiny. The publication of this watchlist signals a more assertive approach to environmental enforcement, targeting organisations that systematically breach waste disposal regulations. Authorities have highlighted the severe ecological consequences associated with such operations, including soil degradation and contamination of water systems. Agency officials have confirmed that the identified sites will undergo rigorous monitoring, with enforcement actions planned to ensure proper remediation and compliance. Environmental advocates have praised this initiative as a critical step toward holding violators accountable and deterring future illegal dumping activities.",
+      "vocabulary": [
+        {
+          "word": "remediation",
+          "meaning": "the process of correcting environmental damage or reversing pollution",
+          "example": "The site requires extensive remediation before it can be deemed safe for residential development."
+        },
+        {
+          "word": "proliferation",
+          "meaning": "the rapid spread or increase of something undesirable",
+          "example": "The proliferation of illegal waste sites has prompted stricter regulatory measures."
+        },
+        {
+          "word": "flout",
+          "meaning": "to openly disregard rules, laws, or regulations",
+          "example": "Companies that flout environmental standards face substantial financial penalties."
+        },
+        {
+          "word": "contamination",
+          "meaning": "the presence of harmful substances making an environment unsafe",
+          "example": "Groundwater contamination poses serious health risks to nearby communities."
+        },
+        {
+          "word": "surveillance",
+          "meaning": "close observation or monitoring of a location or activity",
+          "example": "Continuous surveillance of the site will ensure compliance with environmental regulations."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "How many illegal waste sites have been officially designated as \"super sites\" according to the Environment Agency?",
+          "answer": "The Environment Agency has identified 28 sites as \"super sites.\""
+        },
+        {
+          "question": "What inference can be drawn about the government's stance on environmental violations based on this information?",
+          "answer": "The publication of the watchlist suggests the government is taking a more stringent approach to enforcement, indicating greater commitment to penalising environmental offences and preventing future violations."
+        },
+        {
+          "question": "What does the word \"remediation\" imply about the expected outcome for these sites?",
+          "answer": "The term implies that the sites will be restored to a safe condition, with efforts made to reverse environmental damage rather than merely halting ongoing violations."
+        }
+      ],
+      "writingPrompt": "In many countries, illegal waste disposal has become a serious environmental concern. Some people believe that heavy fines alone are sufficient to deter this behaviour, while others argue that imprisonment is necessary for serious offenders. Discuss both views and give your own opinion.",
+      "listeningText": "The Environment Agency has published its most recent register of illegal waste disposal operations, classifying twenty-eight facilities as \"super sites.\" Each of these locations contains more than twenty thousand tonnes of accumulated waste, representing significant environmental hazards. The agency has stated that these operations cause extensive damage to ecosystems, particularly through soil degradation and water system pollution. Officials have announced that increased monitoring will be implemented, with enforcement actions planned to ensure adequate clean-up measures. This publication reflects a broader governmental shift toward stricter environmental compliance. Environmental groups have welcomed these measures, describing them as essential for holding polluters accountable and discouraging future violations of waste management legislation.",
+      "createdAt": "2026-05-23T23:54:37.745Z",
       "aiSource": "minimax"
     },
     {
