@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-23T23:54:37.746Z",
+  "updatedAt": "2026-05-24T23:56:45.248Z",
   "items": [
+    {
+      "id": "news-2026-05-24-1-citizen-scientists-needed-to-protect-wildlife",
+      "date": "2026-05-24",
+      "title": "Citizen scientists needed to protect wildlife",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/c8jvkxppdmxo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-24T16:42:22.000Z",
+      "topic": "environment",
+      "originalSummary": "Data for animals, such as foxes, will be welcomed by the Somerset Wildlife Trust.",
+      "learningSummary": "The involvement of ordinary citizens in scientific research has emerged as a valuable approach to wildlife conservation. Local communities are increasingly invited to contribute observations and data that assist researchers in tracking animal populations. The Somerset Wildlife Trust has demonstrated particular interest in receiving information about various species, including commonly found mammals such as foxes. This initiative recognises that members of the public often possess extensive knowledge of their local environments and can provide valuable insights that professional scientists might overlook. By systematically recording sightings and behaviours, these citizen scientists enable conservationists to make more informed decisions about protecting natural habitats. Such collaborative efforts illustrate how public participation can significantly enhance environmental monitoring programmes.",
+      "vocabulary": [
+        {
+          "word": "biodiversity",
+          "meaning": "the variety of plant and animal life in a particular habitat",
+          "example": "Protecting biodiversity is essential for maintaining healthy ecosystems."
+        },
+        {
+          "word": "habitat",
+          "meaning": "the natural home or environment of an animal or plant",
+          "example": "Deforestation threatens the habitat of many endangered species."
+        },
+        {
+          "word": "monitoring",
+          "meaning": "observing and checking something over a period of time",
+          "example": "Regular monitoring of wildlife populations helps detect changes early."
+        },
+        {
+          "word": "collaborative",
+          "meaning": "involving two or more people or groups working together",
+          "example": "Collaborative research between academics and citizens improves data quality."
+        },
+        {
+          "word": "participation",
+          "meaning": "the act of taking part in an activity or event",
+          "example": "Public participation in conservation projects is encouraged by many organisations."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what role do ordinary citizens play in wildlife conservation?",
+          "answer": "They contribute observations and data that help researchers track animal populations."
+        },
+        {
+          "question": "What can be inferred about the Somerset Wildlife Trust's approach to data collection?",
+          "answer": "They value contributions from local community members who can provide unique insights about species like foxes that might be overlooked by professional scientists."
+        },
+        {
+          "question": "In the passage, what does 'habitat' most nearly mean?",
+          "answer": "The natural environment where an animal or plant lives."
+        }
+      ],
+      "writingPrompt": "Some people believe that ordinary citizens should be more involved in scientific research and conservation efforts. To what extent do you agree or disagree?",
+      "listeningText": "Scientists have discovered that involving everyday people in research activities can greatly improve wildlife conservation. The Somerset Wildlife Trust, for example, actively seeks reports from local residents about animal sightings, particularly of foxes. This approach acknowledges that local people often have detailed knowledge of their surroundings that professionals cannot easily access. By gathering this information, conservationists can make better decisions about protecting natural areas. Such partnerships between scientists and the public show how collaborative efforts can strengthen environmental protection.",
+      "createdAt": "2026-05-24T23:56:16.298Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-24-2-uk-universities-warn-of-cuts-for-impoverished-students-if-di",
+      "date": "2026-05-24",
+      "title": "UK universities warn of cuts for impoverished students if dire funding issues continue",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/education/2026/may/25/uk-universities-cuts-impoverished-students-funding",
+      "publishedAt": "2026-05-24T23:01:09.000Z",
+      "topic": "education",
+      "originalSummary": "Nearly a third of vice-chancellors would cut hardship support if necessary over next three years, according to poll Vice-chancellors have said they may need to cut hardship support for impoverished students and reduce outreach activities aimed at disadvantaged groups if the dire funding struggles at universities continue. The anonymous poll of leaders by Universities UK (UUK) revealed the extent of the budgetary quagmire facing higher education, with more than two-thirds prepared to cut staff jobs by compulsory redundancy if difficulties continue over the next three years, while nearly 90%...",
+      "learningSummary": "(Mock learning summary based on the headline.) UK universities warn of cuts for impoverished students if dire funding issues continue. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) UK universities warn of cuts for impoverished students if dire funding issues continue. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-05-24T23:56:37.031Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-05-24-3-overheated-chemical-tank-in-southern-california-will-fail-ep",
+      "date": "2026-05-24",
+      "title": "Overheated chemical tank in southern California ‘will fail’, EPA chief says",
+      "source": "The Guardian - Environment",
+      "url": "https://www.theguardian.com/us-news/2026/may/24/chemical-tank-california-epa-lee-zeldin",
+      "publishedAt": "2026-05-24T19:36:14.000Z",
+      "topic": "environment",
+      "originalSummary": "Lee Zeldin says ‘low-volume release’ of flammable chemicals is most likely amid fears of explosion at Orange county facility near Disneyland Government officials in Orange county, California , have warned that an overheated chemical tank “will fail” and could result in a chemical explosion in the area, the Environmental Protection Agency administrator said on Sunday. “We’re being told that the tank will fail, but there are different scenarios as to what that means,” Lee Zeldin, told CNN’s State of the Union on Sunday. Zeldin, a former Republican congressman with no prior experience in...",
+      "learningSummary": "Government authorities in Orange County, California are managing a critical situation involving an overheated chemical storage tank positioned near Disneyland. EPA Administrator Lee Zeldin has publicly acknowledged that officials have been informed the tank will inevitably fail, raising significant concerns about potential chemical explosions in the region. During an interview on CNN's State of the Union, Zeldin explained that while authorities understand the tank failure is imminent, the precise consequences remain under evaluation. Various potential outcomes are currently being assessed, with experts determining that a low-volume release of flammable chemicals represents the most probable scenario. This incident highlights ongoing challenges in managing industrial chemical facilities and underscores the importance of robust emergency response protocols and infrastructure monitoring systems.",
+      "vocabulary": [
+        {
+          "word": "imminent",
+          "meaning": "about to happen very soon, especially something unpleasant",
+          "example": "Residents were warned of the imminent danger posed by the deteriorating tank structure."
+        },
+        {
+          "word": "evaluate",
+          "meaning": "assess or examine thoroughly to determine value, quality, or significance",
+          "example": "Emergency officials continue to evaluate multiple potential outcomes as the situation develops."
+        },
+        {
+          "word": "protocol",
+          "meaning": "official procedures or rules governing a particular situation or action",
+          "example": "The state's emergency response protocol was activated immediately upon learning of the tank failure."
+        },
+        {
+          "word": "scenario",
+          "meaning": "a possible situation or sequence of events that might occur",
+          "example": "Authorities are preparing for several different scenarios depending on how the tank failure progresses."
+        },
+        {
+          "word": "deteriorating",
+          "meaning": "gradually becoming worse or in poor condition",
+          "example": "Investigators later determined that deteriorating infrastructure contributed to the overheating issue."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What specific outcome did authorities determine to be the most likely result of the tank failure?",
+          "answer": "A low-volume release of flammable chemicals was determined to be the most probable outcome of the tank failure."
+        },
+        {
+          "question": "What can be inferred about the certainty of information available to officials regarding the potential consequences?",
+          "answer": "It can be inferred that officials faced considerable uncertainty, as Zeldin stated there are different scenarios being considered and the precise meaning of the tank failing remains unclear."
+        },
+        {
+          "question": "In the context of this passage, what does the phrase 'will fail' suggest about the confidence level of the authorities?",
+          "answer": "The phrase suggests that authorities are highly confident the tank failure is imminent and unavoidable, though the specific consequences remain uncertain."
+        }
+      ],
+      "writingPrompt": "In some countries, industrial accidents involving chemical facilities pose significant risks to nearby communities. Some people believe that governments should impose stricter regulations on such facilities, while others argue that excessive regulation hinders economic development. Discuss both views and give your own opinion.",
+      "listeningText": "Environmental officials in Orange County, California are currently dealing with a serious situation involving an overheated chemical storage tank located near Disneyland. EPA Administrator Lee Zeldin has confirmed that authorities have been informed the tank will inevitably fail, raising serious concerns about potential chemical explosions in the area. During a CNN interview, Zeldin explained that while officials understand the tank failure is imminent, the exact consequences remain under evaluation. Multiple potential scenarios are being assessed, with experts determining that a low-volume release of flammable chemicals represents the most probable outcome. This incident highlights ongoing challenges in managing industrial chemical facilities and the critical importance of maintaining robust emergency response protocols and infrastructure monitoring systems.",
+      "createdAt": "2026-05-24T23:56:45.247Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-05-23-1-ai-may-speed-up-search-for-drugs-to-treat-brain-conditions",
       "date": "2026-05-23",
