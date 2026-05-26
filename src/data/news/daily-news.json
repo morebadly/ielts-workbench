@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-24T23:56:45.248Z",
+  "updatedAt": "2026-05-26T00:03:08.031Z",
   "items": [
+    {
+      "id": "news-2026-05-26-1-government-vows-to-bring-in-under-16-social-media-restrictio",
+      "date": "2026-05-26",
+      "title": "Government vows to bring in under-16 social media restrictions by end of year",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/c5y7r9gqp6jo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-25T23:28:20.000Z",
+      "topic": "education",
+      "originalSummary": "Tech minister Liz Kendall told the BBC the government would publish a response to the consultation in the summer.",
+      "learningSummary": "The UK government has announced plans to implement restrictions on social media usage for individuals under the age of 16 by the conclusion of the current year. According to the Education Secretary, a formal response to the recent public consultation on this matter will be published during the summer months. The proposed measures aim to address escalating concerns regarding the impact of excessive screen time and unregulated online content on young people. Parents and educators have expressed support for such initiatives, arguing that stronger protections are necessary to safeguard children's mental health and overall wellbeing. However, critics contend that enforcing age verification on digital platforms presents significant practical challenges. Industry representatives have also raised questions about the feasibility of implementation. The government maintains that the new regulations will strike a balance between enabling digital literacy and protecting vulnerable users from potential online harms.",
+      "vocabulary": [
+        {
+          "word": "impose",
+          "meaning": "to officially force a rule, tax, or restriction to be obeyed",
+          "example": "The government plans to impose stricter regulations on tech companies operating in the UK."
+        },
+        {
+          "word": "safeguard",
+          "meaning": "to protect someone or something from harm, damage, or danger",
+          "example": "Schools play a crucial role in safeguarding children's wellbeing both online and offline."
+        },
+        {
+          "word": "regulation",
+          "meaning": "an official rule made by a government or authority to control something",
+          "example": "New regulations regarding online safety for minors are expected to be introduced soon."
+        },
+        {
+          "word": "feasibility",
+          "meaning": "whether something is possible and can be done successfully",
+          "example": "Experts have questioned the feasibility of enforcing age restrictions on social media platforms."
+        },
+        {
+          "word": "vulnerable",
+          "meaning": "weak and without protection; susceptible to being harmed or attacked",
+          "example": "Young people are particularly vulnerable to the negative effects of excessive social media use."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "When does the government expect to publish its formal response regarding the proposed social media restrictions?",
+          "answer": "The government expects to publish its formal response to the consultation during the summer months."
+        },
+        {
+          "question": "What inference can be drawn about the government's position on protecting young people online?",
+          "answer": "The government appears to prioritize protecting young people from online harms, believing that regulatory intervention is necessary to balance digital opportunities with safety concerns."
+        },
+        {
+          "question": "In the context of the passage, what does the phrase 'strike a balance' most closely mean?",
+          "answer": "It means to find a compromise or middle ground between two opposing objectives—in this case, between promoting digital literacy and ensuring children's safety online."
+        }
+      ],
+      "writingPrompt": "Some people believe that governments should implement strict regulations on social media usage for individuals under 16 years of age, while others argue that such restrictions may limit young people's access to digital education and freedom of expression. Discuss both views and give your own opinion.",
+      "listeningText": "The British government has announced ambitious plans to restrict social media access for children under the age of 16 by the end of this year. The Education Secretary confirmed that the much-anticipated response to the public consultation would be released during the summer period. These proposed restrictions are designed to tackle mounting concerns about the effects of prolonged screen exposure and unrestricted access to online platforms on young people's development. Parents and teaching professionals have largely welcomed the initiative, maintaining that such safeguards are essential for protecting children's mental health. Nevertheless, opposition has emerged from those who question whether meaningful enforcement is achievable in practice. Technology industry groups have also expressed reservations about the technical challenges involved. The government insists that these new measures will create an appropriate balance between encouraging responsible digital engagement and shielding impressionable young users from potential dangers.",
+      "createdAt": "2026-05-26T00:02:13.878Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-26-2-the-rise-of-the-fruit-that-tastes-like-custard",
+      "date": "2026-05-26",
+      "title": "The rise of the fruit that tastes like custard",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/ce8pmrp0m47o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-25T23:27:04.000Z",
+      "topic": "technology",
+      "originalSummary": "Custard apple plants are prized for their hardiness but exporting their delicate fruit is difficult.",
+      "learningSummary": "The custard apple, a tropical fruit known for its uniquely creamy texture reminiscent of custard, has attracted significant attention from agricultural technology researchers. Despite the plant's exceptional hardiness, which allows it to thrive in challenging climatic conditions, the fruit itself presents considerable logistical obstacles for international trade. The flesh of the custard apple possesses a soft, vulnerable consistency that makes it extremely susceptible to damage during transportation. Advanced packaging solutions and modified atmosphere storage techniques are currently being explored to overcome these barriers. Additionally, researchers are investigating breeding programmes that could develop more resilient varieties without compromising the fruit's distinctive flavor profile. Such innovations could potentially enable producers in developing regions to access lucrative export markets previously inaccessible due to the fruit's delicate nature. These technological developments represent a broader trend in agricultural science focused on improving the global supply chains of perishable goods.",
+      "vocabulary": [
+        {
+          "word": "hardy",
+          "meaning": "capable of surviving difficult conditions; robust",
+          "example": "The hardy nature of certain crop varieties enables them to flourish in regions with extreme weather patterns."
+        },
+        {
+          "word": "perishable",
+          "meaning": "subject to decay or spoilage over time",
+          "example": "Supermarkets invest heavily in cold chain infrastructure to maintain the quality of perishable products."
+        },
+        {
+          "word": "logistical",
+          "meaning": "relating to the organization and coordination of complex operations",
+          "example": "The logistical challenges of transporting tropical fruits to temperate markets remain substantial."
+        },
+        {
+          "word": "susceptible",
+          "meaning": "vulnerable to or likely to be affected by something",
+          "example": "Certain crops are highly susceptible to temperature fluctuations during transit."
+        },
+        {
+          "word": "innovations",
+          "meaning": "new methods, ideas, or products that introduce improvements",
+          "example": "Technological innovations in food preservation have revolutionized the agricultural export sector."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what characteristic of custard apple plants makes them attractive to growers?",
+          "answer": "Their hardiness allows them to survive in challenging climate conditions."
+        },
+        {
+          "question": "It can be inferred from the passage that transport difficulties primarily affect which group of producers?",
+          "answer": "Producers in developing regions who wish to access international export markets."
+        },
+        {
+          "word": "In the context of the passage, what does 'delicate' most nearly mean?",
+          "answer": "Easily damaged or spoilt"
+        }
+      ],
+      "writingPrompt": "In recent years, advances in agricultural technology have enabled perishable goods to be transported across greater distances than ever before. Some people argue that this development has primarily benefited large multinational corporations rather than small-scale farmers in developing countries. To what extent do you agree or disagree?",
+      "listeningText": "The custard apple presents an interesting case study in the challenges facing agricultural exports in the modern economy. While the plant itself demonstrates remarkable resilience to environmental stressors, the fruit's texture creates significant obstacles for those hoping to commercialize it on a global scale. The soft, creamy flesh bruises easily and deteriorates rapidly when exposed to standard shipping conditions. Consequently, producers have traditionally limited their operations to local markets. However, emerging technologies in modified atmosphere packaging and rapid transit systems now offer promising solutions. These innovations could potentially transform custard apple cultivation into a viable export industry, benefiting rural communities that currently lack access to international trade opportunities. The broader implications for food security and sustainable agriculture remain subjects of ongoing research.",
+      "createdAt": "2026-05-26T00:02:32.162Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-26-3-britain-s-protected-birds-of-prey-still-being-shot-trapped-a",
+      "date": "2026-05-26",
+      "title": "Britain's protected birds of prey still being shot, trapped and poisoned, says RSPB",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cjep159x1njo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-25T23:35:26.000Z",
+      "topic": "environment",
+      "originalSummary": "The charity says more than half of attacks happened on or near land managed for game shooting.",
+      "learningSummary": "The RSPB has published evidence showing that Britain's protected birds of prey continue to face illegal harm across multiple regions. According to the conservation charity, more than half of all documented cases involving the killing, trapping, or poisoning of raptors took place on estates where game birds are intensively bred and released for sporting purposes. The organization emphasizes that despite existing wildlife protection legislation, these protected species remain vulnerable to persistent persecution. Researchers indicate that the commercial interests associated with driven grouse and pheasant shooting operations create financial motivations for removing predatory birds that might target captive game populations. The charity is urging authorities to implement more robust monitoring systems and ensure stricter enforcement of current regulations. Conservationists warn that unless meaningful action is taken, ongoing illegal persecution will continue to hinder efforts to restore raptor populations to sustainable levels across the British countryside.",
+      "vocabulary": [
+        {
+          "word": "persecution",
+          "meaning": "the repeated harming or killing of people or animals, especially because of their beliefs or identity",
+          "example": "The persecution of protected raptors on game shooting estates remains a serious concern for conservationists."
+        },
+        {
+          "word": "raptor",
+          "meaning": "a bird of prey such as an eagle, hawk, falcon, or owl that hunts and feeds on other animals",
+          "example": "Eagle owls are large raptors that occasionally prey on game birds released on shooting estates."
+        },
+        {
+          "word": "intensive",
+          "meaning": "involving a lot of effort, concentration, or energy in a short time, often to achieve rapid results",
+          "example": "Intensive game bird breeding programmes have expanded significantly across rural Britain."
+        },
+        {
+          "word": "documented",
+          "meaning": "recorded in writing, photographs, or other forms of evidence",
+          "example": "The RSPB has documented hundreds of incidents involving the illegal killing of protected species."
+        },
+        {
+          "word": "hindrance",
+          "meaning": "a person or thing that makes it more difficult for someone to do something",
+          "example": "Illegal persecution continues to be a major hindrance to raptor population recovery efforts."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, where do the majority of raptor persecution incidents occur?",
+          "answer": "More than half of the incidents occur on or near land managed for game shooting purposes, particularly on estates where game birds are intensively reared for sporting activities."
+        },
+        {
+          "question": "What can be inferred about the relationship between game bird shooting operations and raptor populations?",
+          "answer": "It can be inferred that there is a conflict of interest between commercial shooting operations and raptor conservation, as landowners may have financial incentives to eliminate birds of prey that could prey upon released game birds."
+        },
+        {
+          "question": "What does the word 'persecution' mean in the context of this passage?",
+          "answer": "In this context, persecution refers to the illegal harming, trapping, or killing of protected birds of prey, typically carried out repeatedly on shooting estates."
+        }
+      ],
+      "writingPrompt": "Some people believe that economic activities such as game bird shooting should take priority in rural areas, while others argue that protecting birds of prey is more important for ecological balance. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience. Write at least 250 words.",
+      "listeningText": "Good evening. This is an environmental report from BBC Science. The RSPB has expressed serious concern about the continued persecution of birds of prey across Britain. Conservation officers report that more than half of all verified attacks on protected raptors occurred on land used for game shooting. These incidents included shooting, trapping, and poisoning of species such as peregrine falcons, red kites, and hen harriers. The charity argues that existing wildlife protection laws are insufficiently enforced, allowing illegal practices to continue unchecked. Researchers suggest that the commercial interests behind driven grouse and pheasant shooting create powerful incentives for estate managers to remove birds that might prey upon released game birds. The RSPB is calling for enhanced surveillance and stronger penalties to address this ongoing threat to biodiversity.",
+      "createdAt": "2026-05-26T00:03:08.029Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-05-24-1-citizen-scientists-needed-to-protect-wildlife",
       "date": "2026-05-24",
