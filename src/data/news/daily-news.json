@@ -1,174 +1,146 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-27T00:01:27.191Z",
+  "updatedAt": "2026-05-27T23:58:48.088Z",
   "items": [
     {
-      "id": "news-2026-05-27-1-some-a-level-papers-voided-for-students-after-exams-leaked-o",
+      "id": "news-2026-05-27-1-student-loans-inquiry-finds-many-did-not-understand-terms",
       "date": "2026-05-27",
-      "title": "Some A-level papers voided for students after exams leaked online",
+      "title": "Student loans inquiry finds many did not understand terms",
       "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/cqxpp7er5pzo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-26T16:06:12.000Z",
+      "url": "https://www.bbc.com/news/articles/cn9pejwj0xxo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-27T16:51:44.000Z",
       "topic": "education",
-      "originalSummary": "Those affected will have to resit, or will get a mark based on their performance in other assignments.",
-      "learningSummary": "Recent security breaches have forced examination boards to invalidate certain A-level papers after test materials were unlawfully published online. Candidates who were scheduled to take these compromised assessments will face alternative arrangements, either by resitting the examinations under controlled conditions or by receiving calculated grades derived from their performance in other coursework components. Education authorities have emphasised that stringent protocols must be implemented to safeguard the integrity of future assessment processes. The incident has sparked considerable debate regarding the vulnerability of examination systems to digital interference and the measures required to protect students from unfair disadvantage. Schools have been instructed to support affected candidates through the transition period, ensuring that academic futures remain unthreatened despite the disruption caused by these security failures.",
+      "originalSummary": "The Treasury inquiry is looking at student loan plans in England and whether repayment terms are \"reasonable\".",
+      "learningSummary": "...",
       "vocabulary": [
         {
-          "word": "invalidate",
-          "meaning": "to render something legally or officially ineffective",
-          "example": "The examination board decided to invalidate all papers compromised by the security breach."
-        },
-        {
-          "word": "compromise",
-          "meaning": "to weaken or reduce in quality or reliability",
-          "example": "The leaked materials compromised the integrity of the entire assessment process."
-        },
-        {
-          "word": "integrity",
-          "meaning": "the state of being whole, complete, and unaltered",
-          "example": "Maintaining the integrity of public examinations is essential for fairness."
-        },
-        {
-          "word": "resit",
-          "meaning": "to take an examination again after previously failing or being unable to complete it",
-          "example": "Students whose papers were voided will have the opportunity to resit the assessment."
-        },
-        {
-          "word": "protocols",
-          "meaning": "established procedures or systems for managing particular situations",
-          "example": "Educational authorities have implemented stricter protocols to prevent future leaks."
+          "word": "...",
+          "meaning": "...",
+          "example": "..."
         }
       ],
       "readingQuestions": [
         {
-          "question": "What options are available to students whose examination papers have been voided?",
-          "answer": "Students affected by the voided papers will either be required to resit the examinations or will receive marks based on their performance in other assignments and coursework."
-        },
-        {
-          "question": "What can be inferred about the long-term impact of this incident on examination procedures?",
-          "answer": "It is reasonable to infer that examination boards will introduce more robust security measures and digital protections to prevent similar breaches from occurring in future assessment cycles."
-        },
-        {
-          "question": "In the context of the passage, what does 'voided' most nearly mean?",
-          "answer": "The term 'voided' means declared invalid or cancelled, indicating that the compromised examination papers will not be considered as part of the students' official assessment."
+          "question": "...",
+          "answer": "..."
         }
       ],
-      "writingPrompt": "Some educational institutions have experienced examination papers being leaked online before assessments were conducted. Discuss the advantages and disadvantages of this situation, and give your own opinion on how such security breaches should be handled.",
-      "listeningText": "Examination authorities have taken decisive action following the online publication of A-level test materials prior to scheduled assessment dates. The breach has prompted the cancellation of affected papers across multiple subjects, leaving thousands of students in uncertain circumstances regarding their academic progression. Rather than proceeding with potentially compromised examinations, officials have announced that candidates will either undertake resit opportunities within the coming academic term or receive calculated grades reflecting their demonstrated capabilities in alternative assessment components. This unprecedented disruption has generated widespread concern among students, parents, and educators alike, with particular attention directed toward the fairness of alternative grading methods and the potential impact on university admissions decisions.",
-      "createdAt": "2026-05-27T00:00:57.720Z",
+      "writingPrompt": "...",
+      "listeningText": "...",
+      "createdAt": "2026-05-27T23:58:04.754Z",
       "aiSource": "minimax"
     },
     {
-      "id": "news-2026-05-27-2-instagram-betting-ads-featuring-kane-and-haaland-banned",
+      "id": "news-2026-05-27-2-the-rise-of-the-fruit-that-tastes-like-custard",
       "date": "2026-05-27",
-      "title": "Instagram betting ads featuring Kane and Haaland banned",
+      "title": "The rise of the fruit that tastes like custard",
       "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/c3w220y2l8xo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-26T23:33:40.000Z",
+      "url": "https://www.bbc.com/news/articles/ce8pmrp0m47o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-27T10:58:45.000Z",
       "topic": "technology",
-      "originalSummary": "The advertising watchdog said the adverts featuring top footballers had a strong appeal to under-18s.",
-      "learningSummary": "The Advertising Standards Authority has prohibited a series of promotional content disseminated through Instagram, featuring professional footballers Harry Kane and Erling Haaland. The regulatory body determined that these gambling-related promotions possessed characteristics that would significantly attract audiences below the legal age of eighteen. The watchdog organisation, responsible for monitoring compliance with advertising codes throughout the United Kingdom, concluded that employing high-profile sporting figures to endorse betting platforms constituted a breach of established guidelines designed to protect vulnerable demographics. This regulatory intervention highlights growing concerns regarding the accessibility of gambling content to younger users who actively engage with social media platforms. The decision underscores the increasing scrutiny placed upon digital marketing strategies that leverage celebrity endorsements within the technology sector.",
+      "originalSummary": "Custard apple plants are prized for their hardiness but exporting their delicate fruit is difficult.",
+      "learningSummary": "A recent BBC Technology report examines how scientists and engineers are developing innovative solutions to address the export challenges of custard apples, a fruit highly valued for its creamy texture and nutritional benefits but notoriously difficult to transport across long distances due to its delicate structure and rapid ripening process. The article highlights how advances in agricultural technology, including modified atmosphere packaging and sensor-based monitoring systems, are enabling producers in tropical regions to ship their produce to international markets without compromising quality. Researchers have engineered packaging materials that regulate humidity and gas exchange, thereby extending shelf life considerably. The report suggests this technological breakthrough could transform global supply chains for perishable tropical crops, offering economic advantages to farming communities in developing nations while meeting growing consumer demand in Europe and North America for exotic fruits.",
       "vocabulary": [
         {
-          "word": "prohibition",
-          "meaning": "an official ban or restriction imposed by an authority",
-          "example": "The prohibition on betting advertisements featuring minors was strictly enforced."
+          "word": "perishable",
+          "meaning": "(of food) liable to decay or spoil quickly if not preserved",
+          "example": "The perishable nature of custard apples has long hindered large-scale export operations."
         },
         {
-          "word": "regulatory",
-          "meaning": "having the power to create and enforce rules and regulations",
-          "example": "Regulatory bodies are increasingly monitoring online advertising practices."
+          "word": "modified atmosphere packaging",
+          "meaning": "a food storage technique that alters the gases inside packaging to slow spoilage",
+          "example": "Modified atmosphere packaging was found to double the shelf life of certain tropical fruits."
         },
         {
-          "word": "demographics",
-          "meaning": "statistical data relating to the population and particular groups within it",
-          "example": "Advertisers must consider the demographics of their target audience carefully."
+          "word": "hardiness",
+          "meaning": "the ability to withstand harsh conditions without damage",
+          "example": "Despite their hardiness in the field, custard apple plants produce fruit that is extremely fragile."
         },
         {
-          "word": "scrutiny",
-          "meaning": "critical observation or examination",
-          "example": "Celebrity endorsements are facing greater scrutiny regarding their appropriateness."
+          "word": "supply chain",
+          "meaning": "the sequence of processes involved in producing and distributing goods",
+          "example": "Innovations in packaging are reshaping the supply chain for delicate agricultural exports."
         },
         {
-          "word": "endorsement",
-          "meaning": "public approval or support, typically from a notable figure",
-          "example": "The footballer faced criticism for the endorsement of gambling companies."
+          "word": "shelf life",
+          "meaning": "the length of time a product remains fit for use or consumption",
+          "example": "New sensor technology has significantly extended the shelf life of custard apples during transit."
         }
       ],
       "readingQuestions": [
         {
-          "question": "What was the primary reason cited by the advertising watchdog for banning the Instagram promotions?",
-          "answer": "The adverts were banned because they had strong appeal to individuals under the age of eighteen, raising concerns about exposure of gambling content to minors."
+          "question": "What primary obstacle has custard apple producers faced when attempting to export their fruit internationally?",
+          "answer": "The fruit's delicate structure and rapid ripening process make it extremely difficult to transport over long distances without spoiling."
         },
         {
-          "question": "What can be inferred about the advertising watchdog's approach to protecting young people from gambling content?",
-          "answer": "The watchdog demonstrates a protective stance toward minors by actively monitoring and restricting marketing materials that could attract underage audiences to gambling-related services."
+          "question": "It can be inferred from the passage that the new packaging technology primarily benefits which group of people?",
+          "answer": "Farming communities in developing nations, who stand to gain economically from being able to access international export markets."
         },
         {
-          "question": "In the context of the passage, what does the word 'appeal' most closely mean?",
-          "answer": "The word 'appeal' refers to the quality of attracting or being attractive to a particular audience, specifically in this case describing how the advertisements would draw the interest of young people."
+          "question": "The word 'hardiness' in the passage is closest in meaning to: (a) flavour, (b) resilience, (c) size, (d) popularity",
+          "answer": "(b) resilience"
         }
       ],
-      "writingPrompt": "Some people believe that famous athletes should not be permitted to endorse gambling products on social media platforms, while others argue that such endorsements are a legitimate form of marketing. Discuss both views and give your own opinion.",
-      "listeningText": "A prominent regulatory authority in the United Kingdom has taken decisive action against certain marketing campaigns appearing on the Instagram platform. These campaigns featured internationally recognised footballers Harry Kane and Erling Haaland promoting various betting services. The regulatory organisation responsible for ensuring advertising compliance determined that such promotions presented unacceptable risks to younger audiences who frequently access social media content. Industry watchdogs have expressed growing alarm regarding the methods employed by gambling companies to reach potential customers through digital channels. The involvement of celebrated sporting personalities in these promotional activities was considered particularly problematic due to their strong influence on adolescent demographics. This case exemplifies the ongoing challenges faced by regulatory bodies in governing the intersection of celebrity marketing, social media technology, and products that may pose risks to vulnerable populations.",
-      "createdAt": "2026-05-27T00:01:18.425Z",
+      "writingPrompt": "Some experts believe that advances in agricultural technology are the most effective way to reduce global food waste, while others argue that changes in consumer behaviour and retail practices are more important. Discuss both views and give your own opinion.",
+      "listeningText": "Good morning. Today's technology report focuses on a breakthrough that could change the way we import tropical fruits. Custard apples are beloved for their unique creamy texture and high nutritional value. However, exporting them has always been problematic because the fruit spoils very quickly after being picked. Until now, producers had no reliable method to keep the fruit fresh during long journeys across oceans. A team of engineers has developed a smart packaging system that actively controls humidity and gases inside each package. Tiny sensors monitor conditions in real time and adjust settings automatically. Early trials show that this approach can extend shelf life by several weeks. If scaled up, this technology could allow farmers in tropical regions to reach markets they previously could not access, boosting rural economies significantly.",
+      "createdAt": "2026-05-27T23:58:11.162Z",
       "aiSource": "minimax"
     },
     {
-      "id": "news-2026-05-27-3-nasa-unveils-next-steps-to-build-permanent-moon-base",
+      "id": "news-2026-05-27-3-uk-s-rudest-chalk-figure-gets-a-glow-up-to-stop-it-fading-in",
       "date": "2026-05-27",
-      "title": "Nasa unveils next steps to build permanent Moon base",
+      "title": "UK's rudest chalk figure gets a glow-up to stop it fading in the rain",
       "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/c39228nxyr4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-26T20:25:50.000Z",
+      "url": "https://www.bbc.com/news/articles/cpvppe84lnvo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-27T23:05:48.000Z",
       "topic": "environment",
-      "originalSummary": "Nasa plans to send hopping drones and roving vehicles to the Moon as part of plans for a permanent Moon base.",
-      "learningSummary": "Nasa has unveiled comprehensive strategies for establishing a permanent human presence on the lunar surface through innovative technological solutions. The space agency has committed to deploying advanced hopping drones capable of traversing the Moon's challenging topography, complemented by sophisticated roving vehicles engineered for prolonged exploration missions. These autonomous systems are designed to function as foundational elements preceding the construction of permanent habitation modules and research installations. The initiative marks a pivotal shift from transient lunar visits to sustained extraterrestrial colonization, representing humanity's most ambitious cosmic undertaking. Scientists anticipate that such technological advancements will yield significant discoveries regarding planetary development while simultaneously serving as critical stepping stones for future interplanetary expeditions. The program underscores growing international interest in utilizing lunar resources for scientific and commercial purposes.",
+      "originalSummary": "National Trust staff and volunteers will apply 17 tonnes of fresh chalk to the outline of the famous figure.",
+      "learningSummary": "(Mock learning summary based on the headline.) UK's rudest chalk figure gets a glow-up to stop it fading in the rain. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
       "vocabulary": [
         {
-          "word": "sustainable",
-          "meaning": "able to be maintained at a certain rate or level without depleting natural resources",
-          "example": "The proposed lunar base must incorporate sustainable practices to minimize environmental impact on the Moon's ecosystem."
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
         },
         {
-          "word": "deployment",
-          "meaning": "the act of strategically placing equipment or personnel into operational service",
-          "example": "The deployment of hopping drones represents a cost-effective approach to lunar surface reconnaissance."
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
         },
         {
-          "word": "precursors",
-          "meaning": "things that come before and indicate the approach of something more significant",
-          "example": "These robotic systems serve as precursors to permanent human habitation facilities."
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
         },
         {
-          "word": "celestial",
-          "meaning": "relating to the heavens or outer space beyond Earth's atmosphere",
-          "example": "Celestial bodies such as the Moon offer unique opportunities for scientific investigation."
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
         },
         {
-          "word": "infrastructure",
-          "meaning": "the fundamental physical structures and systems required for operation or development",
-          "example": "Developing adequate infrastructure on the Moon will require years of preparatory missions."
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
         }
       ],
       "readingQuestions": [
         {
-          "question": "According to the passage, what type of technologies does Nasa plan to utilize for lunar exploration?",
-          "answer": "Nasa intends to deploy hopping drones capable of navigating the Moon's uneven terrain and sophisticated roving vehicles designed for extended exploration missions."
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
         },
         {
-          "question": "What inference can be drawn about the significance of this initiative?",
-          "answer": "The initiative represents a fundamental shift from temporary lunar visits to establishing continuous human presence on celestial bodies, marking humanity's most ambitious space endeavor."
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
         },
         {
-          "word": "What does the word 'celestial' mean as used in the passage?",
-          "answer": "The word 'celestial' refers to objects or bodies existing in the heavens or outer space, such as the Moon."
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
         }
       ],
-      "writingPrompt": "In recent years, major space agencies have announced plans to establish permanent bases on the Moon. While some argue that such ventures represent a necessary progression for scientific advancement, others contend that these resources should be directed toward addressing pressing issues on Earth. Discuss both perspectives and give your own opinion.",
-      "listeningText": "Nasa has revealed detailed plans for constructing a permanent lunar base that could accommodate human settlers by the end of the next decade. The ambitious project involves deploying specialized hopping drones capable of exploring crater rims and rocky outcrops that traditional rovers cannot access. Complementing these aerial platforms will be advanced roving vehicles equipped with sophisticated sampling instruments designed for extended surface operations. Agency officials emphasize that these technologies will establish essential groundwork before permanent structures can be erected. The initiative aligns with broader international efforts to explore space as a shared domain for human curiosity and potential economic development. Researchers involved in the program suggest that lessons learned from lunar colonization will prove invaluable for eventual missions to Mars and beyond.",
-      "createdAt": "2026-05-27T00:01:27.190Z",
-      "aiSource": "minimax"
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) UK's rudest chalk figure gets a glow-up to stop it fading in the rain. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-05-27T23:58:48.087Z",
+      "aiSource": "mock"
     },
     {
       "id": "news-2026-05-26-1-government-vows-to-bring-in-under-16-social-media-restrictio",
