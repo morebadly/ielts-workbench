@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-27T23:58:48.088Z",
+  "updatedAt": "2026-05-29T00:08:43.350Z",
   "items": [
+    {
+      "id": "news-2026-05-29-1-meta-repeatedly-snubs-eu-body-over-facebook-and-instagram-us",
+      "date": "2026-05-29",
+      "title": "Meta repeatedly snubs EU body over Facebook and Instagram user bans",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/c152yvwjwkko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-28T08:28:43.000Z",
+      "topic": "technology",
+      "originalSummary": "The BBC has been contacted by hundreds of users who claimed they had been wrongly banned from the sites.",
+      "learningSummary": "The European Commission has formally accused Meta of systematically ignoring requests from regulatory bodies concerning transparency around content moderation decisions on Facebook and Instagram. Hundreds of European users have approached the BBC claiming they were unfairly suspended from these platforms without receiving adequate justification or mechanism for appeal. The EU's digital governance officials have expressed frustration at Meta's persistent non-cooperation, stating that repeated attempts to obtain information have been met with evasion or inadequate responses. This conflict underscores growing tensions between multinational technology corporations and European authorities regarding algorithmic accountability and user rights protection. Digital rights advocates argue that indefinite account suspensions can cause significant professional and personal damage, particularly for entrepreneurs and content creators who rely on these platforms for their livelihoods. The regulatory body has warned that continued non-compliance may result in substantial financial penalties.",
+      "vocabulary": [
+        {
+          "word": "regulatory",
+          "meaning": "relating to the rules and laws that control an activity or organization",
+          "example": "Regulatory frameworks are essential for maintaining fair practices in the digital marketplace."
+        },
+        {
+          "word": "accountability",
+          "meaning": "the obligation to take responsibility for one's actions and decisions",
+          "example": "Tech companies must accept greater accountability for how their algorithms affect users."
+        },
+        {
+          "word": "suspension",
+          "meaning": "a temporary stopping or postponement of something",
+          "example": "The sudden suspension of thousands of accounts raised serious concerns among users."
+        },
+        {
+          "word": "transparency",
+          "meaning": "the quality of being open and honest about information",
+          "example": "Greater transparency in content moderation policies would benefit all platform users."
+        },
+        {
+          "word": "compliance",
+          "meaning": "the act of obeying rules or regulations",
+          "example": "Companies must demonstrate compliance with EU digital regulations or face consequences."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what specific action has the European Commission taken against Meta?",
+          "answer": "The European Commission has formally accused Meta of systematically ignoring requests from regulatory bodies regarding transparency in content moderation decisions."
+        },
+        {
+          "question": "What can be inferred about Meta's approach to European regulatory authorities based on the passage?",
+          "answer": "It can be inferred that Meta has adopted an evasive or dismissive stance, deliberately evading or delaying responses to formal regulatory requests rather than engaging cooperatively."
+        },
+        {
+          "question": "In the context of this passage, what does the word 'accountability' primarily refer to?",
+          "answer": "It refers to the responsibility that technology corporations must accept for the decisions their algorithmic systems make regarding content moderation and user account management."
+        }
+      ],
+      "writingPrompt": "In an era of increasing digital regulation, some governments are implementing strict rules to govern how technology companies moderate user content and handle account suspensions. Others argue that excessive regulation may stifle innovation and limit user freedom. Discuss both perspectives and give your own opinion. You should write at least 250 words.",
+      "listeningText": "The European Union has launched an official investigation into Meta's handling of user account suspensions on Facebook and Instagram. Regulatory authorities claim the company has repeatedly failed to respond to requests for information about why thousands of users have been blocked without clear explanations. Digital rights organizations have welcomed the investigation, arguing that users deserve transparency when their access to professional and social platforms is restricted. Meta has defended its content moderation practices, stating that decisions are made to maintain community standards and platform safety. However, critics point out that without proper oversight, algorithmic bans can devastate small business owners and independent creators who depend on these platforms for income. The investigation is expected to continue for several months, with potential penalties if non-compliance is confirmed.",
+      "createdAt": "2026-05-29T00:07:53.290Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-29-2-humanoid-robots-the-future-of-car-making-says-bmw",
+      "date": "2026-05-29",
+      "title": "Humanoid robots 'the future' of car making, says BMW",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/cgmpwzzvxr2o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-28T23:36:45.000Z",
+      "topic": "technology",
+      "originalSummary": "BMW is introducing humanoid robots to a car plant in Europe, building on similar projects in the US.",
+      "learningSummary": "The integration of humanoid robots into automotive manufacturing represents a significant technological advancement. BMW has announced plans to deploy these sophisticated machines at its European production facilities, following successful implementations in American plants. Unlike traditional industrial robots, humanoid robots possess the ability to perform complex tasks that typically require human dexterity and adaptability. This development reflects a broader trend in manufacturing automation, where companies seek to improve efficiency while maintaining high-quality standards. Industry experts suggest that such innovations could transform production processes across multiple sectors. The deployment of these robots raises important questions about workforce dynamics and the evolving relationship between human workers and automated systems.",
+      "vocabulary": [
+        {
+          "word": "automation",
+          "meaning": "the use of machinery to perform tasks that were previously done by humans",
+          "example": "Automation in manufacturing has increased productivity significantly over the past decade."
+        },
+        {
+          "word": "integration",
+          "meaning": "the process of combining different elements into a unified system",
+          "example": "The integration of new technology into existing production lines requires careful planning."
+        },
+        {
+          "word": "efficiency",
+          "meaning": "the ability to accomplish a task with minimal waste of time and resources",
+          "example": "Companies are constantly seeking ways to improve efficiency in their operations."
+        },
+        {
+          "word": "autonomous",
+          "meaning": "capable of operating independently without human control",
+          "example": "Autonomous robots can make decisions based on sensor data and programmed instructions."
+        },
+        {
+          "word": "innovation",
+          "meaning": "the introduction of new ideas, methods, or products",
+          "example": "Innovation in robotics is driving changes across multiple industries."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What advantage do humanoid robots have over traditional industrial robots?",
+          "answer": "Humanoid robots can perform complex tasks requiring human-like dexterity and adaptability, unlike conventional industrial robots that are limited to repetitive, programmed movements."
+        },
+        {
+          "question": "What does the passage suggest about the future of automation in manufacturing?",
+          "answer": "The passage implies that automation will continue to expand, potentially transforming multiple sectors beyond automotive manufacturing, as companies seek to balance efficiency with quality."
+        },
+        {
+          "question": "What does the word 'deployment' most closely mean in the context of the passage?",
+          "answer": "In this context, 'deployment' refers to the strategic placement and activation of robots in the manufacturing environment."
+        }
+      ],
+      "writingPrompt": "In some industries, companies are replacing human workers with robots and automated systems. Do the advantages of this trend outweigh the disadvantages? Provide reasons for your answer and include relevant examples from your knowledge or experience.",
+      "listeningText": "Humanoid robots are becoming increasingly common in manufacturing plants around the world. BMW recently announced plans to introduce these robots at its European facilities. The company already uses similar technology in its American factories. Unlike traditional industrial robots that perform repetitive tasks, humanoid robots can handle more complex assignments. They can adapt to different situations and work alongside human employees. This represents a major shift in how cars are manufactured. Experts believe this technology could eventually spread to other industries as well. The robots are designed to be flexible and can learn new tasks relatively quickly.",
+      "createdAt": "2026-05-29T00:08:28.468Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-29-3-uk-s-rudest-chalk-figure-gets-a-glow-up-to-stop-it-fading-in",
+      "date": "2026-05-29",
+      "title": "UK's rudest chalk figure gets a glow-up to stop it fading in the rain",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cpvppe84lnvo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-27T23:05:48.000Z",
+      "topic": "environment",
+      "originalSummary": "National Trust staff and volunteers will apply 17 tonnes of fresh chalk to the outline of the famous figure.",
+      "learningSummary": "National Trust staff and volunteers have begun an extensive maintenance operation to preserve a renowned ancient landmark in the United Kingdom. Workers will apply approximately seventeen tonnes of fresh chalk to restore the distinctive outline of the famous hill figure, which has suffered gradual deterioration due to persistent rainfall and natural weathering processes. The landmark, carved into a hillside centuries ago, requires regular attention to remain visible against the landscape. Extreme weather patterns in recent years have accelerated the fading of the chalk outline, necessitating more frequent interventions than previously required. Environmental factors such as prolonged precipitation and surface erosion have compromised the figure's definition, prompting the conservation effort. The organization emphasizes that such maintenance is essential for protecting the nation's cultural heritage and ensuring that future generations can appreciate these historic features. Specialists monitor the site regularly to assess deterioration and plan subsequent restoration activities accordingly.",
+      "vocabulary": [
+        {
+          "word": "preservation",
+          "meaning": "the act of maintaining something in its original state and protecting it from damage or decay",
+          "example": "The preservation of ancient landmarks requires ongoing funding and expert attention."
+        },
+        {
+          "word": "heritage",
+          "meaning": "inherited traditions, monuments, and cultural aspects passed from previous generations",
+          "example": "Historical sites form an integral part of the nation's cultural heritage."
+        },
+        {
+          "word": "weathering",
+          "meaning": "the gradual breakdown of rock and materials caused by exposure to weather conditions over time",
+          "example": "Natural weathering has significantly altered the appearance of the ancient hillside figure."
+        },
+        {
+          "word": "restoration",
+          "meaning": "the process of returning something to its original condition or improving its state",
+          "example": "Restoration work on the chalk figure will commence immediately following the rainy season."
+        },
+        {
+          "word": "conservation",
+          "meaning": "the careful management and protection of natural resources and historic sites",
+          "example": "Conservation efforts by the National Trust aim to protect biodiversity and cultural landmarks."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What quantity of chalk will be applied during the maintenance of the landmark?",
+          "answer": "Approximately seventeen tonnes of fresh chalk will be applied to the outline of the famous figure."
+        },
+        {
+          "question": "What has caused the figure to fade more rapidly in recent years according to the passage?",
+          "answer": "Extreme weather patterns, particularly persistent rainfall, have accelerated the deterioration of the chalk outline, requiring more frequent maintenance interventions."
+        },
+        {
+          "question": "The word 'conservation' in the passage most nearly means:",
+          "answer": "The careful management and protection of historic sites to prevent their deterioration."
+        }
+      ],
+      "writingPrompt": "In some countries, ancient landmarks and historical sites require frequent maintenance to preserve them for future generations. However, this maintenance is often expensive and uses resources that could be directed elsewhere. Do you think governments should prioritize funding for the preservation of historical sites, or should these resources be spent on more modern needs? Discuss both views and give your own opinion.",
+      "listeningText": "National Trust workers are undertaking a major conservation project to restore one of Britain's most recognizable ancient landmarks. The operation involves applying seventeen tonnes of fresh chalk to a famous hill figure located in Oxfordshire. This massive chalk carving, believed to have been created during the Iron Age, depicts a horse and has graced the hillside for over two thousand years. However, recent environmental changes have accelerated the figure's deterioration, with heavy rainfall washing away the chalk markings more quickly than in previous decades. Volunteers and staff members must complete the work during favorable weather conditions, as rain would simply wash away the newly applied chalk before it properly sets. Conservation experts explain that this type of regular maintenance is essential for protecting the nation's cultural heritage. The organization monitors the site throughout the year and plans restoration work when conditions are suitable for optimal results.",
+      "createdAt": "2026-05-29T00:08:43.348Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-05-27-1-student-loans-inquiry-finds-many-did-not-understand-terms",
       "date": "2026-05-27",
@@ -1485,62 +1653,6 @@
       "listeningText": "Good news for London swimmers as the River Thames receives its very first official bathing spot. Starting this Friday, swimmers will be welcomed at Thames at Ham in south-west London, marking the beginning of the bathing season for this newly designated area. This follows a successful campaign by local activists who collected evidence that thousands of people swim in the Thames throughout the year. The site is one of thirteen new river bathing water areas introduced across England, all of which will be monitored regularly for water quality. Environmental officials say this development reflects growing public demand for cleaner access to natural waterways. The initiative also aims to raise standards for water quality monitoring in rivers across the country. Other new bathing sites include locations on Canvey Island and various coastal areas in Dorset and Essex.",
       "createdAt": "2026-05-15T23:51:42.533Z",
       "aiSource": "minimax"
-    },
-    {
-      "id": "seed-2026-05-14-001",
-      "date": "2026-05-14",
-      "title": "Why universities are rethinking written exams in the age of AI",
-      "source": "Mock IELTS Wire",
-      "url": "https://example.com/news/seed-2026-05-14-001",
-      "publishedAt": "2026-05-14T09:30:00.000Z",
-      "topic": "education",
-      "originalSummary": "As generative AI tools become widespread, several universities are piloting oral defenses, in-class essays and project-based portfolios to verify what students have actually learned.",
-      "learningSummary": "Universities around the world are experimenting with new assessment formats as the use of generative AI tools spreads on campus. Instead of relying solely on take-home essays, some institutions are introducing oral defenses, in-class writing tasks and project-based portfolios that are harder to outsource. Supporters argue these methods give a more reliable picture of a student's real ability, while critics warn that they can be time-consuming and stressful for both students and staff. Educators broadly agree that the goal is not to ban technology but to redesign tasks so that AI becomes a study aid rather than a shortcut.",
-      "vocabulary": [
-        {
-          "word": "assessment",
-          "meaning": "(n.) 评估;评定",
-          "example": "Universities are revising their assessment methods to keep pace with new technology."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包;转交他人完成",
-          "example": "Some students try to outsource their essays to AI tools instead of writing them."
-        },
-        {
-          "word": "reliable",
-          "meaning": "(adj.) 可靠的;可信赖的",
-          "example": "Oral exams provide a more reliable view of a student's actual understanding."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent in-class tasks can feel stressful for students juggling several courses."
-        },
-        {
-          "word": "redesign",
-          "meaning": "(v.) 重新设计",
-          "example": "Teachers are being asked to redesign assignments so that AI cannot replace student thinking."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "Why are some universities changing their exam formats?",
-          "answer": "Because the spread of generative AI tools makes traditional take-home essays harder to verify."
-        },
-        {
-          "question": "What is one drawback of the new assessment methods mentioned?",
-          "answer": "They can be time-consuming and add stress for both students and staff."
-        },
-        {
-          "question": "What does the word 'outsource' suggest about how some students use AI?",
-          "answer": "They hand over the writing work to AI rather than doing it themselves."
-        }
-      ],
-      "writingPrompt": "Some people think universities should redesign assessments because of generative AI, while others believe traditional written exams remain the fairest test. Discuss both views and give your own opinion.",
-      "listeningText": "Universities are quietly rethinking how they assess their students. With generative AI now widely available, take-home essays no longer prove what a student really understands. As a response, several institutions are piloting oral defenses, timed in-class writing and small group projects. Supporters say these formats offer a more reliable view of student learning, especially when combined with regular feedback. Critics, however, point out that they take more time to mark and can feel stressful for those who are not confident speakers. Most educators agree on one thing: the aim is not to fight technology, but to redesign assessments so that AI supports learning instead of replacing it.",
-      "createdAt": "2026-05-14T00:00:00.000Z",
-      "aiSource": "mock"
     }
   ]
 }
