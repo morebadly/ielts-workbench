@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-29T00:08:43.350Z",
+  "updatedAt": "2026-05-30T00:06:18.207Z",
   "items": [
+    {
+      "id": "news-2026-05-30-1-what-does-neet-stand-for-and-why-does-the-uk-have-so-many",
+      "date": "2026-05-30",
+      "title": "What does Neet stand for and why does the UK have so many?",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/cly9rq35de8o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-29T11:11:34.000Z",
+      "topic": "education",
+      "originalSummary": "Ministers want to tackle the high number of young people not in education, employment or training.",
+      "learningSummary": "The British government is confronting a pressing issue regarding young adults who are neither pursuing academic studies nor engaged in the labour market. Official records show that numerous individuals aged between 16 and 24 find themselves in this circumstances, which educators label as NEET status. This trend presents serious challenges for national economic output, individual psychological wellbeing, and disparities across different social groups. Decision-makers face growing expectations to design effective measures that will lower these numbers substantially. The matter has drawn attention from multiple parties with vested interests, including business owners, academic institutions, and local charitable groups. Identifying root causes—such as mental health difficulties, insufficient qualifications, or scarce job openings—is essential for crafting suitable policy responses.",
+      "vocabulary": [
+        {
+          "word": "labour market",
+          "meaning": "the supply of available workers and the demand for their services in an economy",
+          "example": "Young people often struggle to enter the labour market due to lack of experience."
+        },
+        {
+          "word": "disparity",
+          "meaning": "a significant difference or inequality between groups or situations",
+          "example": "There is a growing disparity in employment opportunities between urban and rural areas."
+        },
+        {
+          "word": "vested interests",
+          "meaning": "personal or group concerns that influence someone's actions or opinions",
+          "example": "Several organisations with vested interests have contributed to the policy debate."
+        },
+        {
+          "word": "craft",
+          "meaning": "to create or make something skillfully, especially after careful planning",
+          "example": "Policymakers must craft solutions that address the diverse needs of affected youth."
+        },
+        {
+          "word": "scrutinise",
+          "meaning": "to examine or inspect closely and in great detail",
+          "example": "Researchers scrutinise statistical data to understand patterns in youth unemployment."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what terminology is used to categorise young people who are not enrolled in education, employment, or training?",
+          "answer": "They are referred to as NEET, which stands for Not in Education, Employment, or Training."
+        },
+        {
+          "question": "It can be inferred from the passage that the NEET phenomenon primarily affects which age group in British society?",
+          "answer": "The passage implies that young people aged between 16 and 24 are the demographic most significantly affected by this issue."
+        },
+        {
+          "question": "What does the phrase 'craft suitable policy responses' suggest about the nature of government intervention required?",
+          "answer": "The expression indicates that solutions must be carefully designed, thoughtful, and specifically tailored to address the complex underlying causes of youth disengagement."
+        }
+      ],
+      "writingPrompt": "In many countries, thousands of young people are categorised as NEET (Not in Education, Employment, or Training). Some argue that governments should bear the primary responsibility for reducing these numbers, while others believe that families and individuals themselves should take the initiative. Discuss both perspectives and present your own opinion. Give reasons for your answer and include relevant examples from your own knowledge or experience.",
+      "listeningText": "This news report examines the growing concern over young people categorised as NEET in the United Kingdom. Government officials acknowledge that thousands of individuals between the ages of sixteen and twenty-four are currently not engaged in education, employment, or training programmes. This situation poses significant challenges for economic productivity and individual wellbeing. Ministers have announced plans to invest in vocational training schemes and create new apprenticeship pathways. The government intends to collaborate with business leaders and charitable organisations to identify the underlying causes of this trend. Mental health difficulties, inadequate academic qualifications, and limited local job opportunities are frequently cited as contributing factors. Experts emphasise that a coordinated approach involving multiple stakeholders will be essential for achieving meaningful reductions in NEET statistics.",
+      "createdAt": "2026-05-30T00:05:36.855Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-30-2-controversial-north-korean-invasion-setting-for-next-call-of",
+      "date": "2026-05-30",
+      "title": "'Controversial' North Korean invasion setting for next Call of Duty game",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/c9q391y5088o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-29T13:55:04.000Z",
+      "topic": "technology",
+      "originalSummary": "Developer Infinity Ward said the game will be \"grounded in the military authenticity\" the series is known for.",
+      "learningSummary": "The latest installment in the popular Call of Duty video game franchise will be set against a controversial geopolitical backdrop, specifically featuring a North Korean military invasion scenario. Developer Infinity Ward has emphasised that this new title will maintain the series' reputation for meticulous military authenticity. The gaming industry has long utilized contemporary international tensions as inspiration for narrative content, though such approaches frequently spark public debate regarding the appropriateness of depicting real-world conflict zones in entertainment media. The series has consistently blended historical and fictional military operations, attracting millions of players globally who value the realistic combat mechanics and tactical gameplay. This upcoming release continues the franchise's tradition of pushing technological boundaries in gaming graphics and realistic warfare simulation.",
+      "vocabulary": [
+        {
+          "word": "authenticity",
+          "meaning": "the quality of being genuine or trustworthy, particularly in representing real-world circumstances accurately",
+          "example": "The film's authenticity was praised for its faithful recreation of historical events."
+        },
+        {
+          "word": "controversial",
+          "meaning": "causing widespread public discussion and disagreement among various groups",
+          "example": "The director faced significant backlash due to the film's controversial themes."
+        },
+        {
+          "word": "immersion",
+          "meaning": "deep mental engagement in an activity or experience, feeling fully absorbed",
+          "example": "Players value video games that offer complete immersion in the virtual world."
+        },
+        {
+          "word": "simulation",
+          "meaning": "a computer model or imitation that represents a real-world system or process",
+          "example": "Medical students often use patient simulations to develop clinical skills."
+        },
+        {
+          "word": "franchise",
+          "meaning": "a series of related films, games, or other media sharing a common brand and narrative universe",
+          "example": "The superhero franchise has expanded across multiple movies and television series."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what specific aspect has the developer emphasised about the new Call of Duty game?",
+          "answer": "The developer Infinity Ward has emphasised that the new game will maintain the series' reputation for meticulous military authenticity, replicating real-world military scenarios with attention to detail."
+        },
+        {
+          "question": "What can be inferred about the target audience for this type of military video game?",
+          "answer": "The target audience likely includes gamers who appreciate realistic combat mechanics and tactical gameplay, suggesting they value authentic representations of military operations and are interested in immersive virtual warfare experiences."
+        },
+        {
+          "question": "In the context of the passage, what does 'controversial' most nearly mean when describing the setting?",
+          "answer": "'Controversial' here means causing public debate or disagreement, as the use of a real geopolitical setting like North Korea for entertainment purposes often sparks ethical discussions."
+        }
+      ],
+      "writingPrompt": "Some people argue that video games featuring realistic depictions of military conflicts provide educational value and historical awareness, while others believe such games desensitize players to real warfare and promote violence. Discuss both views and give your own opinion.",
+      "listeningText": "A new video game from the popular Call of Duty series will soon be released, featuring a storyline set during a North Korean military invasion. The game's developer, Infinity Ward, has highlighted that this title will prioritise realistic military representation, continuing the franchise's established approach to combat simulation. This announcement comes at a time when the relationship between entertainment media and international politics continues to spark debate. The gaming industry frequently draws inspiration from current global tensions when developing narrative content, a practice that has both supporters and critics. Players of the series have come to expect high-quality graphics, authentic weaponry, and detailed military tactics. The upcoming release demonstrates how video game developers continue to push technological boundaries while exploring sensitive geopolitical themes.",
+      "createdAt": "2026-05-30T00:06:04.727Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-30-3-exploding-rocket-casts-doubts-over-nasa-s-moon-plans",
+      "date": "2026-05-30",
+      "title": "Exploding rocket casts doubts over Nasa's Moon plans",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cwy2q0g07kgo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-29T10:38:46.000Z",
+      "topic": "technology",
+      "originalSummary": "Explosion of Blue Origin rocket is a setback for the company and for Nasa's Moon plans.",
+      "learningSummary": "The recent explosion of a Blue Origin rocket has significantly complicated NASA's timeline for returning humans to the Moon. The incident represents a major setback for the private aerospace company and raises questions about the feasibility of the space agency's lunar programme. Industry analysts suggest this failure may delay key missions, potentially affecting international cooperation agreements and research timelines. Meanwhile, the broader space industry faces increasing scrutiny regarding the environmental sustainability of rocket launches, particularly concerning atmospheric pollution and carbon emissions. Environmental advocates have long questioned whether the expansion of commercial space activities aligns with global climate commitments. The accident has reignited debates about the balance between technological advancement and ecological responsibility. Observers note that such incidents underscore the complexities involved in developing reliable space transportation systems while maintaining environmental standards. The outcome of investigations into this failure will likely influence future regulatory frameworks governing commercial spaceflight operations.",
+      "vocabulary": [
+        {
+          "word": "setback",
+          "meaning": "a delay or problem that hinders progress",
+          "example": "The explosion represents a significant setback for the company's lunar ambitions."
+        },
+        {
+          "word": "endeavor",
+          "meaning": "a purposeful and ambitious effort or project",
+          "example": "NASA's lunar endeavor requires reliable propulsion systems and international cooperation."
+        },
+        {
+          "word": "scrutiny",
+          "meaning": "close and careful examination or observation",
+          "example": "The space industry faces increasing scrutiny regarding environmental practices."
+        },
+        {
+          "word": "feasibility",
+          "meaning": "the possibility or practicality of achieving something",
+          "example": "Engineers are assessing the feasibility of alternative mission timelines."
+        },
+        {
+          "word": "regulatory",
+          "meaning": "relating to rules or laws controlling an activity",
+          "example": "New regulatory frameworks may emerge following this investigation."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What impact might the rocket explosion have on international cooperation agreements?",
+          "answer": "The explosion could potentially affect international cooperation agreements and research timelines, as partners may become hesitant to commit to programmes with uncertain schedules."
+        },
+        {
+          "question": "Based on the passage, what conclusion can be drawn about the relationship between technological advancement and environmental concerns?",
+          "answer": "The passage suggests these two priorities are in tension, as the expansion of commercial space activities raises questions about whether it aligns with global climate commitments."
+        },
+        {
+          "question": "In the context of the passage, what does the word 'regulatory' most nearly mean?",
+          "answer": "It refers to rules or laws controlling an activity, specifically frameworks that govern commercial spaceflight operations."
+        }
+      ],
+      "writingPrompt": "Some people argue that investing in space exploration should be a priority despite environmental concerns, while others believe that resources should focus entirely on addressing climate change on Earth. Discuss both views and give your own opinion.",
+      "listeningText": "The explosion of Blue Origin's rocket has created substantial challenges for NASA's Moon programme. This represents a serious setback for the company and raises questions about whether deadlines can be met. Experts suggest the failure will affect international partnerships and research schedules. Additionally, the space industry faces growing criticism for its environmental impact, particularly regarding rocket emissions and atmospheric pollution. Environmental groups argue that expanding commercial space activities contradicts global climate goals. The incident has sparked renewed debate about balancing technological progress with ecological responsibility. Many observers believe that investigation results will shape future regulations for commercial spaceflight, potentially requiring companies to meet stricter environmental standards before launching missions.",
+      "createdAt": "2026-05-30T00:06:18.206Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-05-29-1-meta-repeatedly-snubs-eu-body-over-facebook-and-instagram-us",
       "date": "2026-05-29",
@@ -1484,174 +1652,6 @@
       "writingPrompt": "In many countries, excessive salt consumption has become a significant public health concern. Some people argue that governments should implement stricter regulations on salt content in processed foods, while others believe individuals should be responsible for making their own dietary choices. Discuss both views and give your own opinion.",
       "listeningText": "Good evening, I'm James Gallagher, and tonight I want to share an eye-opening experiment I conducted with my health. I tried the so-called saltiest sandwich in the United Kingdom. You might wonder why anyone would voluntarily exceed the recommended daily sodium limit. The answer is simple: I wanted to understand exactly what happens inside our bodies when we consume too much salt. Medical guidelines suggest adults should not exceed two grams of sodium daily. However, this single sandwich contained nearly three times that amount. Within hours of eating, I noticed my body responding in various ways. My blood pressure readings became noticeably elevated. Healthcare professionals have long warned that such spikes, when occurring regularly, can lead to serious cardiovascular problems. This experiment demonstrates why public health campaigns increasingly focus on raising awareness about hidden salt in our daily diets.",
       "createdAt": "2026-05-16T23:47:23.338Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-15-1-ai-could-put-people-off-tech-jobs-and-hurt-the-economy-warns",
-      "date": "2026-05-15",
-      "title": "AI could put people off tech jobs and hurt the economy, warns Raspberry Pi boss",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/clypr8p2lewo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-14T23:01:20.000Z",
-      "topic": "work",
-      "originalSummary": "Eben Upton warns against claims that Artificial Intelligence will destroy vast numbers of computing roles over the coming years.",
-      "learningSummary": "The Chief Executive of Raspberry Pi, Eben Upton, has cautioned against excessive pessimism regarding Artificial Intelligence's impact on technology employment. During recent industry discussions, Upton expressed concern that alarmist predictions about widespread job losses in computing sectors may be unfounded. While acknowledging that certain entry-level programming positions could face automation pressures, he emphasized that the technology sector historically adapts to significant shifts. Upton warned that propagating fear about career prospects could discourage young people from pursuing computing education, ultimately constraining economic growth. His comments emerged amid broader debates about workforce transformation, with various industry leaders holding divergent views on AI's dual capacity for job creation and displacement. The technology executive advocated for balanced perspectives that recognize both challenges and opportunities within evolving labour markets.",
-      "vocabulary": [
-        {
-          "word": "displacement",
-          "meaning": "the action of displacing someone or something, or the condition of being displaced from a usual place or position",
-          "example": "Workers face displacement when automation renders their skills obsolete in the labour market."
-        },
-        {
-          "word": "workforce",
-          "meaning": "the total number of people employed in a particular organization, area, or industry",
-          "example": "The technology workforce must adapt to rapidly changing skill requirements driven by AI."
-        },
-        {
-          "word": "sector",
-          "meaning": "a distinct part or branch of a nation's economy or area of activity",
-          "example": "The technology sector continues to attract substantial investment despite economic uncertainties."
-        },
-        {
-          "word": "automation",
-          "meaning": "the use of largely automatic equipment in a system of manufacturing or other production process",
-          "example": "While automation streamlines certain operations, it simultaneously creates demand for new roles."
-        },
-        {
-          "word": "propagation",
-          "meaning": "the action of spreading or disseminating something more widely",
-          "example": "The propagation of exaggerated claims about job losses may deter students from tech careers."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What position did Eben Upton take regarding claims that Artificial Intelligence would eliminate large numbers of computing positions?",
-          "answer": "Upton cautioned against alarmist predictions, arguing that claims about AI destroying vast numbers of computing roles over the coming years were overly pessimistic and potentially misleading."
-        },
-        {
-          "question": "What secondary consequence might arise from spreading fear about AI's impact on tech employment, according to the executive's warnings?",
-          "answer": "Young people could become discouraged from pursuing computing education, which would ultimately constrain economic growth and potentially create the very workforce shortages that pessimistic predictions warn against."
-        },
-        {
-          "question": "In the context of the passage, what does the phrase 'alarmist predictions' suggest about the author's view of claims regarding AI job displacement?",
-          "answer": "The phrase suggests that such claims exaggerate the severity of the situation and may provoke unnecessary anxiety, implying the author views these warnings as lacking sufficient balance or empirical foundation."
-        }
-      ],
-      "writingPrompt": "Some experts suggest that Artificial Intelligence will inevitably replace numerous human jobs across multiple industries, while others argue that technology historically creates more employment opportunities than it eliminates. Discuss both perspectives and give your own opinion on whether governments should regulate AI development to protect workers or allow market forces to determine its impact on employment.",
-      "listeningText": "Eben Upton, founder of Raspberry Pi, has voiced strong objections to what he describes as exaggerated forecasts concerning Artificial Intelligence's effect on technology employment. In his address to industry professionals, Upton stressed that alarming rhetoric surrounding massive job losses in computing lacks sufficient evidence. Although he conceded that routine coding tasks might indeed face automation, the executive maintained that the broader technology sector possesses remarkable adaptability. Upton specifically warned that discouraging young professionals from entering computing fields based on fear would damage economic development. His remarks contribute to ongoing debates about workforce evolution, where some leaders emphasize AI's destructive potential while others highlight its transformative benefits for creating novel career pathways.",
-      "createdAt": "2026-05-15T23:51:25.881Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-15-2-after-viral-graduation-walk-paraplegic-student-calls-for-gre",
-      "date": "2026-05-15",
-      "title": "After viral graduation walk, paraplegic student calls for greater accessibility: ‘It doesn’t have to be so hard’",
-      "source": "The Guardian - Education",
-      "url": "https://www.theguardian.com/education/2026/may/15/jaiden-picot-graduation-video-quadriplegic-accessibility",
-      "publishedAt": "2026-05-15T09:30:36.000Z",
-      "topic": "education",
-      "originalSummary": "After a truck accident left him paralyzed, Jaiden Picot crossed his graduation stage in a robotic exoskeleton Jaiden Picot, who was paralyzed in 2024 after a truck hit him, never imagined that video of him recently walking across Virginia Union University (VUU)‘s graduation stage in a futuristic robotic suit would go viral. But since it did, he says he wants the world to know that he intends to spend his professional career trying to help make the place more accessible to people who – like him – use a wheelchair to get around. Continue reading...",
-      "learningSummary": "A university graduate who became paralyzed after a road traffic collision has captured international attention by walking across his graduation stage in an advanced robotic exoskeleton. Jaiden Picot sustained severe spinal injuries in 2024 when a truck struck him, leaving him unable to walk independently. Following extensive rehabilitation, he completed his studies at Virginia Union University and appeared at the ceremony wearing this futuristic mechanical suit, an achievement that generated considerable media coverage. The viral response to his appearance prompted Picot to articulate his vision for systematic change, arguing that individuals requiring wheelchairs frequently confront preventable barriers. He has announced his intention to dedicate his professional career to enhancing accessibility within educational institutions and broader society, maintaining that such accommodations should not demand extraordinary effort to secure. His advocacy seeks to transform personal challenge into collective progress regarding disability inclusion.",
-      "vocabulary": [
-        {
-          "word": "paralyzed",
-          "meaning": "affected by paralysis; unable to move or feel part of the body",
-          "example": "The accident left him partially paralyzed from the waist down, requiring permanent use of a wheelchair."
-        },
-        {
-          "word": "accessibility",
-          "meaning": "the quality of being easily reached, entered, or used by people, especially those with disabilities",
-          "example": "Universities must prioritize accessibility to ensure students with mobility impairments can participate fully in campus life."
-        },
-        {
-          "word": "exoskeleton",
-          "meaning": "an external mechanical framework worn on the body to provide support and enable movement",
-          "example": "Medical researchers are developing lighter exoskeletons that could help patients with spinal injuries regain independent walking ability."
-        },
-        {
-          "word": "advocacy",
-          "meaning": "public support for or recommendation of a particular cause or policy",
-          "example": "Student advocacy groups play a crucial role in promoting disability rights and demanding institutional accommodations."
-        },
-        {
-          "word": "inclusion",
-          "meaning": "the practice of ensuring all individuals can participate fully in society regardless of their circumstances",
-          "example": "True educational inclusion requires not only physical access but also adapted teaching methodologies and supportive learning environments."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What was the specific cause of Jaiden Picot's paralysis, and when did this incident occur?",
-          "answer": "Jaiden Picot became paralyzed after being hit by a truck in 2024."
-        },
-        {
-          "question": "Based on the passage, what can be inferred about Picot's motivation for pursuing accessibility advocacy as a career?",
-          "answer": "Picot appears motivated by personal experience of encountering barriers as a wheelchair user and believes he can leverage his professional career to reduce such obstacles for others, suggesting he wants to transform his challenge into meaningful systemic change."
-        },
-        {
-          "question": "In the context of the passage, what does the phrase 'It doesn't have to be so hard' most likely communicate about Picot's perspective?",
-          "answer": "The phrase indicates that Picot believes acquiring necessary accommodations or accessibility features should not require extraordinary effort, patience, or struggle from individuals with disabilities."
-        }
-      ],
-      "writingPrompt": "Some universities have taken steps to accommodate students with physical disabilities by providing accessible facilities and specialized equipment. However, many institutions still lack adequate support systems. Discuss the extent to which educational institutions should be responsible for ensuring accessibility, and suggest what measures can be implemented to achieve this goal effectively.",
-      "listeningText": "A university graduate who became paralyzed following a road traffic accident has attracted global attention after walking across his graduation stage in a robotic exoskeleton. Jaiden Picot sustained his injury when a truck struck him in 2024, resulting in spinal damage that confined him to a wheelchair. Despite this life-changing event, he completed his degree at Virginia Union University and decided to walk across the stage wearing this advanced technological device. The video of his achievement quickly spread across social media, generating millions of views and widespread media coverage. Picot has since committed to using his platform to push for greater accessibility in educational settings and public spaces. His message emphasizes that individuals who rely on wheelchairs should not face unnecessary obstacles when navigating their environments. He argues that achieving meaningful accessibility requires dedicated effort from institutions and policymakers alike.",
-      "createdAt": "2026-05-15T23:51:36.592Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-15-3-river-thames-in-london-gets-first-official-bathing-spot-on-f",
-      "date": "2026-05-15",
-      "title": "River Thames in London gets first official bathing spot on Friday",
-      "source": "The Guardian - Environment",
-      "url": "https://www.theguardian.com/environment/2026/may/14/river-thames-london-first-designated-bathing-water-area-",
-      "publishedAt": "2026-05-14T21:30:18.000Z",
-      "topic": "environment",
-      "originalSummary": "Thames at Ham designated as one of 13 new swimming areas across England to be monitored for water quality The first designated bathing water area on the River Thames in London will welcome swimmers for the official start of the bathing season on Friday as one of 13 new monitored swimming areas across England. The Thames at Ham, in south-west London, has been designated as a new river bathing water area after campaigners gathered evidence to show thousands of people use the river for swimming throughout the year. Canvey Island foreshore, Essex East Beach at West Bay, Bridport, Dorset Falcon...",
-      "learningSummary": "The River Thames in London has finally received its first official bathing designation at Ham, located in south-west London. This marks a significant milestone as swimmers will be able to use the area from the official start of the bathing season on Friday. The site is one of thirteen newly monitored swimming areas introduced across England this year. Campaigners played a crucial role in securing this designation by gathering substantial evidence demonstrating that thousands of individuals regularly swim in the Thames throughout the year. The addition of Thames at Ham to the list of official bathing water areas reflects growing recognition of public demand for cleaner river access. This development aligns with broader environmental efforts to improve water quality standards and provide safe recreational opportunities for communities. Other locations included in the new swimming areas are Canvey Island foreshore and East Beach at West Bay in Dorset, signalling a national push to expand supervised bathing sites across English waterways.",
-      "vocabulary": [
-        {
-          "word": "designated",
-          "meaning": "officially assigned a particular status or function",
-          "example": "The river section has been designated as a safe bathing zone by environmental authorities."
-        },
-        {
-          "word": "monitored",
-          "meaning": "systematically observed and checked over time",
-          "example": "Water quality at the Thames site will be monitored regularly during the bathing season."
-        },
-        {
-          "word": "campaigners",
-          "meaning": "people who actively work toward a specific social or environmental cause",
-          "example": "Local campaigners gathered evidence to prove the river was widely used for swimming."
-        },
-        {
-          "word": "recreational",
-          "meaning": "relating to activities done for enjoyment and leisure",
-          "example": "The new bathing areas will provide valuable recreational opportunities for local residents."
-        },
-        {
-          "word": "substantial",
-          "meaning": "of considerable importance, amount, or size",
-          "example": "Campaigners collected substantial data showing thousands swim in the river annually."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What role did local campaigners play in securing the bathing designation for Thames at Ham?",
-          "answer": "Campaigners gathered evidence demonstrating that thousands of people use the river for swimming throughout the year, which was instrumental in obtaining the official bathing water area status."
-        },
-        {
-          "question": "How many new monitored swimming areas are being introduced across England as part of this initiative?",
-          "answer": "Thirteen new monitored swimming areas are being introduced across England, with Thames at Ham being one of them and the first on the River Thames in London."
-        },
-        {
-          "question": "What does the word 'designated' mean in the context of this passage?",
-          "answer": "In this context, 'designated' means officially assigned a specific status or function, referring to the Thames at Ham being officially assigned as a bathing water area."
-        }
-      ],
-      "writingPrompt": "Some people believe that designating official bathing spots in natural bodies of water, such as rivers, is a positive environmental development. Others argue that this encourages more pollution and strain on natural ecosystems. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
-      "listeningText": "Good news for London swimmers as the River Thames receives its very first official bathing spot. Starting this Friday, swimmers will be welcomed at Thames at Ham in south-west London, marking the beginning of the bathing season for this newly designated area. This follows a successful campaign by local activists who collected evidence that thousands of people swim in the Thames throughout the year. The site is one of thirteen new river bathing water areas introduced across England, all of which will be monitored regularly for water quality. Environmental officials say this development reflects growing public demand for cleaner access to natural waterways. The initiative also aims to raise standards for water quality monitoring in rivers across the country. Other new bathing sites include locations on Canvey Island and various coastal areas in Dorset and Essex.",
-      "createdAt": "2026-05-15T23:51:42.533Z",
       "aiSource": "minimax"
     }
   ]
