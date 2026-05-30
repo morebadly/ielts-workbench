@@ -1,173 +1,173 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-30T00:06:18.207Z",
+  "updatedAt": "2026-05-30T23:58:24.607Z",
   "items": [
     {
-      "id": "news-2026-05-30-1-what-does-neet-stand-for-and-why-does-the-uk-have-so-many",
+      "id": "news-2026-05-30-1-how-a-borough-in-merseyside-is-bucking-the-uk-s-youth-unempl",
       "date": "2026-05-30",
-      "title": "What does Neet stand for and why does the UK have so many?",
+      "title": "How a borough in Merseyside is bucking the UK's youth unemployment trend",
       "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/cly9rq35de8o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-29T11:11:34.000Z",
-      "topic": "education",
-      "originalSummary": "Ministers want to tackle the high number of young people not in education, employment or training.",
-      "learningSummary": "The British government is confronting a pressing issue regarding young adults who are neither pursuing academic studies nor engaged in the labour market. Official records show that numerous individuals aged between 16 and 24 find themselves in this circumstances, which educators label as NEET status. This trend presents serious challenges for national economic output, individual psychological wellbeing, and disparities across different social groups. Decision-makers face growing expectations to design effective measures that will lower these numbers substantially. The matter has drawn attention from multiple parties with vested interests, including business owners, academic institutions, and local charitable groups. Identifying root causes—such as mental health difficulties, insufficient qualifications, or scarce job openings—is essential for crafting suitable policy responses.",
+      "url": "https://www.bbc.com/news/articles/cd6p9yyg64vo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-30T00:50:21.000Z",
+      "topic": "society",
+      "originalSummary": "Could personalised early intervention help prevent under-16s falling into the Neet trap?",
+      "learningSummary": "...",
       "vocabulary": [
         {
-          "word": "labour market",
-          "meaning": "the supply of available workers and the demand for their services in an economy",
-          "example": "Young people often struggle to enter the labour market due to lack of experience."
+          "word": "bespoke",
+          "meaning": "...",
+          "example": "..."
+        },
+        {
+          "word": "intervention",
+          "meaning": "...",
+          "example": "..."
+        },
+        {
+          "word": "aspiration",
+          "meaning": "...",
+          "example": "..."
+        },
+        {
+          "word": "engagement",
+          "meaning": "...",
+          "example": "..."
+        },
+        {
+          "word": "mitigate",
+          "meaning": "...",
+          "example": "..."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "...",
+          "answer": "..."
+        },
+        {
+          "question": "...",
+          "answer": "..."
+        },
+        {
+          "question": "...",
+          "answer": "..."
+        }
+      ],
+      "writingPrompt": "...",
+      "listeningText": "...",
+      "createdAt": "2026-05-30T23:57:55.106Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-30-2-millions-of-breast-cancer-patients-could-safely-avoid-chemot",
+      "date": "2026-05-30",
+      "title": "Millions of breast cancer patients could safely avoid chemotherapy, study suggests",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/c2325j0xk1vo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-30T13:14:42.000Z",
+      "topic": "health",
+      "originalSummary": "A new DNA test could help screen whether patients require the treatment or not, according to a new international trial.",
+      "learningSummary": "A recent international study has demonstrated that a novel DNA-based screening test may effectively identify which breast cancer patients can safely forgo chemotherapy. This genomic assessment analyzes specific genetic markers to predict an individual's likelihood of benefiting from the treatment. Researchers involved in the trial believe this advancement could spare numerous patients from the debilitating side effects associated with chemotherapy while maintaining comparable health outcomes. The test represents a significant step towards personalized cancer care, enabling clinicians to make more informed treatment decisions based on each patient's unique tumor characteristics. If validated through broader clinical implementation, this approach could transform standard oncology practice and reduce unnecessary medical interventions.",
+      "vocabulary": [
+        {
+          "word": "genomic",
+          "meaning": "relating to the genome and gene functions",
+          "example": "Genomic analysis has revolutionized approaches to personalized cancer treatment."
+        },
+        {
+          "word": "regimen",
+          "meaning": "a prescribed course of medical treatment",
+          "example": "Patients must strictly follow their medication regimen to achieve optimal results."
+        },
+        {
+          "word": "prognosis",
+          "meaning": "the likely course and outcome of a disease",
+          "example": "The doctor explained that the prognosis varied significantly between patients."
+        },
+        {
+          "word": "efficacy",
+          "meaning": "the ability to produce a desired result or effect",
+          "example": "Clinical trials demonstrated the high efficacy of the new treatment method."
+        },
+        {
+          "word": "intervention",
+          "meaning": "action taken to improve a medical condition",
+          "example": "Early medical intervention can dramatically improve patient recovery rates."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the study, what specific function does the DNA test perform regarding breast cancer treatment?",
+          "answer": "The DNA test analyzes genetic markers to predict whether patients are likely to benefit from chemotherapy, thereby identifying those who can safely avoid the treatment."
+        },
+        {
+          "question": "What inference can be drawn about the future impact of this DNA test on oncology practice?",
+          "answer": "If widely adopted, the test is expected to significantly transform standard oncology practice by enabling more personalized treatment decisions and reducing unnecessary interventions."
+        },
+        {
+          "question": "In the context of the passage, what does the word 'genomic' suggest about the nature of the assessment?",
+          "answer": "The term 'genomic' indicates that the assessment examines specific genetic information and markers unique to each patient's tumor rather than using generalized treatment approaches."
+        }
+      ],
+      "writingPrompt": "Some experts argue that advances in genetic testing allow doctors to provide more personalized healthcare, while others maintain that excessive testing leads to unnecessary anxiety and overtreatment. Discuss both views and give your own opinion.",
+      "listeningText": "A groundbreaking international study has revealed that a new DNA test could transform how doctors treat breast cancer patients. This innovative genetic screening tool can determine whether individual patients genuinely need chemotherapy or if they can safely skip this challenging treatment. By examining specific genetic markers, the test provides personalized recommendations based on each patient's unique tumor characteristics. Researchers involved in the clinical trial suggest this advancement could spare countless patients from the severe side effects of chemotherapy while still ensuring positive health outcomes. This approach marks a significant move towards personalized medicine in cancer care.",
+      "createdAt": "2026-05-30T23:58:06.078Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-05-30-3-on-street-ev-charging-in-uk-is-postcode-lottery-as-drivers-f",
+      "date": "2026-05-30",
+      "title": "On-street EV charging in UK is postcode lottery as drivers face council objections",
+      "source": "The Guardian - Environment",
+      "url": "https://www.theguardian.com/environment/2026/may/30/on-street-ev-charging-uk-postcode-lottery-council-objections-gullies-safety-legal-parking",
+      "publishedAt": "2026-05-30T07:00:12.000Z",
+      "topic": "environment",
+      "originalSummary": "Despite government pledges, more than 20 authorities will not allow gullies, citing safety, legal and parking concerns The energy secretary, Ed Miliband, has said charger gullies to connect electric cars parked on streets will help cut costs for drivers, yet millions of UK households may be unable to use the simple technology because their local councils will still not allow charging cables to cross the pavement. Despite government promises to “slash red tape” and make it easier to put in gullies, more than 20 local authorities appear to be holding out against them. Continue reading...",
+      "learningSummary": "The deployment of on-street electric vehicle charging infrastructure across the United Kingdom is progressing unevenly, with numerous local authorities refusing to permit pavement gullies designed to facilitate cable connections for parked electric cars. Although the energy secretary has advocated for this technology as a cost-effective solution to encourage electric vehicle adoption, more than twenty councils have declined approval based on safety considerations, legal complexities, and parking regulations. This inconsistency in implementation means that households without private driveways or garages may be unable to access convenient charging facilities, creating a significant disparity between urban and suburban residents. The government's stated intention to reduce bureaucratic obstacles appears to conflict with local autonomy over public infrastructure decisions. Consequently, the transition to sustainable transportation may proceed more slowly than anticipated in areas where councils maintain objections to street-level charging solutions.",
+      "vocabulary": [
+        {
+          "word": "infrastructure",
+          "meaning": "the fundamental physical and organizational systems and facilities required for the operation of a society or enterprise",
+          "example": "The government's budget allocated substantial funds for upgrading the country's charging infrastructure."
+        },
+        {
+          "word": "proliferation",
+          "meaning": "the rapid increase in the number or spread of something",
+          "example": "The proliferation of electric vehicles has created urgent demand for accessible charging points."
+        },
+        {
+          "word": "legislative",
+          "meaning": "relating to the process of making or enacting laws",
+          "example": "New legislative frameworks are being developed to address the challenges of street-based charging systems."
         },
         {
           "word": "disparity",
-          "meaning": "a significant difference or inequality between groups or situations",
-          "example": "There is a growing disparity in employment opportunities between urban and rural areas."
+          "meaning": "a significant difference or inequality between people or groups",
+          "example": "There exists a stark disparity in charging access between homeowners with driveways and flat residents."
         },
         {
-          "word": "vested interests",
-          "meaning": "personal or group concerns that influence someone's actions or opinions",
-          "example": "Several organisations with vested interests have contributed to the policy debate."
-        },
-        {
-          "word": "craft",
-          "meaning": "to create or make something skillfully, especially after careful planning",
-          "example": "Policymakers must craft solutions that address the diverse needs of affected youth."
-        },
-        {
-          "word": "scrutinise",
-          "meaning": "to examine or inspect closely and in great detail",
-          "example": "Researchers scrutinise statistical data to understand patterns in youth unemployment."
+          "word": "implementation",
+          "meaning": "the process of putting a decision or plan into effect",
+          "example": "The implementation of council policies regarding pavement modifications varies considerably across regions."
         }
       ],
       "readingQuestions": [
         {
-          "question": "According to the passage, what terminology is used to categorise young people who are not enrolled in education, employment, or training?",
-          "answer": "They are referred to as NEET, which stands for Not in Education, Employment, or Training."
+          "question": "According to the passage, what are the three main reasons cited by councils for refusing to allow EV charging gullies on streets?",
+          "answer": "Councils are refusing to permit charging gullies based on safety concerns, legal complexities, and parking regulations."
         },
         {
-          "question": "It can be inferred from the passage that the NEET phenomenon primarily affects which age group in British society?",
-          "answer": "The passage implies that young people aged between 16 and 24 are the demographic most significantly affected by this issue."
+          "question": "What can be inferred about the government’s ability to enforce its electric vehicle policies if local councils maintain their objections?",
+          "answer": "It can be inferred that the government’s ability to implement its EV charging strategy effectively is significantly limited, as local authorities retain considerable autonomy over public highway decisions, potentially undermining national environmental targets."
         },
         {
-          "question": "What does the phrase 'craft suitable policy responses' suggest about the nature of government intervention required?",
-          "answer": "The expression indicates that solutions must be carefully designed, thoughtful, and specifically tailored to address the complex underlying causes of youth disengagement."
+          "question": "In the context of the passage, what does the phrase “postcode lottery” suggest about access to on-street EV charging?",
+          "answer": "The phrase “postcode lottery” implies that whether drivers can access on-street EV charging depends arbitrarily on which local council area they live in, rather than on consistent national policy, suggesting unfair geographical inequality."
         }
       ],
-      "writingPrompt": "In many countries, thousands of young people are categorised as NEET (Not in Education, Employment, or Training). Some argue that governments should bear the primary responsibility for reducing these numbers, while others believe that families and individuals themselves should take the initiative. Discuss both perspectives and present your own opinion. Give reasons for your answer and include relevant examples from your own knowledge or experience.",
-      "listeningText": "This news report examines the growing concern over young people categorised as NEET in the United Kingdom. Government officials acknowledge that thousands of individuals between the ages of sixteen and twenty-four are currently not engaged in education, employment, or training programmes. This situation poses significant challenges for economic productivity and individual wellbeing. Ministers have announced plans to invest in vocational training schemes and create new apprenticeship pathways. The government intends to collaborate with business leaders and charitable organisations to identify the underlying causes of this trend. Mental health difficulties, inadequate academic qualifications, and limited local job opportunities are frequently cited as contributing factors. Experts emphasise that a coordinated approach involving multiple stakeholders will be essential for achieving meaningful reductions in NEET statistics.",
-      "createdAt": "2026-05-30T00:05:36.855Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-30-2-controversial-north-korean-invasion-setting-for-next-call-of",
-      "date": "2026-05-30",
-      "title": "'Controversial' North Korean invasion setting for next Call of Duty game",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/c9q391y5088o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-29T13:55:04.000Z",
-      "topic": "technology",
-      "originalSummary": "Developer Infinity Ward said the game will be \"grounded in the military authenticity\" the series is known for.",
-      "learningSummary": "The latest installment in the popular Call of Duty video game franchise will be set against a controversial geopolitical backdrop, specifically featuring a North Korean military invasion scenario. Developer Infinity Ward has emphasised that this new title will maintain the series' reputation for meticulous military authenticity. The gaming industry has long utilized contemporary international tensions as inspiration for narrative content, though such approaches frequently spark public debate regarding the appropriateness of depicting real-world conflict zones in entertainment media. The series has consistently blended historical and fictional military operations, attracting millions of players globally who value the realistic combat mechanics and tactical gameplay. This upcoming release continues the franchise's tradition of pushing technological boundaries in gaming graphics and realistic warfare simulation.",
-      "vocabulary": [
-        {
-          "word": "authenticity",
-          "meaning": "the quality of being genuine or trustworthy, particularly in representing real-world circumstances accurately",
-          "example": "The film's authenticity was praised for its faithful recreation of historical events."
-        },
-        {
-          "word": "controversial",
-          "meaning": "causing widespread public discussion and disagreement among various groups",
-          "example": "The director faced significant backlash due to the film's controversial themes."
-        },
-        {
-          "word": "immersion",
-          "meaning": "deep mental engagement in an activity or experience, feeling fully absorbed",
-          "example": "Players value video games that offer complete immersion in the virtual world."
-        },
-        {
-          "word": "simulation",
-          "meaning": "a computer model or imitation that represents a real-world system or process",
-          "example": "Medical students often use patient simulations to develop clinical skills."
-        },
-        {
-          "word": "franchise",
-          "meaning": "a series of related films, games, or other media sharing a common brand and narrative universe",
-          "example": "The superhero franchise has expanded across multiple movies and television series."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what specific aspect has the developer emphasised about the new Call of Duty game?",
-          "answer": "The developer Infinity Ward has emphasised that the new game will maintain the series' reputation for meticulous military authenticity, replicating real-world military scenarios with attention to detail."
-        },
-        {
-          "question": "What can be inferred about the target audience for this type of military video game?",
-          "answer": "The target audience likely includes gamers who appreciate realistic combat mechanics and tactical gameplay, suggesting they value authentic representations of military operations and are interested in immersive virtual warfare experiences."
-        },
-        {
-          "question": "In the context of the passage, what does 'controversial' most nearly mean when describing the setting?",
-          "answer": "'Controversial' here means causing public debate or disagreement, as the use of a real geopolitical setting like North Korea for entertainment purposes often sparks ethical discussions."
-        }
-      ],
-      "writingPrompt": "Some people argue that video games featuring realistic depictions of military conflicts provide educational value and historical awareness, while others believe such games desensitize players to real warfare and promote violence. Discuss both views and give your own opinion.",
-      "listeningText": "A new video game from the popular Call of Duty series will soon be released, featuring a storyline set during a North Korean military invasion. The game's developer, Infinity Ward, has highlighted that this title will prioritise realistic military representation, continuing the franchise's established approach to combat simulation. This announcement comes at a time when the relationship between entertainment media and international politics continues to spark debate. The gaming industry frequently draws inspiration from current global tensions when developing narrative content, a practice that has both supporters and critics. Players of the series have come to expect high-quality graphics, authentic weaponry, and detailed military tactics. The upcoming release demonstrates how video game developers continue to push technological boundaries while exploring sensitive geopolitical themes.",
-      "createdAt": "2026-05-30T00:06:04.727Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-30-3-exploding-rocket-casts-doubts-over-nasa-s-moon-plans",
-      "date": "2026-05-30",
-      "title": "Exploding rocket casts doubts over Nasa's Moon plans",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/cwy2q0g07kgo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-29T10:38:46.000Z",
-      "topic": "technology",
-      "originalSummary": "Explosion of Blue Origin rocket is a setback for the company and for Nasa's Moon plans.",
-      "learningSummary": "The recent explosion of a Blue Origin rocket has significantly complicated NASA's timeline for returning humans to the Moon. The incident represents a major setback for the private aerospace company and raises questions about the feasibility of the space agency's lunar programme. Industry analysts suggest this failure may delay key missions, potentially affecting international cooperation agreements and research timelines. Meanwhile, the broader space industry faces increasing scrutiny regarding the environmental sustainability of rocket launches, particularly concerning atmospheric pollution and carbon emissions. Environmental advocates have long questioned whether the expansion of commercial space activities aligns with global climate commitments. The accident has reignited debates about the balance between technological advancement and ecological responsibility. Observers note that such incidents underscore the complexities involved in developing reliable space transportation systems while maintaining environmental standards. The outcome of investigations into this failure will likely influence future regulatory frameworks governing commercial spaceflight operations.",
-      "vocabulary": [
-        {
-          "word": "setback",
-          "meaning": "a delay or problem that hinders progress",
-          "example": "The explosion represents a significant setback for the company's lunar ambitions."
-        },
-        {
-          "word": "endeavor",
-          "meaning": "a purposeful and ambitious effort or project",
-          "example": "NASA's lunar endeavor requires reliable propulsion systems and international cooperation."
-        },
-        {
-          "word": "scrutiny",
-          "meaning": "close and careful examination or observation",
-          "example": "The space industry faces increasing scrutiny regarding environmental practices."
-        },
-        {
-          "word": "feasibility",
-          "meaning": "the possibility or practicality of achieving something",
-          "example": "Engineers are assessing the feasibility of alternative mission timelines."
-        },
-        {
-          "word": "regulatory",
-          "meaning": "relating to rules or laws controlling an activity",
-          "example": "New regulatory frameworks may emerge following this investigation."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What impact might the rocket explosion have on international cooperation agreements?",
-          "answer": "The explosion could potentially affect international cooperation agreements and research timelines, as partners may become hesitant to commit to programmes with uncertain schedules."
-        },
-        {
-          "question": "Based on the passage, what conclusion can be drawn about the relationship between technological advancement and environmental concerns?",
-          "answer": "The passage suggests these two priorities are in tension, as the expansion of commercial space activities raises questions about whether it aligns with global climate commitments."
-        },
-        {
-          "question": "In the context of the passage, what does the word 'regulatory' most nearly mean?",
-          "answer": "It refers to rules or laws controlling an activity, specifically frameworks that govern commercial spaceflight operations."
-        }
-      ],
-      "writingPrompt": "Some people argue that investing in space exploration should be a priority despite environmental concerns, while others believe that resources should focus entirely on addressing climate change on Earth. Discuss both views and give your own opinion.",
-      "listeningText": "The explosion of Blue Origin's rocket has created substantial challenges for NASA's Moon programme. This represents a serious setback for the company and raises questions about whether deadlines can be met. Experts suggest the failure will affect international partnerships and research schedules. Additionally, the space industry faces growing criticism for its environmental impact, particularly regarding rocket emissions and atmospheric pollution. Environmental groups argue that expanding commercial space activities contradicts global climate goals. The incident has sparked renewed debate about balancing technological progress with ecological responsibility. Many observers believe that investigation results will shape future regulations for commercial spaceflight, potentially requiring companies to meet stricter environmental standards before launching missions.",
-      "createdAt": "2026-05-30T00:06:18.206Z",
+      "writingPrompt": "Some people believe that governments should mandate the installation of electric vehicle charging infrastructure in all residential areas to accelerate the transition to sustainable transportation. Others argue that local authorities should retain the authority to decide based on local circumstances. Discuss both views and give your own opinion.",
+      "listeningText": "Good morning and welcome to today's discussion on the challenges facing electric vehicle adoption in the United Kingdom. While the government has committed to expanding green transport options, a significant obstacle has emerged at the local level. More than twenty municipal councils have declined to authorize the installation of charging gullies on public pavements, citing legitimate concerns about pedestrian safety and existing parking arrangements. Energy officials maintain that these cable channels represent an affordable and practical solution for residents who lack dedicated parking facilities. However, critics within local government argue that such decisions should remain within their jurisdiction, as councils bear responsibility for maintaining public spaces. This governance conflict may ultimately hinder the country's ability to meet its emissions reduction targets, particularly for households in high-density urban areas where private charging options are limited.",
+      "createdAt": "2026-05-30T23:58:24.606Z",
       "aiSource": "minimax"
     },
     {
