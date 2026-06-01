@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-30T23:58:24.607Z",
+  "updatedAt": "2026-06-01T00:04:38.599Z",
   "items": [
+    {
+      "id": "news-2026-06-01-1-killer-fungus-could-be-good-news-for-habitats-decimated-by-i",
+      "date": "2026-06-01",
+      "title": "'Killer fungus' could be good news for habitats decimated by invasive moss",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/c4g48jy4j1yo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-30T23:03:12.000Z",
+      "topic": "environment",
+      "originalSummary": "A newly discovered species raises hope that some native British habitats could be restored.",
+      "learningSummary": "Scientists have identified a previously unknown fungal species that demonstrates remarkable effectiveness in controlling invasive moss populations threatening native British ecosystems. This biological control agent, often described as a 'killer fungus' in popular media, offers a sustainable alternative to chemical herbicides currently used in habitat management programmes. Research indicates that the fungus specifically targets certain moss species while leaving surrounding vegetation unharmed, making it an ideal solution for restoring degraded heathlands and moorlands. Conservation groups have expressed cautious optimism about the discovery, emphasising that biological interventions could play a crucial role in reversing biodiversity loss across Britain. Experts suggest that carefully managed applications of this natural solution might enable the recovery of native plant communities that have struggled to regenerate under persistent moss colonisation. Field trials are expected to begin within the next few years.",
+      "vocabulary": [
+        {
+          "word": "biodiversity",
+          "meaning": "the variety of plant and animal life in a particular habitat or on Earth",
+          "example": "The preservation of biodiversity remains a key priority for conservation organisations across Europe."
+        },
+        {
+          "word": "invasive species",
+          "meaning": "a plant or animal that spreads rapidly and causes harm to the environment or native species",
+          "example": "Invasive species often outcompete native flora, disrupting established ecological relationships."
+        },
+        {
+          "word": "ecosystem",
+          "meaning": "a community of living organisms interacting with their physical environment",
+          "example": "Wetland ecosystems provide essential services including flood control and water filtration."
+        },
+        {
+          "word": "habitat restoration",
+          "meaning": "the process of repairing damaged or destroyed natural environments",
+          "example": "Habitat restoration projects require careful planning to ensure suitable conditions for native species."
+        },
+        {
+          "word": "biological control",
+          "meaning": "using natural predators or pathogens to manage pest populations",
+          "example": "Biological control methods reduce reliance on chemical pesticides that harm beneficial insects."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what makes the newly discovered fungus particularly suitable for habitat management?",
+          "answer": "The fungus specifically targets invasive moss species while leaving surrounding vegetation unharmed, making it a precise and safe control method."
+        },
+        {
+          "question": "What can be inferred about the current methods used for controlling invasive moss in Britain?",
+          "answer": "Chemical herbicides appear to be the predominant approach currently employed, as the passage suggests the fungus offers an alternative to these existing methods."
+        },
+        {
+          "question": "In the context of the passage, what does the phrase 'cautious optimism' (paragraph 4) suggest about conservation groups' attitudes?",
+          "answer": "It indicates that while organisations recognise the potential benefits of the discovery, they remain reserved because the fungus has not yet undergone practical testing in real environments."
+        }
+      ],
+      "writingPrompt": "Some scientists believe that using natural biological methods to control invasive species is preferable to chemical interventions. To what extent do you agree or disagree with this view? Give reasons for your answer and include relevant examples from your knowledge or experience.",
+      "listeningText": "Good morning. Today we're discussing an exciting development in conservation science. Researchers have uncovered a new fungal species that could transform how we manage invasive plants threatening Britain's native landscapes. This organism produces compounds that specifically eliminate certain moss varieties while preserving nearby plant life. Unlike traditional chemical treatments, this biological approach causes minimal disruption to surrounding ecosystems. Field ecologists believe the discovery could prove particularly valuable for restoring damaged moorlands and heath areas. The research team, based at a British university, has spent three years studying the fungus in controlled conditions. They now plan extended trials to assess its long-term effectiveness and environmental safety. Early results suggest that applications could reduce moss coverage by up to seventy percent within a single growing season.",
+      "createdAt": "2026-06-01T00:03:29.931Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-01-2-checks-reveal-young-women-with-deadly-silent-heart-risk",
+      "date": "2026-06-01",
+      "title": "Checks reveal young women with deadly 'silent' heart risk",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/c1l218n82pdo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-05-31T23:21:41.000Z",
+      "topic": "health",
+      "originalSummary": "Sudden cardiac death can happen without warning, and it's not just a problem for sporty young men, say experts.",
+      "learningSummary": "(Mock learning summary based on the headline.) Checks reveal young women with deadly 'silent' heart risk. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Checks reveal young women with deadly 'silent' heart risk. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-01T00:03:55.517Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-01-3-animal-welfare-violations-swarm-miami-zoo-owned-by-ex-drug-k",
+      "date": "2026-06-01",
+      "title": "Animal welfare violations swarm Miami zoo owned by ex-drug kingpin in Tiger King",
+      "source": "The Guardian - Environment",
+      "url": "https://www.theguardian.com/us-news/2026/may/30/miami-zoo-violations-mario-tabraue-tiger-king",
+      "publishedAt": "2026-05-30T13:00:19.000Z",
+      "topic": "environment",
+      "originalSummary": "Endangered snow leopard had leg amputated and capybara died at Mario Tabraue’s controversial roadside facility An endangered clouded leopard had a leg amputated and a capybara died following botched breeding attempts at a controversial Miami roadside zoo owned by a convicted drug trafficker featured in the Netflix documentary Tiger King . Federal wildlife inspectors found multiple other violations during a March inspection at Zoological Wildlife Foundation (ZWF), including dilapidated, insecure or unsafe housing conditions for wild animals, filthy cages, and water and food contaminated with...",
+      "learningSummary": "Federal wildlife inspectors uncovered serious animal welfare breaches at a controversial Miami roadside zoo owned by a convicted drug trafficker who featured in the Netflix documentary Tiger King. The March inspection revealed that an endangered clouded leopard needed a leg amputation while a capybara perished following failed breeding attempts. Investigators documented numerous violations including deteriorating, unsecured enclosures for wild animals, deplorable cage conditions, and water and food supplies contaminated with debris. The facility, Zoological Wildlife Foundation (ZWF), has endured persistent criticism regarding exotic animal care. This incident underscores mounting apprehension about the inadequate oversight of private wildlife collections in the United States and the precarious welfare of endangered species held in captive settings. Animal rights advocates argue that stricter enforcement mechanisms are imperative to prevent such maltreatment.",
+      "vocabulary": [
+        {
+          "word": "breaches",
+          "meaning": "violations or failures to comply with regulations or standards",
+          "example": "The environmental agency prosecuted the company for multiple safety breaches."
+        },
+        {
+          "word": "scrutiny",
+          "meaning": "close observation or examination, often critical in nature",
+          "example": "Public figures operate under constant media scrutiny."
+        },
+        {
+          "word": "deteriorating",
+          "meaning": "gradually declining in quality, condition, or value",
+          "example": "The deteriorating infrastructure posed significant safety risks."
+        },
+        {
+          "word": "imperative",
+          "meaning": "absolutely necessary or essential; urgently important",
+          "example": "It is imperative that we address climate change before irreversible damage occurs."
+        },
+        {
+          "word": "precarious",
+          "meaning": "dangerously uncertain or unstable; risky",
+          "example": "The company's financial situation remains precarious amid falling revenues."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what specific medical procedure did inspectors learn had been performed on one of the endangered animals?",
+          "answer": "Inspectors discovered that an endangered clouded leopard had undergone a leg amputation as a result of the inadequate conditions at the facility."
+        },
+        {
+          "question": "What can be inferred about the effectiveness of current wildlife regulations in the United States based on this incident?",
+          "answer": "The incident suggests that existing wildlife regulations are insufficiently enforced, allowing private facilities to maintain animals in substandard conditions despite legal requirements."
+        },
+        {
+          "question": "In the context of the passage, what does the word 'scrutiny' most nearly mean?",
+          "answer": "Close examination or critical observation, as the text indicates that ZWF has faced ongoing public and regulatory attention regarding its animal care practices."
+        }
+      ],
+      "writingPrompt": "In recent years, numerous incidents involving the mistreatment of animals in private wildlife facilities have been reported. Some individuals argue that private ownership of exotic animals should be completely prohibited, while others believe that proper regulation and licensing can ensure adequate animal welfare. Discuss both views and give your own opinion. Support your argument with relevant examples from your knowledge or experience.",
+      "listeningText": "Federal inspectors from wildlife authorities recently concluded an investigation at a controversial roadside zoo in Miami operated by an individual with connections to the criminal underworld and featured in a popular documentary series. The comprehensive inspection identified severe deficiencies in animal husbandry practices. Specifically, inspectors documented that an endangered clouded leopard suffered such severe injuries that veterinary surgeons were forced to amputate one of its legs. Additionally, a South American capybara succumbed to complications arising from unsuccessful artificial breeding efforts. The facility was found to have compromised enclosures lacking adequate security measures, severely unclean living spaces, and food and water supplies tainted with contamination. This case has intensified the ongoing debate regarding whether private individuals should be permitted to maintain collections of wild and exotic species without more rigorous governmental supervision.",
+      "createdAt": "2026-06-01T00:04:38.597Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-05-30-1-how-a-borough-in-merseyside-is-bucking-the-uk-s-youth-unempl",
       "date": "2026-05-30",
@@ -1484,174 +1652,6 @@
       "writingPrompt": "Some experts argue that climate change is causing irreversible damage to natural ecosystems, while others believe that human intervention can still prevent the worst outcomes. Discuss both views and give your own opinion. Include relevant examples from your knowledge and experience.",
       "listeningText": "Scientists and beekeeping professionals are raising significant concerns about changing patterns in North American bee populations. Research indicates that unusually warm winter conditions have triggered an early awakening among honeybee colonies, with swarm season beginning seventeen days ahead of the previous year. This marks the continuation of a worrying trend following last year's record losses in bee populations. The Swarmed tracking network, which monitors more than ten thousand beekeepers across the continent, has documented this shift as part of a broader pattern of ecological disruption. Experts emphasise that honeybees play an essential role in pollinating crops and maintaining biodiversity. As climate conditions continue to fluctuate unpredictably, researchers are calling for increased monitoring and new strategies to protect these vital pollinators from environmental stressors. The implications extend beyond beekeeping, touching food security and agricultural sustainability worldwide.",
       "createdAt": "2026-05-17T23:54:57.684Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-16-1-tech-now",
-      "date": "2026-05-16",
-      "title": "Tech Now",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.co.uk/iplayer/episode/m002wp83?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-16T01:00:00.000Z",
-      "topic": "technology",
-      "originalSummary": "Adrienne Murray explores how new 3D imaging is supporting heart procedures.",
-      "learningSummary": "Recent advances in three‑dimensional imaging are reshaping the way clinicians approach cardiac interventions. By generating precise volumetric models of the heart from multimodal scans, surgeons can visualise complex anatomical structures before making any incisions. This capability enables more accurate pre‑operative planning, reduces the margin for error during procedures, and can shorten operation times. In addition, real‑time 3D navigation allows for minimally invasive techniques, which typically result in less postoperative pain and faster recovery for patients. The integration of these imaging modalities also facilitates better training for junior doctors, as they can interact with realistic digital replicas of hearts during simulated rehearsals. Overall, the adoption of 3D cardiac imaging represents a significant technological leap that enhances diagnostic certainty, operative safety, and patient outcomes.",
-      "vocabulary": [
-        {
-          "word": "volumetric",
-          "meaning": "relating to the measurement of volume or three‑dimensional space",
-          "example": "The volumetric data from the CT scan provided a detailed view of the cardiac chambers."
-        },
-        {
-          "word": "modality",
-          "meaning": "a particular method or mode of imaging or treatment",
-          "example": "MRI is one imaging modality that can be combined with ultrasound for comprehensive analysis."
-        },
-        {
-          "word": "intraoperative",
-          "meaning": "occurring or performed during the course of a surgical operation",
-          "example": "The intraoperative 3D guidance system helped the surgeon navigate around delicate tissues."
-        },
-        {
-          "word": "reconstruct",
-          "meaning": "to rebuild or recreate a structure or image in a detailed and accurate form",
-          "example": "Software can reconstruct a patient‑specific heart model from multiple scan slices."
-        },
-        {
-          "word": "minimally invasive",
-          "meaning": "describing surgical techniques that require only small incisions or no incisions at all",
-          "example": "Minimally invasive procedures often lead to quicker healing and fewer complications."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what primary advantage does 3D imaging provide before a cardiac operation?",
-          "answer": "It allows clinicians to generate precise volumetric models of the heart, enabling accurate pre‑operative planning and reducing the margin for error."
-        },
-        {
-          "question": "What can be inferred about the impact of real‑time 3D navigation on the duration of heart procedures?",
-          "answer": "Real‑time 3D navigation is likely to shorten operation times because surgeons can locate anatomical landmarks quickly and avoid unnecessary dissection."
-        },
-        {
-          "question": "In the sentence 'The integration of these imaging modalities also facilitates better training for junior doctors,' what does the phrase 'facilitates' mean in context?",
-          "answer": "It means 'makes easier' or 'enables' the process of training junior doctors."
-        }
-      ],
-      "writingPrompt": "In recent years, sophisticated three‑dimensional imaging technologies have been increasingly incorporated into medical practice, especially in cardiac care. Discuss the advantages and disadvantages of this trend and present your own viewpoint. Give reasons for your answer and include relevant examples from your knowledge or experience.",
-      "listeningText": "Today we examine how cutting‑edge three‑dimensional imaging is transforming heart surgery. By converting standard scans into detailed volumetric representations, medical teams can study the precise shape of a patient's heart before they even enter the operating theatre. This pre‑operative visualization enables surgeons to plan the safest approach, anticipate potential complications, and decide whether a minimally invasive route is suitable. During the operation, real‑time 3D guidance helps navigate complex structures, reducing the need for large incisions. As a result, patients often experience less pain, lower infection risk, and a faster return to daily activities. Moreover, the digital heart models serve as invaluable teaching tools, allowing trainee surgeons to rehearse procedures on realistic simulations. In summary, 3D imaging is proving to be a pivotal innovation that enhances precision, safety, and education in cardiac medicine.",
-      "createdAt": "2026-05-16T23:46:43.455Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-16-2-rare-plant-makes-comeback-from-brink-of-extinction",
-      "date": "2026-05-16",
-      "title": "Rare plant makes comeback from brink of extinction",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/c4g0w899j5yo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-16T06:18:48.000Z",
-      "topic": "environment",
-      "originalSummary": "The Kentish milkwort has seen a seven-fold increase since conservation efforts in 2013.",
-      "learningSummary": "The Kentish milkwort, a once-endangered wildflower native to southeastern England, has experienced a remarkable resurgence over the past decade. Conservation initiatives launched in 2013 have contributed to a sevenfold increase in the plant's population, marking a significant victory for environmental preservation efforts. The flower, historically found in chalk grassland habitats, had faced severe decline due to agricultural intensification and habitat fragmentation. Experts attribute this success to targeted habitat management programs and collaborative efforts between conservation groups and local landowners. The revival demonstrates how strategic intervention can reverse the fortunes of species on the verge of extinction. However, botanists caution that continued monitoring and protection remain essential to ensure the long-term survival of this botanical success story, as populations remain vulnerable to environmental changes.",
-      "vocabulary": [
-        {
-          "word": "resurgence",
-          "meaning": "a renewed or growing occurrence after a period of little activity",
-          "example": "The resurgence of the species demonstrates the effectiveness of recent conservation measures."
-        },
-        {
-          "word": "habitat fragmentation",
-          "meaning": "the process by which large continuous habitats are divided into smaller, isolated patches",
-          "example": "Habitat fragmentation has severely impacted many native plant species across Europe."
-        },
-        {
-          "word": "botanical",
-          "meaning": "relating to the scientific study of plants and their characteristics",
-          "example": "The botanical survey revealed several previously unknown species in the region."
-        },
-        {
-          "word": "conservation",
-          "meaning": "the practice of protecting natural environments and wildlife from harm",
-          "example": "Conservation efforts have helped reverse the decline of numerous endangered species."
-        },
-        {
-          "word": "endangered",
-          "meaning": "at risk of permanent extinction due to severely declining population numbers",
-          "example": "The endangered status of the flower prompted urgent protective measures."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what was the primary cause of the Kentish milkwort's initial decline?",
-          "answer": "The plant faced severe decline primarily due to agricultural intensification and habitat fragmentation."
-        },
-        {
-          "question": "What can reasonably be inferred about the effectiveness of conservation efforts based on the passage?",
-          "answer": "It can be inferred that the collaborative conservation strategies implemented since 2013 have proven highly effective in reversing the plant's decline."
-        },
-        {
-          "question": "What does the phrase \"botanical success story\" in the final sentence suggest about the Kentish milkwort's current status?",
-          "answer": "It suggests that while the plant has made significant recovery, it still requires ongoing protection rather than being completely safe from extinction."
-        }
-      ],
-      "writingPrompt": "In recent years, conservation programmes have successfully revived several endangered species. However, some people argue that resources would be better spent addressing human needs rather than protecting wildlife. Discuss both these views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
-      "listeningText": "Good morning. Today I'd like to discuss the remarkable recovery of the Kentish milkwort, a wildflower that was once on the brink of extinction. In 2013, conservationists launched a major initiative to protect this plant, which had suffered severely from habitat loss. The programme involved careful management of chalk grassland areas and partnerships with local landowners. The results have been extraordinary. We've witnessed a sevenfold increase in the milkwort's population, representing one of the most successful botanical recoveries in recent British history. This case demonstrates how targeted conservation efforts can effectively restore species that seemed destined for extinction. However, scientists warn that we cannot become complacent. While this success is encouraging, the plant remains dependent on continued habitat protection and careful monitoring. The Kentish milkwort's story offers valuable lessons about the importance of preserving biodiversity for future generations.",
-      "createdAt": "2026-05-16T23:47:13.418Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-16-3-i-tried-the-uk-s-saltiest-sandwich-here-s-what-i-learned",
-      "date": "2026-05-16",
-      "title": "I tried the UK's 'saltiest' sandwich - here's what I learned",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/cd9pylq25y9o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-15T23:56:15.000Z",
-      "topic": "health",
-      "originalSummary": "Health correspondent James Gallagher absorbs more than the recommended daily limit in just one meal to find out how salt affects our bodies.",
-      "learningSummary": "A BBC health correspondent recently conducted a personal experiment to investigate the physiological effects of excessive salt consumption. James Gallagher consumed a sandwich marketed as the UK's saltiest meal, deliberately exceeding the recommended daily sodium intake in a single serving. His investigation aimed to demonstrate how dietary salt impacts human health, particularly its relationship to blood pressure regulation and cardiovascular wellbeing. Medical guidelines typically advise adults to limit sodium intake to approximately two grams daily, yet many processed foods contain substantially higher concentrations. The correspondent monitored his body's immediate responses, documenting how excess salt affects fluid balance and blood pressure levels. This practical demonstration illustrates broader public health concerns regarding hidden sodium in everyday meals. Healthcare professionals repeatedly warn that prolonged overconsumption of sodium significantly increases the risk of developing hypertension, a condition that strains the heart and circulatory system. Such journalistic experiments help publicise often-overlooked nutritional information.",
-      "vocabulary": [
-        {
-          "word": "sodium",
-          "meaning": "the chemical element found in salt that is essential but harmful in excess",
-          "example": "Health authorities recommend limiting sodium intake to reduce cardiovascular risk."
-        },
-        {
-          "word": "cardiovascular",
-          "meaning": "relating to the heart and blood vessels",
-          "example": "Excessive salt consumption can lead to serious cardiovascular complications."
-        },
-        {
-          "word": "hypertension",
-          "meaning": "abnormally high blood pressure, a common health condition",
-          "example": "Doctors frequently advise reducing salt to manage hypertension."
-        },
-        {
-          "word": "dietary",
-          "meaning": "related to the food and drink consumed by a person",
-          "example": "Dietary habits play a crucial role in determining long-term health outcomes."
-        },
-        {
-          "word": "recommended intake",
-          "meaning": "the suggested amount considered safe or beneficial for consumption",
-          "example": "The recommended daily intake of sodium is approximately two grams for adults."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What was the main purpose of Gallagher's experiment with the saltiest sandwich?",
-          "answer": "To discover how excessive salt consumption affects the human body by exceeding the recommended daily limit in one meal."
-        },
-        {
-          "question": "What health condition is most directly associated with prolonged overconsumption of sodium, according to medical professionals?",
-          "answer": "Hypertension, which causes strain on the heart and circulatory system."
-        },
-        {
-          "question": "In the context of the passage, what does 'hidden sodium' in paragraph three refer to?",
-          "answer": "Salt content that consumers are unaware of because it is present in processed and everyday foods without obvious indication."
-        }
-      ],
-      "writingPrompt": "In many countries, excessive salt consumption has become a significant public health concern. Some people argue that governments should implement stricter regulations on salt content in processed foods, while others believe individuals should be responsible for making their own dietary choices. Discuss both views and give your own opinion.",
-      "listeningText": "Good evening, I'm James Gallagher, and tonight I want to share an eye-opening experiment I conducted with my health. I tried the so-called saltiest sandwich in the United Kingdom. You might wonder why anyone would voluntarily exceed the recommended daily sodium limit. The answer is simple: I wanted to understand exactly what happens inside our bodies when we consume too much salt. Medical guidelines suggest adults should not exceed two grams of sodium daily. However, this single sandwich contained nearly three times that amount. Within hours of eating, I noticed my body responding in various ways. My blood pressure readings became noticeably elevated. Healthcare professionals have long warned that such spikes, when occurring regularly, can lead to serious cardiovascular problems. This experiment demonstrates why public health campaigns increasingly focus on raising awareness about hidden salt in our daily diets.",
-      "createdAt": "2026-05-16T23:47:23.338Z",
       "aiSource": "minimax"
     }
   ]
