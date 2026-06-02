@@ -1,7 +1,147 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-01T00:04:38.599Z",
+  "updatedAt": "2026-06-02T00:10:42.605Z",
   "items": [
+    {
+      "id": "news-2026-06-02-1-third-of-people-say-uni-degree-not-worth-it-as-student-loan-",
+      "date": "2026-06-02",
+      "title": "Third of people say uni degree not worth it, as student loan inquiry begins",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/c2e29gk73rjo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-01T23:09:45.000Z",
+      "topic": "<one of the 6>",
+      "originalSummary": "MPs will hear the concerns of graduates about the size of their student debts, and the interest rates.",
+      "learningSummary": "<120-180 English words>",
+      "vocabulary": [
+        {
+          "word": "",
+          "meaning": "",
+          "example": ""
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "",
+          "answer": ""
+        }
+      ],
+      "writingPrompt": "<Task 2 question>",
+      "listeningText": "<120-180 English words for TTS>",
+      "createdAt": "2026-06-02T00:10:12.054Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-02-2-how-confused-ai-rollout-hurts-firms-and-baffles-staff",
+      "date": "2026-06-02",
+      "title": "How 'confused' AI rollout hurts firms and baffles staff",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/c74d1ydv01eo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-01T23:05:11.000Z",
+      "topic": "technology",
+      "originalSummary": "Some firms are putting pressure on staff to use AI, but have not thought through their AI rollout.",
+      "learningSummary": "The rapid adoption of artificial intelligence systems across industries has created significant operational challenges for businesses worldwide. Many organisations are mandating employee engagement with AI tools without establishing adequate training frameworks or strategic objectives. This disjointed approach has resulted in workforce confusion, as staff members struggle to understand how these technologies align with their existing responsibilities. Industry experts note that without clear implementation guidelines, employees experience heightened uncertainty regarding their roles and performance expectations. Furthermore, companies that deploy AI systems prematurely often face diminished productivity rather than anticipated efficiency gains. The disconnect between corporate directives and practical execution suggests that organisational leadership must prioritise comprehensive planning before technological integration. Successful AI implementation requires not only appropriate infrastructure but also sustained professional development programmes to ensure staff competency and confidence in emerging digital environments.",
+      "vocabulary": [
+        {
+          "word": "integration",
+          "meaning": "the process of combining different elements into a unified whole, particularly in business contexts where new technology is merged with existing operations",
+          "example": "The integration of AI systems into daily workflows demands careful change management strategies."
+        },
+        {
+          "word": "rollout",
+          "meaning": "the phased introduction or launch of a new product, service, or system across an organisation or market",
+          "example": "The company's hasty rollout of AI tools left many employees unprepared for their new responsibilities."
+        },
+        {
+          "word": "competency",
+          "meaning": "the demonstrated ability to perform tasks or duties to a required standard, often referring to professional skills in workplace contexts",
+          "example": "Employers increasingly require digital competency as a fundamental prerequisite for modern roles."
+        },
+        {
+          "word": "ambiguous",
+          "meaning": "unclear, vague, or open to multiple interpretations; lacking precision or definiteness",
+          "example": "The ambiguous instructions provided by management contributed significantly to staff confusion."
+        },
+        {
+          "word": "imperative",
+          "meaning": "something that is urgent, essential, or absolutely necessary; a pressing priority requiring immediate action",
+          "example": "It is imperative that organisations address training gaps before deploying advanced AI systems."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what is the primary consequence of organisations failing to plan their AI implementation thoroughly?",
+          "answer": "Organisations experience significant workforce confusion, as staff members struggle to understand how AI technologies align with their existing responsibilities and performance expectations."
+        },
+        {
+          "question": "It can be inferred from the text that companies rushing to adopt AI without proper infrastructure are likely to experience which of the following?",
+          "answer": "Decreased productivity rather than the efficiency improvements they anticipated, suggesting that premature technological deployment proves counterproductive."
+        },
+        {
+          "question": "In the context of the passage, what does the word 'disjointed' most closely mean?",
+          "answer": "Lacking coherence or logical connection; fragmented in approach, indicating that the AI implementation lacks proper coordination and planning."
+        }
+      ],
+      "writingPrompt": "Some companies are pushing employees to adopt artificial intelligence tools before adequate preparation has been completed. While this approach may seem beneficial for remaining competitive, the negative impacts on workforce confidence and productivity are considerable. Discuss both perspectives and offer your own view on how organisations should proceed with AI integration.",
+      "listeningText": "Many technology commentators have observed a troubling pattern in contemporary business environments, where organisations mandate AI adoption without establishing appropriate support structures. Employees report feeling overwhelmed by unclear expectations and insufficient training, leading to frustration rather than productivity gains. The core issue appears to be a disconnect between executive enthusiasm for technological innovation and ground-level implementation realities. Experts emphasise that successful AI integration requires comprehensive change management programmes, ongoing professional development, and realistic timelines for staff adaptation. Without these essential components, companies risk creating additional problems rather than solving existing ones. The challenge lies in balancing technological advancement with human-centred implementation strategies that respect workforce capabilities and limitations.",
+      "createdAt": "2026-06-02T00:10:22.661Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-02-3-wildlife-park-welcomes-mischievous-bush-dogs",
+      "date": "2026-06-02",
+      "title": "Wildlife Park welcomes mischievous bush dogs",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/videos/c759pd9gqyko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-01T14:33:20.000Z",
+      "topic": "environment",
+      "originalSummary": "Four bush dogs are the newest mischievous residents at Lake District Wildlife Park.",
+      "learningSummary": "(Mock learning summary based on the headline.) Wildlife Park welcomes mischievous bush dogs. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Wildlife Park welcomes mischievous bush dogs. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-02T00:10:42.603Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-06-01-1-killer-fungus-could-be-good-news-for-habitats-decimated-by-i",
       "date": "2026-06-01",
@@ -1484,174 +1624,6 @@
       "writingPrompt": "Modern university students frequently express concerns about artificial intelligence and its potential to disrupt employment markets. Some argue that educational institutions bear primary responsibility for preparing young people to navigate technological changes, while others believe this duty lies with governmental bodies. Discuss both views and give your own opinion.",
       "listeningText": "A recent investigation by King's College London has uncovered troubling projections among Britain's university student population. Researchers discovered that around thirty-three percent of higher education students anticipate artificial intelligence will generate employment losses so severe that they could destabilise communities through widespread social conflict. The findings appear paradoxical since students constitute the most intensive consumers of AI services in the country. Data shows that nearly four out of five university students interact with AI platforms monthly, a figure dramatically exceeding the rate among employed adults, where fewer than half report equivalent usage. A substantial minority of students, exceeding one quarter, engage with AI on a daily basis. Perhaps most strikingly, the broader British population demonstrates considerable hesitation, with approximately half indicating preference for limiting their engagement with artificial intelligence technologies altogether.",
       "createdAt": "2026-05-20T00:00:04.174Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-17-1-new-cancer-test-makes-me-feel-women-s-health-matters",
-      "date": "2026-05-17",
-      "title": "'New cancer test makes me feel women's health matters'",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/ckgp0gedjk3o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-17T05:37:49.000Z",
-      "topic": "health",
-      "originalSummary": "A patient praises a new test for womb cancer being trialled at hospitals in Suffolk and Essex.",
-      "learningSummary": "A new diagnostic test for gynaecological cancer is currently being evaluated at medical facilities in Suffolk and Essex. One patient who participated in the trial has expressed strong approval of the screening procedure, stating that it demonstrates increased attention to women's health issues. Womb cancer, also known as endometrial cancer, can be difficult to detect in its early stages, making promising developments in screening technology particularly significant. The hospitals involved are collecting data to determine whether the test could be implemented more widely within the National Health Service. Medical professionals emphasise that early detection dramatically improves treatment outcomes for patients. This initiative represents a promising step forward in addressing gaps that have historically existed in women's diagnostic healthcare.",
-      "vocabulary": [
-        {
-          "word": "diagnostic",
-          "meaning": "relating to the identification of diseases or medical conditions",
-          "example": "The diagnostic test proved highly accurate in identifying early-stage abnormalities."
-        },
-        {
-          "word": "gynaecological",
-          "meaning": "relating to the medical practice focusing on female reproductive health",
-          "example": "Gynaecological conditions often require specialised care and attention."
-        },
-        {
-          "word": "screening",
-          "meaning": "medical examinations to detect potential disease in asymptomatic individuals",
-          "example": "Regular screening programmes have significantly reduced mortality rates."
-        },
-        {
-          "word": "promising",
-          "meaning": "showing favourable signs or potential for success",
-          "example": "Early results from the clinical trial appear promising for patient outcomes."
-        },
-        {
-          "word": "endometrial",
-          "meaning": "relating to the inner lining of the uterus",
-          "example": "Endometrial cancer typically affects women post-menopause."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the information provided, which regions of England are conducting trials of the new cancer test?",
-          "answer": "Suffolk and Essex"
-        },
-        {
-          "question": "What can be inferred about the patient's attitude towards the new test based on the summary?",
-          "answer": "The patient holds a favourable opinion of the test and appreciates that it highlights the importance of addressing women's health concerns."
-        },
-        {
-          "question": "In the context of the passage, what does the word 'trialled' suggest about the status of the cancer test?",
-          "answer": "The word 'trialled' indicates that the test is still in an experimental phase and has not yet received full approval for widespread clinical use."
-        }
-      ],
-      "writingPrompt": "In recent years, healthcare systems have placed greater emphasis on addressing conditions that specifically affect women. Some argue that sufficient resources are now being allocated to women's health issues, while others believe that further investment is still required. Discuss both views and give your own opinion.",
-      "listeningText": "Medical researchers have begun evaluating an innovative screening tool designed to detect cancer of the uterus at participating hospitals across Suffolk and Essex. A woman who received the test as part of the evaluation has spoken positively about her experience, suggesting that such developments highlight how women's healthcare needs are finally receiving proper recognition. Early detection of womb cancer presents considerable challenges, which means that any promising advancement in diagnostic capabilities could prove transformative for thousands of patients. Healthcare administrators are monitoring the trial results closely to assess whether broader implementation might be feasible. Doctors note that identifying malignancies before they spread substantially increases the probability of successful intervention and recovery.",
-      "createdAt": "2026-05-17T23:53:20.374Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-17-2-living-with-pmdd-is-like-having-the-grim-reaper-visit-every-",
-      "date": "2026-05-17",
-      "title": "Living with PMDD is like having the Grim Reaper visit every month",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/cx21kypwpzno?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-16T23:17:02.000Z",
-      "topic": "health",
-      "originalSummary": "Women diagnosed with premenstrual dysphoric disorder discuss how it impacts their lives.",
-      "learningSummary": "Premenstrual dysphoric disorder (PMDD) represents a severe and often debilitating condition affecting a significant number of women worldwide. Those living with this condition describe experiencing intense emotional and physical symptoms that fundamentally disrupt their daily functioning on a monthly basis. Medical professionals recognise PMDD as a neurobiological disorder characterised by pronounced mood disturbances, including severe anxiety, depression, and irritability. Research indicates that affected individuals frequently report feeling that their experiences are invalidated by healthcare providers, family members, and colleagues who may not comprehend the seriousness of their symptoms. The condition extends beyond typical premenstrual syndrome, causing clinically significant distress and impairment in relationships, workplace performance, and overall quality of life. Advocates emphasise that increased public awareness and improved medical understanding are essential for those suffering in silence to receive appropriate diagnosis and support.",
-      "vocabulary": [
-        {
-          "word": "debilitating",
-          "meaning": "causing someone to become very weak and exhausted",
-          "example": "The debilitating nature of PMDD means many women cannot maintain regular employment during symptomatic periods."
-        },
-        {
-          "word": "exacerbate",
-          "meaning": "to make a problem or situation worse",
-          "example": "Without proper treatment, stress can exacerbate the symptoms of premenstrual dysphoric disorder."
-        },
-        {
-          "word": "stigma",
-          "meaning": "negative feelings or beliefs attached to a particular condition or characteristic",
-          "example": "The stigma surrounding menstrual health issues prevents many women from seeking necessary medical help."
-        },
-        {
-          "word": "invalidated",
-          "meaning": "to have one's feelings or experiences denied or treated as unimportant",
-          "example": "Patients frequently report feeling invalidated when healthcare providers dismiss their symptoms as merely hormonal."
-        },
-        {
-          "word": "prevalence",
-          "meaning": "the extent to which something is common or occurs frequently",
-          "example": "Medical research suggests the prevalence of PMDD affects approximately 3-8% of women of reproductive age."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what distinguishes PMDD from typical premenstrual syndrome?",
-          "answer": "PMDD causes clinically significant distress and impairment in daily functioning, extending beyond the common physical and emotional symptoms associated with regular premenstrual syndrome."
-        },
-        {
-          "question": "What can be inferred about the challenges faced by women seeking medical treatment for PMDD?",
-          "answer": "Women likely face difficulties obtaining proper diagnosis and treatment because healthcare providers may not fully understand or take their symptoms seriously."
-        },
-        {
-          "question": "What does the word 'invalidated' mean as used in the context of women with PMDD?",
-          "answer": "It means having one's feelings or experiences denied, dismissed, or treated as unimportant or not real by others."
-        }
-      ],
-      "writingPrompt": "In many countries, conditions affecting women's health such as premenstrual dysphoric disorder remain poorly understood by the general public and sometimes even by medical professionals. Discuss the advantages and disadvantages of increasing public awareness about such health issues, and suggest what specific measures could be implemented to improve diagnosis and treatment outcomes for affected individuals.",
-      "listeningText": "Premenstrual dysphoric disorder, commonly abbreviated as PMDD, affects millions of women globally yet remains widely misunderstood. Sufferers describe their monthly experience as devastating, with symptoms including severe mood swings, depression, anxiety, and physical pain that interfere with work, relationships, and daily activities. Many affected women report visiting multiple doctors before receiving an accurate diagnosis, as symptoms are often dismissed as normal menstrual discomfort. Medical experts now classify PMDD as a neurobiological condition requiring specific treatment approaches. Advocates for women's health emphasise that society must move beyond viewing menstrual issues as taboo subjects. When women feel comfortable discussing their experiences openly, they are more likely to receive appropriate medical support and understanding from their immediate social circles.",
-      "createdAt": "2026-05-17T23:53:43.345Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-17-3-experts-sound-alarm-as-north-america-s-bees-start-swarm-seas",
-      "date": "2026-05-17",
-      "title": "Experts sound alarm as North America’s bees start swarm season unusually early",
-      "source": "The Guardian - Environment",
-      "url": "https://www.theguardian.com/environment/2026/may/17/north-america-bees-early-swarm-season",
-      "publishedAt": "2026-05-17T12:00:38.000Z",
-      "topic": "environment",
-      "originalSummary": "After record losses last year, beekeepers report a warm winter has led to bees ‘waking up earlier’ this year After a series of record-breaking US heatwaves , the 2026 bee swarm season in North America has started 17 days earlier than last year, pushing beekeepers to adapt to a rapidly shifting season while raising new questions about how honeybees are responding to the climate crisis. According to a new report published by Swarmed, a tracking network of more than 10,000 beekeepers, focused on safe and ethical honeybee relocation, this year’s unusually early swarm season follows several years...",
-      "learningSummary": "North American beekeepers are confronting an unprecedented shift in seasonal patterns as honeybee swarm activity begins seventeen days ahead of schedule. The early awakening follows a record number of colony losses during the previous year and an exceptionally warm winter across the United States. According to data compiled by Swarmed, a cooperative network comprising over ten thousand beekeepers dedicated to ethical bee relocation practices, this year's accelerated timeline marks a significant deviation from historical norms. Experts caution that such dramatic changes may signal deeper ecological stress, as honeybee populations serve as critical pollinators for agricultural systems worldwide. The phenomenon has prompted urgent calls for research into how shifting climate conditions affect insect behavior and the broader implications for food security. Beekeeping communities are now being challenged to rapidly adjust their management techniques to accommodate these evolving patterns.",
-      "vocabulary": [
-        {
-          "word": "swarm",
-          "meaning": "a large group of insects, especially bees, that move together; or to gather in large numbers",
-          "example": "The early arrival of the annual swarm caught local beekeepers completely unprepared."
-        },
-        {
-          "word": "unprecedented",
-          "meaning": "never done or known before; without previous example",
-          "example": "Scientists describe the current rate of climate change as unprecedented in recorded history."
-        },
-        {
-          "word": "relocation",
-          "meaning": "the act of moving from one place to another; transferring",
-          "example": "Ethical relocation of honeybee colonies is preferred over extermination methods."
-        },
-        {
-          "word": "phenomenon",
-          "meaning": "a fact or occurrence that can be observed and studied",
-          "example": "The mass migration of birds is a fascinating natural phenomenon."
-        },
-        {
-          "word": "deviation",
-          "meaning": "a departure from what is standard, normal, or expected",
-          "example": "This year's temperature deviation from seasonal averages has surprised meteorologists."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, how many days earlier did the 2026 bee swarm season begin compared to the previous year?",
-          "answer": "The 2026 bee swarm season in North America began seventeen days earlier than the previous year."
-        },
-        {
-          "question": "What can be inferred about the long-term implications of this early swarm season for agricultural food production?",
-          "answer": "It can be inferred that if honeybee populations continue to experience disrupted seasonal cycles and declining health, the pollination services they provide to crops could be severely compromised, potentially threatening global food security."
-        },
-        {
-          "question": "In the context of the passage, what does the phrase 'sounding the alarm' most nearly mean?",
-          "answer": "The phrase means to raise urgent concern or warning about a problem, indicating that experts are expressing serious worry about the early swarm season and its connection to climate-related ecological changes."
-        }
-      ],
-      "writingPrompt": "Some experts argue that climate change is causing irreversible damage to natural ecosystems, while others believe that human intervention can still prevent the worst outcomes. Discuss both views and give your own opinion. Include relevant examples from your knowledge and experience.",
-      "listeningText": "Scientists and beekeeping professionals are raising significant concerns about changing patterns in North American bee populations. Research indicates that unusually warm winter conditions have triggered an early awakening among honeybee colonies, with swarm season beginning seventeen days ahead of the previous year. This marks the continuation of a worrying trend following last year's record losses in bee populations. The Swarmed tracking network, which monitors more than ten thousand beekeepers across the continent, has documented this shift as part of a broader pattern of ecological disruption. Experts emphasise that honeybees play an essential role in pollinating crops and maintaining biodiversity. As climate conditions continue to fluctuate unpredictably, researchers are calling for increased monitoring and new strategies to protect these vital pollinators from environmental stressors. The implications extend beyond beekeeping, touching food security and agricultural sustainability worldwide.",
-      "createdAt": "2026-05-17T23:54:57.684Z",
       "aiSource": "minimax"
     }
   ]
