@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-02T00:10:42.605Z",
+  "updatedAt": "2026-06-03T00:26:28.655Z",
   "items": [
+    {
+      "id": "news-2026-06-03-1-third-of-people-say-uni-degree-not-worth-it-as-student-loan-",
+      "date": "2026-06-03",
+      "title": "Third of people say uni degree not worth it, as student loan inquiry begins",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/c2e29gk73rjo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-02T12:38:59.000Z",
+      "topic": "education",
+      "originalSummary": "MPs will hear the concerns of graduates about the size of their student debts, and the interest rates.",
+      "learningSummary": "A UK parliamentary inquiry is set to examine growing dissatisfaction among graduates regarding the size of their student debts and the interest rates applied to them. According to recent polling, approximately one third of people now believe that obtaining a university degree does not represent a worthwhile investment. MPs are expected to hear testimony from graduates who are struggling under the weight of what many describe as a burdensome financial obligation. The inquiry will subject the current student loan system to close scrutiny, focusing specifically on the affordability of repayment terms and the long-term economic consequences for borrowers. Critics argue that the escalating cost of higher education has made it increasingly difficult for young people to achieve financial stability after graduation, raising fundamental questions about whether universities themselves bear any responsibility for the mounting debt that their alumni carry. The findings of the inquiry are anticipated to influence future policy discussions surrounding higher education funding.",
+      "vocabulary": [
+        {
+          "word": "scrutiny",
+          "meaning": "careful and detailed examination",
+          "example": "The government's education policy will come under parliamentary scrutiny next month."
+        },
+        {
+          "word": "burdensome",
+          "meaning": "causing difficulty or heavy worry",
+          "example": "Many graduates describe their student loans as a burdensome financial obligation."
+        },
+        {
+          "word": "indebted",
+          "meaning": "owing money or gratitude",
+          "example": "Graduates often remain heavily indebted for several years after leaving university."
+        },
+        {
+          "word": "worthwhile",
+          "meaning": "sufficiently valuable to justify the effort or cost",
+          "example": "Students must consider whether a degree will prove worthwhile in the job market."
+        },
+        {
+          "word": "repayable",
+          "meaning": "capable of being paid back over time",
+          "example": "The loans are repayable only after the graduate's income exceeds a certain threshold."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the text, which group of people will be testifying before the parliamentary inquiry?",
+          "answer": "Graduates who are concerned about the size of their student debts and the interest rates applied to them will be heard by MPs."
+        },
+        {
+          "question": "What can be inferred about the financial situation of graduates based on the passage?",
+          "answer": "It can be inferred that many graduates experience significant financial difficulty and frustration as a result of their student loans, which continue to accumulate interest over time."
+        },
+        {
+          "question": "What does the word 'scrutiny' mean in the context of the passage?",
+          "answer": "In this context, 'scrutiny' refers to a close and formal examination, specifically the parliamentary inquiry that will investigate the student loan system and its impact on graduates."
+        }
+      ],
+      "writingPrompt": "In recent years, university graduates in many countries have been leaving education with large debts. Some people argue that universities should be held partly responsible for this situation. Discuss both views and give your own opinion.",
+      "listeningText": "A UK parliamentary inquiry is examining whether a university education represents good value for money, as growing numbers of graduates express concern over the size of their student debts. MPs will hear from graduates who say their loans are becoming increasingly difficult to manage, partly due to high interest rates. Recent surveys indicate that about one third of the population now questions whether a degree is truly worth the financial investment required. The inquiry aims to subject the current student loan system to close scrutiny, exploring whether universities share any responsibility for the mounting debt burden carried by their alumni. Findings from the investigation are expected to inform future debates about higher education funding and whether reforms are needed to make university more affordable.",
+      "createdAt": "2026-06-03T00:25:57.260Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-03-2-next-el-ni-o-could-be-strongest-in-decades",
+      "date": "2026-06-03",
+      "title": "Next El Niño could be strongest in decades",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/videos/c8e8zzw30zyo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-02T14:50:54.000Z",
+      "topic": "environment",
+      "originalSummary": "A new phase of the natural El Niño weather pattern could begin in a matter of weeks, the UN has warned, boosting temperatures on a planet already under strain from climate change.",
+      "learningSummary": "The United Nations has issued a serious warning regarding an impending natural weather cycle that may develop within weeks. Experts indicate that the anticipated El Niño event could become one of the most potent ever recorded, significantly elevating global temperatures at a critical juncture. This forecast is particularly alarming given that Earth's climate systems are already experiencing substantial pressure from ongoing climate change. The convergence of these two forces—a formidable El Niño combined with pre-existing warming trends—presents a worrying scenario for meteorologists and environmental scientists alike. Such natural oscillations typically produce extreme weather conditions across multiple continents, manifesting as prolonged droughts, devastating floods, and disrupted precipitation patterns. The timing of this potential event could compound existing environmental challenges, potentially accelerating the impacts of global warming on ecosystems, agriculture, and human populations worldwide.",
+      "vocabulary": [
+        {
+          "word": "impending",
+          "meaning": "about to occur; imminent",
+          "example": "Scientists issued early warnings about the impending El Niño event months before it developed."
+        },
+        {
+          "word": "convergence",
+          "meaning": "the coming together of different factors or forces",
+          "example": "The convergence of natural variability and human activity has intensified climate-related challenges."
+        },
+        {
+          "word": "oscillation",
+          "meaning": "a regular back-and-forth movement or variation",
+          "example": "El Niño represents an oscillation in ocean temperatures that affects weather patterns globally."
+        },
+        {
+          "word": "manifest",
+          "meaning": "to display or show clearly",
+          "example": "The impacts of climate change manifest differently across various regions and ecosystems."
+        },
+        {
+          "word": "compounds",
+          "meaning": "makes a problem or situation worse",
+          "example": "Rising sea levels compounds the threat to coastal communities during extreme weather events."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the UN warning, what characteristic might the upcoming El Niño event possess that distinguishes it from previous occurrences?",
+          "answer": "The UN warned that the new El Niño could become one of the most powerful events in decades, suggesting exceptional intensity compared to historical patterns."
+        },
+        {
+          "question": "Why might climate scientists find this particular El Niño event especially concerning given current global conditions?",
+          "answer": "Scientists are particularly concerned because the El Niño would occur when Earth is already under strain from climate change, meaning its warming effects would compound existing environmental pressures rather than act alone."
+        },
+        {
+          "question": "What does the word 'strain' convey about the planet's current condition in relation to climate change?",
+          "answer": "The word 'strain' implies that the planet is already under significant pressure and stress from climate change, suggesting that ecosystems and weather systems are struggling to cope with existing conditions."
+        }
+      ],
+      "writingPrompt": "In many countries, extreme weather events are becoming more frequent and severe. Some experts attribute this trend to natural weather cycles such as El Niño, while others believe human-induced climate change is the primary cause. Discuss both views and give your own opinion on which factor is more responsible for the increase in extreme weather events. Support your argument with specific reasons and examples.",
+      "listeningText": "The United Nations has raised significant concerns about a natural weather phenomenon that could emerge very soon. According to scientists, a new phase of the El Niño cycle may begin within weeks and could develop into one of the most powerful events in decades. What makes this particularly troubling is that our planet is already experiencing considerable stress from climate change. When a strong El Niño event coincides with existing warming trends, the combined effects can be devastating. These weather patterns typically bring severe conditions including prolonged droughts, excessive rainfall, and disrupted agricultural cycles. Coastal areas may face intensified storms, while inland regions could suffer from water shortages. Climate researchers worldwide are carefully monitoring ocean temperatures in the Pacific to track this developing situation and assess its potential consequences for communities across the globe.",
+      "createdAt": "2026-06-03T00:26:03.970Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-03-3-could-lifting-weights-actually-help-you-live-longer",
+      "date": "2026-06-03",
+      "title": "Could lifting weights actually help you live longer?",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/c0r2lekenlpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-02T23:44:13.000Z",
+      "topic": "health",
+      "originalSummary": "Regular weight training can significantly reduce the risk of early death, research suggests.",
+      "learningSummary": "Recent scientific investigations have uncovered compelling evidence that engaging in resistance training on a consistent basis can substantially decrease the likelihood of premature mortality. According to findings published in leading medical journals, individuals who incorporate weightlifting into their weekly routines demonstrate notably improved health outcomes compared to those who remain physically inactive. The research indicates that such exercise contributes to enhanced musculoskeletal strength, increased metabolic efficiency, and better cardiovascular function. Experts suggest that these benefits extend across various age groups and demographic categories. Furthermore, the protective effects appear to be cumulative, meaning that longer periods of regular participation correlate with greater reductions in mortality risk. Medical professionals increasingly recommend that adults include resistance exercises alongside aerobic activities as part of a comprehensive approach to preventive healthcare. This evidence challenges previous assumptions that cardiovascular exercise alone represents sufficient protection against chronic diseases.",
+      "vocabulary": [
+        {
+          "word": "premature mortality",
+          "meaning": "death occurring earlier than the expected natural lifespan",
+          "example": "The study found that sedentary lifestyles contribute significantly to premature mortality in developed nations."
+        },
+        {
+          "word": "musculoskeletal",
+          "meaning": "relating to or affecting the muscles and skeleton of the body",
+          "example": "Regular resistance training strengthens musculoskeletal tissues and reduces the risk of age-related frailty."
+        },
+        {
+          "word": "metabolic efficiency",
+          "meaning": "the rate at which the body converts food into energy and processes waste",
+          "example": "Weightlifting improves metabolic efficiency, helping individuals maintain healthier body compositions."
+        },
+        {
+          "word": "cumulative",
+          "meaning": "increasing by successive additions; building up over time",
+          "example": "The cumulative effect of years spent exercising can add significant years to one's life expectancy."
+        },
+        {
+          "word": "preventive healthcare",
+          "meaning": "measures taken to prevent disease rather than treating it after occurrence",
+          "example": "Public health campaigns increasingly emphasize preventive healthcare strategies to reduce burden on medical systems."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what specific health improvements are associated with resistance training?",
+          "answer": "The passage states that resistance training contributes to enhanced musculoskeletal strength, increased metabolic efficiency, and better cardiovascular function."
+        },
+        {
+          "question": "What can be inferred about the relationship between duration of exercise practice and health benefits?",
+          "answer": "It can be inferred that the protective effects of weight training are cumulative, meaning that individuals who engage in resistance training for longer periods experience greater reductions in mortality risk."
+        },
+        {
+          "question": "In the context of the passage, what does 'comprehensive approach' most nearly mean?",
+          "answer": "In this context, 'comprehensive approach' refers to a complete or full strategy that includes multiple elements—in this case, combining resistance exercises with aerobic activities for optimal health protection."
+        }
+      ],
+      "writingPrompt": "Some medical experts argue that resistance training should be prescribed as a standard preventive measure for patients of all ages, similar to recommendations for aerobic exercise. To what extent do you agree or disagree with this viewpoint? Support your position with relevant examples and evidence from your own knowledge or experience.",
+      "listeningText": "Let me tell you about some fascinating research regarding weightlifting and longevity. Scientists have discovered that people who regularly lift weights tend to live significantly longer than those who do not engage in any form of resistance training. This isn't just about building big muscles—it's actually about fundamental health benefits that affect your entire body. When you lift weights, you're not only strengthening your muscles and bones, but you're also improving how your body processes energy and manages blood circulation. The interesting finding is that these benefits build up over time. The longer you maintain a weightlifting routine, the more protection you seem to gain against early death. What makes this particularly noteworthy is that researchers found these positive effects across different age groups and populations. So if you've been wondering whether hitting the gym is worth the effort, this research suggests the answer is definitely yes—especially when combined with other forms of exercise as part of an overall healthy lifestyle.",
+      "createdAt": "2026-06-03T00:26:28.653Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-06-02-1-third-of-people-say-uni-degree-not-worth-it-as-student-loan-",
       "date": "2026-06-02",
@@ -1456,174 +1624,6 @@
       "writingPrompt": "Some experts argue that schools should bear responsibility for the growing unemployment among young people, while others believe that societal factors beyond educational institutions are the primary causes. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
       "listeningText": "Education specialists are raising alarms about the disconnect between school programmes and employment outcomes in the United Kingdom. A former government advisor has claimed that schools are essentially preparing students for joblessness rather than career success. This commentator, who has served in advisory roles for senior politicians, has urged authorities to take strong action against what he calls a national disgrace affecting young people. His recommendations include preventing teenagers from using popular online platforms and completely overhauling how schools prepare students for working life. The advisor highlighted that thousands of young people are currently classified as neither in education nor employment, representing a significant waste of human potential. Industry observers suggest that the gap between classroom learning and workplace expectations continues to widen, leaving many graduates unprepared for professional environments. Educational institutions must reconsider their curricula to ensure students develop practical competencies alongside academic qualifications.",
       "createdAt": "2026-05-21T23:59:31.794Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-19-1-satellites-and-ai-used-to-track-uk-hedgehogs-in-bid-to-slow-",
-      "date": "2026-05-19",
-      "title": "Satellites and AI used to track UK hedgehogs in bid to slow decline",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/c202g60qrlpo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-18T23:04:03.000Z",
-      "topic": "environment",
-      "originalSummary": "Researchers hope the project will also help to identify barriers preventing hedgehogs from finding food and mates in the wild.",
-      "learningSummary": "Scientists in the United Kingdom have launched an innovative initiative to monitor hedgehog populations across the country using advanced satellite technology and artificial intelligence systems. The project aims to gather comprehensive data on hedgehog movements and behaviour patterns in both rural and urban environments. Conservation experts believe this technological approach will provide unprecedented insights into the obstacles hedgehogs encounter when seeking food sources and breeding opportunities. By analysing the collected information, researchers expect to develop more effective strategies for protecting these declining mammals. The initiative represents a significant advancement in wildlife conservation methodology, combining modern technology with traditional ecological research. Experts involved in the project emphasise that understanding barrier locations could help authorities design better-connected habitats for hedgehog populations.",
-      "vocabulary": [
-        {
-          "word": "population decline",
-          "meaning": "a reduction in the number of individuals of a particular species in a given area over time",
-          "example": "The population decline of hedgehogs has raised concerns among wildlife conservationists across Europe."
-        },
-        {
-          "word": "conservation efforts",
-          "meaning": "organised activities undertaken to protect natural environments and prevent species extinction",
-          "example": "Local conservation efforts have successfully increased hedgehog awareness in rural communities."
-        },
-        {
-          "word": "habitat fragmentation",
-          "meaning": "the process by which large areas of habitat are divided into smaller, isolated patches",
-          "example": "Habitat fragmentation caused by road construction has severely impacted hedgehog movement patterns."
-        },
-        {
-          "word": "monitoring",
-          "meaning": "systematic observation and recording of changes in wildlife populations or environments",
-          "example": "Continuous monitoring of hedgehog activity provides valuable data for conservation strategies."
-        },
-        {
-          "word": "unprecedented",
-          "meaning": "something that has never happened or been done before, novel or unique in nature",
-          "example": "The use of AI for tracking hedgehogs represents an unprecedented approach to wildlife research."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what specific types of technology are being employed in the hedgehog tracking initiative?",
-          "answer": "Satellite technology and artificial intelligence systems are being used to monitor hedgehog populations across the United Kingdom."
-        },
-        {
-          "question": "It can be inferred from the passage that hedgehog population decline may be linked to which of the following factors?",
-          "answer": "The passage suggests that hedgehogs face obstacles when seeking food and mates, which implies that environmental barriers and habitat issues are contributing factors to their decline."
-        },
-        {
-          "question": "In the context of the passage, what does the word 'unprecedented' most nearly mean?",
-          "answer": "C - Something that has never happened before, indicating that the AI and satellite approach represents a novel methodology in wildlife conservation."
-        }
-      ],
-      "writingPrompt": "Some experts believe that using advanced technology, such as artificial intelligence and satellite monitoring, is the most effective way to protect endangered wildlife species. Others argue that traditional conservation methods, like creating protected areas and community education programmes, remain more reliable. Discuss both views and give your own opinion. Give reasons for your answer and include relevant examples from your own knowledge or experience. Write at least 250 words.",
-      "listeningText": "British researchers have begun using satellites and artificial intelligence to study hedgehog populations throughout the United Kingdom. This groundbreaking project seeks to understand why hedgehog numbers have decreased significantly over recent decades. The technology allows scientists to track individual hedgehogs and observe their daily movements across different terrains. By collecting this information, conservationists hope to identify physical barriers that prevent hedgehogs from accessing food and finding mates. The data gathered will inform future conservation strategies, potentially including the creation of wildlife corridors that connect fragmented habitats. Scientists involved in the project say the technology offers precision previously impossible with traditional observation methods alone.",
-      "createdAt": "2026-05-19T23:59:16.578Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-19-2-uk-should-set-maximum-working-temperature-rules-advisers-say",
-      "date": "2026-05-19",
-      "title": "UK should set maximum working temperature rules, advisers say",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/cm2p1j4y0kro?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-19T23:40:12.000Z",
-      "topic": "work",
-      "originalSummary": "Successive governments have failed to prepare the UK for extreme heat, the climate watchdog says.",
-      "learningSummary": "The UK Climate Change Committee, the government's official environmental advisory body, has urged legislators to introduce legally binding maximum temperature limits for indoor workplaces. Their report highlights that successive administrations have neglected to implement adequate protections for employees as summer heatwaves become increasingly severe and frequent due to climate change. The committee emphasises that current workplace safety guidance lacks enforceability and is insufficient to safeguard workers from heat-related health risks such as exhaustion, fainting, and reduced cognitive performance. Experts contend that without mandatory thresholds, millions of employees remain exposed to dangerous conditions, particularly those in professions involving physical labour or inadequate ventilation. The advisory group further warns that without prompt legislative action, both public health and economic productivity will suffer compounding consequences as temperatures continue to rise across the nation.",
-      "vocabulary": [
-        {
-          "word": "mandatory",
-          "meaning": "required by law or rules; obligatory",
-          "example": "The introduction of mandatory rest breaks could significantly reduce heat-related illnesses among outdoor workers."
-        },
-        {
-          "word": "vulnerable",
-          "meaning": "open to harm or damage; susceptible",
-          "example": "Employees working in factories without air conditioning are particularly vulnerable to heat stress during summer months."
-        },
-        {
-          "word": "mitigation",
-          "meaning": "the action of reducing the severity, seriousness, or impact of something",
-          "example": "Effective mitigation strategies include providing shaded breaks, hydration stations, and flexible working hours during extreme heat."
-        },
-        {
-          "word": "legislation",
-          "meaning": "laws enacted by a governing body",
-          "example": "New legislation setting a maximum indoor temperature threshold would give health and safety inspectors clear standards to enforce."
-        },
-        {
-          "word": "precedent",
-          "meaning": "an earlier event or action that serves as a guide or example for future cases",
-          "example": "Several European countries have already established legal heat limits, providing a useful precedent for UK policymakers."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the Climate Change Committee, what weakness exists in the UK's current approach to protecting workers from extreme heat?",
-          "answer": "The committee states that successive governments have failed to prepare the UK for extreme heat and that existing workplace safety guidance is not legally enforceable."
-        },
-        {
-          "question": "What inference can reasonably be drawn about the likely consequences if the recommended legislation is not introduced?",
-          "answer": "If mandatory maximum temperature limits are not introduced, workers will remain inadequately protected, leading to increased heat-related health problems and reduced productivity as heatwaves become more frequent."
-        },
-        {
-          "question": "What does the word 'mandatory' mean as used in the context of the climate committee's recommendations?",
-          "answer": "It means legally required or obligatory — the committee is calling for enforceable legal rules rather than voluntary workplace guidelines."
-        }
-      ],
-      "writingPrompt": "Some experts believe that the UK government should introduce legally enforceable maximum temperature limits for indoor workplaces, while others argue that individual employers should be left to manage heat-related risks independently. Discuss both views and give your own opinion.",
-      "listeningText": "The UK Climate Change Committee has called on the government to establish legally enforceable maximum temperature thresholds for indoor working environments. In a formal statement, the advisory body noted that consecutive governments have not taken sufficient action to protect workers as climate-driven heatwaves grow more intense and prolonged. The committee's report argues that voluntary guidance alone is inadequate for safeguarding public health and productivity. It recommends introducing legislation similar to existing minimum temperature standards, thereby providing inspectors with clear, enforceable benchmarks. The advisory group stressed that failure to act promptly would expose millions of workers, particularly those in manual or poorly ventilated roles, to escalating health risks. The report has prompted calls from trade unions for urgent parliamentary debate.",
-      "createdAt": "2026-05-19T23:59:31.867Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-19-3-third-of-university-students-in-great-britain-think-ai-job-l",
-      "date": "2026-05-19",
-      "title": "Third of university students in Great Britain think AI job losses will cause social unrest, poll finds",
-      "source": "The Guardian - Education",
-      "url": "https://www.theguardian.com/technology/2026/may/19/third-university-students-think-ai-job-losses-cause-social-unrest-poll",
-      "publishedAt": "2026-05-18T23:01:00.000Z",
-      "topic": "education",
-      "originalSummary": "Tracker of attitudes towards artificial intelligence also finds almost half of the public would prefer to avoid it One in three university students think AI will wipe out jobs so rapidly it will trigger civil unrest, according to a survey by King’s College London (KCL). Students are among the heaviest users of AI, the poll found, with 77% using it at least a few times a month – compared with 46% of workers – and 27% using it daily or almost daily. Continue reading...",
-      "learningSummary": "A comprehensive survey conducted by King's College London has revealed significant concerns among British university students regarding artificial intelligence's impact on employment. The research indicates that approximately one-third of higher education students believe AI will eliminate jobs at such an alarming rate that it could precipitate civil unrest within society. This anxiety persists despite the fact that students represent some of the most active users of AI tools in Britain. The poll demonstrates that 77% of university students utilise AI platforms at least several times monthly, substantially higher than the 46% of general workers who report similar usage patterns. Furthermore, more than a quarter of students engage with AI daily or near-daily. The study also highlighted that nearly half of the British public would prefer to minimise their interaction with artificial intelligence technologies, suggesting widespread ambivalence about technological integration across different demographic groups.",
-      "vocabulary": [
-        {
-          "word": "precipitate",
-          "meaning": "to cause something to happen suddenly or immediately",
-          "example": "The rapid advancement of automation could precipitate widespread job losses across multiple sectors."
-        },
-        {
-          "word": "unprecedented",
-          "meaning": "never having been done, seen, or known before",
-          "example": "The pace of technological change is unprecedented in human history, leaving policymakers struggling to keep pace."
-        },
-        {
-          "word": "demographic",
-          "meaning": "a particular sector of a population defined by characteristics such as age or income",
-          "example": "Different demographics exhibit varying attitudes towards the adoption of emerging technologies."
-        },
-        {
-          "word": "ambivalence",
-          "meaning": "mixed or contradictory feelings about something",
-          "example": "There is considerable ambivalence among the public regarding the long-term benefits and risks of artificial intelligence."
-        },
-        {
-          "word": "incorporation",
-          "meaning": "the action of including or integrating something as part of a whole",
-          "example": "The incorporation of AI tools into academic work has raised questions about intellectual honesty and learning outcomes."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the survey, what proportion of university students believe AI could result in civil unrest, and how does this compare with general worker usage rates?",
-          "answer": "One in three university students, or approximately one-third, believe AI will cause civil unrest. In contrast, while 77% of university students use AI at least several times monthly, only 46% of general workers report comparable usage patterns."
-        },
-        {
-          "question": "What can be inferred about university students' relationship with AI based on the survey findings?",
-          "answer": "University students appear to maintain a paradoxical relationship with AI: despite expressing significant anxiety about job displacement and social upheaval, they remain among the heaviest users of AI technologies, suggesting familiarity with these tools does not necessarily reduce concerns about their societal impact."
-        },
-        {
-          "question": "In the context of the passage, what does the phrase 'precipitate civil unrest' most nearly mean?",
-          "answer": "The phrase means to trigger or spark social disorder and public disturbance, suggesting that AI-driven job losses could cause widespread social instability."
-        }
-      ],
-      "writingPrompt": "Modern university students frequently express concerns about artificial intelligence and its potential to disrupt employment markets. Some argue that educational institutions bear primary responsibility for preparing young people to navigate technological changes, while others believe this duty lies with governmental bodies. Discuss both views and give your own opinion.",
-      "listeningText": "A recent investigation by King's College London has uncovered troubling projections among Britain's university student population. Researchers discovered that around thirty-three percent of higher education students anticipate artificial intelligence will generate employment losses so severe that they could destabilise communities through widespread social conflict. The findings appear paradoxical since students constitute the most intensive consumers of AI services in the country. Data shows that nearly four out of five university students interact with AI platforms monthly, a figure dramatically exceeding the rate among employed adults, where fewer than half report equivalent usage. A substantial minority of students, exceeding one quarter, engage with AI on a daily basis. Perhaps most strikingly, the broader British population demonstrates considerable hesitation, with approximately half indicating preference for limiting their engagement with artificial intelligence technologies altogether.",
-      "createdAt": "2026-05-20T00:00:04.174Z",
       "aiSource": "minimax"
     }
   ]
