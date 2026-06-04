@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-03T00:26:28.655Z",
+  "updatedAt": "2026-06-04T00:28:50.744Z",
   "items": [
+    {
+      "id": "news-2026-06-04-1-third-of-people-say-uni-degree-not-worth-it-as-student-loan-",
+      "date": "2026-06-04",
+      "title": "Third of people say uni degree not worth it, as student loan inquiry begins",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/c2e29gk73rjo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-02T12:38:59.000Z",
+      "topic": "education",
+      "originalSummary": "MPs will hear the concerns of graduates about the size of their student debts, and the interest rates.",
+      "learningSummary": "A parliamentary inquiry has been launched to examine whether a university education provides adequate value for the substantial financial commitment required from students. MPs are set to hear testimony from graduates who are struggling with the burden of substantial loan repayments and the accumulation of interest on their debts. Research suggests that approximately one third of the population now questions the worth of pursuing a university qualification, particularly when considering the long-term financial implications of tuition fees and the cost of living while studying. The inquiry comes at a time when graduates are increasingly concerned about the level of debt they accumulate during their studies and the length of time required to repay these financial obligations. Education officials maintain that higher education remains a valuable investment, while opponents argue that the mounting financial burden may discourage individuals from less affluent backgrounds from pursuing academic qualifications.",
+      "vocabulary": [
+        {
+          "word": "inquiry",
+          "meaning": "an official investigation into a matter of public concern",
+          "example": "The parliamentary inquiry will examine the impact of rising tuition fees on graduates' financial wellbeing."
+        },
+        {
+          "word": "substantial",
+          "meaning": "large in amount or considerable in importance",
+          "example": "Graduates are finding it difficult to manage their substantial student debts after entering the workforce."
+        },
+        {
+          "word": "accumulation",
+          "meaning": "the gradual gathering or increase of something over time",
+          "example": "The accumulation of interest on student loans has significantly extended the repayment period for many graduates."
+        },
+        {
+          "word": "qualification",
+          "meaning": "a pass of a course of study that gives someone a status in their field",
+          "example": "Students are questioning whether their university qualification will lead to well-paid employment."
+        },
+        {
+          "word": "testimony",
+          "meaning": "a formal written or spoken statement giving evidence",
+          "example": "MPs will listen to the testimony of graduates who have experienced financial hardship due to student loans."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "Why might the parliamentary inquiry into student loans be considered significant for prospective university applicants?",
+          "answer": "The inquiry addresses concerns about whether a university education offers value for money, which directly impacts the decisions of people considering higher education, particularly those worried about accumulating substantial debts that may take years to repay."
+        },
+        {
+          "question": "What does the phrase 'worth it' suggest about public attitudes towards university education?",
+          "answer": "The phrase implies that a significant portion of the public now doubts whether the benefits of obtaining a degree justify the financial costs involved, including tuition fees, living expenses, and the long-term burden of debt."
+        },
+        {
+          "question": "Which word in the summary best describes the way interest on student loans builds up over time?",
+          "answer": "The word 'accumulation' best describes how interest on student loans gradually increases over the repayment period, making the overall debt larger than the original amount borrowed."
+        }
+      ],
+      "writingPrompt": "In many countries, the cost of university education has increased dramatically in recent decades, leading to concerns about the financial burden placed on students and graduates. Some people argue that the high cost of higher education makes it an unjustifiable investment, while others maintain that the long-term benefits outweigh the expenses. Discuss both views and give your own opinion.",
+      "listeningText": "A new inquiry has been launched to investigate whether university degrees represent good value for money for students taking on substantial debts. Members of parliament will hear evidence from graduates who are concerned about the size of their loans and the rates of interest applied during and after their studies. Recent surveys indicate that around one third of the general public now questions whether a university education is truly worth the investment required. Graduates often face years of repayments, and the accumulated interest can significantly increase the total amount owed. While education advocates insist that obtaining a qualification leads to better career prospects and higher earnings over time, critics suggest that the financial burden may discourage individuals from pursuing higher education, particularly those from lower-income backgrounds.",
+      "createdAt": "2026-06-04T00:28:14.088Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-04-2-phone-signal-on-trains-not-good-enough-most-of-the-time-rese",
+      "date": "2026-06-04",
+      "title": "Phone signal on trains not good enough most of the time, research says",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/c5yr1penq56o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-03T14:21:22.000Z",
+      "topic": "technology",
+      "originalSummary": "Ofcom found the major phone networks were not providing good signal on trains, and train companies were slowing down wi-fi.",
+      "learningSummary": "(Mock learning summary based on the headline.) Phone signal on trains not good enough most of the time, research says. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Phone signal on trains not good enough most of the time, research says. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-04T00:28:34.646Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-04-3-next-el-ni-o-could-be-strongest-in-decades",
+      "date": "2026-06-04",
+      "title": "Next El Niño could be strongest in decades",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/videos/c8e8zzw30zyo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-02T14:50:54.000Z",
+      "topic": "environment",
+      "originalSummary": "A new phase of the natural El Niño weather pattern could begin in a matter of weeks, the UN has warned, boosting temperatures on a planet already under strain from climate change.",
+      "learningSummary": "(Mock learning summary based on the headline.) Next El Niño could be strongest in decades. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Next El Niño could be strongest in decades. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-04T00:28:50.742Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-06-03-1-third-of-people-say-uni-degree-not-worth-it-as-student-loan-",
       "date": "2026-06-03",
@@ -1456,174 +1624,6 @@
       "writingPrompt": "In many countries, illegal waste disposal has become a serious environmental concern. Some people believe that heavy fines alone are sufficient to deter this behaviour, while others argue that imprisonment is necessary for serious offenders. Discuss both views and give your own opinion.",
       "listeningText": "The Environment Agency has published its most recent register of illegal waste disposal operations, classifying twenty-eight facilities as \"super sites.\" Each of these locations contains more than twenty thousand tonnes of accumulated waste, representing significant environmental hazards. The agency has stated that these operations cause extensive damage to ecosystems, particularly through soil degradation and water system pollution. Officials have announced that increased monitoring will be implemented, with enforcement actions planned to ensure adequate clean-up measures. This publication reflects a broader governmental shift toward stricter environmental compliance. Environmental groups have welcomed these measures, describing them as essential for holding polluters accountable and discouraging future violations of waste management legislation.",
       "createdAt": "2026-05-23T23:54:37.745Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-21-1-how-do-hurricanes-and-typhoons-form-and-is-climate-change-ma",
-      "date": "2026-05-21",
-      "title": "How do hurricanes and typhoons form and is climate change making them stronger?",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/cz913gxlw3jo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-21T15:28:27.000Z",
-      "topic": "environment",
-      "originalSummary": "These powerful tropical storms are generally becoming more intense as the world warms.",
-      "learningSummary": "(Mock learning summary based on the headline.) How do hurricanes and typhoons form and is climate change making them stronger?. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) How do hurricanes and typhoons form and is climate change making them stronger?. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-05-21T23:58:12.100Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-05-21-2-it-s-put-the-joy-levels-up-the-flood-prone-london-school-wit",
-      "date": "2026-05-21",
-      "title": "‘It’s put the joy levels up’: the flood-prone London school with a climate-adapted playground",
-      "source": "The Guardian - Education",
-      "url": "https://www.theguardian.com/environment/2026/may/21/flood-prone-london-school-climate-adapted-playground",
-      "publishedAt": "2026-05-21T14:00:31.000Z",
-      "topic": "education",
-      "originalSummary": "When pupils could no longer play outside, St John’s school in Barnet decided to act, enlisting Trees for Cities to help rethink its outside space The play area at St John’s Church of England primary in Barnet, north London, used to flood so severely it was often unusable. “It would get so bad that the children couldn’t be dismissed from the playground,” says Macci Dobie, the school’s headteacher. “We had to dismiss them from different parts of the school or, literally, parents were stepping into puddles to lift their children out of the classroom.” Because the school sits in a basin with clay...",
-      "learningSummary": "A primary school in north London has transformed its flood-prone playground into a climate-adapted outdoor space, significantly improving the experience of its students. St John’s Church of England Primary in Barnet previously faced such severe flooding that pupils could not safely use the play area. On rainy days, children were dismissed from alternative exits, and parents had to wade through standing water to collect their offspring. The school partnered with the charitable organisation Trees for Cities to redesign the site with sustainable drainage systems, native planting, and permeable surfaces capable of managing excess rainfall. The headteacher noted that the new design has substantially raised pupils' enjoyment and wellbeing. The initiative illustrates how educational institutions can respond practically to environmental challenges while simultaneously creating healthier, more engaging learning environments for children. Similar urban schools facing climate-related disruptions may find this approach a viable model for future development.",
-      "vocabulary": [
-        {
-          "word": "permeable",
-          "meaning": "allowing liquid to pass through; porous",
-          "example": "The permeable surfacing installed in the playground enables rainwater to drain naturally into the ground."
-        },
-        {
-          "word": "sustainable",
-          "meaning": "able to be maintained at a steady level without depleting resources",
-          "example": "Sustainable drainage solutions are increasingly adopted in schools to combat recurring flood problems."
-        },
-        {
-          "word": "basin",
-          "meaning": "a natural depression or area where water collects",
-          "example": "The school is situated in a basin with heavy clay soil, which prevents water from soaking away quickly."
-        },
-        {
-          "word": "initiative",
-          "meaning": "a new plan or strategy designed to address a problem",
-          "example": "The Trees for Cities partnership represents a proactive initiative to adapt the school grounds to climate change."
-        },
-        {
-          "word": "viability",
-          "meaning": "the degree to which something is practicable or feasible",
-          "example": "The project demonstrates the viability of low-cost, nature-based solutions for urban flood management."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "Why was the playground at St John’s Primary originally difficult to use during wet weather?",
-          "answer": "The playground frequently flooded so severely that children could not be dismissed from it safely, forcing the school to use alternative exits and requiring parents to walk through puddles to collect their children."
-        },
-        {
-          "question": "What inference can be drawn about the long-term educational benefits of the redesigned playground?",
-          "answer": "The inference is that the improved outdoor environment is likely to enhance pupils' physical wellbeing, mental engagement, and overall learning capacity, as the headteacher observed that the changes have significantly raised enjoyment levels among students."
-        },
-        {
-          "question": "What does the phrase 'climate-adapted playground' suggest about the purpose of the redesign in the context of the sentence it appears in?",
-          "answer": "The phrase indicates that the playground was specifically engineered to withstand and manage the effects of changing weather patterns, particularly increased rainfall, making the space functional and safe for children despite environmental pressures."
-        }
-      ],
-      "writingPrompt": "In some countries, schools are increasingly investing in infrastructure to address climate-related challenges such as flooding and heat. Some people believe that this financial investment is justified because it directly benefits students, while others argue that the money would be better spent on academic resources. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
-      "listeningText": "A London primary school has taken decisive action to combat recurrent flooding of its playground by collaborating with the environmental charity Trees for Cities. Previously, the outdoor area at St John’s Church of England Primary in Barnet became waterlogged so frequently that school routines were disrupted. On numerous occasions, children could not be released through the usual exit, and parents arriving at the school gate encountered deep puddles surrounding the building. The redesign incorporates sustainable drainage features and planting schemes that naturally absorb rainfall. Staff at the school report a remarkable improvement in pupils' happiness and physical activity levels since the work was completed. This case highlights how educational settings can successfully adapt to environmental pressures while simultaneously providing children with safer and more stimulating spaces for play and learning.",
-      "createdAt": "2026-05-21T23:59:04.352Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-21-3-schools-are-pipeline-to-joblessness-for-many-people-says-ex-",
-      "date": "2026-05-21",
-      "title": "Schools are ‘pipeline’ to joblessness for many people, says ex-Labour adviser",
-      "source": "The Guardian - Education",
-      "url": "https://www.theguardian.com/business/2026/may/21/schools-unemployment-young-people-neets-peter-hyman",
-      "publishedAt": "2026-05-21T06:00:04.000Z",
-      "topic": "work",
-      "originalSummary": "Ban social media and reform education to tackle scandal of young people not in work or study, says Peter Hyman Schools have become a “pipeline” to worklessness for a large cohort of young people in the UK, according to an influential former Labour adviser who has called for urgent action to help a “lost generation”. Peter Hyman, a former adviser to Tony Blair and Keir Starmer, told the Guardian the government should ban social media and enact radical education reform to tackle the “national scandal” of young people who are not in education, employment or training (Neet). Continue reading...",
-      "learningSummary": "A prominent political strategist has warned that Britain's educational institutions are failing to prepare young people for the workforce, effectively creating a pathway to unemployment for thousands. Peter Hyman, who has advised multiple Labour leaders, described the situation as a national crisis requiring immediate intervention. His proposed solutions include restricting access to social media platforms among young people and implementing comprehensive reforms to vocational and academic education systems. The expert emphasised that a significant portion of today's youth will become part of a lost generation unless decisive action is taken to address the growing number of individuals not engaged in education, employment, or training. Industry leaders have echoed these concerns, arguing that current educational frameworks do not adequately equip students with practical skills demanded by the modern labour market. The government faces increasing pressure to develop strategies that bridge the gap between academic achievement and career readiness.",
-      "vocabulary": [
-        {
-          "word": "pipeline",
-          "meaning": "a system or channel through which something is transmitted, often with negative connotations suggesting a factory-like processing of individuals",
-          "example": "Critics argue the education system functions merely as a pipeline to unemployment rather than a foundation for successful careers."
-        },
-        {
-          "word": "scandal",
-          "meaning": "an action or situation that arouses public outrage or indignation due to its perceived wrongdoing or negligence",
-          "example": "Experts have labeled the rise in youth unemployment a scandal that demands urgent governmental response."
-        },
-        {
-          "word": "radical",
-          "meaning": "involving fundamental and sweeping changes to existing systems or structures",
-          "example": "The adviser called for radical restructuring of educational curricula to address workforce preparation gaps."
-        },
-        {
-          "word": "cohort",
-          "meaning": "a group of individuals sharing a common characteristic, typically age or experience, within a larger population",
-          "example": "A substantial cohort of young people currently finds itself excluded from both education and employment opportunities."
-        },
-        {
-          "word": "tackle",
-          "meaning": "to make determined efforts to deal with or overcome a problem or challenge",
-          "example": "Policymakers must tackle the issue of youth unemployment through comprehensive legislative and educational reforms."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What specific measures did the former political adviser recommend to address youth unemployment?",
-          "answer": "The adviser proposed two main measures: implementing a ban on social media use and undertaking radical reform of the education system to address the crisis of young people not in education, employment, or training."
-        },
-        {
-          "question": "It can be inferred from the passage that the speaker believes current educational provisions are: (a) too demanding, (b) insufficiently practical, or (c) overly political?",
-          "answer": "Insufficiently practical. The adviser's emphasis on education reform and concerns about workforce preparation suggest that the current system fails to provide students with relevant, applicable skills needed for employment."
-        },
-        {
-          "question": "In the context of the passage, what does 'pipeline' most nearly mean?",
-          "answer": "A system that processes individuals in a mechanical, predetermined way towards a particular outcome. The term is used critically to suggest schools automatically channel students toward unemployment rather than actively preparing them for meaningful employment."
-        }
-      ],
-      "writingPrompt": "Some experts argue that schools should bear responsibility for the growing unemployment among young people, while others believe that societal factors beyond educational institutions are the primary causes. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
-      "listeningText": "Education specialists are raising alarms about the disconnect between school programmes and employment outcomes in the United Kingdom. A former government advisor has claimed that schools are essentially preparing students for joblessness rather than career success. This commentator, who has served in advisory roles for senior politicians, has urged authorities to take strong action against what he calls a national disgrace affecting young people. His recommendations include preventing teenagers from using popular online platforms and completely overhauling how schools prepare students for working life. The advisor highlighted that thousands of young people are currently classified as neither in education nor employment, representing a significant waste of human potential. Industry observers suggest that the gap between classroom learning and workplace expectations continues to widen, leaving many graduates unprepared for professional environments. Educational institutions must reconsider their curricula to ensure students develop practical competencies alongside academic qualifications.",
-      "createdAt": "2026-05-21T23:59:31.794Z",
       "aiSource": "minimax"
     }
   ]
