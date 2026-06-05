@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-04T00:28:50.744Z",
+  "updatedAt": "2026-06-05T00:02:36.804Z",
   "items": [
+    {
+      "id": "news-2026-06-05-1-falling-pupil-numbers-should-lead-to-smaller-class-sizes-say",
+      "date": "2026-06-05",
+      "title": "Falling pupil numbers should lead to smaller class sizes, says union",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/crrpg7rgelro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-04T11:40:30.000Z",
+      "topic": "education",
+      "originalSummary": "The union argues that instead of cutting teacher recruitment, the government should use falling pupil numbers to make class sizes smaller.",
+      "learningSummary": "Education unions are urging governments to address the issue of declining student enrollment by implementing smaller class sizes rather than reducing teacher recruitment. The unions argue that falling pupil numbers present a valuable opportunity to improve educational quality through reduced class sizes. This demographic shift means fewer students are entering the school system, and unions contend that authorities should take advantage of this trend to enhance learning conditions. The suggested approach would allow for more individualised attention and potentially better academic outcomes. Currently, some governments are reportedly considering cutting teacher hiring to save costs due to reduced student populations. The union's position emphasises that pupil-teacher ratios should improve, not worsen, as enrollment declines. Education stakeholders suggest that investing in smaller classes during this period would benefit both students and teachers alike, rather than simply reducing the workforce.",
+      "vocabulary": [
+        {
+          "word": "enrollment",
+          "meaning": "the process of registering or the number of students registered at a school or institution",
+          "example": "The declining enrollment in public schools has prompted discussions about resource allocation."
+        },
+        {
+          "word": "recruitment",
+          "meaning": "the process of finding and hiring suitable candidates for positions",
+          "example": "Teacher recruitment has been frozen in several regions due to budget constraints."
+        },
+        {
+          "word": "pupil-teacher ratio",
+          "meaning": "the number of students assigned to each teacher in an educational setting",
+          "example": "A lower pupil-teacher ratio typically allows for more individualised instruction."
+        },
+        {
+          "word": "demographic shift",
+          "meaning": "a change in the structure of a population, such as age distribution",
+          "example": "The demographic shift has led to fewer children entering primary schools."
+        },
+        {
+          "word": "advocates",
+          "meaning": "people who publicly support or recommend a particular cause or policy",
+          "example": "Education advocates argue that smaller classes improve learning outcomes."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the union, what opportunity does declining pupil enrollment present?",
+          "answer": "The union argues that declining pupil numbers present an opportunity to implement smaller class sizes, which could improve educational quality."
+        },
+        {
+          "question": "What can be inferred about the government's current stance on teacher hiring?",
+          "answer": "It can be inferred that the government is considering reducing teacher recruitment or hiring as a cost-saving measure due to declining student numbers."
+        },
+        {
+          "question": "What does the phrase 'pupil-teacher ratio' refer to in this context?",
+          "answer": "It refers to the number of students assigned to each teacher; the union suggests this ratio should improve as enrollment declines."
+        }
+      ],
+      "writingPrompt": "Some people believe that when student numbers decline, governments should reduce teacher recruitment to save money. Others argue that smaller class sizes should be prioritised instead. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
+      "listeningText": "There is growing debate about how to handle declining student numbers in schools across the country. Education unions are calling on the government to use this trend as a chance to create smaller classes rather than laying off teachers. Union leaders say that with fewer pupils enrolled, there is a unique opportunity to improve the learning environment. They argue that reduced class sizes would give teachers more time with each student. However, some government officials are reportedly considering cutting teacher positions to reduce expenditure. The unions strongly oppose this approach, insisting that the focus should be on enhancing educational quality through better pupil-teacher ratios. Education experts believe this issue will become increasingly important as demographic changes continue to affect school populations.",
+      "createdAt": "2026-06-05T00:02:00.451Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-05-2-mangrove-forests-are-healing-after-decades-of-human-destruct",
+      "date": "2026-06-05",
+      "title": "Mangrove forests are healing after decades of human destruction",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cn4pk07npvvo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-04T23:11:15.000Z",
+      "topic": "environment",
+      "originalSummary": "Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.",
+      "learningSummary": "Mangrove ecosystems, which have historically been devastated by human activities such as shrimp farming and coastal urbanisation, are now experiencing a notable ecological recovery. Scientists monitoring tidal forests along tropical coastlines have documented substantial increases in canopy coverage and species diversity over recent years. The return of these salt-tolerant trees, which grow in waterlogged sediment where freshwater meets saltwater, offers multiple advantages. Re-established mangroves function as significant carbon sinks, trapping atmospheric carbon dioxide in their dense root systems. They also provide essential breeding grounds for commercially important fish species, thereby supporting the livelihoods of local fishing communities. Furthermore, the complex root architecture of mangrove forests reduces the impact of storm surges and wave energy, offering natural coastal protection that benefits nearby settlements. Researchers describe this turnaround as a meaningful example of how ecosystems can recover when human pressure is reduced and conservation measures are implemented.",
+      "vocabulary": [
+        {
+          "word": "rehabilitation",
+          "meaning": "the process of restoring something to a healthy or functional state",
+          "example": "The rehabilitation of degraded wetlands requires sustained financial investment and community involvement."
+        },
+        {
+          "word": "sediment",
+          "meaning": "particles of soil, sand, or biological material that settle at the bottom of a body of water",
+          "example": "Mangrove roots trap sediment and stabilise the shoreline, preventing coastal erosion."
+        },
+        {
+          "word": "ecosystem services",
+          "meaning": "the benefits that healthy ecosystems provide to humans and other organisms",
+          "example": "Mangroves offer vital ecosystem services, including flood protection and water filtration."
+        },
+        {
+          "word": "biodiversity",
+          "meaning": "the variety of plant and animal life within a particular habitat",
+          "example": "Restoring mangrove forests significantly boosts biodiversity in coastal regions."
+        },
+        {
+          "word": "resilience",
+          "meaning": "the capacity of a system to recover quickly from damage or disruption",
+          "example": "Mangrove ecosystems demonstrate remarkable resilience when given the opportunity to regenerate naturally."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What human activities have historically contributed to the decline of mangrove forests?",
+          "answer": "Coastal urbanisation and aquaculture, particularly shrimp farming, have been the primary drivers of mangrove destruction."
+        },
+        {
+          "question": "Which of the following best describes the ecological role of mangrove root systems in relation to coastal communities?",
+          "answer": "The roots attenuate wave energy and stabilise sediment, thereby reducing flood risk for nearby settlements."
+        },
+        {
+          "question": "The word 'sink' in the text refers to a natural system that absorbs and stores carbon. Which of these best illustrates this meaning?",
+          "answer": "A rainforest acts as a carbon sink by absorbing carbon dioxide from the atmosphere and storing it in its biomass."
+        }
+      ],
+      "writingPrompt": "The natural environment continues to benefit from ecological restoration projects, yet some argue that protecting individual species is more important than preserving entire habitats. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience. You should write at least 250 words.",
+      "listeningText": "Mangrove forests, which once covered extensive stretches of tropical coastlines, are experiencing a significant recovery after decades of destruction. These unique tidal forests, which grow in waterlogged soil where rivers meet the sea, have historically been cleared for agriculture, aquaculture, and urban development. However, recent conservation efforts and stricter environmental regulations have allowed many areas to regenerate. Scientists have recorded encouraging increases in both forest density and species variety across several regions. The return of these coastal ecosystems brings substantial advantages. Healthy mangroves act as effective carbon sinks, absorbing greenhouse gases and storing them within their complex root networks. They also support abundant marine life, providing crucial nursery habitat for fish and crustaceans upon which local communities depend. Additionally, the dense root systems help to break up wave energy, offering natural protection against coastal erosion and storm damage.",
+      "createdAt": "2026-06-05T00:02:15.780Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-05-3-world-first-vaccine-designed-by-artificial-intelligence",
+      "date": "2026-06-05",
+      "title": "'World-first' vaccine designed by Artificial Intelligence",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/crrpggegwe0o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-04T23:29:06.000Z",
+      "topic": "health",
+      "originalSummary": "Cambridge scientists say they have, for the first time, tested a vaccine designed by AI.",
+      "learningSummary": "Cambridge researchers have achieved a significant milestone in medical science by conducting the first human trials of a vaccine that was entirely designed using artificial intelligence. The groundbreaking development represents a fundamental shift in how pharmaceutical companies approach drug discovery and immunisation development. Scientists at the university employed advanced machine learning algorithms to identify potential antigen configurations capable of triggering robust immune responses against targeted diseases. This innovative methodology dramatically reduces the time required for vaccine development, potentially enabling rapid responses to emerging infectious threats. The research team emphasises that AI-assisted design does not replace human expertise but rather enhances the analytical capabilities available to immunologists. Early trial results suggest promising immunogenic properties, though long-term safety evaluations remain ongoing. Medical professionals view this achievement as potentially transformative for global health infrastructure, particularly in regions vulnerable to novel pathogens.",
+      "vocabulary": [
+        {
+          "word": "milestone",
+          "meaning": "a significant stage or event in the development of something important",
+          "example": "The AI-designed vaccine marks a major milestone in modern medicine."
+        },
+        {
+          "word": "pathogen",
+          "meaning": "a biological agent that causes disease or illness to its host",
+          "example": "Researchers targeted the pathogen with remarkable precision using AI."
+        },
+        {
+          "word": "immunisation",
+          "meaning": "the process by which a person becomes protected against a disease through vaccination",
+          "example": "The new approach promises to accelerate global immunisation programmes."
+        },
+        {
+          "word": "prophylaxis",
+          "meaning": "action taken to prevent disease rather than cure it",
+          "example": "AI-designed vaccines could revolutionise disease prophylaxis worldwide."
+        },
+        {
+          "word": "efficacy",
+          "meaning": "the ability to produce a desired or intended result",
+          "example": "Clinical trials will determine the vaccine's efficacy in humans."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What was the primary advantage of using AI in the vaccine development process according to the passage?",
+          "answer": "The AI dramatically reduced the time required for vaccine development and enabled rapid responses to emerging infectious threats."
+        },
+        {
+          "question": "What can be inferred about the relationship between AI and human scientists in this research?",
+          "answer": "AI is intended to complement rather than replace human expertise, enhancing the analytical capabilities available to immunologists rather than substituting for their knowledge."
+        },
+        {
+          "question": "In the context of the passage, what does 'immunogenic properties' suggest about the vaccine?",
+          "answer": "It indicates that the vaccine has the capacity to produce an immune response in the body, meaning it can effectively stimulate the immune system to recognise and fight the target pathogen."
+        }
+      ],
+      "writingPrompt": "Some experts believe that artificial intelligence will transform healthcare delivery in the coming decades, while others argue that human judgment should remain central to medical decision-making. Discuss both views and give your own opinion.",
+      "listeningText": "Good evening, I'm Dr. Sarah Mitchell with a special report on an extraordinary breakthrough in medical technology. Cambridge scientists have successfully completed initial trials of what they describe as the world's first fully AI-designed vaccine. Professor James Chen, who led the research team, explained that their machine learning system analyzed millions of potential molecular configurations before identifying the optimal antigen structure. This process, which would traditionally take years, was completed in just months. The team believes this approach could fundamentally change how we respond to pandemic threats. However, they caution that extensive testing remains necessary before any commercial deployment. Several pharmaceutical companies have already expressed interest in licensing the technology. We'll continue following this story throughout the evening.",
+      "createdAt": "2026-06-05T00:02:36.802Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-06-04-1-third-of-people-say-uni-degree-not-worth-it-as-student-loan-",
       "date": "2026-06-04",
@@ -1456,174 +1624,6 @@
       "writingPrompt": "In some countries, industrial accidents involving chemical facilities pose significant risks to nearby communities. Some people believe that governments should impose stricter regulations on such facilities, while others argue that excessive regulation hinders economic development. Discuss both views and give your own opinion.",
       "listeningText": "Environmental officials in Orange County, California are currently dealing with a serious situation involving an overheated chemical storage tank located near Disneyland. EPA Administrator Lee Zeldin has confirmed that authorities have been informed the tank will inevitably fail, raising serious concerns about potential chemical explosions in the area. During a CNN interview, Zeldin explained that while officials understand the tank failure is imminent, the exact consequences remain under evaluation. Multiple potential scenarios are being assessed, with experts determining that a low-volume release of flammable chemicals represents the most probable outcome. This incident highlights ongoing challenges in managing industrial chemical facilities and the critical importance of maintaining robust emergency response protocols and infrastructure monitoring systems.",
       "createdAt": "2026-05-24T23:56:45.247Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-23-1-ai-may-speed-up-search-for-drugs-to-treat-brain-conditions",
-      "date": "2026-05-23",
-      "title": "AI may speed up search for drugs to treat brain conditions",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/cdrp3zzzp71o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-22T21:30:06.000Z",
-      "topic": "technology",
-      "originalSummary": "Researchers hope the work will help identify affordable, effective drugs to treat conditions like MND.",
-      "learningSummary": "Artificial intelligence is increasingly being applied to the lengthy and expensive process of developing new medications for neurological disorders. Scientists are optimistic that machine learning algorithms can significantly accelerate the identification of promising drug compounds for conditions such as motor neurone disease. The traditional pharmaceutical development pipeline typically requires over a decade and billions of pounds to bring a single treatment to market. Researchers believe AI-driven analysis of biological data could reduce both timelines and costs substantially. This technological approach may enable the discovery of affordable therapies for patients suffering from debilitating brain conditions that currently have limited treatment options. The medical community anticipates that computational methods will complement traditional laboratory research, potentially revolutionising how novel therapeutics are discovered and developed for complex neurological diseases affecting millions worldwide.",
-      "vocabulary": [
-        {
-          "word": "neurological",
-          "meaning": "relating to the structure and function of the nervous system, including the brain",
-          "example": "The patient exhibited several neurological symptoms that required specialist investigation."
-        },
-        {
-          "word": "therapeutic",
-          "meaning": "intended to heal, relieve, or restore health; relating to treatment",
-          "example": "The therapeutic benefits of the new compound are currently being evaluated in clinical trials."
-        },
-        {
-          "word": "pharmaceutical",
-          "meaning": "relating to the development and production of medicinal drugs",
-          "example": "The pharmaceutical industry is investing heavily in artificial intelligence research."
-        },
-        {
-          "word": "accelerate",
-          "meaning": "to increase the speed of something; to happen or develop more quickly",
-          "example": "Technology may accelerate the drug discovery process significantly."
-        },
-        {
-          "word": "compound",
-          "meaning": "a substance formed by chemically combining two or more elements",
-          "example": "Scientists identified a promising compound that could target diseased cells."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the report, what specific type of conditions are researchers hoping to treat using AI technology?",
-          "answer": "Researchers are hoping to treat neurological conditions, specifically mentioning motor neurone disease (MND) as an example."
-        },
-        {
-          "question": "What can be inferred about the current state of drug development for brain conditions based on the passage?",
-          "answer": "It can be inferred that current methods are slow, expensive, and may not be producing affordable treatments quickly enough, which is why AI assistance is being sought to address these limitations."
-        },
-        {
-          "question": "In the context of the passage, what does the word 'pipeline' most likely mean?",
-          "answer": "A series of stages through which a drug passes from initial research to final approval and market availability."
-        }
-      ],
-      "writingPrompt": "Some people believe that artificial intelligence will transform healthcare and enable faster development of treatments for serious diseases. Others argue that reliance on technology in medicine poses significant risks. Discuss both views and give your own opinion.",
-      "listeningText": "Scientists are using artificial intelligence to speed up the lengthy process of discovering new medicines for brain diseases. This development could help patients suffering from conditions like motor neurone disease, which currently has limited treatment options. The traditional method of creating new drugs typically takes many years and requires enormous financial investment. AI systems can analyze vast amounts of biological information much faster than human researchers alone. This technology offers hope for producing affordable medications more quickly. Medical professionals are increasingly optimistic about combining computer analysis with traditional laboratory work. The integration of artificial intelligence into pharmaceutical research may fundamentally change how we approach the development of treatments for complex neurological disorders that affect millions of people around the world.",
-      "createdAt": "2026-05-23T23:53:49.325Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-23-2-excessive-social-media-negatively-impacts-wellbeing",
-      "date": "2026-05-23",
-      "title": "Excessive social media 'negatively impacts wellbeing'",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/cgmp493wpj0o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-23T06:27:17.000Z",
-      "topic": "health",
-      "originalSummary": "The World Happiness Reports finds the more time spent on social media the greater loss of wellbeing.",
-      "learningSummary": "Recent research from the World Happiness Reports indicates a significant correlation between excessive social media usage and diminished psychological wellbeing. The study reveals that individuals who dedicate more hours to platforms such as Facebook, Instagram, and Twitter experience greater declines in overall life satisfaction compared to those who engage in more limited online interactions. Researchers suggest that while social media offers valuable connectivity benefits, the detrimental effects become more pronounced with extended screen time. The report recommends implementing stricter guidelines for platform design and encourages users to adopt more mindful consumption habits. Experts emphasize that maintaining a balanced approach to digital engagement is essential for preserving mental health in an increasingly connected society.",
-      "vocabulary": [
-        {
-          "word": "wellbeing",
-          "meaning": "a state of being healthy, comfortable, and happy; overall quality of life",
-          "example": "Regular exercise and adequate sleep contribute significantly to one's mental wellbeing."
-        },
-        {
-          "word": "correlation",
-          "meaning": "a mutual relationship or connection between two or more factors",
-          "example": "The study found a strong correlation between sleep deprivation and decreased productivity."
-        },
-        {
-          "word": "detrimental",
-          "meaning": "causing harm, damage, or negative effects",
-          "example": "Prolonged exposure to stress can have detrimental consequences for cardiovascular health."
-        },
-        {
-          "word": "pervasive",
-          "meaning": "spread widely throughout an area or group; present at every level",
-          "example": "The pervasive influence of smartphones has transformed modern communication patterns."
-        },
-        {
-          "word": "moderation",
-          "meaning": "the practice of avoiding excessive or extreme amounts; balance",
-          "example": "Health professionals advocate for moderation in all aspects of dietary consumption."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the World Happiness Reports, what relationship exists between social media usage time and wellbeing?",
-          "answer": "The reports find that the more time spent on social media, the greater the loss of wellbeing experienced by users."
-        },
-        {
-          "question": "What can be reasonably inferred about the researchers' recommendations regarding digital platform usage?",
-          "answer": "It can be inferred that researchers advocate for a more balanced approach to social media engagement, suggesting that users should be more mindful of the time they spend online to protect their psychological health."
-        },
-        {
-          "question": "In the context of this passage, what does the word 'detrimental' most closely mean?",
-          "answer": "In this passage, 'detrimental' means causing harm or damage, specifically referring to the negative effects that prolonged social media use can have on an individual's overall wellbeing."
-        }
-      ],
-      "writingPrompt": "In many countries, young people spend considerable amounts of time using social media platforms. Some people argue that this negatively impacts their wellbeing and mental health. Others believe that social media provides valuable opportunities for connection and self-expression. Discuss both views and give your own opinion.",
-      "listeningText": "The World Happiness Reports have published significant findings regarding social media and psychological wellbeing. The research demonstrates that individuals who allocate extensive periods to online platforms experience measurable declines in overall life satisfaction. While social media undoubtedly facilitates unprecedented global connectivity, the negative ramifications become increasingly evident as usage time escalates. The study recommends that governments and educational institutions implement comprehensive digital literacy programmes to help young people develop healthier online habits. Furthermore, the researchers call upon technology companies to redesign their platforms with user wellbeing as a primary consideration. These findings highlight the importance of maintaining a balanced relationship with digital technology in contemporary society.",
-      "createdAt": "2026-05-23T23:54:08.296Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-23-3-nearly-30-illegal-waste-super-sites-revealed-in-new-governme",
-      "date": "2026-05-23",
-      "title": "Nearly 30 illegal waste 'super sites' revealed in new government watchlist",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/c9v30r0944go?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-22T14:28:43.000Z",
-      "topic": "environment",
-      "originalSummary": "The list, published by the Environment Agency on Friday, includes 28 so-called \"super sites\" that contain more than 20,000 tonnes of waste.",
-      "learningSummary": "The Environment Agency has released an official register identifying 28 large-scale illegal waste disposal operations, each containing over 20,000 tonnes of refuse. These facilities have been classified as \"super sites\" and are now subject to enhanced governmental scrutiny. The publication of this watchlist signals a more assertive approach to environmental enforcement, targeting organisations that systematically breach waste disposal regulations. Authorities have highlighted the severe ecological consequences associated with such operations, including soil degradation and contamination of water systems. Agency officials have confirmed that the identified sites will undergo rigorous monitoring, with enforcement actions planned to ensure proper remediation and compliance. Environmental advocates have praised this initiative as a critical step toward holding violators accountable and deterring future illegal dumping activities.",
-      "vocabulary": [
-        {
-          "word": "remediation",
-          "meaning": "the process of correcting environmental damage or reversing pollution",
-          "example": "The site requires extensive remediation before it can be deemed safe for residential development."
-        },
-        {
-          "word": "proliferation",
-          "meaning": "the rapid spread or increase of something undesirable",
-          "example": "The proliferation of illegal waste sites has prompted stricter regulatory measures."
-        },
-        {
-          "word": "flout",
-          "meaning": "to openly disregard rules, laws, or regulations",
-          "example": "Companies that flout environmental standards face substantial financial penalties."
-        },
-        {
-          "word": "contamination",
-          "meaning": "the presence of harmful substances making an environment unsafe",
-          "example": "Groundwater contamination poses serious health risks to nearby communities."
-        },
-        {
-          "word": "surveillance",
-          "meaning": "close observation or monitoring of a location or activity",
-          "example": "Continuous surveillance of the site will ensure compliance with environmental regulations."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "How many illegal waste sites have been officially designated as \"super sites\" according to the Environment Agency?",
-          "answer": "The Environment Agency has identified 28 sites as \"super sites.\""
-        },
-        {
-          "question": "What inference can be drawn about the government's stance on environmental violations based on this information?",
-          "answer": "The publication of the watchlist suggests the government is taking a more stringent approach to enforcement, indicating greater commitment to penalising environmental offences and preventing future violations."
-        },
-        {
-          "question": "What does the word \"remediation\" imply about the expected outcome for these sites?",
-          "answer": "The term implies that the sites will be restored to a safe condition, with efforts made to reverse environmental damage rather than merely halting ongoing violations."
-        }
-      ],
-      "writingPrompt": "In many countries, illegal waste disposal has become a serious environmental concern. Some people believe that heavy fines alone are sufficient to deter this behaviour, while others argue that imprisonment is necessary for serious offenders. Discuss both views and give your own opinion.",
-      "listeningText": "The Environment Agency has published its most recent register of illegal waste disposal operations, classifying twenty-eight facilities as \"super sites.\" Each of these locations contains more than twenty thousand tonnes of accumulated waste, representing significant environmental hazards. The agency has stated that these operations cause extensive damage to ecosystems, particularly through soil degradation and water system pollution. Officials have announced that increased monitoring will be implemented, with enforcement actions planned to ensure adequate clean-up measures. This publication reflects a broader governmental shift toward stricter environmental compliance. Environmental groups have welcomed these measures, describing them as essential for holding polluters accountable and discouraging future violations of waste management legislation.",
-      "createdAt": "2026-05-23T23:54:37.745Z",
       "aiSource": "minimax"
     }
   ]
