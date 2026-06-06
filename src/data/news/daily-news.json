@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-05T00:02:36.804Z",
+  "updatedAt": "2026-06-06T00:03:37.591Z",
   "items": [
+    {
+      "id": "news-2026-06-06-1-a-level-maths-exam-marking-to-be-watched-closely-by-regulato",
+      "date": "2026-06-06",
+      "title": "A-level maths exam marking to be watched closely by regulator after students say paper was 'unfair'",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/c4g9gz9d2qzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-05T12:13:11.000Z",
+      "topic": "education",
+      "originalSummary": "More than 20,000 people sign a petition calling for a review of a paper they say was significantly more challenging than any past exam.",
+      "learningSummary": "(Mock learning summary based on the headline.) A-level maths exam marking to be watched closely by regulator after students say paper was 'unfair'. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) A-level maths exam marking to be watched closely by regulator after students say paper was 'unfair'. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-06T00:03:02.957Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-06-2-world-first-vaccine-designed-by-artificial-intelligence",
+      "date": "2026-06-06",
+      "title": "'World-first' vaccine designed by artificial intelligence",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/crrpggegwe0o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-04T23:29:06.000Z",
+      "topic": "health",
+      "originalSummary": "Cambridge scientists say they have, for the first time, tested a vaccine designed by AI.",
+      "learningSummary": "Cambridge University researchers have announced a groundbreaking achievement in medical science: the development of the world's first vaccine designed entirely through artificial intelligence. The research team employed sophisticated machine learning algorithms to analyze extensive datasets of pathogen information, enabling the identification of promising antigen sequences that could potentially trigger robust immune responses in humans. This innovative approach marks a significant departure from conventional vaccine development methodologies, which typically demand years of meticulous laboratory experimentation. The scientists involved in the project have emphasized that while their findings represent a remarkable proof of concept, extensive clinical trials remain essential to establish safety and efficacy standards. This development has profound implications for pandemic preparedness and the future of pharmaceutical research, suggesting that AI technologies could substantially accelerate the discovery and production of life-saving vaccines. The intersection of computational biology and medical innovation continues to expand rapidly.",
+      "vocabulary": [
+        {
+          "word": "antigen",
+          "meaning": "a substance, usually a protein, that induces an immune response when introduced into the body",
+          "example": "The AI system successfully identified novel antigen structures capable of stimulating antibody production."
+        },
+        {
+          "word": "algorithm",
+          "meaning": "a step-by-step computational procedure designed to solve problems or perform calculations",
+          "example": "Researchers utilized complex algorithms to analyze millions of potential protein combinations."
+        },
+        {
+          "word": "sophisticated",
+          "meaning": "developed to a high level of complexity and refinement",
+          "example": "The sophisticated machine learning model processed vast amounts of biological data efficiently."
+        },
+        {
+          "word": "efficacy",
+          "meaning": "the capacity to produce a desired or intended result",
+          "example": "Clinical trials will determine the efficacy of the AI-designed vaccine in preventing infection."
+        },
+        {
+          "word": "pandemic preparedness",
+          "meaning": "measures taken to anticipate, prevent, and respond to widespread disease outbreaks",
+          "example": "AI-designed vaccines could significantly improve global pandemic preparedness strategies."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What specific role did artificial intelligence play in the vaccine development process described in the passage?",
+          "answer": "Artificial intelligence was used to analyze extensive datasets of pathogen information and identify promising antigen sequences that could trigger immune responses, effectively designing the vaccine from computational analysis rather than traditional laboratory methods."
+        },
+        {
+          "question": "Based on the passage, what inference can be drawn about the traditional vaccine development timeline?",
+          "answer": "It can be inferred that traditional vaccine development is considerably more time-consuming, typically requiring years of laboratory experimentation, whereas the AI approach condensed initial design stages into a much shorter timeframe of months."
+        },
+        {
+          "question": "In the context of the passage, what does the word 'efficacy' in the final sentence most closely mean?",
+          "answer": "In this passage, 'efficacy' refers to the vaccine's ability to produce the intended protective effect against disease, specifically its capacity to safely and effectively prevent infection in humans."
+        }
+      ],
+      "writingPrompt": "Some experts claim that artificial intelligence will revolutionize healthcare delivery, while others maintain that human medical professionals will always remain indispensable. Discuss both perspectives and provide your own opinion on this matter.",
+      "listeningText": "Scientists at Cambridge University have announced a remarkable medical breakthrough: the creation of the world's first vaccine designed using artificial intelligence. The research team utilized advanced machine learning systems to process enormous quantities of biological data, including genetic information from various pathogens. These computational tools identified optimal protein structures that could safely train the human immune system to recognize and combat specific diseases. Conventionally, vaccine development requires a decade or more of painstaking laboratory research and iterative testing. However, this innovative AI-driven method completed the initial design phase in merely several months. While researchers caution that extensive human clinical trials are still necessary before the vaccine can be approved for public use, they believe this technology represents a transformative advancement in medical science. The implications for rapid pandemic response are particularly significant, potentially enabling much faster development of vaccines against emerging infectious threats.",
+      "createdAt": "2026-06-06T00:03:21.703Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-06-3-mangrove-forests-are-healing-after-decades-of-human-destruct",
+      "date": "2026-06-06",
+      "title": "Mangrove forests are healing after decades of human destruction",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cn4pk07npvvo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-04T23:11:15.000Z",
+      "topic": "environment",
+      "originalSummary": "Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.",
+      "learningSummary": "Mangrove ecosystems, which have historically suffered extensive degradation due to coastal development and agricultural expansion, are now demonstrating remarkable signs of recovery across several tropical regions. This unexpected environmental turnaround carries significant implications for both local communities and global climate regulation efforts. These salt-tolerant tree species thrive in intertidal zones and serve as critical carbon sinks, absorbing substantial quantities of greenhouse gases while simultaneously protecting coastlines from erosion and storm damage. Scientists have observed encouraging restoration trends following the implementation of stricter conservation measures and community-led reforestation initiatives. The revival of these coastal wetlands also supports biodiversity by providing essential habitats for numerous fish species and crustaceans. Experts suggest that continued investment in mangrove preservation could yield substantial benefits for climate mitigation strategies while enhancing the resilience of vulnerable coastal populations against the escalating impacts of climate change.",
+      "vocabulary": [
+        {
+          "word": "intertidal zone",
+          "meaning": "the coastal area between high and low tide marks where seawater and land meet",
+          "example": "The intertidal zone supports diverse species adapted to fluctuating salt water levels."
+        },
+        {
+          "word": "carbon sink",
+          "meaning": "a natural system capable of absorbing and storing carbon dioxide from the atmosphere",
+          "example": "Forests and oceans serve as the planet's most significant carbon sinks."
+        },
+        {
+          "word": "reforestation",
+          "meaning": "the process of re-establishing forests in areas that have been depleted or destroyed",
+          "example": "Massive reforestation projects have contributed to the revival of coastal ecosystems."
+        },
+        {
+          "word": "biodiversity",
+          "meaning": "the variety of plant and animal species within a particular habitat or ecosystem",
+          "example": "Mangrove forests support remarkable biodiversity, sheltering countless marine organisms."
+        },
+        {
+          "word": "mitigation",
+          "meaning": "actions taken to reduce the severity or impact of something, particularly environmental damage",
+          "example": "Climate mitigation strategies often include protecting and restoring natural ecosystems."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What dual environmental functions do mangrove forests provide according to the passage?",
+          "answer": "Mangrove forests function as carbon sinks that absorb greenhouse gases, while simultaneously protecting coastal areas from erosion and storm damage."
+        },
+        {
+          "question": "What can be inferred about the effectiveness of recent conservation policies?",
+          "answer": "The unexpected recovery of mangrove forests suggests that recent conservation measures and community-led reforestation initiatives have proven effective in reversing decades of environmental degradation."
+        },
+        {
+          "question": "In the context of the passage, what does the phrase 'carbon sink' most nearly mean?",
+          "answer": "A system that absorbs and stores atmospheric carbon dioxide, reducing the concentration of greenhouse gases in the atmosphere."
+        }
+      ],
+      "writingPrompt": "Some scientists argue that protecting natural ecosystems like mangrove forests should take priority over economic development in coastal regions. Others believe that economic growth and job creation must come first for developing nations. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
+      "listeningText": "Mangrove forests, those dense coastal wetlands long overlooked and destroyed, are making an unexpected comeback across tropical coastlines worldwide. This remarkable ecological recovery brings significant benefits for both local communities and global climate efforts. These remarkable trees, growing in the challenging space between land and sea, are proving invaluable in the fight against climate change by capturing carbon dioxide and shielding coastlines from increasingly severe storms. Marine biologists studying these ecosystems have documented impressive restoration patterns where protective measures were implemented. The revival matters because these forests also sustain countless species of fish and crustaceans, supporting the livelihoods of coastal fishing communities. Researchers studying these trends emphasize that the revival demonstrates nature's resilience when given adequate protection, while simultaneously providing an accessible strategy for communities seeking to adapt to changing climate conditions.",
+      "createdAt": "2026-06-06T00:03:37.589Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-06-05-1-falling-pupil-numbers-should-lead-to-smaller-class-sizes-say",
       "date": "2026-06-05",
@@ -1456,174 +1624,6 @@
       "writingPrompt": "Some people believe that economic activities such as game bird shooting should take priority in rural areas, while others argue that protecting birds of prey is more important for ecological balance. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience. Write at least 250 words.",
       "listeningText": "Good evening. This is an environmental report from BBC Science. The RSPB has expressed serious concern about the continued persecution of birds of prey across Britain. Conservation officers report that more than half of all verified attacks on protected raptors occurred on land used for game shooting. These incidents included shooting, trapping, and poisoning of species such as peregrine falcons, red kites, and hen harriers. The charity argues that existing wildlife protection laws are insufficiently enforced, allowing illegal practices to continue unchecked. Researchers suggest that the commercial interests behind driven grouse and pheasant shooting create powerful incentives for estate managers to remove birds that might prey upon released game birds. The RSPB is calling for enhanced surveillance and stronger penalties to address this ongoing threat to biodiversity.",
       "createdAt": "2026-05-26T00:03:08.029Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-24-1-citizen-scientists-needed-to-protect-wildlife",
-      "date": "2026-05-24",
-      "title": "Citizen scientists needed to protect wildlife",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/c8jvkxppdmxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-24T16:42:22.000Z",
-      "topic": "environment",
-      "originalSummary": "Data for animals, such as foxes, will be welcomed by the Somerset Wildlife Trust.",
-      "learningSummary": "The involvement of ordinary citizens in scientific research has emerged as a valuable approach to wildlife conservation. Local communities are increasingly invited to contribute observations and data that assist researchers in tracking animal populations. The Somerset Wildlife Trust has demonstrated particular interest in receiving information about various species, including commonly found mammals such as foxes. This initiative recognises that members of the public often possess extensive knowledge of their local environments and can provide valuable insights that professional scientists might overlook. By systematically recording sightings and behaviours, these citizen scientists enable conservationists to make more informed decisions about protecting natural habitats. Such collaborative efforts illustrate how public participation can significantly enhance environmental monitoring programmes.",
-      "vocabulary": [
-        {
-          "word": "biodiversity",
-          "meaning": "the variety of plant and animal life in a particular habitat",
-          "example": "Protecting biodiversity is essential for maintaining healthy ecosystems."
-        },
-        {
-          "word": "habitat",
-          "meaning": "the natural home or environment of an animal or plant",
-          "example": "Deforestation threatens the habitat of many endangered species."
-        },
-        {
-          "word": "monitoring",
-          "meaning": "observing and checking something over a period of time",
-          "example": "Regular monitoring of wildlife populations helps detect changes early."
-        },
-        {
-          "word": "collaborative",
-          "meaning": "involving two or more people or groups working together",
-          "example": "Collaborative research between academics and citizens improves data quality."
-        },
-        {
-          "word": "participation",
-          "meaning": "the act of taking part in an activity or event",
-          "example": "Public participation in conservation projects is encouraged by many organisations."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what role do ordinary citizens play in wildlife conservation?",
-          "answer": "They contribute observations and data that help researchers track animal populations."
-        },
-        {
-          "question": "What can be inferred about the Somerset Wildlife Trust's approach to data collection?",
-          "answer": "They value contributions from local community members who can provide unique insights about species like foxes that might be overlooked by professional scientists."
-        },
-        {
-          "question": "In the passage, what does 'habitat' most nearly mean?",
-          "answer": "The natural environment where an animal or plant lives."
-        }
-      ],
-      "writingPrompt": "Some people believe that ordinary citizens should be more involved in scientific research and conservation efforts. To what extent do you agree or disagree?",
-      "listeningText": "Scientists have discovered that involving everyday people in research activities can greatly improve wildlife conservation. The Somerset Wildlife Trust, for example, actively seeks reports from local residents about animal sightings, particularly of foxes. This approach acknowledges that local people often have detailed knowledge of their surroundings that professionals cannot easily access. By gathering this information, conservationists can make better decisions about protecting natural areas. Such partnerships between scientists and the public show how collaborative efforts can strengthen environmental protection.",
-      "createdAt": "2026-05-24T23:56:16.298Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-24-2-uk-universities-warn-of-cuts-for-impoverished-students-if-di",
-      "date": "2026-05-24",
-      "title": "UK universities warn of cuts for impoverished students if dire funding issues continue",
-      "source": "The Guardian - Education",
-      "url": "https://www.theguardian.com/education/2026/may/25/uk-universities-cuts-impoverished-students-funding",
-      "publishedAt": "2026-05-24T23:01:09.000Z",
-      "topic": "education",
-      "originalSummary": "Nearly a third of vice-chancellors would cut hardship support if necessary over next three years, according to poll Vice-chancellors have said they may need to cut hardship support for impoverished students and reduce outreach activities aimed at disadvantaged groups if the dire funding struggles at universities continue. The anonymous poll of leaders by Universities UK (UUK) revealed the extent of the budgetary quagmire facing higher education, with more than two-thirds prepared to cut staff jobs by compulsory redundancy if difficulties continue over the next three years, while nearly 90%...",
-      "learningSummary": "(Mock learning summary based on the headline.) UK universities warn of cuts for impoverished students if dire funding issues continue. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) UK universities warn of cuts for impoverished students if dire funding issues continue. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-05-24T23:56:37.031Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-05-24-3-overheated-chemical-tank-in-southern-california-will-fail-ep",
-      "date": "2026-05-24",
-      "title": "Overheated chemical tank in southern California ‘will fail’, EPA chief says",
-      "source": "The Guardian - Environment",
-      "url": "https://www.theguardian.com/us-news/2026/may/24/chemical-tank-california-epa-lee-zeldin",
-      "publishedAt": "2026-05-24T19:36:14.000Z",
-      "topic": "environment",
-      "originalSummary": "Lee Zeldin says ‘low-volume release’ of flammable chemicals is most likely amid fears of explosion at Orange county facility near Disneyland Government officials in Orange county, California , have warned that an overheated chemical tank “will fail” and could result in a chemical explosion in the area, the Environmental Protection Agency administrator said on Sunday. “We’re being told that the tank will fail, but there are different scenarios as to what that means,” Lee Zeldin, told CNN’s State of the Union on Sunday. Zeldin, a former Republican congressman with no prior experience in...",
-      "learningSummary": "Government authorities in Orange County, California are managing a critical situation involving an overheated chemical storage tank positioned near Disneyland. EPA Administrator Lee Zeldin has publicly acknowledged that officials have been informed the tank will inevitably fail, raising significant concerns about potential chemical explosions in the region. During an interview on CNN's State of the Union, Zeldin explained that while authorities understand the tank failure is imminent, the precise consequences remain under evaluation. Various potential outcomes are currently being assessed, with experts determining that a low-volume release of flammable chemicals represents the most probable scenario. This incident highlights ongoing challenges in managing industrial chemical facilities and underscores the importance of robust emergency response protocols and infrastructure monitoring systems.",
-      "vocabulary": [
-        {
-          "word": "imminent",
-          "meaning": "about to happen very soon, especially something unpleasant",
-          "example": "Residents were warned of the imminent danger posed by the deteriorating tank structure."
-        },
-        {
-          "word": "evaluate",
-          "meaning": "assess or examine thoroughly to determine value, quality, or significance",
-          "example": "Emergency officials continue to evaluate multiple potential outcomes as the situation develops."
-        },
-        {
-          "word": "protocol",
-          "meaning": "official procedures or rules governing a particular situation or action",
-          "example": "The state's emergency response protocol was activated immediately upon learning of the tank failure."
-        },
-        {
-          "word": "scenario",
-          "meaning": "a possible situation or sequence of events that might occur",
-          "example": "Authorities are preparing for several different scenarios depending on how the tank failure progresses."
-        },
-        {
-          "word": "deteriorating",
-          "meaning": "gradually becoming worse or in poor condition",
-          "example": "Investigators later determined that deteriorating infrastructure contributed to the overheating issue."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What specific outcome did authorities determine to be the most likely result of the tank failure?",
-          "answer": "A low-volume release of flammable chemicals was determined to be the most probable outcome of the tank failure."
-        },
-        {
-          "question": "What can be inferred about the certainty of information available to officials regarding the potential consequences?",
-          "answer": "It can be inferred that officials faced considerable uncertainty, as Zeldin stated there are different scenarios being considered and the precise meaning of the tank failing remains unclear."
-        },
-        {
-          "question": "In the context of this passage, what does the phrase 'will fail' suggest about the confidence level of the authorities?",
-          "answer": "The phrase suggests that authorities are highly confident the tank failure is imminent and unavoidable, though the specific consequences remain uncertain."
-        }
-      ],
-      "writingPrompt": "In some countries, industrial accidents involving chemical facilities pose significant risks to nearby communities. Some people believe that governments should impose stricter regulations on such facilities, while others argue that excessive regulation hinders economic development. Discuss both views and give your own opinion.",
-      "listeningText": "Environmental officials in Orange County, California are currently dealing with a serious situation involving an overheated chemical storage tank located near Disneyland. EPA Administrator Lee Zeldin has confirmed that authorities have been informed the tank will inevitably fail, raising serious concerns about potential chemical explosions in the area. During a CNN interview, Zeldin explained that while officials understand the tank failure is imminent, the exact consequences remain under evaluation. Multiple potential scenarios are being assessed, with experts determining that a low-volume release of flammable chemicals represents the most probable outcome. This incident highlights ongoing challenges in managing industrial chemical facilities and the critical importance of maintaining robust emergency response protocols and infrastructure monitoring systems.",
-      "createdAt": "2026-05-24T23:56:45.247Z",
       "aiSource": "minimax"
     }
   ]
