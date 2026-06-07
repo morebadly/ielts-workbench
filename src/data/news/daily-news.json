@@ -1,173 +1,173 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-06T00:03:37.591Z",
+  "updatedAt": "2026-06-07T00:00:12.435Z",
   "items": [
     {
-      "id": "news-2026-06-06-1-a-level-maths-exam-marking-to-be-watched-closely-by-regulato",
+      "id": "news-2026-06-06-1-pupils-asked-to-walk-to-school-through-army-firing-range-mp-",
       "date": "2026-06-06",
-      "title": "A-level maths exam marking to be watched closely by regulator after students say paper was 'unfair'",
+      "title": "Pupils asked to walk to school through army firing range, MP claims",
       "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/c4g9gz9d2qzo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-05T12:13:11.000Z",
+      "url": "https://www.bbc.com/news/articles/cjrpr3pqnz3o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-05T17:18:47.000Z",
       "topic": "education",
-      "originalSummary": "More than 20,000 people sign a petition calling for a review of a paper they say was significantly more challenging than any past exam.",
-      "learningSummary": "(Mock learning summary based on the headline.) A-level maths exam marking to be watched closely by regulator after students say paper was 'unfair'. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "originalSummary": "Getting children to school is becoming a thorny issue for councils to deal with.",
+      "learningSummary": "An MP has highlighted concerns regarding pupils being directed to walk through an army firing range to reach their school. This issue has arisen as local councils struggle with increasingly complex challenges in providing safe transportation for schoolchildren. The controversy underscores broader difficulties facing educational authorities in guaranteeing that students can attend classes without encountering hazardous conditions. The MP's claims have initiated debate about the obligations of local authorities in establishing safe routes for children. Those opposed to the arrangement argue that requiring minors to traverse a military training area presents unacceptable dangers, while defenders may cite budgetary constraints or a lack of alternative pathways. This case illustrates how logistical difficulties in certain communities can compromise the fundamental principle of safe educational access.",
       "vocabulary": [
         {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
+          "word": "thorny",
+          "meaning": "causing difficulty or distress; complicated",
+          "example": "The council faces a thorny dilemma in balancing budget constraints with pupil safety."
         },
         {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
+          "word": "logistical",
+          "meaning": "relating to the organization and coordination of complex operations",
+          "example": "The logistical challenges of providing school transport have become increasingly difficult."
         },
         {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
+          "word": "controversy",
+          "meaning": "public dispute or disagreement about a matter",
+          "example": "The controversy has sparked debate about local authorities' responsibilities."
         },
         {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
+          "word": "firing range",
+          "meaning": "a designated area used for military weapons practice",
+          "example": "Parents expressed alarm at the prospect of children walking through a firing range."
         },
         {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
+          "word": "exemplifies",
+          "meaning": "serves as a typical or representative example",
+          "example": "This case exemplifies the broader challenges facing educational authorities."
         }
       ],
       "readingQuestions": [
         {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
+          "question": "According to the passage, what specific concern did the MP raise about pupils' school journeys?",
+          "answer": "The MP raised concerns about pupils being asked to walk through an army firing range to reach their school."
         },
         {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
+          "question": "What can be inferred about the councils' situation based on the passage?",
+          "answer": "It can be inferred that councils are facing significant difficulties in providing safe transportation for schoolchildren, potentially due to limited alternatives or budget constraints."
         },
         {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
+          "question": "The word 'hazardous' in the passage is closest in meaning to: a) convenient b) dangerous c) efficient d) necessary",
+          "answer": "b) dangerous"
         }
       ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) A-level maths exam marking to be watched closely by regulator after students say paper was 'unfair'. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-06T00:03:02.957Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-06-2-world-first-vaccine-designed-by-artificial-intelligence",
-      "date": "2026-06-06",
-      "title": "'World-first' vaccine designed by artificial intelligence",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/crrpggegwe0o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-04T23:29:06.000Z",
-      "topic": "health",
-      "originalSummary": "Cambridge scientists say they have, for the first time, tested a vaccine designed by AI.",
-      "learningSummary": "Cambridge University researchers have announced a groundbreaking achievement in medical science: the development of the world's first vaccine designed entirely through artificial intelligence. The research team employed sophisticated machine learning algorithms to analyze extensive datasets of pathogen information, enabling the identification of promising antigen sequences that could potentially trigger robust immune responses in humans. This innovative approach marks a significant departure from conventional vaccine development methodologies, which typically demand years of meticulous laboratory experimentation. The scientists involved in the project have emphasized that while their findings represent a remarkable proof of concept, extensive clinical trials remain essential to establish safety and efficacy standards. This development has profound implications for pandemic preparedness and the future of pharmaceutical research, suggesting that AI technologies could substantially accelerate the discovery and production of life-saving vaccines. The intersection of computational biology and medical innovation continues to expand rapidly.",
-      "vocabulary": [
-        {
-          "word": "antigen",
-          "meaning": "a substance, usually a protein, that induces an immune response when introduced into the body",
-          "example": "The AI system successfully identified novel antigen structures capable of stimulating antibody production."
-        },
-        {
-          "word": "algorithm",
-          "meaning": "a step-by-step computational procedure designed to solve problems or perform calculations",
-          "example": "Researchers utilized complex algorithms to analyze millions of potential protein combinations."
-        },
-        {
-          "word": "sophisticated",
-          "meaning": "developed to a high level of complexity and refinement",
-          "example": "The sophisticated machine learning model processed vast amounts of biological data efficiently."
-        },
-        {
-          "word": "efficacy",
-          "meaning": "the capacity to produce a desired or intended result",
-          "example": "Clinical trials will determine the efficacy of the AI-designed vaccine in preventing infection."
-        },
-        {
-          "word": "pandemic preparedness",
-          "meaning": "measures taken to anticipate, prevent, and respond to widespread disease outbreaks",
-          "example": "AI-designed vaccines could significantly improve global pandemic preparedness strategies."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What specific role did artificial intelligence play in the vaccine development process described in the passage?",
-          "answer": "Artificial intelligence was used to analyze extensive datasets of pathogen information and identify promising antigen sequences that could trigger immune responses, effectively designing the vaccine from computational analysis rather than traditional laboratory methods."
-        },
-        {
-          "question": "Based on the passage, what inference can be drawn about the traditional vaccine development timeline?",
-          "answer": "It can be inferred that traditional vaccine development is considerably more time-consuming, typically requiring years of laboratory experimentation, whereas the AI approach condensed initial design stages into a much shorter timeframe of months."
-        },
-        {
-          "question": "In the context of the passage, what does the word 'efficacy' in the final sentence most closely mean?",
-          "answer": "In this passage, 'efficacy' refers to the vaccine's ability to produce the intended protective effect against disease, specifically its capacity to safely and effectively prevent infection in humans."
-        }
-      ],
-      "writingPrompt": "Some experts claim that artificial intelligence will revolutionize healthcare delivery, while others maintain that human medical professionals will always remain indispensable. Discuss both perspectives and provide your own opinion on this matter.",
-      "listeningText": "Scientists at Cambridge University have announced a remarkable medical breakthrough: the creation of the world's first vaccine designed using artificial intelligence. The research team utilized advanced machine learning systems to process enormous quantities of biological data, including genetic information from various pathogens. These computational tools identified optimal protein structures that could safely train the human immune system to recognize and combat specific diseases. Conventionally, vaccine development requires a decade or more of painstaking laboratory research and iterative testing. However, this innovative AI-driven method completed the initial design phase in merely several months. While researchers caution that extensive human clinical trials are still necessary before the vaccine can be approved for public use, they believe this technology represents a transformative advancement in medical science. The implications for rapid pandemic response are particularly significant, potentially enabling much faster development of vaccines against emerging infectious threats.",
-      "createdAt": "2026-06-06T00:03:21.703Z",
+      "writingPrompt": "Some parents and safety campaigners are concerned that pupils in certain areas are being required to travel through potentially dangerous zones to reach school. Discuss the responsibilities of local authorities in ensuring safe school journeys. What measures should be prioritised when planning routes for schoolchildren?",
+      "listeningText": "An MP has highlighted concerns regarding pupils being directed to walk through an army firing range to reach their school. This issue has arisen as local councils struggle with increasingly complex challenges in providing safe transportation for schoolchildren. The controversy underscores broader difficulties facing educational authorities in guaranteeing that students can attend classes without encountering hazardous conditions. The MP's claims have initiated debate about the obligations of local authorities in establishing safe routes for children. Those opposed to the arrangement argue that requiring minors to traverse a military training area presents unacceptable dangers, while defenders may cite budgetary constraints or a lack of alternative pathways. This case illustrates how logistical difficulties in certain communities can compromise the fundamental principle of safe educational access.",
+      "createdAt": "2026-06-06T23:59:53.595Z",
       "aiSource": "minimax"
     },
     {
-      "id": "news-2026-06-06-3-mangrove-forests-are-healing-after-decades-of-human-destruct",
+      "id": "news-2026-06-06-2-are-you-feeling-overwhelmed",
       "date": "2026-06-06",
-      "title": "Mangrove forests are healing after decades of human destruction",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/cn4pk07npvvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-04T23:11:15.000Z",
-      "topic": "environment",
-      "originalSummary": "Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.",
-      "learningSummary": "Mangrove ecosystems, which have historically suffered extensive degradation due to coastal development and agricultural expansion, are now demonstrating remarkable signs of recovery across several tropical regions. This unexpected environmental turnaround carries significant implications for both local communities and global climate regulation efforts. These salt-tolerant tree species thrive in intertidal zones and serve as critical carbon sinks, absorbing substantial quantities of greenhouse gases while simultaneously protecting coastlines from erosion and storm damage. Scientists have observed encouraging restoration trends following the implementation of stricter conservation measures and community-led reforestation initiatives. The revival of these coastal wetlands also supports biodiversity by providing essential habitats for numerous fish species and crustaceans. Experts suggest that continued investment in mangrove preservation could yield substantial benefits for climate mitigation strategies while enhancing the resilience of vulnerable coastal populations against the escalating impacts of climate change.",
+      "title": "Are you feeling overwhelmed?",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/videos/c3w2w79j12xo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-05T17:57:00.000Z",
+      "topic": "health",
+      "originalSummary": "Kimberley Wilson gives some tips on how to deal with feeling overwhelmed.",
+      "learningSummary": "Modern life frequently presents individuals with demands that exceed their capacity to cope, leading to a pervasive sense of being overwhelmed. This psychological state manifests when a person perceives the volume of tasks, responsibilities or pressures as unmanageable relative to their available resources. Mental health professionals emphasise that recognising early warning signs is crucial for preventing more serious conditions such as anxiety disorders or depression. Effective strategies include breaking large tasks into smaller, manageable segments, establishing clear priorities, and setting realistic expectations about what can be accomplished within given timeframes. Additionally, incorporating regular physical activity, maintaining consistent sleep patterns, and cultivating supportive social connections have demonstrated significant benefits. Experts recommend that individuals develop personal coping mechanisms before stress becomes unmanageable, rather than waiting until crisis point. Understanding that feeling overwhelmed represents a common human experience, rather than a personal failure, forms an essential component of sustainable mental wellbeing.",
       "vocabulary": [
         {
-          "word": "intertidal zone",
-          "meaning": "the coastal area between high and low tide marks where seawater and land meet",
-          "example": "The intertidal zone supports diverse species adapted to fluctuating salt water levels."
+          "word": "overwhelmed",
+          "meaning": "being completely consumed by an excess of demands or emotions to the point where one cannot function effectively",
+          "example": "Many professionals report feeling overwhelmed by the simultaneous demands of career advancement and family responsibilities."
         },
         {
-          "word": "carbon sink",
-          "meaning": "a natural system capable of absorbing and storing carbon dioxide from the atmosphere",
-          "example": "Forests and oceans serve as the planet's most significant carbon sinks."
+          "word": "cognitive",
+          "meaning": "relating to mental processes of thinking, reasoning, and information processing",
+          "example": "Cognitive behavioural techniques help individuals reframe negative thought patterns that contribute to stress."
         },
         {
-          "word": "reforestation",
-          "meaning": "the process of re-establishing forests in areas that have been depleted or destroyed",
-          "example": "Massive reforestation projects have contributed to the revival of coastal ecosystems."
+          "word": "resilience",
+          "meaning": "the capacity to recover quickly from difficulties and adapt successfully to challenging circumstances",
+          "example": "Building resilience through gradual exposure to manageable stressors enables individuals to handle greater pressures over time."
         },
         {
-          "word": "biodiversity",
-          "meaning": "the variety of plant and animal species within a particular habitat or ecosystem",
-          "example": "Mangrove forests support remarkable biodiversity, sheltering countless marine organisms."
+          "word": "mindfulness",
+          "meaning": "a mental state achieved by focusing awareness on the present moment while calmly acknowledging feelings and thoughts",
+          "example": "Practising mindfulness for just ten minutes daily has been shown to reduce cortisol levels and improve emotional regulation."
         },
         {
-          "word": "mitigation",
-          "meaning": "actions taken to reduce the severity or impact of something, particularly environmental damage",
-          "example": "Climate mitigation strategies often include protecting and restoring natural ecosystems."
+          "word": "sustainable",
+          "meaning": "capable of being maintained at a steady level without depleting resources or causing negative consequences",
+          "example": "Effective stress management requires developing sustainable habits rather than relying on temporary fixes or avoidance strategies."
         }
       ],
       "readingQuestions": [
         {
-          "question": "What dual environmental functions do mangrove forests provide according to the passage?",
-          "answer": "Mangrove forests function as carbon sinks that absorb greenhouse gases, while simultaneously protecting coastal areas from erosion and storm damage."
+          "question": "According to the passage, what distinguishes feeling overwhelmed from more serious mental health conditions?",
+          "answer": "Feeling overwhelmed occurs when demands exceed one's perceived capacity to cope, but it represents a common human experience rather than a clinical condition requiring medical intervention. Mental health professionals view it as a warning sign that can lead to anxiety disorders or depression if unaddressed."
         },
         {
-          "question": "What can be inferred about the effectiveness of recent conservation policies?",
-          "answer": "The unexpected recovery of mangrove forests suggests that recent conservation measures and community-led reforestation initiatives have proven effective in reversing decades of environmental degradation."
+          "question": "It can be inferred from the passage that the author believes individuals should address feelings of overwhelm:",
+          "answer": "Before they reach a crisis point. The text states that experts recommend developing personal coping mechanisms proactively rather than waiting until stress becomes unmanageable, suggesting that early intervention prevents more serious mental health consequences."
         },
         {
-          "question": "In the context of the passage, what does the phrase 'carbon sink' most nearly mean?",
-          "answer": "A system that absorbs and stores atmospheric carbon dioxide, reducing the concentration of greenhouse gases in the atmosphere."
+          "question": "In the context of the passage, the word 'pervasive' in the second sentence most nearly means:",
+          "answer": "Widespread or commonly experienced. The passage describes overwhelm as a state that 'manifests' frequently across many individuals, indicating that the term 'pervasive' refers to how commonly this condition occurs in modern life."
         }
       ],
-      "writingPrompt": "Some scientists argue that protecting natural ecosystems like mangrove forests should take priority over economic development in coastal regions. Others believe that economic growth and job creation must come first for developing nations. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your knowledge or experience.",
-      "listeningText": "Mangrove forests, those dense coastal wetlands long overlooked and destroyed, are making an unexpected comeback across tropical coastlines worldwide. This remarkable ecological recovery brings significant benefits for both local communities and global climate efforts. These remarkable trees, growing in the challenging space between land and sea, are proving invaluable in the fight against climate change by capturing carbon dioxide and shielding coastlines from increasingly severe storms. Marine biologists studying these ecosystems have documented impressive restoration patterns where protective measures were implemented. The revival matters because these forests also sustain countless species of fish and crustaceans, supporting the livelihoods of coastal fishing communities. Researchers studying these trends emphasize that the revival demonstrates nature's resilience when given adequate protection, while simultaneously providing an accessible strategy for communities seeking to adapt to changing climate conditions.",
-      "createdAt": "2026-06-06T00:03:37.589Z",
+      "writingPrompt": "In contemporary society, many people complain about feeling constantly overwhelmed by their responsibilities and daily pressures. What, in your view, are the main causes of this phenomenon, and what solutions would you recommend to address it? Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+      "listeningText": "Feeling overwhelmed has become an increasingly common complaint in today's fast-paced world. When individuals face more tasks and responsibilities than they believe they can handle, they often experience significant stress that affects both their mental and physical wellbeing. The good news is that there are practical steps anyone can take to manage these feelings effectively. First, breaking down large projects into smaller, more manageable tasks can make even daunting challenges feel achievable. Second, learning to say no to additional commitments is essential for protecting personal time and energy. Third, regular exercise and adequate sleep provide the foundation for better emotional regulation. Many experts also recommend practices such as meditation or deep breathing exercises, which help calm the nervous system during high-stress periods. Perhaps most importantly, maintaining connections with friends and family provides emotional support that buffers against the negative effects of excessive pressure. Remember that seeking professional help when feelings become persistent is not a sign of weakness but a responsible approach to maintaining mental health.",
+      "createdAt": "2026-06-07T00:00:03.796Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-06-3-labour-will-make-ai-work-for-the-workers-says-liz-kendall",
+      "date": "2026-06-06",
+      "title": "Labour will make AI ‘work for the workers’, says Liz Kendall",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/technology/2026/jun/05/labour-will-make-ai-work-for-workers-liz-kendall",
+      "publishedAt": "2026-06-05T17:00:04.000Z",
+      "topic": "work",
+      "originalSummary": "Technology secretary promises to support people whose jobs are swept away by automation Liz Kendall has insisted Labour will make artificial intelligence “work for workers”, and not abandon people whose jobs are swept away by its rapid advance. With public fears mounting about the impact of AI on employment, particularly for young people, the technology secretary claimed that the government could shape the way it is adopted. Continue reading...",
+      "learningSummary": "The Technology Secretary, Liz Kendall, has affirmed that the Labour government intends to ensure artificial intelligence benefits employees rather than causing them harm. She has promised to provide support for workers whose employment is displaced by automated systems. As public concern about AI's impact on jobs continues to grow, particularly among younger generations entering the workforce, Kendall has emphasized that the government possesses the capacity to influence how AI technologies are implemented in workplaces. Rather than allowing automation to proceed without intervention, the administration aims to shape adoption patterns to protect workers' interests. This stance reflects a broader governmental commitment to managing the transition to an AI-driven economy in a way that safeguards employment opportunities for vulnerable populations.",
+      "vocabulary": [
+        {
+          "word": "automation",
+          "meaning": "the use of machines or systems to perform tasks previously done by humans",
+          "example": "The increasing automation of manufacturing processes has led to significant job losses in traditional sectors."
+        },
+        {
+          "word": "displacement",
+          "meaning": "the act of forcing people out of their jobs or positions",
+          "example": "Workers fear displacement as AI technologies become more sophisticated and capable of performing cognitive tasks."
+        },
+        {
+          "word": "shape",
+          "meaning": "to influence the development or form of something",
+          "example": "Government policies can shape how emerging technologies are adopted across different industries."
+        },
+        {
+          "word": "vulnerable",
+          "meaning": "susceptible to being harmed or affected by something",
+          "example": "Young people entering the job market are particularly vulnerable to the disruptive effects of rapid technological change."
+        },
+        {
+          "word": "transition",
+          "meaning": "the process of changing from one state or condition to another",
+          "example": "Managing the transition to an AI-driven economy requires comprehensive support for affected workers."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What has Liz Kendall promised regarding artificial intelligence and workers?",
+          "answer": "She has promised that Labour will make AI work for workers, not abandon those whose jobs are displaced by automation."
+        },
+        {
+          "question": "Why might young people be particularly concerned about AI's impact on employment according to the passage?",
+          "answer": "Young people are particularly concerned because they are just entering the workforce and may face greater challenges finding employment as AI adoption increases."
+        },
+        {
+          "question": "What does the phrase \"shape the way it is adopted\" suggest about the government's intended role?",
+          "answer": "It suggests the government plans to actively influence or regulate how AI technologies are implemented, rather than passively allowing them to spread unchecked."
+        }
+      ],
+      "writingPrompt": "Some people believe that artificial intelligence will create more problems than it solves in the workplace, while others argue that it will generate significant benefits for society. Discuss both views and give your own opinion.",
+      "listeningText": "The government has announced plans to ensure artificial intelligence benefits workers across the country. Speaking at a conference on technology and employment, the Technology Secretary outlined how AI could be developed in ways that support rather than replace human workers. She acknowledged public concerns about job displacement but emphasized that proper regulation and planning could mitigate negative effects. The minister announced new funding for retraining programmes and promised to work with industry leaders to ensure AI adoption proceeds in a manner that protects workers' interests. This announcement comes amid growing debate about how nations should manage the transition to an increasingly automated economy.",
+      "createdAt": "2026-06-07T00:00:12.433Z",
       "aiSource": "minimax"
     },
     {
