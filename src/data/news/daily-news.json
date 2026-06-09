@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T00:03:21.050Z",
+  "updatedAt": "2026-06-09T00:02:33.632Z",
   "items": [
+    {
+      "id": "news-2026-06-09-1-no-dead-ends-what-the-dutch-can-teach-us-about-tackling-yout",
+      "date": "2026-06-09",
+      "title": "'No dead ends': What the Dutch can teach us about tackling youth unemployment",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/cnvpn253re4o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-07T23:03:23.000Z",
+      "topic": "work",
+      "originalSummary": "The Netherlands has one of the world's lowest rates of 16 to 24-year-olds not in education, employment or training.",
+      "learningSummary": "The Netherlands has established itself as a global exemplar in addressing youth unemployment through comprehensive policy interventions and educational reforms. The Dutch model emphasizes early career guidance, enabling adolescents to explore professional pathways before making consequential decisions about their futures. Central to this approach is the integration of vocational training with practical workplace experience, ensuring that young people develop both theoretical knowledge and applicable skills. The government has fostered robust partnerships between educational institutions and private sector employers, creating abundant apprenticeship and traineeship opportunities. These collaborative frameworks have enabled the Netherlands to maintain exceptionally low rates of young people aged 16 to 24 who are neither in education, employment, nor training. International observers frequently study Dutch methodologies as a potential template for nations grappling with persistent youth unemployment challenges, particularly during periods of economic uncertainty when young job seekers face heightened vulnerability.",
+      "vocabulary": [
+        {
+          "word": "vocational training",
+          "meaning": "specialized education providing practical skills for specific trades or professions",
+          "example": "Vocational training programmes equip students with hands-on expertise that employers value highly."
+        },
+        {
+          "word": "apprenticeship",
+          "meaning": "a structured work-based learning arrangement combining practical training with mentorship",
+          "example": "Completing an apprenticeship in construction can lead directly to a stable professional career."
+        },
+        {
+          "word": "framework",
+          "meaning": "an established structure or system of principles guiding operations and decisions",
+          "example": "The regulatory framework ensures consistent standards across all educational institutions."
+        },
+        {
+          "word": "trajectory",
+          "meaning": "the path or direction along which something develops over time",
+          "example": "Early intervention can redirect a young person's career trajectory toward greater success."
+        },
+        {
+          "word": "integration",
+          "meaning": "the process of combining different elements into a unified, functional whole",
+          "example": "The integration of academic study with workplace practice enhances learning outcomes."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what distinguishes the Dutch approach to youth unemployment from many other nations?",
+          "answer": "The Dutch approach distinguishes itself through the integration of vocational training with practical workplace experience, combined with strong government partnerships between educational institutions and private sector employers that create abundant apprenticeship opportunities."
+        },
+        {
+          "question": "It can be inferred from the passage that the Netherlands' success in reducing youth unemployment primarily results from:",
+          "answer": "Implementing comprehensive support systems that begin with early career guidance, allowing young people to make informed decisions about their professional futures before committing to specific fields."
+        },
+        {
+          "question": "In the context of the passage, the word 'framework' in the third paragraph most nearly means:",
+          "answer": "An established system of principles and guidelines that structures how educational institutions and businesses cooperate to address youth employment challenges."
+        }
+      ],
+      "writingPrompt": "In many countries, youth unemployment remains a persistent challenge despite various government initiatives. Some people argue that investing heavily in vocational education and apprenticeships is the most effective solution, while others believe that encouraging more young people to pursue university degrees is the better approach. Discuss both views and give your own opinion. Provide reasons and examples from your knowledge and experience to support your answer.",
+      "listeningText": "The Netherlands has achieved remarkable success in keeping young people engaged in education or employment. This achievement stems from a comprehensive strategy that begins during secondary education. Dutch students receive career counselling at an early age, helping them understand various professional options before making important decisions about their futures. The system places significant emphasis on vocational pathways, which are often perceived as equally valuable as traditional academic routes. Employers actively participate in training programmes, providing students with real workplace experience while still completing their education. This collaborative approach between schools and businesses creates a smooth transition from learning to earning. Experts suggest that other nations could benefit from studying these Dutch methodologies, particularly during times of economic instability when young job seekers often face the greatest difficulties finding suitable employment.",
+      "createdAt": "2026-06-09T00:02:17.767Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-09-2-starmer-tells-apple-and-google-to-ban-nude-images-on-childre",
+      "date": "2026-06-09",
+      "title": "Starmer tells Apple and Google to ban nude images on children's phones",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/cly752ydjw6o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-08T15:30:43.000Z",
+      "topic": "technology",
+      "originalSummary": "Firms will be expected to activate built-in features to stop children accessing sexually explicit images.",
+      "learningSummary": "The UK government has called upon major technology corporations to take proactive measures in safeguarding minors from exposure to inappropriate sexual content on their smartphones and tablets. Rather than developing entirely new applications, companies such as Apple and Google are expected to activate existing parental control mechanisms already embedded within their operating systems. This initiative forms part of a broader governmental effort to address concerns regarding online safety for children and adolescents. The expectation is that technology firms will implement these protective features as a standard component of devices sold to families with young users. This development highlights the increasing pressure placed upon technology companies to assume greater responsibility for the content accessible to underage individuals on their platforms.",
+      "vocabulary": [
+        {
+          "word": "mandate",
+          "meaning": "an official order or instruction requiring specific action",
+          "example": "The new legislation will mandate that technology firms implement stricter age verification processes."
+        },
+        {
+          "word": "safeguarding",
+          "meaning": "the action of protecting someone from harm, abuse, or danger",
+          "example": "Schools have a duty of safeguarding children both offline and in digital environments."
+        },
+        {
+          "word": "explicit",
+          "meaning": "clearly and directly expressed; containing or describing sexual content without ambiguity",
+          "example": "Parents are increasingly concerned about the explicit material their children may encounter online."
+        },
+        {
+          "word": "mechanism",
+          "meaning": "a system or process designed to achieve a particular result",
+          "example": "The built-in filtering mechanism allows parents to monitor and restrict their child's online activity."
+        },
+        {
+          "word": "intervention",
+          "meaning": "the action of intervening to improve or control a situation",
+          "example": "Early intervention by educators can help prevent students from developing unhealthy technology habits."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what specific action is the UK government requesting from Apple and Google?",
+          "answer": "The government is requesting that Apple and Google activate built-in parental control features already present in their operating systems to prevent children from accessing sexually explicit images."
+        },
+        {
+          "question": "The passage implies that technology companies have faced growing criticism regarding their role in protecting young users. What evidence from the text supports this inference?",
+          "answer": "The passage states that this initiative represents increasing pressure on technology firms to assume greater responsibility for content accessible to underage individuals, suggesting ongoing criticism of their current protective measures."
+        },
+        {
+          "question": "In the context of the passage, what does the word 'mechanism' most closely mean?",
+          "answer": "In this context, 'mechanism' refers to the built-in parental control systems or filtering tools within smartphone operating systems that can be activated to block inappropriate content."
+        }
+      ],
+      "writingPrompt": "In recent years, there has been growing debate about whether technology companies should be held legally responsible for protecting children from harmful online content. Some argue that corporations should be mandated to implement strict filtering systems on all devices, while others believe that parental choice and education should remain the primary approach. Discuss both views and give your own opinion. Give reasons for your answer and include your own knowledge and experience.",
+      "listeningText": "The British government is taking steps to address online safety concerns for young people by requiring technology giants to enable existing content filtering tools on devices used by children. Prime Minister Keir Starmer has specifically called on Apple and Google to activate parental control features that are already built into their operating systems. Rather than forcing companies to develop entirely new applications, the government expects firms to simply switch on protective mechanisms that already exist within smartphones and tablets. This policy forms part of a wider strategy to make digital platforms safer for minors. Industry leaders have been asked to prioritise the wellbeing of young users when designing and marketing their products. The move reflects growing international concern about the need for greater corporate accountability in protecting children from inappropriate material online.",
+      "createdAt": "2026-06-09T00:02:27.860Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-09-3-residents-health-fears-over-plan-to-burn-more-waste",
+      "date": "2026-06-09",
+      "title": "Residents' health fears over plan to burn more waste",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/c1eypqxd928o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-07T12:07:17.000Z",
+      "topic": "environment",
+      "originalSummary": "The Environment Agency has permitted for an extra 10% of waste to be burned at the Beddington incinerator.",
+      "learningSummary": "The Environment Agency has granted permission for the Beddington incinerator to boost its waste combustion capacity by ten percent. This regulatory decision has prompted significant concerns among local inhabitants who fear potential adverse health effects from increased air pollution. Community advocates contend that expanding such facilities contributes to environmental degradation and may exacerbate respiratory conditions among nearby populations. The regulatory body insists that stringent emissions standards will remain in effect despite the heightened operational capacity. Residents are now urging authorities to conduct thorough health impact assessments before proceeding with further expansion plans. This situation highlights the ongoing tension between waste management necessities and public health considerations in urban areas.",
+      "vocabulary": [
+        {
+          "word": "incinerator",
+          "meaning": "a facility designed to burn waste materials at high temperatures for disposal or energy generation",
+          "example": "The local council proposed building a new incinerator to reduce landfill reliance."
+        },
+        {
+          "word": "combustion",
+          "meaning": "the chemical process of burning, typically involving rapid oxidation that produces heat and light",
+          "example": "Improved combustion technology can significantly reduce harmful emissions from power plants."
+        },
+        {
+          "word": "emissions",
+          "meaning": "waste substances, particularly pollutants, released into the atmosphere from industrial processes",
+          "example": "Factory emissions standards have been tightened to protect air quality in residential zones."
+        },
+        {
+          "word": "respiratory",
+          "meaning": "relating to or affecting the organs and tissues involved in breathing",
+          "example": "Prolonged exposure to air pollution can lead to serious respiratory diseases."
+        },
+        {
+          "word": "adversely",
+          "meaning": "in a way that causes harm, damage, or detrimental effects",
+          "example": "Climate change may adversely affect agricultural productivity in developing nations."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the article, what specific percentage increase in waste burning has been authorized at the Beddington facility?",
+          "answer": "Ten percent"
+        },
+        {
+          "question": "What can be inferred about the concerns of local residents regarding the incinerator expansion?",
+          "answer": "They are primarily worried about potential health risks, particularly respiratory problems, that may result from increased air pollution in their area."
+        },
+        {
+          "question": "In the context of the article, what does 'adversely affect' most nearly mean?",
+          "answer": "To cause harm or have a negative impact on something."
+        }
+      ],
+      "writingPrompt": "Some people argue that increasing the number of waste incinerators is necessary to address growing landfill problems, while others believe this approach creates serious health and environmental concerns. Discuss both views and give your own opinion. What is the most sustainable approach to waste management in modern societies?",
+      "listeningText": "The Beddington incinerator controversy highlights a growing debate about waste management strategies in urban communities. The Environment Agency has approved a ten percent increase in the facility's combustion capacity, sparking concern among local residents who fear potential health implications. Environmental campaigners argue that expanded incineration facilities contribute to air pollution and may harm respiratory health in nearby neighborhoods. The regulatory agency maintains that emissions standards will be upheld despite increased throughput. Community members are now calling for comprehensive health impact assessments before any further expansion takes place. This case illustrates the delicate balance authorities must strike between practical waste disposal needs and protecting public health.",
+      "createdAt": "2026-06-09T00:02:33.631Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-06-08-1-no-dead-ends-what-the-dutch-can-teach-us-about-tackling-yout",
       "date": "2026-06-08",
@@ -1485,146 +1653,6 @@
       "listeningText": "National Trust workers are undertaking a major conservation project to restore one of Britain's most recognizable ancient landmarks. The operation involves applying seventeen tonnes of fresh chalk to a famous hill figure located in Oxfordshire. This massive chalk carving, believed to have been created during the Iron Age, depicts a horse and has graced the hillside for over two thousand years. However, recent environmental changes have accelerated the figure's deterioration, with heavy rainfall washing away the chalk markings more quickly than in previous decades. Volunteers and staff members must complete the work during favorable weather conditions, as rain would simply wash away the newly applied chalk before it properly sets. Conservation experts explain that this type of regular maintenance is essential for protecting the nation's cultural heritage. The organization monitors the site throughout the year and plans restoration work when conditions are suitable for optimal results.",
       "createdAt": "2026-05-29T00:08:43.348Z",
       "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-27-1-student-loans-inquiry-finds-many-did-not-understand-terms",
-      "date": "2026-05-27",
-      "title": "Student loans inquiry finds many did not understand terms",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/cn9pejwj0xxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-27T16:51:44.000Z",
-      "topic": "education",
-      "originalSummary": "The Treasury inquiry is looking at student loan plans in England and whether repayment terms are \"reasonable\".",
-      "learningSummary": "...",
-      "vocabulary": [
-        {
-          "word": "...",
-          "meaning": "...",
-          "example": "..."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "...",
-          "answer": "..."
-        }
-      ],
-      "writingPrompt": "...",
-      "listeningText": "...",
-      "createdAt": "2026-05-27T23:58:04.754Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-27-2-the-rise-of-the-fruit-that-tastes-like-custard",
-      "date": "2026-05-27",
-      "title": "The rise of the fruit that tastes like custard",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/ce8pmrp0m47o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-27T10:58:45.000Z",
-      "topic": "technology",
-      "originalSummary": "Custard apple plants are prized for their hardiness but exporting their delicate fruit is difficult.",
-      "learningSummary": "A recent BBC Technology report examines how scientists and engineers are developing innovative solutions to address the export challenges of custard apples, a fruit highly valued for its creamy texture and nutritional benefits but notoriously difficult to transport across long distances due to its delicate structure and rapid ripening process. The article highlights how advances in agricultural technology, including modified atmosphere packaging and sensor-based monitoring systems, are enabling producers in tropical regions to ship their produce to international markets without compromising quality. Researchers have engineered packaging materials that regulate humidity and gas exchange, thereby extending shelf life considerably. The report suggests this technological breakthrough could transform global supply chains for perishable tropical crops, offering economic advantages to farming communities in developing nations while meeting growing consumer demand in Europe and North America for exotic fruits.",
-      "vocabulary": [
-        {
-          "word": "perishable",
-          "meaning": "(of food) liable to decay or spoil quickly if not preserved",
-          "example": "The perishable nature of custard apples has long hindered large-scale export operations."
-        },
-        {
-          "word": "modified atmosphere packaging",
-          "meaning": "a food storage technique that alters the gases inside packaging to slow spoilage",
-          "example": "Modified atmosphere packaging was found to double the shelf life of certain tropical fruits."
-        },
-        {
-          "word": "hardiness",
-          "meaning": "the ability to withstand harsh conditions without damage",
-          "example": "Despite their hardiness in the field, custard apple plants produce fruit that is extremely fragile."
-        },
-        {
-          "word": "supply chain",
-          "meaning": "the sequence of processes involved in producing and distributing goods",
-          "example": "Innovations in packaging are reshaping the supply chain for delicate agricultural exports."
-        },
-        {
-          "word": "shelf life",
-          "meaning": "the length of time a product remains fit for use or consumption",
-          "example": "New sensor technology has significantly extended the shelf life of custard apples during transit."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What primary obstacle has custard apple producers faced when attempting to export their fruit internationally?",
-          "answer": "The fruit's delicate structure and rapid ripening process make it extremely difficult to transport over long distances without spoiling."
-        },
-        {
-          "question": "It can be inferred from the passage that the new packaging technology primarily benefits which group of people?",
-          "answer": "Farming communities in developing nations, who stand to gain economically from being able to access international export markets."
-        },
-        {
-          "question": "The word 'hardiness' in the passage is closest in meaning to: (a) flavour, (b) resilience, (c) size, (d) popularity",
-          "answer": "(b) resilience"
-        }
-      ],
-      "writingPrompt": "Some experts believe that advances in agricultural technology are the most effective way to reduce global food waste, while others argue that changes in consumer behaviour and retail practices are more important. Discuss both views and give your own opinion.",
-      "listeningText": "Good morning. Today's technology report focuses on a breakthrough that could change the way we import tropical fruits. Custard apples are beloved for their unique creamy texture and high nutritional value. However, exporting them has always been problematic because the fruit spoils very quickly after being picked. Until now, producers had no reliable method to keep the fruit fresh during long journeys across oceans. A team of engineers has developed a smart packaging system that actively controls humidity and gases inside each package. Tiny sensors monitor conditions in real time and adjust settings automatically. Early trials show that this approach can extend shelf life by several weeks. If scaled up, this technology could allow farmers in tropical regions to reach markets they previously could not access, boosting rural economies significantly.",
-      "createdAt": "2026-05-27T23:58:11.162Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-27-3-uk-s-rudest-chalk-figure-gets-a-glow-up-to-stop-it-fading-in",
-      "date": "2026-05-27",
-      "title": "UK's rudest chalk figure gets a glow-up to stop it fading in the rain",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/cpvppe84lnvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-27T23:05:48.000Z",
-      "topic": "environment",
-      "originalSummary": "National Trust staff and volunteers will apply 17 tonnes of fresh chalk to the outline of the famous figure.",
-      "learningSummary": "(Mock learning summary based on the headline.) UK's rudest chalk figure gets a glow-up to stop it fading in the rain. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) UK's rudest chalk figure gets a glow-up to stop it fading in the rain. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-05-27T23:58:48.087Z",
-      "aiSource": "mock"
     }
   ]
 }
