@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-09T00:02:33.632Z",
+  "updatedAt": "2026-06-10T00:08:03.965Z",
   "items": [
+    {
+      "id": "news-2026-06-10-1-lives-still-at-risk-from-unregulated-baby-sleep-industry-aft",
+      "date": "2026-06-10",
+      "title": "'Lives still at risk' from unregulated baby sleep industry after BBC investigation",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/crrprxy2257o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-08T23:07:35.000Z",
+      "topic": "education",
+      "originalSummary": "'Families deserve clarity about the qualifications and training of those caring for their children'",
+      "learningSummary": "The BBC investigation has exposed serious hazards within the unregulated baby sleep industry, revealing how inadequate qualifications among childcare practitioners continue to jeopardise infant safety. Parents seeking professional sleep training services frequently encounter difficulties obtaining verified information about provider credentials or product safety certifications. The investigation discovered that numerous service providers operate without mandatory training requirements, potentially exposing vulnerable infants to unsafe practices. Industry specialists maintain that families possess an inherent right to transparent information regarding the expertise of those entrusted with their children's welfare. Regulatory authorities now confront escalating calls to impose more rigorous standards and establish formal qualification frameworks for professionals delivering baby sleep guidance. This investigation highlights the pressing requirement for enhanced transparency and professional accountability within this rapidly expanding sector, where the consequences of negligence may prove devastating for newborns and their families.",
+      "vocabulary": [
+        {
+          "word": "unregulated",
+          "meaning": "lacking official rules or controls to ensure proper standards",
+          "example": "The unregulated market for online qualifications has raised serious concerns about educational quality."
+        },
+        {
+          "word": "credentials",
+          "meaning": "qualifications, skills or achievements that demonstrate competence",
+          "example": "Parents should verify that childcare providers hold appropriate credentials before engaging their services."
+        },
+        {
+          "word": "oversight",
+          "meaning": "the act of supervising or monitoring to ensure compliance with standards",
+          "example": "Insufficient regulatory oversight allowed unqualified practitioners to operate unchecked."
+        },
+        {
+          "word": "transparency",
+          "meaning": "the quality of being open, honest and easily understood",
+          "example": "Greater transparency regarding practitioner qualifications would benefit families seeking reliable care."
+        },
+        {
+          "word": "accountability",
+          "meaning": "the state of being responsible and answerable for one's actions",
+          "example": "Stricter accountability measures are necessary to protect consumers from unqualified service providers."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the investigation, what primary challenge do parents face when seeking baby sleep services?",
+          "answer": "Parents encounter significant difficulties obtaining verified information about provider qualifications and product safety certifications when searching for professional sleep training services."
+        },
+        {
+          "question": "What inference can be drawn about the current regulatory framework for baby sleep practitioners?",
+          "answer": "The investigation implies that existing regulatory controls are inadequate, as practitioners without proper training requirements continue operating, suggesting a need for more stringent oversight mechanisms."
+        },
+        {
+          "question": "In the context of this passage, what does 'qualification frameworks' mean?",
+          "answer": "It refers to formal systems of standards and requirements that define the necessary training, skills and certifications that professionals must obtain to work in the baby sleep industry."
+        }
+      ],
+      "writingPrompt": "Some experts argue that all professionals offering advice or services related to infant care should be legally required to obtain formal qualifications and licensing. Discuss this view and give your own opinion on the matter. You should write at least 250 words.",
+      "listeningText": "A recent BBC investigation has raised serious concerns about the growing baby sleep industry. Researchers discovered that many providers offering sleep training services lack proper qualifications or training. Parents often struggle to verify whether practitioners are properly credentialed before engaging their services. The investigation found examples of potentially dangerous practices being carried out by unqualified individuals. Experts are now calling for regulatory bodies to introduce mandatory certification requirements for anyone working with infants. They argue that families deserve clear information about who is caring for their children. The findings highlight a significant gap in consumer protection within this expanding market, where the consequences of inadequate training could be severe.",
+      "createdAt": "2026-06-10T00:07:32.036Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-10-2-kalshi-to-make-some-users-reveal-job-details-to-tackle-insid",
+      "date": "2026-06-10",
+      "title": "Kalshi to make some users reveal job details to tackle insider trading",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/cx2vn7wp33po?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-09T22:32:31.000Z",
+      "topic": "technology",
+      "originalSummary": "After issues with insider trading, the prediction betting platform is adding new rules.",
+      "learningSummary": "The prediction market platform Kalshi has implemented new verification measures requiring certain users to submit professional information following concerns about unfair trading practices. The company, which enables participants to speculate on future outcomes, has encountered difficulties related to market manipulation. Under these revised guidelines, individuals seeking to trade in high-value markets must provide evidence of their employment status. This initiative attempts to address potential conflicts of interest where those with privileged knowledge might exploit market positions. Market observers note that this development illustrates a broader movement within fintech sectors to establish greater accountability and prevent regulatory breaches. The policy has generated discussion regarding the appropriate trade-off between maintaining transparent markets and safeguarding individual privacy rights. Company representatives maintain that these measures will ultimately strengthen confidence in prediction trading platforms.",
+      "vocabulary": [
+        {
+          "word": "manipulation",
+          "meaning": "the practice of improperly influencing transactions or markets for personal gain",
+          "example": "Regulators are increasingly scrutinizing market manipulation in digital trading environments."
+        },
+        {
+          "word": "disclosure",
+          "meaning": "the act of revealing information, especially information that was previously confidential",
+          "example": "The new rules mandate full disclosure of employment history for certain traders."
+        },
+        {
+          "word": "affiliation",
+          "meaning": "a formal connection or association with an organization or group",
+          "example": "Users must verify their professional affiliations before accessing premium markets."
+        },
+        {
+          "word": "transparency",
+          "meaning": "the quality of being open and honest about procedures and information",
+          "example": "Greater transparency in financial platforms helps prevent fraudulent activities."
+        },
+        {
+          "word": "integrity",
+          "meaning": "the quality of being honest and morally sound, or maintaining consistent standards",
+          "example": "Maintaining market integrity requires robust verification systems."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What specific information must certain Kalshi users now provide according to the new policy?",
+          "answer": "Certain users must disclose their job details or employment information to verify their professional affiliations."
+        },
+        {
+          "question": "What can be inferred about the purpose of requiring employment verification?",
+          "answer": "The verification is intended to prevent individuals with insider knowledge from gaining unfair advantages in prediction markets."
+        },
+        {
+          "question": "In the context of this passage, what does the phrase 'tackle insider trading' most likely mean?",
+          "answer": "It means to address or combat the illegal practice of using confidential information to profit from market predictions."
+        }
+      ],
+      "writingPrompt": "Some companies now require users to share personal professional information to prevent financial crimes. While this may enhance market fairness, it raises concerns about privacy invasion. Discuss both views and give your own opinion.",
+      "listeningText": "Kalshi, a popular prediction market platform, has announced new requirements for users wishing to participate in certain markets. Those who want to trade in high-value prediction contracts must now verify their employment details. This change comes after the platform experienced problems with insider trading, where people with access to confidential information used it to make unfair profits. The company believes that knowing users' professional backgrounds will help prevent such practices. Industry analysts say this represents a growing trend in financial technology, where platforms balance user privacy against the need for transparent markets. The new measures are expected to increase confidence in prediction markets while still protecting individual users' basic privacy rights.",
+      "createdAt": "2026-06-10T00:07:49.401Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-10-3-nasa-names-next-astronauts-for-artemis-moon-programme",
+      "date": "2026-06-10",
+      "title": "Nasa names next astronauts for Artemis Moon programme",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cdejn0gj12go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-09T17:46:55.000Z",
+      "topic": "technology",
+      "originalSummary": "Nasa names its next Artemis crew, though they will not be walking on the Moon or even going anywhere near it.",
+      "learningSummary": "NASA has announced the latest group of astronauts selected for the Artemis programme, the initiative aimed at returning humans to the lunar surface. However, the newly designated crew members will not participate in actual Moon landings or approach the Moon's vicinity during their mission. This announcement highlights the complex structure of modern space exploration, where different teams fulfill distinct roles across multiple mission phases. The Artemis programme represents a collaborative international effort that involves extensive training, specialised equipment development, and carefully orchestrated mission timelines. Despite the absence of lunar landings, these astronauts will likely contribute to critical aspects of the programme, such as orbital station operations or future mission preparations. The announcement underscores how contemporary space missions involve numerous personnel working towards shared objectives without each individual directly setting foot on celestial bodies.",
+      "vocabulary": [
+        {
+          "word": "designate",
+          "meaning": "officially appoint or name for a particular position or role",
+          "example": "The agency designated twelve specialists to oversee the upcoming orbital transfer."
+        },
+        {
+          "word": "vicinity",
+          "meaning": "the area near or around a particular place",
+          "example": "The spacecraft will remain in lunar orbit, nowhere near the Moon's surface."
+        },
+        {
+          "word": "collaborative",
+          "meaning": "involving joint effort and cooperation among multiple parties",
+          "example": "The collaborative nature of the Artemis programme brings together agencies worldwide."
+        },
+        {
+          "word": "nuanced",
+          "meaning": "characterised by subtle distinctions or detailed variations",
+          "example": "Understanding the nuanced roles of different crew members is essential."
+        },
+        {
+          "word": "orchestrate",
+          "meaning": "to coordinate or arrange something carefully and systematically",
+          "example": "Mission controllers must orchestrate every phase with absolute precision."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what limitation was explicitly stated regarding the newly named Artemis crew members?",
+          "answer": "The passage states that the newly named crew members will not be walking on the Moon or even going anywhere near it."
+        },
+        {
+          "question": "What can be inferred about the structure of the Artemis programme from this announcement?",
+          "answer": "It can be inferred that the Artemis programme operates with multiple teams fulfilling different roles, suggesting that not all personnel involved will participate directly in lunar landings but may contribute to other essential aspects such as orbital operations or mission preparations."
+        },
+        {
+          "question": "In the context of the passage, what does the word 'collaborative' suggest about the nature of the Artemis programme?",
+          "answer": "The word 'collaborative' suggests that the Artemis programme involves joint effort and cooperation among multiple international space agencies, rather than being a singular national endeavour."
+        }
+      ],
+      "writingPrompt": "Some experts argue that sending astronauts to the Moon and beyond represents a necessary investment in human progress, while others believe that robotic missions could achieve similar scientific objectives at a fraction of the cost. Discuss both views and give your own opinion. You should write at least 250 words.",
+      "listeningText": "Here's the latest news from the BBC Science and Environment section. NASA has officially announced the names of astronauts selected for the upcoming Artemis mission. However, officials clarified that these crew members will not be landing on the lunar surface nor approaching the Moon's vicinity. The announcement has sparked interest in how modern space programmes distribute responsibilities among different personnel. The Artemis initiative represents one of the most ambitious collaborative space projects in recent history, involving multiple international partners. Despite the limited immediate roles of the newly named astronauts, they remain integral to the programme's long-term objectives. This development illustrates the complex nature of contemporary space exploration, where mission success depends on carefully coordinated teams rather than individual achievements.",
+      "createdAt": "2026-06-10T00:08:03.963Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-06-09-1-no-dead-ends-what-the-dutch-can-teach-us-about-tackling-yout",
       "date": "2026-06-09",
@@ -1484,174 +1652,6 @@
       "writingPrompt": "Some people believe that governments should mandate the installation of electric vehicle charging infrastructure in all residential areas to accelerate the transition to sustainable transportation. Others argue that local authorities should retain the authority to decide based on local circumstances. Discuss both views and give your own opinion.",
       "listeningText": "Good morning and welcome to today's discussion on the challenges facing electric vehicle adoption in the United Kingdom. While the government has committed to expanding green transport options, a significant obstacle has emerged at the local level. More than twenty municipal councils have declined to authorize the installation of charging gullies on public pavements, citing legitimate concerns about pedestrian safety and existing parking arrangements. Energy officials maintain that these cable channels represent an affordable and practical solution for residents who lack dedicated parking facilities. However, critics within local government argue that such decisions should remain within their jurisdiction, as councils bear responsibility for maintaining public spaces. This governance conflict may ultimately hinder the country's ability to meet its emissions reduction targets, particularly for households in high-density urban areas where private charging options are limited.",
       "createdAt": "2026-05-30T23:58:24.606Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-29-1-meta-repeatedly-snubs-eu-body-over-facebook-and-instagram-us",
-      "date": "2026-05-29",
-      "title": "Meta repeatedly snubs EU body over Facebook and Instagram user bans",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/c152yvwjwkko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-28T08:28:43.000Z",
-      "topic": "technology",
-      "originalSummary": "The BBC has been contacted by hundreds of users who claimed they had been wrongly banned from the sites.",
-      "learningSummary": "The European Commission has formally accused Meta of systematically ignoring requests from regulatory bodies concerning transparency around content moderation decisions on Facebook and Instagram. Hundreds of European users have approached the BBC claiming they were unfairly suspended from these platforms without receiving adequate justification or mechanism for appeal. The EU's digital governance officials have expressed frustration at Meta's persistent non-cooperation, stating that repeated attempts to obtain information have been met with evasion or inadequate responses. This conflict underscores growing tensions between multinational technology corporations and European authorities regarding algorithmic accountability and user rights protection. Digital rights advocates argue that indefinite account suspensions can cause significant professional and personal damage, particularly for entrepreneurs and content creators who rely on these platforms for their livelihoods. The regulatory body has warned that continued non-compliance may result in substantial financial penalties.",
-      "vocabulary": [
-        {
-          "word": "regulatory",
-          "meaning": "relating to the rules and laws that control an activity or organization",
-          "example": "Regulatory frameworks are essential for maintaining fair practices in the digital marketplace."
-        },
-        {
-          "word": "accountability",
-          "meaning": "the obligation to take responsibility for one's actions and decisions",
-          "example": "Tech companies must accept greater accountability for how their algorithms affect users."
-        },
-        {
-          "word": "suspension",
-          "meaning": "a temporary stopping or postponement of something",
-          "example": "The sudden suspension of thousands of accounts raised serious concerns among users."
-        },
-        {
-          "word": "transparency",
-          "meaning": "the quality of being open and honest about information",
-          "example": "Greater transparency in content moderation policies would benefit all platform users."
-        },
-        {
-          "word": "compliance",
-          "meaning": "the act of obeying rules or regulations",
-          "example": "Companies must demonstrate compliance with EU digital regulations or face consequences."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what specific action has the European Commission taken against Meta?",
-          "answer": "The European Commission has formally accused Meta of systematically ignoring requests from regulatory bodies regarding transparency in content moderation decisions."
-        },
-        {
-          "question": "What can be inferred about Meta's approach to European regulatory authorities based on the passage?",
-          "answer": "It can be inferred that Meta has adopted an evasive or dismissive stance, deliberately evading or delaying responses to formal regulatory requests rather than engaging cooperatively."
-        },
-        {
-          "question": "In the context of this passage, what does the word 'accountability' primarily refer to?",
-          "answer": "It refers to the responsibility that technology corporations must accept for the decisions their algorithmic systems make regarding content moderation and user account management."
-        }
-      ],
-      "writingPrompt": "In an era of increasing digital regulation, some governments are implementing strict rules to govern how technology companies moderate user content and handle account suspensions. Others argue that excessive regulation may stifle innovation and limit user freedom. Discuss both perspectives and give your own opinion. You should write at least 250 words.",
-      "listeningText": "The European Union has launched an official investigation into Meta's handling of user account suspensions on Facebook and Instagram. Regulatory authorities claim the company has repeatedly failed to respond to requests for information about why thousands of users have been blocked without clear explanations. Digital rights organizations have welcomed the investigation, arguing that users deserve transparency when their access to professional and social platforms is restricted. Meta has defended its content moderation practices, stating that decisions are made to maintain community standards and platform safety. However, critics point out that without proper oversight, algorithmic bans can devastate small business owners and independent creators who depend on these platforms for income. The investigation is expected to continue for several months, with potential penalties if non-compliance is confirmed.",
-      "createdAt": "2026-05-29T00:07:53.290Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-29-2-humanoid-robots-the-future-of-car-making-says-bmw",
-      "date": "2026-05-29",
-      "title": "Humanoid robots 'the future' of car making, says BMW",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/cgmpwzzvxr2o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-28T23:36:45.000Z",
-      "topic": "technology",
-      "originalSummary": "BMW is introducing humanoid robots to a car plant in Europe, building on similar projects in the US.",
-      "learningSummary": "The integration of humanoid robots into automotive manufacturing represents a significant technological advancement. BMW has announced plans to deploy these sophisticated machines at its European production facilities, following successful implementations in American plants. Unlike traditional industrial robots, humanoid robots possess the ability to perform complex tasks that typically require human dexterity and adaptability. This development reflects a broader trend in manufacturing automation, where companies seek to improve efficiency while maintaining high-quality standards. Industry experts suggest that such innovations could transform production processes across multiple sectors. The deployment of these robots raises important questions about workforce dynamics and the evolving relationship between human workers and automated systems.",
-      "vocabulary": [
-        {
-          "word": "automation",
-          "meaning": "the use of machinery to perform tasks that were previously done by humans",
-          "example": "Automation in manufacturing has increased productivity significantly over the past decade."
-        },
-        {
-          "word": "integration",
-          "meaning": "the process of combining different elements into a unified system",
-          "example": "The integration of new technology into existing production lines requires careful planning."
-        },
-        {
-          "word": "efficiency",
-          "meaning": "the ability to accomplish a task with minimal waste of time and resources",
-          "example": "Companies are constantly seeking ways to improve efficiency in their operations."
-        },
-        {
-          "word": "autonomous",
-          "meaning": "capable of operating independently without human control",
-          "example": "Autonomous robots can make decisions based on sensor data and programmed instructions."
-        },
-        {
-          "word": "innovation",
-          "meaning": "the introduction of new ideas, methods, or products",
-          "example": "Innovation in robotics is driving changes across multiple industries."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What advantage do humanoid robots have over traditional industrial robots?",
-          "answer": "Humanoid robots can perform complex tasks requiring human-like dexterity and adaptability, unlike conventional industrial robots that are limited to repetitive, programmed movements."
-        },
-        {
-          "question": "What does the passage suggest about the future of automation in manufacturing?",
-          "answer": "The passage implies that automation will continue to expand, potentially transforming multiple sectors beyond automotive manufacturing, as companies seek to balance efficiency with quality."
-        },
-        {
-          "question": "What does the word 'deployment' most closely mean in the context of the passage?",
-          "answer": "In this context, 'deployment' refers to the strategic placement and activation of robots in the manufacturing environment."
-        }
-      ],
-      "writingPrompt": "In some industries, companies are replacing human workers with robots and automated systems. Do the advantages of this trend outweigh the disadvantages? Provide reasons for your answer and include relevant examples from your knowledge or experience.",
-      "listeningText": "Humanoid robots are becoming increasingly common in manufacturing plants around the world. BMW recently announced plans to introduce these robots at its European facilities. The company already uses similar technology in its American factories. Unlike traditional industrial robots that perform repetitive tasks, humanoid robots can handle more complex assignments. They can adapt to different situations and work alongside human employees. This represents a major shift in how cars are manufactured. Experts believe this technology could eventually spread to other industries as well. The robots are designed to be flexible and can learn new tasks relatively quickly.",
-      "createdAt": "2026-05-29T00:08:28.468Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-29-3-uk-s-rudest-chalk-figure-gets-a-glow-up-to-stop-it-fading-in",
-      "date": "2026-05-29",
-      "title": "UK's rudest chalk figure gets a glow-up to stop it fading in the rain",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/cpvppe84lnvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-27T23:05:48.000Z",
-      "topic": "environment",
-      "originalSummary": "National Trust staff and volunteers will apply 17 tonnes of fresh chalk to the outline of the famous figure.",
-      "learningSummary": "National Trust staff and volunteers have begun an extensive maintenance operation to preserve a renowned ancient landmark in the United Kingdom. Workers will apply approximately seventeen tonnes of fresh chalk to restore the distinctive outline of the famous hill figure, which has suffered gradual deterioration due to persistent rainfall and natural weathering processes. The landmark, carved into a hillside centuries ago, requires regular attention to remain visible against the landscape. Extreme weather patterns in recent years have accelerated the fading of the chalk outline, necessitating more frequent interventions than previously required. Environmental factors such as prolonged precipitation and surface erosion have compromised the figure's definition, prompting the conservation effort. The organization emphasizes that such maintenance is essential for protecting the nation's cultural heritage and ensuring that future generations can appreciate these historic features. Specialists monitor the site regularly to assess deterioration and plan subsequent restoration activities accordingly.",
-      "vocabulary": [
-        {
-          "word": "preservation",
-          "meaning": "the act of maintaining something in its original state and protecting it from damage or decay",
-          "example": "The preservation of ancient landmarks requires ongoing funding and expert attention."
-        },
-        {
-          "word": "heritage",
-          "meaning": "inherited traditions, monuments, and cultural aspects passed from previous generations",
-          "example": "Historical sites form an integral part of the nation's cultural heritage."
-        },
-        {
-          "word": "weathering",
-          "meaning": "the gradual breakdown of rock and materials caused by exposure to weather conditions over time",
-          "example": "Natural weathering has significantly altered the appearance of the ancient hillside figure."
-        },
-        {
-          "word": "restoration",
-          "meaning": "the process of returning something to its original condition or improving its state",
-          "example": "Restoration work on the chalk figure will commence immediately following the rainy season."
-        },
-        {
-          "word": "conservation",
-          "meaning": "the careful management and protection of natural resources and historic sites",
-          "example": "Conservation efforts by the National Trust aim to protect biodiversity and cultural landmarks."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What quantity of chalk will be applied during the maintenance of the landmark?",
-          "answer": "Approximately seventeen tonnes of fresh chalk will be applied to the outline of the famous figure."
-        },
-        {
-          "question": "What has caused the figure to fade more rapidly in recent years according to the passage?",
-          "answer": "Extreme weather patterns, particularly persistent rainfall, have accelerated the deterioration of the chalk outline, requiring more frequent maintenance interventions."
-        },
-        {
-          "question": "The word 'conservation' in the passage most nearly means:",
-          "answer": "The careful management and protection of historic sites to prevent their deterioration."
-        }
-      ],
-      "writingPrompt": "In some countries, ancient landmarks and historical sites require frequent maintenance to preserve them for future generations. However, this maintenance is often expensive and uses resources that could be directed elsewhere. Do you think governments should prioritize funding for the preservation of historical sites, or should these resources be spent on more modern needs? Discuss both views and give your own opinion.",
-      "listeningText": "National Trust workers are undertaking a major conservation project to restore one of Britain's most recognizable ancient landmarks. The operation involves applying seventeen tonnes of fresh chalk to a famous hill figure located in Oxfordshire. This massive chalk carving, believed to have been created during the Iron Age, depicts a horse and has graced the hillside for over two thousand years. However, recent environmental changes have accelerated the figure's deterioration, with heavy rainfall washing away the chalk markings more quickly than in previous decades. Volunteers and staff members must complete the work during favorable weather conditions, as rain would simply wash away the newly applied chalk before it properly sets. Conservation experts explain that this type of regular maintenance is essential for protecting the nation's cultural heritage. The organization monitors the site throughout the year and plans restoration work when conditions are suitable for optimal results.",
-      "createdAt": "2026-05-29T00:08:43.348Z",
       "aiSource": "minimax"
     }
   ]
