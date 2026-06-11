@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-10T00:08:03.965Z",
+  "updatedAt": "2026-06-11T00:14:14.288Z",
   "items": [
+    {
+      "id": "news-2026-06-11-1-smacking-children-could-lead-to-lower-gcse-grades-study-sugg",
+      "date": "2026-06-11",
+      "title": "Smacking children could lead to lower GCSE grades, study suggests",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/c2eyke83yz9o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-10T23:33:07.000Z",
+      "topic": "education",
+      "originalSummary": "A University College London (UCL) study suggests that smacking children \"does no good whatsoever\".",
+      "learningSummary": "Research conducted by University College London has revealed compelling evidence regarding the impact of physical discipline on children's educational outcomes. The longitudinal study, which tracked academic performance through GCSE examinations, discovered that children who experienced corporal punishment achieved notably lower grades compared to their peers. Investigators emphasised that physical punishment produces no beneficial effects on behaviour or development. The findings suggest that such disciplinary approaches may hinder rather than help academic attainment. Researchers advocate for alternative discipline strategies that do not involve physical intervention. This study contributes to an expanding body of research examining how parenting practices influence educational achievement. The implications extend beyond individual families to inform broader educational and social policies concerning child-rearing methods.",
+      "vocabulary": [
+        {
+          "word": "corporal punishment",
+          "meaning": "physical discipline such as smacking or hitting as a means of control",
+          "example": "Many educational institutions have banned corporal punishment in favour of constructive disciplinary methods."
+        },
+        {
+          "word": "cognitive development",
+          "meaning": "the process of mental growth and intellectual advancement",
+          "example": "Positive parenting approaches support healthy cognitive development in children."
+        },
+        {
+          "word": "detrimental",
+          "meaning": "causing harm or damage to something",
+          "example": "The research indicated that physical discipline can be detrimental to academic achievement."
+        },
+        {
+          "word": "longitudinal study",
+          "meaning": "research conducted over an extended period tracking the same subjects",
+          "example": "A longitudinal study following students from primary school through GCSE examinations provides valuable data."
+        },
+        {
+          "word": "attainment",
+          "meaning": "the achievement or accomplishment of educational goals",
+          "example": "The study examined the relationship between discipline methods and academic attainment levels."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what specific academic milestone did researchers use to measure the impact of physical discipline?",
+          "answer": "Researchers measured academic outcomes through GCSE examination results, comparing the grades of children who experienced corporal punishment with those who did not."
+        },
+        {
+          "question": "What can be inferred about the researchers' stance on alternative disciplinary methods based on their findings?",
+          "answer": "It can be inferred that the researchers would support non-physical discipline strategies, given their emphasis that physical punishment produces no beneficial effects and their recommendation for alternative approaches."
+        },
+        {
+          "question": "In the context of the passage, what does the word 'advocate' most nearly mean?",
+          "answer": "To recommend or support publicly; the researchers actively promote alternative discipline strategies that do not involve physical intervention."
+        }
+      ],
+      "writingPrompt": "Some people believe that physical punishment is necessary to discipline children. Others argue that such methods are ineffective and potentially harmful. Discuss both views and give your own opinion. You should write at least 250 words.",
+      "listeningText": "A major study from University College London has established a clear connection between physical discipline and reduced academic achievement. The research project monitored students' progress over several years, ultimately examining their GCSE results as a benchmark for educational success. The evidence demonstrated that children subjected to corporal punishment tended to obtain lower examination grades than those raised without such discipline. Study authors were unambiguous in their conclusion that smacking accomplishes nothing positive for child development. The research team recommended that parents and educators explore other disciplinary techniques. These findings add significant weight to existing discussions about how best to support children's learning and development. The study has prompted calls for greater awareness of how disciplinary choices may influence academic outcomes throughout a child's education.",
+      "createdAt": "2026-06-11T00:13:06.782Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-11-2-kalshi-to-make-some-users-reveal-job-details-to-tackle-insid",
+      "date": "2026-06-11",
+      "title": "Kalshi to make some users reveal job details to tackle insider trading",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/cx2vn7wp33po?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-09T22:32:31.000Z",
+      "topic": "technology",
+      "originalSummary": "After issues with insider trading, the prediction betting platform is adding new rules.",
+      "learningSummary": "(Mock learning summary based on the headline.) Kalshi to make some users reveal job details to tackle insider trading. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Kalshi to make some users reveal job details to tackle insider trading. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-11T00:14:01.518Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-11-3-nasa-names-next-astronauts-for-artemis-moon-programme",
+      "date": "2026-06-11",
+      "title": "Nasa names next astronauts for Artemis Moon programme",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cdejn0gj12go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-09T17:46:55.000Z",
+      "topic": "technology",
+      "originalSummary": "Nasa names its next Artemis crew, though they will not be walking on the Moon or even going anywhere near it.",
+      "learningSummary": "NASA has announced the selection of new astronauts for its Artemis lunar programme, though these crew members will not be conducting lunar surface walks or approaching the Moon's vicinity. The announcement highlights NASA's strategic approach to crew deployment within the Artemis initiative, which aims to establish sustainable human exploration beyond Earth's orbit. While the current cohort may not participate in immediate Moon missions, they represent the next generation of astronauts being prepared for deep space exploration. The Artemis programme continues to progress with systematic planning, identifying and training personnel for various stages of lunar missions. This development underscores the complex logistics involved in selecting and preparing astronauts for future interplanetary travel, with missions planned across different phases of the programme.",
+      "vocabulary": [
+        {
+          "word": "strategic",
+          "meaning": "carefully planned to achieve a specific goal",
+          "example": "The strategic selection of astronauts ensures each mission phase has appropriately trained personnel."
+        },
+        {
+          "word": "sustainable",
+          "meaning": "able to be maintained at a constant level without depleting resources",
+          "example": "NASA aims to establish a sustainable human presence on the Moon through the Artemis programme."
+        },
+        {
+          "word": "deployment",
+          "meaning": "the act of sending people or equipment to a place for a particular purpose",
+          "example": "The deployment of crew members follows meticulous mission scheduling and preparation."
+        },
+        {
+          "word": "interplanetary",
+          "meaning": "travel or communication between planets",
+          "example": "Interplanetary missions require advanced technology and extensive astronaut training."
+        },
+        {
+          "word": "logistics",
+          "meaning": "the detailed coordination of complex operations",
+          "example": "The logistics of selecting astronauts for deep space exploration involve multiple criteria."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the announcement, what specific role will the newly named Artemis astronauts NOT be assigned?",
+          "answer": "They will not be walking on the Moon or going anywhere near it."
+        },
+        {
+          "question": "What does the Artemis programme ultimately aim to establish according to the report?",
+          "answer": "A sustainable human presence beyond Earth's orbit, specifically on or around the Moon."
+        },
+        {
+          "question": "In the context of this passage, what does the word 'cohort' most likely refer to?",
+          "answer": "A group of people selected together for a particular purpose, in this case, the newly announced astronauts."
+        }
+      ],
+      "writingPrompt": "Some people believe that governments should allocate significant resources to space exploration programmes like NASA's Artemis mission, while others argue that this funding should be directed towards solving pressing issues on Earth such as climate change and poverty. Discuss both views and give your own opinion.",
+      "listeningText": "NASA has officially announced the newest group of astronauts selected for the Artemis lunar programme, marking another milestone in humanity's journey to establish a sustained presence on the Moon. Interestingly, these recently appointed crew members will not be directly involved in lunar surface operations or even approaching the Moon's orbit in the near term. The space agency has adopted a phased approach to crew deployment, ensuring that astronauts receive comprehensive training before undertaking actual Moon missions. This strategic selection process reflects the complex nature of deep space exploration, where meticulous planning and preparation are essential for mission success and crew safety.",
+      "createdAt": "2026-06-11T00:14:14.286Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-06-10-1-lives-still-at-risk-from-unregulated-baby-sleep-industry-aft",
       "date": "2026-06-10",
@@ -1484,174 +1652,6 @@
       "writingPrompt": "In recent years, numerous incidents involving the mistreatment of animals in private wildlife facilities have been reported. Some individuals argue that private ownership of exotic animals should be completely prohibited, while others believe that proper regulation and licensing can ensure adequate animal welfare. Discuss both views and give your own opinion. Support your argument with relevant examples from your knowledge or experience.",
       "listeningText": "Federal inspectors from wildlife authorities recently concluded an investigation at a controversial roadside zoo in Miami operated by an individual with connections to the criminal underworld and featured in a popular documentary series. The comprehensive inspection identified severe deficiencies in animal husbandry practices. Specifically, inspectors documented that an endangered clouded leopard suffered such severe injuries that veterinary surgeons were forced to amputate one of its legs. Additionally, a South American capybara succumbed to complications arising from unsuccessful artificial breeding efforts. The facility was found to have compromised enclosures lacking adequate security measures, severely unclean living spaces, and food and water supplies tainted with contamination. This case has intensified the ongoing debate regarding whether private individuals should be permitted to maintain collections of wild and exotic species without more rigorous governmental supervision.",
       "createdAt": "2026-06-01T00:04:38.597Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-30-1-how-a-borough-in-merseyside-is-bucking-the-uk-s-youth-unempl",
-      "date": "2026-05-30",
-      "title": "How a borough in Merseyside is bucking the UK's youth unemployment trend",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/cd6p9yyg64vo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-30T00:50:21.000Z",
-      "topic": "society",
-      "originalSummary": "Could personalised early intervention help prevent under-16s falling into the Neet trap?",
-      "learningSummary": "...",
-      "vocabulary": [
-        {
-          "word": "bespoke",
-          "meaning": "...",
-          "example": "..."
-        },
-        {
-          "word": "intervention",
-          "meaning": "...",
-          "example": "..."
-        },
-        {
-          "word": "aspiration",
-          "meaning": "...",
-          "example": "..."
-        },
-        {
-          "word": "engagement",
-          "meaning": "...",
-          "example": "..."
-        },
-        {
-          "word": "mitigate",
-          "meaning": "...",
-          "example": "..."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "...",
-          "answer": "..."
-        },
-        {
-          "question": "...",
-          "answer": "..."
-        },
-        {
-          "question": "...",
-          "answer": "..."
-        }
-      ],
-      "writingPrompt": "...",
-      "listeningText": "...",
-      "createdAt": "2026-05-30T23:57:55.106Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-30-2-millions-of-breast-cancer-patients-could-safely-avoid-chemot",
-      "date": "2026-05-30",
-      "title": "Millions of breast cancer patients could safely avoid chemotherapy, study suggests",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/c2325j0xk1vo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-30T13:14:42.000Z",
-      "topic": "health",
-      "originalSummary": "A new DNA test could help screen whether patients require the treatment or not, according to a new international trial.",
-      "learningSummary": "A recent international study has demonstrated that a novel DNA-based screening test may effectively identify which breast cancer patients can safely forgo chemotherapy. This genomic assessment analyzes specific genetic markers to predict an individual's likelihood of benefiting from the treatment. Researchers involved in the trial believe this advancement could spare numerous patients from the debilitating side effects associated with chemotherapy while maintaining comparable health outcomes. The test represents a significant step towards personalized cancer care, enabling clinicians to make more informed treatment decisions based on each patient's unique tumor characteristics. If validated through broader clinical implementation, this approach could transform standard oncology practice and reduce unnecessary medical interventions.",
-      "vocabulary": [
-        {
-          "word": "genomic",
-          "meaning": "relating to the genome and gene functions",
-          "example": "Genomic analysis has revolutionized approaches to personalized cancer treatment."
-        },
-        {
-          "word": "regimen",
-          "meaning": "a prescribed course of medical treatment",
-          "example": "Patients must strictly follow their medication regimen to achieve optimal results."
-        },
-        {
-          "word": "prognosis",
-          "meaning": "the likely course and outcome of a disease",
-          "example": "The doctor explained that the prognosis varied significantly between patients."
-        },
-        {
-          "word": "efficacy",
-          "meaning": "the ability to produce a desired result or effect",
-          "example": "Clinical trials demonstrated the high efficacy of the new treatment method."
-        },
-        {
-          "word": "intervention",
-          "meaning": "action taken to improve a medical condition",
-          "example": "Early medical intervention can dramatically improve patient recovery rates."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the study, what specific function does the DNA test perform regarding breast cancer treatment?",
-          "answer": "The DNA test analyzes genetic markers to predict whether patients are likely to benefit from chemotherapy, thereby identifying those who can safely avoid the treatment."
-        },
-        {
-          "question": "What inference can be drawn about the future impact of this DNA test on oncology practice?",
-          "answer": "If widely adopted, the test is expected to significantly transform standard oncology practice by enabling more personalized treatment decisions and reducing unnecessary interventions."
-        },
-        {
-          "question": "In the context of the passage, what does the word 'genomic' suggest about the nature of the assessment?",
-          "answer": "The term 'genomic' indicates that the assessment examines specific genetic information and markers unique to each patient's tumor rather than using generalized treatment approaches."
-        }
-      ],
-      "writingPrompt": "Some experts argue that advances in genetic testing allow doctors to provide more personalized healthcare, while others maintain that excessive testing leads to unnecessary anxiety and overtreatment. Discuss both views and give your own opinion.",
-      "listeningText": "A groundbreaking international study has revealed that a new DNA test could transform how doctors treat breast cancer patients. This innovative genetic screening tool can determine whether individual patients genuinely need chemotherapy or if they can safely skip this challenging treatment. By examining specific genetic markers, the test provides personalized recommendations based on each patient's unique tumor characteristics. Researchers involved in the clinical trial suggest this advancement could spare countless patients from the severe side effects of chemotherapy while still ensuring positive health outcomes. This approach marks a significant move towards personalized medicine in cancer care.",
-      "createdAt": "2026-05-30T23:58:06.078Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-05-30-3-on-street-ev-charging-in-uk-is-postcode-lottery-as-drivers-f",
-      "date": "2026-05-30",
-      "title": "On-street EV charging in UK is postcode lottery as drivers face council objections",
-      "source": "The Guardian - Environment",
-      "url": "https://www.theguardian.com/environment/2026/may/30/on-street-ev-charging-uk-postcode-lottery-council-objections-gullies-safety-legal-parking",
-      "publishedAt": "2026-05-30T07:00:12.000Z",
-      "topic": "environment",
-      "originalSummary": "Despite government pledges, more than 20 authorities will not allow gullies, citing safety, legal and parking concerns The energy secretary, Ed Miliband, has said charger gullies to connect electric cars parked on streets will help cut costs for drivers, yet millions of UK households may be unable to use the simple technology because their local councils will still not allow charging cables to cross the pavement. Despite government promises to “slash red tape” and make it easier to put in gullies, more than 20 local authorities appear to be holding out against them. Continue reading...",
-      "learningSummary": "The deployment of on-street electric vehicle charging infrastructure across the United Kingdom is progressing unevenly, with numerous local authorities refusing to permit pavement gullies designed to facilitate cable connections for parked electric cars. Although the energy secretary has advocated for this technology as a cost-effective solution to encourage electric vehicle adoption, more than twenty councils have declined approval based on safety considerations, legal complexities, and parking regulations. This inconsistency in implementation means that households without private driveways or garages may be unable to access convenient charging facilities, creating a significant disparity between urban and suburban residents. The government's stated intention to reduce bureaucratic obstacles appears to conflict with local autonomy over public infrastructure decisions. Consequently, the transition to sustainable transportation may proceed more slowly than anticipated in areas where councils maintain objections to street-level charging solutions.",
-      "vocabulary": [
-        {
-          "word": "infrastructure",
-          "meaning": "the fundamental physical and organizational systems and facilities required for the operation of a society or enterprise",
-          "example": "The government's budget allocated substantial funds for upgrading the country's charging infrastructure."
-        },
-        {
-          "word": "proliferation",
-          "meaning": "the rapid increase in the number or spread of something",
-          "example": "The proliferation of electric vehicles has created urgent demand for accessible charging points."
-        },
-        {
-          "word": "legislative",
-          "meaning": "relating to the process of making or enacting laws",
-          "example": "New legislative frameworks are being developed to address the challenges of street-based charging systems."
-        },
-        {
-          "word": "disparity",
-          "meaning": "a significant difference or inequality between people or groups",
-          "example": "There exists a stark disparity in charging access between homeowners with driveways and flat residents."
-        },
-        {
-          "word": "implementation",
-          "meaning": "the process of putting a decision or plan into effect",
-          "example": "The implementation of council policies regarding pavement modifications varies considerably across regions."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what are the three main reasons cited by councils for refusing to allow EV charging gullies on streets?",
-          "answer": "Councils are refusing to permit charging gullies based on safety concerns, legal complexities, and parking regulations."
-        },
-        {
-          "question": "What can be inferred about the government’s ability to enforce its electric vehicle policies if local councils maintain their objections?",
-          "answer": "It can be inferred that the government’s ability to implement its EV charging strategy effectively is significantly limited, as local authorities retain considerable autonomy over public highway decisions, potentially undermining national environmental targets."
-        },
-        {
-          "question": "In the context of the passage, what does the phrase “postcode lottery” suggest about access to on-street EV charging?",
-          "answer": "The phrase “postcode lottery” implies that whether drivers can access on-street EV charging depends arbitrarily on which local council area they live in, rather than on consistent national policy, suggesting unfair geographical inequality."
-        }
-      ],
-      "writingPrompt": "Some people believe that governments should mandate the installation of electric vehicle charging infrastructure in all residential areas to accelerate the transition to sustainable transportation. Others argue that local authorities should retain the authority to decide based on local circumstances. Discuss both views and give your own opinion.",
-      "listeningText": "Good morning and welcome to today's discussion on the challenges facing electric vehicle adoption in the United Kingdom. While the government has committed to expanding green transport options, a significant obstacle has emerged at the local level. More than twenty municipal councils have declined to authorize the installation of charging gullies on public pavements, citing legitimate concerns about pedestrian safety and existing parking arrangements. Energy officials maintain that these cable channels represent an affordable and practical solution for residents who lack dedicated parking facilities. However, critics within local government argue that such decisions should remain within their jurisdiction, as councils bear responsibility for maintaining public spaces. This governance conflict may ultimately hinder the country's ability to meet its emissions reduction targets, particularly for households in high-density urban areas where private charging options are limited.",
-      "createdAt": "2026-05-30T23:58:24.606Z",
       "aiSource": "minimax"
     }
   ]
