@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-11T00:14:14.288Z",
+  "updatedAt": "2026-06-12T00:19:30.771Z",
   "items": [
+    {
+      "id": "news-2026-06-12-1-smacking-children-could-lead-to-lower-gcse-grades-study-sugg",
+      "date": "2026-06-12",
+      "title": "Smacking children could lead to lower GCSE grades, study suggests",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/c2eyke83yz9o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-10T23:33:07.000Z",
+      "topic": "education",
+      "originalSummary": "A University College London (UCL) study suggests that smacking children \"does no good whatsoever\".",
+      "learningSummary": "(Mock learning summary based on the headline.) Smacking children could lead to lower GCSE grades, study suggests. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Smacking children could lead to lower GCSE grades, study suggests. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-12T00:18:54.045Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-12-2-social-media-on-trial-four-important-cases-to-watch",
+      "date": "2026-06-12",
+      "title": "Social media on trial: Four important cases to watch",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/c9q39l447l4o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-11T05:02:29.000Z",
+      "topic": "technology",
+      "originalSummary": "Social media firms face thousands of lawsuits, the BBC looks at four which could be significant.",
+      "learningSummary": "(Mock learning summary based on the headline.) Social media on trial: Four important cases to watch. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Social media on trial: Four important cases to watch. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-12T00:19:13.017Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-12-3-i-ve-never-been-this-good-revolutionary-immune-reset-puts-lu",
+      "date": "2026-06-12",
+      "title": "'I've never been this good' – revolutionary immune reset puts lupus in remission",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/c4gy2d9y5z3o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-11T23:31:13.000Z",
+      "topic": "health",
+      "originalSummary": "Patients on the trial have not needed medication to manage their condition.",
+      "learningSummary": "A groundbreaking clinical trial has demonstrated that a revolutionary immune reset procedure can achieve sustained remission in patients suffering from lupus, a chronic autoimmune condition. The pioneering approach involves the destruction and subsequent reconstruction of malfunctioning immune cells, after which participants no longer require daily medication to control their symptoms. Researchers have described the results as transformative, with patients reporting levels of improvement previously unattainable through conventional therapies. This trial marks a significant departure from traditional treatment methods, which typically manage symptoms rather than targeting the underlying immune dysfunction. Medical professionals are cautiously optimistic, acknowledging that while the findings are encouraging, further research involving larger and more diverse populations will be essential to validate long-term safety and efficacy of this approach.",
+      "vocabulary": [
+        {
+          "word": "remission",
+          "meaning": "a period during which symptoms of a disease are substantially reduced or disappear",
+          "example": "Following the groundbreaking procedure, patients entered remission without the need for ongoing medication."
+        },
+        {
+          "word": "autoimmune",
+          "meaning": "relating to conditions in which the immune system mistakenly attacks the body's own healthy tissues",
+          "example": "Lupus is an autoimmune disease that can affect multiple organ systems throughout the body."
+        },
+        {
+          "word": "groundbreaking",
+          "meaning": "pioneering, introducing entirely new concepts or methods that have not been previously attempted",
+          "example": "The groundbreaking trial represents a paradigm shift in how we approach chronic autoimmune disorders."
+        },
+        {
+          "word": "sustained",
+          "meaning": "continuing over an extended period without interruption or deterioration",
+          "example": "Researchers aim to determine whether the benefits of treatment can be sustained over many years."
+        },
+        {
+          "word": "efficacy",
+          "meaning": "the ability to produce a desired or intended result; effectiveness",
+          "example": "Clinical trials are designed to rigorously assess the safety and efficacy of new medical interventions."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the trial findings, what was notable about patients' medication requirements following the immune reset procedure?",
+          "answer": "Patients who underwent the immune reset procedure were able to discontinue all medication previously required to manage their condition."
+        },
+        {
+          "question": "What can be inferred about the difference between the new treatment approach and conventional lupus therapies based on the information provided?",
+          "answer": "Unlike conventional treatments that primarily suppress symptoms, this new approach appears to target the underlying immune system dysfunction itself, addressing the root cause rather than just managing manifestations of the disease."
+        },
+        {
+          "question": "In the context of the passage, what does the phrase 'cautiously optimistic' suggest about the medical community's stance?",
+          "answer": "The phrase indicates that while researchers find the initial results encouraging, they recognise the need for additional extensive research before drawing definitive conclusions about the treatment's long-term viability."
+        }
+      ],
+      "writingPrompt": "In recent years, medical breakthroughs have increasingly shifted focus towards treating the root causes of diseases rather than merely managing symptoms. Some argue that substantial investment in such innovative research represents the most effective use of healthcare resources, while others contend that maintaining and improving existing treatment programmes should take priority. Discuss both perspectives and give your own opinion.",
+      "listeningText": "A revolutionary clinical trial has produced remarkable results for patients with lupus, demonstrating that a novel immune reset procedure can place the chronic autoimmune condition into sustained remission. The experimental treatment works by eliminating defective immune cells and then rebuilding a healthier immune system from the patient's own stem cells. Perhaps most significantly, participants in the trial have been able to stop taking their regular medications, something many considered impossible before the study began. Medical researchers have expressed cautious optimism about these findings, emphasising that while the outcomes are promising, larger scale studies will be necessary to confirm long-term safety and establish which patient groups might benefit most from this pioneering approach.",
+      "createdAt": "2026-06-12T00:19:30.769Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-06-11-1-smacking-children-could-lead-to-lower-gcse-grades-study-sugg",
       "date": "2026-06-11",
@@ -1485,174 +1653,6 @@
       "listeningText": "(Mock listening passage.) Wildlife Park welcomes mischievous bush dogs. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
       "createdAt": "2026-06-02T00:10:42.603Z",
       "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-01-1-killer-fungus-could-be-good-news-for-habitats-decimated-by-i",
-      "date": "2026-06-01",
-      "title": "'Killer fungus' could be good news for habitats decimated by invasive moss",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/c4g48jy4j1yo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-30T23:03:12.000Z",
-      "topic": "environment",
-      "originalSummary": "A newly discovered species raises hope that some native British habitats could be restored.",
-      "learningSummary": "Scientists have identified a previously unknown fungal species that demonstrates remarkable effectiveness in controlling invasive moss populations threatening native British ecosystems. This biological control agent, often described as a 'killer fungus' in popular media, offers a sustainable alternative to chemical herbicides currently used in habitat management programmes. Research indicates that the fungus specifically targets certain moss species while leaving surrounding vegetation unharmed, making it an ideal solution for restoring degraded heathlands and moorlands. Conservation groups have expressed cautious optimism about the discovery, emphasising that biological interventions could play a crucial role in reversing biodiversity loss across Britain. Experts suggest that carefully managed applications of this natural solution might enable the recovery of native plant communities that have struggled to regenerate under persistent moss colonisation. Field trials are expected to begin within the next few years.",
-      "vocabulary": [
-        {
-          "word": "biodiversity",
-          "meaning": "the variety of plant and animal life in a particular habitat or on Earth",
-          "example": "The preservation of biodiversity remains a key priority for conservation organisations across Europe."
-        },
-        {
-          "word": "invasive species",
-          "meaning": "a plant or animal that spreads rapidly and causes harm to the environment or native species",
-          "example": "Invasive species often outcompete native flora, disrupting established ecological relationships."
-        },
-        {
-          "word": "ecosystem",
-          "meaning": "a community of living organisms interacting with their physical environment",
-          "example": "Wetland ecosystems provide essential services including flood control and water filtration."
-        },
-        {
-          "word": "habitat restoration",
-          "meaning": "the process of repairing damaged or destroyed natural environments",
-          "example": "Habitat restoration projects require careful planning to ensure suitable conditions for native species."
-        },
-        {
-          "word": "biological control",
-          "meaning": "using natural predators or pathogens to manage pest populations",
-          "example": "Biological control methods reduce reliance on chemical pesticides that harm beneficial insects."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what makes the newly discovered fungus particularly suitable for habitat management?",
-          "answer": "The fungus specifically targets invasive moss species while leaving surrounding vegetation unharmed, making it a precise and safe control method."
-        },
-        {
-          "question": "What can be inferred about the current methods used for controlling invasive moss in Britain?",
-          "answer": "Chemical herbicides appear to be the predominant approach currently employed, as the passage suggests the fungus offers an alternative to these existing methods."
-        },
-        {
-          "question": "In the context of the passage, what does the phrase 'cautious optimism' (paragraph 4) suggest about conservation groups' attitudes?",
-          "answer": "It indicates that while organisations recognise the potential benefits of the discovery, they remain reserved because the fungus has not yet undergone practical testing in real environments."
-        }
-      ],
-      "writingPrompt": "Some scientists believe that using natural biological methods to control invasive species is preferable to chemical interventions. To what extent do you agree or disagree with this view? Give reasons for your answer and include relevant examples from your knowledge or experience.",
-      "listeningText": "Good morning. Today we're discussing an exciting development in conservation science. Researchers have uncovered a new fungal species that could transform how we manage invasive plants threatening Britain's native landscapes. This organism produces compounds that specifically eliminate certain moss varieties while preserving nearby plant life. Unlike traditional chemical treatments, this biological approach causes minimal disruption to surrounding ecosystems. Field ecologists believe the discovery could prove particularly valuable for restoring damaged moorlands and heath areas. The research team, based at a British university, has spent three years studying the fungus in controlled conditions. They now plan extended trials to assess its long-term effectiveness and environmental safety. Early results suggest that applications could reduce moss coverage by up to seventy percent within a single growing season.",
-      "createdAt": "2026-06-01T00:03:29.931Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-01-2-checks-reveal-young-women-with-deadly-silent-heart-risk",
-      "date": "2026-06-01",
-      "title": "Checks reveal young women with deadly 'silent' heart risk",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/c1l218n82pdo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-05-31T23:21:41.000Z",
-      "topic": "health",
-      "originalSummary": "Sudden cardiac death can happen without warning, and it's not just a problem for sporty young men, say experts.",
-      "learningSummary": "(Mock learning summary based on the headline.) Checks reveal young women with deadly 'silent' heart risk. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Checks reveal young women with deadly 'silent' heart risk. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-01T00:03:55.517Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-01-3-animal-welfare-violations-swarm-miami-zoo-owned-by-ex-drug-k",
-      "date": "2026-06-01",
-      "title": "Animal welfare violations swarm Miami zoo owned by ex-drug kingpin in Tiger King",
-      "source": "The Guardian - Environment",
-      "url": "https://www.theguardian.com/us-news/2026/may/30/miami-zoo-violations-mario-tabraue-tiger-king",
-      "publishedAt": "2026-05-30T13:00:19.000Z",
-      "topic": "environment",
-      "originalSummary": "Endangered snow leopard had leg amputated and capybara died at Mario Tabraue’s controversial roadside facility An endangered clouded leopard had a leg amputated and a capybara died following botched breeding attempts at a controversial Miami roadside zoo owned by a convicted drug trafficker featured in the Netflix documentary Tiger King . Federal wildlife inspectors found multiple other violations during a March inspection at Zoological Wildlife Foundation (ZWF), including dilapidated, insecure or unsafe housing conditions for wild animals, filthy cages, and water and food contaminated with...",
-      "learningSummary": "Federal wildlife inspectors uncovered serious animal welfare breaches at a controversial Miami roadside zoo owned by a convicted drug trafficker who featured in the Netflix documentary Tiger King. The March inspection revealed that an endangered clouded leopard needed a leg amputation while a capybara perished following failed breeding attempts. Investigators documented numerous violations including deteriorating, unsecured enclosures for wild animals, deplorable cage conditions, and water and food supplies contaminated with debris. The facility, Zoological Wildlife Foundation (ZWF), has endured persistent criticism regarding exotic animal care. This incident underscores mounting apprehension about the inadequate oversight of private wildlife collections in the United States and the precarious welfare of endangered species held in captive settings. Animal rights advocates argue that stricter enforcement mechanisms are imperative to prevent such maltreatment.",
-      "vocabulary": [
-        {
-          "word": "breaches",
-          "meaning": "violations or failures to comply with regulations or standards",
-          "example": "The environmental agency prosecuted the company for multiple safety breaches."
-        },
-        {
-          "word": "scrutiny",
-          "meaning": "close observation or examination, often critical in nature",
-          "example": "Public figures operate under constant media scrutiny."
-        },
-        {
-          "word": "deteriorating",
-          "meaning": "gradually declining in quality, condition, or value",
-          "example": "The deteriorating infrastructure posed significant safety risks."
-        },
-        {
-          "word": "imperative",
-          "meaning": "absolutely necessary or essential; urgently important",
-          "example": "It is imperative that we address climate change before irreversible damage occurs."
-        },
-        {
-          "word": "precarious",
-          "meaning": "dangerously uncertain or unstable; risky",
-          "example": "The company's financial situation remains precarious amid falling revenues."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what specific medical procedure did inspectors learn had been performed on one of the endangered animals?",
-          "answer": "Inspectors discovered that an endangered clouded leopard had undergone a leg amputation as a result of the inadequate conditions at the facility."
-        },
-        {
-          "question": "What can be inferred about the effectiveness of current wildlife regulations in the United States based on this incident?",
-          "answer": "The incident suggests that existing wildlife regulations are insufficiently enforced, allowing private facilities to maintain animals in substandard conditions despite legal requirements."
-        },
-        {
-          "question": "In the context of the passage, what does the word 'scrutiny' most nearly mean?",
-          "answer": "Close examination or critical observation, as the text indicates that ZWF has faced ongoing public and regulatory attention regarding its animal care practices."
-        }
-      ],
-      "writingPrompt": "In recent years, numerous incidents involving the mistreatment of animals in private wildlife facilities have been reported. Some individuals argue that private ownership of exotic animals should be completely prohibited, while others believe that proper regulation and licensing can ensure adequate animal welfare. Discuss both views and give your own opinion. Support your argument with relevant examples from your knowledge or experience.",
-      "listeningText": "Federal inspectors from wildlife authorities recently concluded an investigation at a controversial roadside zoo in Miami operated by an individual with connections to the criminal underworld and featured in a popular documentary series. The comprehensive inspection identified severe deficiencies in animal husbandry practices. Specifically, inspectors documented that an endangered clouded leopard suffered such severe injuries that veterinary surgeons were forced to amputate one of its legs. Additionally, a South American capybara succumbed to complications arising from unsuccessful artificial breeding efforts. The facility was found to have compromised enclosures lacking adequate security measures, severely unclean living spaces, and food and water supplies tainted with contamination. This case has intensified the ongoing debate regarding whether private individuals should be permitted to maintain collections of wild and exotic species without more rigorous governmental supervision.",
-      "createdAt": "2026-06-01T00:04:38.597Z",
-      "aiSource": "minimax"
     }
   ]
 }
