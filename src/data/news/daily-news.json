@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-12T00:19:30.771Z",
+  "updatedAt": "2026-06-13T00:17:07.465Z",
   "items": [
+    {
+      "id": "news-2026-06-13-1-more-than-one-in-five-pupils-in-england-getting-special-educ",
+      "date": "2026-06-13",
+      "title": "More than one in five pupils in England getting special educational needs support",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/cwy18y5jpw1o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-11T12:24:43.000Z",
+      "topic": "education",
+      "originalSummary": "More than one in five pupils in England - around 1.8 million children - get extra support in school.",
+      "learningSummary": "Recent statistics reveal that over twenty percent of students in England currently receive additional assistance for special educational needs within mainstream schools. This figure translates to approximately 1.8 million young people who benefit from tailored interventions and dedicated support mechanisms. Educational experts suggest that this substantial proportion reflects both improved identification practices and expanded diagnostic criteria. Schools are increasingly required to develop individualised education plans that address diverse learning requirements while maintaining inclusive classroom environments. The phenomenon raises important questions about resource allocation, teacher training, and the long-term educational outcomes for pupils requiring specialist support. Furthermore, the data indicates significant regional variations, with certain areas reporting notably higher percentages of students accessing these services.",
+      "vocabulary": [
+        {
+          "word": "interventions",
+          "meaning": "targeted actions or strategies implemented to address specific educational needs",
+          "example": "The school's early interventions have successfully improved literacy rates among struggling readers."
+        },
+        {
+          "word": "inclusive",
+          "meaning": "designed to accommodate all students regardless of their abilities or backgrounds",
+          "example": "Inclusive education policies ensure that children with disabilities can learn alongside their peers."
+        },
+        {
+          "word": "provisions",
+          "meaning": "resources, services, or support arrangements provided for specific purposes",
+          "example": "The new legislation guarantees enhanced provisions for students with learning difficulties."
+        },
+        {
+          "word": "diagnostic",
+          "meaning": "relating to the identification or assessment of specific conditions or needs",
+          "example": "Diagnostic assessments help teachers identify students who may require additional support."
+        },
+        {
+          "word": "curriculum",
+          "meaning": "the planned sequence of lessons and learning experiences offered in education",
+          "example": "Schools must adapt their curriculum to meet the diverse needs of all learners."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the passage, what proportion of pupils in England receive special educational needs support?",
+          "answer": "More than one in five pupils, or approximately twenty percent of the student population, receives special educational needs support."
+        },
+        {
+          "question": "What can be inferred about the increase in identified special educational needs cases?",
+          "answer": "It can be inferred that the rise in identified cases is likely due to improved identification methods and broader diagnostic criteria rather than an actual increase in the prevalence of special educational needs."
+        },
+        {
+          "question": "What does the word 'provisions' mean as used in the passage?",
+          "answer": "In this context, 'provisions' refers to the resources, services, and support arrangements that schools provide for students with special educational needs."
+        }
+      ],
+      "writingPrompt": "Some people believe that children with special educational needs should be taught in specialised schools rather than mainstream classrooms. Others argue that inclusive education benefits all students. Discuss both views and give your own opinion.",
+      "listeningText": "Good morning. Today we're discussing the growing number of students requiring special educational support in English schools. Official data shows that over twenty percent of pupils now receive some form of additional assistance. This represents approximately 1.8 million children across the country. Education officials attribute this increase partly to improved screening methods and greater awareness among teachers. Schools have adapted by implementing individualised learning plans and providing targeted interventions. However, this trend has created pressure on school budgets and raised questions about resource distribution. Critics suggest that mainstream schools may lack the expertise to adequately support students with complex needs, while proponents emphasise the social benefits of inclusive environments. The debate continues as policymakers seek balanced solutions.",
+      "createdAt": "2026-06-13T00:16:39.480Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-13-2-elon-musk-s-stratospheric-rise-to-trillionaire-status-in-cha",
+      "date": "2026-06-13",
+      "title": "Elon Musk's stratospheric rise to trillionaire status - in charts",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/c4gyp523ly8o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-12T23:05:39.000Z",
+      "topic": "technology",
+      "originalSummary": "The BBC breaks down how the tech mogul's fortune has grown.",
+      "learningSummary": "This article examines the remarkable financial trajectory of Elon Musk, illustrating how the entrepreneur has achieved unprecedented wealth accumulation. The analysis presents visual data showing his fortune's exponential growth over recent years, highlighting key milestones such as the valuation of his companies and stock performance. Experts attribute his success to multiple factors including innovative ventures in electric vehicles, space exploration, and artificial intelligence. The piece also explores the broader implications of such wealth concentration, questioning whether it reflects genuine economic value or market speculation. Despite occasional market fluctuations, Musk's net worth has consistently reached new heights, positioning him among the select group of individuals whose assets exceed one trillion dollars. The charts effectively demonstrate this stratospheric ascent, making complex financial data accessible to general readers.",
+      "vocabulary": [
+        {
+          "word": "stratospheric",
+          "meaning": "rising to an extremely high level",
+          "example": "The stratospheric rise in property prices has made housing unaffordable for many."
+        },
+        {
+          "word": "accumulation",
+          "meaning": "the gradual gathering or collection of something over time",
+          "example": "The accumulation of wealth among technology entrepreneurs has accelerated in recent decades."
+        },
+        {
+          "word": "exponential",
+          "meaning": "growing or increasing at a rapid rate",
+          "example": "The company experienced exponential growth following its innovative product launches."
+        },
+        {
+          "word": "milestones",
+          "meaning": "significant events or stages in the progress of something",
+          "example": "Reaching a net worth of one trillion dollars represents a major milestone for any individual."
+        },
+        {
+          "word": "speculation",
+          "meaning": "risky investment decisions based on analysis rather than certainty",
+          "example": "Market speculation often drives stock prices far beyond their fundamental values."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What factors have contributed to Elon Musk's rapid wealth accumulation according to the article?",
+          "answer": "Multiple factors including innovative ventures in electric vehicles, space exploration, and artificial intelligence."
+        },
+        {
+          "question": "What can be inferred about the broader economic implications of individual wealth concentration?",
+          "answer": "It suggests that such wealth concentration raises questions about whether it reflects genuine economic value or merely market speculation."
+        },
+        {
+          "question": "In the context of the article, what does 'stratospheric' suggest about the pace of Musk's wealth growth?",
+          "answer": "It suggests that his wealth has risen extremely rapidly, reaching unprecedented heights."
+        }
+      ],
+      "writingPrompt": "Some people argue that the accumulation of extreme wealth by individuals like Elon Musk is beneficial for society, while others believe it leads to harmful inequality. Discuss both views and give your own opinion.",
+      "listeningText": "The BBC News report analyses the financial journey of technology entrepreneur Elon Musk, focusing on how he became one of the wealthiest individuals globally. Visual charts accompany the analysis, showing the dramatic increase in his fortune over recent years. The report indicates that his wealth stems from various successful companies operating in different sectors. Market analysts suggest that investor confidence in his ventures has remained consistently strong. The article also considers whether such extreme wealth concentration serves the broader economy or primarily benefits the individual. Despite occasional market downturns affecting his net worth temporarily, the overall trend shows remarkable growth. The presentation makes complex financial information understandable, allowing readers to visualise the scale of his wealth accumulation.",
+      "createdAt": "2026-06-13T00:16:48.808Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-13-3-what-is-el-ni-o-and-why-could-it-mean-record-temperatures",
+      "date": "2026-06-13",
+      "title": "What is El Niño and why could it mean record temperatures?",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cj97npgk92po?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-11T13:32:26.000Z",
+      "topic": "environment",
+      "originalSummary": "Global temperatures are expected to rise in the coming months as El Niño begins.",
+      "learningSummary": "(Mock learning summary based on the headline.) What is El Niño and why could it mean record temperatures?. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) What is El Niño and why could it mean record temperatures?. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-13T00:17:07.463Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-06-12-1-smacking-children-could-lead-to-lower-gcse-grades-study-sugg",
       "date": "2026-06-12",
@@ -1513,146 +1681,6 @@
       "listeningText": "Let me tell you about some fascinating research regarding weightlifting and longevity. Scientists have discovered that people who regularly lift weights tend to live significantly longer than those who do not engage in any form of resistance training. This isn't just about building big muscles—it's actually about fundamental health benefits that affect your entire body. When you lift weights, you're not only strengthening your muscles and bones, but you're also improving how your body processes energy and manages blood circulation. The interesting finding is that these benefits build up over time. The longer you maintain a weightlifting routine, the more protection you seem to gain against early death. What makes this particularly noteworthy is that researchers found these positive effects across different age groups and populations. So if you've been wondering whether hitting the gym is worth the effort, this research suggests the answer is definitely yes—especially when combined with other forms of exercise as part of an overall healthy lifestyle.",
       "createdAt": "2026-06-03T00:26:28.653Z",
       "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-02-1-third-of-people-say-uni-degree-not-worth-it-as-student-loan-",
-      "date": "2026-06-02",
-      "title": "Third of people say uni degree not worth it, as student loan inquiry begins",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/c2e29gk73rjo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-01T23:09:45.000Z",
-      "topic": "<one of the 6>",
-      "originalSummary": "MPs will hear the concerns of graduates about the size of their student debts, and the interest rates.",
-      "learningSummary": "<120-180 English words>",
-      "vocabulary": [
-        {
-          "word": "",
-          "meaning": "",
-          "example": ""
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "",
-          "answer": ""
-        }
-      ],
-      "writingPrompt": "<Task 2 question>",
-      "listeningText": "<120-180 English words for TTS>",
-      "createdAt": "2026-06-02T00:10:12.054Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-02-2-how-confused-ai-rollout-hurts-firms-and-baffles-staff",
-      "date": "2026-06-02",
-      "title": "How 'confused' AI rollout hurts firms and baffles staff",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/c74d1ydv01eo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-01T23:05:11.000Z",
-      "topic": "technology",
-      "originalSummary": "Some firms are putting pressure on staff to use AI, but have not thought through their AI rollout.",
-      "learningSummary": "The rapid adoption of artificial intelligence systems across industries has created significant operational challenges for businesses worldwide. Many organisations are mandating employee engagement with AI tools without establishing adequate training frameworks or strategic objectives. This disjointed approach has resulted in workforce confusion, as staff members struggle to understand how these technologies align with their existing responsibilities. Industry experts note that without clear implementation guidelines, employees experience heightened uncertainty regarding their roles and performance expectations. Furthermore, companies that deploy AI systems prematurely often face diminished productivity rather than anticipated efficiency gains. The disconnect between corporate directives and practical execution suggests that organisational leadership must prioritise comprehensive planning before technological integration. Successful AI implementation requires not only appropriate infrastructure but also sustained professional development programmes to ensure staff competency and confidence in emerging digital environments.",
-      "vocabulary": [
-        {
-          "word": "integration",
-          "meaning": "the process of combining different elements into a unified whole, particularly in business contexts where new technology is merged with existing operations",
-          "example": "The integration of AI systems into daily workflows demands careful change management strategies."
-        },
-        {
-          "word": "rollout",
-          "meaning": "the phased introduction or launch of a new product, service, or system across an organisation or market",
-          "example": "The company's hasty rollout of AI tools left many employees unprepared for their new responsibilities."
-        },
-        {
-          "word": "competency",
-          "meaning": "the demonstrated ability to perform tasks or duties to a required standard, often referring to professional skills in workplace contexts",
-          "example": "Employers increasingly require digital competency as a fundamental prerequisite for modern roles."
-        },
-        {
-          "word": "ambiguous",
-          "meaning": "unclear, vague, or open to multiple interpretations; lacking precision or definiteness",
-          "example": "The ambiguous instructions provided by management contributed significantly to staff confusion."
-        },
-        {
-          "word": "imperative",
-          "meaning": "something that is urgent, essential, or absolutely necessary; a pressing priority requiring immediate action",
-          "example": "It is imperative that organisations address training gaps before deploying advanced AI systems."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what is the primary consequence of organisations failing to plan their AI implementation thoroughly?",
-          "answer": "Organisations experience significant workforce confusion, as staff members struggle to understand how AI technologies align with their existing responsibilities and performance expectations."
-        },
-        {
-          "question": "It can be inferred from the text that companies rushing to adopt AI without proper infrastructure are likely to experience which of the following?",
-          "answer": "Decreased productivity rather than the efficiency improvements they anticipated, suggesting that premature technological deployment proves counterproductive."
-        },
-        {
-          "question": "In the context of the passage, what does the word 'disjointed' most closely mean?",
-          "answer": "Lacking coherence or logical connection; fragmented in approach, indicating that the AI implementation lacks proper coordination and planning."
-        }
-      ],
-      "writingPrompt": "Some companies are pushing employees to adopt artificial intelligence tools before adequate preparation has been completed. While this approach may seem beneficial for remaining competitive, the negative impacts on workforce confidence and productivity are considerable. Discuss both perspectives and offer your own view on how organisations should proceed with AI integration.",
-      "listeningText": "Many technology commentators have observed a troubling pattern in contemporary business environments, where organisations mandate AI adoption without establishing appropriate support structures. Employees report feeling overwhelmed by unclear expectations and insufficient training, leading to frustration rather than productivity gains. The core issue appears to be a disconnect between executive enthusiasm for technological innovation and ground-level implementation realities. Experts emphasise that successful AI integration requires comprehensive change management programmes, ongoing professional development, and realistic timelines for staff adaptation. Without these essential components, companies risk creating additional problems rather than solving existing ones. The challenge lies in balancing technological advancement with human-centred implementation strategies that respect workforce capabilities and limitations.",
-      "createdAt": "2026-06-02T00:10:22.661Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-02-3-wildlife-park-welcomes-mischievous-bush-dogs",
-      "date": "2026-06-02",
-      "title": "Wildlife Park welcomes mischievous bush dogs",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/videos/c759pd9gqyko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-01T14:33:20.000Z",
-      "topic": "environment",
-      "originalSummary": "Four bush dogs are the newest mischievous residents at Lake District Wildlife Park.",
-      "learningSummary": "(Mock learning summary based on the headline.) Wildlife Park welcomes mischievous bush dogs. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Wildlife Park welcomes mischievous bush dogs. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-02T00:10:42.603Z",
-      "aiSource": "mock"
     }
   ]
 }
