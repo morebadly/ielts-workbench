@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-13T00:17:07.465Z",
+  "updatedAt": "2026-06-14T00:03:08.835Z",
   "items": [
+    {
+      "id": "news-2026-06-14-1-calls-to-restore-chalk-grassland-for-rare-insects",
+      "date": "2026-06-14",
+      "title": "Calls to restore chalk grassland for rare insects",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/c6213ex52g2o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-13T13:01:19.000Z",
+      "topic": "environment",
+      "originalSummary": "Buglife says the project aims to restore more than 30 hectares of the vital ecosystem.",
+      "learningSummary": "An environmental organization named Buglife has introduced a significant initiative to rehabilitate more than 30 hectares of chalk grassland across Britain. These grasslands rank among Europe's most biodiverse ecosystems, providing essential habitats for numerous insect species that have become increasingly vulnerable due to agricultural expansion and urban development. The conservation strategy involves establishing interconnected corridors of native wildflowers and chalk-adapted vegetation, which serve as critical feeding and breeding grounds for endangered invertebrate populations. Specialists warn that without immediate conservation measures, several specialized insect species face potential extinction within the coming decades. The project requires coordinated efforts among landowners, conservation bodies, and governmental agencies to ensure long-term ecological recovery. Restoration activities include strategic scrub removal and controlled grazing practices to maintain the open, calcium-rich conditions that characterize chalk grassland ecosystems.",
+      "vocabulary": [
+        {
+          "word": "habitat",
+          "meaning": "the natural home or environment of an animal, plant, or other organism",
+          "example": "Chalk grasslands provide a vital habitat for rare insect species across Europe."
+        },
+        {
+          "word": "biodiversity",
+          "meaning": "the variety of plant and animal life in a particular habitat or ecosystem",
+          "example": "The conservation initiative aims to protect the region's precious biodiversity."
+        },
+        {
+          "word": "conservation",
+          "meaning": "the protection and careful management of natural resources and wildlife",
+          "example": "Conservation efforts focus on restoring degraded ecosystems to their former glory."
+        },
+        {
+          "word": "restoration",
+          "meaning": "the act of returning something to its original condition or former state",
+          "example": "The restoration of chalk grassland requires decades of sustained effort."
+        },
+        {
+          "word": "ecosystem",
+          "meaning": "a community of living organisms interacting with their physical environment",
+          "example": "Healthy ecosystems support countless species that depend on specific conditions."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the initiative, what is the specific scale of habitat restoration planned by Buglife?",
+          "answer": "Buglife aims to restore more than 30 hectares of chalk grassland."
+        },
+        {
+          "question": "What can be inferred about the current state of chalk grassland ecosystems based on this initiative?",
+          "answer": "Chalk grassland ecosystems have been significantly degraded or lost, necessitating active restoration efforts to prevent insect species from becoming extinct."
+        },
+        {
+          "question": "What does the word \"vulnerable\" mean as used in the context of the passage?",
+          "answer": "It means at risk of harm, damage, or extinction, particularly referring to insect species that have become increasingly susceptible due to habitat loss."
+        }
+      ],
+      "writingPrompt": "Some people argue that economic development should take precedence over environmental protection, while others believe that conserving natural habitats is more important. Discuss both perspectives and present your own opinion on this matter.",
+      "listeningText": "Buglife is spearheading a major ecological project to revive fragile chalk grassland environments throughout Britain. These distinctive landscapes represent some of Europe's most ecologically rich areas, supporting extensive populations of insects that have experienced dramatic decline due to modern farming practices and land development. The initiative seeks to establish linked pathways of indigenous wildflowers and chalk-specialist vegetation, providing crucial resources for endangered invertebrate species. Conservation professionals caution that prolonged inaction could result in the complete disappearance of several dependent insect populations within decades. Success depends on partnerships between private landowners, environmental charities, and official bodies. Restoration work involves eliminating invasive scrub and implementing traditional grazing methods to preserve the unique alkaline soil conditions that chalk grasslands demand.",
+      "createdAt": "2026-06-14T00:02:44.150Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-14-2-uk-government-announces-132-5m-after-school-clubs-package",
+      "date": "2026-06-14",
+      "title": "UK government announces £132.5m after-school clubs package",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/education/2026/jun/13/uk-government-announces-1325m-after-school-clubs-package",
+      "publishedAt": "2026-06-13T21:30:24.000Z",
+      "topic": "education",
+      "originalSummary": "Funding for extracurricular activities comes as ministers prepare to introduce social media restrictions for under-16s The government has announced a £132.5m funding package for after-school clubs as ministers prepare to introduce expected restrictions on social media use for under-16s. The programme is designed to expand access to enrichment activities in schools, with funding for clubs ranging from music groups and debating societies to engineering and sports, in what ministers describe as an effort to give children alternatives to time spent online. Continue reading...",
+      "learningSummary": "The UK government has unveiled a substantial £132.5m funding initiative aimed at expanding after-school club provision across educational institutions nationwide. This programme seeks to provide students with greater access to enrichment activities, including music ensembles, debating societies, engineering workshops, and various sports programmes. Government ministers have framed this measure as a strategic response to growing concerns regarding excessive screen time and social media usage among young people. The funding announcement coincides with anticipated legislative measures that will restrict social media access for individuals under sixteen years of age. Ministers argue that by offering constructive alternatives to online engagement, the scheme will support the holistic development of children and adolescents. Education officials believe these extracurricular opportunities will contribute meaningfully to students' personal growth and social skills.",
+      "vocabulary": [
+        {
+          "word": "unveiled",
+          "meaning": "publicly revealed or announced for the first time",
+          "example": "The Chancellor unveiled a comprehensive economic reform package designed to stimulate growth in emerging sectors."
+        },
+        {
+          "word": "enrichment",
+          "meaning": "activities that enhance skills, knowledge, or personal development beyond the standard curriculum",
+          "example": "Parents increasingly recognise the value of music enrichment programmes in fostering creativity among young children."
+        },
+        {
+          "word": "substantial",
+          "meaning": "of considerable importance, size, or worth; significant in magnitude",
+          "example": "The company received substantial investment from overseas markets, enabling rapid expansion of its operations."
+        },
+        {
+          "word": "strategic",
+          "meaning": "carefully planned to achieve a particular goal or purpose; serving a specific objective",
+          "example": "The government adopted a strategic approach to healthcare reform, prioritising preventative measures over reactive treatments."
+        },
+        {
+          "word": "holistic",
+          "meaning": "considering the whole person or system rather than individual parts; comprehensive in approach",
+          "example": "Many educational institutions are adopting holistic approaches to student development, addressing emotional and social growth alongside academic achievement."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What specific categories of extracurricular activities will benefit from the £132.5m funding announcement?",
+          "answer": "The funding will support music groups, debating societies, engineering workshops, and various sports programmes."
+        },
+        {
+          "question": "What inference can be drawn about the government's broader strategy regarding young people's online activity?",
+          "answer": "The government appears to be adopting a dual approach: simultaneously restricting social media access for under-16s while providing constructive offline alternatives through expanded after-school activities."
+        },
+        {
+          "question": "In paragraph 3, the word 'holistic' most nearly means: (a) academic-focused, (b) comprehensive, (c) competitive, (d) traditional",
+          "answer": "(b) comprehensive; the context indicates that ministers view extracurricular activities as addressing the complete development of young people, encompassing various aspects of growth beyond mere academics."
+        }
+      ],
+      "writingPrompt": "Some people believe that after-school clubs and extracurricular activities are essential for children's overall development, while others argue that academic study should remain the sole priority during the school years. Discuss both views and give your own opinion.",
+      "listeningText": "The UK government has announced a significant £132.5m funding package dedicated to expanding after-school club provision across schools nationwide. This initiative seeks to provide students with greater opportunities to participate in enrichment activities such as music groups, debating societies, engineering clubs, and various sports programmes. The funding has been introduced alongside plans to implement restrictions on social media usage for those under sixteen years of age. Government ministers have suggested that by offering constructive alternatives to time spent online, young people can develop valuable skills and interests. The programme is viewed as part of a broader strategy to support the holistic development of children and young people, ensuring they have access to activities that contribute positively to their growth, socialisation, and overall well-being.",
+      "createdAt": "2026-06-14T00:02:51.906Z",
+      "aiSource": "minimax"
+    },
+    {
+      "id": "news-2026-06-14-3-trees-may-store-less-planet-heating-carbon-than-hoped-study-",
+      "date": "2026-06-14",
+      "title": "Trees may store less planet-heating carbon than hoped, study suggests",
+      "source": "The Guardian - Environment",
+      "url": "https://www.theguardian.com/environment/2026/jun/13/trees-store-less-carbon-than-thought-study",
+      "publishedAt": "2026-06-13T04:00:04.000Z",
+      "topic": "environment",
+      "originalSummary": "Photosynthesis does not always result in wood growth, a key factor in carbon dioxide sequestration Trees may not be able to store as much planet-heating carbon as hoped, a study suggests, with researchers finding photosynthesis does not always lead to wood growth. Scientists studied 137 sites across the US and found trees stopped growing months before the point in the year at which photosynthesis stopped. Continue reading...",
+      "learningSummary": "Recent scientific research challenges previous assumptions about forests' capacity to absorb atmospheric carbon dioxide. A comprehensive study conducted across 137 sites in the United States has revealed a fundamental disconnect between photosynthesis and actual wood growth in trees. Although trees continue photosynthesis well into the latter part of the year, their growth processes cease several months earlier, effectively limiting the period during which carbon can be permanently sequestered in woody biomass. This discovery carries considerable weight for climate modelling initiatives, which have traditionally relied on forests as major carbon sinks in emission reduction strategies. The researchers' findings indicate that existing projections regarding trees' carbon storage capabilities may be substantially inflated. Consequently, environmental policymakers may need to reassess current climate action plans that depend heavily on forest-based carbon absorption, as the actual effectiveness of trees in mitigating greenhouse gas concentrations appears more limited than originally estimated.",
+      "vocabulary": [
+        {
+          "word": "sequestration",
+          "meaning": "the process of capturing and storing atmospheric carbon dioxide, typically in vegetation or soil",
+          "example": "Forest sequestration has long been promoted as a natural solution to rising carbon emissions."
+        },
+        {
+          "word": "photosynthesis",
+          "meaning": "the process by which plants convert sunlight, water, and carbon dioxide into glucose and oxygen",
+          "example": "Understanding photosynthesis is essential for comprehending how trees absorb greenhouse gases."
+        },
+        {
+          "word": "carbon sink",
+          "meaning": "a natural or managed system that absorbs more carbon than it releases into the atmosphere",
+          "example": "Tropical rainforests serve as critical carbon sinks, yet their capacity may be diminishing."
+        },
+        {
+          "word": "overly optimistic",
+          "meaning": "excessively hopeful or positive, often without sufficient evidence to support such a viewpoint",
+          "example": "Climate projections that are overly optimistic can lead to inadequate policy responses."
+        },
+        {
+          "word": "mitigate",
+          "meaning": "to reduce the severity, seriousness, or painfulness of something, particularly environmental damage",
+          "example": "Governments are exploring various strategies to mitigate the effects of climate change."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "According to the study, why might current estimates of carbon storage in forests be unreliable?",
+          "answer": "The study found that trees stop growing several months before photosynthesis ceases, meaning that carbon absorption does not consistently lead to permanent wood growth, which is essential for long-term carbon sequestration."
+        },
+        {
+          "question": "What inference can be drawn about the implications of this research for environmental policy?",
+          "answer": "The research implies that environmental policies relying on forests as major carbon sinks may need substantial revision, as the actual carbon storage capacity appears significantly lower than previously assumed."
+        },
+        {
+          "question": "In the context of the passage, what does 'sequestered' most nearly mean?",
+          "answer": "Captured and stored, referring to the process by which carbon dioxide is removed from the atmosphere and held in solid form within tree biomass."
+        }
+      ],
+      "writingPrompt": "Some scientists argue that planting more trees is the most effective strategy for combating climate change, while others believe that reducing industrial emissions should take priority. Discuss both views and give your own opinion. You should write at least 250 words.",
+      "listeningText": "Forests have traditionally been viewed as vital carbon storage systems, yet new research suggests this belief may require revision. A study examining 137 locations across the United States discovered that although trees perform photosynthesis throughout much of the year, their actual wood growth stops considerably earlier. This gap between carbon absorption and biomass production is significant because only wood that actually grows can permanently store carbon. Previously, climate scientists assumed that trees absorbed carbon whenever photosynthesis occurred, but this assumption appears flawed. The implications for climate policy are substantial, as many emission reduction strategies depend heavily on forest-based carbon offsetting. If forests store less carbon than estimated, then alternative approaches to emissions reduction may need greater emphasis. Scientists involved in the study recommend that future climate models incorporate this newly discovered limitation to ensure more accurate projections.",
+      "createdAt": "2026-06-14T00:03:08.833Z",
+      "aiSource": "minimax"
+    },
     {
       "id": "news-2026-06-13-1-more-than-one-in-five-pupils-in-england-getting-special-educ",
       "date": "2026-06-13",
@@ -1513,174 +1681,6 @@
       "listeningText": "(Mock listening passage.) Next El Niño could be strongest in decades. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
       "createdAt": "2026-06-04T00:28:50.742Z",
       "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-03-1-third-of-people-say-uni-degree-not-worth-it-as-student-loan-",
-      "date": "2026-06-03",
-      "title": "Third of people say uni degree not worth it, as student loan inquiry begins",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/c2e29gk73rjo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-02T12:38:59.000Z",
-      "topic": "education",
-      "originalSummary": "MPs will hear the concerns of graduates about the size of their student debts, and the interest rates.",
-      "learningSummary": "A UK parliamentary inquiry is set to examine growing dissatisfaction among graduates regarding the size of their student debts and the interest rates applied to them. According to recent polling, approximately one third of people now believe that obtaining a university degree does not represent a worthwhile investment. MPs are expected to hear testimony from graduates who are struggling under the weight of what many describe as a burdensome financial obligation. The inquiry will subject the current student loan system to close scrutiny, focusing specifically on the affordability of repayment terms and the long-term economic consequences for borrowers. Critics argue that the escalating cost of higher education has made it increasingly difficult for young people to achieve financial stability after graduation, raising fundamental questions about whether universities themselves bear any responsibility for the mounting debt that their alumni carry. The findings of the inquiry are anticipated to influence future policy discussions surrounding higher education funding.",
-      "vocabulary": [
-        {
-          "word": "scrutiny",
-          "meaning": "careful and detailed examination",
-          "example": "The government's education policy will come under parliamentary scrutiny next month."
-        },
-        {
-          "word": "burdensome",
-          "meaning": "causing difficulty or heavy worry",
-          "example": "Many graduates describe their student loans as a burdensome financial obligation."
-        },
-        {
-          "word": "indebted",
-          "meaning": "owing money or gratitude",
-          "example": "Graduates often remain heavily indebted for several years after leaving university."
-        },
-        {
-          "word": "worthwhile",
-          "meaning": "sufficiently valuable to justify the effort or cost",
-          "example": "Students must consider whether a degree will prove worthwhile in the job market."
-        },
-        {
-          "word": "repayable",
-          "meaning": "capable of being paid back over time",
-          "example": "The loans are repayable only after the graduate's income exceeds a certain threshold."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the text, which group of people will be testifying before the parliamentary inquiry?",
-          "answer": "Graduates who are concerned about the size of their student debts and the interest rates applied to them will be heard by MPs."
-        },
-        {
-          "question": "What can be inferred about the financial situation of graduates based on the passage?",
-          "answer": "It can be inferred that many graduates experience significant financial difficulty and frustration as a result of their student loans, which continue to accumulate interest over time."
-        },
-        {
-          "question": "What does the word 'scrutiny' mean in the context of the passage?",
-          "answer": "In this context, 'scrutiny' refers to a close and formal examination, specifically the parliamentary inquiry that will investigate the student loan system and its impact on graduates."
-        }
-      ],
-      "writingPrompt": "In recent years, university graduates in many countries have been leaving education with large debts. Some people argue that universities should be held partly responsible for this situation. Discuss both views and give your own opinion.",
-      "listeningText": "A UK parliamentary inquiry is examining whether a university education represents good value for money, as growing numbers of graduates express concern over the size of their student debts. MPs will hear from graduates who say their loans are becoming increasingly difficult to manage, partly due to high interest rates. Recent surveys indicate that about one third of the population now questions whether a degree is truly worth the financial investment required. The inquiry aims to subject the current student loan system to close scrutiny, exploring whether universities share any responsibility for the mounting debt burden carried by their alumni. Findings from the investigation are expected to inform future debates about higher education funding and whether reforms are needed to make university more affordable.",
-      "createdAt": "2026-06-03T00:25:57.260Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-03-2-next-el-ni-o-could-be-strongest-in-decades",
-      "date": "2026-06-03",
-      "title": "Next El Niño could be strongest in decades",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/videos/c8e8zzw30zyo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-02T14:50:54.000Z",
-      "topic": "environment",
-      "originalSummary": "A new phase of the natural El Niño weather pattern could begin in a matter of weeks, the UN has warned, boosting temperatures on a planet already under strain from climate change.",
-      "learningSummary": "The United Nations has issued a serious warning regarding an impending natural weather cycle that may develop within weeks. Experts indicate that the anticipated El Niño event could become one of the most potent ever recorded, significantly elevating global temperatures at a critical juncture. This forecast is particularly alarming given that Earth's climate systems are already experiencing substantial pressure from ongoing climate change. The convergence of these two forces—a formidable El Niño combined with pre-existing warming trends—presents a worrying scenario for meteorologists and environmental scientists alike. Such natural oscillations typically produce extreme weather conditions across multiple continents, manifesting as prolonged droughts, devastating floods, and disrupted precipitation patterns. The timing of this potential event could compound existing environmental challenges, potentially accelerating the impacts of global warming on ecosystems, agriculture, and human populations worldwide.",
-      "vocabulary": [
-        {
-          "word": "impending",
-          "meaning": "about to occur; imminent",
-          "example": "Scientists issued early warnings about the impending El Niño event months before it developed."
-        },
-        {
-          "word": "convergence",
-          "meaning": "the coming together of different factors or forces",
-          "example": "The convergence of natural variability and human activity has intensified climate-related challenges."
-        },
-        {
-          "word": "oscillation",
-          "meaning": "a regular back-and-forth movement or variation",
-          "example": "El Niño represents an oscillation in ocean temperatures that affects weather patterns globally."
-        },
-        {
-          "word": "manifest",
-          "meaning": "to display or show clearly",
-          "example": "The impacts of climate change manifest differently across various regions and ecosystems."
-        },
-        {
-          "word": "compounds",
-          "meaning": "makes a problem or situation worse",
-          "example": "Rising sea levels compounds the threat to coastal communities during extreme weather events."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the UN warning, what characteristic might the upcoming El Niño event possess that distinguishes it from previous occurrences?",
-          "answer": "The UN warned that the new El Niño could become one of the most powerful events in decades, suggesting exceptional intensity compared to historical patterns."
-        },
-        {
-          "question": "Why might climate scientists find this particular El Niño event especially concerning given current global conditions?",
-          "answer": "Scientists are particularly concerned because the El Niño would occur when Earth is already under strain from climate change, meaning its warming effects would compound existing environmental pressures rather than act alone."
-        },
-        {
-          "question": "What does the word 'strain' convey about the planet's current condition in relation to climate change?",
-          "answer": "The word 'strain' implies that the planet is already under significant pressure and stress from climate change, suggesting that ecosystems and weather systems are struggling to cope with existing conditions."
-        }
-      ],
-      "writingPrompt": "In many countries, extreme weather events are becoming more frequent and severe. Some experts attribute this trend to natural weather cycles such as El Niño, while others believe human-induced climate change is the primary cause. Discuss both views and give your own opinion on which factor is more responsible for the increase in extreme weather events. Support your argument with specific reasons and examples.",
-      "listeningText": "The United Nations has raised significant concerns about a natural weather phenomenon that could emerge very soon. According to scientists, a new phase of the El Niño cycle may begin within weeks and could develop into one of the most powerful events in decades. What makes this particularly troubling is that our planet is already experiencing considerable stress from climate change. When a strong El Niño event coincides with existing warming trends, the combined effects can be devastating. These weather patterns typically bring severe conditions including prolonged droughts, excessive rainfall, and disrupted agricultural cycles. Coastal areas may face intensified storms, while inland regions could suffer from water shortages. Climate researchers worldwide are carefully monitoring ocean temperatures in the Pacific to track this developing situation and assess its potential consequences for communities across the globe.",
-      "createdAt": "2026-06-03T00:26:03.970Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-03-3-could-lifting-weights-actually-help-you-live-longer",
-      "date": "2026-06-03",
-      "title": "Could lifting weights actually help you live longer?",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/c0r2lekenlpo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-02T23:44:13.000Z",
-      "topic": "health",
-      "originalSummary": "Regular weight training can significantly reduce the risk of early death, research suggests.",
-      "learningSummary": "Recent scientific investigations have uncovered compelling evidence that engaging in resistance training on a consistent basis can substantially decrease the likelihood of premature mortality. According to findings published in leading medical journals, individuals who incorporate weightlifting into their weekly routines demonstrate notably improved health outcomes compared to those who remain physically inactive. The research indicates that such exercise contributes to enhanced musculoskeletal strength, increased metabolic efficiency, and better cardiovascular function. Experts suggest that these benefits extend across various age groups and demographic categories. Furthermore, the protective effects appear to be cumulative, meaning that longer periods of regular participation correlate with greater reductions in mortality risk. Medical professionals increasingly recommend that adults include resistance exercises alongside aerobic activities as part of a comprehensive approach to preventive healthcare. This evidence challenges previous assumptions that cardiovascular exercise alone represents sufficient protection against chronic diseases.",
-      "vocabulary": [
-        {
-          "word": "premature mortality",
-          "meaning": "death occurring earlier than the expected natural lifespan",
-          "example": "The study found that sedentary lifestyles contribute significantly to premature mortality in developed nations."
-        },
-        {
-          "word": "musculoskeletal",
-          "meaning": "relating to or affecting the muscles and skeleton of the body",
-          "example": "Regular resistance training strengthens musculoskeletal tissues and reduces the risk of age-related frailty."
-        },
-        {
-          "word": "metabolic efficiency",
-          "meaning": "the rate at which the body converts food into energy and processes waste",
-          "example": "Weightlifting improves metabolic efficiency, helping individuals maintain healthier body compositions."
-        },
-        {
-          "word": "cumulative",
-          "meaning": "increasing by successive additions; building up over time",
-          "example": "The cumulative effect of years spent exercising can add significant years to one's life expectancy."
-        },
-        {
-          "word": "preventive healthcare",
-          "meaning": "measures taken to prevent disease rather than treating it after occurrence",
-          "example": "Public health campaigns increasingly emphasize preventive healthcare strategies to reduce burden on medical systems."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what specific health improvements are associated with resistance training?",
-          "answer": "The passage states that resistance training contributes to enhanced musculoskeletal strength, increased metabolic efficiency, and better cardiovascular function."
-        },
-        {
-          "question": "What can be inferred about the relationship between duration of exercise practice and health benefits?",
-          "answer": "It can be inferred that the protective effects of weight training are cumulative, meaning that individuals who engage in resistance training for longer periods experience greater reductions in mortality risk."
-        },
-        {
-          "question": "In the context of the passage, what does 'comprehensive approach' most nearly mean?",
-          "answer": "In this context, 'comprehensive approach' refers to a complete or full strategy that includes multiple elements—in this case, combining resistance exercises with aerobic activities for optimal health protection."
-        }
-      ],
-      "writingPrompt": "Some medical experts argue that resistance training should be prescribed as a standard preventive measure for patients of all ages, similar to recommendations for aerobic exercise. To what extent do you agree or disagree with this viewpoint? Support your position with relevant examples and evidence from your own knowledge or experience.",
-      "listeningText": "Let me tell you about some fascinating research regarding weightlifting and longevity. Scientists have discovered that people who regularly lift weights tend to live significantly longer than those who do not engage in any form of resistance training. This isn't just about building big muscles—it's actually about fundamental health benefits that affect your entire body. When you lift weights, you're not only strengthening your muscles and bones, but you're also improving how your body processes energy and manages blood circulation. The interesting finding is that these benefits build up over time. The longer you maintain a weightlifting routine, the more protection you seem to gain against early death. What makes this particularly noteworthy is that researchers found these positive effects across different age groups and populations. So if you've been wondering whether hitting the gym is worth the effort, this research suggests the answer is definitely yes—especially when combined with other forms of exercise as part of an overall healthy lifestyle.",
-      "createdAt": "2026-06-03T00:26:28.653Z",
-      "aiSource": "minimax"
     }
   ]
 }
