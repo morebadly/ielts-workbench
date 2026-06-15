@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-14T00:03:08.835Z",
+  "updatedAt": "2026-06-15T00:05:04.004Z",
   "items": [
+    {
+      "id": "news-2026-06-15-1-fears-dogs-to-blame-for-drop-in-little-tern-numbers",
+      "date": "2026-06-15",
+      "title": "Fears dogs to blame for drop in little tern numbers",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/cy73gx8px2eo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-14T15:09:13.000Z",
+      "topic": "environment",
+      "originalSummary": "It has been the worst year for dogs getting too close to the nesting birds, a wildlife trust says.",
+      "learningSummary": "(Mock learning summary based on the headline.) Fears dogs to blame for drop in little tern numbers. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Fears dogs to blame for drop in little tern numbers. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-15T00:05:03.262Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-15-2-why-you-might-not-be-buying-the-right-pain-relief-for-period",
+      "date": "2026-06-15",
+      "title": "Why you might not be buying the right pain relief for period cramps",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/c932pex1vpwo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-14T23:10:57.000Z",
+      "topic": "health",
+      "originalSummary": "Many women are buying less effective pain medication for period cramps, supermarket data suggests.",
+      "learningSummary": "(Mock learning summary based on the headline.) Why you might not be buying the right pain relief for period cramps. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Why you might not be buying the right pain relief for period cramps. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-15T00:05:03.634Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-15-3-uk-government-announces-132-5m-after-school-clubs-package",
+      "date": "2026-06-15",
+      "title": "UK government announces £132.5m after-school clubs package",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/education/2026/jun/13/uk-government-announces-1325m-after-school-clubs-package",
+      "publishedAt": "2026-06-13T21:30:24.000Z",
+      "topic": "education",
+      "originalSummary": "Funding for extracurricular activities comes as ministers prepare to introduce social media restrictions for under-16s The government has announced a £132.5m funding package for after-school clubs as ministers prepare to introduce expected restrictions on social media use for under-16s. The programme is designed to expand access to enrichment activities in schools, with funding for clubs ranging from music groups and debating societies to engineering and sports, in what ministers describe as an effort to give children alternatives to time spent online. Continue reading...",
+      "learningSummary": "(Mock learning summary based on the headline.) UK government announces £132.5m after-school clubs package. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) UK government announces £132.5m after-school clubs package. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-15T00:05:04.003Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-06-14-1-calls-to-restore-chalk-grassland-for-rare-insects",
       "date": "2026-06-14",
@@ -1513,174 +1681,6 @@
       "listeningText": "Good evening, I'm Dr. Sarah Mitchell with a special report on an extraordinary breakthrough in medical technology. Cambridge scientists have successfully completed initial trials of what they describe as the world's first fully AI-designed vaccine. Professor James Chen, who led the research team, explained that their machine learning system analyzed millions of potential molecular configurations before identifying the optimal antigen structure. This process, which would traditionally take years, was completed in just months. The team believes this approach could fundamentally change how we respond to pandemic threats. However, they caution that extensive testing remains necessary before any commercial deployment. Several pharmaceutical companies have already expressed interest in licensing the technology. We'll continue following this story throughout the evening.",
       "createdAt": "2026-06-05T00:02:36.802Z",
       "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-04-1-third-of-people-say-uni-degree-not-worth-it-as-student-loan-",
-      "date": "2026-06-04",
-      "title": "Third of people say uni degree not worth it, as student loan inquiry begins",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/c2e29gk73rjo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-02T12:38:59.000Z",
-      "topic": "education",
-      "originalSummary": "MPs will hear the concerns of graduates about the size of their student debts, and the interest rates.",
-      "learningSummary": "A parliamentary inquiry has been launched to examine whether a university education provides adequate value for the substantial financial commitment required from students. MPs are set to hear testimony from graduates who are struggling with the burden of substantial loan repayments and the accumulation of interest on their debts. Research suggests that approximately one third of the population now questions the worth of pursuing a university qualification, particularly when considering the long-term financial implications of tuition fees and the cost of living while studying. The inquiry comes at a time when graduates are increasingly concerned about the level of debt they accumulate during their studies and the length of time required to repay these financial obligations. Education officials maintain that higher education remains a valuable investment, while opponents argue that the mounting financial burden may discourage individuals from less affluent backgrounds from pursuing academic qualifications.",
-      "vocabulary": [
-        {
-          "word": "inquiry",
-          "meaning": "an official investigation into a matter of public concern",
-          "example": "The parliamentary inquiry will examine the impact of rising tuition fees on graduates' financial wellbeing."
-        },
-        {
-          "word": "substantial",
-          "meaning": "large in amount or considerable in importance",
-          "example": "Graduates are finding it difficult to manage their substantial student debts after entering the workforce."
-        },
-        {
-          "word": "accumulation",
-          "meaning": "the gradual gathering or increase of something over time",
-          "example": "The accumulation of interest on student loans has significantly extended the repayment period for many graduates."
-        },
-        {
-          "word": "qualification",
-          "meaning": "a pass of a course of study that gives someone a status in their field",
-          "example": "Students are questioning whether their university qualification will lead to well-paid employment."
-        },
-        {
-          "word": "testimony",
-          "meaning": "a formal written or spoken statement giving evidence",
-          "example": "MPs will listen to the testimony of graduates who have experienced financial hardship due to student loans."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "Why might the parliamentary inquiry into student loans be considered significant for prospective university applicants?",
-          "answer": "The inquiry addresses concerns about whether a university education offers value for money, which directly impacts the decisions of people considering higher education, particularly those worried about accumulating substantial debts that may take years to repay."
-        },
-        {
-          "question": "What does the phrase 'worth it' suggest about public attitudes towards university education?",
-          "answer": "The phrase implies that a significant portion of the public now doubts whether the benefits of obtaining a degree justify the financial costs involved, including tuition fees, living expenses, and the long-term burden of debt."
-        },
-        {
-          "question": "Which word in the summary best describes the way interest on student loans builds up over time?",
-          "answer": "The word 'accumulation' best describes how interest on student loans gradually increases over the repayment period, making the overall debt larger than the original amount borrowed."
-        }
-      ],
-      "writingPrompt": "In many countries, the cost of university education has increased dramatically in recent decades, leading to concerns about the financial burden placed on students and graduates. Some people argue that the high cost of higher education makes it an unjustifiable investment, while others maintain that the long-term benefits outweigh the expenses. Discuss both views and give your own opinion.",
-      "listeningText": "A new inquiry has been launched to investigate whether university degrees represent good value for money for students taking on substantial debts. Members of parliament will hear evidence from graduates who are concerned about the size of their loans and the rates of interest applied during and after their studies. Recent surveys indicate that around one third of the general public now questions whether a university education is truly worth the investment required. Graduates often face years of repayments, and the accumulated interest can significantly increase the total amount owed. While education advocates insist that obtaining a qualification leads to better career prospects and higher earnings over time, critics suggest that the financial burden may discourage individuals from pursuing higher education, particularly those from lower-income backgrounds.",
-      "createdAt": "2026-06-04T00:28:14.088Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-04-2-phone-signal-on-trains-not-good-enough-most-of-the-time-rese",
-      "date": "2026-06-04",
-      "title": "Phone signal on trains not good enough most of the time, research says",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/c5yr1penq56o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-03T14:21:22.000Z",
-      "topic": "technology",
-      "originalSummary": "Ofcom found the major phone networks were not providing good signal on trains, and train companies were slowing down wi-fi.",
-      "learningSummary": "(Mock learning summary based on the headline.) Phone signal on trains not good enough most of the time, research says. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Phone signal on trains not good enough most of the time, research says. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-04T00:28:34.646Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-04-3-next-el-ni-o-could-be-strongest-in-decades",
-      "date": "2026-06-04",
-      "title": "Next El Niño could be strongest in decades",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/videos/c8e8zzw30zyo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-02T14:50:54.000Z",
-      "topic": "environment",
-      "originalSummary": "A new phase of the natural El Niño weather pattern could begin in a matter of weeks, the UN has warned, boosting temperatures on a planet already under strain from climate change.",
-      "learningSummary": "(Mock learning summary based on the headline.) Next El Niño could be strongest in decades. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Next El Niño could be strongest in decades. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-04T00:28:50.742Z",
-      "aiSource": "mock"
     }
   ]
 }
