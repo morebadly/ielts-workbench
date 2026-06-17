@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-16T00:26:50.593Z",
+  "updatedAt": "2026-06-17T00:13:06.159Z",
   "items": [
+    {
+      "id": "news-2026-06-17-1-social-media-ban-a-defining-moment-for-our-children",
+      "date": "2026-06-17",
+      "title": "Social media ban 'a defining moment for our children'",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/videos/c1wy0l1e9yno?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-15T16:30:08.000Z",
+      "topic": "education",
+      "originalSummary": "Secretary of State for Technology Liz Kendall was addressing the Commons following the announcement of a social media ban for under-16s.",
+      "learningSummary": "(Mock learning summary based on the headline.) Social media ban 'a defining moment for our children'. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Social media ban 'a defining moment for our children'. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-17T00:13:05.497Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-17-2-five-big-questions-about-the-uk-s-under-16s-social-media-ban",
+      "date": "2026-06-17",
+      "title": "Five big questions about the UK's under-16s social media ban",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/c9824zvpz9po?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-16T15:28:15.000Z",
+      "topic": "technology",
+      "originalSummary": "A ban is coming - but it's still not clear what it will mean for sites including Roblox, YouTube and WhatsApp.",
+      "learningSummary": "(Mock learning summary based on the headline.) Five big questions about the UK's under-16s social media ban. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Five big questions about the UK's under-16s social media ban. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-17T00:13:05.835Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-17-3-recovery-of-ebola-patients-offers-rare-moments-of-joy-at-epi",
+      "date": "2026-06-17",
+      "title": "Recovery of Ebola patients offers rare moments of joy at epicentre of outbreak",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/cp3xyvww1lqo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-15T23:26:39.000Z",
+      "topic": "health",
+      "originalSummary": "There are glimpses of happiness in the Democratic Republic of Congo's fight against the virus that has killed more than 170.",
+      "learningSummary": "(Mock learning summary based on the headline.) Recovery of Ebola patients offers rare moments of joy at epicentre of outbreak. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Recovery of Ebola patients offers rare moments of joy at epicentre of outbreak. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-17T00:13:06.158Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-06-16-1-social-media-ban-a-defining-moment-for-our-children",
       "date": "2026-06-16",
@@ -1512,174 +1680,6 @@
       "writingPrompt": "Some people argue that waste incineration represents an efficient solution to mounting garbage problems, while others contend that burning waste poses unacceptable risks to public health and the environment. Discuss both perspectives and present your own opinion on how communities should manage increasing volumes of municipal waste.",
       "listeningText": "Residents living near the Beddington incinerator have expressed significant concern following an Environment Agency decision to allow increased waste burning operations. The regulatory body approved a ten percent rise in the volume of material the facility can process, a move that local communities view with considerable alarm. Environmental health experts have highlighted potential dangers associated with elevated air pollution levels, particularly for vulnerable groups such as young children and elderly residents. The incinerator plays a vital role in regional waste management systems, converting substantial quantities of household refuse into energy. However, critics argue that current safety measures fail to adequately protect surrounding populations from harmful emissions. Community leaders are now calling for comprehensive health impact assessments before any further expansion receives authorization.",
       "createdAt": "2026-06-08T00:03:21.048Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-06-1-pupils-asked-to-walk-to-school-through-army-firing-range-mp-",
-      "date": "2026-06-06",
-      "title": "Pupils asked to walk to school through army firing range, MP claims",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/cjrpr3pqnz3o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-05T17:18:47.000Z",
-      "topic": "education",
-      "originalSummary": "Getting children to school is becoming a thorny issue for councils to deal with.",
-      "learningSummary": "An MP has highlighted concerns regarding pupils being directed to walk through an army firing range to reach their school. This issue has arisen as local councils struggle with increasingly complex challenges in providing safe transportation for schoolchildren. The controversy underscores broader difficulties facing educational authorities in guaranteeing that students can attend classes without encountering hazardous conditions. The MP's claims have initiated debate about the obligations of local authorities in establishing safe routes for children. Those opposed to the arrangement argue that requiring minors to traverse a military training area presents unacceptable dangers, while defenders may cite budgetary constraints or a lack of alternative pathways. This case illustrates how logistical difficulties in certain communities can compromise the fundamental principle of safe educational access.",
-      "vocabulary": [
-        {
-          "word": "thorny",
-          "meaning": "causing difficulty or distress; complicated",
-          "example": "The council faces a thorny dilemma in balancing budget constraints with pupil safety."
-        },
-        {
-          "word": "logistical",
-          "meaning": "relating to the organization and coordination of complex operations",
-          "example": "The logistical challenges of providing school transport have become increasingly difficult."
-        },
-        {
-          "word": "controversy",
-          "meaning": "public dispute or disagreement about a matter",
-          "example": "The controversy has sparked debate about local authorities' responsibilities."
-        },
-        {
-          "word": "firing range",
-          "meaning": "a designated area used for military weapons practice",
-          "example": "Parents expressed alarm at the prospect of children walking through a firing range."
-        },
-        {
-          "word": "exemplifies",
-          "meaning": "serves as a typical or representative example",
-          "example": "This case exemplifies the broader challenges facing educational authorities."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what specific concern did the MP raise about pupils' school journeys?",
-          "answer": "The MP raised concerns about pupils being asked to walk through an army firing range to reach their school."
-        },
-        {
-          "question": "What can be inferred about the councils' situation based on the passage?",
-          "answer": "It can be inferred that councils are facing significant difficulties in providing safe transportation for schoolchildren, potentially due to limited alternatives or budget constraints."
-        },
-        {
-          "question": "The word 'hazardous' in the passage is closest in meaning to: a) convenient b) dangerous c) efficient d) necessary",
-          "answer": "b) dangerous"
-        }
-      ],
-      "writingPrompt": "Some parents and safety campaigners are concerned that pupils in certain areas are being required to travel through potentially dangerous zones to reach school. Discuss the responsibilities of local authorities in ensuring safe school journeys. What measures should be prioritised when planning routes for schoolchildren?",
-      "listeningText": "An MP has highlighted concerns regarding pupils being directed to walk through an army firing range to reach their school. This issue has arisen as local councils struggle with increasingly complex challenges in providing safe transportation for schoolchildren. The controversy underscores broader difficulties facing educational authorities in guaranteeing that students can attend classes without encountering hazardous conditions. The MP's claims have initiated debate about the obligations of local authorities in establishing safe routes for children. Those opposed to the arrangement argue that requiring minors to traverse a military training area presents unacceptable dangers, while defenders may cite budgetary constraints or a lack of alternative pathways. This case illustrates how logistical difficulties in certain communities can compromise the fundamental principle of safe educational access.",
-      "createdAt": "2026-06-06T23:59:53.595Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-06-2-are-you-feeling-overwhelmed",
-      "date": "2026-06-06",
-      "title": "Are you feeling overwhelmed?",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/videos/c3w2w79j12xo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-05T17:57:00.000Z",
-      "topic": "health",
-      "originalSummary": "Kimberley Wilson gives some tips on how to deal with feeling overwhelmed.",
-      "learningSummary": "Modern life frequently presents individuals with demands that exceed their capacity to cope, leading to a pervasive sense of being overwhelmed. This psychological state manifests when a person perceives the volume of tasks, responsibilities or pressures as unmanageable relative to their available resources. Mental health professionals emphasise that recognising early warning signs is crucial for preventing more serious conditions such as anxiety disorders or depression. Effective strategies include breaking large tasks into smaller, manageable segments, establishing clear priorities, and setting realistic expectations about what can be accomplished within given timeframes. Additionally, incorporating regular physical activity, maintaining consistent sleep patterns, and cultivating supportive social connections have demonstrated significant benefits. Experts recommend that individuals develop personal coping mechanisms before stress becomes unmanageable, rather than waiting until crisis point. Understanding that feeling overwhelmed represents a common human experience, rather than a personal failure, forms an essential component of sustainable mental wellbeing.",
-      "vocabulary": [
-        {
-          "word": "overwhelmed",
-          "meaning": "being completely consumed by an excess of demands or emotions to the point where one cannot function effectively",
-          "example": "Many professionals report feeling overwhelmed by the simultaneous demands of career advancement and family responsibilities."
-        },
-        {
-          "word": "cognitive",
-          "meaning": "relating to mental processes of thinking, reasoning, and information processing",
-          "example": "Cognitive behavioural techniques help individuals reframe negative thought patterns that contribute to stress."
-        },
-        {
-          "word": "resilience",
-          "meaning": "the capacity to recover quickly from difficulties and adapt successfully to challenging circumstances",
-          "example": "Building resilience through gradual exposure to manageable stressors enables individuals to handle greater pressures over time."
-        },
-        {
-          "word": "mindfulness",
-          "meaning": "a mental state achieved by focusing awareness on the present moment while calmly acknowledging feelings and thoughts",
-          "example": "Practising mindfulness for just ten minutes daily has been shown to reduce cortisol levels and improve emotional regulation."
-        },
-        {
-          "word": "sustainable",
-          "meaning": "capable of being maintained at a steady level without depleting resources or causing negative consequences",
-          "example": "Effective stress management requires developing sustainable habits rather than relying on temporary fixes or avoidance strategies."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what distinguishes feeling overwhelmed from more serious mental health conditions?",
-          "answer": "Feeling overwhelmed occurs when demands exceed one's perceived capacity to cope, but it represents a common human experience rather than a clinical condition requiring medical intervention. Mental health professionals view it as a warning sign that can lead to anxiety disorders or depression if unaddressed."
-        },
-        {
-          "question": "It can be inferred from the passage that the author believes individuals should address feelings of overwhelm:",
-          "answer": "Before they reach a crisis point. The text states that experts recommend developing personal coping mechanisms proactively rather than waiting until stress becomes unmanageable, suggesting that early intervention prevents more serious mental health consequences."
-        },
-        {
-          "question": "In the context of the passage, the word 'pervasive' in the second sentence most nearly means:",
-          "answer": "Widespread or commonly experienced. The passage describes overwhelm as a state that 'manifests' frequently across many individuals, indicating that the term 'pervasive' refers to how commonly this condition occurs in modern life."
-        }
-      ],
-      "writingPrompt": "In contemporary society, many people complain about feeling constantly overwhelmed by their responsibilities and daily pressures. What, in your view, are the main causes of this phenomenon, and what solutions would you recommend to address it? Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
-      "listeningText": "Feeling overwhelmed has become an increasingly common complaint in today's fast-paced world. When individuals face more tasks and responsibilities than they believe they can handle, they often experience significant stress that affects both their mental and physical wellbeing. The good news is that there are practical steps anyone can take to manage these feelings effectively. First, breaking down large projects into smaller, more manageable tasks can make even daunting challenges feel achievable. Second, learning to say no to additional commitments is essential for protecting personal time and energy. Third, regular exercise and adequate sleep provide the foundation for better emotional regulation. Many experts also recommend practices such as meditation or deep breathing exercises, which help calm the nervous system during high-stress periods. Perhaps most importantly, maintaining connections with friends and family provides emotional support that buffers against the negative effects of excessive pressure. Remember that seeking professional help when feelings become persistent is not a sign of weakness but a responsible approach to maintaining mental health.",
-      "createdAt": "2026-06-07T00:00:03.796Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-06-3-labour-will-make-ai-work-for-the-workers-says-liz-kendall",
-      "date": "2026-06-06",
-      "title": "Labour will make AI ‘work for the workers’, says Liz Kendall",
-      "source": "The Guardian - Education",
-      "url": "https://www.theguardian.com/technology/2026/jun/05/labour-will-make-ai-work-for-workers-liz-kendall",
-      "publishedAt": "2026-06-05T17:00:04.000Z",
-      "topic": "work",
-      "originalSummary": "Technology secretary promises to support people whose jobs are swept away by automation Liz Kendall has insisted Labour will make artificial intelligence “work for workers”, and not abandon people whose jobs are swept away by its rapid advance. With public fears mounting about the impact of AI on employment, particularly for young people, the technology secretary claimed that the government could shape the way it is adopted. Continue reading...",
-      "learningSummary": "The Technology Secretary, Liz Kendall, has affirmed that the Labour government intends to ensure artificial intelligence benefits employees rather than causing them harm. She has promised to provide support for workers whose employment is displaced by automated systems. As public concern about AI's impact on jobs continues to grow, particularly among younger generations entering the workforce, Kendall has emphasized that the government possesses the capacity to influence how AI technologies are implemented in workplaces. Rather than allowing automation to proceed without intervention, the administration aims to shape adoption patterns to protect workers' interests. This stance reflects a broader governmental commitment to managing the transition to an AI-driven economy in a way that safeguards employment opportunities for vulnerable populations.",
-      "vocabulary": [
-        {
-          "word": "automation",
-          "meaning": "the use of machines or systems to perform tasks previously done by humans",
-          "example": "The increasing automation of manufacturing processes has led to significant job losses in traditional sectors."
-        },
-        {
-          "word": "displacement",
-          "meaning": "the act of forcing people out of their jobs or positions",
-          "example": "Workers fear displacement as AI technologies become more sophisticated and capable of performing cognitive tasks."
-        },
-        {
-          "word": "shape",
-          "meaning": "to influence the development or form of something",
-          "example": "Government policies can shape how emerging technologies are adopted across different industries."
-        },
-        {
-          "word": "vulnerable",
-          "meaning": "susceptible to being harmed or affected by something",
-          "example": "Young people entering the job market are particularly vulnerable to the disruptive effects of rapid technological change."
-        },
-        {
-          "word": "transition",
-          "meaning": "the process of changing from one state or condition to another",
-          "example": "Managing the transition to an AI-driven economy requires comprehensive support for affected workers."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What has Liz Kendall promised regarding artificial intelligence and workers?",
-          "answer": "She has promised that Labour will make AI work for workers, not abandon those whose jobs are displaced by automation."
-        },
-        {
-          "question": "Why might young people be particularly concerned about AI's impact on employment according to the passage?",
-          "answer": "Young people are particularly concerned because they are just entering the workforce and may face greater challenges finding employment as AI adoption increases."
-        },
-        {
-          "question": "What does the phrase \"shape the way it is adopted\" suggest about the government's intended role?",
-          "answer": "It suggests the government plans to actively influence or regulate how AI technologies are implemented, rather than passively allowing them to spread unchecked."
-        }
-      ],
-      "writingPrompt": "Some people believe that artificial intelligence will create more problems than it solves in the workplace, while others argue that it will generate significant benefits for society. Discuss both views and give your own opinion.",
-      "listeningText": "The government has announced plans to ensure artificial intelligence benefits workers across the country. Speaking at a conference on technology and employment, the Technology Secretary outlined how AI could be developed in ways that support rather than replace human workers. She acknowledged public concerns about job displacement but emphasized that proper regulation and planning could mitigate negative effects. The minister announced new funding for retraining programmes and promised to work with industry leaders to ensure AI adoption proceeds in a manner that protects workers' interests. This announcement comes amid growing debate about how nations should manage the transition to an increasingly automated economy.",
-      "createdAt": "2026-06-07T00:00:12.433Z",
       "aiSource": "minimax"
     }
   ]
