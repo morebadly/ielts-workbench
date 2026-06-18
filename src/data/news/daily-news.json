@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-17T00:13:06.159Z",
+  "updatedAt": "2026-06-18T00:12:48.970Z",
   "items": [
+    {
+      "id": "news-2026-06-18-1-chatgpt-can-be-made-to-generate-sexualised-and-violent-image",
+      "date": "2026-06-18",
+      "title": "ChatGPT can be made to generate sexualised and violent images, researchers find",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/c802ldjdklzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-17T23:07:40.000Z",
+      "topic": "technology",
+      "originalSummary": "But researchers say its still possible to trick the AI chatbot into producing graphic content.",
+      "learningSummary": "(Mock learning summary based on the headline.) ChatGPT can be made to generate sexualised and violent images, researchers find. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) ChatGPT can be made to generate sexualised and violent images, researchers find. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-18T00:12:48.348Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-18-2-simpler-older-version-of-stonehenge-found-three-miles-from-f",
+      "date": "2026-06-18",
+      "title": "Simpler, older version of Stonehenge found three miles from famous site",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/clyxw8550y8o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-17T23:11:29.000Z",
+      "topic": "environment",
+      "originalSummary": "The structure consisted of two posts that lined up with the solstices 5,000 years ago.",
+      "learningSummary": "(Mock learning summary based on the headline.) Simpler, older version of Stonehenge found three miles from famous site. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Simpler, older version of Stonehenge found three miles from famous site. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-18T00:12:48.650Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-18-3-we-travel-530-miles-so-our-son-can-have-a-haircut",
+      "date": "2026-06-18",
+      "title": "'We travel 530 miles so our son can have a haircut'",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.com/news/articles/cwyd9yzg46yo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-17T06:13:43.000Z",
+      "topic": "health",
+      "originalSummary": "How a very special hairdressing salon in Lowestoft is cutting it when it comes to neurodivergence.",
+      "learningSummary": "(Mock learning summary based on the headline.) 'We travel 530 miles so our son can have a haircut'. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) 'We travel 530 miles so our son can have a haircut'. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-18T00:12:48.968Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-06-17-1-social-media-ban-a-defining-moment-for-our-children",
       "date": "2026-06-17",
@@ -1512,174 +1680,6 @@
       "writingPrompt": "Some people argue that increasing the number of waste incinerators is necessary to address growing landfill problems, while others believe this approach creates serious health and environmental concerns. Discuss both views and give your own opinion. What is the most sustainable approach to waste management in modern societies?",
       "listeningText": "The Beddington incinerator controversy highlights a growing debate about waste management strategies in urban communities. The Environment Agency has approved a ten percent increase in the facility's combustion capacity, sparking concern among local residents who fear potential health implications. Environmental campaigners argue that expanded incineration facilities contribute to air pollution and may harm respiratory health in nearby neighborhoods. The regulatory agency maintains that emissions standards will be upheld despite increased throughput. Community members are now calling for comprehensive health impact assessments before any further expansion takes place. This case illustrates the delicate balance authorities must strike between practical waste disposal needs and protecting public health.",
       "createdAt": "2026-06-09T00:02:33.631Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-08-1-no-dead-ends-what-the-dutch-can-teach-us-about-tackling-yout",
-      "date": "2026-06-08",
-      "title": "'No dead ends': What the Dutch can teach us about tackling youth unemployment",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/cnvpn253re4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-07T23:03:23.000Z",
-      "topic": "education",
-      "originalSummary": "The Netherlands has one of the world's lowest rates of 16 to 24-year-olds not in education, employment or training.",
-      "learningSummary": "The Netherlands demonstrates remarkably low youth unemployment rates compared to global standards. The nation has implemented comprehensive strategies to ensure young people avoid becoming neither employed nor enrolled in educational programmes. Central to this success is a robust vocational education system that combines classroom instruction with practical workplace experience. Additionally, Dutch employment services maintain close partnerships with local businesses to create meaningful apprenticeships. The approach emphasises early intervention and personalised career guidance, helping adolescents make informed decisions about their future paths. This integrated model appears to reduce the risk of disengagement among teenagers and young adults. Researchers suggest that other nations could potentially adapt similar frameworks to address their own youth employment challenges.",
-      "vocabulary": [
-        {
-          "word": "comprehensive",
-          "meaning": "including all or nearly all elements; complete and thorough",
-          "example": "The government introduced comprehensive reforms to the education system."
-        },
-        {
-          "word": "vocational",
-          "meaning": "relating to education providing practical skills for a specific trade or profession",
-          "example": "Vocational training programmes bridge the gap between academic study and workplace demands."
-        },
-        {
-          "word": "apprenticeship",
-          "meaning": "a period of practical training under an experienced worker in a skilled profession",
-          "example": "Young people benefit greatly from apprenticeships that combine study with real work experience."
-        },
-        {
-          "word": "disengagement",
-          "meaning": "the state of being disconnected or uninvolved, particularly from work or education",
-          "example": "Early intervention strategies aim to prevent disengagement among at-risk youth."
-        },
-        {
-          "word": "intervention",
-          "meaning": "deliberate action taken to improve or help a situation",
-          "example": "Successful intervention programmes connect disadvantaged young people with employment opportunities."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the report, what is central to the Netherlands' success in reducing youth unemployment?",
-          "answer": "A robust vocational education system that combines classroom instruction with practical workplace experience is central to the Netherlands' success."
-        },
-        {
-          "question": "It can be inferred from the report that traditional academic-only education may be insufficient for addressing youth unemployment because:",
-          "answer": "Such education often fails to provide the practical workplace skills and direct employer connections that vocational programmes offer."
-        },
-        {
-          "question": "In the context of the passage, what does 'disengagement' most likely refer to?",
-          "answer": "A state where young people become disconnected from both employment and educational opportunities, often becoming part of the NEET category."
-        }
-      ],
-      "writingPrompt": "Some experts argue that countries should prioritise vocational training over traditional academic education to effectively tackle youth unemployment. To what extent do you agree or disagree with this view?",
-      "listeningText": "The Netherlands has achieved remarkable success in keeping young people connected to education and employment. Their approach centres on robust vocational programmes that blend classroom learning with real workplace experience. Employment services work closely with local businesses to establish meaningful apprenticeships for teenagers. A key feature involves early intervention and personalised guidance to help young people make informed career decisions. This comprehensive strategy appears to significantly reduce disengagement rates among the youth population. Experts believe other countries could potentially adapt this integrated framework to improve their own youth employment outcomes.",
-      "createdAt": "2026-06-08T00:02:44.856Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-08-2-the-gamers-taking-on-the-industry-to-stop-it-switching-off-g",
-      "date": "2026-06-08",
-      "title": "The gamers taking on the industry to stop it switching off games",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/c8e8e7g0r82o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-06T23:25:51.000Z",
-      "topic": "technology",
-      "originalSummary": "Stop Killing Games is challenging the idea publishers can shut down a game without making sure it's still playable.",
-      "learningSummary": "The Stop Killing Games campaign represents a significant movement within the gaming community that challenges the authority of publishers to permanently disable video games after discontinuation. This consumer rights initiative argues that when companies shut down their servers, players who purchased digital content lose all access to products they have paid for. The movement seeks legal frameworks that would require developers to ensure games remain playable even after official support ends. This debate raises important questions about digital ownership in an increasingly virtual entertainment landscape. Critics of current industry practices contend that unlike physical goods, digital purchases lack any guarantee of permanence. The campaign has gained substantial support among gamers who view their purchases as legitimate property rights rather than temporary licenses.",
-      "vocabulary": [
-        {
-          "word": "obsolescence",
-          "meaning": "the state of becoming outdated or unusable over time",
-          "example": "Software obsolescence has become a pressing concern as digital products can be rendered inaccessible overnight."
-        },
-        {
-          "word": "preservation",
-          "meaning": "the act of maintaining or keeping something in its original state",
-          "example": "The preservation of video game history requires collective action from both developers and玩家 communities."
-        },
-        {
-          "word": "defunct",
-          "meaning": "no longer existing or functioning",
-          "example": "Many defunct online games have left players without any means to access their past progress."
-        },
-        {
-          "word": "entitlement",
-          "meaning": "the right to receive or obtain something",
-          "example": "Digital entitlement debates centre on whether purchasers truly own the content they buy."
-        },
-        {
-          "word": "sustainable",
-          "meaning": "able to be maintained at a certain rate or level indefinitely",
-          "example": "A sustainable gaming ecosystem would require publishers to support titles for extended periods."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the primary objective of the Stop Killing Games campaign?",
-          "answer": "The campaign aims to challenge publishers' authority to permanently disable games after discontinuation, seeking legal requirements for publishers to ensure games remain playable."
-        },
-        {
-          "question": "Which inference can be made about the relationship between digital purchases and consumer rights?",
-          "answer": "It can be inferred that digital game purchases currently operate under license agreements rather than true ownership, creating an imbalance where publishers can remove access to paid content at will."
-        },
-        {
-          "question": "In the context of this passage, what does 'obsolescence' most likely mean?",
-          "answer": "It refers to the condition where digital products become unusable when publishers discontinue server support, making previously purchased content inaccessible to consumers."
-        }
-      ],
-      "writingPrompt": "Some gamers argue that video game companies should be legally required to maintain servers or provide offline functionality for games after discontinuation. Others believe publishers should have complete freedom to shut down online services as they see fit. Discuss both views and give your own opinion.",
-      "listeningText": "The Stop Killing Games movement is challenging how video game companies handle discontinued titles. When publishers shut down online games, players lose access to content they purchased. This campaign argues that digital purchases should not simply disappear when companies decide to stop supporting a title. The movement seeks legal changes that would require developers to keep games playable after official support ends. This raises questions about digital ownership and consumer rights in modern gaming. Many players feel they should have permanent access to games they paid for, while publishers argue that maintaining old servers is financially impractical. The debate continues as more online games reach their end of life.",
-      "createdAt": "2026-06-08T00:03:01.641Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-08-3-residents-health-fears-over-plan-to-burn-more-waste",
-      "date": "2026-06-08",
-      "title": "Residents' health fears over plan to burn more waste",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/c1eypqxd928o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-07T12:07:17.000Z",
-      "topic": "environment",
-      "originalSummary": "The Environment Agency has permitted for an extra 10% of waste to be burned at the Beddington incinerator.",
-      "learningSummary": "The Environment Agency has granted authorization for a ten percent increase in waste combustion at the Beddington incinerator, prompting widespread concern among local residents regarding potential health implications. This decision marks a significant escalation in local waste management policy, with community members expressing apprehension about respiratory problems and long-term medical conditions that may arise from elevated emission levels. Environmental advocates have raised questions about the adequacy of current regulatory frameworks in protecting public wellbeing. The incinerator, which processes substantial volumes of municipal waste, represents a critical component in the region's waste disposal infrastructure. Health professionals have suggested that vulnerable populations, particularly children and elderly individuals, face increased risk profiles. The controversy highlights the ongoing tension between practical waste management requirements and community safety priorities. Local authorities maintain that stringent monitoring protocols remain in place, though critics argue these measures prove insufficient to address residents' legitimate concerns.",
-      "vocabulary": [
-        {
-          "word": "incineration",
-          "meaning": "the process of burning waste materials at high temperatures to reduce volume and generate energy",
-          "example": "Incineration facilities have become increasingly common as populations grow and landfill space diminishes."
-        },
-        {
-          "word": "emissions",
-          "meaning": "substances released into the atmosphere, particularly pollutants from industrial processes",
-          "example": "Factory emissions continue to be a primary contributor to regional air quality deterioration."
-        },
-        {
-          "word": "respiratory",
-          "meaning": "relating to the breathing system and lungs",
-          "example": "Prolonged exposure to particulate matter can lead to serious respiratory illnesses."
-        },
-        {
-          "word": "regulatory",
-          "meaning": "having the power to control or supervise according to rules and regulations",
-          "example": "The regulatory framework governing industrial waste disposal requires strict compliance."
-        },
-        {
-          "word": "infrastructure",
-          "meaning": "the fundamental physical and organizational structures needed for operation",
-          "example": "Modern cities depend heavily on robust waste management infrastructure to function effectively."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the report, what specific adjustment did the regulatory body approve regarding the Beddington facility?",
-          "answer": "The Environment Agency authorized a ten percent increase in the amount of waste permitted for burning at the Beddington incinerator."
-        },
-        {
-          "question": "What can be reasonably inferred about residents' attitudes toward the incinerator following this decision?",
-          "answer": "Local residents appear to hold unfavorable views toward the facility, as the news headline explicitly mentions health fears and the summary indicates their concerns regarding the expanded burning operations."
-        },
-        {
-          "question": "In the context of the passage, what does the word 'permitted' suggest about the relationship between the regulatory authority and the incinerator operator?",
-          "answer": "The word 'permitted' indicates that the Environment Agency has granted official authorization or approval, suggesting the operator requested and received explicit consent from the regulatory body to increase waste processing capacity."
-        }
-      ],
-      "writingPrompt": "Some people argue that waste incineration represents an efficient solution to mounting garbage problems, while others contend that burning waste poses unacceptable risks to public health and the environment. Discuss both perspectives and present your own opinion on how communities should manage increasing volumes of municipal waste.",
-      "listeningText": "Residents living near the Beddington incinerator have expressed significant concern following an Environment Agency decision to allow increased waste burning operations. The regulatory body approved a ten percent rise in the volume of material the facility can process, a move that local communities view with considerable alarm. Environmental health experts have highlighted potential dangers associated with elevated air pollution levels, particularly for vulnerable groups such as young children and elderly residents. The incinerator plays a vital role in regional waste management systems, converting substantial quantities of household refuse into energy. However, critics argue that current safety measures fail to adequately protect surrounding populations from harmful emissions. Community leaders are now calling for comprehensive health impact assessments before any further expansion receives authorization.",
-      "createdAt": "2026-06-08T00:03:21.048Z",
       "aiSource": "minimax"
     }
   ]
