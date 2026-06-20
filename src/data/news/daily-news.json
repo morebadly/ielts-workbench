@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-19T00:21:58.658Z",
+  "updatedAt": "2026-06-20T00:04:08.930Z",
   "items": [
+    {
+      "id": "news-2026-06-20-1-five-tips-to-keep-your-kids-cool-this-weekend",
+      "date": "2026-06-20",
+      "title": "Five tips to keep your kids cool this weekend",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/c862j9vy746o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-19T00:07:22.000Z",
+      "topic": "education",
+      "originalSummary": "Temperatures are set to rise over the next few days, and children can be especially vulnerable - so read on for tips to protect them.",
+      "learningSummary": "(Mock learning summary based on the headline.) Five tips to keep your kids cool this weekend. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Five tips to keep your kids cool this weekend. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-20T00:04:08.284Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-20-2-uk-s-top-data-and-ai-regulator-quits-after-inappropriate-hum",
+      "date": "2026-06-20",
+      "title": "UK's top data and AI regulator quits after 'inappropriate' humour",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/c0eyq7rnn22o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-19T20:28:33.000Z",
+      "topic": "technology",
+      "originalSummary": "Edwards has been the boss of the data watchdog since January 2022, and said he had made inappropriate attempts at humour.",
+      "learningSummary": "(Mock learning summary based on the headline.) UK's top data and AI regulator quits after 'inappropriate' humour. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) UK's top data and AI regulator quits after 'inappropriate' humour. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-20T00:04:08.616Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-20-3-microplastics-in-over-75-of-pet-food-study-finds",
+      "date": "2026-06-20",
+      "title": "Microplastics in over 75% of pet food, study finds",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/c39yx1kr2z0o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-19T14:10:25.000Z",
+      "topic": "environment",
+      "originalSummary": "Researchers say certain brands and kinds of cat and dog food have more microplastics than others.",
+      "learningSummary": "(Mock learning summary based on the headline.) Microplastics in over 75% of pet food, study finds. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Microplastics in over 75% of pet food, study finds. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-20T00:04:08.929Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-06-19-1-how-do-student-tuition-and-maintenance-loans-work",
       "date": "2026-06-19",
@@ -1512,174 +1680,6 @@
       "writingPrompt": "Some people believe that governments should allocate significant resources to space exploration programmes like NASA's Artemis mission, while others argue that this funding should be directed towards solving pressing issues on Earth such as climate change and poverty. Discuss both views and give your own opinion.",
       "listeningText": "NASA has officially announced the newest group of astronauts selected for the Artemis lunar programme, marking another milestone in humanity's journey to establish a sustained presence on the Moon. Interestingly, these recently appointed crew members will not be directly involved in lunar surface operations or even approaching the Moon's orbit in the near term. The space agency has adopted a phased approach to crew deployment, ensuring that astronauts receive comprehensive training before undertaking actual Moon missions. This strategic selection process reflects the complex nature of deep space exploration, where meticulous planning and preparation are essential for mission success and crew safety.",
       "createdAt": "2026-06-11T00:14:14.286Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-10-1-lives-still-at-risk-from-unregulated-baby-sleep-industry-aft",
-      "date": "2026-06-10",
-      "title": "'Lives still at risk' from unregulated baby sleep industry after BBC investigation",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/crrprxy2257o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-08T23:07:35.000Z",
-      "topic": "education",
-      "originalSummary": "'Families deserve clarity about the qualifications and training of those caring for their children'",
-      "learningSummary": "The BBC investigation has exposed serious hazards within the unregulated baby sleep industry, revealing how inadequate qualifications among childcare practitioners continue to jeopardise infant safety. Parents seeking professional sleep training services frequently encounter difficulties obtaining verified information about provider credentials or product safety certifications. The investigation discovered that numerous service providers operate without mandatory training requirements, potentially exposing vulnerable infants to unsafe practices. Industry specialists maintain that families possess an inherent right to transparent information regarding the expertise of those entrusted with their children's welfare. Regulatory authorities now confront escalating calls to impose more rigorous standards and establish formal qualification frameworks for professionals delivering baby sleep guidance. This investigation highlights the pressing requirement for enhanced transparency and professional accountability within this rapidly expanding sector, where the consequences of negligence may prove devastating for newborns and their families.",
-      "vocabulary": [
-        {
-          "word": "unregulated",
-          "meaning": "lacking official rules or controls to ensure proper standards",
-          "example": "The unregulated market for online qualifications has raised serious concerns about educational quality."
-        },
-        {
-          "word": "credentials",
-          "meaning": "qualifications, skills or achievements that demonstrate competence",
-          "example": "Parents should verify that childcare providers hold appropriate credentials before engaging their services."
-        },
-        {
-          "word": "oversight",
-          "meaning": "the act of supervising or monitoring to ensure compliance with standards",
-          "example": "Insufficient regulatory oversight allowed unqualified practitioners to operate unchecked."
-        },
-        {
-          "word": "transparency",
-          "meaning": "the quality of being open, honest and easily understood",
-          "example": "Greater transparency regarding practitioner qualifications would benefit families seeking reliable care."
-        },
-        {
-          "word": "accountability",
-          "meaning": "the state of being responsible and answerable for one's actions",
-          "example": "Stricter accountability measures are necessary to protect consumers from unqualified service providers."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the investigation, what primary challenge do parents face when seeking baby sleep services?",
-          "answer": "Parents encounter significant difficulties obtaining verified information about provider qualifications and product safety certifications when searching for professional sleep training services."
-        },
-        {
-          "question": "What inference can be drawn about the current regulatory framework for baby sleep practitioners?",
-          "answer": "The investigation implies that existing regulatory controls are inadequate, as practitioners without proper training requirements continue operating, suggesting a need for more stringent oversight mechanisms."
-        },
-        {
-          "question": "In the context of this passage, what does 'qualification frameworks' mean?",
-          "answer": "It refers to formal systems of standards and requirements that define the necessary training, skills and certifications that professionals must obtain to work in the baby sleep industry."
-        }
-      ],
-      "writingPrompt": "Some experts argue that all professionals offering advice or services related to infant care should be legally required to obtain formal qualifications and licensing. Discuss this view and give your own opinion on the matter. You should write at least 250 words.",
-      "listeningText": "A recent BBC investigation has raised serious concerns about the growing baby sleep industry. Researchers discovered that many providers offering sleep training services lack proper qualifications or training. Parents often struggle to verify whether practitioners are properly credentialed before engaging their services. The investigation found examples of potentially dangerous practices being carried out by unqualified individuals. Experts are now calling for regulatory bodies to introduce mandatory certification requirements for anyone working with infants. They argue that families deserve clear information about who is caring for their children. The findings highlight a significant gap in consumer protection within this expanding market, where the consequences of inadequate training could be severe.",
-      "createdAt": "2026-06-10T00:07:32.036Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-10-2-kalshi-to-make-some-users-reveal-job-details-to-tackle-insid",
-      "date": "2026-06-10",
-      "title": "Kalshi to make some users reveal job details to tackle insider trading",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/cx2vn7wp33po?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-09T22:32:31.000Z",
-      "topic": "technology",
-      "originalSummary": "After issues with insider trading, the prediction betting platform is adding new rules.",
-      "learningSummary": "The prediction market platform Kalshi has implemented new verification measures requiring certain users to submit professional information following concerns about unfair trading practices. The company, which enables participants to speculate on future outcomes, has encountered difficulties related to market manipulation. Under these revised guidelines, individuals seeking to trade in high-value markets must provide evidence of their employment status. This initiative attempts to address potential conflicts of interest where those with privileged knowledge might exploit market positions. Market observers note that this development illustrates a broader movement within fintech sectors to establish greater accountability and prevent regulatory breaches. The policy has generated discussion regarding the appropriate trade-off between maintaining transparent markets and safeguarding individual privacy rights. Company representatives maintain that these measures will ultimately strengthen confidence in prediction trading platforms.",
-      "vocabulary": [
-        {
-          "word": "manipulation",
-          "meaning": "the practice of improperly influencing transactions or markets for personal gain",
-          "example": "Regulators are increasingly scrutinizing market manipulation in digital trading environments."
-        },
-        {
-          "word": "disclosure",
-          "meaning": "the act of revealing information, especially information that was previously confidential",
-          "example": "The new rules mandate full disclosure of employment history for certain traders."
-        },
-        {
-          "word": "affiliation",
-          "meaning": "a formal connection or association with an organization or group",
-          "example": "Users must verify their professional affiliations before accessing premium markets."
-        },
-        {
-          "word": "transparency",
-          "meaning": "the quality of being open and honest about procedures and information",
-          "example": "Greater transparency in financial platforms helps prevent fraudulent activities."
-        },
-        {
-          "word": "integrity",
-          "meaning": "the quality of being honest and morally sound, or maintaining consistent standards",
-          "example": "Maintaining market integrity requires robust verification systems."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What specific information must certain Kalshi users now provide according to the new policy?",
-          "answer": "Certain users must disclose their job details or employment information to verify their professional affiliations."
-        },
-        {
-          "question": "What can be inferred about the purpose of requiring employment verification?",
-          "answer": "The verification is intended to prevent individuals with insider knowledge from gaining unfair advantages in prediction markets."
-        },
-        {
-          "question": "In the context of this passage, what does the phrase 'tackle insider trading' most likely mean?",
-          "answer": "It means to address or combat the illegal practice of using confidential information to profit from market predictions."
-        }
-      ],
-      "writingPrompt": "Some companies now require users to share personal professional information to prevent financial crimes. While this may enhance market fairness, it raises concerns about privacy invasion. Discuss both views and give your own opinion.",
-      "listeningText": "Kalshi, a popular prediction market platform, has announced new requirements for users wishing to participate in certain markets. Those who want to trade in high-value prediction contracts must now verify their employment details. This change comes after the platform experienced problems with insider trading, where people with access to confidential information used it to make unfair profits. The company believes that knowing users' professional backgrounds will help prevent such practices. Industry analysts say this represents a growing trend in financial technology, where platforms balance user privacy against the need for transparent markets. The new measures are expected to increase confidence in prediction markets while still protecting individual users' basic privacy rights.",
-      "createdAt": "2026-06-10T00:07:49.401Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-10-3-nasa-names-next-astronauts-for-artemis-moon-programme",
-      "date": "2026-06-10",
-      "title": "Nasa names next astronauts for Artemis Moon programme",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/cdejn0gj12go?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-09T17:46:55.000Z",
-      "topic": "technology",
-      "originalSummary": "Nasa names its next Artemis crew, though they will not be walking on the Moon or even going anywhere near it.",
-      "learningSummary": "NASA has announced the latest group of astronauts selected for the Artemis programme, the initiative aimed at returning humans to the lunar surface. However, the newly designated crew members will not participate in actual Moon landings or approach the Moon's vicinity during their mission. This announcement highlights the complex structure of modern space exploration, where different teams fulfill distinct roles across multiple mission phases. The Artemis programme represents a collaborative international effort that involves extensive training, specialised equipment development, and carefully orchestrated mission timelines. Despite the absence of lunar landings, these astronauts will likely contribute to critical aspects of the programme, such as orbital station operations or future mission preparations. The announcement underscores how contemporary space missions involve numerous personnel working towards shared objectives without each individual directly setting foot on celestial bodies.",
-      "vocabulary": [
-        {
-          "word": "designate",
-          "meaning": "officially appoint or name for a particular position or role",
-          "example": "The agency designated twelve specialists to oversee the upcoming orbital transfer."
-        },
-        {
-          "word": "vicinity",
-          "meaning": "the area near or around a particular place",
-          "example": "The spacecraft will remain in lunar orbit, nowhere near the Moon's surface."
-        },
-        {
-          "word": "collaborative",
-          "meaning": "involving joint effort and cooperation among multiple parties",
-          "example": "The collaborative nature of the Artemis programme brings together agencies worldwide."
-        },
-        {
-          "word": "nuanced",
-          "meaning": "characterised by subtle distinctions or detailed variations",
-          "example": "Understanding the nuanced roles of different crew members is essential."
-        },
-        {
-          "word": "orchestrate",
-          "meaning": "to coordinate or arrange something carefully and systematically",
-          "example": "Mission controllers must orchestrate every phase with absolute precision."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what limitation was explicitly stated regarding the newly named Artemis crew members?",
-          "answer": "The passage states that the newly named crew members will not be walking on the Moon or even going anywhere near it."
-        },
-        {
-          "question": "What can be inferred about the structure of the Artemis programme from this announcement?",
-          "answer": "It can be inferred that the Artemis programme operates with multiple teams fulfilling different roles, suggesting that not all personnel involved will participate directly in lunar landings but may contribute to other essential aspects such as orbital operations or mission preparations."
-        },
-        {
-          "question": "In the context of the passage, what does the word 'collaborative' suggest about the nature of the Artemis programme?",
-          "answer": "The word 'collaborative' suggests that the Artemis programme involves joint effort and cooperation among multiple international space agencies, rather than being a singular national endeavour."
-        }
-      ],
-      "writingPrompt": "Some experts argue that sending astronauts to the Moon and beyond represents a necessary investment in human progress, while others believe that robotic missions could achieve similar scientific objectives at a fraction of the cost. Discuss both views and give your own opinion. You should write at least 250 words.",
-      "listeningText": "Here's the latest news from the BBC Science and Environment section. NASA has officially announced the names of astronauts selected for the upcoming Artemis mission. However, officials clarified that these crew members will not be landing on the lunar surface nor approaching the Moon's vicinity. The announcement has sparked interest in how modern space programmes distribute responsibilities among different personnel. The Artemis initiative represents one of the most ambitious collaborative space projects in recent history, involving multiple international partners. Despite the limited immediate roles of the newly named astronauts, they remain integral to the programme's long-term objectives. This development illustrates the complex nature of contemporary space exploration, where mission success depends on carefully coordinated teams rather than individual achievements.",
-      "createdAt": "2026-06-10T00:08:03.963Z",
       "aiSource": "minimax"
     }
   ]
