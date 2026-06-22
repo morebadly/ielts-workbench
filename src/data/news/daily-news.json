@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-21T00:02:25.940Z",
+  "updatedAt": "2026-06-22T00:06:19.053Z",
   "items": [
+    {
+      "id": "news-2026-06-22-1-currency-crash-and-visa-crackdowns-force-indian-students-to-",
+      "date": "2026-06-22",
+      "title": "Currency crash and visa crackdowns force Indian students to rethink studying abroad",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/c8x2gd9lkxzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-21T21:55:43.000Z",
+      "topic": "education",
+      "originalSummary": "A weaker rupee and tougher immigration rules are pushing Indian students away from popular destinations like the US and UK.",
+      "learningSummary": "(Mock learning summary based on the headline.) Currency crash and visa crackdowns force Indian students to rethink studying abroad. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Currency crash and visa crackdowns force Indian students to rethink studying abroad. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-22T00:06:18.279Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-22-2-it-s-not-just-about-nudity-warns-actress-the-complex-reality",
+      "date": "2026-06-22",
+      "title": "It's not just about nudity warns actress - the complex reality of images and online abuse",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/c8621dqewxzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-21T23:21:05.000Z",
+      "topic": "technology",
+      "originalSummary": "Tech companies and authorities are failing women by focusing on nudity rather than consent, says a report by Chayn.",
+      "learningSummary": "(Mock learning summary based on the headline.) It's not just about nudity warns actress - the complex reality of images and online abuse. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) It's not just about nudity warns actress - the complex reality of images and online abuse. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-22T00:06:18.642Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-22-3-more-trees-and-nature-spaces-in-council-green-plan",
+      "date": "2026-06-22",
+      "title": "More trees and nature spaces in council green plan",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/c4gy26l0gemo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-21T10:52:44.000Z",
+      "topic": "environment",
+      "originalSummary": "Bradford Council set out plans to increase tree canopy cover and create more nature reserves.",
+      "learningSummary": "(Mock learning summary based on the headline.) More trees and nature spaces in council green plan. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) More trees and nature spaces in council green plan. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-22T00:06:19.052Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-06-21-1-why-the-social-media-ban-is-about-so-much-more-than-social-m",
       "date": "2026-06-21",
@@ -1513,174 +1681,6 @@
       "listeningText": "(Mock listening passage.) What is El Niño and why could it mean record temperatures?. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
       "createdAt": "2026-06-13T00:17:07.463Z",
       "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-12-1-smacking-children-could-lead-to-lower-gcse-grades-study-sugg",
-      "date": "2026-06-12",
-      "title": "Smacking children could lead to lower GCSE grades, study suggests",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/c2eyke83yz9o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-10T23:33:07.000Z",
-      "topic": "education",
-      "originalSummary": "A University College London (UCL) study suggests that smacking children \"does no good whatsoever\".",
-      "learningSummary": "(Mock learning summary based on the headline.) Smacking children could lead to lower GCSE grades, study suggests. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Smacking children could lead to lower GCSE grades, study suggests. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-12T00:18:54.045Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-12-2-social-media-on-trial-four-important-cases-to-watch",
-      "date": "2026-06-12",
-      "title": "Social media on trial: Four important cases to watch",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/c9q39l447l4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-11T05:02:29.000Z",
-      "topic": "technology",
-      "originalSummary": "Social media firms face thousands of lawsuits, the BBC looks at four which could be significant.",
-      "learningSummary": "(Mock learning summary based on the headline.) Social media on trial: Four important cases to watch. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Social media on trial: Four important cases to watch. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-12T00:19:13.017Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-12-3-i-ve-never-been-this-good-revolutionary-immune-reset-puts-lu",
-      "date": "2026-06-12",
-      "title": "'I've never been this good' – revolutionary immune reset puts lupus in remission",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/c4gy2d9y5z3o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-11T23:31:13.000Z",
-      "topic": "health",
-      "originalSummary": "Patients on the trial have not needed medication to manage their condition.",
-      "learningSummary": "A groundbreaking clinical trial has demonstrated that a revolutionary immune reset procedure can achieve sustained remission in patients suffering from lupus, a chronic autoimmune condition. The pioneering approach involves the destruction and subsequent reconstruction of malfunctioning immune cells, after which participants no longer require daily medication to control their symptoms. Researchers have described the results as transformative, with patients reporting levels of improvement previously unattainable through conventional therapies. This trial marks a significant departure from traditional treatment methods, which typically manage symptoms rather than targeting the underlying immune dysfunction. Medical professionals are cautiously optimistic, acknowledging that while the findings are encouraging, further research involving larger and more diverse populations will be essential to validate long-term safety and efficacy of this approach.",
-      "vocabulary": [
-        {
-          "word": "remission",
-          "meaning": "a period during which symptoms of a disease are substantially reduced or disappear",
-          "example": "Following the groundbreaking procedure, patients entered remission without the need for ongoing medication."
-        },
-        {
-          "word": "autoimmune",
-          "meaning": "relating to conditions in which the immune system mistakenly attacks the body's own healthy tissues",
-          "example": "Lupus is an autoimmune disease that can affect multiple organ systems throughout the body."
-        },
-        {
-          "word": "groundbreaking",
-          "meaning": "pioneering, introducing entirely new concepts or methods that have not been previously attempted",
-          "example": "The groundbreaking trial represents a paradigm shift in how we approach chronic autoimmune disorders."
-        },
-        {
-          "word": "sustained",
-          "meaning": "continuing over an extended period without interruption or deterioration",
-          "example": "Researchers aim to determine whether the benefits of treatment can be sustained over many years."
-        },
-        {
-          "word": "efficacy",
-          "meaning": "the ability to produce a desired or intended result; effectiveness",
-          "example": "Clinical trials are designed to rigorously assess the safety and efficacy of new medical interventions."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the trial findings, what was notable about patients' medication requirements following the immune reset procedure?",
-          "answer": "Patients who underwent the immune reset procedure were able to discontinue all medication previously required to manage their condition."
-        },
-        {
-          "question": "What can be inferred about the difference between the new treatment approach and conventional lupus therapies based on the information provided?",
-          "answer": "Unlike conventional treatments that primarily suppress symptoms, this new approach appears to target the underlying immune system dysfunction itself, addressing the root cause rather than just managing manifestations of the disease."
-        },
-        {
-          "question": "In the context of the passage, what does the phrase 'cautiously optimistic' suggest about the medical community's stance?",
-          "answer": "The phrase indicates that while researchers find the initial results encouraging, they recognise the need for additional extensive research before drawing definitive conclusions about the treatment's long-term viability."
-        }
-      ],
-      "writingPrompt": "In recent years, medical breakthroughs have increasingly shifted focus towards treating the root causes of diseases rather than merely managing symptoms. Some argue that substantial investment in such innovative research represents the most effective use of healthcare resources, while others contend that maintaining and improving existing treatment programmes should take priority. Discuss both perspectives and give your own opinion.",
-      "listeningText": "A revolutionary clinical trial has produced remarkable results for patients with lupus, demonstrating that a novel immune reset procedure can place the chronic autoimmune condition into sustained remission. The experimental treatment works by eliminating defective immune cells and then rebuilding a healthier immune system from the patient's own stem cells. Perhaps most significantly, participants in the trial have been able to stop taking their regular medications, something many considered impossible before the study began. Medical researchers have expressed cautious optimism about these findings, emphasising that while the outcomes are promising, larger scale studies will be necessary to confirm long-term safety and establish which patient groups might benefit most from this pioneering approach.",
-      "createdAt": "2026-06-12T00:19:30.769Z",
-      "aiSource": "minimax"
     }
   ]
 }
