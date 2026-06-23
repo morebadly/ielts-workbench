@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-22T00:06:19.053Z",
+  "updatedAt": "2026-06-23T00:01:40.743Z",
   "items": [
+    {
+      "id": "news-2026-06-23-1-currency-crash-and-visa-crackdowns-force-indian-students-to-",
+      "date": "2026-06-23",
+      "title": "Currency crash and visa crackdowns force Indian students to rethink studying abroad",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.com/news/articles/c8x2gd9lkxzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-21T21:55:43.000Z",
+      "topic": "education",
+      "originalSummary": "A weaker rupee and tougher immigration rules are pushing Indian students away from popular destinations like the US and UK.",
+      "learningSummary": "(Mock learning summary based on the headline.) Currency crash and visa crackdowns force Indian students to rethink studying abroad. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Currency crash and visa crackdowns force Indian students to rethink studying abroad. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-23T00:01:39.982Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-23-2-millions-of-icloud-users-could-claim-share-of-3bn-after-appl",
+      "date": "2026-06-23",
+      "title": "Millions of iCloud users could claim share of £3bn after Apple case given UK green light",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.com/news/articles/c932d1r0p96o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-22T23:02:33.000Z",
+      "topic": "technology",
+      "originalSummary": "Apple rejected the suggestion its practices are anti-competitive, saying many customers rely on third-party alternatives.",
+      "learningSummary": "(Mock learning summary based on the headline.) Millions of iCloud users could claim share of £3bn after Apple case given UK green light. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Millions of iCloud users could claim share of £3bn after Apple case given UK green light. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-23T00:01:40.348Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-23-3-seabed-damaged-by-fishing-showing-signs-of-recovery",
+      "date": "2026-06-23",
+      "title": "Seabed damaged by fishing showing signs of recovery",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.com/news/articles/c20y9zlzwyzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-22T22:02:15.000Z",
+      "topic": "environment",
+      "originalSummary": "Campaigners say improvements to the area trashed by illegal dredging show that marine protection works.",
+      "learningSummary": "(Mock learning summary based on the headline.) Seabed damaged by fishing showing signs of recovery. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Seabed damaged by fishing showing signs of recovery. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-23T00:01:40.742Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-06-22-1-currency-crash-and-visa-crackdowns-force-indian-students-to-",
       "date": "2026-06-22",
@@ -1513,174 +1681,6 @@
       "listeningText": "Forests have traditionally been viewed as vital carbon storage systems, yet new research suggests this belief may require revision. A study examining 137 locations across the United States discovered that although trees perform photosynthesis throughout much of the year, their actual wood growth stops considerably earlier. This gap between carbon absorption and biomass production is significant because only wood that actually grows can permanently store carbon. Previously, climate scientists assumed that trees absorbed carbon whenever photosynthesis occurred, but this assumption appears flawed. The implications for climate policy are substantial, as many emission reduction strategies depend heavily on forest-based carbon offsetting. If forests store less carbon than estimated, then alternative approaches to emissions reduction may need greater emphasis. Scientists involved in the study recommend that future climate models incorporate this newly discovered limitation to ensure more accurate projections.",
       "createdAt": "2026-06-14T00:03:08.833Z",
       "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-13-1-more-than-one-in-five-pupils-in-england-getting-special-educ",
-      "date": "2026-06-13",
-      "title": "More than one in five pupils in England getting special educational needs support",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.com/news/articles/cwy18y5jpw1o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-11T12:24:43.000Z",
-      "topic": "education",
-      "originalSummary": "More than one in five pupils in England - around 1.8 million children - get extra support in school.",
-      "learningSummary": "Recent statistics reveal that over twenty percent of students in England currently receive additional assistance for special educational needs within mainstream schools. This figure translates to approximately 1.8 million young people who benefit from tailored interventions and dedicated support mechanisms. Educational experts suggest that this substantial proportion reflects both improved identification practices and expanded diagnostic criteria. Schools are increasingly required to develop individualised education plans that address diverse learning requirements while maintaining inclusive classroom environments. The phenomenon raises important questions about resource allocation, teacher training, and the long-term educational outcomes for pupils requiring specialist support. Furthermore, the data indicates significant regional variations, with certain areas reporting notably higher percentages of students accessing these services.",
-      "vocabulary": [
-        {
-          "word": "interventions",
-          "meaning": "targeted actions or strategies implemented to address specific educational needs",
-          "example": "The school's early interventions have successfully improved literacy rates among struggling readers."
-        },
-        {
-          "word": "inclusive",
-          "meaning": "designed to accommodate all students regardless of their abilities or backgrounds",
-          "example": "Inclusive education policies ensure that children with disabilities can learn alongside their peers."
-        },
-        {
-          "word": "provisions",
-          "meaning": "resources, services, or support arrangements provided for specific purposes",
-          "example": "The new legislation guarantees enhanced provisions for students with learning difficulties."
-        },
-        {
-          "word": "diagnostic",
-          "meaning": "relating to the identification or assessment of specific conditions or needs",
-          "example": "Diagnostic assessments help teachers identify students who may require additional support."
-        },
-        {
-          "word": "curriculum",
-          "meaning": "the planned sequence of lessons and learning experiences offered in education",
-          "example": "Schools must adapt their curriculum to meet the diverse needs of all learners."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "According to the passage, what proportion of pupils in England receive special educational needs support?",
-          "answer": "More than one in five pupils, or approximately twenty percent of the student population, receives special educational needs support."
-        },
-        {
-          "question": "What can be inferred about the increase in identified special educational needs cases?",
-          "answer": "It can be inferred that the rise in identified cases is likely due to improved identification methods and broader diagnostic criteria rather than an actual increase in the prevalence of special educational needs."
-        },
-        {
-          "question": "What does the word 'provisions' mean as used in the passage?",
-          "answer": "In this context, 'provisions' refers to the resources, services, and support arrangements that schools provide for students with special educational needs."
-        }
-      ],
-      "writingPrompt": "Some people believe that children with special educational needs should be taught in specialised schools rather than mainstream classrooms. Others argue that inclusive education benefits all students. Discuss both views and give your own opinion.",
-      "listeningText": "Good morning. Today we're discussing the growing number of students requiring special educational support in English schools. Official data shows that over twenty percent of pupils now receive some form of additional assistance. This represents approximately 1.8 million children across the country. Education officials attribute this increase partly to improved screening methods and greater awareness among teachers. Schools have adapted by implementing individualised learning plans and providing targeted interventions. However, this trend has created pressure on school budgets and raised questions about resource distribution. Critics suggest that mainstream schools may lack the expertise to adequately support students with complex needs, while proponents emphasise the social benefits of inclusive environments. The debate continues as policymakers seek balanced solutions.",
-      "createdAt": "2026-06-13T00:16:39.480Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-13-2-elon-musk-s-stratospheric-rise-to-trillionaire-status-in-cha",
-      "date": "2026-06-13",
-      "title": "Elon Musk's stratospheric rise to trillionaire status - in charts",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.com/news/articles/c4gyp523ly8o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-12T23:05:39.000Z",
-      "topic": "technology",
-      "originalSummary": "The BBC breaks down how the tech mogul's fortune has grown.",
-      "learningSummary": "This article examines the remarkable financial trajectory of Elon Musk, illustrating how the entrepreneur has achieved unprecedented wealth accumulation. The analysis presents visual data showing his fortune's exponential growth over recent years, highlighting key milestones such as the valuation of his companies and stock performance. Experts attribute his success to multiple factors including innovative ventures in electric vehicles, space exploration, and artificial intelligence. The piece also explores the broader implications of such wealth concentration, questioning whether it reflects genuine economic value or market speculation. Despite occasional market fluctuations, Musk's net worth has consistently reached new heights, positioning him among the select group of individuals whose assets exceed one trillion dollars. The charts effectively demonstrate this stratospheric ascent, making complex financial data accessible to general readers.",
-      "vocabulary": [
-        {
-          "word": "stratospheric",
-          "meaning": "rising to an extremely high level",
-          "example": "The stratospheric rise in property prices has made housing unaffordable for many."
-        },
-        {
-          "word": "accumulation",
-          "meaning": "the gradual gathering or collection of something over time",
-          "example": "The accumulation of wealth among technology entrepreneurs has accelerated in recent decades."
-        },
-        {
-          "word": "exponential",
-          "meaning": "growing or increasing at a rapid rate",
-          "example": "The company experienced exponential growth following its innovative product launches."
-        },
-        {
-          "word": "milestones",
-          "meaning": "significant events or stages in the progress of something",
-          "example": "Reaching a net worth of one trillion dollars represents a major milestone for any individual."
-        },
-        {
-          "word": "speculation",
-          "meaning": "risky investment decisions based on analysis rather than certainty",
-          "example": "Market speculation often drives stock prices far beyond their fundamental values."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What factors have contributed to Elon Musk's rapid wealth accumulation according to the article?",
-          "answer": "Multiple factors including innovative ventures in electric vehicles, space exploration, and artificial intelligence."
-        },
-        {
-          "question": "What can be inferred about the broader economic implications of individual wealth concentration?",
-          "answer": "It suggests that such wealth concentration raises questions about whether it reflects genuine economic value or merely market speculation."
-        },
-        {
-          "question": "In the context of the article, what does 'stratospheric' suggest about the pace of Musk's wealth growth?",
-          "answer": "It suggests that his wealth has risen extremely rapidly, reaching unprecedented heights."
-        }
-      ],
-      "writingPrompt": "Some people argue that the accumulation of extreme wealth by individuals like Elon Musk is beneficial for society, while others believe it leads to harmful inequality. Discuss both views and give your own opinion.",
-      "listeningText": "The BBC News report analyses the financial journey of technology entrepreneur Elon Musk, focusing on how he became one of the wealthiest individuals globally. Visual charts accompany the analysis, showing the dramatic increase in his fortune over recent years. The report indicates that his wealth stems from various successful companies operating in different sectors. Market analysts suggest that investor confidence in his ventures has remained consistently strong. The article also considers whether such extreme wealth concentration serves the broader economy or primarily benefits the individual. Despite occasional market downturns affecting his net worth temporarily, the overall trend shows remarkable growth. The presentation makes complex financial information understandable, allowing readers to visualise the scale of his wealth accumulation.",
-      "createdAt": "2026-06-13T00:16:48.808Z",
-      "aiSource": "minimax"
-    },
-    {
-      "id": "news-2026-06-13-3-what-is-el-ni-o-and-why-could-it-mean-record-temperatures",
-      "date": "2026-06-13",
-      "title": "What is El Niño and why could it mean record temperatures?",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/cj97npgk92po?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-11T13:32:26.000Z",
-      "topic": "environment",
-      "originalSummary": "Global temperatures are expected to rise in the coming months as El Niño begins.",
-      "learningSummary": "(Mock learning summary based on the headline.) What is El Niño and why could it mean record temperatures?. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) What is El Niño and why could it mean record temperatures?. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-13T00:17:07.463Z",
-      "aiSource": "mock"
     }
   ]
 }
