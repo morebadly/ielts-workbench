@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-25T00:04:03.138Z",
+  "updatedAt": "2026-06-26T00:06:07.018Z",
   "items": [
+    {
+      "id": "news-2026-06-26-1-number-of-children-getting-special-educational-needs-support",
+      "date": "2026-06-26",
+      "title": "Number of children getting special educational needs support hits another record high",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.co.uk/news/articles/cj4g18gy14no?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-25T11:58:39.000Z",
+      "topic": "education",
+      "originalSummary": "It is the highest yearly increase in education, health and care plans (EHCPs) since they were introduced.",
+      "learningSummary": "(Mock learning summary based on the headline.) Number of children getting special educational needs support hits another record high. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Number of children getting special educational needs support hits another record high. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-26T00:06:06.291Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-26-2-teens-who-hacked-tfl-were-known-to-police-years-before-cyber",
+      "date": "2026-06-26",
+      "title": "Teens who hacked TfL were known to police years before cyber-attack",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.co.uk/news/articles/cx2kx8jr244o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-25T23:19:48.000Z",
+      "topic": "technology",
+      "originalSummary": "Owen Flowers and Thalha Jubair were convicted for their roles in the attack, which led to large costs for Transport for London.",
+      "learningSummary": "(Mock learning summary based on the headline.) Teens who hacked TfL were known to police years before cyber-attack. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Teens who hacked TfL were known to police years before cyber-attack. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-26T00:06:06.657Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-26-3-in-pictures-britain-swelters-in-record-breaking-june-heat",
+      "date": "2026-06-26",
+      "title": "In pictures: Britain swelters in record-breaking June heat",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.co.uk/news/articles/cy5vq3q2g19o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-25T13:48:24.000Z",
+      "topic": "environment",
+      "originalSummary": "A rare red weather warning is in place as extreme temperatures continue across much of the UK.",
+      "learningSummary": "(Mock learning summary based on the headline.) In pictures: Britain swelters in record-breaking June heat. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) In pictures: Britain swelters in record-breaking June heat. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-26T00:06:07.016Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-06-25-1-gta-6-will-cost-70-and-physical-edition-will-not-contain-a-d",
       "date": "2026-06-25",
@@ -1512,174 +1680,6 @@
       "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
       "listeningText": "(Mock listening passage.) New microplastics research examines River Thames. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
       "createdAt": "2026-06-16T00:26:50.591Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-15-1-fears-dogs-to-blame-for-drop-in-little-tern-numbers",
-      "date": "2026-06-15",
-      "title": "Fears dogs to blame for drop in little tern numbers",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.com/news/articles/cy73gx8px2eo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-14T15:09:13.000Z",
-      "topic": "environment",
-      "originalSummary": "It has been the worst year for dogs getting too close to the nesting birds, a wildlife trust says.",
-      "learningSummary": "(Mock learning summary based on the headline.) Fears dogs to blame for drop in little tern numbers. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Fears dogs to blame for drop in little tern numbers. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-15T00:05:03.262Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-15-2-why-you-might-not-be-buying-the-right-pain-relief-for-period",
-      "date": "2026-06-15",
-      "title": "Why you might not be buying the right pain relief for period cramps",
-      "source": "BBC News - Health",
-      "url": "https://www.bbc.com/news/articles/c932pex1vpwo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-14T23:10:57.000Z",
-      "topic": "health",
-      "originalSummary": "Many women are buying less effective pain medication for period cramps, supermarket data suggests.",
-      "learningSummary": "(Mock learning summary based on the headline.) Why you might not be buying the right pain relief for period cramps. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Why you might not be buying the right pain relief for period cramps. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-15T00:05:03.634Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-15-3-uk-government-announces-132-5m-after-school-clubs-package",
-      "date": "2026-06-15",
-      "title": "UK government announces £132.5m after-school clubs package",
-      "source": "The Guardian - Education",
-      "url": "https://www.theguardian.com/education/2026/jun/13/uk-government-announces-1325m-after-school-clubs-package",
-      "publishedAt": "2026-06-13T21:30:24.000Z",
-      "topic": "education",
-      "originalSummary": "Funding for extracurricular activities comes as ministers prepare to introduce social media restrictions for under-16s The government has announced a £132.5m funding package for after-school clubs as ministers prepare to introduce expected restrictions on social media use for under-16s. The programme is designed to expand access to enrichment activities in schools, with funding for clubs ranging from music groups and debating societies to engineering and sports, in what ministers describe as an effort to give children alternatives to time spent online. Continue reading...",
-      "learningSummary": "(Mock learning summary based on the headline.) UK government announces £132.5m after-school clubs package. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) UK government announces £132.5m after-school clubs package. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-15T00:05:04.003Z",
       "aiSource": "mock"
     }
   ]
