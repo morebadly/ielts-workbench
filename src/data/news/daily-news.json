@@ -1,73 +1,17 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-26T00:06:07.018Z",
+  "updatedAt": "2026-06-26T23:59:50.665Z",
   "items": [
     {
-      "id": "news-2026-06-26-1-number-of-children-getting-special-educational-needs-support",
+      "id": "news-2026-06-26-1-why-gta-6-will-launch-without-a-disc-and-what-it-means-for-g",
       "date": "2026-06-26",
-      "title": "Number of children getting special educational needs support hits another record high",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.co.uk/news/articles/cj4g18gy14no?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-25T11:58:39.000Z",
-      "topic": "education",
-      "originalSummary": "It is the highest yearly increase in education, health and care plans (EHCPs) since they were introduced.",
-      "learningSummary": "(Mock learning summary based on the headline.) Number of children getting special educational needs support hits another record high. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Number of children getting special educational needs support hits another record high. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-26T00:06:06.291Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-06-26-2-teens-who-hacked-tfl-were-known-to-police-years-before-cyber",
-      "date": "2026-06-26",
-      "title": "Teens who hacked TfL were known to police years before cyber-attack",
+      "title": "Why GTA 6 will launch without a disc - and what it means for gamers",
       "source": "BBC News - Technology",
-      "url": "https://www.bbc.co.uk/news/articles/cx2kx8jr244o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-25T23:19:48.000Z",
+      "url": "https://www.bbc.co.uk/news/articles/c6210nj8gpro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-26T23:03:04.000Z",
       "topic": "technology",
-      "originalSummary": "Owen Flowers and Thalha Jubair were convicted for their roles in the attack, which led to large costs for Transport for London.",
-      "learningSummary": "(Mock learning summary based on the headline.) Teens who hacked TfL were known to police years before cyber-attack. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "originalSummary": "Music and films are now largely digital-only - does the lack of a disc for GTA 6 mean gaming is going the same way?",
+      "learningSummary": "(Mock learning summary based on the headline.) Why GTA 6 will launch without a disc - and what it means for gamers. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
       "vocabulary": [
         {
           "word": "pilot",
@@ -110,20 +54,20 @@
         }
       ],
       "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Teens who hacked TfL were known to police years before cyber-attack. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-26T00:06:06.657Z",
+      "listeningText": "(Mock listening passage.) Why GTA 6 will launch without a disc - and what it means for gamers. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-26T23:59:50.017Z",
       "aiSource": "mock"
     },
     {
-      "id": "news-2026-06-26-3-in-pictures-britain-swelters-in-record-breaking-june-heat",
+      "id": "news-2026-06-26-2-future-generations-being-failed-if-more-trees-not-planted-ex",
       "date": "2026-06-26",
-      "title": "In pictures: Britain swelters in record-breaking June heat",
+      "title": "Future generations being failed if more trees not planted, experts say",
       "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.co.uk/news/articles/cy5vq3q2g19o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-06-25T13:48:24.000Z",
+      "url": "https://www.bbc.co.uk/news/articles/c70yj76n4dko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-26T21:07:57.000Z",
       "topic": "environment",
-      "originalSummary": "A rare red weather warning is in place as extreme temperatures continue across much of the UK.",
-      "learningSummary": "(Mock learning summary based on the headline.) In pictures: Britain swelters in record-breaking June heat. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "originalSummary": "Statistics show the number of trees being planted is increasing, but conservationists say it is not meeting targets.",
+      "learningSummary": "(Mock learning summary based on the headline.) Future generations being failed if more trees not planted, experts say. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
       "vocabulary": [
         {
           "word": "pilot",
@@ -166,8 +110,64 @@
         }
       ],
       "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) In pictures: Britain swelters in record-breaking June heat. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-06-26T00:06:07.016Z",
+      "listeningText": "(Mock listening passage.) Future generations being failed if more trees not planted, experts say. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-26T23:59:50.365Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-06-26-3-even-young-and-fit-urged-to-skip-runs-and-too-many-beers-in-",
+      "date": "2026-06-26",
+      "title": "Even young and fit urged to skip runs and too many beers in heatwave",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.co.uk/news/articles/cgjxdpp4qzeo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-06-26T10:24:26.000Z",
+      "topic": "health",
+      "originalSummary": "Cardiac arrests have gone up during very hot weather, and it's not just among the elderly and frail, experts are warning.",
+      "learningSummary": "(Mock learning summary based on the headline.) Even young and fit urged to skip runs and too many beers in heatwave. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Even young and fit urged to skip runs and too many beers in heatwave. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-06-26T23:59:50.664Z",
       "aiSource": "mock"
     },
     {
