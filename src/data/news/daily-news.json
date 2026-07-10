@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-10T00:00:16.976Z",
+  "updatedAt": "2026-07-10T23:54:36.125Z",
   "items": [
     {
       "id": "news-2026-07-10-1-school-suspensions-fall-in-england-for-the-first-time-since-",
@@ -55,19 +55,19 @@
       ],
       "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
       "listeningText": "(Mock listening passage.) School suspensions fall in England for the first time since Covid. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-07-10T00:00:16.189Z",
+      "createdAt": "2026-07-10T23:54:35.356Z",
       "aiSource": "mock"
     },
     {
-      "id": "news-2026-07-10-2-pressure-builds-on-europe-s-biggest-port-to-be-greener",
+      "id": "news-2026-07-10-2-apple-sues-openai-its-employees-claiming-theft-of-trade-secr",
       "date": "2026-07-10",
-      "title": "Pressure builds on Europe's biggest port to be greener",
+      "title": "Apple sues OpenAI, its employees claiming theft of trade secrets",
       "source": "BBC News - Technology",
-      "url": "https://www.bbc.co.uk/news/articles/c39y78rwrmno?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-07-09T23:00:51.000Z",
+      "url": "https://www.bbc.co.uk/news/articles/cy8w379e091o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-07-10T22:54:16.000Z",
       "topic": "technology",
-      "originalSummary": "A lawsuit demands that the Port of Rotterdam moves faster to cut its dependence on fossil fuel firms.",
-      "learningSummary": "(Mock learning summary based on the headline.) Pressure builds on Europe's biggest port to be greener. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "originalSummary": "Apple said in a Friday lawsuit that OpenAI’s nascent hardware business is “rotten to its core.”",
+      "learningSummary": "(Mock learning summary based on the headline.) Apple sues OpenAI, its employees claiming theft of trade secrets. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
       "vocabulary": [
         {
           "word": "pilot",
@@ -110,20 +110,20 @@
         }
       ],
       "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Pressure builds on Europe's biggest port to be greener. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-07-10T00:00:16.605Z",
+      "listeningText": "(Mock listening passage.) Apple sues OpenAI, its employees claiming theft of trade secrets. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-07-10T23:54:35.754Z",
       "aiSource": "mock"
     },
     {
-      "id": "news-2026-07-10-3-uk-bakes-in-35c-highs-as-heatwave-to-continue-next-week",
+      "id": "news-2026-07-10-3-new-dinosaur-species-with-neck-as-long-as-cricket-pitch-disc",
       "date": "2026-07-10",
-      "title": "UK bakes in 35C highs as heatwave to continue next week",
+      "title": "New dinosaur species with neck as long as cricket pitch discovered in Thailand",
       "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.co.uk/weather/articles/c0my38l4ex3o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-07-09T23:08:58.000Z",
+      "url": "https://www.bbc.co.uk/news/articles/crely7g8xepo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-07-10T21:30:57.000Z",
       "topic": "environment",
-      "originalSummary": "On Thursday, temperatures exceeded 34C for the eighth day this year, breaking the previous record of seven days in a calendar year.",
-      "learningSummary": "(Mock learning summary based on the headline.) UK bakes in 35C highs as heatwave to continue next week. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "originalSummary": "The plant-eating dinosaur, named Uragasaurus kalasinensis, is thought to have lived about 150 million years ago.",
+      "learningSummary": "(Mock learning summary based on the headline.) New dinosaur species with neck as long as cricket pitch discovered in Thailand. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
       "vocabulary": [
         {
           "word": "pilot",
@@ -166,8 +166,8 @@
         }
       ],
       "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) UK bakes in 35C highs as heatwave to continue next week. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-07-10T00:00:16.974Z",
+      "listeningText": "(Mock listening passage.) New dinosaur species with neck as long as cricket pitch discovered in Thailand. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-07-10T23:54:36.123Z",
       "aiSource": "mock"
     },
     {
