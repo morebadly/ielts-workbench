@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T23:52:25.295Z",
+  "updatedAt": "2026-08-02T23:53:37.323Z",
   "items": [
+    {
+      "id": "news-2026-08-02-1-cambridge-professor-at-centre-of-plagiarism-row-defends-his-",
+      "date": "2026-08-02",
+      "title": "Cambridge professor at centre of plagiarism row defends his work",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.co.uk/news/articles/c78gmp7zylvo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-08-01T20:32:25.000Z",
+      "topic": "education",
+      "originalSummary": "Prof Jason Arday admitted errors in his work but said he was not a liar after attracting criticism online.",
+      "learningSummary": "(Mock learning summary based on the headline.) Cambridge professor at centre of plagiarism row defends his work. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Cambridge professor at centre of plagiarism row defends his work. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-08-02T23:53:36.583Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-08-02-2-italy-putting-nearly-all-major-cities-on-highest-heat-alert",
+      "date": "2026-08-02",
+      "title": "Italy putting nearly all major cities on highest heat alert",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.co.uk/news/articles/cr7k4gdrgljo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-08-01T17:51:46.000Z",
+      "topic": "environment",
+      "originalSummary": "Some 19 major Italian cities - including Rome, Milan and Naples - are already on red alert, and by Monday all but two will be.",
+      "learningSummary": "(Mock learning summary based on the headline.) Italy putting nearly all major cities on highest heat alert. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Italy putting nearly all major cities on highest heat alert. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-08-02T23:53:36.947Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-08-02-3-inside-sydney-s-hottest-nightspot-where-shoes-are-off-laptop",
+      "date": "2026-08-02",
+      "title": "Inside Sydney’s hottest nightspot, where shoes are off, laptops are on and customers drink matcha",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/australia-news/2026/aug/03/inside-sydneys-hottest-nightspot-where-shoes-are-off-laptops-are-on-and-customers-drink-matcha",
+      "publishedAt": "2026-08-02T15:00:25.000Z",
+      "topic": "education",
+      "originalSummary": "A ‘study cafe’ has opened on the site that once housed the radical Gould’s Book Arcade – and students are paying by the hour to be there Get our breaking news email , free app or daily news podcast In a cavernous space once occupied by a radical bookshop, the big lights are off, laptops are out, lo-fi beats are on and the matcha is flowing. It’s 6pm on a Wednesday night and the students of Sydney are living it up. It’s not what one would expect from a venue on King Street – a strip better known for rowdy live music and anxious mornings after. “The whole point of it is that we don’t want to...",
+      "learningSummary": "(Mock learning summary based on the headline.) Inside Sydney’s hottest nightspot, where shoes are off, laptops are on and customers drink matcha. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Inside Sydney’s hottest nightspot, where shoes are off, laptops are on and customers drink matcha. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-08-02T23:53:37.322Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-08-01-1-cambridge-professor-at-centre-of-plagiarism-row-defends-his-",
       "date": "2026-08-01",
@@ -1512,174 +1680,6 @@
       "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
       "listeningText": "(Mock listening passage.) Are BuzzBallz actually recyclable?. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
       "createdAt": "2026-07-24T23:58:39.889Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-07-23-1-cjp-protest-the-youth-movement-india-s-modi-didn-t-see-comin",
-      "date": "2026-07-23",
-      "title": "CJP protest: The youth movement India's Modi didn't see coming",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.co.uk/news/articles/c07rgpxe51no?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-07-23T23:41:32.000Z",
-      "topic": "education",
-      "originalSummary": "The CJP protest began with exam paper leaks. It became India's biggest student movement in years - why?",
-      "learningSummary": "(Mock learning summary based on the headline.) CJP protest: The youth movement India's Modi didn't see coming. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) CJP protest: The youth movement India's Modi didn't see coming. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-07-23T23:55:12.797Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-07-23-2-google-fined-890m-by-eu-for-favouring-its-own-apps-over-riva",
-      "date": "2026-07-23",
-      "title": "Google fined €890m by EU for favouring its own apps over rivals",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.co.uk/news/articles/cevmenngkzpo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-07-23T23:10:09.000Z",
-      "topic": "technology",
-      "originalSummary": "It is the first major enforcement action against the tech giant under the EU's new digital rules.",
-      "learningSummary": "(Mock learning summary based on the headline.) Google fined €890m by EU for favouring its own apps over rivals. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Google fined €890m by EU for favouring its own apps over rivals. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-07-23T23:55:13.144Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-07-23-3-can-you-be-fined-for-using-a-hosepipe",
-      "date": "2026-07-23",
-      "title": "Can you be fined for using a hosepipe?",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.co.uk/news/videos/cvg9l035jxxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-07-23T15:39:11.000Z",
-      "topic": "environment",
-      "originalSummary": "Ben Rich looks at what is and isn't allowed during a hosepipe ban.",
-      "learningSummary": "(Mock learning summary based on the headline.) Can you be fined for using a hosepipe?. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Can you be fined for using a hosepipe?. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-07-23T23:55:13.452Z",
       "aiSource": "mock"
     }
   ]
