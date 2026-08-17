@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-16T23:14:10.258Z",
+  "updatedAt": "2026-08-17T23:17:16.181Z",
   "items": [
+    {
+      "id": "news-2026-08-17-1-parents-pushed-to-breaking-point-by-child-maintenance-servic",
+      "date": "2026-08-17",
+      "title": "Parents pushed to breaking point by Child Maintenance Service, BBC told",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.co.uk/news/articles/c4g3re5ew8do?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-08-17T05:03:31.000Z",
+      "topic": "education",
+      "originalSummary": "Some parents describe battles to make ex-partners pay, while others say there have been mistakes in calculating what they owe.",
+      "learningSummary": "(Mock learning summary based on the headline.) Parents pushed to breaking point by Child Maintenance Service, BBC told. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Parents pushed to breaking point by Child Maintenance Service, BBC told. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-08-17T23:17:15.423Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-08-17-2-instagram-and-facebook-could-change-forever-if-meta-loses-ch",
+      "date": "2026-08-17",
+      "title": "Instagram and Facebook could change forever if Meta loses child privacy trial",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.co.uk/news/articles/clyqpx6xk69o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-08-17T05:00:25.000Z",
+      "topic": "technology",
+      "originalSummary": "US states are suing the social media giant to force an overhaul of its platforms for young users.",
+      "learningSummary": "(Mock learning summary based on the headline.) Instagram and Facebook could change forever if Meta loses child privacy trial. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Instagram and Facebook could change forever if Meta loses child privacy trial. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-08-17T23:17:15.801Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-08-17-3-watch-flash-flood-sweeps-vehicle-away-in-hawaii-after-hurric",
+      "date": "2026-08-17",
+      "title": "Watch: Flash flood sweeps vehicle away in Hawaii after Hurricane Lala",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.co.uk/news/videos/c2el0wd0w3go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-08-17T15:35:47.000Z",
+      "topic": "environment",
+      "originalSummary": "Tropical storm warnings remain for some of the state's islands, as the storm is due to progress west.",
+      "learningSummary": "(Mock learning summary based on the headline.) Watch: Flash flood sweeps vehicle away in Hawaii after Hurricane Lala. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Watch: Flash flood sweeps vehicle away in Hawaii after Hurricane Lala. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-08-17T23:17:16.180Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-08-16-1-jason-arday-death-tragedy-on-so-many-levels-says-pm",
       "date": "2026-08-16",
@@ -1512,174 +1680,6 @@
       "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
       "listeningText": "(Mock listening passage.) Rare turtle to be sent back home in 5,000-mile 'incredibly emotional' trip. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
       "createdAt": "2026-08-08T23:22:08.462Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-08-07-1-cambridge-to-review-process-for-hiring-senior-academics-afte",
-      "date": "2026-08-07",
-      "title": "Cambridge to review process for hiring senior academics after Jason Arday resignation",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.co.uk/news/articles/c05q0nznq24o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-08-07T17:09:32.000Z",
-      "topic": "education",
-      "originalSummary": "Prof Priyamvada Gopal, who is part of the group, says Cambridge should not be \"marking its own homework\".",
-      "learningSummary": "(Mock learning summary based on the headline.) Cambridge to review process for hiring senior academics after Jason Arday resignation. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Cambridge to review process for hiring senior academics after Jason Arday resignation. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-08-07T23:28:12.987Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-08-07-2-meta-fined-567m-in-largest-child-safety-ruling-against-socia",
-      "date": "2026-08-07",
-      "title": "Meta fined $567m in largest child safety ruling against social media giant",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.co.uk/news/articles/cd7lz3wr2rlo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-08-07T09:22:03.000Z",
-      "topic": "technology",
-      "originalSummary": "The ruling is in addition to $375m in fines Meta was already ordered to pay in the case, for a total of $942m.",
-      "learningSummary": "(Mock learning summary based on the headline.) Meta fined $567m in largest child safety ruling against social media giant. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Meta fined $567m in largest child safety ruling against social media giant. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-08-07T23:28:13.322Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-08-07-3-hosepipe-bans-in-force-as-drought-declared-is-your-area-affe",
-      "date": "2026-08-07",
-      "title": "Hosepipe bans in force as drought declared - is your area affected?",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.co.uk/news/articles/crk661074ejo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-08-07T17:50:13.000Z",
-      "topic": "environment",
-      "originalSummary": "More than 20 million households have been placed under hosepipe bans due to higher demand and low rainfall.",
-      "learningSummary": "(Mock learning summary based on the headline.) Hosepipe bans in force as drought declared - is your area affected?. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Hosepipe bans in force as drought declared - is your area affected?. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-08-07T23:28:13.690Z",
       "aiSource": "mock"
     }
   ]
