@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-20T23:19:41.508Z",
+  "updatedAt": "2026-08-21T23:17:28.696Z",
   "items": [
+    {
+      "id": "news-2026-08-21-1-more-students-planning-to-live-at-home-for-university-over-i",
+      "date": "2026-08-21",
+      "title": "More students planning to live at home for university over 'insane' living costs",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.co.uk/news/articles/c70gy180e8lo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-08-21T23:01:58.000Z",
+      "topic": "education",
+      "originalSummary": "Students like Jessica say they worry about missing out on student life, but feel they have no choice but to stay at home.",
+      "learningSummary": "(Mock learning summary based on the headline.) More students planning to live at home for university over 'insane' living costs. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) More students planning to live at home for university over 'insane' living costs. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-08-21T23:17:27.891Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-08-21-2-tiktok-to-pay-400m-to-us-in-one-of-largest-child-privacy-set",
+      "date": "2026-08-21",
+      "title": "TikTok to pay $400m to US in one of largest child privacy settlements",
+      "source": "BBC News - Technology",
+      "url": "https://www.bbc.co.uk/news/articles/cwyr0l45xjro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-08-21T22:36:12.000Z",
+      "topic": "technology",
+      "originalSummary": "The deal stems from a 2024 lawsuit alleging TikTok and its parent company ByteDance collected \"vast amounts of data\" on millions of users under the age of 13.",
+      "learningSummary": "(Mock learning summary based on the headline.) TikTok to pay $400m to US in one of largest child privacy settlements. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) TikTok to pay $400m to US in one of largest child privacy settlements. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-08-21T23:17:28.297Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-08-21-3-should-school-holidays-change-to-cope-with-extreme-heat",
+      "date": "2026-08-21",
+      "title": "Should school holidays change to cope with extreme heat?",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.co.uk/news/videos/clyqd9x07q0o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-08-21T15:23:17.000Z",
+      "topic": "environment",
+      "originalSummary": "Could changing the school holidays give pupils and teachers a break in largely unconditioned buildings?",
+      "learningSummary": "(Mock learning summary based on the headline.) Should school holidays change to cope with extreme heat?. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Should school holidays change to cope with extreme heat?. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-08-21T23:17:28.694Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-08-20-1-relentless-gcse-resit-cycle-simply-not-working-school-and-co",
       "date": "2026-08-20",
@@ -1512,174 +1680,6 @@
       "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
       "listeningText": "(Mock listening passage.) Vultures are disappearing in Nigeria - but the 'Vulture King' is fighting to reverse the trend. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
       "createdAt": "2026-08-12T23:34:57.433Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-08-11-1-what-is-an-apprenticeship-and-how-much-is-the-pay",
-      "date": "2026-08-11",
-      "title": "What is an apprenticeship and how much is the pay?",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.co.uk/news/articles/c51xenx7pvqo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-08-11T15:54:18.000Z",
-      "topic": "education",
-      "originalSummary": "Apprentices split their time between training and working - and are paid by their employer.",
-      "learningSummary": "(Mock learning summary based on the headline.) What is an apprenticeship and how much is the pay?. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) What is an apprenticeship and how much is the pay?. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-08-11T23:33:32.410Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-08-11-2-tokenomics-why-making-ai-pay-is-tricky",
-      "date": "2026-08-11",
-      "title": "Tokenomics: Why making AI pay is tricky",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.co.uk/news/articles/c872r52x7jgo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-08-11T23:03:52.000Z",
-      "topic": "technology",
-      "originalSummary": "Buyers of AI services are struggling to control costs and sellers are not sure how much to charge.",
-      "learningSummary": "(Mock learning summary based on the headline.) Tokenomics: Why making AI pay is tricky. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Tokenomics: Why making AI pay is tricky. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-08-11T23:33:32.768Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-08-11-3-uk-to-get-best-eclipse-since-1999-as-moon-blocks-out-sun-acr",
-      "date": "2026-08-11",
-      "title": "UK to get best eclipse since 1999 as Moon blocks out Sun across Europe",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.co.uk/news/articles/cx2jr1ew2v1o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-08-11T23:17:15.000Z",
-      "topic": "environment",
-      "originalSummary": "Up to 96% of the Sun will be covered by the Moon in the UK, while parts of Spain, Greenland, Iceland, Portugal and Russia will see a total eclipse.",
-      "learningSummary": "(Mock learning summary based on the headline.) UK to get best eclipse since 1999 as Moon blocks out Sun across Europe. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) UK to get best eclipse since 1999 as Moon blocks out Sun across Europe. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-08-11T23:33:33.113Z",
       "aiSource": "mock"
     }
   ]
