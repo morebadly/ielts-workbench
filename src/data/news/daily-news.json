@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-27T01:03:18.690Z",
+  "updatedAt": "2026-09-28T01:21:12.458Z",
   "items": [
+    {
+      "id": "news-2026-09-28-1-shipwreck-found-on-nantucket-beach-during-storm",
+      "date": "2026-09-28",
+      "title": "Shipwreck found on Nantucket beach during storm",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.co.uk/news/videos/ck980zl0pgq9o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-09-28T01:09:57.000Z",
+      "topic": "environment",
+      "originalSummary": "The so-called nor'easter storm has washed up what may be a shipwreck from the 19th century in Massachusetts, local media says.",
+      "learningSummary": "(Mock learning summary based on the headline.) Shipwreck found on Nantucket beach during storm. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Shipwreck found on Nantucket beach during storm. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-09-28T01:21:11.693Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-09-28-2-broken-social-care-will-in-the-end-break-the-nhs-says-burnha",
+      "date": "2026-09-28",
+      "title": "'Broken social care will in the end break the NHS,' says Burnham",
+      "source": "BBC News - Health",
+      "url": "https://www.bbc.co.uk/news/videos/c6ge4lyy9x0no?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-09-27T09:52:49.000Z",
+      "topic": "health",
+      "originalSummary": "Andy Burnham said the proposed care service would be laid out in detail and put on the ballot at the next general election.",
+      "learningSummary": "(Mock learning summary based on the headline.) 'Broken social care will in the end break the NHS,' says Burnham. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) 'Broken social care will in the end break the NHS,' says Burnham. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-09-28T01:21:12.117Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-09-28-3-it-s-like-the-scottish-upper-east-side-shame-and-snobbery-as",
+      "date": "2026-09-28",
+      "title": "‘It’s like the Scottish Upper East Side’: shame and snobbery as American students blamed for St Andrews classism",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/education/2026/sep/27/st-andrews-university-class-divide-american-students",
+      "publishedAt": "2026-09-27T07:00:59.000Z",
+      "topic": "education",
+      "originalSummary": "Online comments reflect class tensions at Scottish university between those from lower-income families and wealthier US undergraduates When Sophie Rose Jenkins announced she would not return to St Andrews University this academic year because of her experiences of classism on campus, she did not expect much of a response. But in the two weeks since she published her story on LinkedIn, it has resonated with hundreds of others. “Working-class students have been made to feel ashamed of their home life at university,” the former comparative literature and classical studies student wrote in a...",
+      "learningSummary": "(Mock learning summary based on the headline.) ‘It’s like the Scottish Upper East Side’: shame and snobbery as American students blamed for St Andrews classism. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) ‘It’s like the Scottish Upper East Side’: shame and snobbery as American students blamed for St Andrews classism. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-09-28T01:21:12.457Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-09-27-1-openai-bots-meddled-with-multiple-us-government-agency-sites",
       "date": "2026-09-27",
@@ -1512,174 +1680,6 @@
       "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
       "listeningText": "(Mock listening passage.) Lindsay Clancy holdout juror says he had no doubt she deliberately killed her children. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
       "createdAt": "2026-09-19T00:53:08.130Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-09-18-1-schools-in-england-get-extra-500m-in-bid-to-avoid-teachers-p",
-      "date": "2026-09-18",
-      "title": "Schools in England get extra £500m in bid to avoid teachers' pay strike",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.co.uk/news/articles/c6lyqe9j1gy5o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-09-16T18:35:43.000Z",
-      "topic": "education",
-      "originalSummary": "The offer of extra money by the government reduces the prospect of strike action by the largest teaching union.",
-      "learningSummary": "(Mock learning summary based on the headline.) Schools in England get extra £500m in bid to avoid teachers' pay strike. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Schools in England get extra £500m in bid to avoid teachers' pay strike. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-09-18T00:57:26.755Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-09-18-2-the-virtual-worlds-where-robots-are-trained",
-      "date": "2026-09-18",
-      "title": "The virtual worlds where robots are trained",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.co.uk/news/articles/c79g0j3d4q9o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-09-17T23:00:47.000Z",
-      "topic": "technology",
-      "originalSummary": "Training systems that allow robots to negotiate the real world are getting more sophisticated.",
-      "learningSummary": "(Mock learning summary based on the headline.) The virtual worlds where robots are trained. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) The virtual worlds where robots are trained. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-09-18T00:57:27.103Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-09-18-3-new-wild-cat-species-discovered-with-only-one-known-living-m",
-      "date": "2026-09-18",
-      "title": "New wild cat species discovered - with only one known living member",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.co.uk/news/articles/c6x2zgv9rr4ro?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-09-17T23:15:55.000Z",
-      "topic": "environment",
-      "originalSummary": "A spotted wildcat long mistaken for relatives has been identified as a new species in Bolivia.",
-      "learningSummary": "(Mock learning summary based on the headline.) New wild cat species discovered - with only one known living member. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) New wild cat species discovered - with only one known living member. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-09-18T00:57:27.470Z",
       "aiSource": "mock"
     }
   ]
