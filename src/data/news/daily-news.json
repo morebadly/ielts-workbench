@@ -1,7 +1,175 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-04T02:19:12.272Z",
+  "updatedAt": "2026-10-05T01:29:03.044Z",
   "items": [
+    {
+      "id": "news-2026-10-05-1-badenoch-unveils-plan-to-end-100-000-childcare-cliff-edge-ah",
+      "date": "2026-10-05",
+      "title": "Badenoch unveils plan to end £100,000 childcare 'cliff edge' ahead of Tory conference",
+      "source": "BBC News - Education",
+      "url": "https://www.bbc.co.uk/news/articles/cmn06l362ypeo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-10-04T11:04:47.000Z",
+      "topic": "education",
+      "originalSummary": "The Conservative leader tells the BBC the earnings threshold for government support stops people \"working harder\".",
+      "learningSummary": "(Mock learning summary based on the headline.) Badenoch unveils plan to end £100,000 childcare 'cliff edge' ahead of Tory conference. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Badenoch unveils plan to end £100,000 childcare 'cliff edge' ahead of Tory conference. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-10-05T01:29:02.336Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-10-05-2-students-blast-off-to-us-for-nasa-robotics-competition",
+      "date": "2026-10-05",
+      "title": "Students blast off to US for Nasa robotics competition",
+      "source": "BBC News - Science & Environment",
+      "url": "https://www.bbc.co.uk/news/articles/cq20v0e7vjkgo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-10-04T05:19:30.000Z",
+      "topic": "environment",
+      "originalSummary": "The students will head to Florida to compete against university teams from Australia, India and the US.",
+      "learningSummary": "(Mock learning summary based on the headline.) Students blast off to US for Nasa robotics competition. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Students blast off to US for Nasa robotics competition. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-10-05T01:29:02.685Z",
+      "aiSource": "mock"
+    },
+    {
+      "id": "news-2026-10-05-3-children-s-books-with-black-main-characters-down-8-in-a-year",
+      "date": "2026-10-05",
+      "title": "Children’s books with Black main characters down 8% in a year, study shows",
+      "source": "The Guardian - Education",
+      "url": "https://www.theguardian.com/books/2026/oct/05/childrens-books-with-black-main-characters-down-study-uk",
+      "publishedAt": "2026-10-04T23:01:40.000Z",
+      "topic": "education",
+      "originalSummary": "Only 150 of 2,189 titles published in UK for young children last year focused on minority ethnic, disabled or neurodivergent characters The number of children’s books featuring Black main characters fell by almost 8% last year, according to research into diversity in UK publishing. Just 47 – or 2.1% – of the 2,189 books published for under-10s in 2025 featured a Black main character, a 7.8% fall from the previous year, according to Inclusive Books for Children. Black children make up about 8.5% of that age bracket in England and Wales. Continue reading...",
+      "learningSummary": "(Mock learning summary based on the headline.) Children’s books with Black main characters down 8% in a year, study shows. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
+      "vocabulary": [
+        {
+          "word": "pilot",
+          "meaning": "(v.) 试运行;试点",
+          "example": "The government is piloting a new programme in three cities."
+        },
+        {
+          "word": "widespread",
+          "meaning": "(adj.) 广泛的",
+          "example": "Concerns about online safety are now widespread."
+        },
+        {
+          "word": "verify",
+          "meaning": "(v.) 核实;证实",
+          "example": "Teachers need ways to verify what students have actually learned."
+        },
+        {
+          "word": "outsource",
+          "meaning": "(v.) 外包",
+          "example": "Some students try to outsource essays to AI tools."
+        },
+        {
+          "word": "stressful",
+          "meaning": "(adj.) 让人有压力的",
+          "example": "Frequent oral exams can feel stressful for shy students."
+        }
+      ],
+      "readingQuestions": [
+        {
+          "question": "What is the main idea of the article?",
+          "answer": "(Mock) A summary answer based only on the headline."
+        },
+        {
+          "question": "Why is this development considered important?",
+          "answer": "(Mock) Because it affects how people learn or behave."
+        },
+        {
+          "question": "What does the writer suggest as the next step?",
+          "answer": "(Mock) Further evaluation before scaling up."
+        }
+      ],
+      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
+      "listeningText": "(Mock listening passage.) Children’s books with Black main characters down 8% in a year, study shows. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
+      "createdAt": "2026-10-05T01:29:03.043Z",
+      "aiSource": "mock"
+    },
     {
       "id": "news-2026-10-04-1-tories-pledge-to-scrap-100-000-childcare-cliff-edge",
       "date": "2026-10-04",
@@ -1512,174 +1680,6 @@
       "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
       "listeningText": "(Mock listening passage.) The treasured 'eternal snow' on this tropical island is about to disappear forever. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
       "createdAt": "2026-09-26T01:07:07.393Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-09-25-1-teenagers-to-be-offered-new-vocational-gcse-subjects-in-scho",
-      "date": "2026-09-25",
-      "title": "Teenagers to be offered new vocational GCSE subjects in school",
-      "source": "BBC News - Education",
-      "url": "https://www.bbc.co.uk/news/articles/c6rerl41evw5o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-09-24T13:32:41.000Z",
-      "topic": "education",
-      "originalSummary": "New GCSE subjects could include child development and building and construction as vocational courses are being introduced.",
-      "learningSummary": "(Mock learning summary based on the headline.) Teenagers to be offered new vocational GCSE subjects in school. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Teenagers to be offered new vocational GCSE subjects in school. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-09-25T01:05:56.763Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-09-25-2-x-planes-are-they-needed-in-the-new-era-of-drones",
-      "date": "2026-09-25",
-      "title": "X-planes: Are they needed in the new era of drones?",
-      "source": "BBC News - Technology",
-      "url": "https://www.bbc.co.uk/news/articles/c9q92x359xdo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-09-24T23:03:53.000Z",
-      "topic": "technology",
-      "originalSummary": "Where do America's X-plane projects fit in an era of cheap drones?",
-      "learningSummary": "(Mock learning summary based on the headline.) X-planes: Are they needed in the new era of drones?. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) X-planes: Are they needed in the new era of drones?. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-09-25T01:05:57.167Z",
-      "aiSource": "mock"
-    },
-    {
-      "id": "news-2026-09-25-3-just-how-hot-and-dry-was-your-summer-use-our-postcode-lookup",
-      "date": "2026-09-25",
-      "title": "Just how hot and dry was your summer? Use our postcode lookup to find out",
-      "source": "BBC News - Science & Environment",
-      "url": "https://www.bbc.co.uk/news/articles/cy9zvw47v90o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-09-24T23:45:08.000Z",
-      "topic": "environment",
-      "originalSummary": "Most of us experienced drought and heatwaves - but temperatures and rainfall were not the same everywhere.",
-      "learningSummary": "(Mock learning summary based on the headline.) Just how hot and dry was your summer? Use our postcode lookup to find out. This paraphrase explains the situation in plain IELTS-friendly English, replacing the original RSS summary with a neutral overview suitable for reading practice. Configure MINIMAX_API_KEY to get an AI-generated version.",
-      "vocabulary": [
-        {
-          "word": "pilot",
-          "meaning": "(v.) 试运行;试点",
-          "example": "The government is piloting a new programme in three cities."
-        },
-        {
-          "word": "widespread",
-          "meaning": "(adj.) 广泛的",
-          "example": "Concerns about online safety are now widespread."
-        },
-        {
-          "word": "verify",
-          "meaning": "(v.) 核实;证实",
-          "example": "Teachers need ways to verify what students have actually learned."
-        },
-        {
-          "word": "outsource",
-          "meaning": "(v.) 外包",
-          "example": "Some students try to outsource essays to AI tools."
-        },
-        {
-          "word": "stressful",
-          "meaning": "(adj.) 让人有压力的",
-          "example": "Frequent oral exams can feel stressful for shy students."
-        }
-      ],
-      "readingQuestions": [
-        {
-          "question": "What is the main idea of the article?",
-          "answer": "(Mock) A summary answer based only on the headline."
-        },
-        {
-          "question": "Why is this development considered important?",
-          "answer": "(Mock) Because it affects how people learn or behave."
-        },
-        {
-          "question": "What does the writer suggest as the next step?",
-          "answer": "(Mock) Further evaluation before scaling up."
-        }
-      ],
-      "writingPrompt": "Some people think governments should fund pilot programmes that test new public ideas, while others believe such money should go directly to existing services. Discuss both views and give your own opinion.",
-      "listeningText": "(Mock listening passage.) Just how hot and dry was your summer? Use our postcode lookup to find out. This is a neutral, IELTS-style spoken paraphrase based only on the headline and the short RSS summary.",
-      "createdAt": "2026-09-25T01:05:57.579Z",
       "aiSource": "mock"
     }
   ]
